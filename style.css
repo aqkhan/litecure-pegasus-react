@@ -1,0 +1,347 @@
+@font-face {
+  font-family: UniSansCAPS;
+  src: url(/static/fonts/UniSansThin.otf);
+}
+@font-face {
+  font-family: AvenirNext;
+  src: url(/static/fonts/AvenirNextLTPro-Regular.otf);
+}
+@font-face {
+  font-family: UniSansCAPSitalic;
+  src: url(/static/fonts/UniSansHeavyItalic.otf);
+}
+@font-face {
+  font-family: UniSansCAPSheavy;
+  src: url(/static/fonts/UniSansHeavy.otf);
+}
+@font-face {
+  font-family: UniSansCAPSthinitalic;
+  src: url(/static/fonts/UniSansThinItalic.otf);
+}
+a:active, a:hover{
+  text-decoration: none!important;
+}
+.custom-container {
+  width:100%!important;
+  margin: 0 auto;
+  padding-right: 0;
+  padding-left: 0;
+}
+.for-responsive-only{
+  display:none;
+}
+.flex {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.flex-row {
+  display:flex;
+  flex-direction:row;
+  justify-content: center;
+}
+.flex-end-row {
+  display:flex;
+  flex-direction:row;
+  justify-content: center;
+}
+.first-section .custom-container .HEADERS .mag-icon{
+  position: absolute;
+  right: 28px;
+  top: 19px;
+}
+.first-section .custom-container .HEADERS .mag-icon img{
+  height: 26px;
+}
+.flex-start-row {
+  display:flex;
+  flex-direction:row;
+  justify-content: flex-start;
+}
+.row{
+  margin-left: 0;
+  margin-right: 0;
+}
+.justify-center{
+
+  display: flex;
+  justify-content: center;
+}
+.align-center{
+  display: flex;
+  align-items: center;
+}
+.first-section .image-section{
+  background: linear-gradient(rgba(8, 7, 7, 0.72), rgba(10, 9, 9, 0.8)), url(/static/images/donkey.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  width: 100%;
+  background-position: center;
+}
+
+.first-section .custom-container .HEADERS{
+  background-color: #191d24;
+  position: relative;
+}
+
+.first-section .HEADERS img{
+  width:auto;
+  height:66px;
+  margin: 16px 1px 5px 0;
+}
+.first-section .HEADERS {
+  align-items: center;
+  padding-right: 39px;
+}
+.first-section .HEADERS .col-5 img {
+  transform: scaleX(-1);
+}
+.first-section .first-row{
+  border-bottom:1px solid #efb817;
+}
+.first-section .second-row{
+  background-color: #191d24;
+  height: 60px;
+}
+.first-section .second-row .navbar{
+  list-style-type: none;
+  justify-content: center;
+  margin-top: -16px;
+  padding-left: 0;
+}
+
+.first-section .second-row .navbar li{
+  list-style-type: none;
+
+  padding: 25px;
+
+
+}
+.first-section .second-row .navbar li .active{
+  color:#efb817;
+}
+.first-section .second-row .navbar li span{
+
+  font-family: UniSansCAPSheavy;
+  font-size: 15px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.88;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #d8d8d8;
+  cursor: pointer;
+}
+
+.first-section .second-row .navbar li span:hover{
+  color: #efb817;
+}
+.first-section .year{
+  margin-top: 24%;
+}
+.first-section .year .quarter span{
+  font-family: UniSansCAPS;
+  font-size: 36px;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.25;
+  letter-spacing: 1.1px;
+  color: #ffffff;
+}
+.first-section .year .quarter p{
+  color: #f5a623;
+  font-family: UniSansCAPS;
+  font-size: 36px;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.25;
+  letter-spacing: 1.1px;
+}
+.first-section .year .video-icon{
+  width: 130px;
+  height: 80px;
+  background-color: #f5a623;
+  border-radius: 20px;
+
+}
+
+
+
+/*   Footer --- START   */
+.custom-flex-footer{
+  display: flex;
+  justify-content: space-around;
+}
+.social-icons{
+  margin-right: 42px;
+}
+.give-amazing-margin{
+  margin-left: 0px;
+}
+.another-left{
+  margin-left: 0px;
+
+}
+.margin-left-special{
+
+}
+.footer-menu1 .fb-page span{
+
+}
+.foot-area{
+  background-color: rgba(155, 155, 155, 0.06);
+}
+.main-container{
+  padding: 40px 30px;
+}
+.footer-area .social-media-links .list1{
+  padding-left: 45px;
+}
+.footer-area{
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  justify-content:flex-end;
+  width: 1129px;
+  height: auto;
+
+  margin:0 auto;
+  padding-bottom: 45px;
+}
+
+.redcolor p{
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+.footer-area .list3 i{
+  padding: 53px 0px 0 10px;
+  width: 20px;
+  height: 16px;
+
+}
+.give-bottom{
+  margin-bottom: 60px;
+}
+.footer {
+  background-color: #efb817;
+  height: 100%; }
+
+.redcolor {
+  color: #17191d;
+  padding-bottom: 20px
+}
+.footer-menu p, .footer-menu a{
+  font-family: AvenirNext;
+  font-size: 13.8px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  margin-bottom: 5px;
+  letter-spacing: normal;
+
+}
+.make-bold strong{
+  font-weight: bold!important;
+}
+.footer-menu p span{
+  font-weight: bold;
+}
+.footer-menu a:hover{
+  color: #fc0606;
+}
+.responsive-flex{
+  display: flex;
+  justify-content: flex-end;
+}
+.footer .give-bottom .offset-2{
+  margin-left: 10%!important;
+}
+.footer-paragraph p{
+  width: 222px;
+  font-family: AvenirNext;
+  font-size: 13px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2.15;
+  letter-spacing: normal;
+  text-align: left;
+  color: #5a6775;
+}
+.footer-menu1 .text-bold{
+  font-weight: bold;
+  color: black;
+}
+.footer-paragraph p span{
+  color:red;
+  font-weight: bold;
+}
+
+.footer-menu-last p, .footer-menu-last a {
+  font-family: AvenirNext;
+  font-size: 11px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: left;
+  color: #191d24;
+  padding-left: 15px;
+  padding-top: 3px;
+}
+.footer-menu-last .reserved p{
+
+  margin-left:-135px;
+
+}
+.Copyright-area{
+  margin-top: 50px;
+}
+.Copyright-area .footer-menu-last{
+  width: 1000px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: auto;
+  padding-bottom: 71px;
+}
+.Copyright-area .footer-menu-last .terms{
+  display: flex;
+  margin-right: -58px;
+
+}
+.Copyright-area .reserved{
+  padding-left: 30px;
+
+}
+.Copyright-area .footer-menu-last .terms p, .Copyright-area .footer-menu-last .terms a{
+  font-size: 11px;
+  padding: 0 20px;
+}
+.socialicons {
+  font-size: 22px;
+  margin-left: 20px;
+  color: #ffffff;
+}
+.socialicon1 {
+  font-size: 22px;
+  color: #ffffff;
+}
+.icon-list{
+  margin-right: 20px;
+}
+
+/*   Footer --- END   */
