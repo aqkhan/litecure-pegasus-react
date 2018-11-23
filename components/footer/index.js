@@ -8,7 +8,7 @@ class Footer extends Component{
                     <div className="container">
                         <div className="container">
                             <div className=" responsive-flex row mt-5">
-                                <div className=" responsive-no-off all-width col-2 mt-5">
+                                <div className="col-sm-2 responsive-no-off all-width col-2 mt-5">
                                     <div className="redcolor"><p className="make-bold"><strong>Websites</strong></p></div>
                                     <div className="footer-menu">
                                         <div><p>companion</p></div>
@@ -17,7 +17,7 @@ class Footer extends Component{
                                         <div><p>Corporate</p></div>
                                     </div>
                                 </div>
-                                <div className="col-2 all-width mt-5">
+                                <div className="col-sm-2 col-2 all-width mt-5">
                                     <div className="redcolor"><p className="make-bold"><strong>LiteCure</strong></p></div>
                                     <div className="footer-menu">
                                         <div><p>About US</p></div>
@@ -41,7 +41,7 @@ class Footer extends Component{
                                     </div>
 
                                 </div>
-                                <div className="col-2 social-icons mt-5">
+                                <div className="col-sm-2 col-2 social-icons mt-5">
                                     <i className="fa fa-linkedin-square redcolor socialicons socialicons1" ></i>
                                     <i className="fa fa-twitter redcolor socialicons socialicons1"></i>
                                     <i className="fa fa-envelope redcolor  socialicons socialicons1" ></i>

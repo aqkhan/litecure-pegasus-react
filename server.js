@@ -8,13 +8,16 @@ const handle = app.getRequestHandler();
 app.prepare()
     .then(() => {
         const server = express();
-
-        server.get('/post/:id', (req, res) => {
-            const actualPage = "/post";
+        server.get('/pegasus/:id', (req, res) => {
+            const actualPage = "/pegasus";
             const queryParams = {id: req.params.id};
             app.render(req, res, actualPage, queryParams);
         });
-
+        server.get('/pegasus/', (req, res) => {
+            const actualPage = "/pegasus";
+            const queryParams = {id: req.params.id};
+            app.render(req, res, actualPage, queryParams);
+        });
         server.get('*', (req, res) => {
             return handle(req, res)
         });

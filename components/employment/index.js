@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-import Pegasus from './pegasus'
-import '../style.css'
 class index extends Component{
     render(){
+        console.log("From employment", this.props.content);
         return(
-            <Pegasus/>
+            <div>
+
+            </div>
         )
     }
 }
