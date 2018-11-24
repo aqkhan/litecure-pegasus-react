@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import Layout from "../components/layout";
 import '../style.css'
-import Employment from "../components/employment";
-import Products from '../components/product'
+// import Employment from "../components/employment";
+import Products from '../components/product';
 import { withRouter } from "next/router";
 import Home from "../components/home";
+import AboutUs from "../components/aboutUs";
 class Pegasus extends Component{
 
     state = {
@@ -18,9 +19,10 @@ class Pegasus extends Component{
 
     pageSwitch(type){
         switch(type){
-            case "employment":
-                return <Employment />
-            case "products": return <Products />
+            // case "employment":
+            //     return <Employment />
+            case "products": return <Products/>
+            case "about-us": return <AboutUs/>
             default: return <Home/>
         }
     }

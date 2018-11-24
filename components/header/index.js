@@ -6,7 +6,7 @@ class Header extends Component{
         return(
             <div>
                 <Head>
-                    <title>Home</title>
+                    <title>Pegasus</title>
                     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
                     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
@@ -46,7 +46,7 @@ class Header extends Component{
                         <div className="container showhide custom-container">
                             <div className="row  justify-center align-center">
                                 <ul className="responsive-column navbar flex-row">
-                                    <li><span className="">PRODUCTS</span></li>
+                                    <li><span className="active"><a href="/pegasus/products/">PRODUCTS</a></span></li>
                                     <li><span>RESEARCH</span></li>
                                     <li><span>RESOURCES</span></li>
                                     <li><span>ABOUT</span></li>

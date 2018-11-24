@@ -1,8 +1,8 @@
 webpackHotUpdate("static/development/pages/pegasus.js",{
 
-/***/ "./components/product/index.js":
+/***/ "./components/aboutUs/index.js":
 /*!*************************************!*\
-  !*** ./components/product/index.js ***!
+  !*** ./components/aboutUs/index.js ***!
   \*************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -11,7 +11,6 @@ webpackHotUpdate("static/development/pages/pegasus.js",{
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _requestDemo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../requestDemo */ "./components/requestDemo/index.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -32,66 +31,58 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
-
-var Product =
+var AboutUs =
 /*#__PURE__*/
 function (_Component) {
-  _inherits(Product, _Component);
+  _inherits(AboutUs, _Component);
 
-  function Product() {
-    _classCallCheck(this, Product);
+  function AboutUs() {
+    _classCallCheck(this, AboutUs);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Product).apply(this, arguments));
+    return _possibleConstructorReturn(this, _getPrototypeOf(AboutUs).apply(this, arguments));
   }
 
-  _createClass(Product, [{
+  _createClass(AboutUs, [{
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
-        className: "section-one bg-color"
+        className: "first-section"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "third-row"
+        className: "fourth-row text-area"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "container custom-container"
+        className: " container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row flex"
+        className: "row "
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "header-text text-extra"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        className: "Product-text"
-      }, "EMPOWER ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", null, "DS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "DELIVERY SYSTEM"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "container custom-container"
+        className: "col-sm-4 p-0"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row flex"
+        className: "PROFILE"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "COMPANY PROFILE"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Pegasus Therapy Laser is part of the", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), " veterinary division of LiteCure, LLC.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), " Combining physics, laser science, and ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "engineering, LiteCure, LLC is a leading", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), " medical device manufacturing company ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "bringing advanced laser technology and", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), " innovative solutions to the health care", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), " industry."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-sm-8 "
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "header-image"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "/static/images/2018-09-12.png",
-        className: "head-img"
-      }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "small-upper-line flex"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "line line-ex"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "fourth-row"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "custom-container container"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row flex"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "flex-column learnmore-header learn-ex"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Empower DS provides the versatility you need to treat your toughest cases. Four application-", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "specific treatment heads, the patented laser-contact ball and the toughest fiber available make ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Pegasus therapy lasers clinically practical and ruggedly durable."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        className: " learnmore-header"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Located in Newark, Delaware, LiteCure provides expertise in design, manufacturing, production and support. LiteCure provides highly reliable products and the resources and tools to successfully incorporate the technology and products into any practice.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "LiteCure is an FDA-registered manufacturer providing FDA cleared products for a variety of medical applications. Each product has been designed and manufactured under stringent quality control systems that are certified to meet ISO-9001 and ISO-13485 standards for medical devices.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "With over 12 years of state-of-the-art laser development and manufacturing expertise, LiteCure ensures its customers the best in technology and design. LiteCure employs a highly experienced management team of research and development engineers that together represent over 100 years of experience in the field of laser development and systems"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "button"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "#"
-      }, "LEARN MORE")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_requestDemo__WEBPACK_IMPORTED_MODULE_1__["default"], null));
+      }, "BENEFITS OF LASER THERAPY"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#"
+      }, "CONTACT US ")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "container custom-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row flex"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "about"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "ABOUT US")))))));
     }
   }]);
 
-  return Product;
+  return AboutUs;
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
-/* harmony default export */ __webpack_exports__["default"] = (Product);
+/* harmony default export */ __webpack_exports__["default"] = (AboutUs);
 
 /***/ })
 
 })
-//# sourceMappingURL=pegasus.js.486b755c36d827076176.hot-update.js.map
+//# sourceMappingURL=pegasus.js.e070e1775b0ca7d8a1db.hot-update.js.map

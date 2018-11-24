@@ -661,6 +661,499 @@ a:active, a:hover{
 }
 
 
+/*section-two:START*/
+
+.second-section{
+  background-image: linear-gradient(to right, #efb817, #f9d366);
+  width: 100%;
+}
+.second-section .PTL-PEGASUS{
+  margin-top: 107px;
+}
+.second-section .PTL-PEGASUS p{
+  font-family: UniSansCAPS;
+  font-size: 70px;
+  font-weight: 100;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.97;
+  letter-spacing: -1px;
+  text-align: center;
+  color: #17191d;
+}
+.second-section .PTL-PEGASUS span{
+  font-weight: 900!important;
+  color: #f8e71c;
+  font-size: 70px;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.97;
+  letter-spacing: -1px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.second-section .image-container{
+  margin-top: 5%;
+}
+.second-section .image-container .image34{
+  /*max-width: 850px;*/
+  /*margin-left: 8%;*/
+  width: 100%;
+  opacity: 0.6;
+  mix-blend-mode: multiply;
+  -webkit-filter: blur(10px);
+  filter: blur(7px);
+
+}
+.second-section .image-container .ms .second{
+  padding-left: 100px;
+}
+
+/*second-section:END*/
+
+/*third-section:START*/
+.third-section{
+  background-image: linear-gradient(to bottom, #efb817, #f9d366);
+  width: 100%;
+}
+.third-section .PTC-PEGASUS{
+  margin-top: 107px;
+}
+.third-section .PTC-PEGASUS p{
+  font-family: UniSansCAPS;
+  font-size: 70px;
+  font-weight: 100;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.97;
+  letter-spacing: -1px;
+  text-align: center;
+  color: #17191d;
+}
+.third-section .PTC-PEGASUS span{
+  font-weight: 900!important;
+  color: #f8e71c;
+  font-size: 70px;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.97;
+  letter-spacing: -1px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.second-section .image-container .mn{
+  margin-top: 7%;
+}
+.second-section .image-container .ms{
+  margin-top: 5%;
+}
+
+.second-section .image-container .ms p, .second-section .image-container .ms ul{
+  font-family: AvenirNext;
+  font-size: 15px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  margin-bottom: 5px;
+  letter-spacing: normal;
+}
+
+.third-section .image-container .mn{
+  margin-top: 10%;
+}
+.third-section .image-container .ms{
+  margin-top: 5%;
+}
+
+.third-section .image-container .ms p, .third-section .image-container .ms ul{
+  font-family: AvenirNext;
+  font-size: 15px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  margin-bottom: 5px;
+  letter-spacing: normal;
+}
+
+.third-section .image-container .image34{
+  max-width: 660px;
+  opacity: 0.6;
+  mix-blend-mode: multiply;
+  -webkit-filter: blur(10px);
+  filter: blur(8px);
+
+
+}
+
+
+/*third-section:END*/
+
+
+.first-section .second-row .navbar li a{
+  color: white;
+}
+.first-section .second-row .navbar li a:hover{
+  color :#efb817;
+  text-decoration:none;
+}
+
+
+/*section-three:START*/
+.section-three{
+  position: relative;
+  /*background-image: url(../Assets/machine.jpg);*/
+  /*background-repeat: no-repeat;*/
+  /*background-size: cover;*/
+
+}
+.section-three-overlay{
+
+  background:linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)), url(/static/images/machine.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter:grayscale(1);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top:0;
+  bottom: 0;
+  z-index: -1;
+
+}
+.section-three .product-text{
+  margin-bottom: 60px;
+}
+.section-three .big-text .col-12{
+  padding: 0px!important;
+}
+
+.section-three .big-text p {
+  font-family: UniSansCAPS;
+  font-size: 370px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom:0px;
+  font-weight: 100;
+  font-style: normal;
+  font-stretch: normal;
+  /*line-height: 0.17;*/
+  letter-spacing: -0.9px;
+  text-align: center;
+  color: rgba(216, 216, 216, 0);
+  background-color: rgba(216, 216, 216, 0);
+  -webkit-text-stroke: 2.3px #f7f7f8;
+  padding: 257px 1px 121px 1px;
+  height: 202px;
+}
+
+.section-three .fourth-row .learnmore-header{
+  padding: 30px 0px 100px 0px;
+  width: 33%;
+
+}
+.section-three .fourth-row .learnmore-header p{
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.32;
+  letter-spacing: 0.6px;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 29px;
+}
+.section-three .fourth-row .learnmore-header span{
+  font-family: OpenSans;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: italic;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  text-align: center;
+  color: #ffffff;
+  opacity:0.5;
+}
+.section-three  .carousel-indicators {
+  bottom:35px;
+}
+
+.section-three  .carousel-indicators li{
+  max-width: 10px!important;
+  min-width: 10px!important;
+  width: 10px;
+  height: 9.6px;
+  background-color: #ffffff;
+  border:none;
+  margin: 0px 22px;
+}
+.section-three  .carousel-indicators .active{
+  background-color: #efb817;
+  box-shadow:0px 0px 1px 8px rgba(47, 23, 23, 0.5);
+}
+
+/*section-three:END*/
+
+/*.first-section:START*/
+.aboutPage{
+  background: linear-gradient(rgba(14, 13, 13, 0.77), rgba(10, 9, 9, 0.72)),  url(/static/images/white_horse_stock_4_by_phoenixs_stock.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1485px;
+  width: 100%;
+  background-position: right;
+}
+
+.first-section .custom-container .HEADERS{
+  background-color: #191d24;
+}
+
+.first-section .HEADERS .col-7 img{
+  width:auto;
+  height:66px;
+  margin: 16px 1px 5px 0px;
+}
+.first-section .HEADERS .col-5 {
+  align-items: center;
+  padding-right: 39px;
+}
+.first-section .HEADERS .col-5 img {
+  transform: scaleX(-1);
+}
+.first-section .first-row{
+  border-bottom:1px solid #efb817;
+}
+.first-section .second-row{
+  background-color: #17191d;
+  height: 60px;
+}
+.first-section .second-row .navbar{
+  list-style-type: none;
+  justify-content: center;
+  margin-top: -16px;
+}
+
+.first-section .second-row .navbar li{
+  list-style-type: none;
+
+  padding: 25px;
+
+
+}
+.first-section .second-row .navbar li .active{
+  color: #efb817;
+}
+.first-section .second-row .navbar li span{
+
+  font-family: UniSansCAPSheavy;
+  font-size: 15px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.88;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #d8d8d8;
+  cursor: pointer;
+}
+
+.first-section .second-row .navbar li span:hover{
+  color: #efb817;
+}
+
+
+
+.first-section .text-area{
+
+  padding-bottom: 67px;
+}
+
+.first-section .fourth-row .learnmore-header{
+  padding: 30px 0px 30px 23px;
+  width: 100%;
+  padding-top: 11%;
+
+}
+.first-section .PROFILE{
+  padding-top: 15%;
+}
+.first-section .PROFILE h1{
+  font-family: UniSansCAPS;
+  font-size: 36px;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.89;
+  letter-spacing: 1.1px;
+  color: #ffffff;
+  padding-top: 20px;
+}
+.first-section .PROFILE p{
+  font-family: 'Roboto', sans-serif;
+  font-size: 17px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.32;
+  letter-spacing: 0.6px;
+  color: #efb817;
+  padding-top: 30px;
+}
+.first-section .fourth-row .learnmore-header p{
+  font-family: 'Roboto', sans-serif;
+  font-size: 17px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.32;
+  letter-spacing: 0.6px;
+  color: #ffffff;
+}
+.first-section .fourth-row .learnmore-header .button{
+  margin: 50px 2px 83px 1px;
+  float: right;
+}
+.first-section .fourth-row .learnmore-header a{
+  border: solid 2px #efb817;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1.5px;
+  text-align: center;
+  color: #ffffff;
+  padding: 14px 45px;
+  margin: 0 10px;
+
+}
+.first-section .fourth-row .about{
+  margin-top: 12%;
+}
+.first-section .fourth-row .about h1{
+  font-family: UniSansCAPS;
+  font-size: 294.4px;
+  font-weight: 100;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.22;
+  letter-spacing: -1.4px;
+  text-align: center;
+  color: #efb817;
+}
+.first-section .yellow-section{
+  width: 100%;
+  height: 611px;
+  background-blend-mode: overlay;
+  background-image:  linear-gradient(rgba(239, 184, 23, 0.48), rgba(239, 184, 23, 0.85));
+  position: relative;
+  z-index: 2;
+}
+.first-section .yellow-section .view-area{
+  position: relative;
+
+}
+.first-section .yellow-section .view-text{
+  position: absolute;
+  margin-left: 56px;
+}
+.first-section .yellow-section .image-margin{
+  margin-top: 120px;
+  margin-left: 40px;
+}
+.first-section .yellow-section .image-margin img{
+  height: 250px;
+  mix-blend-mode: multiply;
+
+}
+.first-section .yellow-section .image-margin .view-text1{
+  position: absolute;
+  margin-left: 8%;
+  margin-top: 18px;
+}
+.first-section .yellow-section .image-margin .view-text1 h1{
+  font-family: UniSansCAPS;
+  font-size: 36px;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.89;
+  letter-spacing: 1.1px;
+  color: #191d24;
+}
+.first-section .yellow-section .image-margin .view-text1 p{
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1.5px;
+  text-align: left;
+  color: #efb817;
+  padding-left: 0px;
+  background: black;
+  width: 150px;
+  padding: 6px 14px;
+}
+.first-section .yellow-section .image-margin .img-pegasus{
+  width: 390px;
+  height: 230px;
+  mix-blend-mode: multiply;
+}
+.first-section .yellow-section .image-margin .view-text h1{
+  font-family: UniSansCAPS;
+  font-size: 35px;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.89;
+  letter-spacing: 1.1px;
+  color: #ffffff;
+}
+.first-section .yellow-section .image-margin {
+  z-index: 2;
+
+}
+.first-section .yellow-section .image-margin p{
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1.5px;
+  color: #ffffff;
+  padding-left: 8%;
+  margin-top: 37px;
+}
+.first-section .yellow-section .prodct{
+  font-family: UniSansCAPS;
+  font-size: 277.4px;
+  font-weight: 100;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.22;
+  letter-spacing: -1.4px;
+  text-align: center;
+  color: #efb817;
+  padding-top: 18%;
+  position: absolute;
+  z-index: -1;
+
+
+
+}
+
+/*section-one:END*/
+
 
 
 /*# sourceMappingURL=styles.chunk.css.map*/
