@@ -46,11 +46,11 @@ class Header extends Component{
                         <div className="container showhide custom-container">
                             <div className="row  justify-center align-center">
                                 <ul className="responsive-column navbar flex-row">
-                                    <li><span className="active"><a href="/pegasus/products/">PRODUCTS</a></span></li>
+                                    <li><span><a href="/products">PRODUCTS</a></span></li>
                                     <li><span>RESEARCH</span></li>
-                                    <li><span>RESOURCES</span></li>
-                                    <li><span>ABOUT</span></li>
-                                    <li><span>SUPPORT</span></li>
+                                    <li><span><a href="/resources">RESOURCES</a></span></li>
+                                    <li><span><a href="/about-us">ABOUT</a></span></li>
+                                    <li><span><a href="/support">SUPPORT</a></span></li>
                                 </ul>
                             </div>
                         </div>
