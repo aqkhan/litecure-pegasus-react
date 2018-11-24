@@ -12469,7 +12469,7 @@ function (_Component) {
 
 /***/ }),
 
-/***/ 3:
+/***/ 6:
 /*!********************************!*\
   !*** multi ./pages/pegasus.js ***!
   \********************************/
@@ -12494,5 +12494,5 @@ module.exports = dll_e65fbcc05dc326b23f3e;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js","styles"]]]));;
+},[[6,"static/runtime/webpack.js","styles"]]]));;
 //# sourceMappingURL=pegasus.js.map

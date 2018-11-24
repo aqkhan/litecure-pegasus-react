@@ -1153,7 +1153,520 @@ a:active, a:hover{
 }
 
 /*section-one:END*/
+.first-section .third-row .header-text{
+  padding: 50px 0px;
+}
 
+.first-section .third-row .header-text p{
+  font-family: UniSansCAPS;
+  font-size: 90px;
+  font-weight: 100;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.97;
+  letter-spacing: -1px;
+  text-align: center;
+  color: #fff;
+}
+
+.first-section .third-row .header-text p span{
+  color: #efb817;
+}
+
+.small-upper-line{
+
+}
+.small-upper-line .line{
+  border-top: solid 6px #efb817;
+  width: 70px;
+}
+.first-section .text-area{
+  width: 100%;
+  background: rgba(11, 11, 12, 0.52);
+  position: relative;
+  margin-top: 17%;
+  padding-bottom: 67px;
+}
+.first-section .header-image{
+  position: absolute;
+  padding-top: 21%;
+  z-index: 1;
+}
+.first-section .overlay-section{
+
+
+
+}
+
+.first-section .fourth-row .learnmore-header{
+  padding: 30px 0px 30px 23px;
+  width: 100%;
+  padding-top: 11%;
+
+}
+.first-section .SPECIFICATIONS{
+  padding-top: 15%;
+}
+.first-section .SPECIFICATIONS h1{
+  font-family: UniSansCAPS;
+  font-size: 36px;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.89;
+  letter-spacing: 1.1px;
+  color: #ffffff;
+}
+.first-section .SPECIFICATIONS p{
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.32;
+  color: #efb817;
+  margin-top: 8%;
+}
+.first-section .fourth-row .learnmore-header p{
+  font-family: 'Roboto', sans-serif;
+  font-size: 17px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.32;
+  color: #ffffff;
+}
+.first-section .third-row .header-text p b{
+  font-family: fantasy;
+}
+.first-section .fourth-row .learnmore-header .button{
+  margin: 50px 2px 83px 1px;
+  float: right;
+}
+.first-section .fourth-row .learnmore-header a{
+  border: solid 2px #efb817;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1.5px;
+  text-align: center;
+  color: #ffffff;
+  padding: 14px 45px;
+  margin: 0 10px;
+
+}
+.first-section .yellow-section{
+  width: 100%;
+  height: 688px;
+  background-color: rgba(247, 187, 12, 0.6);
+  position: relative;
+  z-index: 2;
+}
+.first-section .yellow-section .view-area{
+  position: relative;
+  padding-top: 28px;
+}
+.first-section .yellow-section .view-text{
+  position: absolute;
+
+}
+.first-section .yellow-section .image-margin{
+  margin-top: 120px;
+}
+.first-section .yellow-section .image-margin img{
+  height: 300px;
+  mix-blend-mode: multiply;
+}
+.first-section .yellow-section .image-margin h1{
+  font-family: UniSansCAPS;
+  font-size: 36px;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.89;
+  letter-spacing: 1.1px;
+  color: #ffffff;
+  padding-left: 16%;
+  padding-top: 9%;
+}
+.first-section .yellow-section .image-margin {
+  z-index: 2;
+
+}
+.product-det{
+  background: linear-gradient(rgba(8, 7, 7, 0.87), rgba(10, 9, 9, 0.85)), url(/static/images/female-vet-with-woman.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1763px;
+  width: 100%;
+}
+.first-section .yellow-section .image-margin p{
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1.5px;
+  color: #ffffff;
+
+  padding-left: 23%;
+}
+.first-section .yellow-section .prodct{
+  font-family: UniSansCAPS;
+  font-size: 277.4px;
+  font-weight: 100;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.22;
+  letter-spacing: -1.4px;
+  text-align: center;
+  color: #efb817;
+  padding-top: 18%;
+  position: absolute;
+  z-index: -1;
+
+}
+/*second-section:START*/
+
+.Second-section{
+  background-color: #191d24;
+
+}
+
+
+.Second-section .image-container {
+  position: relative;
+  width: 50%;
+}
+.Second-section .image-container .image-overlay{
+  background-color: rgba(239, 184, 23, 0.3);
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  position: absolute;
+  width: 337px;
+}
+
+.Second-section .image-container .image {
+  display: block;
+  max-width: 337px;
+  min-height: 312px;
+
+}
+
+.Second-section .image-container .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 300px;
+  height: 265px;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #efb817;
+  margin-top: 26px;
+  margin-left: 18px;
+}
+
+.Second-section .image-container:hover .overlay {
+  opacity: 1;
+}
+
+.Second-section .image-container .text {
+  position: absolute;
+}
+.Second-section .image-container .text p{
+  font-family: OpenSans;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.4px;
+  padding: 50px 0px 0px 20px;
+  color: #58282f;
+}
+.Second-section .image-container .text h5{
+  font-family: UniSansCAPS;
+  font-size: 45px;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.89;
+  letter-spacing: normal;
+  color: #ffffff;
+  text-align: left;
+  padding: 5px 0px 0px 40px;
+}
+
+.images-flex{
+  display: flex;
+  flex-wrap:wrap;
+}
+.p-0{
+  padding:0px;
+}
+/*second-section:END*/
+/*second-section:START*/
+.hours-img{
+  background: linear-gradient(rgba(8, 7, 7, 0.90), rgba(10, 9, 9, 0.8)), url(/static/images/horse-form.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  background-position: center;
+}
+
+.second-section .text-area{
+
+  padding-bottom: 67px;
+}
+
+.second-section .fourth-row .learnmore-header{
+  padding: 30px 0px 30px 23px;
+  width: 100%;
+  padding-top: 14%;
+
+}
+.second-section .fourth-row .learnmore-header p{
+  font-family: 'Roboto', sans-serif;
+  font-size: 17px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.32;
+  letter-spacing: 0.6px;
+  color: #ffffff;
+}
+.second-section .fourth-row .learnmore-header .extra-p{
+  font-size:21px;
+}
+.second-section .fourth-row .learnmore-header span{
+  color: #efb817;
+}
+.second-section .LASER-THREAT{
+  padding-top: 22%;
+}
+.second-section .LASER-THREAT h1{
+  font-family: UniSansCAPS;
+  font-size: 36px;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.08;
+  letter-spacing: 1.1px;
+  color: #ffffff;
+  padding-top: 20px;
+}
+.second-section .LASER-THREAT p{
+  font-family: 'Roboto', sans-serif;
+  font-size: 17px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.32;
+  letter-spacing: 0.6px;
+  color: #efb817;
+  padding-top: 30px;
+}
+
+.second-section .fourth-row .learnmore-header .button{
+  margin: 50px 2px 83px 1px;
+  float: right;
+}
+.second-section .fourth-row .learnmore-header a{
+  border: solid 2px #efb817;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1.5px;
+  text-align: center;
+  color: #ffffff;
+  padding: 14px 45px;
+  margin: 0 10px;
+
+}
+.second-section .fourth-row .learnmore-header .cost-btn{
+  background-color: #efb817;
+  border: solid 2px #efb817;
+}
+.second-section .fourth-row .BENEFITS{
+  margin-top: 12%;
+  margin-right: 10%;
+}
+.second-section .fourth-row .BENEFITS h1{
+  font-family: UniSansCAPS;
+  font-size: 300px;
+  font-weight: 100;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.22;
+  letter-spacing: -1.4px;
+  text-align: center;
+  color: #efb817;
+  opacity: 0.6;
+}
+.second-section .fourth-row .performance h1{
+  font-size: 219px;
+  letter-spacing: -21.4px;
+}
+/*second-section:END*/
+.image-media{
+  background: linear-gradient(rgba(8, 7, 7, 0.72), rgba(10, 9, 9, 0.8)), url(/static/images/donkey.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  width: 100%;
+  background-position: center;
+}
+/*.first-section:START*/
+.first-section{
+  background: linear-gradient(rgba(14, 13, 13, 0.89), rgba(10, 9, 9, 0.86)), url(/static/images/maxresdefault.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+  width: 100%;
+  background-position: center;
+}
+
+.first-section .custom-container .HEADERS{
+  background-color: #191d24;
+}
+
+.first-section .HEADERS .col-7 img{
+  width:auto;
+  height:66px;
+  margin: 16px 1px 5px 0px;
+}
+.first-section .HEADERS .col-5 {
+  align-items: center;
+  padding-right: 39px;
+}
+.first-section .HEADERS .col-5 img {
+  transform: scaleX(-1);
+}
+.first-section .first-row{
+  border-bottom:1px solid #efb817;
+}
+.first-section .second-row{
+  height: 60px;
+}
+.first-section .second-row .navbar{
+  list-style-type: none;
+  justify-content: center;
+  margin-top: -16px;
+}
+
+.first-section .second-row .navbar li{
+  list-style-type: none;
+
+  padding: 25px;
+
+
+}
+.first-section .second-row .navbar li .active{
+  color: #efb817;
+}
+.first-section .second-row .navbar li span{
+
+  font-family: UniSansCAPSheavy;
+  font-size: 15px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.88;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #d8d8d8;
+  cursor: pointer;
+}
+
+.first-section .second-row .navbar li span:hover{
+  color: #efb817;
+}
+.first-section .header-text {
+  padding-top: 151px;
+}
+.first-section .header-text p{
+  font-family: UniSansCAPS;
+  font-size: 36px;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.89;
+  letter-spacing: 1.1px;
+  text-align: center;
+  color: #f5a623;
+}
+
+
+.first-section .text-area{
+
+  padding-bottom: 67px;
+}
+
+.first-section .fourth-row .learnmore-header{
+  padding-left:  50px;
+  width: 100%;
+  padding-top: 8%;
+
+}
+
+.first-section .fourth-row .learnmore-header p{
+  font-family: 'Roboto', sans-serif;
+  font-size: 19px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.32;
+  letter-spacing: 0.6px;
+  color: #ffffff;
+}
+.first-section .fourth-row .learnmore-header span{
+  font-weight: 800;
+  color: #efb817;
+}
+.first-section .fourth-row .learnmore-header .button{
+  margin: 96px 60px 83px 0px;
+  float: right;
+
+}
+.first-section .fourth-row .learnmore-header a{
+  font-family: 'Roboto', sans-serif;
+  border: solid 2px #efb817;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 800;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1.5px;
+  text-align: center;
+  color: #ffffff;
+  padding: 14px 20px;
+  margin: 0 10px;
+
+}
+.first-section .fourth-row .learnmore-header .benefits{
+  font-family: inherit;
+  background-color: #efb817;
+  color: #191d24;
+}
+.ex-class p {
+  text-align: left!important;
+}
+
+/*section-one:END*/
 
 
 /*# sourceMappingURL=styles.chunk.css.map*/
