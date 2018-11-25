@@ -21,11 +21,7 @@ class  Home extends Component{
 
         axios.get('http://54.234.86.247:3000/api/products')
             .then((res)=>{
-                let temp=[];
-                res.data.products.map((val)=>{
-                    temp.push(val);
-                });
-                this.setState({products:temp})
+                this.setState({products:res.data.products})
             })
             .catch(err=>{throw err})
     }
@@ -53,8 +49,8 @@ class  Home extends Component{
                                         <br/>
                                         <h3>Specifications</h3>
                                         <ul>
-                                            {Object.keys(value.spec.Name).map((data)=>{
-                                                return <li><span><b>{value.spec.Name[data]}:</b></span><span> </span><span>{value.spec.Detail[data]}</span></li>
+                                            {Object.keys(value.spec.Name).map((data,indexx)=>{
+                                                return <li key={indexx}><span><b>{value.spec.Name[data]}:</b></span><span> </span><span>{value.spec.Detail[data]}</span></li>
                                             })}
                                         </ul>
 
@@ -102,7 +98,7 @@ class  Home extends Component{
                 </section>
         })}
         return(<div>
-                <section className="section-one" style={{
+                <section key={"Home-Container"} className="section-one" style={{
                     background: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)),url('/static/images/buffalo.jpg')`,
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover",}} >
@@ -135,7 +131,7 @@ class  Home extends Component{
                 </section>
                 {dynamic}
                 {product}
-                <section className="section-three">
+                <section className="section-three" key={"Home-Slide"}>
 
 
                     <div id="myCarousel" className="carousel slide" data-ride="2000">

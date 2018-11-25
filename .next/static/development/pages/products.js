@@ -367,13 +367,8 @@ function (_Component) {
       var _this2 = this;
 
       axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('http://54.234.86.247:3000/api/products').then(function (res) {
-        var temp = [];
-        res.data.products.map(function (val) {
-          temp.push(val);
-        });
-
         _this2.setState({
-          products: temp
+          products: res.data.products
         });
       }).catch(function (err) {
         throw err;
@@ -390,7 +385,8 @@ function (_Component) {
 
           if (index === 0) {
             return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
-              className: "section-one bg-color"
+              className: "section-one bg-color",
+              key: value.id
             }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
               className: "third-row"
             }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -422,11 +418,11 @@ function (_Component) {
               className: "row flex"
             }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
               className: "flex-column learnmore-header learn-ex"
-            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
               dangerouslySetInnerHTML: {
                 __html: value.shortDescription
               }
-            })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+            }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
               href: ("/products/" + value.title.replace(/%20| /g, '-')).toLowerCase()
             }, "LEARN MORE"))))));
           } else if (index % 2 === 0) {
@@ -451,8 +447,10 @@ function (_Component) {
               dangerouslySetInnerHTML: {
                 __html: value.shortDescription
               }
-            }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Specifications"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, Object.keys(value.spec.Name).map(function (data) {
-              return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", null, value.spec.Name[data], ":")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, value.spec.Detail[data]));
+            }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Specifications"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, Object.keys(value.spec.Name).map(function (data, indexx) {
+              return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+                key: indexx
+              }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", null, value.spec.Name[data], ":")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, value.spec.Detail[data]));
             })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
               className: "col-sm-8 mn"
             }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -484,8 +482,10 @@ function (_Component) {
               dangerouslySetInnerHTML: {
                 __html: value.shortDescription
               }
-            }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Specifications"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, Object.keys(value.spec.Name).map(function (data) {
-              return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", null, value.spec.Name[data], ":")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, value.spec.Detail[data]));
+            }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Specifications"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, Object.keys(value.spec.Name).map(function (data, indexx) {
+              return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+                key: indexx
+              }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", null, value.spec.Name[data], ":")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, value.spec.Detail[data]));
             })))))));
           }
         });
@@ -563,7 +563,9 @@ function (_Component) {
 
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "state", {
       product: null,
-      err: null
+      err: null,
+      slug: null,
+      products: null
     });
 
     return _this;
@@ -574,10 +576,21 @@ function (_Component) {
     value: function componentWillMount() {
       var _this2 = this;
 
-      console.log(this.props.slug);
-      axios__WEBPACK_IMPORTED_MODULE_1___default()('http://54.234.86.247:3000/api/products/' + this.props.slug).then(function (res) {
+      var slug = this.props.slug;
+      var products = [];
+      axios__WEBPACK_IMPORTED_MODULE_1___default()('http://54.234.86.247:3000/api/products/' + slug).then(function (res) {
         _this2.setState({
-          product: res.data.product
+          product: res.data.product,
+          slug: slug
+        });
+      }).catch(function (err) {
+        _this2.setState({
+          err: err
+        });
+      });
+      axios__WEBPACK_IMPORTED_MODULE_1___default()('http://54.234.86.247:3000/api/products').then(function (res) {
+        _this2.setState({
+          products: res.data.products
         });
       }).catch(function (err) {
         _this2.setState({
@@ -590,8 +603,94 @@ function (_Component) {
     value: function render() {
       var _this$state = this.state,
           product = _this$state.product,
-          err = _this$state.err;
-      return product ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+          err = _this$state.err,
+          slug = _this$state.slug,
+          products = _this$state.products;
+      var detailProduct = null;
+      var allProducts = null;
+
+      if (product) {
+        {
+          if (product.slug === slug) {
+            detailProduct = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+              key: product.id
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+              className: "third-row"
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+              className: "container custom-container"
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+              className: "row flex"
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+              className: "header-text"
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, product.leadText))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+              className: "container custom-container"
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+              className: "row flex"
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+              className: "header-image"
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+              src: product.featuredImage && product.featuredImage.url,
+              height: "280",
+              width: "280",
+              className: "head-img1"
+            }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+              className: "fourth-row text-area"
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+              className: "overlay-section"
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+              className: " container"
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+              className: "row "
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+              className: "col-sm-4 p-0"
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+              className: "SPECIFICATIONS"
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "SPECIFICATIONS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, Object.keys(product.spec.Name).map(function (data, index) {
+              return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+                key: index
+              }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", null, product.spec.Name[data], ":")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, product.spec.Detail[data]));
+            })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+              className: "col-sm-8 "
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+              className: " learnmore-header"
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+              dangerouslySetInnerHTML: {
+                __html: product.shortDescription
+              }
+            }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+              className: "button"
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+              href: "#requestDemo"
+            }, "REQUEST A DEMO"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+              href: "#"
+            }, "TALK TO A REP ")))))))));
+          }
+        }
+      }
+
+      if (products) {
+        allProducts = products.map(function (value) {
+          if (value.slug === slug) {} else {
+            return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+              key: value.id
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+              className: "col-sm-4"
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+              className: "image-margin"
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+              src: value.featuredImage && value.featuredImage.url,
+              height: "320",
+              width: "320"
+            }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+              className: "view-text"
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, value.leadText), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+              href: ("/products/" + value.title.replace(/%20| /g, '-')).toLowerCase()
+            }, "VIEW PRODUCT"))))));
+          }
+        });
+      }
+
+      return err ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         className: "first-section product-det"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "third-row"
@@ -601,46 +700,18 @@ function (_Component) {
         className: "row flex"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "header-text"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, product.leadText))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Product Not found"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container custom-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row flex"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "header-image"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: product.featuredImage && product.featuredImage.url,
-        height: "280",
-        width: "280",
-        className: "head-img1"
-      }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "fourth-row text-area"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "overlay-section"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: " container"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row "
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-sm-4 p-0"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "SPECIFICATIONS"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "SPECIFICATIONS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, Object.keys(product.spec.Name).map(function (data) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", null, product.spec.Name[data], ":")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, product.spec.Detail[data]));
-      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-sm-8 "
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: " learnmore-header"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        dangerouslySetInnerHTML: {
-          __html: product.shortDescription
+        className: "header-image",
+        style: {
+          background: 'black'
         }
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "button"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#requestDemo"
-      }, "REQUEST A DEMO"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#"
-      }, "TALK TO A REP ")))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_requestDemo__WEBPACK_IMPORTED_MODULE_3__["default"], null)) : product ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        className: "first-section product-det"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, detailProduct), "allProducts & ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "yellow-section"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container custom-container"
@@ -648,23 +719,7 @@ function (_Component) {
         className: "row view-area"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-sm-2"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-sm-4"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "image-margin"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "/static/images/ptc-400px.png"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "view-text"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Pegasus Therapy Compact (PTC)"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "VIEW PRODUCT")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-sm-4"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "image-margin"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "/static/images/34.png"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "view-text"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Pegasus Therapy LASER (PTL)"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "VIEW PRODUCT")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }), allProducts, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-sm-2"
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container custom-container"
@@ -782,7 +837,7 @@ function (_Component) {
         className: "row flex"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "header-text"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Page Not Found"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Loading ..."))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container custom-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row flex"
@@ -12817,7 +12872,7 @@ function (_Component) {
 
 /***/ }),
 
-/***/ 3:
+/***/ 5:
 /*!*********************************!*\
   !*** multi ./pages/products.js ***!
   \*********************************/
@@ -12842,5 +12897,5 @@ module.exports = dll_e65fbcc05dc326b23f3e;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js","styles"]]]));;
+},[[5,"static/runtime/webpack.js","styles"]]]));;
 //# sourceMappingURL=products.js.map
