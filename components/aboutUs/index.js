@@ -7,7 +7,7 @@ class AboutUs extends Component{
         return(
             <div>
                 <section className="first-section aboutPage" style={{backgroundImage: "url('/static/images/white_horse_stock_4_by_phoenixs_stock.png')"}}>
-                    <div className="fourth-row text-area">
+                    <div className="fourth-row text-area new">
                         <div className=" container">
                             <div className="row ">
                                 <div className="col-sm-4 p-0">

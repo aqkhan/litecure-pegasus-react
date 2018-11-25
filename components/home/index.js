@@ -61,7 +61,7 @@ class  Home extends Component{
                                     </div>
                                 </div>
                                 <div className="col-sm-8 mn">
-                                    <img src={value.featuredImage.url} className="image34"/>
+                                    <img src={value.featuredImage && value.featuredImage.url} className="image34"/>
                                 </div>
 
                             </div>

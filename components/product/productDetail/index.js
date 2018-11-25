@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import ScrollableAnchor, {configureAnchors} from 'react-scrollable-anchor';
 import RequestDemo from "../../requestDemo";
 
 class ProductDetail extends Component{
@@ -7,7 +8,9 @@ class ProductDetail extends Component{
         product: null,
         err: null
     }
+
     componentWillMount(){
+        console.log(this.props.slug)
         axios('http://54.234.86.247:3000/api/products/'+this.props.slug)
             .then((res)=>{
                 this.setState({product:res.data.product})
@@ -59,7 +62,7 @@ class ProductDetail extends Component{
                                                 <br/>
                                                 <br/>
                                             <div className="button">
-                                                <a href="#">REQUEST A DEMO</a>
+                                                <a href="#requestDemo">REQUEST A DEMO</a>
                                                 <a href="#">TALK TO A REP </a>
                                             </div>
                                         </div>
@@ -100,7 +103,6 @@ class ProductDetail extends Component{
                             </div>
                         </div>
                     </div>
-
                 </section>
                 <section className="Second-section">
                     <div className="container custom-container">
@@ -208,10 +210,28 @@ class ProductDetail extends Component{
                     </div>
 
                 </section>
-
+                <ScrollableAnchor id={'requestDemo'}>
                 <RequestDemo/>
+                </ScrollableAnchor>
             </div>:<div>
-                <h3>Page not found</h3>
+                <section className="first-section product-det">
+                <div className="third-row">
+                    <div className="container custom-container">
+                        <div className="row flex">
+                            <div className="header-text">
+                                <p><span>Page Not Found</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="container custom-container">
+                        <div className="row flex">
+                            <div className="header-image" style={{background :'black'}}>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </section>
+                <RequestDemo/>
             </div>
         )
     }

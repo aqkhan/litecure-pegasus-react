@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -260,14 +260,10 @@ function (_Component) {
         href: "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
         rel: "stylesheet",
-        type: "text/css",
-        href: "css/text-det.css"
+        href: "/static/css/bootstrap.css"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
         rel: "stylesheet",
-        href: "css/bootstrap.css"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
-        rel: "stylesheet",
-        href: "css/responsive.css"
+        href: "/static/css/responsive.css"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
         href: "https://fonts.googleapis.com/css?family=Roboto:300",
         rel: "stylesheet"
@@ -282,8 +278,6 @@ function (_Component) {
         href: "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("script", {
         src: "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("script", {
-        src: "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         className: "first-section"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -294,9 +288,11 @@ function (_Component) {
         className: "row HEADERS"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-sm-7 col-7 flex-end-row  "
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "/"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: "/static/images/logos1.png"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-sm-5 col-5 flex-end-row "
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: "/static/images/magnifier.png",
@@ -483,7 +479,50 @@ function (_Component) {
 
       if (this.state.products) {
         dynamic = this.state.products.map(function (value, index) {
-          if (index % 2 === 0) {
+          console.log("index", index);
+
+          if (index === 0) {
+            return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+              className: "section-one bg-color"
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+              className: "third-row"
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+              className: "container custom-container"
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+              className: "row flex"
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+              className: "header-text text-extra"
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+              className: "Product-text"
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, value.leadText))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+              className: "container custom-container"
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+              className: "row flex"
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+              className: "header-image"
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+              src: value.featuredImage && value.featuredImage.url,
+              className: "head-img"
+            }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+              className: "small-upper-line flex"
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+              className: "line line-ex"
+            }, " ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+              className: "fourth-row"
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+              className: "custom-container container"
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+              className: "row flex"
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+              className: "flex-column learnmore-header learn-ex"
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+              dangerouslySetInnerHTML: {
+                __html: value.shortDescription
+              }
+            })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+              href: ("/products/" + value.title.replace(/%20| /g, '-')).toLowerCase()
+            }, "LEARN MORE"))))));
+          } else if (index % 2 === 0) {
             return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
               className: "second-section",
               key: value.id
@@ -510,7 +549,7 @@ function (_Component) {
             })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
               className: "col-sm-8 mn"
             }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-              src: value.featuredImage.url,
+              src: value.featuredImage && value.featuredImage.url,
               className: "image34"
             })))));
           } else {
@@ -530,7 +569,7 @@ function (_Component) {
             }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
               className: "col-sm-6 mn"
             }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-              src: value.featuredImage.url,
+              src: value.featuredImage && value.featuredImage.url,
               className: "image34"
             })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
               className: "col-sm-6 ms"
@@ -545,42 +584,7 @@ function (_Component) {
         });
       }
 
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
-        className: "section-one bg-color"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "third-row"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "container custom-container"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row flex"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "header-text text-extra"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        className: "Product-text"
-      }, "EMPOWER ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", null, "DS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "DELIVERY SYSTEM"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "container custom-container"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row flex"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "header-image"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "/static/images/2018-09-12.png",
-        className: "head-img"
-      }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "small-upper-line flex"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "line line-ex"
-      }, " ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "fourth-row"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "custom-container container"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row flex"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "flex-column learnmore-header learn-ex"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Empower DS provides the versatility you need to treat your toughest cases. Four application-", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "specific treatment heads, the patented laser-contact ball and the toughest fiber available make ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Pegasus therapy lasers clinically practical and ruggedly durable."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#"
-      }, "LEARN MORE")))))), dynamic, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_requestDemo__WEBPACK_IMPORTED_MODULE_2__["default"], null));
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, dynamic, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_requestDemo__WEBPACK_IMPORTED_MODULE_2__["default"], null));
     }
   }]);
 
@@ -604,7 +608,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "axios");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _requestDemo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../requestDemo */ "./components/requestDemo/index.js");
+/* harmony import */ var react_scrollable_anchor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-scrollable-anchor */ "react-scrollable-anchor");
+/* harmony import */ var react_scrollable_anchor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_scrollable_anchor__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _requestDemo__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../requestDemo */ "./components/requestDemo/index.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -624,6 +630,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -660,6 +667,7 @@ function (_Component) {
     value: function componentWillMount() {
       var _this2 = this;
 
+      console.log(this.props.slug);
       axios__WEBPACK_IMPORTED_MODULE_1___default()('http://54.234.86.247:3000/api/products/' + this.props.slug).then(function (res) {
         _this2.setState({
           product: res.data.product
@@ -722,7 +730,7 @@ function (_Component) {
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "button"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#"
+        href: "#requestDemo"
       }, "REQUEST A DEMO"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "#"
       }, "TALK TO A REP ")))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -855,7 +863,28 @@ function (_Component) {
         className: "overlay"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "text"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "08.12.19"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "FEATURED ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "CONTENT ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "TITLE HERE")))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_requestDemo__WEBPACK_IMPORTED_MODULE_2__["default"], null)) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Page not found"));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "08.12.19"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "FEATURED ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "CONTENT ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "TITLE HERE")))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_scrollable_anchor__WEBPACK_IMPORTED_MODULE_2___default.a, {
+        id: 'requestDemo'
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_requestDemo__WEBPACK_IMPORTED_MODULE_3__["default"], null))) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        className: "first-section product-det"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "third-row"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "container custom-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row flex"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "header-text"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Page Not Found"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "container custom-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row flex"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "header-image",
+        style: {
+          background: 'black'
+        }
+      }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_requestDemo__WEBPACK_IMPORTED_MODULE_3__["default"], null));
     }
   }]);
 
@@ -1076,7 +1105,7 @@ function (_Component) {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!*********************************!*\
   !*** multi ./pages/products.js ***!
   \*********************************/
@@ -1129,6 +1158,17 @@ module.exports = require("next/router");
 /***/ (function(module, exports) {
 
 module.exports = require("react");
+
+/***/ }),
+
+/***/ "react-scrollable-anchor":
+/*!******************************************!*\
+  !*** external "react-scrollable-anchor" ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-scrollable-anchor");
 
 /***/ })
 
