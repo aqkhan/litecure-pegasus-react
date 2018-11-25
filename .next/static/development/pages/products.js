@@ -355,7 +355,8 @@ function (_Component) {
     _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Product)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "state", {
-      products: []
+      products: null,
+      err: null
     });
 
     return _this;
@@ -371,13 +372,15 @@ function (_Component) {
           products: res.data.products
         });
       }).catch(function (err) {
-        throw err;
+        _this2.setState({
+          err: err
+        });
       });
     }
   }, {
     key: "render",
     value: function render() {
-      var dynamic;
+      var dynamic = null;
 
       if (this.state.products) {
         dynamic = this.state.products.map(function (value, index) {
@@ -423,7 +426,7 @@ function (_Component) {
                 __html: value.shortDescription
               }
             }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-              href: ("/products/" + value.title.replace(/%20| /g, '-')).toLowerCase()
+              href: "/products/" + value.slug
             }, "LEARN MORE"))))));
           } else if (index % 2 === 0) {
             return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
@@ -491,7 +494,37 @@ function (_Component) {
         });
       }
 
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, dynamic, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_requestDemo__WEBPACK_IMPORTED_MODULE_2__["default"], null));
+      return this.state.products ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, dynamic, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_requestDemo__WEBPACK_IMPORTED_MODULE_2__["default"], null)) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        className: "section-one bg-color"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "third-row"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "container custom-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row flex"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "header-text text-extra"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "Product-text"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Loading ... "))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "container custom-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row flex"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "header-image"
+      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "small-upper-line flex"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "line line-ex"
+      }, " ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "fourth-row"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "custom-container container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row flex"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "flex-column learnmore-header learn-ex"
+      }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_requestDemo__WEBPACK_IMPORTED_MODULE_2__["default"], null));
     }
   }]);
 
@@ -577,7 +610,6 @@ function (_Component) {
       var _this2 = this;
 
       var slug = this.props.slug;
-      var products = [];
       axios__WEBPACK_IMPORTED_MODULE_1___default()('http://54.234.86.247:3000/api/products/' + slug).then(function (res) {
         _this2.setState({
           product: res.data.product,
@@ -683,8 +715,8 @@ function (_Component) {
               width: "320"
             }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
               className: "view-text"
-            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, value.leadText), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-              href: ("/products/" + value.title.replace(/%20| /g, '-')).toLowerCase()
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, value.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+              href: "/products/" + value.slug
             }, "VIEW PRODUCT"))))));
           }
         });

@@ -8,7 +8,7 @@ class Products extends Component {
     state={
         products:[],
         slug:null
-}
+    }
     componentWillMount() {
         let slug = this.props.router.query.id;
         this.setState({ slug:slug })
@@ -19,10 +19,10 @@ class Products extends Component {
         let {slug} = this.state;
         return (
             slug?<Layout>
-                        <ProductDetail slug={slug}/>
-                </Layout>:<Layout>
-                        <Product/>
-                </Layout>
+                <ProductDetail slug={slug}/>
+            </Layout>:<Layout>
+                <Product/>
+            </Layout>
         )
     }
 }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import ScrollableAnchor, {configureAnchors} from 'react-scrollable-anchor';
+import ScrollableAnchor from 'react-scrollable-anchor';
 import RequestDemo from "../../requestDemo";
 
 class ProductDetail extends Component{
@@ -13,7 +13,6 @@ class ProductDetail extends Component{
 
     componentWillMount(){
         let slug =this.props.slug;
-        let products=[]
         axios('http://54.234.86.247:3000/api/products/'+slug)
             .then((res)=>{
                 this.setState({product:res.data.product, slug:slug})
@@ -100,8 +99,8 @@ class ProductDetail extends Component{
                                         <div className="image-margin">
                                             <img src={value.featuredImage && value.featuredImage.url} height="320" width="320"/>
                                             <div className="view-text">
-                                                <h1>{value.leadText}</h1>
-                                                <p><a href={("/products/"+(value.title.replace(/%20| /g, '-'))).toLowerCase()}>VIEW PRODUCT</a></p>
+                                                <h1>{value.title}</h1>
+                                                <p><a href={"/products/"+value.slug}>VIEW PRODUCT</a></p>
                                             </div>
                                         </div>
                                     </div>

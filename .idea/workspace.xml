@@ -3,54 +3,78 @@
   <component name="ChangeListManager">
     <list default="true" id="d1d98a3a-aeab-4548-a019-5b24bb77da39" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/build-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/.next/build-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/react-loadable-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/.next/react-loadable-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/server/pages-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/pages-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/server/static/development/pages/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/static/development/pages/products.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/server/static/development/pages/products.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/static/development/pages/products.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/static/chunks/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/.next/static/chunks/styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/static/chunks/styles.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/.next/static/chunks/styles.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/static/development/pages/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/.next/static/development/pages/products.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/static/development/pages/products.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/.next/static/development/pages/products.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/static/runtime/webpack.js" beforeDir="false" afterPath="$PROJECT_DIR$/.next/static/runtime/webpack.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/static/runtime/webpack.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/.next/static/runtime/webpack.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/static/webpack/3d5830da8457688cfbba.hot-update.json" beforeDir="false" afterPath="$PROJECT_DIR$/.next/static/webpack/3d5830da8457688cfbba.hot-update.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/BUILD_ID" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/build-manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/react-loadable-manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/records.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/pages-manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/records.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/ssr-module-cache.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/static/SdnJL5b8JIg2MkCeSfR7f/pages/_app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/static/SdnJL5b8JIg2MkCeSfR7f/pages/_document.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/static/SdnJL5b8JIg2MkCeSfR7f/pages/_error.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/static/SdnJL5b8JIg2MkCeSfR7f/pages/about-us.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/static/SdnJL5b8JIg2MkCeSfR7f/pages/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/static/SdnJL5b8JIg2MkCeSfR7f/pages/products.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/static/SdnJL5b8JIg2MkCeSfR7f/pages/resources.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/static/SdnJL5b8JIg2MkCeSfR7f/pages/support.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/static/development/pages/_app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/static/development/pages/_app.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/static/development/pages/_document.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/static/development/pages/_document.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/static/development/pages/_error.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/static/development/pages/_error.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/static/development/pages/about-us.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/static/development/pages/index.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/static/development/pages/products.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/static/development/pages/products.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/static/development/pages/resources.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/static/development/pages/support.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/static/development/pages/support.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/SdnJL5b8JIg2MkCeSfR7f/pages/_app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/SdnJL5b8JIg2MkCeSfR7f/pages/_error.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/SdnJL5b8JIg2MkCeSfR7f/pages/about-us.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/SdnJL5b8JIg2MkCeSfR7f/pages/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/SdnJL5b8JIg2MkCeSfR7f/pages/products.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/SdnJL5b8JIg2MkCeSfR7f/pages/resources.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/SdnJL5b8JIg2MkCeSfR7f/pages/support.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/chunks/0.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/chunks/0.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/chunks/commons.41137fda19e53a35c52f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/chunks/styles.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/chunks/styles.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/css/commons.5a8e2e58.chunk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/css/styles.chunk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/css/styles.chunk.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/development/dll/dll_cdf5cfc256f9500f2e4b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/development/pages/_app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/development/pages/_app.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/development/pages/_error.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/development/pages/_error.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/development/pages/about-us.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/development/pages/index.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/development/pages/products.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/development/pages/products.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/development/pages/resources.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/development/pages/support.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/development/pages/support.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/runtime/main-7ad62c42de5557c68e9e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/runtime/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/runtime/main.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/runtime/webpack-89179faa512dd01fbb62.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/runtime/webpack.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/runtime/webpack.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/3d5830da8457688cfbba.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/4d1391869a7a4dbfb78f.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/57d2c85447fe87abdf81.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/64d96c696de75a49eba9.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/bba7b4aa4fc35c7e3865.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/c61802799122861d4ee5.hot-update.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/components/home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/home/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/product/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/product/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/product/productDetail/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/product/productDetail/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/404/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/404/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/_next/static/XTVLKDvUpVFjLEGKl3XMS/pages/_app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/_next/static/XTVLKDvUpVFjLEGKl3XMS/pages/_error.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/_next/static/XTVLKDvUpVFjLEGKl3XMS/pages/about-us.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/_next/static/XTVLKDvUpVFjLEGKl3XMS/pages/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/_next/static/XTVLKDvUpVFjLEGKl3XMS/pages/products.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/_next/static/XTVLKDvUpVFjLEGKl3XMS/pages/resources.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/_next/static/XTVLKDvUpVFjLEGKl3XMS/pages/support.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/_next/static/chunks/commons.1e2e0b95565caf54c2d5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/_next/static/chunks/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/_next/static/chunks/styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/_next/static/chunks/styles.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/out/_next/static/chunks/styles.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/_next/static/css/commons.5fe2e100.chunk.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/_next/static/css/styles.chunk.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/_next/static/css/styles.chunk.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/_next/static/css/styles.chunk.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/out/_next/static/css/styles.chunk.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/_next/static/development/pages/about-us.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/_next/static/development/pages/about-us.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/out/_next/static/development/pages/about-us.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/_next/static/development/pages/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/_next/static/development/pages/products.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/_next/static/development/pages/products.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/out/_next/static/development/pages/products.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/_next/static/development/pages/resources.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/_next/static/development/pages/support.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/_next/static/development/pages/support.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/_next/static/runtime/main-34b6d832e744f1908077.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/_next/static/runtime/webpack.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/_next/static/runtime/webpack.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/_next/static/runtime/webpack.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/out/_next/static/runtime/webpack.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/_next/static/webpack/3d5830da8457688cfbba.hot-update.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/_next/static/webpack/3d5830da8457688cfbba.hot-update.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/_next/static/webpack/cad8412fd970732367c3.hot-update.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/_next/static/webpack/eb6b5225e343759ada81.hot-update.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/_next/static/webpack/f45dad3e00f5efc88b71.hot-update.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/about-us/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/about-us/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/index/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/index/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/products/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/products/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/resources/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/resources/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/support/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/support/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/products.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -66,8 +90,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/product/productDetail/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2070">
-              <caret line="138" column="36" selection-start-line="138" selection-start-column="36" selection-end-line="138" selection-end-column="36" />
+            <state relative-caret-position="-97">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -75,11 +99,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+              <caret line="8" column="11" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -87,8 +111,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/product/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="91" column="41" selection-start-line="91" selection-start-column="33" selection-end-line="91" selection-end-column="41" />
+            <state relative-caret-position="135">
+              <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
               </folding>
@@ -96,44 +120,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="294">
+              <caret line="28" column="7" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/support.js">
+        <entry file="file://$PROJECT_DIR$/pages/products.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/resources.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/about-us.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" selection-end-line="15" />
+            <state relative-caret-position="219">
+              <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -144,8 +144,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/home/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="171" column="55" selection-start-line="171" selection-start-column="48" selection-end-line="171" selection-end-column="55" />
+            <state relative-caret-position="165">
+              <caret line="131" column="16" selection-start-line="131" selection-start-column="16" selection-end-line="131" selection-end-column="16" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
               </folding>
@@ -169,12 +169,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>row</find>
-      <find>dynamic</find>
-      <find>br//</find>
-      <find>img</find>
-      <find>Assets/</find>
-      <find>image</find>
       <find>br&gt;</find>
       <find>product-di</find>
       <find>hors</find>
@@ -191,7 +185,6 @@
       <find>first-section .text-area</find>
       <find>products</find>
       <find>allproducts</find>
-      <find>Allprodu</find>
       <find>key</find>
       <find>li</find>
       <find>li&gt;</find>
@@ -199,11 +192,19 @@
       <find>map</find>
       <find>if</find>
       <find>section</find>
+      <find>Allprodu</find>
+      <find>view pro</find>
+      <find>learn</find>
+      <find>learn more</find>
+      <find>/products/</find>
+      <find>/productDetail/</find>
+      <find>dynamic</find>
     </findStrings>
     <replaceStrings>
       <replace>br/</replace>
       <replace>/static/images/</replace>
       <replace>br/&gt;</replace>
+      <replace>/productDetail/</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -226,10 +227,8 @@
         <option value="$PROJECT_DIR$/../pegasus-ui/product-det.html" />
         <option value="$PROJECT_DIR$/components/textDetail/index.js" />
         <option value="$PROJECT_DIR$/components/mediaDetail/index.js" />
-        <option value="$PROJECT_DIR$/pages/products.js" />
         <option value="$PROJECT_DIR$/pages/index.js" />
         <option value="$PROJECT_DIR$/pages/about-us.js" />
-        <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/pages/resources.js" />
         <option value="$PROJECT_DIR$/pages/support.js" />
         <option value="$PROJECT_DIR$/package.json" />
@@ -237,9 +236,15 @@
         <option value="$PROJECT_DIR$/components/aboutUs/index.js" />
         <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/copy.js" />
+        <option value="$PROJECT_DIR$/out/products/index.html" />
+        <option value="$PROJECT_DIR$/out/index.html" />
+        <option value="$PROJECT_DIR$/out/index/index.html" />
         <option value="$PROJECT_DIR$/components/product/productDetail/index.js" />
+        <option value="$PROJECT_DIR$/pages/productDetail.js" />
         <option value="$PROJECT_DIR$/components/product/index.js" />
         <option value="$PROJECT_DIR$/components/home/index.js" />
+        <option value="$PROJECT_DIR$/pages/products.js" />
+        <option value="$PROJECT_DIR$/server.js" />
       </list>
     </option>
   </component>
@@ -266,6 +271,11 @@
             <path>
               <item name="pegasusFe" type="b2602c69:ProjectViewProjectNode" />
               <item name="pegasusFe" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pegasusFe" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pegasusFe" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -327,17 +337,18 @@
       <workItem from="1542967089122" duration="25523000" />
       <workItem from="1542996513036" duration="32579000" />
       <workItem from="1543083559281" duration="1787000" />
-      <workItem from="1543085402734" duration="26937000" />
+      <workItem from="1543085402734" duration="32775000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119331000" />
+    <option name="totallyTimeSpent" value="125169000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1366" height="696" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24720775" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24720775" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -350,7 +361,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Statistic" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.33686066" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.33686066" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -498,23 +509,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/products.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="22" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/header/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -553,46 +547,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/product/productDetail/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2070">
-          <caret line="138" column="36" selection-start-line="138" selection-start-column="36" selection-end-line="138" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/product/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="91" column="41" selection-start-line="91" selection-start-column="33" selection-end-line="91" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/home/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="171" column="55" selection-start-line="171" selection-start-column="48" selection-end-line="171" selection-end-column="55" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/about-us.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -623,10 +577,120 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/out/products/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-757">
+          <caret line="18" column="94" selection-start-line="18" selection-start-column="94" selection-end-line="18" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="81" column="57" selection-start-line="81" selection-start-column="52" selection-end-line="81" selection-end-column="57" />
+          <folding>
+            <element signature="n#style#0;n#section#0;n#div#1;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#3035#3041#0" expanded="true" />
+            <element signature="e#3080#3086#0" expanded="true" />
+            <element signature="e#4159#4165#0" expanded="true" />
+            <element signature="e#4311#4317#0" expanded="true" />
+            <element signature="e#4704#4710#0" expanded="true" />
+            <element signature="e#4857#4863#0" expanded="true" />
+            <element signature="e#5257#5263#0" expanded="true" />
+            <element signature="e#5410#5416#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/index/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="82" column="97" selection-start-line="82" selection-start-column="87" selection-end-line="82" selection-end-column="97" />
+          <folding>
+            <element signature="n#style#0;n#section#0;n#div#1;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#3035#3041#0" expanded="true" />
+            <element signature="e#3080#3086#0" expanded="true" />
+            <element signature="e#4159#4165#0" expanded="true" />
+            <element signature="e#4311#4317#0" expanded="true" />
+            <element signature="e#4704#4710#0" expanded="true" />
+            <element signature="e#4857#4863#0" expanded="true" />
+            <element signature="e#5257#5263#0" expanded="true" />
+            <element signature="e#5410#5416#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/product/productDetail/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-97">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/productDetail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/product/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+          <caret line="8" column="11" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/home/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="131" column="16" selection-start-line="131" selection-start-column="16" selection-end-line="131" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/products.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="28" column="7" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
         </state>
       </provider>
     </entry>

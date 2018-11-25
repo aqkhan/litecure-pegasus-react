@@ -3,7 +3,8 @@ import axios from 'axios';
 import RequestDemo from '../requestDemo';
 class  Product extends Component{
             state = {
-                products : []
+                products : null,
+                err:null
             }
 
             componentWillMount(){
@@ -11,10 +12,10 @@ class  Product extends Component{
                     .then((res)=>{
                             this.setState({products:res.data.products})
                     })
-                    .catch(err=>{throw err})
+                    .catch(err=>{this.setState({err:err})})
             }
     render() {
-                let dynamic;
+                let dynamic=null;
                 if (this.state.products)
                 {
                   dynamic =  this.state.products.map((value,index)=>{
@@ -46,7 +47,7 @@ class  Product extends Component{
                                           <div className="flex-column learnmore-header learn-ex">
 
                                               <div dangerouslySetInnerHTML={{__html: value.shortDescription}}></div>
-                                              <a href={("/products/"+(value.title.replace(/%20| /g, '-'))).toLowerCase()}>
+                                              <a href={"/products/"+value.slug}>
                                                   LEARN MORE
                                               </a>
                                           </div>
@@ -125,8 +126,38 @@ class  Product extends Component{
                     })
                 }
         return (
-            <div>
+            this.state.products ? <div>
                 {dynamic}
+                <RequestDemo/>
+            </div>:<div>
+                <section className="section-one bg-color">
+                    <div className="third-row">
+                        <div className="container custom-container">
+                            <div className="row flex">
+                                <div className="header-text text-extra">
+                                    <p className="Product-text"><span>Loading ... </span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="container custom-container">
+                            <div className="row flex">
+                                <div className="header-image">
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="small-upper-line flex">
+                        <div className="line line-ex"> </div>
+                    </div>
+                    <div className="fourth-row">
+                        <div className="custom-container container">
+                            <div className="row flex">
+                                <div className="flex-column learnmore-header learn-ex">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 <RequestDemo/>
             </div>
         )

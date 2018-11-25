@@ -3,8 +3,8 @@ import RequestDemo from '../requestDemo';
 import axios from 'axios'
 class  Home extends Component{
     state = {
-        pages:[],
-        products:[]
+        pages:null,
+        products:null
     }
     componentWillMount() {
         axios.get('http://54.234.86.247:3000/api/pages')
@@ -64,9 +64,9 @@ class  Home extends Component{
                         </div>
                     </section>
                 }})}
-        let dynamic;
+        let pages;
         if (this.state.pages){
-            dynamic = this.state.pages.map((value)=>{
+            pages = this.state.pages.map((value)=>{
                 return <section className="section-one" key={value.id} style={{
                     background: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)),url(${value.featuredImage && value.featuredImage.url})`,
                     backgroundRepeat: "no-repeat",
@@ -129,7 +129,7 @@ class  Home extends Component{
                         </div>
                     </div>
                 </section>
-                {dynamic}
+                {pages}
                 {product}
                 <section className="section-three" key={"Home-Slide"}>
 

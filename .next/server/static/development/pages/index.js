@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 7);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -331,6 +331,300 @@ function (_Component) {
 
 /***/ }),
 
+/***/ "./components/home/index.js":
+/*!**********************************!*\
+  !*** ./components/home/index.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _requestDemo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../requestDemo */ "./components/requestDemo/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "axios");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+var Home =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(Home, _Component);
+
+  function Home() {
+    var _getPrototypeOf2;
+
+    var _this;
+
+    _classCallCheck(this, Home);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Home)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "state", {
+      pages: null,
+      products: null
+    });
+
+    return _this;
+  }
+
+  _createClass(Home, [{
+    key: "componentWillMount",
+    value: function componentWillMount() {
+      var _this2 = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_2___default.a.get('http://54.234.86.247:3000/api/pages').then(function (res) {
+        var temp = [];
+        res.data.pages.map(function (val) {
+          if (val.type === "homepage") {
+            temp.push(val);
+          }
+        });
+
+        _this2.setState({
+          pages: temp
+        });
+      }).catch(function (err) {
+        throw err;
+      });
+      axios__WEBPACK_IMPORTED_MODULE_2___default.a.get('http://54.234.86.247:3000/api/products').then(function (res) {
+        _this2.setState({
+          products: res.data.products
+        });
+      }).catch(function (err) {
+        throw err;
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var product;
+
+      if (this.state.products) {
+        product = this.state.products.map(function (value, index) {
+          if (index === 0) {
+            return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+              className: "second-section",
+              key: value.id
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+              className: "container custom-container"
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+              className: "row flex"
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+              className: "PTL-PEGASUS"
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, value.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, value.leadText)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+              className: "container custom-container"
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+              className: "row image-container"
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+              className: "col-sm-4 ms"
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+              className: "second"
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+              dangerouslySetInnerHTML: {
+                __html: value.shortDescription
+              }
+            }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Specifications"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, Object.keys(value.spec.Name).map(function (data, indexx) {
+              return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+                key: indexx
+              }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", null, value.spec.Name[data], ":")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, value.spec.Detail[data]));
+            })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+              className: "col-sm-8 mn"
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+              src: value.featuredImage && value.featuredImage.url,
+              className: "image34"
+            })))));
+          }
+        });
+      }
+
+      var pages;
+
+      if (this.state.pages) {
+        pages = this.state.pages.map(function (value) {
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+            className: "section-one",
+            key: value.id,
+            style: {
+              background: "linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)),url(".concat(value.featuredImage && value.featuredImage.url, ")"),
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover"
+            }
+          }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+            className: "third-row"
+          }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+            className: "container custom-container"
+          }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+            className: "row flex"
+          }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+            className: "header-text"
+          }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, value.headerImageLable)))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+            className: "small-upper-line flex"
+          }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+            className: "line"
+          }, " ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+            className: "fourth-row"
+          }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+            className: "custom-container container"
+          }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+            className: "row flex"
+          }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+            className: "flex-column learnmore-header learn-home"
+          }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+            dangerouslySetInnerHTML: {
+              __html: value.leadText
+            }
+          }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+            href: "#"
+          }, "LEARN MORE"))))));
+        });
+      }
+
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        key: "Home-Container",
+        className: "section-one",
+        style: {
+          background: "linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)),url('/static/images/buffalo.jpg')",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover"
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "third-row"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "container custom-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row flex"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "header-text"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\"No comparison,", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "No compromise.\"")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "small-upper-line flex"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "line"
+      }, " ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "fourth-row"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "custom-container container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row flex"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "flex-column learnmore-header"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "See why the world's toughest competitors have made Pegasus a part of their team."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#"
+      }, "LEARN MORE")))))), pages, product, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        className: "section-three",
+        key: "Home-Slide"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "myCarousel",
+        className: "carousel slide",
+        "data-ride": "2000"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ol", {
+        className: "carousel-indicators carouselinicator"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        "data-target": "#myCarousel",
+        "data-slide-to": "0",
+        className: ""
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        "data-target": "#myCarousel",
+        "data-slide-to": "1",
+        className: ""
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        "data-target": "#myCarousel",
+        "data-slide-to": "2",
+        className: "active"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "carousel-inner"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "item"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "section-three-overlay"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "custom-container product-text container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row flex big-text"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-12"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "STORIES")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "fourth-row"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "custom-container container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row flex"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "flex-column learnmore-header"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\"We all feel a lot better with Pegasus laser therapy. It means a huge difference in quality of life for our horses,particularly as they grow older.\""), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "- Joanie Matus")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "item"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "section-three-overlay"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "custom-container product-text container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row flex big-text"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-12"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "STORIES")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "fourth-row"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "custom-container container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row flex"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "flex-column learnmore-header"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\"We all feel a lot better with Pegasus laser therapy. It means a huge difference in quality of life for our horses, particularly as they grow older.\""), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "- Joanie Matus")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "item active"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "section-three-overlay"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "custom-container product-text container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row flex big-text"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-12"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "STORIES")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "fourth-row"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "custom-container container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row flex"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "flex-column learnmore-header"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\"We all feel a lot better with Pegasus laser therapy. It means a huge difference in quality of life for our horses, particularly as they grow older.\""), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "- Joanie Matus"))))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_requestDemo__WEBPACK_IMPORTED_MODULE_1__["default"], null));
+    }
+  }]);
+
+  return Home;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (Home);
+
+/***/ }),
+
 /***/ "./components/layout/index.js":
 /*!************************************!*\
   !*** ./components/layout/index.js ***!
@@ -494,95 +788,10 @@ function (_Component) {
 
 /***/ }),
 
-/***/ "./components/textDetail/index.js":
-/*!****************************************!*\
-  !*** ./components/textDetail/index.js ***!
-  \****************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _requestDemo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../requestDemo */ "./components/requestDemo/index.js");
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-
-
-
-var TextDetail =
-/*#__PURE__*/
-function (_Component) {
-  _inherits(TextDetail, _Component);
-
-  function TextDetail() {
-    _classCallCheck(this, TextDetail);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(TextDetail).apply(this, arguments));
-  }
-
-  _createClass(TextDetail, [{
-    key: "render",
-    value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
-        className: "first-section section-one"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "container custom-container"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row flex"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "header-text"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "LASER CLASSIFICATIONS")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "fourth-row text-area"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: " container"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row "
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-sm-12 "
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: " learnmore-header ex-class"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Lasers are divided into safety classifications in the US by the American National Standard Identification (ANSI) and globally by the International Electrotechnical Commission (IEC). The classifications below from the revised system (2002) apply to non-magnified laser devices.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Class I "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Safe under all conditions of normal use.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Class II"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Applies to only visible light lasers (400-700nm). These devices are considered eye-safe because the blink reflex will limit exposure to less than 0.25 seconds. Intentional suppression of the blink reflex could lead to eye injury. Most laser pointers are Class II devices.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "CLASS III"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Class III lasers in the visible spectrum have continuous wave (cw) emission of 5mw or less. These devices are considered safe if handled carefully with restricted beam viewing", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "CLASS IIIB"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "IIIB lasers are hazardous to the eye when viewed directly. For visible and infrared devices emission power is limited to 0.5W. Protective eyewear, key switch and safety interlock are required safety features.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "CLASS IV"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Class IV lasers include all lasers that emit power in excess of IIIB limitations. Eye protection is needed to limit both direct and diffuse reflected exposure. Key switch and safety interlocks are also required safety features. Most scientific, industrial, military and medical lasers fall into this category."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "button"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#"
-      }, "TERMS IN LASER THERAPY"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#",
-        className: "benefits"
-      }, "BENEFITS OF LASER THERAPY"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#"
-      }, "RESOURCES & LINKS ")))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_requestDemo__WEBPACK_IMPORTED_MODULE_1__["default"], null));
-    }
-  }]);
-
-  return TextDetail;
-}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
-
-/* harmony default export */ __webpack_exports__["default"] = (TextDetail);
-
-/***/ }),
-
-/***/ "./pages/support.js":
-/*!**************************!*\
-  !*** ./pages/support.js ***!
-  \**************************/
+/***/ "./pages/index.js":
+/*!************************!*\
+  !*** ./pages/index.js ***!
+  \************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -592,7 +801,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../style.css */ "./style.css");
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_textDetail__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/textDetail */ "./components/textDetail/index.js");
+/* harmony import */ var _components_home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/home */ "./components/home/index.js");
 /* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/layout */ "./components/layout/index.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -631,7 +840,7 @@ function (_Component) {
   _createClass(index, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_layout__WEBPACK_IMPORTED_MODULE_3__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_textDetail__WEBPACK_IMPORTED_MODULE_2__["default"], null));
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_layout__WEBPACK_IMPORTED_MODULE_3__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_home__WEBPACK_IMPORTED_MODULE_2__["default"], null));
     }
   }]);
 
@@ -653,15 +862,26 @@ function (_Component) {
 
 /***/ }),
 
-/***/ 7:
-/*!********************************!*\
-  !*** multi ./pages/support.js ***!
-  \********************************/
+/***/ 3:
+/*!******************************!*\
+  !*** multi ./pages/index.js ***!
+  \******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! ./pages/support.js */"./pages/support.js");
+module.exports = __webpack_require__(/*! ./pages/index.js */"./pages/index.js");
 
+
+/***/ }),
+
+/***/ "axios":
+/*!************************!*\
+  !*** external "axios" ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("axios");
 
 /***/ }),
 
@@ -688,4 +908,4 @@ module.exports = require("react");
 /***/ })
 
 /******/ });
-//# sourceMappingURL=support.js.map
+//# sourceMappingURL=index.js.map
