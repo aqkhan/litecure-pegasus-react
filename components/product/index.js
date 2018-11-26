@@ -21,7 +21,8 @@ class  Product extends Component{
                   dynamic =  this.state.products.map((value,index)=>{
                       console.log("index", index)
                       if (index===0){
-                          return <section className="section-one bg-color" key={value.id}>
+                          return <section className="first-product">
+                          <section className="first-section" key={value.id}>
                               <div className="third-row">
                                   <div className="container custom-container">
                                       <div className="row flex">
@@ -45,8 +46,9 @@ class  Product extends Component{
                                   <div className="custom-container container">
                                       <div className="row flex">
                                           <div className="flex-column learnmore-header learn-ex">
-
-                                              <div dangerouslySetInnerHTML={{__html: value.shortDescription}}></div>
+                                              <p>
+                                                  <div dangerouslySetInnerHTML={{__html: value.shortDescription}}></div>
+                                              </p>
                                               <a href={"/products/"+value.slug}>
                                                   LEARN MORE
                                               </a>
@@ -55,9 +57,11 @@ class  Product extends Component{
                                   </div>
                               </div>
                           </section>
+                          </section>
                       }
                       else if(index%2===0){
-                          return <section className="second-section" key={value.id}>
+                          return<section className="odd-product">
+                          <section className="second-section" key={value.id}>
                               <div className="container custom-container">
                                   <div className="row flex">
                                       <div className="PTL-PEGASUS">
@@ -88,39 +92,42 @@ class  Product extends Component{
                                   </div>
                               </div>
                           </section>
+                          </section>
                       }
                       else {
-                          return <section className="third-section" key={value.id}>
-                              <div className="container custom-container">
-                                  <div className="row flex">
-                                      <div className="PTC-PEGASUS">
-                                          <span>{value.title}</span><p>{value.leadText}</p>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div className="container custom-container">
-                                  <div className="row image-container">
-
-                                      <div className="col-sm-6 mn">
-                                          <img src={value.featuredImage && value.featuredImage.url} className="image34"/>
-                                      </div>
-                                      <div className="col-sm-6 ms">
-                                          <div>
-                                              <div dangerouslySetInnerHTML={{__html: value.shortDescription}}></div>
-                                              <br/>
-                                              <br/>
-                                              <h3>Specifications</h3>
-                                              <ul>
-                                                  {Object.keys(value.spec.Name).map((data,indexx)=>{
-                                                      return <li key={indexx}><span><b>{value.spec.Name[data]}:</b></span><span> </span><span>{value.spec.Detail[data]}</span></li>
-                                                  })}
-                                              </ul>
+                          return<section className="even-product">
+                              <section className="third-section" key={value.id}>
+                                  <div className="container custom-container">
+                                      <div className="row flex">
+                                          <div className="PTC-PEGASUS">
+                                              <span>{value.title}</span><p>{value.leadText}</p>
                                           </div>
                                       </div>
-
                                   </div>
-                              </div>
+                                  <div className="container custom-container">
+                                      <div className="row image-container">
 
+                                          <div className="col-sm-6 mn">
+                                              <img src={value.featuredImage && value.featuredImage.url} className="image34"/>
+                                          </div>
+                                          <div className="col-sm-6 ms">
+                                              <div>
+                                                  <div dangerouslySetInnerHTML={{__html: value.shortDescription}}></div>
+                                                  <br/>
+                                                  <br/>
+                                                  <h3>Specifications</h3>
+                                                  <ul>
+                                                      {Object.keys(value.spec.Name).map((data,indexx)=>{
+                                                          return <li key={indexx}><span><b>{value.spec.Name[data]}:</b></span><span> </span><span>{value.spec.Detail[data]}</span></li>
+                                                      })}
+                                                  </ul>
+                                              </div>
+                                          </div>
+
+                                      </div>
+                                  </div>
+
+                              </section>
                           </section>
                       }
                     })
@@ -130,7 +137,8 @@ class  Product extends Component{
                 {dynamic}
                 <RequestDemo/>
             </div>:<div>
-                <section className="section-one bg-color">
+                <section className="first-product">
+                <section className="first-section">
                     <div className="third-row">
                         <div className="container custom-container">
                             <div className="row flex">
@@ -157,6 +165,7 @@ class  Product extends Component{
                             </div>
                         </div>
                     </div>
+                </section>
                 </section>
                 <RequestDemo/>
             </div>

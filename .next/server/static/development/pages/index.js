@@ -139,7 +139,7 @@ function (_Component) {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", {
-        className: "footer   "
+        className: "footer"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container give-bottom"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -278,7 +278,14 @@ function (_Component) {
         href: "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("script", {
         src: "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
+        rel: "stylesheet",
+        href: "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css",
+        integrity: "sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO",
+        crossOrigin: "anonymous"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        className: "new-header"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         className: "first-section"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "first-row"
@@ -311,7 +318,7 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row  justify-center align-center"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-        className: "responsive-column navbar flex-row"
+        className: "responsive-column navbar flex-row nav-color"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "/products"
       }, "PRODUCTS"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "RESEARCH")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -320,7 +327,7 @@ function (_Component) {
         href: "/about-us"
       }, "ABOUT"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "/support"
-      }, "SUPPORT")))))))));
+      }, "SUPPORT"))))))))));
     }
   }]);
 
@@ -389,7 +396,48 @@ function (_Component) {
 
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "state", {
       pages: null,
-      products: null
+      products: null,
+      storyOne: "active",
+      storyTwo: "",
+      storyThree: ""
+    });
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "test", function (type) {
+      console.log(type);
+      console.log(_this.state.storyOne);
+
+      switch (type) {
+        case 'one':
+          _this.setState({
+            storyOne: "active",
+            storyTwo: "",
+            storyThree: ""
+          });
+
+          console.log(_this.state.storyOne);
+          return;
+
+        case 'two':
+          _this.setState({
+            storyOne: "",
+            storyTwo: "active",
+            storyThree: ""
+          });
+
+          return;
+
+        case 'three':
+          _this.setState({
+            storyOne: "",
+            storyTwo: "",
+            storyThree: "active"
+          });
+
+          return;
+
+        default:
+          return;
+      }
     });
 
     return _this;
@@ -425,12 +473,16 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
+      var _this3 = this;
+
       var product;
 
       if (this.state.products) {
         product = this.state.products.map(function (value, index) {
           if (index === 0) {
             return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+              className: "odd-product"
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
               className: "second-section",
               key: value.id
             }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -460,7 +512,7 @@ function (_Component) {
             }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
               src: value.featuredImage && value.featuredImage.url,
               className: "image34"
-            })))));
+            }))))));
           }
         });
       }
@@ -470,6 +522,8 @@ function (_Component) {
       if (this.state.pages) {
         pages = this.state.pages.map(function (value) {
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+            className: "new-home-cards"
+          }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
             className: "section-one",
             key: value.id,
             style: {
@@ -497,24 +551,21 @@ function (_Component) {
             className: "row flex"
           }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
             className: "flex-column learnmore-header learn-home"
-          }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+          }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
             dangerouslySetInnerHTML: {
               __html: value.leadText
             }
-          }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+          })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
             href: "#"
-          }, "LEARN MORE"))))));
+          }, "LEARN MORE")))))));
         });
       }
 
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        className: "new-home-cards"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         key: "Home-Container",
-        className: "section-one",
-        style: {
-          background: "linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)),url('/static/images/buffalo.jpg')",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover"
-        }
+        className: "section-one"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "third-row"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -537,7 +588,9 @@ function (_Component) {
         className: "flex-column learnmore-header"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "See why the world's toughest competitors have made Pegasus a part of their team."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "#"
-      }, "LEARN MORE")))))), pages, product, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+      }, "LEARN MORE"))))))), pages, product, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        className: "new-stories"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         className: "section-three",
         key: "Home-Slide"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -549,19 +602,28 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         "data-target": "#myCarousel",
         "data-slide-to": "0",
-        className: ""
+        onClick: function onClick() {
+          return _this3.test("one");
+        },
+        className: this.state.storyOne
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         "data-target": "#myCarousel",
         "data-slide-to": "1",
-        className: ""
+        onClick: function onClick() {
+          return _this3.test("two");
+        },
+        className: this.state.storyTwo
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         "data-target": "#myCarousel",
         "data-slide-to": "2",
-        className: "active"
+        onClick: function onClick() {
+          return _this3.test("three");
+        },
+        className: this.state.storyThree
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "carousel-inner"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "item"
+        className: "item ".concat(this.state.storyOne)
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "section-three-overlay"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -578,8 +640,8 @@ function (_Component) {
         className: "row flex"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "flex-column learnmore-header"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\"We all feel a lot better with Pegasus laser therapy. It means a huge difference in quality of life for our horses,particularly as they grow older.\""), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "- Joanie Matus")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "item"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\"We all feel a lot better with Pegasus laser therapy. It means a huge difference in quality of life for our horses,particularly as they grow older.\""), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "- Joanie Matus 1")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "item ".concat(this.state.storyTwo)
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "section-three-overlay"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -596,8 +658,8 @@ function (_Component) {
         className: "row flex"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "flex-column learnmore-header"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\"We all feel a lot better with Pegasus laser therapy. It means a huge difference in quality of life for our horses, particularly as they grow older.\""), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "- Joanie Matus")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "item active"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\"We all feel a lot better with Pegasus laser therapy. It means a huge difference in quality of life for our horses, particularly as they grow older.\""), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "- Joanie Matus 2")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "item ".concat(this.state.storyThree)
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "section-three-overlay"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -614,7 +676,7 @@ function (_Component) {
         className: "row flex"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "flex-column learnmore-header"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\"We all feel a lot better with Pegasus laser therapy. It means a huge difference in quality of life for our horses, particularly as they grow older.\""), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "- Joanie Matus"))))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_requestDemo__WEBPACK_IMPORTED_MODULE_1__["default"], null));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\"We all feel a lot better with Pegasus laser therapy. It means a huge difference in quality of life for our horses, particularly as they grow older.\""), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "- Joanie Matus 3")))))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_requestDemo__WEBPACK_IMPORTED_MODULE_1__["default"], null));
     }
   }]);
 
@@ -731,6 +793,8 @@ function (_Component) {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        className: "new-request-demo "
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         className: "section-four"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "section-four-background"
@@ -769,7 +833,9 @@ function (_Component) {
         placeholder: "City and State"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "#"
-      }, "SEND"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+      }, "SEND")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        className: "new-subscribe"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         className: "section-five"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "custom-container container"
@@ -777,7 +843,7 @@ function (_Component) {
         className: "row flex"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Stay up to date. Subscribe to the Pegasus feed :)"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "#"
-      }, "SUBSCRIBE")))));
+      }, "SUBSCRIBE"))))));
     }
   }]);
 

@@ -17,48 +17,51 @@ class Header extends Component{
                     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"/>
                     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
                     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" />
-                    {/*<link rel="stylesheet"*/}
-                          {/*href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"*/}
-                          {/*integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"*/}
-                          {/*crossOrigin="anonymous"/>*/}
+                    <link rel="stylesheet"
+                          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+                          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+                          crossOrigin="anonymous"/>
                 </Head>
-                <section className="first-section">
-                    <div className="first-row">
-                        <div className="container custom-container">
-                            <div className="row HEADERS">
-                                <div className="col-sm-7 col-7 flex-end-row  ">
-                                    <a href="/"><img src="/static/images/logos1.png" /></a>
-                                </div>
-                                <div className="col-sm-5 col-5 flex-end-row ">
-                                    <img src="/static/images/magnifier.png" width="18px" height="18px"/>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="second-row">
-                        <div className="for-responsive-only">
-                            <div className="custom-container">
-                                <div className="menu-button  click">
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="container showhide custom-container">
-                            <div className="row  justify-center align-center">
-                                <ul className="responsive-column navbar flex-row">
-                                    <li><span><a href="/products">PRODUCTS</a></span></li>
-                                    <li><span>RESEARCH</span></li>
-                                    <li><span><a href="/resources">RESOURCES</a></span></li>
-                                    <li><span><a href="/about-us">ABOUT</a></span></li>
-                                    <li><span><a href="/support">SUPPORT</a></span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
 
-                </section>
+                    <section className="new-header">
+                        <section className="first-section">
+                            <div className="first-row">
+                                <div className="container custom-container">
+                                    <div className="row HEADERS">
+                                        <div className="col-sm-7 col-7 flex-end-row  ">
+                                            <a href="/"><img src="/static/images/logos1.png" /></a>
+                                        </div>
+                                        <div className="col-sm-5 col-5 flex-end-row ">
+                                            <img src="/static/images/magnifier.png" width="18px" height="18px"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="second-row">
+                                <div className="for-responsive-only">
+                                    <div className="custom-container">
+                                        <div className="menu-button  click">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="container showhide custom-container">
+                                    <div className="row  justify-center align-center">
+                                        <ul className="responsive-column navbar flex-row nav-color">
+                                            <li><span><a href="/products">PRODUCTS</a></span></li>
+                                            <li><span>RESEARCH</span></li>
+                                            <li><span><a href="/resources">RESOURCES</a></span></li>
+                                            <li><span><a href="/about-us">ABOUT</a></span></li>
+                                            <li><span><a href="/support">SUPPORT</a></span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </section>
+                    </section>
             </div>
         )
     }

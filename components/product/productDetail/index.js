@@ -60,17 +60,18 @@ class ProductDetail extends Component{
                                               <div className="col-sm-4 p-0">
                                                   <div className="SPECIFICATIONS">
                                                       <h1>SPECIFICATIONS</h1>
-                                                      <ul>
-                                                          {Object.keys(product.spec.Name).map((data,index)=>{
-                                                              return <li key={index}><span><b>{product.spec.Name[data]}:</b></span><span> </span><span>{product.spec.Detail[data]}</span></li>
-                                                          })}
-                                                      </ul>
-
+                                                      <p>
+                                                          <ul>
+                                                              {Object.keys(product.spec.Name).map((data,index)=>{
+                                                                  return <li key={index}><span><b>{product.spec.Name[data]}:</b></span><span> </span><span>{product.spec.Detail[data]}</span></li>
+                                                              })}
+                                                          </ul>
+                                                      </p>
                                                   </div>
                                               </div>
                                               <div className="col-sm-8 ">
                                                   <div className=" learnmore-header">
-                                                      <div dangerouslySetInnerHTML={{__html: product.shortDescription}}></div>
+                                                      <p><div dangerouslySetInnerHTML={{__html: product.shortDescription}}></div></p>
                                                       <br/>
                                                       <br/>
                                                       <div className="button">
@@ -111,162 +112,13 @@ class ProductDetail extends Component{
         }
         return(
             err?<div>
-                <section className="first-section product-det">
-                    <div className="third-row">
-                        <div className="container custom-container">
-                            <div className="row flex">
-                                <div className="header-text">
-                                    <p><span>Product Not found</span></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="container custom-container">
-                            <div className="row flex">
-                                <div className="header-image" style={{background :'black'}}>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <RequestDemo/>
-            </div>:product?
-                <div>
-                    <section className="first-section product-det">
-                    <div>
-                        {detailProduct}
-                    </div>
-                        allProducts & <div className="yellow-section">
-                        <div className="container custom-container">
-                            <div className="row view-area">
-                                <div className="col-sm-2"></div>
-
-                                {allProducts}
-                        <div className="col-sm-2"></div>
-                    </div>
-                </div>
-                        <div className="container custom-container">
-                            <div className="row flex">
-                                <h1 className="prodct">PRODUCTS</h1>
-                            </div>
-                        </div>
-                    </div>
-                    </section>
-                <section className="Second-section">
-                    <div className="container custom-container">
-                        <div className="row images-flex">
-                            <div className="col-sm-6 col-lg-3 p-0 ">
-                                <div className="image-container">
-                                    <div className="image-overlay"></div>
-                                    <img src="/static/images/doctorwithhourse.jpg" className="image"/>
-                                        <div className="overlay">
-                                            <div className="text">
-                                                <p>08.12.19</p>
-                                                <h5>FEATURED <br/>CONTENT <br/>TITLE HERE</h5>
-                                            </div>
-                                        </div>
-                                </div>
-                            </div>
-                            <div className="col-sm-6 col-lg-3 p-0">
-                                <div className="image-container">
-                                    <img src="/static/images/straight-egyptian-arabians-horse.jpg" className="image"/>
-                                        <div className="overlay">
-                                            <div className="text">
-                                                <p>08.12.19</p>
-                                                <h5>FEATURED <br/>CONTENT <br/>TITLE HERE</h5>
-                                            </div>
-                                        </div>
-                                </div>
-                            </div>
-                            <div className="col-sm-6 col-lg-3 p-0">
-
-                                <div className="image-container">
-                                    <img src="/static/images/whitehourse.jpg" className="image"/>
-                                        <div className="overlay">
-                                            <div className="text">
-                                                <p>08.12.19</p>
-                                                <h5>FEATURED <br/>CONTENT <br/>TITLE HERE</h5>
-                                            </div>
-                                        </div>
-                                </div>
-                            </div>
-                            <div className="col-sm-6 col-lg-3 p-0">
-
-                                <div className="image-container">
-                                    <img src="/static/images/695128.jpg" className="image" />
-                                        <div className="overlay">
-                                            <div className="text">
-                                                <p>08.12.19</p>
-                                                <h5>FEATURED <br/>CONTENT <br/>TITLE HERE</h5>
-                                            </div>
-                                        </div>
-                                </div>
-                            </div>
-                            <div className="col-sm-6 col-lg-3 p-0">
-
-                                <div className="image-container">
-                                    <img src="/static/images/straight-egyptian-arabians-horse.jpg" className="image"/>
-                                        <div className="overlay">
-                                            <div className="text">
-                                                <p>08.12.19</p>
-                                                <h5>FEATURED <br/>CONTENT <br/>TITLE HERE</h5>
-                                            </div>
-                                        </div>
-                                </div>
-                            </div>
-                            <div className="col-sm-6 col-lg-3 p-0">
-
-                                <div className="image-container">
-                                    <img src="/static/images/345446.jpg" className="image"/>
-                                        <div className="overlay">
-                                            <div className="text">
-                                                <p>08.12.19</p>
-                                                <h5>FEATURED <br/>CONTENT <br/>TITLE HERE</h5>
-                                            </div>
-                                        </div>
-                                </div>
-                            </div>
-                            <div className="col-sm-6 col-lg-3 p-0">
-
-                                <div className="image-container">
-                                    <img src="/static/images/British-Horse-Racing-Frankel-Jockey-Wallpaper.jpg"
-                                         className="image"/>
-                                        <div className="overlay">
-                                            <div className="text">
-                                                <p>08.12.19</p>
-                                                <h5>FEATURED <br/>CONTENT <br/>TITLE HERE</h5>
-                                            </div>
-                                        </div>
-                                </div>
-                            </div>
-                            <div className="col-sm-6 col-lg-3 p-0">
-
-                                <div className="image-container">
-                                    <div className="image-overlay"></div>
-                                    <img src="/static/images/hourse.jpg" className="image"/>
-                                        <div className="overlay">
-                                            <div className="text">
-                                                <p>08.12.19</p>
-                                                <h5>FEATURED <br/>CONTENT <br/>TITLE HERE</h5>
-                                            </div>
-                                        </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-                </section>
-                <ScrollableAnchor id={'requestDemo'}>
-                <RequestDemo/>
-                </ScrollableAnchor>
-            </div>:<div>
-                    <section className="first-section product-det">
+                <section className="product-det">
+                    <section className="first-section">
                         <div className="third-row">
                             <div className="container custom-container">
                                 <div className="row flex">
                                     <div className="header-text">
-                                        <p><span>Loading ...</span></p>
+                                        <p><span>Product Not found</span></p>
                                     </div>
                                 </div>
                             </div>
@@ -277,6 +129,164 @@ class ProductDetail extends Component{
                                 </div>
                             </div>
                         </div>
+                    </section>
+                </section>
+                <RequestDemo/>
+            </div>:product?
+                <div>
+                    <section className="product-det">
+                        <section className="first-section">
+                            <div>
+                                {detailProduct}
+                            </div>
+                            allProducts & <div className="yellow-section">
+                            <div className="container custom-container">
+                                <div className="row view-area">
+                                    <div className="col-sm-2"></div>
+
+                                    {allProducts}
+                                    <div className="col-sm-2"></div>
+                                </div>
+                            </div>
+                            <div className="container custom-container">
+                                <div className="row flex">
+                                    <h1 className="prodct">PRODUCTS</h1>
+                                </div>
+                            </div>
+                        </div>
+                        </section>
+                    </section>
+                    <section  className="cards-section">
+                        <section className="Second-section">
+                            <div className="container custom-container">
+                                <div className="row images-flex">
+                                    <div className="col-sm-6 col-lg-3 p-0 ">
+                                        <div className="image-container">
+                                            <div className="image-overlay"></div>
+                                            <img src="/static/images/doctorwithhourse.jpg" className="image"/>
+                                            <div className="overlay">
+                                                <div className="text">
+                                                    <p>08.12.19</p>
+                                                    <h5>FEATURED <br/>CONTENT <br/>TITLE HERE</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-sm-6 col-lg-3 p-0">
+                                        <div className="image-container">
+                                            <img src="/static/images/straight-egyptian-arabians-horse.jpg" className="image"/>
+                                            <div className="overlay">
+                                                <div className="text">
+                                                    <p>08.12.19</p>
+                                                    <h5>FEATURED <br/>CONTENT <br/>TITLE HERE</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-sm-6 col-lg-3 p-0">
+
+                                        <div className="image-container">
+                                            <img src="/static/images/whitehourse.jpg" className="image"/>
+                                            <div className="overlay">
+                                                <div className="text">
+                                                    <p>08.12.19</p>
+                                                    <h5>FEATURED <br/>CONTENT <br/>TITLE HERE</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-sm-6 col-lg-3 p-0">
+
+                                        <div className="image-container">
+                                            <img src="/static/images/695128.jpg" className="image" />
+                                            <div className="overlay">
+                                                <div className="text">
+                                                    <p>08.12.19</p>
+                                                    <h5>FEATURED <br/>CONTENT <br/>TITLE HERE</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-sm-6 col-lg-3 p-0">
+
+                                        <div className="image-container">
+                                            <img src="/static/images/straight-egyptian-arabians-horse.jpg" className="image"/>
+                                            <div className="overlay">
+                                                <div className="text">
+                                                    <p>08.12.19</p>
+                                                    <h5>FEATURED <br/>CONTENT <br/>TITLE HERE</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-sm-6 col-lg-3 p-0">
+
+                                        <div className="image-container">
+                                            <img src="/static/images/345446.jpg" className="image"/>
+                                            <div className="overlay">
+                                                <div className="text">
+                                                    <p>08.12.19</p>
+                                                    <h5>FEATURED <br/>CONTENT <br/>TITLE HERE</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-sm-6 col-lg-3 p-0">
+
+                                        <div className="image-container">
+                                            <img src="/static/images/British-Horse-Racing-Frankel-Jockey-Wallpaper.jpg"
+                                                 className="image"/>
+                                            <div className="overlay">
+                                                <div className="text">
+                                                    <p>08.12.19</p>
+                                                    <h5>FEATURED <br/>CONTENT <br/>TITLE HERE</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-sm-6 col-lg-3 p-0">
+
+                                        <div className="image-container">
+                                            <div className="image-overlay"></div>
+                                            <img src="/static/images/hourse.jpg" className="image"/>
+                                            <div className="overlay">
+                                                <div className="text">
+                                                    <p>08.12.19</p>
+                                                    <h5>FEATURED <br/>CONTENT <br/>TITLE HERE</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </section>
+                    </section>
+                <ScrollableAnchor id={'requestDemo'}>
+                <RequestDemo/>
+                </ScrollableAnchor>
+            </div>:<div>
+                    <section className="product-det">
+                        <section className="first-section">
+                            <div className="third-row">
+                                <div className="container custom-container">
+                                    <div className="row flex">
+                                        <div className="header-text">
+                                            <p><span>Loading ...</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="container custom-container">
+                                    <div className="row flex">
+                                        <div className="header-image" style={{background :'black'}}>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
                     </section>
                     <RequestDemo/>
                 </div>

@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -139,7 +139,7 @@ function (_Component) {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", {
-        className: "footer   "
+        className: "footer"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container give-bottom"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -278,7 +278,14 @@ function (_Component) {
         href: "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("script", {
         src: "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
+        rel: "stylesheet",
+        href: "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css",
+        integrity: "sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO",
+        crossOrigin: "anonymous"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        className: "new-header"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         className: "first-section"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "first-row"
@@ -311,7 +318,7 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row  justify-center align-center"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-        className: "responsive-column navbar flex-row"
+        className: "responsive-column navbar flex-row nav-color"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "/products"
       }, "PRODUCTS"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "RESEARCH")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -320,7 +327,7 @@ function (_Component) {
         href: "/about-us"
       }, "ABOUT"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "/support"
-      }, "SUPPORT")))))))));
+      }, "SUPPORT"))))))))));
     }
   }]);
 
@@ -481,7 +488,9 @@ function (_Component) {
 
           if (index === 0) {
             return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
-              className: "section-one bg-color",
+              className: "first-product"
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+              className: "first-section",
               key: value.id
             }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
               className: "third-row"
@@ -514,15 +523,17 @@ function (_Component) {
               className: "row flex"
             }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
               className: "flex-column learnmore-header learn-ex"
-            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
               dangerouslySetInnerHTML: {
                 __html: value.shortDescription
               }
-            }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+            })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
               href: "/products/" + value.slug
-            }, "LEARN MORE"))))));
+            }, "LEARN MORE")))))));
           } else if (index % 2 === 0) {
             return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+              className: "odd-product"
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
               className: "second-section",
               key: value.id
             }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -552,9 +563,11 @@ function (_Component) {
             }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
               src: value.featuredImage && value.featuredImage.url,
               className: "image34"
-            })))));
+            }))))));
           } else {
             return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+              className: "even-product"
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
               className: "third-section",
               key: value.id
             }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -582,13 +595,15 @@ function (_Component) {
               return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
                 key: indexx
               }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", null, value.spec.Name[data], ":")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, value.spec.Detail[data]));
-            })))))));
+            }))))))));
           }
         });
       }
 
       return this.state.products ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, dynamic, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_requestDemo__WEBPACK_IMPORTED_MODULE_2__["default"], null)) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
-        className: "section-one bg-color"
+        className: "first-product"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        className: "first-section"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "third-row"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -617,7 +632,7 @@ function (_Component) {
         className: "row flex"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "flex-column learnmore-header learn-ex"
-      }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_requestDemo__WEBPACK_IMPORTED_MODULE_2__["default"], null));
+      })))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_requestDemo__WEBPACK_IMPORTED_MODULE_2__["default"], null));
     }
   }]);
 
@@ -770,19 +785,19 @@ function (_Component) {
               className: "col-sm-4 p-0"
             }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
               className: "SPECIFICATIONS"
-            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "SPECIFICATIONS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, Object.keys(product.spec.Name).map(function (data, index) {
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "SPECIFICATIONS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, Object.keys(product.spec.Name).map(function (data, index) {
               return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
                 key: index
               }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", null, product.spec.Name[data], ":")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, product.spec.Detail[data]));
-            })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+            }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
               className: "col-sm-8 "
             }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
               className: " learnmore-header"
-            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+            }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
               dangerouslySetInnerHTML: {
                 __html: product.shortDescription
               }
-            }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+            })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
               className: "button"
             }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
               href: "#requestDemo"
@@ -816,7 +831,9 @@ function (_Component) {
       }
 
       return err ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
-        className: "first-section product-det"
+        className: "product-det"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        className: "first-section"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "third-row"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -834,8 +851,10 @@ function (_Component) {
         style: {
           background: 'black'
         }
-      }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_requestDemo__WEBPACK_IMPORTED_MODULE_3__["default"], null)) : product ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
-        className: "first-section product-det"
+      })))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_requestDemo__WEBPACK_IMPORTED_MODULE_3__["default"], null)) : product ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        className: "product-det"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        className: "first-section"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, detailProduct), "allProducts & ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "yellow-section"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -852,7 +871,9 @@ function (_Component) {
         className: "row flex"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
         className: "prodct"
-      }, "PRODUCTS"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+      }, "PRODUCTS")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        className: "cards-section"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         className: "Second-section"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container custom-container"
@@ -950,10 +971,12 @@ function (_Component) {
         className: "overlay"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "text"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "08.12.19"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "FEATURED ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "CONTENT ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "TITLE HERE")))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_scrollable_anchor__WEBPACK_IMPORTED_MODULE_2___default.a, {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "08.12.19"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "FEATURED ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "CONTENT ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "TITLE HERE"))))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_scrollable_anchor__WEBPACK_IMPORTED_MODULE_2___default.a, {
         id: 'requestDemo'
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_requestDemo__WEBPACK_IMPORTED_MODULE_3__["default"], null))) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
-        className: "first-section product-det"
+        className: "product-det"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        className: "first-section"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "third-row"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -971,7 +994,7 @@ function (_Component) {
         style: {
           background: 'black'
         }
-      }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_requestDemo__WEBPACK_IMPORTED_MODULE_3__["default"], null));
+      })))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_requestDemo__WEBPACK_IMPORTED_MODULE_3__["default"], null));
     }
   }]);
 
@@ -1028,6 +1051,8 @@ function (_Component) {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        className: "new-request-demo "
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         className: "section-four"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "section-four-background"
@@ -1066,7 +1091,9 @@ function (_Component) {
         placeholder: "City and State"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "#"
-      }, "SEND"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+      }, "SEND")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        className: "new-subscribe"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         className: "section-five"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "custom-container container"
@@ -1074,7 +1101,7 @@ function (_Component) {
         className: "row flex"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Stay up to date. Subscribe to the Pegasus feed :)"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "#"
-      }, "SUBSCRIBE")))));
+      }, "SUBSCRIBE"))))));
     }
   }]);
 
@@ -1192,7 +1219,7 @@ function (_Component) {
 
 /***/ }),
 
-/***/ 4:
+/***/ 5:
 /*!*********************************!*\
   !*** multi ./pages/products.js ***!
   \*********************************/
