@@ -14,3 +14,12 @@ module.exports = withCSS({
   }
 });
 */
+
+
+// module.exports = {
+//     exportPathMap: function () {
+//         return {
+//             '/': { page: '/' }
+//         }
+//     }
+// }

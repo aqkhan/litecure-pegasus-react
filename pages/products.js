@@ -2,15 +2,14 @@ import React, { Component } from "react";
 import '../style.css'
 import Layout from "../components/layout";
 import { withRouter } from "next/router";
+import Products from '../components/product'
 import ProductDetail from "../components/product/productDetail";
-import Product from "../components/product";
-class Products extends Component {
+class Product extends Component {
     state={
-        products:[],
         slug:null
-    }
+    };
     componentWillMount() {
-        let slug = this.props.router.query.id;
+        let slug = this.props.router.query.name;
         this.setState({ slug:slug })
     }
 
@@ -21,9 +20,9 @@ class Products extends Component {
             slug?<Layout>
                 <ProductDetail slug={slug}/>
             </Layout>:<Layout>
-                <Product/>
+                <Products/>
             </Layout>
         )
     }
 }
-export default withRouter(Products);
+export default withRouter(Product);

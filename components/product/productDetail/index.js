@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Link from 'next/link'
+// import { BrowserRouter } from 'react-router-dom';
 import axios from 'axios';
 import ScrollableAnchor from 'react-scrollable-anchor';
 import RequestDemo from "../../requestDemo";
@@ -13,6 +15,15 @@ class ProductDetail extends Component{
 
     componentWillMount(){
         let slug =this.props.slug;
+        this.apiCall(slug);
+    }
+    componentWillReceiveProps(nextProps, nextContext) {
+        let slug =nextProps.slug;
+        this.apiCall(slug);
+    }
+
+    apiCall(slug){
+        console.log("slug",slug);
         axios('http://54.234.86.247:3000/api/products/'+slug)
             .then((res)=>{
                 this.setState({product:res.data.product, slug:slug})
@@ -28,6 +39,7 @@ class ProductDetail extends Component{
                 this.setState({err:err})
             })
     }
+
     render() {
         let {product,err,slug,products} = this.state;
         let detailProduct=null;
@@ -101,7 +113,7 @@ class ProductDetail extends Component{
                                             <img src={value.featuredImage && value.featuredImage.url} height="320" width="320"/>
                                             <div className="view-text">
                                                 <h1>{value.title}</h1>
-                                                <p><a href={"/products/"+value.slug}>VIEW PRODUCT</a></p>
+                                                <p><Link href={`/product/${value.slug}`}><a>VIEW PRODUCT</a></Link></p>
                                             </div>
                                         </div>
                                     </div>

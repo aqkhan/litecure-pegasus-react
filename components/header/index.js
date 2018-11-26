@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Link from 'next/link';
 import Head from "next/head";
 class Header extends Component{
 
@@ -29,7 +30,7 @@ class Header extends Component{
                                 <div className="container custom-container">
                                     <div className="row HEADERS">
                                         <div className="col-sm-7 col-7 flex-end-row  ">
-                                            <a href="/"><img src="/static/images/logos1.png" /></a>
+                                            <Link href="/"><a><img src="/static/images/logos1.png" /></a></Link>
                                         </div>
                                         <div className="col-sm-5 col-5 flex-end-row ">
                                             <img src="/static/images/magnifier.png" width="18px" height="18px"/>
@@ -51,10 +52,10 @@ class Header extends Component{
                                     <div className="row  justify-center align-center">
                                         <ul className="responsive-column navbar flex-row nav-color">
                                             <li><span><a href="/products">PRODUCTS</a></span></li>
-                                            <li><span>RESEARCH</span></li>
-                                            <li><span><a href="/resources">RESOURCES</a></span></li>
-                                            <li><span><a href="/about-us">ABOUT</a></span></li>
-                                            <li><span><a href="/support">SUPPORT</a></span></li>
+                                            <li><span><a href="/">Research</a></span></li>
+                                            <li><span><Link href="/resources"><a>RESOURCES</a></Link></span></li>
+                                            <li><span><Link href="/about-us"><a>About</a></Link></span></li>
+                                            <li><span><Link href="/support"><a>Support</a></Link></span></li>
                                         </ul>
                                     </div>
                                 </div>

@@ -1,4 +1,6 @@
 import  React , { Component } from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import Link from 'next/link'
 import axios from 'axios';
 import RequestDemo from '../requestDemo';
 class  Product extends Component{
@@ -49,9 +51,7 @@ class  Product extends Component{
                                               <p>
                                                   <div dangerouslySetInnerHTML={{__html: value.shortDescription}}></div>
                                               </p>
-                                              <a href={"/products/"+value.slug}>
-                                                  LEARN MORE
-                                              </a>
+                                              <Link href={`/product/${value.slug}`}><a>LEARN MORE</a></Link>
                                           </div>
                                       </div>
                                   </div>
@@ -133,10 +133,10 @@ class  Product extends Component{
                     })
                 }
         return (
-            this.state.products ? <div>
+            this.state.products ? <BrowserRouter><div>
                 {dynamic}
                 <RequestDemo/>
-            </div>:<div>
+            </div></BrowserRouter>:<div>
                 <section className="first-product">
                 <section className="first-section">
                     <div className="third-row">

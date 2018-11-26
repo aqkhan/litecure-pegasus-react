@@ -1,53 +1,15 @@
 {
-  "devFiles": [],
+  "devFiles": [
+    "static/development/dll/dll_cdf5cfc256f9500f2e4b.js"
+  ],
   "pages": {
-    "/about-us": [
-      "static/runtime/webpack-89179faa512dd01fbb62.js",
-      "static/css/commons.93a9dc61.chunk.css",
-      "static/chunks/commons.661ae15033309ead4493.js",
-      "static/runtime/main-6b57f9fbfc493a8c7c1d.js"
-    ],
-    "/index": [
-      "static/runtime/webpack-89179faa512dd01fbb62.js",
-      "static/css/commons.93a9dc61.chunk.css",
-      "static/chunks/commons.661ae15033309ead4493.js",
-      "static/runtime/main-6b57f9fbfc493a8c7c1d.js"
-    ],
-    "/products": [
-      "static/runtime/webpack-89179faa512dd01fbb62.js",
-      "static/css/commons.93a9dc61.chunk.css",
-      "static/chunks/commons.661ae15033309ead4493.js",
-      "static/runtime/main-6b57f9fbfc493a8c7c1d.js"
-    ],
-    "/resources": [
-      "static/runtime/webpack-89179faa512dd01fbb62.js",
-      "static/css/commons.93a9dc61.chunk.css",
-      "static/chunks/commons.661ae15033309ead4493.js",
-      "static/runtime/main-6b57f9fbfc493a8c7c1d.js"
-    ],
-    "/support": [
-      "static/runtime/webpack-89179faa512dd01fbb62.js",
-      "static/css/commons.93a9dc61.chunk.css",
-      "static/chunks/commons.661ae15033309ead4493.js",
-      "static/runtime/main-6b57f9fbfc493a8c7c1d.js"
-    ],
     "/_app": [
-      "static/runtime/webpack-89179faa512dd01fbb62.js",
-      "static/css/commons.93a9dc61.chunk.css",
-      "static/chunks/commons.661ae15033309ead4493.js",
-      "static/runtime/main-6b57f9fbfc493a8c7c1d.js"
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
     ],
     "/_error": [
-      "static/runtime/webpack-89179faa512dd01fbb62.js",
-      "static/css/commons.93a9dc61.chunk.css",
-      "static/chunks/commons.661ae15033309ead4493.js",
-      "static/runtime/main-6b57f9fbfc493a8c7c1d.js"
-    ],
-    "/": [
-      "static/runtime/webpack-89179faa512dd01fbb62.js",
-      "static/css/commons.93a9dc61.chunk.css",
-      "static/chunks/commons.661ae15033309ead4493.js",
-      "static/runtime/main-6b57f9fbfc493a8c7c1d.js"
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
     ]
   }
 }
