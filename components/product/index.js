@@ -1,5 +1,4 @@
 import  React , { Component } from 'react';
-import { BrowserRouter } from 'react-router-dom';
 import Link from 'next/link'
 import axios from 'axios';
 import RequestDemo from '../requestDemo';
@@ -133,10 +132,10 @@ class  Product extends Component{
                     })
                 }
         return (
-            this.state.products ? <BrowserRouter><div>
+            this.state.products ? <div>
                 {dynamic}
                 <RequestDemo/>
-            </div></BrowserRouter>:<div>
+            </div>:<div>
                 <section className="first-product">
                 <section className="first-section">
                     <div className="third-row">
