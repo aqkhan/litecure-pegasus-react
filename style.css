@@ -22,6 +22,9 @@
 a:active, a:hover{
     text-decoration: none!important;
 }
+.view-text a {
+    color:#fff;
+}
 .nav-color a {
     color:#fff;
 }

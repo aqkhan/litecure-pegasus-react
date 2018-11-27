@@ -72,7 +72,7 @@ class ProductDetail extends Component{
                                           <div className="row ">
                                               <div className="col-sm-4 p-0">
                                                   <div className="SPECIFICATIONS">
-                                                      <h3><b>SPECIFICATIONS</b></h3>
+                                                      <h1>SPECIFICATIONS</h1>
                                                       <div className="text-specification">
                                                           <ul>
                                                               {Object.keys(product.spec.Name).map((data,index)=>{
@@ -149,7 +149,7 @@ class ProductDetail extends Component{
                             <div>
                                 {detailProduct}
                             </div>
-                            allProducts & <div className="yellow-section">
+                             <div className="yellow-section">
                             <div className="container custom-container">
                                 <div className="row view-area">
                                     <div className="col-sm-2"></div>
