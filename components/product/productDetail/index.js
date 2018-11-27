@@ -61,7 +61,7 @@ class ProductDetail extends Component{
                                   <div className="container custom-container">
                                       <div className="row flex">
                                           <div className="header-image">
-                                              <img src={product.featuredImage && product.featuredImage.url} height="280" width="280" className="head-img1"/>
+                                              <img src={product.featuredImage && product.featuredImage.url} className="head-img1"/>
                                           </div>
                                       </div>
                                   </div>
@@ -112,7 +112,7 @@ class ProductDetail extends Component{
                                             <img src={value.featuredImage && value.featuredImage.url} height="320" width="320"/>
                                             <div className="view-text">
                                                 <h1>{value.title}</h1>
-                                                <p><Link href={{ pathname: 'product', query: { title: value.slug }}}><a onClick={()=>this.apiCall(value.slug)}>VIEW PRODUCT</a></Link></p>
+                                                <p><Link href={"/product/"+value.slug}><a onClick={()=>this.apiCall(value.slug)}>VIEW PRODUCT</a></Link></p>
                                             </div>
                                         </div>
                                     </div>

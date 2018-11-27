@@ -7,7 +7,8 @@ class Product extends Component {
 
 
     render() {
-        return (<Layout>
+        return (
+            <Layout type={"product"}>
                 <Products/>
             </Layout>
         )

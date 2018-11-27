@@ -30,7 +30,7 @@ class AboutUs extends Component{
                                 <img src={value.featuredImage && value.featuredImage.url} height="320" width="320"/>
                                 <div className="view-text">
                                     <h1>{value.title}</h1>
-                                    <p><Link href={{ pathname: 'product', query: { title: value.slug }}}><a>VIEW PRODUCT</a></Link>
+                                    <p><Link href={'/product/'+value.slug}><a>VIEW PRODUCT</a></Link>
                                     </p>
                                 </div>
                             </div>

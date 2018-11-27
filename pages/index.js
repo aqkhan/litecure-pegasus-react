@@ -5,7 +5,7 @@ import Layout from "../components/layout";
 class index extends Component{
     render(){
         return(
-            <Layout>
+            <Layout type={"home"}>
                 <Home/>
             </Layout>
         )

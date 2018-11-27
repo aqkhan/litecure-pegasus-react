@@ -1104,6 +1104,11 @@ a:active, a:hover{
     padding-top: 21%;
     z-index: 1;
 }
+
+.product-det .first-section .header-image img{
+    width: 320px;
+    height: auto;
+}
 .product-det .first-section .overlay-section{
 
 
@@ -1187,6 +1192,23 @@ a:active, a:hover{
     width: 330px;
     margin-top: 18px;
 
+}
+
+.product-det .first-section .yellow-section .view-text a:hover{
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 1.5px;
+    text-align: left;
+    color: #efb817;
+    padding-left: 0px;
+    background: black;
+    width: 150px;
+    padding: 6px 14px;
 }
 .product-det .first-section .yellow-section .image-margin{
     margin-top: 120px;
@@ -1973,4 +1995,18 @@ a:active, a:hover{
 }
 .image-container{
     max-width: 100%!important;
+}
+
+
+.company-profile .first-section .yellow-section .view-text a:hover{
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 1.5px;
+    text-align: left;
+    color: #efb817;
+    background: black;
 }
