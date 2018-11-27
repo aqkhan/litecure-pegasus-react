@@ -50,7 +50,7 @@ class  Product extends Component{
                                               <p>
                                                   <div dangerouslySetInnerHTML={{__html: value.shortDescription}}></div>
                                               </p>
-                                              <Link href={`/product/${value.slug}`}><a>LEARN MORE</a></Link>
+                                              <Link href={{ pathname: 'product', query: { name: value.slug }}}><a>LEARN MORE</a></Link>
                                           </div>
                                       </div>
                                   </div>

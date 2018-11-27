@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Link from 'next/link'
-// import { BrowserRouter } from 'react-router-dom';
 import axios from 'axios';
 import ScrollableAnchor from 'react-scrollable-anchor';
 import RequestDemo from "../../requestDemo";
@@ -17,10 +16,10 @@ class ProductDetail extends Component{
         let slug =this.props.slug;
         this.apiCall(slug);
     }
-    componentWillReceiveProps(nextProps, nextContext) {
-        let slug =nextProps.slug;
-        this.apiCall(slug);
-    }
+    // componentWillReceiveProps(nextProps, nextContext) {
+    //     let slug =nextProps.slug;
+    //     this.apiCall(slug);
+    // }
 
     apiCall(slug){
         console.log("slug",slug);
@@ -38,6 +37,9 @@ class ProductDetail extends Component{
             .catch(err=>{
                 this.setState({err:err})
             })
+    }
+    shouldComponentUpdate(nextProps, nextState, nextContext) {
+        return nextState.slug !== this.state.slug || nextState.products!==this.state.products
     }
 
     render() {
@@ -113,7 +115,7 @@ class ProductDetail extends Component{
                                             <img src={value.featuredImage && value.featuredImage.url} height="320" width="320"/>
                                             <div className="view-text">
                                                 <h1>{value.title}</h1>
-                                                <p><Link href={`/product/${value.slug}`}><a>VIEW PRODUCT</a></Link></p>
+                                                <p><Link href={{ pathname: 'product', query: { name: value.slug }}}><a onClick={()=>this.apiCall(value.slug)}>VIEW PRODUCT</a></Link></p>
                                             </div>
                                         </div>
                                     </div>
