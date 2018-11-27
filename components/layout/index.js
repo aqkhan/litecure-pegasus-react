@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Header from "../header";
+import Header from "../header/headerContainer";
 import Footer from "../footer";
 class index extends Component{
     render(){

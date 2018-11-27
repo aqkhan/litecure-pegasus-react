@@ -130,8 +130,8 @@ a:active, a:hover{
 
 
 }
-.new-header .second-row .navbar li .active{
-    color:#efb817;
+.new-header .second-row .navbar li span.active a {
+    color: #efb817!important;
 }
 .new-header .second-row .navbar li span{
 
