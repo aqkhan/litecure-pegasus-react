@@ -2,7 +2,39 @@ import React, { Component } from "react";
 import Link from 'next/link';
 import Head from "next/head";
 class Header extends Component{
+    state={
+        products:"",
+        research:"",
+        resources:"",
+        about:"",
+        support:"",
+        type:null
+    }
+    componentWillMount() {
+        this.setState({type:this.props.type})
+    }
 
+    changeHover(type){
+        switch (type) {
+            case "product":
+                this.setState({products:"active",research:"", resources:"", about:"",support:""})
+                consolw.log(this.state.products)
+                return;
+            case "research":
+                this.setState({products:"",research:"active", resources:"", about:"",support:""})
+                return;
+            case "resources":
+                this.setState({products:"",research:"", resources:"active", about:"",support:""})
+                return;
+            case "about":
+                this.setState({products:"",research:"", resources:"", about:"active",support:""})
+                return;
+            case "support":
+                this.setState({products:"",research:"", resources:"", about:"",support:"active"})
+                return;
+        }
+
+    }
     render(){
         return(
             <div>
@@ -51,11 +83,11 @@ class Header extends Component{
                                 <div className="container showhide custom-container">
                                     <div className="row  justify-center align-center">
                                         <ul className="responsive-column navbar flex-row nav-color">
-                                            <li><span><a href="/products">PRODUCTS</a></span></li>
-                                            <li><span><a href="/">Research</a></span></li>
-                                            <li><span><Link href="/resources"><a>RESOURCES</a></Link></span></li>
-                                            <li><span><Link href="/about-us"><a>About</a></Link></span></li>
-                                            <li><span><Link href="/support"><a>Support</a></Link></span></li>
+                                            <li><span className={this.state.products}><Link href="/products"><a>PRODUCTS</a></Link></span></li>
+                                            <li><span className={this.state.research}><Link  href="/"><a>Research</a></Link></span></li>
+                                            <li><span className={this.state.resources}><Link href="/resources"><a>RESOURCES</a></Link></span></li>
+                                            <li><span className={this.state.about}><Link href="/about-us"><a>About</a></Link></span></li>
+                                            <li><span className={this.state.support}><Link href="/support"><a>Support</a></Link></span></li>
                                         </ul>
                                     </div>
                                 </div>

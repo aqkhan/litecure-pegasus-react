@@ -42,7 +42,7 @@ class AboutUs extends Component{
         return(
             <div>
                 <section className="company-profile">
-                    <section className="first-section" style={{backgroundImage: "url('/static/images/white_horse_stock_4_by_phoenixs_stock.png')"}}>
+                    <section className="first-section" >
                         <div className="fourth-row text-area new">
                             <div className=" container">
                                 <div className="row ">

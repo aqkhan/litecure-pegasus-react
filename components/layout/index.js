@@ -2,10 +2,11 @@ import React, { Component } from "react";
 import Header from "../header";
 import Footer from "../footer";
 class index extends Component{
+
     render(){
         return(
             <section>
-                <Header/>
+                <Header type={this.props.type}/>
                 {this.props.children}
                 <Footer/>
             </section>

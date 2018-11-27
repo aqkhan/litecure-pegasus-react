@@ -66,7 +66,7 @@ class  Home extends Component{
                                             <div dangerouslySetInnerHTML={{__html: value.shortDescription}}></div>
                                             <br/>
                                             <br/>
-                                            <h3>Specifications</h3>
+                                            <h3><b>Specifications</b></h3>
                                             <ul>
                                                 {Object.keys(value.spec.Name).map((data,indexx)=>{
                                                     return <li key={indexx}><span><b>{value.spec.Name[data]}:</b></span><span> </span><span>{value.spec.Detail[data]}</span></li>

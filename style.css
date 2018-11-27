@@ -133,6 +133,10 @@ a:active, a:hover{
 .new-header .second-row .navbar li .active{
     color:#efb817;
 }
+.new-header .second-row .navbar li span.active a {
+    color: #efb817!important;
+}
+
 .new-header .second-row .navbar li span{
 
     font-family: UniSansCAPSheavy;
@@ -1177,6 +1181,8 @@ a:active, a:hover{
 }
 .product-det .first-section .yellow-section .view-text{
     position: absolute;
+    width: 330px;
+    margin-top: 18px;
 
 }
 .product-det .first-section .yellow-section .image-margin{
@@ -1699,6 +1705,8 @@ a:active, a:hover{
 }
 .company-profile .first-section .yellow-section .view-text{
     position: absolute;
+    width: 331px;
+    margin-top: 18px;
     margin-left: 56px;
 }
 .company-profile .first-section .yellow-section .image-margin{

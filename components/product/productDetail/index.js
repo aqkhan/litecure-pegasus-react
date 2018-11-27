@@ -72,7 +72,7 @@ class ProductDetail extends Component{
                                           <div className="row ">
                                               <div className="col-sm-4 p-0">
                                                   <div className="SPECIFICATIONS">
-                                                      <h1>SPECIFICATIONS</h1>
+                                                      <h3><b>SPECIFICATIONS</b></h3>
                                                       <div className="text-specification">
                                                           <ul>
                                                               {Object.keys(product.spec.Name).map((data,index)=>{
