@@ -8,7 +8,7 @@ class Product extends Component {
         slug:null
     };
     componentWillMount() {
-        let slug = this.props.url.query.name;
+        let slug = this.props.router.query.name;
         this.setState({ slug:slug })
     }
 

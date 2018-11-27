@@ -14,6 +14,7 @@ const routes = getRoutes();
 app.prepare().then(() => {
     const server = express();
 
+
     server.get('*', (req, res) => {
         const parsedUrl = parse(req.url, true);
         const { pathname, query = {} } = parsedUrl;
@@ -24,10 +25,11 @@ app.prepare().then(() => {
         return handle(req, res, 'index');
     })
     server.get('/product/:name', (req, res) => {
-            const actualPage = "/product";
-            const queryParams = {name: req.params.name};
-            app.render(req, res, actualPage, queryParams);
-        });
+        const actualPage = "/product";
+        const queryParams = {name: req.params.name};
+        app.render(req, res, actualPage, queryParams);
+    });
+
 
 
     server.listen(PORT, (err) => {
