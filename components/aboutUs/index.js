@@ -24,13 +24,13 @@ class AboutUs extends Component{
         if (products) {
             allProducts=products.map(value=>{
                 return(
-                    <div key={value.id}>
+                    <div key={value._id}>
                         <div className="col-sm-4 p-0" >
                             <div className="image-margin">
                                 <img src={value.featuredImage && value.featuredImage.url} height="320" width="320"/>
                                 <div className="view-text">
                                     <h1>{value.title}</h1>
-                                    <p><Link href={{ pathname: 'product', query: { name: value.slug }}}><a>VIEW PRODUCT</a></Link>
+                                    <p><Link href={{ pathname: 'product', query: { title: value.slug }}}><a>VIEW PRODUCT</a></Link>
                                     </p>
                                 </div>
                             </div>

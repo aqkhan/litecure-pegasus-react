@@ -20,10 +20,9 @@ class  Product extends Component{
                 if (this.state.products)
                 {
                   dynamic =  this.state.products.map((value,index)=>{
-                      console.log("index", index)
                       if (index===0){
-                          return <section className="first-product">
-                          <section className="first-section" key={value.id}>
+                          return <section className="first-product"  key={index}>
+                          <section className="first-section">
                               <div className="third-row">
                                   <div className="container custom-container">
                                       <div className="row flex">
@@ -47,10 +46,10 @@ class  Product extends Component{
                                   <div className="custom-container container">
                                       <div className="row flex">
                                           <div className="flex-column learnmore-header learn-ex">
-                                              <p>
+                                              <div className='detail-product-content'>
                                                   <div dangerouslySetInnerHTML={{__html: value.shortDescription}}></div>
-                                              </p>
-                                              <Link href={{ pathname: 'product', query: { name: value.slug }}}><a>LEARN MORE</a></Link>
+                                              </div>
+                                              <Link href={{ pathname: 'product', query: { title: value.slug }}}><a>LEARN MORE</a></Link>
                                           </div>
                                       </div>
                                   </div>
@@ -59,8 +58,8 @@ class  Product extends Component{
                           </section>
                       }
                       else if(index%2===0){
-                          return<section className="odd-product">
-                          <section className="second-section" key={value.id}>
+                          return<section className="odd-product" key={index}>
+                          <section className="second-section">
                               <div className="container custom-container">
                                   <div className="row flex">
                                       <div className="PTL-PEGASUS">
@@ -77,8 +76,8 @@ class  Product extends Component{
                                               <br/>
                                               <h3>Specifications</h3>
                                               <ul>
-                                                  {Object.keys(value.spec.Name).map((data,indexx)=>{
-                                                      return <li key={indexx}><span><b>{value.spec.Name[data]}:</b></span><span> </span><span>{value.spec.Detail[data]}</span></li>
+                                                  {Object.keys(value.spec.Name).map((data,i)=>{
+                                                      return <li key={i}><span><b>{value.spec.Name[data]}:</b></span><span> </span><span>{value.spec.Detail[data]}</span></li>
                                                   })}
                                               </ul>
 
@@ -94,8 +93,8 @@ class  Product extends Component{
                           </section>
                       }
                       else {
-                          return<section className="even-product">
-                              <section className="third-section" key={value.id}>
+                          return<section className="even-product" key={index}>
+                              <section className="third-section">
                                   <div className="container custom-container">
                                       <div className="row flex">
                                           <div className="PTC-PEGASUS">

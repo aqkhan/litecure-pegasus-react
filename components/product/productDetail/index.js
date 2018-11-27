@@ -22,7 +22,6 @@ class ProductDetail extends Component{
     // }
 
     apiCall(slug){
-        console.log("slug",slug);
         axios('http://54.234.86.247:3000/api/products/'+slug)
             .then((res)=>{
                 this.setState({product:res.data.product, slug:slug})
@@ -50,7 +49,7 @@ class ProductDetail extends Component{
             {
                     if (product.slug===slug){
                        detailProduct = (
-                          <div key={product.id}>
+                          <div key={product._id}>
                               <div className="third-row">
                                   <div className="container custom-container">
                                       <div className="row flex">
@@ -74,18 +73,19 @@ class ProductDetail extends Component{
                                               <div className="col-sm-4 p-0">
                                                   <div className="SPECIFICATIONS">
                                                       <h1>SPECIFICATIONS</h1>
-                                                      <p>
+                                                      <div className="text-specification">
                                                           <ul>
                                                               {Object.keys(product.spec.Name).map((data,index)=>{
                                                                   return <li key={index}><span><b>{product.spec.Name[data]}:</b></span><span> </span><span>{product.spec.Detail[data]}</span></li>
                                                               })}
                                                           </ul>
-                                                      </p>
+                                                      </div>
                                                   </div>
                                               </div>
                                               <div className="col-sm-8 ">
                                                   <div className=" learnmore-header">
-                                                      <p><div dangerouslySetInnerHTML={{__html: product.shortDescription}}></div></p>
+                                                      <div className='detail-content'>
+                                                          <div dangerouslySetInnerHTML={{__html: product.shortDescription}}></div></div>
                                                       <br/>
                                                       <br/>
                                                       <div className="button">
@@ -105,23 +105,19 @@ class ProductDetail extends Component{
         }
         if (products) {
             allProducts=products.map(value=>{
-                if (value.slug===slug){
-                }
-                else {
-                    return(
-                        <div key={value.id}>
+                    return value.slug!==slug &&(
+                        <div key={value._id}>
                                     <div className="col-sm-4" >
                                         <div className="image-margin">
                                             <img src={value.featuredImage && value.featuredImage.url} height="320" width="320"/>
                                             <div className="view-text">
                                                 <h1>{value.title}</h1>
-                                                <p><Link href={{ pathname: 'product', query: { name: value.slug }}}><a onClick={()=>this.apiCall(value.slug)}>VIEW PRODUCT</a></Link></p>
+                                                <p><Link href={{ pathname: 'product', query: { title: value.slug }}}><a onClick={()=>this.apiCall(value.slug)}>VIEW PRODUCT</a></Link></p>
                                             </div>
                                         </div>
                                     </div>
                         </div>
                     )
-                }
             })
         }
         return(

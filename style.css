@@ -108,12 +108,14 @@ a:active, a:hover{
     transform: scaleX(-1);
 }
 .new-header .first-row{
+    background-color:#191d24;
     border-bottom:1px solid #efb817;
 }
 .new-header .second-row{
     background-color: #191d24;
     height: 60px;
 }
+
 .new-header .second-row .navbar{
     list-style-type: none;
     justify-content: center;
@@ -1922,3 +1924,36 @@ a:active, a:hover{
 
 
 /*section-one:END*/
+.detail-content{
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.32;
+    color: #ffffff;
+}
+.text-specification{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.32;
+    color: #efb817;
+    margin-top: 8%;
+}
+.detail-product-content{
+    font-family: 'Roboto', sans-serif;
+    font-size: 19px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.32;
+    letter-spacing: 0.6px;
+    text-align: center;
+    color: #ffffff;
+}
+.image-container{
+    max-width: 100%!important;
+}

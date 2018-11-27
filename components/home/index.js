@@ -13,14 +13,14 @@ class  Home extends Component{
         axios.get('http://54.234.86.247:3000/api/pages')
             .then((res)=>{
                 let temp=[];
-                res.data.pages.map((val)=>{
+                res.data.pages.forEach((val)=>{
                     if (val.type==="homepage"){
                         temp.push(val);
                     }
                 });
                 this.setState({pages:temp})
             })
-            .catch(err=>{throw err})
+            .catch(err=>{throw err});
 
         axios.get('http://54.234.86.247:3000/api/products')
             .then((res)=>{
@@ -30,12 +30,9 @@ class  Home extends Component{
     }
 
    test=(type)=>{
-        console.log(type)
-        console.log(this.state.storyOne)
         switch (type) {
             case 'one':
                 this.setState({ storyOne:"active", storyTwo:"", storyThree:"" });
-                console.log(this.state.storyOne)
                 return;
             case 'two':
                 this.setState({ storyOne:"", storyTwo:"active", storyThree:"" });
@@ -53,9 +50,8 @@ class  Home extends Component{
         if (this.state.products)
         {
             product =  this.state.products.map((value,index)=>{
-                if(index===0){
-                    return <section className="odd-product">
-                                 <section className="second-section" key={value.id}>
+                    return index===0 && <section className="odd-product" key={index}>
+                                 <section className="second-section">
                             <div className="container custom-container">
                                 <div className="row flex">
                                     <div className="PTL-PEGASUS">
@@ -87,12 +83,12 @@ class  Home extends Component{
                             </div>
                         </section>
                     </section>
-                }})}
+                })}
         let pages;
         if (this.state.pages){
-            pages = this.state.pages.map((value)=>{
-                return <section className="new-home-cards">
-                            <section className="section-one" key={value.id} style={{
+            pages = this.state.pages.map((value, index)=>{
+                return <section className="new-home-cards" key={index}>
+                            <section className="section-one" style={{
                     background: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)),url(${value.featuredImage && value.featuredImage.url})`,
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover",}} >
@@ -112,7 +108,7 @@ class  Home extends Component{
                         <div className="custom-container container">
                             <div className="row flex">
                                 <div className="flex-column learnmore-header learn-home">
-                                    <p><div dangerouslySetInnerHTML={{__html: value.leadText}}></div></p>
+                                    <div className='detail-content'><div dangerouslySetInnerHTML={{__html: value.leadText}}></div></div>
                                     <a href="#">
                                         LEARN MORE
                                     </a>

@@ -19,8 +19,8 @@ class MediaDetail extends Component{
         {
             product =  this.state.products.map((value,index)=>{
                 if(index===0){
-                    return <section className="odd-product">
-                        <section className="second-section" key={value.id}>
+                    return <section className="odd-product" key={value._id}>
+                        <section className="second-section">
                             <div className="container custom-container">
                                 <div className="row flex">
                                     <div className="PTL-PEGASUS">
@@ -55,9 +55,9 @@ class MediaDetail extends Component{
                 }})}
         return(
             <div>
-                <container className="new-media-detail">
-                    <container className="first-section">
-                        <div className="container custom-container image-section">
+                <section className="new-media-detail">
+                    <section className="first-section">
+                        <div className="container custom-container image-section image-container">
                             <div className="row flex year">
                                 <div className="col-sm-1"></div>
                                 <div className="col-sm-8">
@@ -72,8 +72,8 @@ class MediaDetail extends Component{
                             </div>
 
                         </div>
-                    </container>
-                </container>
+                    </section>
+                </section>
                 <section className="new-media-detail-containers">
                     <section className="second-section hours-img" >
                         <div className="fourth-row text-area">
