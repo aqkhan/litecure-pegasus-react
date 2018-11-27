@@ -1,6 +1,7 @@
 import React , {Component} from 'react';
 import RequestDemo from '../requestDemo'
 import axios from "axios";
+import Link from "next/link";
 
 class AboutUs extends Component{
     state ={
@@ -29,7 +30,8 @@ class AboutUs extends Component{
                                 <img src={value.featuredImage && value.featuredImage.url} height="320" width="320"/>
                                 <div className="view-text">
                                     <h1>{value.title}</h1>
-                                    <p><a href={"/products/"+value.slug}>VIEW PRODUCT</a></p>
+                                    <p><Link href={{ pathname: 'product', query: { name: value.slug }}}><a>VIEW PRODUCT</a></Link>
+                                    </p>
                                 </div>
                             </div>
                         </div>
