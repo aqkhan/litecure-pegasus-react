@@ -2,18 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1d98a3a-aeab-4548-a019-5b24bb77da39" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.next/build-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/.next/build-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.next/react-loadable-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/.next/react-loadable-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.next/server/pages-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/pages-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/aboutUs/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/aboutUs/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/employment/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/employment/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/home/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/mediaDetail/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/mediaDetail/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/product/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/product/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/product/productDetail/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/product/productDetail/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/product.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -27,11 +21,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="146">
               <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="193">
+              <caret line="1002" column="16" selection-start-line="1002" selection-start-column="16" selection-end-line="1002" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -63,10 +75,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/aboutUs/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
+            <state relative-caret-position="-33">
               <caret line="32" column="88" selection-start-line="32" selection-start-column="88" selection-end-line="32" selection-end-column="88" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/components/home/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="236">
+              <caret line="233" column="64" selection-start-line="233" selection-start-column="64" selection-end-line="233" selection-end-column="64" />
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -88,8 +112,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>third-section</find>
-      <find>.third-section</find>
       <find>/static</find>
       <find>product-det</find>
       <find>../Assets/</find>
@@ -117,7 +139,9 @@
       <find>.id</find>
       <find>map</find>
       <find>first-row</find>
+      <find>indi</find>
       <find>link</find>
+      <find>.product-det .first-section</find>
     </findStrings>
     <replaceStrings>
       <replace>/products/</replace>
@@ -188,21 +212,21 @@
         <option value="$PROJECT_DIR$/alter.css" />
         <option value="$PROJECT_DIR$/pages/index.js" />
         <option value="$PROJECT_DIR$/components/header/index.js" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/routes.js" />
         <option value="$PROJECT_DIR$/static/style.css" />
         <option value="$PROJECT_DIR$/next.config.js" />
         <option value="$PROJECT_DIR$/pages/products.js" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/components/employment/index.js" />
-        <option value="$PROJECT_DIR$/components/home/index.js" />
         <option value="$PROJECT_DIR$/components/mediaDetail/index.js" />
         <option value="$PROJECT_DIR$/pages/product.js" />
         <option value="$PROJECT_DIR$/components/product/index.js" />
         <option value="$PROJECT_DIR$/components/product/productDetail/index.js" />
         <option value="$PROJECT_DIR$/components/aboutUs/index.js" />
         <option value="$PROJECT_DIR$/server.js" />
+        <option value="$PROJECT_DIR$/components/home/index.js" />
+        <option value="$PROJECT_DIR$/style.css" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -239,20 +263,7 @@
               <item name="pegasusFe" type="b2602c69:ProjectViewProjectNode" />
               <item name="pegasusFe" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="aboutUs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pegasusFe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pegasusFe" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="product" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pegasusFe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pegasusFe" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="product" type="462c0819:PsiDirectoryNode" />
-              <item name="productDetail" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pegasusFe" type="b2602c69:ProjectViewProjectNode" />
@@ -342,18 +353,18 @@
       <workItem from="1543223280749" duration="7552000" />
       <workItem from="1543231577764" duration="30822000" />
       <workItem from="1543267972534" duration="13425000" />
-      <workItem from="1543310933814" duration="7424000" />
+      <workItem from="1543310933814" duration="10398000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="193115000" />
+    <option name="totallyTimeSpent" value="196089000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1366" height="696" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49468085" visible="true" weight="0.3127327" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49468085" visible="true" weight="0.3127327" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="npm" order="2" sideWeight="0.5053192" side_tool="true" weight="0.24720775" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -366,7 +377,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Statistic" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3068783" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3068783" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -563,13 +574,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/alter.css" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/header/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -626,16 +630,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/home/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="88" column="54" selection-start-line="88" selection-start-column="54" selection-end-line="88" selection-end-column="54" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/mediaDetail/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="591">
@@ -662,13 +656,6 @@
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -699,16 +686,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/aboutUs/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="32" column="88" selection-start-line="32" selection-start-column="88" selection-end-line="32" selection-end-column="88" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/product.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -723,6 +700,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="146">
           <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/aboutUs/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-33">
+          <caret line="32" column="88" selection-start-line="32" selection-start-column="88" selection-end-line="32" selection-end-column="88" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/home/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="233" column="64" selection-start-line="233" selection-start-column="64" selection-end-line="233" selection-end-column="64" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="1002" column="16" selection-start-line="1002" selection-start-column="16" selection-end-line="1002" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
         </state>
       </provider>
     </entry>

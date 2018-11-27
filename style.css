@@ -109,11 +109,12 @@ a:active, a:hover{
 }
 .new-header .first-row{
     background-color:#191d24;
-    border-bottom:1px solid #efb817;
+    /*border-bottom:1px solid #efb817;*/
 }
 .new-header .second-row{
     background-color: #191d24;
     height: 60px;
+    border-top: 1px solid #efb817;
 }
 
 .new-header .second-row .navbar{
@@ -698,6 +699,11 @@ a:active, a:hover{
 }
 .new-stories .section-three  .carousel-indicators {
     bottom:35px;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
 
 .new-stories .section-three  .carousel-indicators li{
@@ -993,7 +999,7 @@ a:active, a:hover{
     background: linear-gradient(rgba(8, 7, 7, 0.87), rgba(10, 9, 9, 0.85)), url(/static/images/female-vet-with-woman.png);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 1817px;
+    /*height: 1817px;*/
     width: 100%;
 }
 
@@ -1535,7 +1541,7 @@ a:active, a:hover{
     background: linear-gradient(rgba(14, 13, 13, 0.77), rgba(10, 9, 9, 0.72)),  url(/static/images/white_horse_stock_4_by_phoenixs_stock.png);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 1632px;
+    /*height: 1632px;*/
     width: 100%;
     background-position: right;
 }

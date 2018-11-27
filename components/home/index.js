@@ -182,10 +182,8 @@ class  Home extends Component{
                                                 <div className="flex-column learnmore-header">
 
                                                     <p>"We all feel a lot better with Pegasus laser
-                                                        therapy. It means a huge difference in quality of life for our
-                                                        horses,particularly as they
-                                                        grow older."</p>
-                                                    <span>- Joanie Matus 1</span>
+                                                        therapy."</p>
+                                                    <span>- Joanie Matus ---</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -211,7 +209,7 @@ class  Home extends Component{
                                                         therapy. It means a huge difference in quality of life for our
                                                         horses, particularly as they
                                                         grow older."</p>
-                                                    <span>- Joanie Matus 2</span>
+                                                    <span>- Joanie </span>
                                                 </div>
                                             </div>
                                         </div>
@@ -233,10 +231,8 @@ class  Home extends Component{
                                                 <div className="flex-column learnmore-header">
 
                                                     <p>"We all feel a lot better with Pegasus laser
-                                                        therapy. It means a huge difference in quality of life for our
-                                                        horses, particularly as they
-                                                        grow older."</p>
-                                                    <span>- Joanie Matus 3</span>
+                                                        therapy."</p>
+                                                    <span>- Joanie Matus</span>
                                                 </div>
                                             </div>
                                         </div>
