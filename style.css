@@ -633,27 +633,26 @@ a:active, a:hover{
     /*background-size: cover;*/
 
 }
-.new-stories .section-three-overlay{
+/*.new-stories .section-three-overlay{*/
 
-    background:linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)), url(/static/images/machine.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    filter:grayscale(1);
-    position: absolute;
-    left: 0;
-    right: 0;
-    top:0;
-    bottom: 0;
-    z-index: -1;
+    /*background-position: center;*/
+    /*filter:grayscale(1);*/
+    /*position: absolute;*/
+    /*left: 0;*/
+    /*right: 0;*/
+    /*top:0;*/
+    /*bottom: 0;*/
+    /*z-index: -1;*/
 
-}
+/*}*/
 .new-stories .section-three .product-text{
     margin-bottom: 60px;
 }
 .new-stories .section-three .big-text .col-12{
     padding: 0px!important;
 }
+
+
 
 .new-stories .section-three .big-text p {
     font-family: UniSansCAPS;
@@ -692,6 +691,19 @@ a:active, a:hover{
     color: #ffffff;
     margin-bottom: 29px;
 }
+.stories-short-description{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.32;
+    letter-spacing: 0.6px;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 29px;
+}
+
 .new-stories .section-three .fourth-row .learnmore-header span{
     font-family: OpenSans;
     font-size: 14px;

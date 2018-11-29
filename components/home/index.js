@@ -5,6 +5,7 @@ class  Home extends Component{
     state = {
         pages:null,
         products:null,
+        stories:null,
         storyOne:"active",
         storyTwo:"",
         storyThree:"",
@@ -25,6 +26,12 @@ class  Home extends Component{
         axios.get('http://54.234.86.247:3000/api/products')
             .then((res)=>{
                 this.setState({products:res.data.products})
+            })
+            .catch(err=>{throw err})
+
+        axios.get('http://54.234.86.247:3000/api/stories')
+            .then((res)=>{
+                this.setState({stories:res.data.stories})
             })
             .catch(err=>{throw err})
     }
@@ -119,6 +126,112 @@ class  Home extends Component{
                 </section>
                 </section>
         })}
+        let stories;
+        if (this.state.stories)
+        {
+            stories =  this.state.stories.map((value,index)=>{
+                if (index===0){
+                    return ( <div>
+                        <div className={`item ${this.state.storyOne}`}>
+                            <div style={{ background: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)), url(${value.featuredImage && value.featuredImage.url})`,
+                                backgroundRepeat: "no-repeat",
+                                backgroundSize: "cover",
+                                backgroundPosition: "center",
+                                filter:"grayscale(1)",
+                                position: "absolute",
+                                left: 0,
+                                right: 0,
+                                top:0,
+                                bottom: 0,
+                                zIndex: -1
+                            }}></div>
+                            <div className="custom-container product-text container">
+                                <div className="row flex big-text">
+                                    <div className="col-12"><p>{value.title}</p></div>
+                                </div>
+                            </div>
+                            <div className="fourth-row">
+                                <div className="custom-container container">
+                                    <div className="row flex">
+                                        <div className="flex-column learnmore-header"><p dangerouslySetInnerHTML={{__html:value.shortDiscription}}></p><span>- Joanie Matus</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>)
+                }
+                else if (index===1){
+                    return ( <div>
+                        <div className={`item ${this.state.storyTwo}`}>
+                            <div x style={{ background: `linear-gradientlinear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)), url(${value.featuredImage && value.featuredImage.url})`,
+                                backgroundRepeat: "no-repeat",
+                                backgroundSize: "cover",
+                                backgroundPosition: "center",
+                                filter:"grayscale(1)",
+                                position: "absolute",
+                                left: 0,
+                                right: 0,
+                                top:0,
+                                bottom: 0,
+                                zIndex: -1
+                            }}></div>
+                            <div className="custom-container product-text container">
+                                <div className="row flex big-text">
+                                    <div className="col-12"><p>STORIES</p></div>
+                                </div>
+                            </div>
+                            <div className="fourth-row">
+                                <div className="custom-container container">
+                                    <div className="row flex">
+                                        <div className="flex-column learnmore-header"><p>"We all feel a lot better with
+                                            Pegasus laser therapy. It means a huge difference in quality of life for our
+                                            horses, particularly as they grow older."</p><span>- Joanie Matus</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>)
+                }
+                else if (index===2){
+                    return ( <div>
+                        <div className={`item ${this.state.storyThree}`}>
+                            <div style={{ background: `linear-gradientlinear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)), url(${value.featuredImage && value.featuredImage.url})`,
+                                backgroundRepeat: "no-repeat",
+                                backgroundSize: "cover",
+                                backgroundPosition: "center",
+                                filter:"grayscale(1)",
+                                position: "absolute",
+                                left: 0,
+                                right: 0,
+                                top:0,
+                                bottom: 0,
+                                zIndex: -1
+                            }}></div>
+
+                            <div className="custom-container product-text container">
+                                <div className="row flex big-text">
+                                    <div className="col-12"><p>STORIES</p></div>
+                                </div>
+                            </div>
+                            <div className="fourth-row">
+                                <div className="custom-container container">
+                                    <div className="row flex">
+                                        <div className="flex-column learnmore-header"><p>"We all feel a lot better with
+                                            Pegasus laser therapy. It means a huge difference in quality of life for our
+                                            horses, particularly as they grow older."</p><span>- Joanie Matus</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>)
+                }
+                else {
+                    return null;
+                }
+            })}
         return(
             <div>
                 <section className="new-home-cards">
@@ -166,83 +279,7 @@ class  Home extends Component{
                             </ol>
 
                             <div className="carousel-inner">
-                                <div className={`item ${this.state.storyOne}`}>
-                                    <div className="section-three-overlay"></div>
-                                    <div className="custom-container product-text container">
-                                        <div className="row flex big-text">
-                                            <div className="col-12">
-                                                <p>STORIES</p>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div className="fourth-row">
-                                        <div className="custom-container container">
-                                            <div className="row flex">
-                                                <div className="flex-column learnmore-header">
-
-                                                    <p>"We all feel a lot better with Pegasus laser
-                                                        therapy. It means a huge difference in quality of life for our
-                                                        horses, particularly as they
-                                                        grow older."</p>
-                                                    <span>- Joanie Matus</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className={`item ${this.state.storyTwo}`}>
-                                    <div className="section-three-overlay"></div>
-                                    <div className="custom-container product-text container">
-                                        <div className="row flex big-text">
-                                            <div className="col-12">
-                                                <p>STORIES</p>
-                                            </div>
-
-                                        </div>
-                                    </div>
-
-                                    <div className="fourth-row">
-                                        <div className="custom-container container">
-                                            <div className="row flex">
-                                                <div className="flex-column learnmore-header">
-
-                                                    <p>"We all feel a lot better with Pegasus laser
-                                                        therapy. It means a huge difference in quality of life for our
-                                                        horses, particularly as they
-                                                        grow older."</p>
-                                                    <span>- Joanie Matus</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className={`item ${this.state.storyThree}`}>
-                                    <div className="section-three-overlay"></div>
-                                    <div className="custom-container product-text container">
-                                        <div className="row flex big-text">
-                                            <div className="col-12">
-                                                <p>STORIES</p>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div className="fourth-row">
-                                        <div className="custom-container container">
-                                            <div className="row flex">
-                                                <div className="flex-column learnmore-header">
-
-                                                    <p>"We all feel a lot better with Pegasus laser
-                                                        therapy. It means a huge difference in quality of life for our
-                                                        horses, particularly as they
-                                                        grow older."</p>
-                                                    <span>- Joanie Matus</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
+                    {stories}
                             </div>
 
                         </div>
