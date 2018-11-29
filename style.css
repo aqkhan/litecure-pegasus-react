@@ -1101,7 +1101,7 @@ a:active, a:hover{
 }
 .product-det .first-section .header-image{
     position: absolute;
-    padding-top: 21%;
+    margin-top: 8%;
     z-index: 1;
 }
 
