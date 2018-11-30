@@ -87,70 +87,40 @@ class  Home extends Component{
         let pages;
         if (this.state.pages){
             pages = this.state.pages.map((value, index)=>{
-                return <section className="new-home-cards" key={index}>
-                            <section className="section-one" style={{
-                    background: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)),url(${value.featuredImage && value.featuredImage.url})`,
-                    backgroundRepeat: "no-repeat",
-                    backgroundSize: "cover",}} >
-                    <div className="third-row">
-                        <div className="container custom-container">
-                            <div className="row flex">
-                                <div className="header-text">
-                                    <p><br/><span>{value.headerImageLable}</span></p>
+                    return <section className="new-home-cards" key={index}>
+                        <section className="section-one" style={{
+                            background: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)),url(${value.featuredImage && value.featuredImage.url})`,
+                            backgroundRepeat: "no-repeat",
+                            backgroundSize: "cover",}} >
+                            <div className="third-row">
+                                <div className="container custom-container">
+                                    <div className="row flex">
+                                        <div className="header-text">
+                                            <p><br/><span>{value.headerImageLable}</span></p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div className="small-upper-line flex">
-                        <div className="line"> </div>
-                    </div>
-                    <div className="fourth-row">
-                        <div className="custom-container container">
-                            <div className="row flex">
-                                <div className="flex-column learnmore-header learn-home">
-                                    <div className='detail-content'><div dangerouslySetInnerHTML={{__html: value.leadText}}></div></div>
-                                    <a href="#">
-                                        LEARN MORE
-                                    </a>
+                            <div className="small-upper-line flex">
+                                <div className="line"> </div>
+                            </div>
+                            <div className="fourth-row">
+                                <div className="custom-container container">
+                                    <div className="row flex">
+                                        <div className="flex-column learnmore-header learn-home">
+                                            <div className='detail-content'><div dangerouslySetInnerHTML={{__html: value.leadText}}></div></div>
+                                            <a href="#">
+                                                LEARN MORE
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </section>
-                </section>
+                        </section>
+                    </section>
         })}
         return(
             <div>
-                <section className="new-home-cards">
-                        <section key={"Home-Container"} className="section-one" >
-                    <div className="third-row">
-                        <div className="container custom-container">
-                            <div className="row flex">
-                                <div className="header-text">
-                                    <p>"No comparison,<br/><span>No compromise."</span></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="small-upper-line flex">
-                        <div className="line"> </div>
-                    </div>
-                    <div className="fourth-row">
-                        <div className="custom-container container">
-                            <div className="row flex">
-                                <div className="flex-column learnmore-header">
-
-                                    <p>See why the world's toughest competitors have made Pegasus a part of their
-                                        team.</p>
-                                    <a href="#">
-                                        LEARN MORE
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                </section>
                 {pages}
                     {product}
                 <section className="new-stories">

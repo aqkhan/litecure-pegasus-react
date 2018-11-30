@@ -507,10 +507,10 @@ a:active, a:hover{
 
 /*.new-home-cards .section-one:START*/
 .new-home-cards .section-one{
-    background: linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)),url(/static/images/buffalo.jpg);
+    /*background: linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)),url(/static/images/buffalo.jpg);*/
 
-    background-repeat: no-repeat;
-    background-size: cover;
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
 }
 
 .new-home-cards .section-one .custom-container .HEADERS{
