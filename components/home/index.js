@@ -1,5 +1,6 @@
 import  React , { Component } from 'react';
 import RequestDemo from '../requestDemo';
+import {Carousel} from 'react-bootstrap'
 import axios from 'axios'
 class  Home extends Component{
     state = {
@@ -29,21 +30,21 @@ class  Home extends Component{
             .catch(err=>{throw err})
     }
 
-   test=(type)=>{
-        switch (type) {
-            case 'one':
-                this.setState({ storyOne:"active", storyTwo:"", storyThree:"" });
-                return;
-            case 'two':
-                this.setState({ storyOne:"", storyTwo:"active", storyThree:"" });
-                return;
-            case 'three':
-                this.setState({ storyOne:"", storyTwo:"", storyThree:"active" });
-                return;
-            default:
-                return;
-        }
-    }
+//    test=(type)=>{
+//         switch (type) {
+//             case 'one':
+//                 this.setState({ storyOne:"active", storyTwo:"", storyThree:"" });
+//                 return;
+//             case 'two':
+//                 this.setState({ storyOne:"", storyTwo:"active", storyThree:"" });
+//                 return;
+//             case 'three':
+//                 this.setState({ storyOne:"", storyTwo:"", storyThree:"active" });
+//                 return;
+//             default:
+//                 return;
+//         }
+//     }
 
     render() {
         let product;
@@ -123,102 +124,60 @@ class  Home extends Component{
             <div>
                 {pages}
                     {product}
-                <section className="new-stories">
-                    <section className="section-three" key={"Home-Slide"}>
-
-
-                        <div id="myCarousel" className="carousel slide" data-ride="2000">
-                            <ol className="carousel-indicators carouselinicator">
-                                <li data-target="#myCarousel" data-slide-to="0" onClick={()=>this.test("one")} className={this.state.storyOne}></li>
-                                <li data-target="#myCarousel" data-slide-to="1" onClick={()=>this.test("two")} className={this.state.storyTwo}></li>
-                                <li data-target="#myCarousel" data-slide-to="2" onClick={()=>this.test("three")} className={this.state.storyThree}></li>
-
-                            </ol>
-
-                            <div className="carousel-inner">
-                                <div className={`item ${this.state.storyOne}`}>
-                                    <div className="section-three-overlay"></div>
-                                    <div className="custom-container product-text container">
-                                        <div className="row flex big-text">
-                                            <div className="col-12">
-                                                <p>STORIES</p>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div className="fourth-row">
-                                        <div className="custom-container container">
-                                            <div className="row flex">
-                                                <div className="flex-column learnmore-header">
-
-                                                    <p>"We all feel a lot better with Pegasus laser
-                                                        therapy. It means a huge difference in quality of life for our
-                                                        horses, particularly as they
-                                                        grow older."</p>
-                                                    <span>- Joanie Matus</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className={`item ${this.state.storyTwo}`}>
-                                    <div className="section-three-overlay"></div>
-                                    <div className="custom-container product-text container">
-                                        <div className="row flex big-text">
-                                            <div className="col-12">
-                                                <p>STORIES</p>
-                                            </div>
-
-                                        </div>
-                                    </div>
-
-                                    <div className="fourth-row">
-                                        <div className="custom-container container">
-                                            <div className="row flex">
-                                                <div className="flex-column learnmore-header">
-
-                                                    <p>"We all feel a lot better with Pegasus laser
-                                                        therapy. It means a huge difference in quality of life for our
-                                                        horses, particularly as they
-                                                        grow older."</p>
-                                                    <span>- Joanie Matus</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className={`item ${this.state.storyThree}`}>
-                                    <div className="section-three-overlay"></div>
-                                    <div className="custom-container product-text container">
-                                        <div className="row flex big-text">
-                                            <div className="col-12">
-                                                <p>STORIES</p>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div className="fourth-row">
-                                        <div className="custom-container container">
-                                            <div className="row flex">
-                                                <div className="flex-column learnmore-header">
-
-                                                    <p>"We all feel a lot better with Pegasus laser
-                                                        therapy. It means a huge difference in quality of life for our
-                                                        horses, particularly as they
-                                                        grow older."</p>
-                                                    <span>- Joanie Matus</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </section>
-                </section>
+               
+<Carousel>
+  <Carousel.Item>
+  <div className="section-three-overlay1"></div>
+    <img width={'auto'} height={500} alt="900x500" src="/static/images/machine.jpg" />
+    <Carousel.Caption>
+    
+                                    
+            <div className="slider-text">
+                
+                        <h1>STORIES</h1><br/>
+                        <p>"We all feel a lot better with Pegasus laser
+                        therapy. It means a huge difference in quality of life for our
+                        horses, particularly as they
+                        grow older."</p>
+                        <span>- Joanie Matus</span>
+                    </div>                    
+                                
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
+  <div className="section-three-overlay1"></div>
+    <img width={'auto'} height={500} alt="900x500" src="/static/images/machine.jpg" />
+    <Carousel.Caption>
+    
+                                    
+            <div className="slider-text">
+                
+                        <h1>STORIES</h1><br/>
+                        <p>"We all feel a lot better with Pegasus laser
+                        therapy. It means a huge difference in quality of life for our
+                        horses, particularly as they
+                        grow older."</p>
+                        <span>- Joanie Matus</span>
+                    </div>                       
+                                
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
+  <div className="section-three-overlay1"></div>
+  <img width={'auto'} height={500} alt="900x500" src="/static/images/machine.jpg" />
+    <Carousel.Caption>
+    <div className="slider-text">
+        
+        <h1>STORIES</h1><br/>
+        <p>"We all feel a lot better with Pegasus laser
+        therapy. It means a huge difference in quality of life for our
+        horses, particularly as they
+        grow older."</p>
+        <span>- Joanie Matus</span>
+    </div>   
+    </Carousel.Caption>
+  </Carousel.Item>
+</Carousel>;
                 <RequestDemo/>
                 </div>
         )

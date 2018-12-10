@@ -1,0 +1,94 @@
+
+
+/* slider css start */
+.section-three-overlay1{
+
+    background: linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72));
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top:0;
+    bottom: 0;
+    z-index: -1;
+
+}
+.carousel-inner>.item>img{
+    mix-blend-mode: multiply;
+    filter: grayscale(1);
+    height: 682px;
+    width: 100%;
+    
+}
+.slider-text{
+    width: 100%;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.slider-text h1{
+    font-family: UniSansCAPS;
+    font-size: 370px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px;
+    font-weight: 100;
+    font-style: normal;
+    font-stretch: normal;
+    /* line-height: 0.17; */
+    letter-spacing: -0.9px;
+    text-align: center;
+    color: rgba(216, 216, 216, 0.1);
+    background-color: rgba(216, 216, 216, 0);
+    -webkit-text-stroke: 2.3px #f7f7f8;
+    padding: 257px 1px 121px 1px;
+    height: 202px;
+}
+.slider-text p{
+    width: 460px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.32;
+    letter-spacing: 0.6px;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 29px;
+  margin-top: 8%;
+}
+.slider-text span{
+    font-family: OpenSans;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: italic;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  text-align: center;
+  color: #ffffff;
+}
+.carousel-indicators{
+    margin-left: 20%;
+}
+.carousel-indicators li{
+    width: 12px;
+    height: 12px;
+    margin: 10px;
+    background: #fff;
+}
+.carousel-indicators .active{
+    margin: 10px;
+    background-color: #efb817;
+    box-shadow: 0px 0px 1px 8px rgba(47, 23, 23, 0.5);
+}
+.new-request-demo {
+ margin-top: -15px;
+}
