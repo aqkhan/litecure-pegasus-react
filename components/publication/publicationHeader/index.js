@@ -24,6 +24,9 @@ const publicationHeader = () => {
                 </div>
             </section>
             <div className="empty-div">
+                <div className="container">
+                     <div class="course-text1"><div><i class="fa fa-chevron-left"> </i></div><p>BACK TO PREVIOUS </p></div>
+                </div>
             </div>
         </section>    )
 };

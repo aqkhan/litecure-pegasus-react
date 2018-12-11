@@ -2085,6 +2085,17 @@ a:active, a:hover{
 .empty-div{
     min-height: 59px;
     background:#EFB817;
+    display: flex;
+    align-items: center;
+}
+.empty-div .course-text1{
+    padding-left:62px;
+}
+.empty-div .course-text1>div{
+   background-color:#685211;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 /* publication img secion start */
 .public-img{
@@ -2404,11 +2415,12 @@ a:active, a:hover{
     text-align: left;
     color: #fff;
 }
-.card-dev .course-text1 {
+/* common arrow container */
+.course-text1 {
     display: -ms-flexbox;
     display: flex;
 }
-.card-dev .course-text1 p {
+.course-text1 p {
     font-family: AvenirNext;
     font-size: 12px;
     font-weight: 700;
@@ -2420,7 +2432,7 @@ a:active, a:hover{
     color: #fff;
     padding: 10px 0 0 20px;
 }
-.card-dev .course-text1 div {
+.course-text1 div {
     height: 39px;
     width: 39px;
     border-radius: 50%;
@@ -2437,12 +2449,222 @@ a:active, a:hover{
     align-items: center;
     color: #fff;
     cursor: pointer;
-    padding-left: 4px;
-    padding-top: 1px;
-    margin-left: 16px;
+}
+.photo-header-second p span {
+    color: #E9B317;
+}
+.photo-header p {
+    font-family: AvenirNext;
+    font-size: 39px;
+    color: #fff;
+    padding-top: 168px;
+    padding-left: 61px;
 }
 /* publication detail page end */
 
+
+/* photomodulation page start */
+.modulation-header .photobiomodulation-header {
+    background-blend-mode: normal,multiply;
+    background-size: cover;
+    height: 580px;
+    overflow: hidden;
+    position: relative;
+}
+.custom-container {
+    width: 1349px!important;
+    margin: 0 auto;
+    max-width: 100%;
+}
+.custom-container {
+    position: relative;
+}
+.modulation-header  .photobiomodulation-header .product-image {
+    text-align: right;
+    position: absolute;
+    right: -208px;
+    top: -18px;
+}
+.modulation-header  .photobiomodulation-header .photo-header-second p {
+    font-family: AvenirNext;
+    font-size: 30px;
+    color: #fff;
+    padding-top: 168px;
+    padding-left: 61px;
+    font-weight: 700;
+}
+.modulation-header  .product-image img {
+    height: 673px;
+    z-index: -1;
+}
+
+/* moduledetail section start */
+.blog-content.article-area, .blog-content.article-area .article-container {
+    background-color: #fff!important;
+}
+.article-area, .article-container {
+    background-color: #54585a;
+    margin: 0 auto;
+}
+.article-container {
+    width: 1349px;
+    height: auto;
+    padding-top: 20px;
+}
+.article-area {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0;
+}
+.photobiomodulation .blog-content.article-area .main_section {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+.blog-content.article-area .paragraph-area {
+    margin-left: 15px;
+}
+.article-area .paragraph-area {
+    margin-top: 20px;
+}
+.photobiomodulation .article-area .paragraph-area ul {
+    padding-right: 61px;
+    list-style: none;
+    padding-left:50px!important;
+}
+.article-area .paragraph-area ul {
+    font-family: AvenirNext;
+    font-size: 19px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2;
+    letter-spacing: -.1px;
+    text-align: left;
+    color: #54585a;
+    padding-left: 81px;
+    padding-right: 61px;
+}
+.photobiomodulation .article-area .paragraph-area ul li.active {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #E9B317;
+}
+.photobiomodulation .article-area .paragraph-area ul li {
+    line-height: 1;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 15px;
+    color: #b8b8b8;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.83;
+    letter-spacing: -.1px;
+    padding-left: 0;
+}
+.photobiomodulation .blog-content.article-area .right_btn_container {
+    padding:17px 61px 50px 69px;
+}
+.photobiomodulation .blog-content.article-area .right_btn_container .dark_gray {
+    background-color: #54585a;
+}
+.photobiomodulation .blog-content.article-area .right_btn_container .button_product {
+    display: block;
+    padding: 20px 10px;
+    margin-top: 20px;
+}
+.photobiomodulation .blog-content.article-area .right_btn_container .button_icon p {
+    font-size: 16px;
+    margin-bottom: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+    color:#fff;
+}
+.photobiomodulation .blog-content.article-area .right_btn_container .button_icon p .dark_color {
+    background: #EFB817;
+}
+.photobiomodulation .blog-content.article-area .right_btn_container .button_icon p i {
+    border-radius: 50%;
+    color: #fff;
+    margin-left: 30px;
+    font-size: 26px;
+    height: 37px;
+    width: 37px;
+    padding-top: 5px;
+}
+.photobiomodulation .blog-content.article-area .right_btn_container .button_product {
+    display: block;
+    padding: 20px 10px;
+    margin-top: 20px;
+}
+.photobiomodulation .blog-content.article-area .right_btn_container .button_icon .COMPANIONACADEMY {
+    padding-left: 5px;
+    padding-right: 25px;
+}
+.photobiomodulation .blog-content.article-area .right_btn_container .button_icon p .lite_color {
+    background-color: #8d8e8d;
+}
+.photobiomodulation .blog-content.article-area .right_btn_container .button_icon p i {
+    border-radius: 50%;
+    color: #fff;
+    margin-left: 30px;
+    font-size: 26px;
+    height: 37px;
+    width: 37px;
+    padding-top: 5px;
+}
+.photobiomodulation .blog-content.article-area .right_btn_container .lite_gray {
+    background-color: #9d9d9d;
+    padding: 20px 17px;
+}
+.photobiomodulation .blog-content.article-area h1 {
+    color: #54585a;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 33px;
+}
+.article-area h1, .article-area p {
+    padding-left: 66px;
+    padding-right: 66px;
+}
+.photobiomodulation .blog-content.article-area .para_main p, .photobiomodulation .blog-content.article-area .para_main ul {
+    font-family: AvenirNext;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.83;
+    letter-spacing: -.1px;
+    text-align: left;
+    color: #54585a;
+    margin-top: 12px;
+}
+.photobiomodulation  .btn_container{
+    display: flex;
+}
+.photobiomodulation .btn_container>button{
+    margin-right:10px;
+}
+.photobiomodulation .btn_red{
+  background-color:#efb817;
+}
+.photobiomodulation .button_icon p i{
+    background-color: #8d8e8d;
+}
+.photobiomodulation .btn_sky {
+    background-color: #8292a1;
+}
+
+/* moduledetail section end */
+
+/* photomodulatioon page end */
 
 
 

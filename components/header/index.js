@@ -2,13 +2,16 @@ import React, { Component } from "react";
 import Link from 'next/link';
 import Head from "next/head";
 class Header extends Component{
+
     state={
         products:"",
         research:"",
         resources:"",
         about:"",
-        support:""
-    }
+        support:"",
+        dropdown: false
+
+    };
     componentWillMount() {
         console.log("header",this.props.type)
         this.changeHover(this.props.type)
@@ -17,8 +20,6 @@ class Header extends Component{
         console.log("header",this.props.type)
         this.changeHover(this.props.type)
     }
-
-
     changeHover(type){
         switch (type) {
             case "product":
@@ -92,20 +93,20 @@ class Header extends Component{
                                     <div className="row  justify-center align-center">
                                         <ul className="responsive-column navbar flex-row nav-color">
                                             <li><span className={products}><Link href="/products"><a>PRODUCTS</a></Link></span></li>
-                                            <li><span className={support}><Link href="/support"><a>Evidence</a></Link></span>
-                                                <ul class="childlist">
-                                                    <div class="triangle-up"></div>
-                                                    <li><a href="#">Publications</a>
-                                                        <ul className="sub-child">
-                                                            <li><a href="#">Scientific Studies</a></li>
-                                                            <li><a href="#">Case Studies</a></li>
-                                                            <li><a href="#"> Articles</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a href="#">Photobiomodulation</a></li>
-                                                    <li><a href="#">Publications</a></li>
-                                                    <li><a href="#">Publications</a></li>
-                                                </ul>
+                                            <li><span className={support}><Link><a>Evidence</a></Link></span>
+                                                    <ul class="childlist">
+                                                        <div class="triangle-up"></div>
+                                                        <li><a href="#">Publications</a>
+                                                            <ul className="sub-child">
+                                                                <li><a href="#">Scientific Studies</a></li>
+                                                                <li><a href="#">Case Studies</a></li>
+                                                                <li><a href="#"> Articles</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li><a href="#">Photobiomodulation</a></li>
+                                                        <li><a href="#">Publications</a></li>
+                                                        <li><a href="#">Publications</a></li>
+                                                    </ul>
                                             </li>
                                             <li><span className={research}><Link  href="/"><a>Research</a></Link></span></li>
                                             <li><span className={resources}><Link href="/resources"><a>RESOURCES</a></Link></span></li>
