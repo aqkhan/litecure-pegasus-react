@@ -187,6 +187,56 @@ a:active, a:hover{
     border-radius: 20px;
 
 }
+.childlist{
+    z-index: 1;
+    position: absolute;
+    top: 73px;
+    padding-left: 0px;
+    width: 28%;
+    border: 1px solid #efb817;
+    padding: 11px;
+    background: rgba(25, 29, 36, 0.9);
+    border-left: 0;
+    border-right: 0;
+    border-radius: 5px;
+}
+.childlist::before{
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 10px solid #efb817;
+    clear: both;
+}
+.triangle-up {
+    width: 0;
+    height: 0;
+    top: -9px;
+    position: absolute;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 10px solid #191d24;
+}
+.childlist li{
+   padding:0px!important;
+}
+.childlist li a{
+    font-family: UniSansCAPSheavy;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.88;
+    letter-spacing: 0.5px;
+    text-align: center;
+    cursor: pointer;
+}
+.sub-child{
+    display:none;
+}
 
 /*section-one:END*/
 
@@ -2228,3 +2278,184 @@ a:active, a:hover{
 }
 /* post section casestudy end*/
 /* publication casestudy secion end */
+
+
+
+
+
+/* publication detail page start */
+.content-dev{
+    background-color:#54585A;
+    padding: 22px 0px;
+}
+.content-dev .title-dev p{
+    font-family: AvenirNext;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2;
+    letter-spacing: .6px;
+    text-align: left;
+    color: #fff;
+    font-size: 28px;
+    padding: 14px 40px 0 0px;
+}
+.content-dev .title-dev span{
+    font-family: AvenirNext;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2;
+    letter-spacing: .6px;
+    text-align: left;
+    color: #c7c9c7;
+    padding: 3px 40px 0 55px;
+    font-size:21px;
+}
+.content-dev .description-dev p{
+    font-family: AvenirNext;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: .6px;
+    text-align: left;
+    color: #c7c9c7;
+    font-size: 20px;
+    padding: 19px 0px 0px 0px;
+    margin-bottom: 0;
+}
+
+/* card section start */
+.card-dev{
+    background-color: #191d24;
+    min-height: 358px;
+}
+.card-dev .img-dev img{
+    height: 135px;
+    width:100%;
+}
+.card-dev .text-card{
+    background-color:#54585A;
+    background-color: #54585a;
+    height: 143px;
+    padding: 12px;
+}
+.card-dev .text-card h5{
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    font-family: AvenirNext;
+    font-size: 14px;
+    line-height: 22px;
+    padding-top: 3px;
+}
+.card-dev .outer-dev{
+    background: #fff;
+    min-height: 50px;
+    -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.2);
+    box-shadow: 0 2px 10px rgba(0,0,0,.2);
+    position: relative;
+    border-radius: 2px;
+    border: none!important;
+}
+.card-dev .img-ex{
+    min-width: 18.4%!important;
+    border: 1px solid #54585A;
+    margin:0 auto;
+}
+.card-dev .img-ex:first-child{
+    margin-left:0px;
+}
+.card-dev .img-ex:last-child{
+    margin-right:0px;
+}
+.card-dev .img-ex:hover{
+    -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.4);
+    box-shadow: 0 2px 10px rgba(0,0,0,.4);
+    background: #54585a;
+    border: 1px solid #EFB817;
+}
+.card-dev .clr-gray{
+    height:267px;
+    background:#54585A;
+}
+
+/* header course-container container */
+.card-dev .course-container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 21px 0;
+}
+.card-dev .course-text {
+    width: 447px;
+    height: 38px;
+    font-family: AvenirNext;
+    font-size: 28px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fff;
+}
+.card-dev .course-text1 {
+    display: -ms-flexbox;
+    display: flex;
+}
+.card-dev .course-text1 p {
+    font-family: AvenirNext;
+    font-size: 12px;
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.75;
+    letter-spacing: .2px;
+    text-align: left;
+    color: #fff;
+    padding: 10px 0 0 20px;
+}
+.card-dev .course-text1 div {
+    height: 39px;
+    width: 39px;
+    border-radius: 50%;
+    font-size: 20px;
+    background-color: #EFB817;
+    display: -ms-flexbox;
+    display: flex;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+    padding-left: 4px;
+    padding-top: 1px;
+    margin-left: 16px;
+}
+/* publication detail page end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -92,6 +92,21 @@ class Header extends Component{
                                     <div className="row  justify-center align-center">
                                         <ul className="responsive-column navbar flex-row nav-color">
                                             <li><span className={products}><Link href="/products"><a>PRODUCTS</a></Link></span></li>
+                                            <li><span className={support}><Link href="/support"><a>Evidence</a></Link></span>
+                                                <ul class="childlist">
+                                                    <div class="triangle-up"></div>
+                                                    <li><a href="#">Publications</a>
+                                                        <ul className="sub-child">
+                                                            <li><a href="#">Scientific Studies</a></li>
+                                                            <li><a href="#">Case Studies</a></li>
+                                                            <li><a href="#"> Articles</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="#">Photobiomodulation</a></li>
+                                                    <li><a href="#">Publications</a></li>
+                                                    <li><a href="#">Publications</a></li>
+                                                </ul>
+                                            </li>
                                             <li><span className={research}><Link  href="/"><a>Research</a></Link></span></li>
                                             <li><span className={resources}><Link href="/resources"><a>RESOURCES</a></Link></span></li>
                                             <li><span className={about}><Link href="/about-us"><a>About</a></Link></span></li>
