@@ -58,8 +58,10 @@ class MediaDetail extends Component{
                 <section className="new-media-detail">
                     <section className="first-section">
                         <div className="container custom-container image-section image-container">
+                            <div className="container width-container">
                             <div className="row flex year">
                                 <div className="col-sm-1"></div>
+
                                 <div className="col-sm-8">
                                     <div className="quarter">
                                         <span>26-YEAR OLD</span>
@@ -69,7 +71,7 @@ class MediaDetail extends Component{
                                 <div className="col-sm-3">
                                     <img src="/static/images/images-(3).png" className="video-icon"/>
                                 </div>
-                            </div>
+                            </div></div>
 
                         </div>
                     </section>

@@ -1410,10 +1410,12 @@ a:active, a:hover{
     background-repeat: no-repeat;
     background-size: cover;
     height: 500px;
-    width: 100%;
+    min-width: 100%;
     background-position: center;
 }
-
+.width-container{
+    min-width: 1349px!important;
+}
 .new-media-detail .first-section .custom-container .HEADERS{
     background-color: #191d24;
 }
