@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import '../style.css'
-import '../saju.css'
 import Layout from "../components/layout";
 import { withRouter } from "next/router";
 import AdvisoryDetail from '../components/advisoryBoardDetail';
