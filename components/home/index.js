@@ -178,7 +178,7 @@ class  Home extends Component{
     </div>   
     </Carousel.Caption>
   </Carousel.Item>
-</Carousel>;
+</Carousel>
                 <RequestDemo/>
                 </div>
         )

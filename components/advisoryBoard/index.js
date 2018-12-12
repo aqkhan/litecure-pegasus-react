@@ -50,7 +50,7 @@ class Advisory extends Component {
                                             discuss the current and future state of the equine market and suggest steps
                                             to meet the growing demand for versatile and research-based
                                             technologies.</p>
-                                        <h3>Meet the Veterinary Advisory Board</h3>
+                                        <h3 className="advisory-page-heading">Meet the Veterinary Advisory Board</h3>
                                     </div>
                                 </div>
                             </div>

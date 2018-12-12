@@ -5,10 +5,11 @@ class Header extends Component{
 
     state={
         products:"",
-        research:"",
         resources:"",
         about:"",
         support:"",
+        evidence:"",
+        advisoryboard:"",
         dropdown: false
 
     };
@@ -20,31 +21,35 @@ class Header extends Component{
         console.log("header",this.props.type)
         this.changeHover(this.props.type)
     }
+
+    evidenceDropdown(){
+        let {dropdown}=this.state
+        this.setState({dropdown:!dropdown})
+    }
     changeHover(type){
         switch (type) {
             case "product":
-                this.setState({products:"active",research:"", resources:"", about:"",support:""})
-                return;
-            case "research":
-                this.setState({products:"",research:"active", resources:"", about:"",support:""})
+                this.setState({products:"active",evidence:"", advisoryboard:"", resources:"", about:"",support:""})
                 return;
             case "resources":
-                this.setState({products:"",research:"", resources:"active", about:"",support:""})
+                this.setState({products:"",evidence:"", advisoryboard:"", resources:"active", about:"",support:"",})
+                return;
+            case "advisoryboard":
+                this.setState({ products:"",evidence:"active", advisoryboard:"active", resources:"", about:"",support:""})
                 return;
             case "about":
-                this.setState({products:"",research:"", resources:"", about:"active",support:""})
+                this.setState({products:"",evidence:"", advisoryboard:"", resources:"", about:"active",support:""})
                 return;
             case "support":
-                this.setState({products:"",research:"", resources:"", about:"",support:"active"})
+                this.setState({products:"",evidence:"", advisoryboard:"", resources:"", about:"",support:"active"})
                 return;
             default:
-                this.setState({products:"",research:"", resources:"", about:"",support:""})
+                this.setState({products:"",evidence:"", advisoryboard:"", resources:"", about:"",support:""})
         }
 
     }
     render(){
-        let {products,about,research,resources,support} = this.state;
-        console.log(about)
+        let {products,about,evidence,resources,support,advisoryboard, dropdown} = this.state;
         return(
             <div>
                 <Head>
@@ -71,7 +76,7 @@ class Header extends Component{
                                 <div className="container custom-container">
                                     <div className="row HEADERS">
                                         <div className="col-sm-7 col-7 flex-end-row  ">
-                                            <Link href="/"><a><img src="/static/images/logos1.png" /></a></Link>
+                                            <Link href="/"><a><img src="/static/images/logos1.png"/></a></Link>
                                         </div>
                                         <div className="col-sm-5 col-5 flex-end-row ">
                                             <img src="/static/images/magnifier.png" width="18px" height="18px"/>
@@ -93,9 +98,9 @@ class Header extends Component{
                                     <div className="row  justify-center align-center">
                                         <ul className="responsive-column navbar flex-row nav-color">
                                             <li><span className={products}><Link href="/products"><a>PRODUCTS</a></Link></span></li>
-                                            <li><span className={support}><Link><a>Evidence</a></Link></span>
-                                                    <ul class="childlist">
-                                                        <div class="triangle-up"></div>
+                                            <li><span className={evidence}><Link><a onClick={()=>this.evidenceDropdown()}>Evidence</a></Link></span>
+                                                {dropdown && <ul className="childlist" onMouseLeave={()=>this.evidenceDropdown()}>
+                                                        <div className="triangle-up"/>
                                                         <li><a href="#">Publications</a>
                                                             <ul className="sub-child">
                                                                 <li><a href="#">Scientific Studies</a></li>
@@ -103,12 +108,11 @@ class Header extends Component{
                                                                 <li><a href="#"> Articles</a></li>
                                                             </ul>
                                                         </li>
-                                                        <li><a href="#">Photobiomodulation</a></li>
+                                                    <li><span><Link href="/photobiomodulation"><a>Photobiomodulation</a></Link></span></li>
+                                                        <li><span className={advisoryboard}><Link href="/advisory-board"><a>Advisory Board</a></Link></span></li>
                                                         <li><a href="#">Publications</a></li>
-                                                        <li><a href="#">Publications</a></li>
-                                                    </ul>
+                                                    </ul>}
                                             </li>
-                                            <li><span className={research}><Link  href="/"><a>Research</a></Link></span></li>
                                             <li><span className={resources}><Link href="/resources"><a>RESOURCES</a></Link></span></li>
                                             <li><span className={about}><Link href="/about-us"><a>About</a></Link></span></li>
                                             <li><span className={support}><Link href="/support"><a>Support</a></Link></span></li>
