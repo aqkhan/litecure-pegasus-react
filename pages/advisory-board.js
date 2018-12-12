@@ -6,8 +6,8 @@ import Advisory from '../components/advisoryBoard';
 class Board extends Component {
     render() {
         return (
-            <Layout type={"advisory"}>
-                <Advisory></Advisory>
+            <Layout type={"advisory-board"}>
+                <Advisory/>
             </Layout>
         )
     }

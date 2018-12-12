@@ -21,6 +21,11 @@ app.prepare().then(() => {
         const queryParams = {title: req.params.title};
         app.render(req, res, actualPage, queryParams);
     });
+    server.get('/advisory-board-detail/:name', (req, res) => {
+        const actualPage = "/advisory-board-detail";
+        const queryParams = {name: req.params.name};
+        app.render(req, res, actualPage, queryParams);
+    });
     server.get('*', (req, res) => {
         const parsedUrl = parse(req.url, true);
         const { pathname, query = {} } = parsedUrl;

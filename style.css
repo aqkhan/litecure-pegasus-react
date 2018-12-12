@@ -3054,6 +3054,18 @@ a:active, a:hover{
     font-size: 22px;
     padding: 0 89px 20px 50px;
 }
+.bio-para{
+    font-family: AvenirNext;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2;
+    letter-spacing: -.1px;
+    text-align: left;
+    color: #c7c9c7;
+    font-size: 22px;
+    padding: 0 89px 20px 50px;
+}
 /*saju css ends here*/
 
 
