@@ -51,16 +51,18 @@ const caseStudysection = () => {
 
                         <div>
                             <ul className="digit-icons main">
-                                <li className="previous disabled"><a tabindex="0" role="button"><i
+                                <li className="previous disabled"><a tabIndex="0" role="button"><i
                                     className="fa fa-chevron-left "> </i></a></li>
-                                <li className="p-one"><a role="button" tabindex="0"
+                                <li className="p-one"><a role="button" tabIndex="0"
                                                          aria-label="Page 1 is your current page"
                                                          aria-current="page">1</a></li>
-                                <li><a role="button" tabindex="0" aria-label="Page 2">2</a></li>
-                                <li><a role="button" tabindex="0" aria-label="Page 3">3</a></li>
-                                <li><a role="button" tabindex="0" aria-label="Page 4">4</a></li>
-                                <li className="next"><a tabindex="0" role="button"><i
+                                <li><a role="button" tabIndex="0" aria-label="Page 2">2</a></li>
+                                <li><a role="button" tabIndex="0" aria-label="Page 3">3</a></li>
+                                <li><a role="button" tabIndex="0" aria-label="Page 4">4</a></li>
+                                <li className="next"><a tabIndex="0" role="button"><i
                                     className="fa fa-chevron-right "> </i></a></li>
+
+
                             </ul>
                         </div>
                     </div>
