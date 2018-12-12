@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Link from 'next/link'
 import axios from 'axios';
+import {API_PATH} from '../../apiconfig'
 import ScrollableAnchor from 'react-scrollable-anchor';
 import RequestDemo from "../../requestDemo";
 
@@ -22,14 +23,14 @@ class ProductDetail extends Component{
     // }
 
     apiCall(slug){
-        axios('http://54.234.86.247:3000/api/products/'+slug)
+        axios.get(API_PATH +'products/'+slug)
             .then((res)=>{
                 this.setState({product:res.data.product, slug:slug})
             })
             .catch(err=>{
                 this.setState({err:err})
             })
-        axios('http://54.234.86.247:3000/api/products')
+        axios.get(API_PATH +'products')
             .then((res)=>{
                 this.setState({products:res.data.products})
             })
@@ -75,8 +76,8 @@ class ProductDetail extends Component{
                                                       <h1>SPECIFICATIONS</h1>
                                                       <div className="text-specification">
                                                           <ul>
-                                                              {Object.keys(product.spec.Name).map((data,index)=>{
-                                                                  return <li key={index}><span><b>{product.spec.Name[data]}:</b></span><span> </span><span>{product.spec.Detail[data]}</span></li>
+                                                              {Object.keys(product.spec.name).map((data,index)=>{
+                                                                  return <li key={index}><span><b>{product.spec.name[data]}:</b></span><span> </span><span>{product.spec.detail[data]}</span></li>
                                                               })}
                                                           </ul>
                                                       </div>
@@ -172,7 +173,7 @@ class ProductDetail extends Component{
                                 <div className="row images-flex">
                                     <div className="col-sm-6 col-lg-3 p-0 ">
                                         <div className="image-container">
-                                            <div className="image-overlay"></div>
+                                            <div className="image-overlay"/>
                                             <img src="/static/images/doctorwithhourse.jpg" className="image"/>
                                             <div className="overlay">
                                                 <div className="text">

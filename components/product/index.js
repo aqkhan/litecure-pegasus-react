@@ -1,6 +1,7 @@
 import  React , { Component } from 'react';
 import Link from 'next/link'
 import axios from 'axios';
+import {API_PATH} from '../apiconfig'
 import RequestDemo from '../requestDemo';
 class  Product extends Component{
             state = {
@@ -9,7 +10,7 @@ class  Product extends Component{
             }
 
             componentWillMount(){
-                axios.get('http://54.234.86.247:3000/api/products')
+                axios.get(API_PATH + 'products')
                     .then((res)=>{
                             this.setState({products:res.data.products})
                     })
@@ -76,8 +77,8 @@ class  Product extends Component{
                                               <br/>
                                               <h3><b>Specifications</b></h3>
                                               <ul>
-                                                  {Object.keys(value.spec.Name).map((data,i)=>{
-                                                      return <li key={i}><span><b>{value.spec.Name[data]}:</b></span><span> </span><span>{value.spec.Detail[data]}</span></li>
+                                                  {Object.keys(value.spec.name).map((data,i)=>{
+                                                      return <li key={i}><span><b>{value.spec.name[data]}:</b></span><span> </span><span>{value.spec.detail[data]}</span></li>
                                                   })}
                                               </ul>
 
@@ -115,8 +116,8 @@ class  Product extends Component{
                                                   <br/>
                                                   <h3><b>Specifications</b></h3>
                                                   <ul>
-                                                      {Object.keys(value.spec.Name).map((data,indexx)=>{
-                                                          return <li key={indexx}><span><b>{value.spec.Name[data]}:</b></span><span> </span><span>{value.spec.Detail[data]}</span></li>
+                                                      {Object.keys(value.spec.name).map((data,indexx)=>{
+                                                          return <li key={indexx}><span><b>{value.spec.name[data]}:</b></span><span> </span><span>{value.spec.detail[data]}</span></li>
                                                       })}
                                                   </ul>
                                               </div>

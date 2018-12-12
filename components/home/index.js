@@ -1,6 +1,7 @@
 import  React , { Component } from 'react';
 import RequestDemo from '../requestDemo';
-import {Carousel} from 'react-bootstrap'
+import {API_PATH} from '../apiconfig'
+import {Carousel} from 'react-bootstrap';
 import axios from 'axios'
 class  Home extends Component{
     state = {
@@ -11,7 +12,7 @@ class  Home extends Component{
         storyThree:"",
     }
     componentWillMount() {
-        axios.get('http://54.234.86.247:3000/api/pages')
+        axios.get(API_PATH +'pages')
             .then((res)=>{
                 let temp=[];
                 res.data.pages.forEach((val)=>{
@@ -23,7 +24,7 @@ class  Home extends Component{
             })
             .catch(err=>{throw err});
 
-        axios.get('http://54.234.86.247:3000/api/products')
+        axios.get(API_PATH +'products')
             .then((res)=>{
                 this.setState({products:res.data.products})
             })
@@ -69,8 +70,8 @@ class  Home extends Component{
                                             <br/>
                                             <h3><b>Specifications</b></h3>
                                             <ul>
-                                                {Object.keys(value.spec.Name).map((data,indexx)=>{
-                                                    return <li key={indexx}><span><b>{value.spec.Name[data]}:</b></span><span> </span><span>{value.spec.Detail[data]}</span></li>
+                                                {Object.keys(value.spec.name).map((data,indexx)=>{
+                                                    return <li key={indexx}><span><b>{value.spec.name[data]}:</b></span><span> </span><span>{value.spec.detail[data]}</span></li>
                                                 })}
                                             </ul>
 
@@ -127,7 +128,7 @@ class  Home extends Component{
                
 <Carousel>
   <Carousel.Item>
-  <div className="section-three-overlay1"></div>
+  <div className="section-three-overlay1"/>
     <img width={'auto'} height={500} alt="900x500" src="/static/images/machine.jpg" />
     <Carousel.Caption>
     
@@ -145,7 +146,7 @@ class  Home extends Component{
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
-  <div className="section-three-overlay1"></div>
+  <div className="section-three-overlay1"/>
     <img width={'auto'} height={500} alt="900x500" src="/static/images/machine.jpg" />
     <Carousel.Caption>
     
@@ -163,7 +164,7 @@ class  Home extends Component{
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
-  <div className="section-three-overlay1"></div>
+  <div className="section-three-overlay1"/>
   <img width={'auto'} height={500} alt="900x500" src="/static/images/machine.jpg" />
     <Carousel.Caption>
     <div className="slider-text">
