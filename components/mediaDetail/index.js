@@ -37,8 +37,8 @@ class MediaDetail extends Component{
                                             <br/>
                                             <h3><b>Specifications</b></h3>
                                             <ul>
-                                                {Object.keys(value.spec.Name).map((data,indexx)=>{
-                                                    return <li key={indexx}><span><b>{value.spec.Name[data]}:</b></span><span> </span><span>{value.spec.Detail[data]}</span></li>
+                                                {Object.keys(value.spec.name).map((data,indexx)=>{
+                                                    return <li key={indexx}><span><b>{value.spec.name[data]}:</b></span><span> </span><span>{value.spec.detail[data]}</span></li>
                                                 })}
                                             </ul>
 
