@@ -1,14 +1,14 @@
-/**
- * Created by FaZi on 12/10/2018.
- */
 import React, {Component} from 'react';
 import ReactPaginate from 'react-paginate';
+import { RestructorData } from "../../functions";
 class PublicationCategoty extends Component {
     state={
         publicationCategory: null,
         publications: null,
         publicationsCopy: null,
         publicationDestructure: null,
+        totalPages:null,
+        final: null,
         one: true,
         two: true,
         three: true,
@@ -66,16 +66,15 @@ class PublicationCategoty extends Component {
               }
             })
         });
-     this.setState({publicationsCopy:temp}, function () {
-         this.deStructure();
+         let restructured = RestructorData(temp, 10);
+         console.log("restructured",restructured);
+     this.setState({publicationDestructure:restructured, final: restructured[0], totalPages: restructured.length}, function () {
+
      })
     };
 
-    deStructure(){
-        let publicationsCopy = this.state.publicationsCopy;
-        if(publicationsCopy.length%10===0){
-
-        }
+    returnData = (index) => {
+        this.setState({final: this.state.publicationDestructure[index.selected]})
     }
 
     
@@ -253,11 +252,10 @@ class PublicationCategoty extends Component {
     }
 
     render(){
-        console.log("khasmi yadha error",this.state.publicationsCopy)
-        let {publicationCategory, publicationsCopy, one, two, three, four, five, six, seven, eight, nine, ten , eleven, twelve} = this.state;
+        let {publicationCategory, final,totalPages, one, two, three, four, five, six, seven, eight, nine, ten , eleven, twelve} = this.state;
         let cards;
-        if(publicationsCopy){
-            cards = publicationsCopy.map((value,index)=>(<div key={index} className="post-casestudy">
+        if(final){
+            cards = final.map((value,index)=>(<div key={index} className="post-casestudy">
                     <div className="img-dev">
                         <a href="#"><img src={value.featuredImage?value.featuredImage.url:"https://rs-cms.s3.amazonaws.com/pics/Yk_kkbCUx-_NPr_2.png"}/></a>
                     </div>
@@ -301,10 +299,10 @@ class PublicationCategoty extends Component {
                                                nextLabel={<i className="fa fa-chevron-right "> </i>}
                                                breakLabel={". . ." }
                                                breakClassName={"break-me"}
-                                               pageCount={10}
+                                               pageCount={totalPages}
                                                marginPagesDisplayed={2}
                                                pageRangeDisplayed={5}
-                                    // onPageChange={this.handlePageClick}
+                                               onPageChange={this.returnData}
                                                containerClassName={"digit-icons main"}
                                                subContainerClassName={"container column"}
                                                activeClassName={"p-one"} />
