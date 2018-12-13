@@ -2814,8 +2814,8 @@ a:active, a:hover{
     padding: 257px 1px 121px 1px;
     height: 202px;
 }
-.slider-text p{
-    width: 460px;
+.slider-text .paragraph-text{
+    min-width: 550px;
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     font-weight: bold;
