@@ -3075,7 +3075,7 @@ a:active, a:hover{
     font-size: 30px;
     color:#efb817;
     font-weight: bold;
-    padding: 0 0 18px 0;
+    padding: 80px 0 18px 0;
 }
 
 /*saju css ends here*/
@@ -3310,5 +3310,10 @@ a:active, a:hover{
     margin-top: 30px;
 }
 
-
+.advisory-page-para{
+    font-size: 30px;
+    color: #fff;
+    width: 1048px;
+    padding: 0 0 0 23px;
+}
 

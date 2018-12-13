@@ -601,7 +601,7 @@ class TempleteSeven extends Component {
                 <div className="container">
                     {/*<!-- The Modal -->*/}
                     <div className="modal fade" id="myModal12">
-                        <div className="modal-dialog modal-md">
+                        <div className="modal-dialog modal-lg">
                             <div className="modal-content modal-content-small">
                                 {/*<!-- Modal Header -->*/}
                                 <div className="modal-header">

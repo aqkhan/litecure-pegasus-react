@@ -6,7 +6,8 @@ import {API_PATH} from '../apiconfig'
 class Advisory extends Component {
   state={
       advisoryTeamMember:null,
-  }
+      advisoryBanner:null
+  };
     componentWillMount(){
             axios.get(API_PATH +'teamMembers')
                 .then((res=>{
@@ -19,10 +20,23 @@ class Advisory extends Component {
                     this.setState({advisoryTeamMember:temp})
                 }))
                 .catch()
-  }
+        axios.get(API_PATH +'pages')
+            .then((res)=>{
+                let temp=[];
+                res.data.pages.forEach((val)=>{
+                    if (val.type==="advisoryBoard"){
+                        temp.push(val);
+                    }
+                });
+                this.setState({advisoryBanner:temp})
+            })
+            .catch(err=>{throw err});
+
+    }
     render() {
         let cards=null;
-        let {advisoryTeamMember}= this.state;
+        let banner=null;
+        let {advisoryTeamMember, advisoryBanner}= this.state;
         if (advisoryTeamMember){
             cards = advisoryTeamMember.map((data,index)=> <div className="outter-container" key={index}>
                     <Link href={'/advisory-board-detail/'+data.slug}><a>
@@ -37,23 +51,49 @@ class Advisory extends Component {
                 </div>
             )
         }
-        return (<div>
-                <div className="blog-content-teambio-responsive-only pride">
-                    <section className="container-fluid article-area remove">
-                        <div className="customer-support">
-                            <div className=" lead_text_area">
-                                <div className="container custom-container">
-                                    <div className="col-sm-12">
-                                        <p>As part of the Pegasus promise to leading the way in equine science and
-                                            technology, Pegasus Therapy participates in an annual advisory board
-                                            meeting. Industry leaders in science, education, and veterinary medicine
-                                            discuss the current and future state of the equine market and suggest steps
-                                            to meet the growing demand for versatile and research-based
-                                            technologies.</p>
-                                        <h3 className="advisory-page-heading">Meet the Veterinary Advisory Board</h3>
+        if (advisoryBanner){
+            banner=advisoryBanner.map((value,index) =><div>
+                <section className="new-home-cards" key={index}>
+                    <section className="section-one" style={{
+                        background: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)),url(${value.featuredImage && value.featuredImage.url})`,
+                        backgroundRepeat: "no-repeat",
+                        backgroundSize: "cover",
+                        width:"100%"}} >
+                        <div className="third-row">
+                            <div className="container custom-container">
+                                <div className="row flex">
+                                    <div className="header-text">
+                                        <p><br/><span>{value.headerImageLable}</span></p>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div className="small-upper-line flex">
+                            <div className="line"> </div>
+                        </div>
+                        <div className="blog-content-teambio-responsive-only pride">
+                            <section className="container-fluid article-area remove">
+                                <div className="customer-support">
+                                    <div className=" lead_text_area">
+                                        <div className="container custom-container">
+                                            <div className="col-sm-12">
+                                                <div className="advisory-page-para" dangerouslySetInnerHTML={{__html: value.content}}/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </section>
+                </section>
+                </div>
+            )
+        }
+        return (<div>
+                {banner&&banner}
+                <div className="blog-content-teambio-responsive-only pride">
+                    <section className="container-fluid article-area remove">
+                        <div className="customer-support">
                             <div className="container custom-container">
                                 <div className="hoverd-images">
                                     {cards}
@@ -67,5 +107,6 @@ class Advisory extends Component {
         );
     }
 }
+
 
 export default Advisory;

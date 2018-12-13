@@ -110,7 +110,7 @@ class  Home extends Component{
                                 <div className="custom-container container">
                                     <div className="row flex">
                                         <div className="flex-column learnmore-header learn-home">
-                                            <div className='detail-content'><div dangerouslySetInnerHTML={{__html: value.leadText}}></div></div>
+                                            <div className='detail-content'><div dangerouslySetInnerHTML={{__html: value.leadText}}/></div>
                                             <a href="#">
                                                 LEARN MORE
                                             </a>
