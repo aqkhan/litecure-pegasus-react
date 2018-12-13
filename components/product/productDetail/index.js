@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Link from 'next/link'
 import axios from 'axios';
-import {API_PATH} from '../../apiconfig'
+import {API_PATH} from '../../apiconfig';
 import ScrollableAnchor from 'react-scrollable-anchor';
 import RequestDemo from "../../requestDemo";
 
