@@ -4,21 +4,21 @@
 import React, {Component} from 'react';
 class PublicationCategoty extends Component {
     state={
-        publicationCategory:null,
-        publications:null,
-        publicationsCopy:null,
-        one:true,
-        two:true,
-        three:true,
-        four:true,
-        five:true,
-        six:true,
-        seven:true,
-        eight:true,
-        nine:true,
-        ten:true,
-        eleven:true,
-        twelve:true,
+        publicationCategory: null,
+        publications: null,
+        publicationsCopy: null,
+        one: true,
+        two: true,
+        three: true,
+        four: true,
+        five: true,
+        six: true,
+        seven: true,
+        eight: true,
+        nine: true,
+        ten: true,
+        eleven: true,
+        twelve: true,
         regenerativeMedicine:"5c0ff50063580f122d7e750b",
         rehabilitation:"5c0ffaeb63580f122d7e750e",
         photobiomodulation:"5c0ff0d663580f122d7e7509",
@@ -74,144 +74,168 @@ class PublicationCategoty extends Component {
                 let one = this.state.one;
                 this.setState({one:!one});
                 if(one){
-                    this.setState({regenerativeMedicine:"nothing"})
-                    this.setDisplay();
+                    this.setState({regenerativeMedicine:"nothing"},function () {
+                        this.setDisplay();
+                    })
                 }
                 else {
-                    this.setState({regenrativeMadicine:"5c0ff50063580f122d7e750b"})
-                    this.setDisplay();
+                    this.setState({regenrativeMadicine:"5c0ff50063580f122d7e750b"},function () {
+                        this.setDisplay();
+                    })
                 }
                 break;
             case 2:
                 let two = this.state.two;
                 this.setState({two:!two});
                 if(two){
-                    this.setState({rehabilitation:"nothing"})
-                    this.setDisplay();
+                    this.setState({rehabilitation:"nothing"},function () {
+                        this.setDisplay();
+                    })
                 }
                 else {
-                    this.setState({rehabilitation:"5c0ffaeb63580f122d7e750e"})
-                    this.setDisplay();
+                    this.setState({rehabilitation:"5c0ffaeb63580f122d7e750e"},function () {
+                        this.setDisplay();
+                    })
                 }
                 break;
             case 3:
                 let three = this.state.three;
                 this.setState({three:!three});
                 if(three){
-                    this.setState({photobiomodulation:"nothing"})
-                    this.setDisplay();
+                    this.setState({photobiomodulation:"nothing"},function () {
+                        this.setDisplay();
+                    })
                 }
                 else {
-                    this.setState({photobiomodulation:"5c0ff0d663580f122d7e7509"})
-                    this.setDisplay();
+                    this.setState({photobiomodulation:"5c0ff0d663580f122d7e7509"},function () {
+                        this.setDisplay();
+                    })
                 }
                 break;
             case 4:
                 let four = this.state.four;
                 this.setState({four:!four});
                 if(four){
-                    this.setState({athletics:"nothing"})
-                    this.setDisplay();
+                    this.setState({athletics:"nothing"},function () {
+                        this.setDisplay();
+                    })
                 }
                 else {
-                    this.setState({athletics:"5c102ee160912116086de5ce"})
-                    this.setDisplay();
+                    this.setState({athletics:"5c102ee160912116086de5ce"},function () {
+                        this.setDisplay();
+                    })
                 }
                 break;
             case 5:
                 let five = this.state.five;
                 this.setState({five:!five});
                 if(five){
-                    this.setState({humanMedicine:"nothing"})
-                    this.setDisplay();
+                    this.setState({humanMedicine:"nothing"},function () {
+                        this.setDisplay();
+                    })
                 }
                 else {
-                    this.setState({humanMedicine:"5c102db860912116086de5c7"})
-                    this.setDisplay();
+                    this.setState({humanMedicine:"5c102db860912116086de5c7"},function () {
+                        this.setDisplay();
+                    })
                 }
                 break;
             case 6:
                 let six= this.state.six;
                 this.setState({six:!six});
                 if(six){
-                    this.setState({business:"nothing"})
-                    this.setDisplay();
+                    this.setState({business:"nothing"},function () {
+                        this.setDisplay();
+                    })
                 }
                 else {
-                    this.setState({business:"5c10053763580f122d7e7528"})
-                    this.setDisplay();
+                    this.setState({business:"5c10053763580f122d7e7528"},function () {
+                        this.setDisplay();
+                    })
                 }
                 break;
             case 7:
                 let seven = this.state.seven;
                 this.setState({seven:!seven});
                 if(seven){
-                    this.setState({wellness:"nothing"})
-                    this.setDisplay();
+                    this.setState({wellness:"nothing"},function () {
+                        this.setDisplay();
+                    })
                 }
                 else {
-                    this.setState({wellness:"5c1001be63580f122d7e751e"})
-                    this.setDisplay();
+                    this.setState({wellness:"5c1001be63580f122d7e751e"},function () {
+                        this.setDisplay();
+                    })
                 }
                 break;
             case 8:
                 let eight= this.state.eight;
                 this.setState({eight:!eight});
                 if(eight){
-                    this.setState({underwaterTreadmill:"nothing"})
-                    this.setDisplay();
+                    this.setState({underwaterTreadmill:"nothing"},function () {
+                        this.setDisplay();
+                    })
                 }
                 else {
-                    this.setState({underwaterTreadmill:"5c10008863580f122d7e7519"})
-                    this.setDisplay();
+                    this.setState({underwaterTreadmill:"5c10008863580f122d7e7519"},function () {
+                        this.setDisplay();
+                    })
                 }
                 break;
             case 9:
                 let nine = this.state.nine;
                 this.setState({nine:!nine});
                 if(nine){
-                    this.setState({coldCompression:"nothing"})
-                    this.setDisplay();
+                    this.setState({coldCompression:"nothing"},function () {
+                        this.setDisplay();
+                    })
                 }
                 else {
-                    this.setState({coldCompression:"5c10007963580f122d7e7518"})
-                    this.setDisplay();
+                    this.setState({coldCompression:"5c10007963580f122d7e7518"},function () {
+                        this.setDisplay();
+                    })
                 }
                 break;
             case 10:
                 let ten = this.state.ten;
                 this.setState({ten:!ten});
                 if(ten){
-                    this.setState({stanceAnalyzer:"nothing"})
-                    this.setDisplay();
+                    this.setState({stanceAnalyzer:"nothing"},function () {
+                        this.setDisplay();
+                    })
                 }
                 else {
-                    this.setState({stanceAnalyzer:"5c0ffc3263580f122d7e7510"})
-                    this.setDisplay();
+                    this.setState({stanceAnalyzer:"5c0ffc3263580f122d7e7510"},function () {
+                        this.setDisplay();
+                    })
                 }
                 break;
             case 11:
                 let eleven = this.state.eleven;
                 this.setState({eleven:!eleven});
                 if(eleven){
-                    this.setState({emergingTrends:"nothing"})
-                    this.setDisplay();
+                    this.setState({emergingTrends:"nothing"},function () {
+                        this.setDisplay();
+                    })
                 }
                 else {
-                    this.setState({emergingTrends:"5c0ff50063580f122d7e750b"})
-                    this.setDisplay();
-                }
+                    this.setState({emergingTrends:"5c0ff50063580f122d7e750b"},function () {
+                        this.setDisplay();
+                    })
+                     }
                 break;
             case 12:
                 let twelve = this.state.twelve;
                 this.setState({twelve:!twelve});
                 if(twelve){
-                    this.setState({needleScope:"nothing"})
-                    this.setDisplay();
+                    this.setState({needleScope:"nothing"},function () {
+                        this.setDisplay();
+                    })
                 }
                 else {
-                    this.setState({needleScope:"5c0ffada63580f122d7e750d"})
-                    this.setDisplay();
+                    this.setState({needleScope:"5c0ffada63580f122d7e750d"},function () {
+                        this.setDisplay();
+                    });
                 }
                 break;
         }
