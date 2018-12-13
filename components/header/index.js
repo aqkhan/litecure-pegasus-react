@@ -11,6 +11,7 @@ class Header extends Component{
         evidence:"",
         publications:"",
         publishedPapers:"",
+        photobiomodulation:"",
         advisoryboard:"",
         dropdown: false,
         publicationDropdown:false
@@ -37,30 +38,33 @@ class Header extends Component{
     changeHover(type){
         switch (type) {
             case "product":
-                this.setState({products:"active",evidence:"", publications:"", publishedPapers:"", advisoryboard:"", resources:"", about:"",support:""})
+                this.setState({products:"active",evidence:"", publications:"", publishedPapers:"", photobiomodulation:"", advisoryboard:"", resources:"", about:"",support:""})
                 return;
             case "resources":
-                this.setState({products:"",evidence:"", publications:"", publishedPapers:"", advisoryboard:"", resources:"active", about:"",support:"",})
+                this.setState({products:"",evidence:"", publications:"", publishedPapers:"", advisoryboard:"", photobiomodulation:"", resources:"active", about:"",support:"",})
                 return;
             case "publishedPapers":
-                this.setState({products:"",evidence:"active", publications:"active", publishedPapers:"active", advisoryboard:"", resources:"", about:"",support:"",})
+                this.setState({products:"",evidence:"active", publications:"active", publishedPapers:"active", advisoryboard:"", photobiomodulation:"", resources:"", about:"",support:"",})
+                return;
+            case "photobiomodulation":
+                this.setState({products:"",evidence:"active", publications:"", publishedPapers:"", advisoryboard:"", photobiomodulation:"active", resources:"", about:"",support:"",})
                 return;
             case "advisoryboard":
-                this.setState({ products:"",evidence:"active", publications:"", publishedPapers:"", advisoryboard:"active", resources:"", about:"",support:""})
+                this.setState({ products:"",evidence:"active", publications:"", publishedPapers:"", advisoryboard:"active", photobiomodulation:"", resources:"", about:"",support:""})
                 return;
             case "about":
-                this.setState({products:"",evidence:"", publications:"", publishedPapers:"", advisoryboard:"", resources:"", about:"active",support:""})
+                this.setState({products:"",evidence:"", publications:"", publishedPapers:"", advisoryboard:"", photobiomodulation:"", resources:"", about:"active",support:""})
                 return;
             case "support":
-                this.setState({products:"",evidence:"", publications:"", publishedPapers:"", advisoryboard:"", resources:"", about:"",support:"active"})
+                this.setState({products:"",evidence:"", publications:"", publishedPapers:"", advisoryboard:"", photobiomodulation:"", resources:"", about:"",support:"active"})
                 return;
             default:
-                this.setState({products:"",evidence:"", publications:"", publishedPapers:"", advisoryboard:"", resources:"", about:"",support:""})
+                this.setState({products:"",evidence:"", publications:"", publishedPapers:"", advisoryboard:"", photobiomodulation:"", resources:"", about:"",support:""})
         }
 
     }
     render(){
-        let {products,about,evidence,publications, publishedPapers,resources,support,advisoryboard, dropdown,publicationDropdown} = this.state;
+        let {products,about,evidence,publications, publishedPapers,resources,support,advisoryboard, photobiomodulation, dropdown,publicationDropdown} = this.state;
         return(
             <div>
                 <Head>
@@ -121,7 +125,7 @@ class Header extends Component{
                                                                 <li><a href="#"> Articles</a></li>
                                                             </ul>}
                                                         </li>
-                                                    <li><span><Link href="/photobiomodulation"><a>Photobiomodulation</a></Link></span></li>
+                                                    <li><span className={photobiomodulation}><Link href="/photobiomodulation"><a>Photobiomodulation</a></Link></span></li>
                                                         <li><span className={advisoryboard}><Link href="/advisory-board-members"><a>Advisory Board</a></Link></span></li>
                                                         <li><a href="#">Publications</a></li>
                                                     </ul>}
