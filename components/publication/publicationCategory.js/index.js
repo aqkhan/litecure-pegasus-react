@@ -2,11 +2,13 @@
  * Created by FaZi on 12/10/2018.
  */
 import React, {Component} from 'react';
+import ReactPaginate from 'react-paginate';
 class PublicationCategoty extends Component {
     state={
         publicationCategory: null,
         publications: null,
         publicationsCopy: null,
+        publicationDestructure: null,
         one: true,
         two: true,
         three: true,
@@ -64,8 +66,17 @@ class PublicationCategoty extends Component {
               }
             })
         });
-     this.setState({publicationsCopy:temp})
+     this.setState({publicationsCopy:temp}, function () {
+         this.deStructure();
+     })
     };
+
+    deStructure(){
+        let publicationsCopy = this.state.publicationsCopy;
+        if(publicationsCopy.length%10===0){
+
+        }
+    }
 
     
     checkChange(value){
@@ -286,20 +297,17 @@ class PublicationCategoty extends Component {
                         <div>
                             {cards}
                             <div>
-                                <ul className="digit-icons main">
-                                    <li className="previous disabled"><a tabIndex="0" role="button"><i
-                                        className="fa fa-chevron-left "> </i></a></li>
-                                    <li className="p-one"><a role="button" tabIndex="0"
-                                                             aria-label="Page 1 is your current page"
-                                                             aria-current="page">1</a></li>
-                                    <li><a role="button" tabIndex="0" aria-label="Page 2">2</a></li>
-                                    <li><a role="button" tabIndex="0" aria-label="Page 3">3</a></li>
-                                    <li><a role="button" tabIndex="0" aria-label="Page 4">4</a></li>
-                                    <li className="next"><a tabIndex="0" role="button"><i
-                                        className="fa fa-chevron-right "> </i></a></li>
-
-
-                                </ul>
+                                <ReactPaginate previousLabel={<i className="fa fa-chevron-left "> </i>}
+                                               nextLabel={<i className="fa fa-chevron-right "> </i>}
+                                               breakLabel={". . ." }
+                                               breakClassName={"break-me"}
+                                               pageCount={10}
+                                               marginPagesDisplayed={2}
+                                               pageRangeDisplayed={5}
+                                    // onPageChange={this.handlePageClick}
+                                               containerClassName={"digit-icons main"}
+                                               subContainerClassName={"container column"}
+                                               activeClassName={"p-one"} />
                             </div>
                         </div>
                     </div>

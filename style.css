@@ -2287,6 +2287,8 @@ a:active, a:hover{
 .digit-icons li a {
     color: #c7c9c7;
     font-size: 14px;
+    outline: none;
+    text-decoration: none!important;
 }
 /* post section casestudy end*/
 /* publication casestudy secion end */
