@@ -15,7 +15,7 @@ class  PublishedPaperDetail extends Component{
     render() {
         return (
             <div>
-                <PublicationHeader/>
+                <PublicationHeader publicationCategory={"Published Paper"}/>
                 <DetailContent/>
                 <DetailCard/>
                 <RequestDemo/>

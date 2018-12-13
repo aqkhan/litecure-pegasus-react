@@ -2,6 +2,7 @@
  * Created by FaZi on 12/10/2018.
  */
 import React, {Component} from 'react';
+import Link from 'next/link';
 class PublicationCategoty extends Component {
     state={
         publicationCategory: null,
@@ -248,11 +249,11 @@ class PublicationCategoty extends Component {
         if(publicationsCopy){
             cards = publicationsCopy.map((value,index)=>(<div key={index} className="post-casestudy">
                     <div className="img-dev">
-                        <a href="#"><img src={value.featuredImage?value.featuredImage.url:"https://rs-cms.s3.amazonaws.com/pics/Yk_kkbCUx-_NPr_2.png"}/></a>
+                        <Link href={"/published-paper-detail/"+value.slug}><a><img src={value.featuredImage?value.featuredImage.url:"https://rs-cms.s3.amazonaws.com/pics/Yk_kkbCUx-_NPr_2.png"}/></a></Link>
                     </div>
                     <div>
-                        <a>{value.title}</a>
-                        <a>Read More</a>
+                        <Link href={"/published-paper-detail/"+value.slug}><a>{value.title}</a></Link>
+                        <Link href={"/published-paper-detail/"+value.slug}><a>Read More</a></Link>
                     </div>
                 </div>
             ))

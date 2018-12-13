@@ -10,7 +10,7 @@ class AdvisoryBoardMemberDetail extends Component {
     componentWillMount() {
         let slug = this.props.router.query.name;
         this.setState({ slug:slug })
-    }
+    };
     render() {
         let {slug} = this.state;
         return (
