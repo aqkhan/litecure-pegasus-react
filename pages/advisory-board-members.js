@@ -3,7 +3,7 @@ import '../style.css'
 import Layout from "../components/layout";
 import { withRouter } from "next/router";
 import Advisory from '../components/advisoryBoard';
-class Board extends Component {
+class AdvisoryBoardMembers extends Component {
     render() {
         return (
             <Layout type={"advisoryboard"}>
@@ -12,4 +12,4 @@ class Board extends Component {
         )
     }
 }
-export default withRouter(Board);
+export default withRouter(AdvisoryBoardMembers);

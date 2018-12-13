@@ -9,8 +9,11 @@ class Header extends Component{
         about:"",
         support:"",
         evidence:"",
+        publications:"",
+        publishedPapers:"",
         advisoryboard:"",
-        dropdown: false
+        dropdown: false,
+        publicationDropdown:false
 
     };
     componentWillMount() {
@@ -26,30 +29,38 @@ class Header extends Component{
         let {dropdown}=this.state
         this.setState({dropdown:!dropdown})
     }
+    publicationDropdownFunc(){
+        let {publicationDropdown}=this.state
+        this.setState({publicationDropdown:!publicationDropdown})
+    }
+
     changeHover(type){
         switch (type) {
             case "product":
-                this.setState({products:"active",evidence:"", advisoryboard:"", resources:"", about:"",support:""})
+                this.setState({products:"active",evidence:"", publications:"", publishedPapers:"", advisoryboard:"", resources:"", about:"",support:""})
                 return;
             case "resources":
-                this.setState({products:"",evidence:"", advisoryboard:"", resources:"active", about:"",support:"",})
+                this.setState({products:"",evidence:"", publications:"", publishedPapers:"", advisoryboard:"", resources:"active", about:"",support:"",})
+                return;
+            case "publishedPapers":
+                this.setState({products:"",evidence:"active", publications:"active", publishedPapers:"active", advisoryboard:"", resources:"", about:"",support:"",})
                 return;
             case "advisoryboard":
-                this.setState({ products:"",evidence:"active", advisoryboard:"active", resources:"", about:"",support:""})
+                this.setState({ products:"",evidence:"active", publications:"", publishedPapers:"", advisoryboard:"active", resources:"", about:"",support:""})
                 return;
             case "about":
-                this.setState({products:"",evidence:"", advisoryboard:"", resources:"", about:"active",support:""})
+                this.setState({products:"",evidence:"", publications:"", publishedPapers:"", advisoryboard:"", resources:"", about:"active",support:""})
                 return;
             case "support":
-                this.setState({products:"",evidence:"", advisoryboard:"", resources:"", about:"",support:"active"})
+                this.setState({products:"",evidence:"", publications:"", publishedPapers:"", advisoryboard:"", resources:"", about:"",support:"active"})
                 return;
             default:
-                this.setState({products:"",evidence:"", advisoryboard:"", resources:"", about:"",support:""})
+                this.setState({products:"",evidence:"", publications:"", publishedPapers:"", advisoryboard:"", resources:"", about:"",support:""})
         }
 
     }
     render(){
-        let {products,about,evidence,resources,support,advisoryboard, dropdown} = this.state;
+        let {products,about,evidence,publications, publishedPapers,resources,support,advisoryboard, dropdown,publicationDropdown} = this.state;
         return(
             <div>
                 <Head>
@@ -98,18 +109,18 @@ class Header extends Component{
                                     <div className="row  justify-center align-center">
                                         <ul className="responsive-column navbar flex-row nav-color">
                                             <li><span className={products}><Link href="/products"><a>PRODUCTS</a></Link></span></li>
-                                            <li><span className={evidence}><Link><a onClick={()=>this.evidenceDropdown()}>Evidence</a></Link></span>
+                                            <li><span className={evidence}><a onClick={()=>this.evidenceDropdown()}>Evidence</a></span>
                                                 {dropdown && <ul className="childlist" onMouseLeave={()=>this.evidenceDropdown()}>
                                                         <div className="triangle-up"/>
-                                                        <li><a href="#">Publications</a>
-                                                            <ul className="sub-child">
-                                                                <li><a href="#">Scientific Studies</a></li>
+                                                    <li onClick={()=>this.publicationDropdownFunc()} ><span className={publications}><a>Publications</a></span>
+                                                        {publicationDropdown&&<ul>
+                                                            <li><span className={publishedPapers}><Link href="/published-papers"><a>Published Papers</a></Link></span></li>
                                                                 <li><a href="#">Case Studies</a></li>
                                                                 <li><a href="#"> Articles</a></li>
-                                                            </ul>
+                                                            </ul>}
                                                         </li>
                                                     <li><span><Link href="/photobiomodulation"><a>Photobiomodulation</a></Link></span></li>
-                                                        <li><span className={advisoryboard}><Link href="/advisory-board"><a>Advisory Board</a></Link></span></li>
+                                                        <li><span className={advisoryboard}><Link href="/advisory-board-members"><a>Advisory Board</a></Link></span></li>
                                                         <li><a href="#">Publications</a></li>
                                                     </ul>}
                                             </li>

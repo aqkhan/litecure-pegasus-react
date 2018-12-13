@@ -7,7 +7,7 @@ import PublicationHeader from '../publication/publicationHeader/index';
 import DetailContent from '../publicationDetail/detailcontent/index';
 import DetailCard from '../publicationDetail/detailCard';
 
-class  PublicationDetails extends Component{
+class  PublishedPaperDetail extends Component{
     state = {
         products : null,
         err:null
@@ -23,4 +23,4 @@ class  PublicationDetails extends Component{
         )
     }
 }
-export default PublicationDetails;
+export default PublishedPaperDetail;

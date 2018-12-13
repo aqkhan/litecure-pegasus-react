@@ -5,17 +5,16 @@ import React, { Component } from "react";
 import '../style.css'
 import Layout from "../components/layout";
 import { withRouter } from "next/router";
-import PublicationDetails from '../components/publicationDetail';
+import PublicationDetails from '../components/publicationDetail/publishedPaperDetail';
 
-class PublicationDetail extends Component {
-
+class PublishedPaperDetail extends Component {
 
     render() {
         return (
-            <Layout type={"PublicationDetails"}>
+            <Layout type={"published-papers"}>
                 <PublicationDetails/>
             </Layout>
         )
     }
 }
-export default withRouter(PublicationDetail);
+export default withRouter(PublishedPaperDetail);

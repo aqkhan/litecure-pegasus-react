@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import '../style.css'
 import Layout from "../components/layout";
 import { withRouter } from "next/router";
-import AdvisoryDetail from '../components/advisoryBoardDetail';
-class AdvisoryBoardDetail extends Component {
+import AdvisoryDetail from '../components/advisoryBoardMemberDetail';
+class AdvisoryBoardMemberDetail extends Component {
     state={
         slug:null
     };
@@ -14,10 +14,10 @@ class AdvisoryBoardDetail extends Component {
     render() {
         let {slug} = this.state;
         return (
-            <Layout type={"advisoryDetail"}>
+            <Layout type={"advisoryboard"}>
                 <AdvisoryDetail slug={slug}/>
             </Layout>
         )
     }
 }
-export default withRouter(AdvisoryBoardDetail);
+export default withRouter(AdvisoryBoardMemberDetail);

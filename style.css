@@ -192,7 +192,7 @@ a:active, a:hover{
     position: absolute;
     top: 73px;
     padding-left: 0px;
-    width: 28%;
+    min-width: 28%;
     border: 1px solid #efb817;
     padding: 11px;
     background: rgba(25, 29, 36, 0.9);
@@ -234,9 +234,7 @@ a:active, a:hover{
     text-align: center;
     cursor: pointer;
 }
-.sub-child{
-    display:none;
-}
+
 
 /*section-one:END*/
 
@@ -2117,11 +2115,12 @@ a:active, a:hover{
     background-color:#54585A;
     padding-top: 91px;
     padding-left: 35px;
-    height: 408px;
+    min-height: 388px;
 }
 .public-img .primary-container ul{
     list-style-type: none;
     margin:0px;
+    padding-left: 0px;
 }
 .public-img .primary-container ul li a{
     mix-blend-mode: screen;

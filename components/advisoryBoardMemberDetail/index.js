@@ -3,7 +3,7 @@ import RequestDemo from '../requestDemo';
 import axios from 'axios';
 import {API_PATH} from '../apiconfig';
 import Router from 'next/router';
-class AdvisoryBoardDetail extends Component{
+class AdvisoryBoardMemberDetail extends Component{
     state={
         member:null,
         error:null
@@ -60,4 +60,4 @@ class AdvisoryBoardDetail extends Component{
     }
 }
 
-export default AdvisoryBoardDetail;
+export default AdvisoryBoardMemberDetail;

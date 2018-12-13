@@ -1,34 +1,54 @@
 /**
  * Created by FaZi on 12/10/2018.
  */
-import React from 'react';
+import Link from 'next/link';
+import React, {Component} from 'react';
 
-const publicImgSection = () => {
-    return(
-        <section className="public-img">
-           <div className="container">
-               <div className="primary-container">
-                   <div>
-                       <ul>
-                           <li><a href="#" className="active">Evidence</a></li>
-                       </ul>
-                   </div>
-                   <div style={{
-                       background: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)),url('/static/images/buffalo.jpg')`,
-                       backgroundRepeat: "no-repeat",
-                       backgroundSize: "cover",}}>
-                       <ul>
-                           <li><a href="#" className="active">Publications</a></li>
-                           <li><a href="#" className="active">Case Studies</a></li>
-                           <li><a href="#">Scientific Studies</a></li>
-                           <li><a href="#">Articles</a></li>
-                       </ul>
-                   </div>
-               </div>
-           </div>
+class publicImgSection extends Component {
+    state ={
+        publishedPapers:"",
+        scientificStudies:"",
+        articles:""
+    };
+    componentWillMount(){
+        let {publicationCategory} = this.props;
+        switch (publicationCategory) {
+            case "Puplished Papers": this.setState({ publishedPapers:"active", scientificStudies:"", articles:""})
+            break;
+            case "Scientific Studies": this.setState({ publishedPapers:"", scientificStudies:"active", articles:""})
+                break;
+            case "Articles": this.setState({ publishedPapers:"", scientificStudies:"", articles:"active"})
+                break;
+        }
+    }
+    render(){
+        let {publishedPapers,scientificStudies,articles} = this.state;
+        return(
+            <section className="public-img">
+                <div className="container">
+                    <div className="primary-container">
+                        <div>
+                            <ul>
+                                <li><a href="#" className="active">Evidence</a></li>
+                            </ul>
+                        </div>
+                        <div style={{
+                            background: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)),url('/static/images/buffalo.jpg')`,
+                            backgroundRepeat: "no-repeat",
+                            backgroundSize: "cover",}}>
+                            <ul>
+                                <li><span><a className="active">Publications</a></span></li>
+                                <li><span><Link href="/published-papers"><a className={publishedPapers}>Published Papers</a></Link></span></li>
+                                <li><a href="#" className={scientificStudies}>Scientific Studies</a></li>
+                                <li><a href="#" className={articles}>Articles</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-        </section>
-    )
+            </section>
+        )
+    }
 };
 
 export default publicImgSection;

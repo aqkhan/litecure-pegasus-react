@@ -25,7 +25,7 @@ class Advisory extends Component {
         let {advisoryTeamMember}= this.state;
         if (advisoryTeamMember){
             cards = advisoryTeamMember.map((data,index)=> <div className="outter-container" key={index}>
-                    <Link href={'/advisory-board-detail/'+data.slug}><a>
+                    <Link href={'/advisory-board-member-detail/'+data.slug}><a>
                         <div className="imagecon"
                              style={{backgroundImage: `url(${data.memberImage && data.memberImage.url})`}}/>
                         <div className="hovering-area">

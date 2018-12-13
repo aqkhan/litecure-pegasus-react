@@ -1,6 +1,8 @@
 import React from 'react';
+import Router from 'next/router';
 
-const publicationHeader = () => {
+const publicationHeader = (props) => {
+    let {publicationCategory} = props;
     return(
         <section className="new-home-cards">
             <section className="section-one publication-header" style={{
@@ -20,12 +22,12 @@ const publicationHeader = () => {
                     <div className="line"> </div>
                 </div>
                 <div className="pagename">
-                    <h4>CASE STUDIES</h4>
+                    <h4>{publicationCategory}</h4>
                 </div>
             </section>
             <div className="empty-div">
                 <div className="container">
-                     <div className="course-text1"><div><i className="fa fa-chevron-left"> </i></div><p>BACK TO PREVIOUS </p></div>
+                    <div className="course-text1"><div onClick={() => Router.back()}><i className="fa fa-chevron-left"> </i></div><p>BACK TO PREVIOUS </p></div>
                 </div>
             </div>
         </section>    )

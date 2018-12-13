@@ -21,8 +21,8 @@ app.prepare().then(() => {
         const queryParams = {title: req.params.title};
         app.render(req, res, actualPage, queryParams);
     });
-    server.get('/advisory-board-detail/:name', (req, res) => {
-        const actualPage = "/advisory-board-detail";
+    server.get('/advisory-board-member-detail/:name', (req, res) => {
+        const actualPage = "/advisory-board-member-detail";
         const queryParams = {name: req.params.name};
         app.render(req, res, actualPage, queryParams);
     });
