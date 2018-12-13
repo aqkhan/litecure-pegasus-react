@@ -1,13 +1,15 @@
-/**
- * Created by FaZi on 12/10/2018.
- */
 import React, {Component} from 'react';
 import Link from 'next/link';
+import ReactPaginate from 'react-paginate';
+import { RestructorData } from "../../functions";
 class PublicationCategoty extends Component {
     state={
         publicationCategory: null,
         publications: null,
         publicationsCopy: null,
+        publicationDestructure: null,
+        totalPages:null,
+        final: null,
         one: true,
         two: true,
         three: true,
@@ -65,8 +67,16 @@ class PublicationCategoty extends Component {
               }
             })
         });
-     this.setState({publicationsCopy:temp})
+         let restructured = RestructorData(temp, 10);
+         console.log("restructured",restructured);
+     this.setState({publicationDestructure:restructured, final: restructured[0], totalPages: restructured.length}, function () {
+
+     })
     };
+
+    returnData = (index) => {
+        this.setState({final: this.state.publicationDestructure[index.selected]})
+    }
 
     
     checkChange(value){
@@ -243,11 +253,10 @@ class PublicationCategoty extends Component {
     }
 
     render(){
-        console.log("khasmi yadha error",this.state.publicationsCopy)
-        let {publicationCategory, publicationsCopy, one, two, three, four, five, six, seven, eight, nine, ten , eleven, twelve} = this.state;
+        let {publicationCategory, final,totalPages, one, two, three, four, five, six, seven, eight, nine, ten , eleven, twelve} = this.state;
         let cards;
-        if(publicationsCopy){
-            cards = publicationsCopy.map((value,index)=>(<div key={index} className="post-casestudy">
+        if(final){
+            cards = final.map((value,index)=>(<div key={index} className="post-casestudy">
                     <div className="img-dev">
                         <Link href={"/published-paper-detail/"+value.slug}><a><img src={value.featuredImage?value.featuredImage.url:"https://rs-cms.s3.amazonaws.com/pics/Yk_kkbCUx-_NPr_2.png"}/></a></Link>
                     </div>
@@ -287,20 +296,17 @@ class PublicationCategoty extends Component {
                         <div>
                             {cards}
                             <div>
-                                <ul className="digit-icons main">
-                                    <li className="previous disabled"><a tabIndex="0" role="button"><i
-                                        className="fa fa-chevron-left "> </i></a></li>
-                                    <li className="p-one"><a role="button" tabIndex="0"
-                                                             aria-label="Page 1 is your current page"
-                                                             aria-current="page">1</a></li>
-                                    <li><a role="button" tabIndex="0" aria-label="Page 2">2</a></li>
-                                    <li><a role="button" tabIndex="0" aria-label="Page 3">3</a></li>
-                                    <li><a role="button" tabIndex="0" aria-label="Page 4">4</a></li>
-                                    <li className="next"><a tabIndex="0" role="button"><i
-                                        className="fa fa-chevron-right "> </i></a></li>
-
-
-                                </ul>
+                                <ReactPaginate previousLabel={<i className="fa fa-chevron-left "> </i>}
+                                               nextLabel={<i className="fa fa-chevron-right "> </i>}
+                                               breakLabel={". . ." }
+                                               breakClassName={"break-me"}
+                                               pageCount={totalPages}
+                                               marginPagesDisplayed={2}
+                                               pageRangeDisplayed={5}
+                                               onPageChange={this.returnData}
+                                               containerClassName={"digit-icons main"}
+                                               subContainerClassName={"container column"}
+                                               activeClassName={"p-one"} />
                             </div>
                         </div>
                     </div>
