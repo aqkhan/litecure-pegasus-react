@@ -259,16 +259,18 @@ class PublicationCategoty extends Component {
         let {publicationCategory, page, final,totalPages, one, two, three, four, five, six, seven, eight, nine, ten , eleven, twelve} = this.state;
         let cards;
         if(final){
-            cards = final.map((value,index)=>(<div key={index} className="post-casestudy">
-                    <div className="img-dev">
-                        <Link href={page+value.slug}><a><img src={value.featuredImage?value.featuredImage.url:"https://rs-cms.s3.amazonaws.com/pics/Yk_kkbCUx-_NPr_2.png"}/></a></Link>
-                    </div>
-                    <div>
-                        <Link href={page+value.slug}><a>{value.title}</a></Link>
-                        <Link href={page+value.slug}><a>Read More</a></Link>
-                    </div>
-                </div>
-            ))
+
+            cards= null;
+            // // cards = final.map((value,index)=>(<div key={index} className="post-casestudy">
+            // //         <div className="img-dev">
+            // //             <Link href={page+value.slug}><a><img src={value.featuredImage?value.featuredImage.url:"https://rs-cms.s3.amazonaws.com/pics/Yk_kkbCUx-_NPr_2.png"}/></a></Link>
+            // //         </div>
+            // //         <div>
+            // //             <Link href={page+value.slug}><a>{value.title}</a></Link>
+            // //             <Link href={page+value.slug}><a>Read More</a></Link>
+            // //         </div>
+            // //     </div>
+            // ))
         }
         return (
             <section className="casestudy">
@@ -297,7 +299,7 @@ class PublicationCategoty extends Component {
                             </div>
                         </div>
                         <div>
-                            {cards}
+                            {cards?cards:<div><img src="/static/images/Loading.gif"/><div> Loading...</div></div>}
                                 <ReactPaginate previousLabel={<i className="fa fa-chevron-left "> </i>}
                                                nextLabel={<i className="fa fa-chevron-right "> </i>}
                                                breakLabel={". . ." }
