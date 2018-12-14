@@ -2325,12 +2325,17 @@ a:active, a:hover{
     margin-bottom: 23px;
     margin-top: 11px;
 }
-.download-btn-red a{
+.download-link-new{
+    color: #ffffff;
+    text-decoration: none;
+}
+.download-link-new:hover{
     color: #ffffff;
     text-decoration: none;
 }
 .download-btn-red:hover{
     background-color: #e0ad14;
+    color: white;
 }
 .download-btn-red:active{
     background-color:#EFB817!important;
@@ -2393,7 +2398,7 @@ a:active, a:hover{
     border:2px solid white;
 }
 .author-img-div{
-    background-image: url(https://i0.wp.com/www.reliableroofingphilly.com/wp-content/uploads/2015/04/male-placeholder-image.png);
+    /*background-image: url(https://i0.wp.com/www.reliableroofingphilly.com/wp-content/uploads/2015/04/male-placeholder-image.png);*/
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
@@ -3430,4 +3435,17 @@ a:active, a:hover{
 }
 .head-img1{
     cursor: pointer;
+}
+
+.publication-description{
+    font-family: AvenirNext;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: .6px;
+    text-align: left;
+    color: #c7c9c7;
+    font-size: 20px;
+    padding: 19px 0px 0px 0px;
+    margin-bottom: 0;
 }

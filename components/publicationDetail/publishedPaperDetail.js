@@ -5,22 +5,24 @@ import  React , { Component } from 'react';
 import RequestDemo from '../requestDemo';
 import PublicationHeader from '../publication/publicationHeader/index';
 import DetailContent from '../publicationDetail/detailcontent/index';
-import DetailCard from '../publicationDetail/detailCard';
+// import DetailCard from '../publicationDetail/detailCard';
 
 class  PublishedPaperDetail extends Component{
-    state = {
-        products : null,
-        err:null
-    }
+    state={
+        slug:null
+    };
+    componentWillMount() {
+        let {slug} = this.props;
+        this.setState({ slug:slug })
+    };
     render() {
-        return (
-            <div>
+        let {slug} = this.state;
+            return(<div>
                 <PublicationHeader publicationCategory={"Published Paper"}/>
-                <DetailContent/>
-                <DetailCard/>
+                <DetailContent slug={slug}/>
+                {/*<DetailCard/>*/}
                 <RequestDemo/>
-            </div>
-        )
+            </div>)
     }
 }
 export default PublishedPaperDetail;

@@ -9,7 +9,7 @@ class AdvisoryBoardMemberDetail extends Component{
         error:null
     }
     componentWillMount(){
-        let slug =this.props.slug;
+        let {slug} =this.props;
         axios.get(API_PATH +'teamMembers/'+slug)
             .then((res)=>{
                 this.setState({member:res.data.teamMember})
@@ -18,10 +18,8 @@ class AdvisoryBoardMemberDetail extends Component{
                 this.setState({err: err})
             })
     }
-
     render() {
         let {member} = this.state;
-        console.log(member)
         return member && (<div>
                     <div className="empty-div">
                         <div className="container">
