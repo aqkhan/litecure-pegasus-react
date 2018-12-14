@@ -24,6 +24,9 @@ a:active, a:hover{
 }
 .view-text a {
     color:#fff;
+    padding: 10px 10px;
+    border: 1px solid #ffffff;
+
 }
 .nav-color a {
     color:#fff;
@@ -1234,16 +1237,20 @@ a:active, a:hover{
 .product-det .first-section .yellow-section .view-area{
     position: relative;
     padding-top: 28px;
+    display: flex;
+    justify-content: space-between;
 }
 .product-det .first-section .yellow-section .view-text{
     position: absolute;
     width: 330px;
     margin-top: 18px;
+    display: flex;
+    flex-direction: column;justify-content: center;
+    align-items: center;
 
 }
 
 .product-det .first-section .yellow-section .view-text a:hover{
-
     font-family: 'Roboto', sans-serif;
     font-size: 13px;
     font-weight: 800;
@@ -1253,10 +1260,9 @@ a:active, a:hover{
     letter-spacing: 1.5px;
     text-align: left;
     color: #efb817;
-    padding-left: 0px;
     background: black;
-    width: 150px;
-    padding: 6px 14px;
+    padding: 10px 10px;
+    border: 1px solid #ffffff;
 }
 .product-det .first-section .yellow-section .image-margin{
     margin-top: 120px;
@@ -1274,8 +1280,7 @@ a:active, a:hover{
     line-height: 0.89;
     letter-spacing: 1.1px;
     color: #ffffff;
-    padding-left: 16%;
-    padding-top: 9%;
+    padding: 10% 0;
 }
 .product-det .first-section .yellow-section .image-margin {
     z-index: 2;
@@ -1290,8 +1295,6 @@ a:active, a:hover{
     line-height: normal;
     letter-spacing: 1.5px;
     color: #ffffff;
-
-    padding-left: 23%;
 }
 .product-det .first-section .yellow-section .prodct{
     font-family: UniSansCAPS;
@@ -1593,7 +1596,7 @@ a:active, a:hover{
 }
 .new-media-detail-containers .second-section .fourth-row .BENEFITS{
     margin-top: 12%;
-    margin-right: 10%;
+    /*margin-right: 10%;*/
 }
 .new-media-detail-containers .second-section .fourth-row .BENEFITS h1{
     font-family: UniSansCAPS;
@@ -1776,6 +1779,8 @@ a:active, a:hover{
 }
 .company-profile .first-section .yellow-section .view-area{
     position: relative;
+    display: flex;
+    justify-content: space-evenly;
 
 }
 .company-profile .first-section .yellow-section .view-text{
@@ -1783,6 +1788,9 @@ a:active, a:hover{
     width: 331px;
     margin-top: 18px;
     margin-left: 56px;
+    display: flex;
+    flex-direction: column;justify-content: center;
+    align-items: center;
 }
 .company-profile .first-section .yellow-section .image-margin{
     margin-top: 120px;
@@ -2059,6 +2067,8 @@ a:active, a:hover{
     text-align: left;
     color: #efb817;
     background: black;
+    padding: 10px 10px;
+    border: 1px solid #ffffff;
 }
 
 

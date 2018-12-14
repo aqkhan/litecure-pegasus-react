@@ -32,7 +32,7 @@ class MediaDetail extends Component{
                                 <div className="row image-container">
                                     <div className="col-sm-4 ms">
                                         <div className="second">
-                                            <div dangerouslySetInnerHTML={{__html: value.shortDescription}}></div>
+                                            <div className="product-1-para" dangerouslySetInnerHTML={{__html: value.shortDescription}}></div>
                                             <br/>
                                             <br/>
                                             <h3><b>Specifications</b></h3>
