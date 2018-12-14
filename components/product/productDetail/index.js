@@ -62,7 +62,7 @@ class ProductDetail extends Component{
                                   <div className="container custom-container">
                                       <div className="row flex">
                                           <div className="header-image">
-                                              <img src={product.featuredImage && product.featuredImage.url} className="head-img1"/>
+                                              <img src={product.featuredImage && product.featuredImage.url} className="head-img1" data-toggle="modal" data-target="#myModal20"/>
                                           </div>
                                       </div>
                                   </div>
@@ -86,7 +86,7 @@ class ProductDetail extends Component{
                                               <div className="col-sm-8 ">
                                                   <div className=" learnmore-header">
                                                       <div className='detail-content'>
-                                                          <div dangerouslySetInnerHTML={{__html: product.shortDescription}}></div></div>
+                                                          <div  dangerouslySetInnerHTML={{__html: product.longDescription}}></div></div>
                                                       <br/>
                                                       <br/>
                                                       <div className="button">
@@ -272,7 +272,23 @@ class ProductDetail extends Component{
 
                                 </div>
                             </div>
-
+                            <div className="container">
+                                {/*<!-- The Modal -->*/}
+                                <div className="modal fade" id="myModal20">
+                                    <div className="modal-dialog modal-lg">
+                                        <div className="modal-content modal-content-product">
+                                            {/*<!-- Modal Header -->*/}
+                                            <div className="modal-header">
+                                                <button type="button" className="close" data-dismiss="modal">&times;</button>
+                                            </div>
+                                            {/*<!-- Modal body -->*/}
+                                            <div className="modal-body">
+                                                <img src={product.featuredImage && product.featuredImage.url}/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </section>
                     </section>
                 <ScrollableAnchor id={'requestDemo'}>
