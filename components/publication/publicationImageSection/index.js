@@ -15,7 +15,7 @@ class publicImgSection extends Component {
         switch (publicationCategory) {
             case "Puplished Papers": this.setState({ publishedPapers:"active", scientificStudies:"", articles:""})
             break;
-            case "Scientific Studies": this.setState({ publishedPapers:"", scientificStudies:"active", articles:""})
+            case "Case Studies": this.setState({ publishedPapers:"", scientificStudies:"active", articles:""})
                 break;
             case "Articles": this.setState({ publishedPapers:"", scientificStudies:"", articles:"active"})
                 break;
@@ -39,8 +39,8 @@ class publicImgSection extends Component {
                             <ul>
                                 <li><span><a className="active">Publications</a></span></li>
                                 <li><span><Link href="/published-papers"><a className={publishedPapers}>Published Papers</a></Link></span></li>
-                                <li><a href="#" className={scientificStudies}>Scientific Studies</a></li>
-                                <li><a href="#" className={articles}>Articles</a></li>
+                                <li><span><Link  href="/casestudies"><a className={scientificStudies}>Case Studies</a></Link></span></li>
+                                <li><span><Link  href="/articles"><a className={articles}>Articles</a></Link></span></li>
                             </ul>
                         </div>
                     </div>

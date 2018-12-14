@@ -10,6 +10,8 @@ class Header extends Component{
         support:"",
         evidence:"",
         publications:"",
+        caseStudies:"",
+        articles:"",
         publishedPapers:"",
         photobiomodulation:"",
         advisoryboard:"",
@@ -38,33 +40,39 @@ class Header extends Component{
     changeHover(type){
         switch (type) {
             case "product":
-                this.setState({products:"active",evidence:"", publications:"", publishedPapers:"", photobiomodulation:"", advisoryboard:"", resources:"", about:"",support:""})
+                this.setState({products:"active",evidence:"", publications:"", publishedPapers:"", caseStudies:"", articles:"", photobiomodulation:"", advisoryboard:"", resources:"", about:"",support:""})
                 return;
             case "resources":
-                this.setState({products:"",evidence:"", publications:"", publishedPapers:"", advisoryboard:"", photobiomodulation:"", resources:"active", about:"",support:"",})
+                this.setState({products:"",evidence:"", publications:"", publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"", resources:"active", about:"",support:"",})
                 return;
             case "publishedPapers":
-                this.setState({products:"",evidence:"active", publications:"active", publishedPapers:"active", advisoryboard:"", photobiomodulation:"", resources:"", about:"",support:"",})
+                this.setState({products:"",evidence:"active", publications:"active", publishedPapers:"active", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"", resources:"", about:"",support:"",})
+                return;
+            case "caseStudies":
+                this.setState({products:"",evidence:"active", publications:"active", publishedPapers:"", caseStudies:"active", articles:"", advisoryboard:"", photobiomodulation:"", resources:"", about:"",support:"",})
+                return;
+            case "articles":
+                this.setState({products:"",evidence:"active", publications:"active", publishedPapers:"", caseStudies:"", articles:"active", advisoryboard:"", photobiomodulation:"", resources:"", about:"",support:"",})
                 return;
             case "photobiomodulation":
-                this.setState({products:"",evidence:"active", publications:"", publishedPapers:"", advisoryboard:"", photobiomodulation:"active", resources:"", about:"",support:"",})
+                this.setState({products:"",evidence:"active", publications:"", publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"active", resources:"", about:"",support:"",})
                 return;
             case "advisoryboard":
-                this.setState({ products:"",evidence:"active", publications:"", publishedPapers:"", advisoryboard:"active", photobiomodulation:"", resources:"", about:"",support:""})
+                this.setState({ products:"",evidence:"active", publications:"", publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"active", photobiomodulation:"", resources:"", about:"",support:""})
                 return;
             case "about":
-                this.setState({products:"",evidence:"", publications:"", publishedPapers:"", advisoryboard:"", photobiomodulation:"", resources:"", about:"active",support:""})
+                this.setState({products:"",evidence:"", publications:"", publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"", resources:"", about:"active",support:""})
                 return;
             case "support":
-                this.setState({products:"",evidence:"", publications:"", publishedPapers:"", advisoryboard:"", photobiomodulation:"", resources:"", about:"",support:"active"})
+                this.setState({products:"",evidence:"", publications:"", publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"", resources:"", about:"",support:"active"})
                 return;
             default:
-                this.setState({products:"",evidence:"", publications:"", publishedPapers:"", advisoryboard:"", photobiomodulation:"", resources:"", about:"",support:""})
+                this.setState({products:"",evidence:"", publications:"", publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"", resources:"", about:"",support:""})
         }
 
     }
     render(){
-        let {products,about,evidence,publications, publishedPapers,resources,support,advisoryboard, photobiomodulation, dropdown,publicationDropdown} = this.state;
+        let {products,about,evidence,publications, publishedPapers,resources,support,advisoryboard, caseStudies, articles, photobiomodulation, dropdown,publicationDropdown} = this.state;
         return(
             <div>
                 <Head>
@@ -121,13 +129,12 @@ class Header extends Component{
                                                     <li onClick={()=>this.publicationDropdownFunc()} ><span className={publications}><a>Publications</a></span>
                                                         {publicationDropdown&&<ul>
                                                             <li><span className={publishedPapers}><Link href="/published-papers"><a>Published Papers</a></Link></span></li>
-                                                                <li><a href="#">Case Studies</a></li>
-                                                                <li><a href="#"> Articles</a></li>
+                                                            <li><span className={caseStudies}><Link href="/casestudies" ><a >Case Studies</a></Link></span></li>
+                                                            <li><span className={articles}><Link href="/articles"><a>Articles</a></Link></span></li>
                                                             </ul>}
                                                         </li>
                                                     <li><span className={photobiomodulation}><Link href="/photobiomodulation"><a>Photobiomodulation</a></Link></span></li>
                                                         <li><span className={advisoryboard}><Link href="/advisory-board-members"><a>Advisory Board</a></Link></span></li>
-                                                        <li><a href="#">Publications</a></li>
                                                     </ul>}
                                             </li>
                                             <li><span className={resources}><Link href="/resources"><a>RESOURCES</a></Link></span></li>

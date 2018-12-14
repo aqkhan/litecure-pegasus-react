@@ -31,6 +31,16 @@ app.prepare().then(() => {
         const queryParams = {name: req.params.name};
         app.render(req, res, actualPage, queryParams);
     });
+    server.get('/casestudy-detail/:name', (req, res) => {
+        const actualPage = "/casestudy-detail";
+        const queryParams = {name: req.params.name};
+        app.render(req, res, actualPage, queryParams);
+    });
+    server.get('/article-detail/:name', (req, res) => {
+        const actualPage = "/article-detail";
+        const queryParams = {name: req.params.name};
+        app.render(req, res, actualPage, queryParams);
+    });
     server.get('*', (req, res) => {
         const parsedUrl = parse(req.url, true);
         const { pathname, query = {} } = parsedUrl;

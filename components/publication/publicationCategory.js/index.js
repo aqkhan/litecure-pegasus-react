@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
 import Link from 'next/link';
 import ReactPaginate from 'react-paginate';
+import {configureAnchors}  from 'react-scrollable-anchor';
 import { RestructorData } from "../../functions";
 class PublicationCategoty extends Component {
     state={
         publicationCategory: null,
         publications: null,
+        page:null,
         publicationsCopy: null,
         publicationDestructure: null,
         totalPages:null,
@@ -36,8 +38,8 @@ class PublicationCategoty extends Component {
         needleScope: "5c0ffada63580f122d7e750d",
     };
     async componentWillReceiveProps(nextProps, nextContext) {
-            let {publicationCategory, publications} = nextProps;
-          await this.setState({publicationCategory:publicationCategory,publications:publications})
+            let {publicationCategory, publications, page} = nextProps;
+          await this.setState({publicationCategory:publicationCategory,publications:publications, page})
          await this.setDisplay();
           }
      setDisplay(){
@@ -75,6 +77,7 @@ class PublicationCategoty extends Component {
     };
 
     returnData = (index) => {
+        configureAnchors({offset: -60, scrollDuration: 200})
         this.setState({final: this.state.publicationDestructure[index.selected]})
     }
 
@@ -253,16 +256,16 @@ class PublicationCategoty extends Component {
     }
 
     render(){
-        let {publicationCategory, final,totalPages, one, two, three, four, five, six, seven, eight, nine, ten , eleven, twelve} = this.state;
+        let {publicationCategory, page, final,totalPages, one, two, three, four, five, six, seven, eight, nine, ten , eleven, twelve} = this.state;
         let cards;
         if(final){
             cards = final.map((value,index)=>(<div key={index} className="post-casestudy">
                     <div className="img-dev">
-                        <Link href={"/published-paper-detail/"+value.slug}><a><img src={value.featuredImage?value.featuredImage.url:"https://rs-cms.s3.amazonaws.com/pics/Yk_kkbCUx-_NPr_2.png"}/></a></Link>
+                        <Link href={page+value.slug}><a><img src={value.featuredImage?value.featuredImage.url:"https://rs-cms.s3.amazonaws.com/pics/Yk_kkbCUx-_NPr_2.png"}/></a></Link>
                     </div>
                     <div>
-                        <Link href={"/published-paper-detail/"+value.slug}><a>{value.title}</a></Link>
-                        <Link href={"/published-paper-detail/"+value.slug}><a>Read More</a></Link>
+                        <Link href={page+value.slug}><a>{value.title}</a></Link>
+                        <Link href={page+value.slug}><a>Read More</a></Link>
                     </div>
                 </div>
             ))
@@ -295,7 +298,6 @@ class PublicationCategoty extends Component {
                         </div>
                         <div>
                             {cards}
-                            <div>
                                 <ReactPaginate previousLabel={<i className="fa fa-chevron-left "> </i>}
                                                nextLabel={<i className="fa fa-chevron-right "> </i>}
                                                breakLabel={". . ." }
@@ -310,7 +312,6 @@ class PublicationCategoty extends Component {
                             </div>
                         </div>
                     </div>
-                </div>
             </section>
         );
     }

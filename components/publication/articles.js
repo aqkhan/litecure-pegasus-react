@@ -16,7 +16,7 @@ class PublishedPapers extends Component {
             .then((res) => {
                 let temp = [];
                 res.data.publications.forEach((val) => {
-                    if (val.publicationCategory === "published-papers") {
+                    if (val.publicationCategory === "trade-articles") {
                         temp.push(val);
                     }
                 });
@@ -30,9 +30,9 @@ class PublishedPapers extends Component {
         let {publications} = this.state;
         return (
             <div>
-                <PublicationHeader publicationCategory={"Published Papers"}/>
-                <PublicImgSection publicationCategory={"Puplished Papers"}/>
-                <PublicationCategory publications={publications} publicationCategory={"Puplished Papers"} page={"/published-paper-detail/"}/>
+                <PublicationHeader publicationCategory={"Articles"}/>
+                <PublicImgSection publicationCategory={"Articles"}/>
+                <PublicationCategory publications={publications} publicationCategory={"Articles"} page={"/article-detail/"}/>
                 <RequestDemo/>
             </div>
         )
