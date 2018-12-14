@@ -7,9 +7,7 @@ class  Home extends Component{
     state = {
         pages:null,
         products:null,
-        storyOne:"active",
-        storyTwo:"",
-        storyThree:"",
+        stories:null
     }
     componentWillMount() {
         axios.get(API_PATH +'pages')
@@ -29,25 +27,15 @@ class  Home extends Component{
                 this.setState({products:res.data.products})
             })
             .catch(err=>{throw err})
+        axios.get(API_PATH + 'stories')
+            .then((res)=>{
+            this.setState({stories:res.data.stories})
+            })
     }
 
-//    test=(type)=>{
-//         switch (type) {
-//             case 'one':
-//                 this.setState({ storyOne:"active", storyTwo:"", storyThree:"" });
-//                 return;
-//             case 'two':
-//                 this.setState({ storyOne:"", storyTwo:"active", storyThree:"" });
-//                 return;
-//             case 'three':
-//                 this.setState({ storyOne:"", storyTwo:"", storyThree:"active" });
-//                 return;
-//             default:
-//                 return;
-//         }
-//     }
 
     render() {
+        let stories = null;
         let product;
         if (this.state.products)
         {
@@ -121,64 +109,31 @@ class  Home extends Component{
                         </section>
                     </section>
         })}
+
+        if ( this.state.stories){
+            stories = this.state.stories.map((value,index)=>
+                <Carousel.Item key={index}>
+                    <div className="section-three-overlay1"/>
+                    <img width={'auto'} height={500} alt="900x500" src={value.featuredImage && value.featuredImage.url } />
+                    <Carousel.Caption>
+                        <div className="slider-text">
+                            <h1>STORIES</h1><br/>
+                            <div className="paragraph-text" dangerouslySetInnerHTML={{__html: value.shortDescription}}/>
+                            <span>{value.author}</span>
+                        </div>
+
+                    </Carousel.Caption>
+                </Carousel.Item>
+            )
+        }
         return(
             <div>
                 {pages}
                     {product}
-               
-<Carousel>
-  <Carousel.Item>
-  <div className="section-three-overlay1"/>
-    <img width={'auto'} height={500} alt="900x500" src="/static/images/machine.jpg" />
-    <Carousel.Caption>
-    
-                                    
-            <div className="slider-text">
-                
-                        <h1>STORIES</h1><br/>
-                        <p>"We all feel a lot better with Pegasus laser
-                        therapy. It means a huge difference in quality of life for our
-                        horses, particularly as they
-                        grow older."</p>
-                        <span>- Joanie Matus</span>
-                    </div>                    
-                                
-    </Carousel.Caption>
-  </Carousel.Item>
-  <Carousel.Item>
-  <div className="section-three-overlay1"/>
-    <img width={'auto'} height={500} alt="900x500" src="/static/images/machine.jpg" />
-    <Carousel.Caption>
-    
-                                    
-            <div className="slider-text">
-                
-                        <h1>STORIES</h1><br/>
-                        <p>"We all feel a lot better with Pegasus laser
-                        therapy. It means a huge difference in quality of life for our
-                        horses, particularly as they
-                        grow older."</p>
-                        <span>- Joanie Matus</span>
-                    </div>                       
-                                
-    </Carousel.Caption>
-  </Carousel.Item>
-  <Carousel.Item>
-  <div className="section-three-overlay1"/>
-  <img width={'auto'} height={500} alt="900x500" src="/static/images/machine.jpg" />
-    <Carousel.Caption>
-    <div className="slider-text">
-        
-        <h1>STORIES</h1><br/>
-        <p>"We all feel a lot better with Pegasus laser
-        therapy. It means a huge difference in quality of life for our
-        horses, particularly as they
-        grow older."</p>
-        <span>- Joanie Matus</span>
-    </div>   
-    </Carousel.Caption>
-  </Carousel.Item>
-</Carousel>
+
+{stories&&<Carousel interval={2000}>
+    {stories}
+</Carousel>}
                 <RequestDemo/>
                 </div>
         )
