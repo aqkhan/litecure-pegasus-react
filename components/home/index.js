@@ -53,7 +53,7 @@ class  Home extends Component{
                                 <div className="row image-container">
                                     <div className="col-sm-4 ms">
                                         <div className="second">
-                                            <div dangerouslySetInnerHTML={{__html: value.shortDescription}}></div>
+                                            <div className="product-1-para" dangerouslySetInnerHTML={{__html: value.shortDescription}}></div>
                                             <br/>
                                             <br/>
                                             <h3><b>Specifications</b></h3>
@@ -98,7 +98,7 @@ class  Home extends Component{
                                 <div className="custom-container container">
                                     <div className="row flex">
                                         <div className="flex-column learnmore-header learn-home">
-                                            <div className='detail-content'><div dangerouslySetInnerHTML={{__html: value.leadText}}/></div>
+                                            <div className='detail-content'><div  dangerouslySetInnerHTML={{__html: value.leadText}}/></div>
                                             <a href="#">
                                                 LEARN MORE
                                             </a>

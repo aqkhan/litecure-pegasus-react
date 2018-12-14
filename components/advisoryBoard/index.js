@@ -56,9 +56,7 @@ class Advisory extends Component {
                 <section className="new-home-cards" key={index}>
                     <section className="section-one" style={{
                         background: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)),url(${value.featuredImage && value.featuredImage.url})`,
-                        backgroundRepeat: "no-repeat",
-                        backgroundSize: "cover",
-                        width:"100%"}} >
+                        }} >
                         <div className="third-row">
                             <div className="container custom-container">
                                 <div className="row flex">

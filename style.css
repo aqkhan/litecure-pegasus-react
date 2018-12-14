@@ -3164,11 +3164,12 @@ a:active, a:hover{
 
 .advisory-page-heading{
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     font-size: 30px;
     color:#efb817;
     font-weight: bold;
-    padding: 80px 0 18px 0;
+    padding: 80px 100px 18px 0;
+    text-align: center;
 }
 
 /*saju css ends here*/
@@ -3377,7 +3378,6 @@ a:active, a:hover{
     flex-direction: column;
     width: 100%;
     pointer-events: auto;
-    background-color: rgba(0, 0, 0, 0.6);
     background-clip: padding-box;
     border: none !important;
     border-radius: 4px !important;
@@ -3385,6 +3385,22 @@ a:active, a:hover{
     -webkit-box-shadow: none!important;
     background-color: rgba(255,255,255,0.9);
 }
+.modal-content-product{
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-clip: padding-box;
+    border: none !important;
+    border-radius: 4px !important;
+    outline: 0;
+    -webkit-box-shadow: none!important;
+    background-color: rgba(239, 184, 23, 0.6);
+}
+
 .modal-header{
     border:none !important;
 }
@@ -3409,4 +3425,9 @@ a:active, a:hover{
     width: 1048px;
     padding: 0 0 0 23px;
 }
-
+.product-1-para{
+    font-size: 14px;
+}
+.head-img1{
+    cursor: pointer;
+}
