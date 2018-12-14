@@ -27,7 +27,7 @@ class DetailContent extends Component {
                         <p className="w-text">{publication.title}</p>
                         <div className="row">
                             {publication.downloadLink!==""?<Link href={publication.downloadLink}><a className="download-link-new"><button className="download-btn-red">DOWNLOAD PDF</button></a></Link>:<div/>}
-                            {publication.downloadLink!==""?<button className="full-study-btn"><Link href={publication.linksTo}><a>READ FULL STUDY</a></Link></button>:<div/>}
+                            {publication.linksTo!==""?<Link href={publication.linksTo}><a className="read-more-new"><button className="full-study-btn">READ FULL STUDY</button></a></Link>:<div/>}
                         </div>
                             <span>Author(s):{publication.authors}</span>
                     </div>

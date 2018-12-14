@@ -314,6 +314,5 @@ class PublicationCategoty extends Component {
             </section>
         );
     }
-
-};
+}
 export default PublicationCategoty;

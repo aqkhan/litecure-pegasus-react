@@ -5,14 +5,14 @@ const detailCard = () => {
         <section className="card-dev">
             <div className="clr-gray">
             <div className="container">
-                <div class="course-container">
-                    <div class="course-text">
+                <div className="course-container">
+                    <div className="course-text">
                         <p>Related Posts, Stories and Courses</p>
                     </div>
-                    <div class="course-text1">
+                    <div className="course-text1">
                         <p>VIEW ALL </p>
                         <div>
-                            <i class="fa fa-chevron-right"> </i>
+                            <i className="fa fa-chevron-right"> </i>
                         </div>
                     </div>
                 </div>
