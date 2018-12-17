@@ -17,6 +17,7 @@
     "nodemon": "^1.18.8",
     "react": "16.4.2",
     "react-bootstrap": "^0.32.4",
+    "react-content-loader": "^3.4.1",
     "react-dom": "16.4.2",
     "react-modal": "^3.7.1",
     "react-paginate": "^6.0.0",

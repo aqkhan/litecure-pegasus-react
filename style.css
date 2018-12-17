@@ -3465,3 +3465,9 @@ a:active, a:hover{
     padding: 19px 0px 0px 0px;
     margin-bottom: 0;
 }
+
+
+.loading-publications{
+    padding-top: 40px;
+    padding-left: 50px;
+}

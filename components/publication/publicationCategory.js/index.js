@@ -3,6 +3,7 @@ import Link from 'next/link';
 import ReactPaginate from 'react-paginate';
 import {configureAnchors}  from 'react-scrollable-anchor';
 import { RestructorData } from "../../functions";
+import ContentLoader  from 'react-content-loader'
 class PublicationCategoty extends Component {
     state={
         publicationCategory: null,
@@ -261,16 +262,16 @@ class PublicationCategoty extends Component {
         if(final){
 
             cards= null;
-            // // cards = final.map((value,index)=>(<div key={index} className="post-casestudy">
-            // //         <div className="img-dev">
-            // //             <Link href={page+value.slug}><a><img src={value.featuredImage?value.featuredImage.url:"https://rs-cms.s3.amazonaws.com/pics/Yk_kkbCUx-_NPr_2.png"}/></a></Link>
-            // //         </div>
-            // //         <div>
-            // //             <Link href={page+value.slug}><a>{value.title}</a></Link>
-            // //             <Link href={page+value.slug}><a>Read More</a></Link>
-            // //         </div>
-            // //     </div>
-            // ))
+            cards = final.map((value,index)=>(<div key={index} className="post-casestudy">
+                    <div className="img-dev">
+                        <Link href={page+value.slug}><a><img src={value.featuredImage?value.featuredImage.url:"https://rs-cms.s3.amazonaws.com/pics/Yk_kkbCUx-_NPr_2.png"}/></a></Link>
+                    </div>
+                    <div>
+                        <Link href={page+value.slug}><a>{value.title}</a></Link>
+                        <Link href={page+value.slug}><a>Read More</a></Link>
+                    </div>
+                </div>
+            ))
         }
         return (
             <section className="casestudy">
@@ -299,7 +300,24 @@ class PublicationCategoty extends Component {
                             </div>
                         </div>
                         <div>
-                            {cards?cards:<div><img src="/static/images/Loading.gif"/><div> Loading...</div></div>}
+                            {cards?cards: <div className="loading-publications"><ContentLoader
+                                height={160}
+                                width={550}
+                                speed={2}
+                                primaryColor="#f3f3f3"
+                                secondaryColor="#ecebeb"
+                            >
+                                <rect x="81" y="12" rx="3" ry="3" width="350" height="6.4" />
+                                <rect x="81" y="30" rx="3" ry="3" width="380" height="6.4" />
+                                <rect x="81" y="48" rx="3" ry="3" width="201" height="6.4" />
+                                <rect x="79.5" y="49.27" rx="0" ry="0" width="0" height="0" />
+                                <rect x="11.5" y="10.27" rx="0" ry="0" width="61" height="51" />
+                                <rect x="81" y="12" rx="3" ry="3" width="350" height="6.4" />
+                                <rect x="81" y="30" rx="3" ry="3" width="380" height="6.4" />
+                                <rect x="81" y="48" rx="3" ry="3" width="201" height="6.4" />
+                                <rect x="79.5" y="49.27" rx="0" ry="0" width="0" height="0" />
+                                <rect x="11.5" y="10.27" rx="0" ry="0" width="61" height="51" />
+                            </ContentLoader></div>}
                                 <ReactPaginate previousLabel={<i className="fa fa-chevron-left "> </i>}
                                                nextLabel={<i className="fa fa-chevron-right "> </i>}
                                                breakLabel={". . ." }
