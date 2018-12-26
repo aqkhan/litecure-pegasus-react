@@ -8,6 +8,7 @@ class Header extends Component{
         resources:"",
         about:"",
         support:"",
+        blogs:"",
         evidence:"",
         publications:"",
         caseStudies:"",
@@ -42,6 +43,9 @@ class Header extends Component{
             case "product":
                 this.setState({products:"active",evidence:"", publications:"", publishedPapers:"", caseStudies:"", articles:"", photobiomodulation:"", advisoryboard:"", resources:"", about:"",support:""})
                 return;
+            case "blogs":
+                this.setState({products:"",evidence:"", publications:"", publishedPapers:"", caseStudies:"", articles:"", photobiomodulation:"", advisoryboard:"", blogs:"active", resources:"", about:"",support:""})
+                return;
             case "resources":
                 this.setState({products:"",evidence:"", publications:"", publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"", resources:"active", about:"",support:"",})
                 return;
@@ -72,7 +76,7 @@ class Header extends Component{
 
     }
     render(){
-        let {products,about,evidence,publications, publishedPapers,resources,support,advisoryboard, caseStudies, articles, photobiomodulation, dropdown,publicationDropdown} = this.state;
+        let {products,about,evidence,publications, publishedPapers,blogs,resources,support,advisoryboard, caseStudies, articles, photobiomodulation, dropdown,publicationDropdown} = this.state;
         return(
             <div>
                 <Head>
@@ -137,6 +141,8 @@ class Header extends Component{
                                                         <li><span className={advisoryboard}><Link href="/advisory-board-members"><a>Advisory Board</a></Link></span></li>
                                                     </ul>}
                                             </li>
+
+                                            <li><span className={blogs}><Link href="/blogs"><a>blog</a></Link></span></li>
                                             <li><span className={resources}><Link href="/resources"><a>RESOURCES</a></Link></span></li>
                                             <li><span className={about}><Link href="/about-us"><a>About</a></Link></span></li>
                                             <li><span className={support}><Link href="/support"><a>Support</a></Link></span></li>

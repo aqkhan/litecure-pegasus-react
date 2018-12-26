@@ -6,5 +6,6 @@ module.exports = () => {
         '/products:id': { page: '/products' },
         '/resources': { page: '/resources' },
         '/support': { page: '/support' },
+        '/blogs': {page: '/blogs'}
     }
 }
