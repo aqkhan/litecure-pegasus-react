@@ -10,7 +10,7 @@ class webinars extends Component {
 
     render() {
         return (
-            <Layout type={"Webinars"}>
+            <Layout type={"webinars"}>
                 <Webinars/>
             </Layout>
         )

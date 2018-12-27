@@ -23,17 +23,14 @@ class Header extends Component{
         publicationDropdown:false
 
     };
-
     componentWillMount() {
         console.log("header",this.props.type)
         this.changeHover(this.props.type)
     }
-
     componentWillReceiveProps(nextProps, nextContext) {
         console.log("header",this.props.type)
         this.changeHover(this.props.type)
     }
-
     evidenceDropdown(){
         let {dropdown}=this.state;
         this.setState({dropdown:!dropdown})
@@ -52,40 +49,40 @@ class Header extends Component{
     changeHover(type){
         switch (type) {
             case "product":
-                this.setState({webinars:"", education:"",products:"active",evidence:"", publications:"", publishedPapers:"", caseStudies:"", articles:"", photobiomodulation:"", blogs:"",advisoryboard:"", resources:"", about:"",support:""})
+                this.setState({webinars:"", education:"",products:"active",evidence:"", publications:"", publishedPapers:"", caseStudies:"", articles:"", photobiomodulation:"", blogs:"",advisoryboard:"", resources:"", about:"",support:""});
                 return;
             case "blogs":
-                this.setState({webinars:"", education:"",products:"",evidence:"", publications:"", publishedPapers:"", caseStudies:"", articles:"", photobiomodulation:"", advisoryboard:"", blogs:"active", resources:"", about:"",support:""})
+                this.setState({webinars:"", education:"",products:"",evidence:"", publications:"", publishedPapers:"", caseStudies:"", articles:"", photobiomodulation:"", advisoryboard:"", blogs:"active", resources:"", about:"",support:""});
                 return;
             case "resources":
-                this.setState({ webinars:"", education:"",products:"",evidence:"", publications:"", blogs:"", publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"", resources:"active", about:"",support:"",})
+                this.setState({ webinars:"", education:"",products:"",evidence:"", publications:"", blogs:"", publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"", resources:"active", about:"",support:""});
                 return;
             case "publishedPapers":
-                this.setState({ webinars:"", education:"",products:"",evidence:"active", publications:"active", blogs:"", publishedPapers:"active", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"", resources:"", about:"",support:"",})
+                this.setState({ webinars:"", education:"",products:"",evidence:"active", publications:"active", blogs:"", publishedPapers:"active", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"", resources:"", about:"",support:""});
                 return;
             case "caseStudies":
-                this.setState({ webinars:"", education:"",products:"",evidence:"active", publications:"active",blogs:"", publishedPapers:"", caseStudies:"active", articles:"", advisoryboard:"", photobiomodulation:"", resources:"", about:"",support:"",})
+                this.setState({ webinars:"", education:"",products:"",evidence:"active", publications:"active",blogs:"", publishedPapers:"", caseStudies:"active", articles:"", advisoryboard:"", photobiomodulation:"", resources:"", about:"",support:""});
                 return;
             case "webinars":
-                this.setState({webinars:"active", education:"actvie",products:"",evidence:"", publications:"",blogs:"", publishedPapers:"", caseStudies:"active", articles:"", advisoryboard:"", photobiomodulation:"", resources:"", about:"",support:"",})
+                this.setState({webinars:"active", education:"active",products:"",evidence:"", publications:"",blogs:"", publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"", resources:"", about:"",support:""});
                 return;
             case "articles":
-                this.setState({webinars:"", education:"",products:"",evidence:"active", publications:"active",blogs:"", publishedPapers:"", caseStudies:"", articles:"active", advisoryboard:"", photobiomodulation:"", resources:"", about:"",support:"",})
+                this.setState({webinars:"", education:"",products:"",evidence:"active", publications:"active",blogs:"", publishedPapers:"", caseStudies:"", articles:"active", advisoryboard:"", photobiomodulation:"", resources:"", about:"",support:""});
                 return;
             case "photobiomodulation":
-                this.setState({webinars:"", education:"",products:"",evidence:"active", publications:"",blogs:"", publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"active", resources:"", about:"",support:"",})
+                this.setState({webinars:"", education:"",products:"",evidence:"active", publications:"",blogs:"", publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"active", resources:"", about:"",support:""});
                 return;
             case "advisoryboard":
-                this.setState({ webinars:"", education:"",products:"",evidence:"active", publications:"",blogs:"", publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"active", photobiomodulation:"", resources:"", about:"",support:""})
+                this.setState({ webinars:"", education:"",products:"",evidence:"active", publications:"",blogs:"", publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"active", photobiomodulation:"", resources:"", about:"",support:""});
                 return;
             case "about":
-                this.setState({webinars:"", education:"",products:"",evidence:"", publications:"", blogs:"",publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"", resources:"", about:"active",support:""})
+                this.setState({webinars:"", education:"",products:"",evidence:"", publications:"", blogs:"",publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"", resources:"", about:"active",support:""});
                 return;
             case "support":
-                this.setState({webinars:"", education:"",products:"",evidence:"", publications:"",blogs:"", publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"", resources:"", about:"",support:"active"})
+                this.setState({webinars:"", education:"",products:"",evidence:"", publications:"",blogs:"", publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"", resources:"", about:"",support:"active"});
                 return;
             default:
-                this.setState({webinars:"", education:"",products:"",evidence:"", publications:"",blogs:"", publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"", resources:"", about:"",support:""})
+                this.setState({webinars:"", education:"",products:"",evidence:"", publications:"",blogs:"", publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"", resources:"", about:"",support:""});
         }
 
     }
@@ -155,17 +152,14 @@ class Header extends Component{
                                                         <li><span className={advisoryboard}><Link href="/advisory-board-members"><a>Advisory Board</a></Link></span></li>
                                                     </ul>}
                                             </li>
+                                            <li><span className={blogs}><Link href="/blogs"><a>Blog</a></Link></span></li>
                                             <li>
                                                 <span className={education}><a onClick={()=>this.educationDropdown()}>Education</a></span>
                                                 {wdropdown && <ul className="childlist" onMouseLeave={()=>this.educationDropdown()}>
-                                                        <div className="triangle-up"/>
+                                                    <div className="triangle-up"/>
                                                     <li><span className={webinars}><Link href="/webinars"><a>Webinars</a></Link></span></li>
-                                                    </ul>}
+                                                </ul>}
                                             </li>
-
-
-
-                                            <li><span className={blogs}><Link href="/blogs"><a>Blog</a></Link></span></li>
                                             <li><span className={resources}><Link href="/resources"><a>RESOURCES</a></Link></span></li>
                                             <li><span className={about}><Link href="/about-us"><a>About</a></Link></span></li>
                                             <li><span className={support}><Link href="/support"><a>Support</a></Link></span></li>

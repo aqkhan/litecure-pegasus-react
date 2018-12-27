@@ -18,7 +18,7 @@ class webinar extends Component {
     render() {
         let {slug} = this.state;
         return (
-            <Layout type={"blogs"}>
+            <Layout type={"webinars"}>
                 <Webinar slug={slug}/>
             </Layout>
         )
