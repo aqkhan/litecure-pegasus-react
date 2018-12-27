@@ -18,6 +18,7 @@ class Header extends Component{
         photobiomodulation:"",
         advisoryboard:"",
         webinars:"",
+        ongoingresearch:"",
         dropdown: false,
         wdropdown:false,
         publicationDropdown:false
@@ -49,45 +50,48 @@ class Header extends Component{
     changeHover(type){
         switch (type) {
             case "product":
-                this.setState({webinars:"", education:"",products:"active",evidence:"", publications:"", publishedPapers:"", caseStudies:"", articles:"", photobiomodulation:"", blogs:"",advisoryboard:"", resources:"", about:"",support:""});
+                this.setState({webinars:"",ongoingresearch:"", education:"",products:"active",evidence:"", publications:"", publishedPapers:"", caseStudies:"", articles:"", photobiomodulation:"", blogs:"",advisoryboard:"", resources:"", about:"",support:""});
                 return;
             case "blogs":
-                this.setState({webinars:"", education:"",products:"",evidence:"", publications:"", publishedPapers:"", caseStudies:"", articles:"", photobiomodulation:"", advisoryboard:"", blogs:"active", resources:"", about:"",support:""});
+                this.setState({webinars:"",ongoingresearch:"", education:"",products:"",evidence:"", publications:"", publishedPapers:"", caseStudies:"", articles:"", photobiomodulation:"", advisoryboard:"", blogs:"active", resources:"", about:"",support:""});
                 return;
             case "resources":
-                this.setState({ webinars:"", education:"",products:"",evidence:"", publications:"", blogs:"", publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"", resources:"active", about:"",support:""});
+                this.setState({ webinars:"",ongoingresearch:"", education:"",products:"",evidence:"", publications:"", blogs:"", publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"", resources:"active", about:"",support:""});
                 return;
             case "publishedPapers":
-                this.setState({ webinars:"", education:"",products:"",evidence:"active", publications:"active", blogs:"", publishedPapers:"active", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"", resources:"", about:"",support:""});
+                this.setState({ webinars:"", education:"",products:"",ongoingresearch:"",evidence:"active", publications:"active", blogs:"", publishedPapers:"active", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"", resources:"", about:"",support:""});
                 return;
             case "caseStudies":
-                this.setState({ webinars:"", education:"",products:"",evidence:"active", publications:"active",blogs:"", publishedPapers:"", caseStudies:"active", articles:"", advisoryboard:"", photobiomodulation:"", resources:"", about:"",support:""});
+                this.setState({ webinars:"", education:"",products:"",evidence:"active", publications:"active",ongoingresearch:"",blogs:"", publishedPapers:"", caseStudies:"active", articles:"", advisoryboard:"", photobiomodulation:"", resources:"", about:"",support:""});
                 return;
             case "webinars":
-                this.setState({webinars:"active", education:"active",products:"",evidence:"", publications:"",blogs:"", publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"", resources:"", about:"",support:""});
+                this.setState({webinars:"active", education:"active",products:"",evidence:"",ongoingresearch:"", publications:"",blogs:"", publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"", resources:"", about:"",support:""});
                 return;
             case "articles":
-                this.setState({webinars:"", education:"",products:"",evidence:"active", publications:"active",blogs:"", publishedPapers:"", caseStudies:"", articles:"active", advisoryboard:"", photobiomodulation:"", resources:"", about:"",support:""});
+                this.setState({webinars:"", education:"",products:"",evidence:"active", publications:"active",blogs:"",ongoingresearch:"", publishedPapers:"", caseStudies:"", articles:"active", advisoryboard:"", photobiomodulation:"", resources:"", about:"",support:""});
                 return;
             case "photobiomodulation":
-                this.setState({webinars:"", education:"",products:"",evidence:"active", publications:"",blogs:"", publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"active", resources:"", about:"",support:""});
+                this.setState({webinars:"", education:"",products:"",evidence:"active", publications:"",ongoingresearch:"",blogs:"", publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"active", resources:"", about:"",support:""});
                 return;
             case "advisoryboard":
-                this.setState({ webinars:"", education:"",products:"",evidence:"active", publications:"",blogs:"", publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"active", photobiomodulation:"", resources:"", about:"",support:""});
+                this.setState({ webinars:"", education:"",products:"",evidence:"active",ongoingresearch:"", publications:"",blogs:"", publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"active", photobiomodulation:"", resources:"", about:"",support:""});
+                return;
+            case "ongoingresearch":
+                this.setState({ webinars:"", education:"",products:"",evidence:"active",ongoingresearch:"active", publications:"",blogs:"", publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"", resources:"", about:"",support:""});
                 return;
             case "about":
-                this.setState({webinars:"", education:"",products:"",evidence:"", publications:"", blogs:"",publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"", resources:"", about:"active",support:""});
+                this.setState({webinars:"", education:"",products:"",ongoingresearch:"",evidence:"", publications:"", blogs:"",publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"", resources:"", about:"active",support:""});
                 return;
             case "support":
-                this.setState({webinars:"", education:"",products:"",evidence:"", publications:"",blogs:"", publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"", resources:"", about:"",support:"active"});
+                this.setState({webinars:"", education:"",ongoingresearch:"",products:"",evidence:"", publications:"",blogs:"", publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"", resources:"", about:"",support:"active"});
                 return;
             default:
-                this.setState({webinars:"", education:"",products:"",evidence:"", publications:"",blogs:"", publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"", resources:"", about:"",support:""});
+                this.setState({webinars:"",ongoingresearch:"", education:"",products:"",evidence:"", publications:"",blogs:"", publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"", resources:"", about:"",support:""});
         }
 
     }
     render(){
-        let {products,about,evidence,publications,wdropdown,education, publishedPapers,blogs,resources,support,advisoryboard,webinars, caseStudies, articles, photobiomodulation, dropdown,publicationDropdown} = this.state;
+        let {products,about,evidence,publications,wdropdown,education, publishedPapers,ongoingresearch,blogs,resources,support,advisoryboard,webinars, caseStudies, articles, photobiomodulation, dropdown,publicationDropdown} = this.state;
         return(
             <div>
                 <Head>
@@ -150,6 +154,7 @@ class Header extends Component{
                                                         </li>
                                                     <li><span className={photobiomodulation}><Link href="/photobiomodulation"><a>Photobiomodulation</a></Link></span></li>
                                                         <li><span className={advisoryboard}><Link href="/advisory-board-members"><a>Advisory Board</a></Link></span></li>
+                                                        <li><span className={ongoingresearch}><Link href="/ongoingresearch"><a>On Going Research</a></Link></span></li>
                                                     </ul>}
                                             </li>
                                             <li><span className={blogs}><Link href="/blogs"><a>Blog</a></Link></span></li>
