@@ -21,7 +21,7 @@ class  Product extends Component{
                 if (this.state.products)
                 {
                   dynamic =  this.state.products.map((value,index)=>{
-                      if (index===0){
+                      // if (index===0){
                           return <section className="first-product"  key={index}>
                           <section className="first-section">
                               <div className="third-row">
@@ -57,78 +57,78 @@ class  Product extends Component{
                               </div>
                           </section>
                           </section>
-                      }
-                      else if(index%2===0){
-                          return<section className="odd-product" key={index}>
-                          <section className="second-section">
-                              <div className="container custom-container">
-                                  <div className="row flex">
-                                      <div className="PTL-PEGASUS">
-                                          <span>{value.title}</span><p>{value.leadText}</p>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div className="container custom-container">
-                                  <div className="row image-container">
-                                      <div className="col-sm-4 ms">
-                                          <div className="second">
-                                              <div dangerouslySetInnerHTML={{__html: value.shortDescription}}></div>
-                                              <br/>
-                                              <br/>
-                                              <h3><b>Specifications</b></h3>
-                                              <ul>
-                                                  {Object.keys(value.spec.name).map((data,i)=>{
-                                                      return <li key={i}><span><b>{value.spec.name[data]}:</b></span><span> </span><span>{value.spec.detail[data]}</span></li>
-                                                  })}
-                                              </ul>
+                      // }
+                      // else if(index%2===0){
+                      //     return<section className="odd-product" key={index}>
+                      //     <section className="second-section">
+                      //         <div className="container custom-container">
+                      //             <div className="row flex">
+                      //                 <div className="PTL-PEGASUS">
+                      //                     <span>{value.title}</span><p>{value.leadText}</p>
+                      //                 </div>
+                      //             </div>
+                      //         </div>
+                      //         <div className="container custom-container">
+                      //             <div className="row image-container">
+                      //                 <div className="col-sm-4 ms">
+                      //                     <div className="second">
+                      //                         <div dangerouslySetInnerHTML={{__html: value.shortDescription}}></div>
+                      //                         <br/>
+                      //                         <br/>
+                      //                         <h3><b>Specifications</b></h3>
+                      //                         <ul>
+                      //                             {Object.keys(value.spec.name).map((data,i)=>{
+                      //                                 return <li key={i}><span><b>{value.spec.name[data]}:</b></span><span> </span><span>{value.spec.detail[data]}</span></li>
+                      //                             })}
+                      //                         </ul>
+                      //
+                      //                     </div>
+                      //                 </div>
+                      //                 <div className="col-sm-8 mn">
+                      //                     <img src={value.featuredImage && value.featuredImage.url} className="image34"/>
+                      //                 </div>
+                      //
+                      //             </div>
+                      //         </div>
+                      //     </section>
+                      //     </section>
+                      // }
+                      {/*else {*/}
+                          {/*return<section className="even-product" key={index}>*/}
+                              {/*<section className="third-section">*/}
+                                  {/*<div className="container custom-container">*/}
+                                      {/*<div className="row flex">*/}
+                                          {/*<div className="PTC-PEGASUS">*/}
+                                              {/*<span>{value.title}</span><p>{value.leadText}</p>*/}
+                                          {/*</div>*/}
+                      //                 </div>
+                      //             </div>
+                                  {/*<div className="container custom-container">*/}
+                                      {/*<div className="row image-container">*/}
 
-                                          </div>
-                                      </div>
-                                      <div className="col-sm-8 mn">
-                                          <img src={value.featuredImage && value.featuredImage.url} className="image34"/>
-                                      </div>
-
-                                  </div>
-                              </div>
-                          </section>
-                          </section>
-                      }
-                      else {
-                          return<section className="even-product" key={index}>
-                              <section className="third-section">
-                                  <div className="container custom-container">
-                                      <div className="row flex">
-                                          <div className="PTC-PEGASUS">
-                                              <span>{value.title}</span><p>{value.leadText}</p>
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <div className="container custom-container">
-                                      <div className="row image-container">
-
-                                          <div className="col-sm-6 mn">
-                                              <img src={value.featuredImage && value.featuredImage.url} className="image34"/>
-                                          </div>
-                                          <div className="col-sm-6 ms">
-                                              <div>
-                                                  <div dangerouslySetInnerHTML={{__html: value.shortDescription}}></div>
-                                                  <br/>
-                                                  <br/>
-                                                  <h3><b>Specifications</b></h3>
-                                                  <ul>
-                                                      {Object.keys(value.spec.name).map((data,indexx)=>{
-                                                          return <li key={indexx}><span><b>{value.spec.name[data]}:</b></span><span> </span><span>{value.spec.detail[data]}</span></li>
-                                                      })}
-                                                  </ul>
-                                              </div>
-                                          </div>
-
-                                      </div>
-                                  </div>
-
-                              </section>
-                          </section>
-                      }
+                      //                     <div className="col-sm-6 mn">
+                      //                         <img src={value.featuredImage && value.featuredImage.url} className="image34"/>
+                      //                     </div>
+                      //                     <div className="col-sm-6 ms">
+                      //                         <div>
+                      //                             <div dangerouslySetInnerHTML={{__html: value.shortDescription}}></div>
+                      //                             <br/>
+                      //                             <br/>
+                      //                             <h3><b>Specifications</b></h3>
+                      //                             <ul>
+                      //                                 {Object.keys(value.spec.name).map((data,indexx)=>{
+                      //                                     return <li key={indexx}><span><b>{value.spec.name[data]}:</b></span><span> </span><span>{value.spec.detail[data]}</span></li>
+                      //                                 })}
+                      //                             </ul>
+                      //                         </div>
+                      //                     </div>
+                      //
+                      //                 </div>
+                      //             </div>
+                      //
+                      //         </section>
+                      //     </section>
+                      // }
                     })
                 }
         return (

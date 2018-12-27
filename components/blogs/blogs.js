@@ -31,7 +31,7 @@ class blogs extends Component {
         return (
             <div>
                 <BlogsHeader blogCategory={"Posts"}/>
-                <BlogCategory blogs={blogs} blogCategory={"posts"} page={"/post/"}/>
+                <BlogCategory blogs={blogs} blogCategory={"Posts"} page={"/post/"}/>
                 <RequestDemo/>
             </div>
         )
