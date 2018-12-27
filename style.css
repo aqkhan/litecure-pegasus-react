@@ -2015,6 +2015,11 @@ a:active, a:hover{
     float: right;
 
 }
+.color-yellow{
+    color: #efb817;
+    font-size: 34px;
+    font-weight: 400;
+}
 .classification .first-section .fourth-row .learnmore-header a{
     font-family: 'Roboto', sans-serif;
     border: solid 2px #efb817;
