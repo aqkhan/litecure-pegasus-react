@@ -1166,6 +1166,10 @@ a:active, a:hover{
     width: 341px;
     bottom: -10%;
 }
+.other-header{
+    position:unset;
+    width:auto;
+}
 
 .header-image img{
     width: 100%;

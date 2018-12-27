@@ -1,12 +1,13 @@
 import React, { Component } from "react";
-class index extends Component{
+import Employe from './employmentPage/index'
+class employeesPage extends Component{
     render(){
         return(
             <div>
-
+              <Employe/>
             </div>
         )
     }
 }
 
-export default index;
+export default employeesPage;
