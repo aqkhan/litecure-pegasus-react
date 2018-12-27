@@ -34,7 +34,7 @@ class  Product extends Component{
                                   </div>
                                   <div className="container custom-container">
                                       <div className="row flex">
-                                          <div className="header-image">
+                                          <div className="header-image other-header">
                                               <img src={value.featuredImage && value.featuredImage.url} className="head-img" />
                                           </div>
                                       </div>
