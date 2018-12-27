@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import RequestDemo from '../requestDemo'
+import RequestDemo from '../requestDemo';
 import axios from "axios";
+
 class MediaDetail extends Component{
     state = {
         products:null
@@ -10,16 +11,20 @@ class MediaDetail extends Component{
             .then((res)=>{
                 this.setState({products:res.data.products})
             })
+
             .catch(err=>{throw err})
+    }
+    popvideoplay(){
+        console.log("wesal ");
     }
 
     render() {
-        let product;
+        let product= null;
         if (this.state.products)
         {
-            product =  this.state.products.map((value,index)=>{
+            product =  this.state.products.map((value , index ) => {
                 if(index===0){
-                    return <section className="odd-product" key={value._id}>
+                    return ( <section className="odd-product" key={value._id}>
                         <section className="second-section">
                             <div className="container custom-container">
                                 <div className="row flex">
@@ -52,7 +57,7 @@ class MediaDetail extends Component{
                             </div>
                         </section>
                     </section>
-                }})}
+        )}})}
         return(
             <div>
                 <section className="new-media-detail">
@@ -61,7 +66,6 @@ class MediaDetail extends Component{
                             <div className="container width-container">
                             <div className="row flex year">
                                 <div className="col-sm-1"></div>
-
                                 <div className="col-sm-8">
                                     <div className="quarter">
                                         <span>26-YEAR OLD</span>
@@ -69,12 +73,23 @@ class MediaDetail extends Component{
                                     </div>
                                 </div>
                                 <div className="col-sm-3">
-                                    <img src="/static/images/images-(3).png" className="video-icon"/>
-                                </div>
-                            </div></div>
-
+                                    <img onClick={this.popvideoplay.bind(this)} src="/static/images/images-(3).png" className="video-icon" data-toggle="modal" data-target="#myModal"/>
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                       
+                        <div class="modal-body">
+                        
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/nen79QAhH88?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                        
                         </div>
-                    </section>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</section>
                 </section>
                 <section className="new-media-detail-containers">
                     <section className="second-section hours-img" >

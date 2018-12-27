@@ -18,6 +18,13 @@
     font-family: UniSansCAPSthinitalic;
     src: url(/static/fonts/UniSansThinItalic.otf);
 }
+.modal-body{
+    padding:0rem!important;
+}
+.show{
+    display: flex!important;
+    align-items: center;
+}
 
 a:active, a:hover{
     text-decoration: none!important;
@@ -190,6 +197,7 @@ a:active, a:hover{
     height: 80px;
     background-color: #f5a623;
     border-radius: 20px;
+    cursor:pointer;
 
 }
 .childlist{
