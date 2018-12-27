@@ -18,6 +18,14 @@
     font-family: UniSansCAPSthinitalic;
     src: url(/static/fonts/UniSansThinItalic.otf);
 }
+.whtie-color {
+    color: #ffffff;
+    margin-top:30px;
+}
+.button-div.two-button{
+    padding:37px;
+    padding-left: 0px;
+}
 .modal-body{
     padding:0rem!important;
 }
@@ -2020,8 +2028,12 @@ a:active, a:hover{
     text-align: center;
     color: #ffffff;
     padding: 14px 20px;
-    margin: 0 10px;
+    margin: 0 10px 0 0;
+    border-radius: 5px;
 
+}
+.classification .first-section .fourth-row .learnmore-header a:hover{
+    background-color: #efb817;
 }
 .classification .first-section .fourth-row .learnmore-header .benefits{
     font-family: inherit;

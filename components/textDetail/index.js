@@ -9,49 +9,36 @@ class TextDetail extends Component{
                         <div className="container custom-container">
                             <div className="row flex">
                                 <div className="header-text">
-                                    <p>LASER CLASSIFICATIONS</p>
+                                    <p> Support </p>
                                 </div>
                             </div>
                         </div>
                         <div className="fourth-row text-area">
                             <div className=" container">
                                 <div className="row ">
-
                                     <div className="col-sm-12 ">
-                                        <div className=" learnmore-header ex-class">
+                                        <div className="learnmore-header ex-class">
+                                            <div className="data">
+                                                <h1 className="whtie-color">We care:</h1>
 
-                                            <p>
-                                                Lasers are divided into safety classifications in the US by the American
-                                                National Standard Identification (ANSI) and globally by the International
-                                                Electrotechnical Commission (IEC). The classifications below from the
-                                                revised system (2002) apply to non-magnified laser devices.<br/><br/>
+                                                <p>Companion customer, we know it&rsquo;s frustrating when things go wrong &ndash; we are here for you! &nbsp;Our dedicated team of clinical and customer care representatives are available to answer your questions.</p>
+                                                <h1 className="whtie-color">Contact Clinical Support:</h1>
+                                                <p>For clinical questions about using Companion products on specific cases, please contact Companion&rsquo;s experienced clinical support team.</p>
+                                                <p><strong>Hours</strong>: Monday &ndash; Friday 8 am &ndash; 6 pm</p>
+                                                <div class="button-div two-button"><a href="http://tel:(001) 302-709-0408">Phone:&nbsp;(001) 302-709-0408</a>&nbsp;<a href="mailto:medicalassistance@companiontherapy.com">Email:&nbsp;medicalassistance@companiontherapy.com</a></div>
 
-                                                <span>Class I </span><br/>
-                                                Safe under all conditions of normal use.<br/><br/>
+                                                <h1 className="whtie-color">Contact Sales Support:</h1>
 
-                                                <span>Class II</span><br/>
-                                                Applies to only visible light lasers (400-700nm). These devices are
-                                                considered eye-safe because the blink reflex will limit exposure to less
-                                                than 0.25 seconds. Intentional suppression of the blink reflex could lead to
-                                                eye injury. Most laser pointers are Class II devices.<br/><br/>
+                                                <p>For sales questions or to request a demonstration please contact our sales team.</p>
 
-                                                <span>CLASS III</span><br/>
-                                                Class III lasers in the visible spectrum have continuous wave (cw) emission
-                                                of 5mw or less. These devices are considered safe if handled carefully with
-                                                restricted beam viewing<br/><br/>
+                                                <div class="button-div two-button"><a href="http://tel:(001) 302-709-0408">Phone (001) 302-709-0408</a> &nbsp;<a href="mailto:info@companiontherapy.com">Email:&nbsp;info@companiontherapy.com</a></div>
 
-                                                <span>CLASS IIIB</span><br/>
-                                                IIIB lasers are hazardous to the eye when viewed directly. For visible and
-                                                infrared devices emission power is limited to 0.5W. Protective eyewear, key
-                                                switch and safety interlock are required safety features.<br/><br/>
+                                                <h1 className="whtie-color">UK Office:</h1>
 
-                                                <span>CLASS IV</span><br/>
-                                                Class IV lasers include all lasers that emit power in excess of IIIB
-                                                limitations. Eye protection is needed to limit both direct and diffuse
-                                                reflected exposure. Key switch and safety interlocks are also required
-                                                safety features. Most scientific, industrial, military and medical lasers
-                                                fall into this category.
-                                            </p>
+                                                <div class="button-div two-button" ><a href="http://tel:01646.603878">Phone 01646.603878</a></div>
+
+                                            </div>
+
                                             <div className="button">
                                                 <a href="#">TERMS IN LASER THERAPY</a>
                                                 <a href="#" className="benefits">BENEFITS OF LASER THERAPY</a>
