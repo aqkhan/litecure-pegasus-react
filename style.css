@@ -2020,6 +2020,10 @@ a:active, a:hover{
     font-size: 34px;
     font-weight: 400;
 }
+.alotted-html h1, .alotted-html p{
+    margin-bottom:20px;
+}
+
 .classification .first-section .fourth-row .learnmore-header a{
     font-family: 'Roboto', sans-serif;
     border: solid 2px #efb817;
