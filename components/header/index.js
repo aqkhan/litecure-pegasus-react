@@ -1,8 +1,20 @@
 import React, { Component } from "react";
 import Link from 'next/link';
 import Head from "next/head";
+import $ from "jquery";
 class Header extends Component{
+    componentDidMount() {
+        window.addEventListener('scroll', this.handleScroll);
+    }
 
+    handleScroll() {
+        if ($(window).scrollTop() >= 86) {
+            $('.second-row').addClass('fixed-header');
+        }
+        else {
+            $('.second-row').removeClass('fixed-header');
+    }
+    }
     state={
         products:"",
         resources:"",

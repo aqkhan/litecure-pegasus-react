@@ -59,7 +59,7 @@ class ProductDetail extends Component{
                                           </div>
                                       </div>
                                   </div>
-                                  <div className="container custom-container">
+                                  <div className="container custom-container header-stg">
                                       <div className="row flex">
                                           <div className="header-image">
                                               <img src={product.featuredImage && product.featuredImage.url} className="head-img1" data-toggle="modal" data-target="#myModal20"/>
