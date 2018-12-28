@@ -3,7 +3,8 @@ import Link from 'next/link';
 import ReactPaginate from 'react-paginate';
 import {configureAnchors}  from 'react-scrollable-anchor';
 import { RestructorData } from "../../functions";
-import ContentLoader  from 'react-content-loader'
+import ContentLoader  from 'react-content-loader';
+import $ from 'jquery';
 class PublicationCategoty extends Component {
     state={
         publicationCategory: null,
@@ -78,10 +79,12 @@ class PublicationCategoty extends Component {
     };
 
     returnData = (index) => {
-        configureAnchors({offset: -60, scrollDuration: 200})
-        this.setState({final: this.state.publicationDestructure[index.selected]})
-    }
-
+        // configureAnchors({offset: -60, scrollDuration: 200})
+        this.setState({final: this.state.publicationDestructure[index.selected]});
+        $('html, body').animate({
+            scrollTop: $("#scroll").offset().top
+        }, 1000);
+    };
     
     checkChange(value){
         switch (value) {
@@ -274,7 +277,7 @@ class PublicationCategoty extends Component {
             ))
         }
         return (
-            <section className="casestudy">
+            <section className="casestudy" id="scroll">
                 <div className="container">
                     <div className="casestudy-primary">
                         <div>

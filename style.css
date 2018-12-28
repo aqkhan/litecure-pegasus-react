@@ -2227,6 +2227,7 @@ a:active, a:hover{
 .casestudy .casestudy-primary{
     display:flex;
     justify-content: space-between;
+    padding-top:43px;
 }
 .casestudy .casestudy-primary>div:nth-child(1){
     background:#fff;
