@@ -2,9 +2,8 @@ import React, {Component} from 'react';
 import Link from 'next/link';
 import ReactPaginate from 'react-paginate';
 import { RestructorData } from "../../functions";
-import ContentLoader  from 'react-content-loader'
-import axios from "axios";
-import {API_PATH} from "../../apiconfig";
+import ContentLoader  from 'react-content-loader';
+import $ from 'jquery';
 class PublicationCategoty extends Component {
     state={
         publicationCategory: null,
@@ -52,10 +51,12 @@ class PublicationCategoty extends Component {
     };
 
     returnData = (index) => {
-        this.setState({final: this.state.publicationDestructure[index.selected]})
+        this.setState({final: this.state.publicationDestructure[index.selected]});
+        $('html, body').animate({
+            scrollTop: $("#scroll").offset().top
+        }, 1000);
     }
 
-    
     checkChange(value){
         switch (value) {
             case 1:
@@ -109,7 +110,7 @@ class PublicationCategoty extends Component {
             ))
         }
         return (
-            <section className="casestudy">
+            <section className="casestudy" id="scroll">
                 <div className="container">
                     <div className="casestudy-primary">
                         <div>
