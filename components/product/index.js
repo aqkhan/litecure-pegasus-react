@@ -8,7 +8,6 @@ class  Product extends Component{
                 products : null,
                 err:null
             }
-
             componentWillMount(){
                 axios.get(API_PATH + 'products')
                     .then((res)=>{
