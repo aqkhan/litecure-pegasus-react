@@ -1170,7 +1170,30 @@ a:active, a:hover{
     position:unset;
     width:auto;
 }
-
+/* employees page styling */
+.employees{
+    background-color: #54585a;
+    padding:40px;
+}
+.employees .description-text h1{
+    color: #efb817;
+    padding: 35px 0px 5px 0px;
+}
+.employees .description-text strong{
+    display: block;
+}
+.employees .description-text p{
+    font-family: AvenirNext;
+    font-size: 21px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2;
+    letter-spacing: -.1px;
+    text-align: left;
+    color: #c7c9c7;
+    margin-bottom: 0;
+}
 .header-image img{
     width: 100%;
     height: auto;
