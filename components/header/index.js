@@ -153,7 +153,13 @@ class Header extends Component{
                                 <div className="container showhide custom-container">
                                     <div className="row  justify-center align-center">
                                         <ul className="responsive-column navbar flex-row nav-color">
-                                            <li><span className={products}><Link href="/products"><a>PRODUCTS</a></Link></span></li>
+                                            <li><span className={products}><Link href="/products"><a>PRODUCTS</a></Link></span>
+                                                <ul className="childlist childlist-first" onMouseLeave={()=>this.evidenceDropdown()}>
+                                                    <div className="triangle-up"/>
+                                                    <li onClick={()=>this.publicationDropdownFunc()} ><span><img src="/static/images/345446.jpg"/></span><span className={publications}><a>Publications</a></span></li>
+                                                    <li onClick={()=>this.publicationDropdownFunc()} ><span><img src="/static/images/345446.jpg"/></span><span className={publications}><a>Add More</a></span></li>
+                                                </ul>
+                                            </li>
                                             <li><span className={evidence}><a onClick={()=>this.evidenceDropdown()}>Evidence</a></span>
                                                 {dropdown && <ul className="childlist" onMouseLeave={()=>this.evidenceDropdown()}>
                                                         <div className="triangle-up"/>
