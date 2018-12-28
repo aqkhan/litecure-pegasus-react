@@ -2,7 +2,7 @@ import  React, {Component} from 'react';
 import RequestDemo from '../requestDemo';
 import WebinarsHeader from './webinarHeader';
 import WebinarsCategory from './webinarCategory';
-import {API_PATH} from '../apiconfig'
+import {API_PATH} from '../apiconfig';
 import axios from 'axios';
 
 class webinars extends Component {

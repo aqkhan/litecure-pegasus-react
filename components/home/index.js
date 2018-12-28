@@ -17,6 +17,7 @@ class  Home extends Component{
                     if (val.type==="homepage"){
                         temp.push(val);
                     }
+
                 });
                 this.setState({pages:temp})
             })

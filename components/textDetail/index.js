@@ -1,6 +1,26 @@
 import React, { Component } from 'react';
-import RequestDemo from '../requestDemo'
+import RequestDemo from '../requestDemo';
+import {API_PATH} from '../apiconfig';
+import axios from 'axios';
 class TextDetail extends Component{
+    state={
+        content: null
+    }
+    componentWillMount(){
+        axios.get(API_PATH + 'pages')
+            .then((res) => {
+                console.log("support",res);
+                res.data.pages.map((item)=>{
+                    if(item.type === 'support'){
+                        this.setState({content: item.content});
+                    }
+                })
+                console.log("content for support",this.state.content);
+            })
+            .catch(err => {
+                console.log("error", err);
+            })
+    }
     render() {
         return(
             <div>
@@ -18,24 +38,11 @@ class TextDetail extends Component{
                                 <div className="row ">
                                     <div className="col-sm-12 ">
                                         <div className="learnmore-header ex-class">
-                                            <div className="data">
-                                                <h1 className="whtie-color">We care:</h1>
-
-                                                <p>Companion customer, we know it&rsquo;s frustrating when things go wrong &ndash; we are here for you! &nbsp;Our dedicated team of clinical and customer care representatives are available to answer your questions.</p>
-                                                <h1 className="whtie-color">Contact Clinical Support:</h1>
-                                                <p>For clinical questions about using Companion products on specific cases, please contact Companion&rsquo;s experienced clinical support team.</p>
-                                                <p><strong>Hours</strong>: Monday &ndash; Friday 8 am &ndash; 6 pm</p>
-                                                <div class="button-div two-button"><a href="http://tel:(001) 302-709-0408">Phone:&nbsp;(001) 302-709-0408</a>&nbsp;<a href="mailto:medicalassistance@companiontherapy.com">Email:&nbsp;medicalassistance@companiontherapy.com</a></div>
-
-                                                <h1 className="whtie-color">Contact Sales Support:</h1>
-
-                                                <p>For sales questions or to request a demonstration please contact our sales team.</p>
-
-                                                <div class="button-div two-button"><a href="http://tel:(001) 302-709-0408">Phone (001) 302-709-0408</a> &nbsp;<a href="mailto:info@companiontherapy.com">Email:&nbsp;info@companiontherapy.com</a></div>
-
-                                                <h1 className="whtie-color">UK Office:</h1>
-
-                                                <div class="button-div two-button" ><a href="http://tel:01646.603878">Phone 01646.603878</a></div>
+                                            <div className="data alotted-html">
+                                                <div className="description-dev">
+                                                    <div className="publication-description"
+                                                         dangerouslySetInnerHTML={{__html: this.state.content}}/>
+                                                </div>
 
                                             </div>
 
