@@ -41,16 +41,16 @@ class blogs extends Component {
     }
     render() {
         let {publications,categoryList,allCategoryList} = this.state;
-        let uniqueNames=null;
+        let uniqueNames=[];
         if (categoryList){
             uniqueNames =  categoryList.filter(function(item, pos){
                 return categoryList.indexOf(item)=== pos;
             });
         }
         let newCategories=[];
-        if(uniqueNames){
+        if(uniqueNames.length!==0){
             uniqueNames.forEach((key)=>(
-                allCategoryList.forEach(data=>{
+                allCategoryList && allCategoryList.forEach(data=>{
                     if (key===data._id){
                         newCategories.push({id:key,name:data.title, check:false})
                     }
