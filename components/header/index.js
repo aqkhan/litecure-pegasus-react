@@ -17,9 +17,12 @@ class Header extends Component{
     }
     state={
         products:"",
+        ptc:"",
+        empowerDsDeliverySystem:"",
         resources:"",
         about:"",
         support:"",
+        employees:"",
         blogs:"",
         education:"",
         evidence:"",
@@ -31,6 +34,7 @@ class Header extends Component{
         advisoryboard:"",
         webinars:"",
         ongoingresearch:"",
+        productDropDown:false,
         dropdown: false,
         wdropdown:false,
         publicationDropdown:false
@@ -44,15 +48,7 @@ class Header extends Component{
         console.log("header",this.props.type)
         this.changeHover(this.props.type)
     }
-    evidenceDropdown(){
-        let {dropdown}=this.state;
-        this.setState({dropdown:!dropdown})
-    }
 
-    educationDropdown(){
-        let {wdropdown} = this.state;
-        this.setState({wdropdown:!wdropdown})
-    }
 
     publicationDropdownFunc(){
         let {publicationDropdown}=this.state
@@ -62,48 +58,57 @@ class Header extends Component{
     changeHover(type){
         switch (type) {
             case "product":
-                this.setState({webinars:"",ongoingresearch:"", education:"",products:"active",evidence:"", publications:"", publishedPapers:"", caseStudies:"", articles:"", photobiomodulation:"", blogs:"",advisoryboard:"", resources:"", about:"",support:""});
+                this.setState({webinars:"",ongoingresearch:"", education:"",products:"active",ptc:"",empowerDsDeliverySystem:"",evidence:"", publications:"", publishedPapers:"", caseStudies:"", articles:"", photobiomodulation:"", blogs:"",advisoryboard:"", resources:"", about:"",support:"",employees:""});
+                return;
+            case "ptc":
+                this.setState({webinars:"",ongoingresearch:"", education:"",products:"active",ptc:"active",empowerDsDeliverySystem:"",evidence:"", publications:"", publishedPapers:"", caseStudies:"", articles:"", photobiomodulation:"", blogs:"",advisoryboard:"", resources:"", about:"",support:"",employees:""});
+                return;
+            case "empower-ds-delivery-system":
+                this.setState({webinars:"",ongoingresearch:"", education:"",products:"active",ptc:"",empowerDsDeliverySystem:"active",evidence:"", publications:"", publishedPapers:"", caseStudies:"", articles:"", photobiomodulation:"", blogs:"",advisoryboard:"", resources:"", about:"",support:"",employees:""});
                 return;
             case "blogs":
-                this.setState({webinars:"",ongoingresearch:"", education:"",products:"",evidence:"", publications:"", publishedPapers:"", caseStudies:"", articles:"", photobiomodulation:"", advisoryboard:"", blogs:"active", resources:"", about:"",support:""});
+                this.setState({webinars:"",ongoingresearch:"", education:"",products:"",ptc:"",empowerDsDeliverySystem:"",evidence:"", publications:"", publishedPapers:"", caseStudies:"", articles:"", photobiomodulation:"", advisoryboard:"", blogs:"active", resources:"", about:"",support:"",employees:""});
                 return;
             case "resources":
-                this.setState({ webinars:"",ongoingresearch:"", education:"",products:"",evidence:"", publications:"", blogs:"", publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"", resources:"active", about:"",support:""});
+                this.setState({ webinars:"",ongoingresearch:"", education:"",products:"",ptc:"",empowerDsDeliverySystem:"",evidence:"", publications:"", blogs:"", publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"", resources:"active", about:"",support:"",employees:""});
                 return;
             case "publishedPapers":
-                this.setState({ webinars:"", education:"",products:"",ongoingresearch:"",evidence:"active", publications:"active", blogs:"", publishedPapers:"active", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"", resources:"", about:"",support:""});
+                this.setState({ webinars:"", education:"",products:"",ptc:"",empowerDsDeliverySystem:"",ongoingresearch:"",evidence:"active", publications:"active", blogs:"", publishedPapers:"active", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"", resources:"", about:"",support:"",employees:""});
                 return;
             case "caseStudies":
-                this.setState({ webinars:"", education:"",products:"",evidence:"active", publications:"active",ongoingresearch:"",blogs:"", publishedPapers:"", caseStudies:"active", articles:"", advisoryboard:"", photobiomodulation:"", resources:"", about:"",support:""});
+                this.setState({ webinars:"", education:"",products:"",ptc:"",empowerDsDeliverySystem:"",evidence:"active", publications:"active",ongoingresearch:"",blogs:"", publishedPapers:"", caseStudies:"active", articles:"", advisoryboard:"", photobiomodulation:"", resources:"", about:"",support:"",employees:""});
                 return;
             case "webinars":
-                this.setState({webinars:"active", education:"active",products:"",evidence:"",ongoingresearch:"", publications:"",blogs:"", publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"", resources:"", about:"",support:""});
+                this.setState({webinars:"active", education:"active",products:"",ptc:"",empowerDsDeliverySystem:"",evidence:"",ongoingresearch:"", publications:"",blogs:"", publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"", resources:"", about:"",support:"",employees:""});
                 return;
             case "articles":
-                this.setState({webinars:"", education:"",products:"",evidence:"active", publications:"active",blogs:"",ongoingresearch:"", publishedPapers:"", caseStudies:"", articles:"active", advisoryboard:"", photobiomodulation:"", resources:"", about:"",support:""});
+                this.setState({webinars:"", education:"",products:"",ptc:"",empowerDsDeliverySystem:"",evidence:"active", publications:"active",blogs:"",ongoingresearch:"", publishedPapers:"", caseStudies:"", articles:"active", advisoryboard:"", photobiomodulation:"", resources:"", about:"",support:"",employees:""});
                 return;
             case "photobiomodulation":
-                this.setState({webinars:"", education:"",products:"",evidence:"active", publications:"",ongoingresearch:"",blogs:"", publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"active", resources:"", about:"",support:""});
+                this.setState({webinars:"", education:"",products:"",ptc:"",empowerDsDeliverySystem:"",evidence:"active", publications:"",ongoingresearch:"",blogs:"", publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"active", resources:"", about:"",support:"",employees:""});
                 return;
             case "advisoryboard":
-                this.setState({ webinars:"", education:"",products:"",evidence:"active",ongoingresearch:"", publications:"",blogs:"", publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"active", photobiomodulation:"", resources:"", about:"",support:""});
+                this.setState({ webinars:"", education:"",products:"",ptc:"",empowerDsDeliverySystem:"",evidence:"active",ongoingresearch:"", publications:"",blogs:"", publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"active", photobiomodulation:"", resources:"", about:"",support:"",employees:""});
                 return;
             case "ongoingresearch":
-                this.setState({ webinars:"", education:"",products:"",evidence:"active",ongoingresearch:"active", publications:"",blogs:"", publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"", resources:"", about:"",support:""});
+                this.setState({ webinars:"", education:"",products:"",ptc:"",empowerDsDeliverySystem:"",evidence:"active",ongoingresearch:"active", publications:"",blogs:"", publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"", resources:"", about:"",support:"",employees:""});
                 return;
             case "about":
-                this.setState({webinars:"", education:"",products:"",ongoingresearch:"",evidence:"", publications:"", blogs:"",publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"", resources:"", about:"active",support:""});
+                this.setState({webinars:"", education:"",products:"",ptc:"",empowerDsDeliverySystem:"",ongoingresearch:"",evidence:"", publications:"", blogs:"",publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"", resources:"", about:"active",support:"",employees:""});
                 return;
             case "support":
-                this.setState({webinars:"", education:"",ongoingresearch:"",products:"",evidence:"", publications:"",blogs:"", publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"", resources:"", about:"",support:"active"});
+                this.setState({webinars:"", education:"",ongoingresearch:"",products:"",ptc:"",empowerDsDeliverySystem:"",evidence:"", publications:"",blogs:"", publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"", resources:"", about:"",support:"active",employees:""});
+                return;
+            case "employees":
+                this.setState({webinars:"", education:"",ongoingresearch:"",products:"",ptc:"",empowerDsDeliverySystem:"",evidence:"", publications:"",blogs:"", publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"", resources:"", about:"",support:"",employees:"active"});
                 return;
             default:
-                this.setState({webinars:"",ongoingresearch:"", education:"",products:"",evidence:"", publications:"",blogs:"", publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"", resources:"", about:"",support:""});
+                this.setState({webinars:"",ongoingresearch:"", education:"",products:"",ptc:"",empowerDsDeliverySystem:"",evidence:"", publications:"",blogs:"", publishedPapers:"", caseStudies:"", articles:"", advisoryboard:"", photobiomodulation:"", resources:"", about:"",support:"",employees:""});
         }
 
     }
     render(){
-        let {products,about,evidence,publications,wdropdown,education, publishedPapers,ongoingresearch,blogs,resources,support,advisoryboard,webinars, caseStudies, articles, photobiomodulation, dropdown,publicationDropdown} = this.state;
+        let {products,ptc,empowerDsDeliverySystem,about,evidence,publications,wdropdown,education, publishedPapers,ongoingresearch,blogs,resources,support,employees,advisoryboard,webinars, caseStudies, articles, photobiomodulation,productDropDown, dropdown,publicationDropdown} = this.state;
         return(
             <div>
                 <Head>
@@ -153,15 +158,17 @@ class Header extends Component{
                                 <div className="container showhide custom-container">
                                     <div className="row  justify-center align-center">
                                         <ul className="responsive-column navbar flex-row nav-color">
-                                            <li><span className={products}><Link href="/products"><a>PRODUCTS</a></Link></span>
-                                                <ul className="childlist childlist-first" onMouseLeave={()=>this.evidenceDropdown()}>
+                                            <li onMouseEnter={()=>this.setState({productDropDown:true})} onMouseLeave={()=>this.setState({productDropDown:false})}><span className={products}><Link href="/products"><a>PRODUCTS</a></Link></span>
+                                                {productDropDown&&<ul className="childlist childlist-first">
                                                     <div className="triangle-up"/>
-                                                    <li onClick={()=>this.publicationDropdownFunc()} ><span><img src="/static/images/345446.jpg"/></span><span className={publications}><a>Publications</a></span></li>
-                                                    <li onClick={()=>this.publicationDropdownFunc()} ><span><img src="/static/images/345446.jpg"/></span><span className={publications}><a>Add More</a></span></li>
-                                                </ul>
+                                                    <li ><span><img src="https://rs-cms.s3.amazonaws.com/pics/4HWnKn12zXWvEs6-.png"/></span>
+                                                        <span className={empowerDsDeliverySystem}><Link href={"/product/empower-ds-delivery-system"}><a>EMPOWER DS DELIVERY SYSTEM</a></Link></span></li>
+                                                    <li ><span><img src="https://rs-cms.s3.amazonaws.com/pics/nwQkU1NKyZByRecL.png"/></span>
+                                                        <span className={ptc}><Link href={"/product/ptc"}><a>PEGASUS THERAPY COMPACT</a></Link></span></li>
+                                                </ul>}
                                             </li>
-                                            <li><span className={evidence}><a onClick={()=>this.evidenceDropdown()}>Evidence</a></span>
-                                                {dropdown && <ul className="childlist" onMouseLeave={()=>this.evidenceDropdown()}>
+                                            <li onMouseEnter={()=>this.setState({dropdown:true})} onMouseLeave={()=>this.setState({dropdown:false})}><span className={evidence}><a>Evidence</a></span>
+                                                {dropdown && <ul className="childlist">
                                                         <div className="triangle-up"/>
                                                     <li onClick={()=>this.publicationDropdownFunc()} ><span className={publications}><a>Publications</a></span>
                                                         {publicationDropdown&&<ul>
@@ -176,9 +183,9 @@ class Header extends Component{
                                                     </ul>}
                                             </li>
                                             <li><span className={blogs}><Link href="/blogs"><a>Blog</a></Link></span></li>
-                                            <li>
-                                                <span className={education}><a onClick={()=>this.educationDropdown()}>Education</a></span>
-                                                {wdropdown && <ul className="childlist" onMouseLeave={()=>this.educationDropdown()}>
+                                            <li onMouseEnter={()=>this.setState({wdropdown:true})} onMouseLeave={()=>this.setState({wdropdown:false})}>
+                                                <span className={education}><a >Education</a></span>
+                                                {wdropdown && <ul className="childlist" >
                                                     <div className="triangle-up"/>
                                                     <li><span className={webinars}><Link href="/webinars"><a>Webinars</a></Link></span></li>
                                                 </ul>}
@@ -186,6 +193,7 @@ class Header extends Component{
                                             <li><span className={resources}><Link href="/resources"><a>RESOURCES</a></Link></span></li>
                                             <li><span className={about}><Link href="/about-us"><a>About</a></Link></span></li>
                                             <li><span className={support}><Link href="/support"><a>Support</a></Link></span></li>
+                                            <li><span className={employees}><Link href="/employees"><a>Employees</a></Link></span></li>
                                         </ul>
                                     </div>
                                 </div>

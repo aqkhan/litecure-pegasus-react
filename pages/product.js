@@ -16,7 +16,7 @@ class Product extends Component {
     render() {
         let {slug} = this.state;
         return (
-            <Layout>
+            <Layout type={slug}>
                 <ProductDetail slug={slug}/>
             </Layout>
         )

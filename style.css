@@ -214,9 +214,6 @@ a:active, a:hover{
     cursor:pointer;
 
 }
-.childlist-first{
-    display:none;
-}
 .childlist-first li span{
     margin: 0px 5px 5px 0px;
 }
