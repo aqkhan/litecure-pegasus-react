@@ -11,21 +11,21 @@ class Footer extends Component{
                                 <div className="col-sm-2 responsive-no-off all-width col-2 mt-5">
                                     <div className="redcolor"><p className="make-bold"><strong>Websites</strong></p></div>
                                     <div className="footer-menu">
-                                        <div><p>companion</p></div>
-                                        <div><p>Equine</p></div>
-                                        <div><p>Medical</p></div>
-                                        <div><p>Corporate</p></div>
+                                        <div><a href="#">companion</a></div>
+                                        <div><a href="#">Equine</a></div>
+                                        <div><a href="#">Medical</a></div>
+                                        <div><a href="#">Corporate</a></div>
                                     </div>
                                 </div>
                                 <div className="col-sm-2 col-2 all-width mt-5">
                                     <div className="redcolor"><p className="make-bold"><strong>LiteCure</strong></p></div>
                                     <div className="footer-menu">
-                                        <div><p>About US</p></div>
-                                        <div><p>Contact LiteCure</p></div>
-                                        <div><p>Contact Sales</p></div>
-                                        <div><p>Core Values</p></div>
-                                        <div><p>Products</p></div>
-                                        <div><p>Careers</p></div>
+                                        <div><a href="#">About US</a></div>
+                                        <div><a href="#">Contact LiteCure</a></div>
+                                        <div><a href="#">Contact Sales</a></div>
+                                        <div><a href="#">Core Values</a></div>
+                                        <div><a href="#">Products</a></div>
+                                        <div><a href="#">Careers</a></div>
                                     </div>
                                 </div>
                                 <div className="col-md-3 all-width mt-5">
@@ -42,10 +42,9 @@ class Footer extends Component{
 
                                 </div>
                                 <div className="col-sm-2 col-2 social-icons mt-5">
-                                    <i className="fa fa-linkedin-square redcolor socialicons socialicons1" ></i>
-                                    <i className="fa fa-twitter redcolor socialicons socialicons1"></i>
-                                    <i className="fa fa-envelope redcolor  socialicons socialicons1" ></i>
-
+                                    <a href="#"><i className="fa fa-linkedin-square redcolor socialicons socialicons1" ></i></a>
+                                    <a href="#"><i className="fa fa-twitter redcolor socialicons socialicons1"></i></a>
+                                    <a href="#"><i className="fa fa-envelope redcolor  socialicons socialicons1" ></i></a>
                                 </div>
                             </div>
 

@@ -130,6 +130,38 @@ class  Home extends Component{
         return(
             <div>
                 {pages}
+                <section className="new-home-cards">
+                    <section className="section-one publication-header" style={{
+                        background: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)),url('/static/images/buffalo.jpg')`,
+                        backgroundRepeat: "no-repeat",
+                        backgroundSize: "cover",}} >
+                        <div className="third-row">
+                            <div className="container custom-container">
+                                <div className="row flex">
+                                    <div className="header-text publication-text home-page">
+                                        <p><br/><span>PUBLICATIONS</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="small-upper-line flex">
+                            <div className="line"> </div>
+                        </div>
+                        <div class="fourth-row">
+                            <div class="custom-container container">
+                                <div class="row flex">
+                                    <div class="flex-column learnmore-header">
+
+                                        <p>High tech meets a higher standard of care. See the full lineup of Pegasus products.</p>
+                                        <a href="#">
+                                            VIEW PRODUCTS
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
                     {product}
 
 {stories&&<Carousel interval={2000}>

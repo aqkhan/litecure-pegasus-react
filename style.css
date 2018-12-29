@@ -269,7 +269,7 @@ a:active, a:hover{
     border-bottom: 10px solid #191d24;
 }
 .childlist li{
-   padding:0px!important;
+    padding:0px!important;
 }
 .childlist li a{
     font-family: UniSansCAPSheavy;
@@ -351,7 +351,7 @@ a:active, a:hover{
     color: #17191d;
     padding-bottom: 20px
 }
-.footer-menu p, .footer-menu a{
+.footer-menu a{
     font-family: AvenirNext;
     font-size: 13.8px;
     font-weight: normal;
@@ -359,16 +359,25 @@ a:active, a:hover{
     font-stretch: normal;
     margin-bottom: 5px;
     letter-spacing: normal;
-
+    color:#17191A;
+}
+.footer-menu p{
+    font-family: AvenirNext;
+    font-size: 13.8px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    margin-bottom: 5px;
+    letter-spacing: normal;
+}
+.footer-menu a:hover{
+    color:#fff;
 }
 .make-bold strong{
     font-weight: bold!important;
 }
 .footer-menu p span{
     font-weight: bold;
-}
-.footer-menu a:hover{
-    color: #fc0606;
 }
 .responsive-flex{
     display: flex;
@@ -444,6 +453,9 @@ a:active, a:hover{
     font-size: 22px;
     margin-left: 20px;
     color: #ffffff;
+}
+.socialicons:hover{
+    color:#c7c9c7;
 }
 .socialicon1 {
     font-size: 22px;
@@ -1076,6 +1088,7 @@ a:active, a:hover{
 }
 .odd-product .second-section .image-container{
     margin-top: 5%;
+    padding-bottom:25px;
 }
 .odd-product .second-section .image-container .image34{
     /*max-width: 850px;*/
@@ -2195,7 +2208,7 @@ a:active, a:hover{
     padding-left:62px;
 }
 .empty-div .course-text1>div{
-   background-color:#685211;
+    background-color:#685211;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2420,7 +2433,7 @@ a:active, a:hover{
 }
 .download-btn-red{
     padding:20px 58px;
-   background-color: #EFB817;
+    background-color: #EFB817;
     border: none;
     outline: none;
 
@@ -2835,8 +2848,8 @@ a:active, a:hover{
     line-height: 33px;
 }
 /*.article-area h1, .article-area p {*/
-    /*padding-left: 66px;*/
-    /*padding-right: 66px;*/
+/*padding-left: 66px;*/
+/*padding-right: 66px;*/
 /*}*/
 .photobiomodulation .blog-content.article-area .para_main p, .photobiomodulation .blog-content.article-area .para_main ul {
     font-family: AvenirNext;
@@ -2857,7 +2870,7 @@ a:active, a:hover{
     margin-right:10px;
 }
 .photobiomodulation .btn_red{
-  background-color:#efb817;
+    background-color:#efb817;
 }
 .photobiomodulation .button_icon p i{
     background-color: #8d8e8d;
@@ -3014,8 +3027,8 @@ a:active, a:hover{
     font-size: 10px;
 }
 /*.pride .article-area h1, .article-area p {*/
-    /*padding-left: 66px;*/
-    /*padding-right: 66px;*/
+/*padding-left: 66px;*/
+/*padding-right: 66px;*/
 /*}*/
 .pride .customer-support .hoverd-images {
     margin: 0 auto;
@@ -3221,8 +3234,8 @@ a:active, a:hover{
     font-size: 10px;
 }
 /*.member-wrapper .article-area h1, .article-area p {*/
-    /*padding-left: 66px;*/
-    /*padding-right: 66px;*/
+/*padding-left: 66px;*/
+/*padding-right: 66px;*/
 /*}*/
 .member-wrapper .bio-bg-para {
     background: #54585a;
@@ -3333,9 +3346,9 @@ a:active, a:hover{
     top: 0;
 }
 .fa-plus:before {
-     content: "\f067"!important;
+    content: "\f067"!important;
     margin-left: 8px;
- }
+}
 .banner_container .text_container {
     padding: 40px;
     border-left: 2px solid #979797;
@@ -3381,10 +3394,10 @@ a:active, a:hover{
     background-repeat: no-repeat;
 }
 .background-fifth {
-     background: url(http://www.litecure.com/wp-content/uploads/2016/09/Beam-Area1.png);
-     background-position: 50%;
-     background-repeat: no-repeat;
- }
+    background: url(http://www.litecure.com/wp-content/uploads/2016/09/Beam-Area1.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
 .background-sixth {
     background: url(https://litecure-assets.s3.amazonaws.com/images/1533920483.png);
     background-position: 50%;
@@ -3392,10 +3405,10 @@ a:active, a:hover{
     background-repeat: no-repeat;
 }
 .background-seventh {
-     background: url(http://www.litecure.com/wp-content/uploads/2016/09/Treatment-Time.png);
-     background-position: 0 92%;
-     background-repeat: no-repeat;
- }
+    background: url(http://www.litecure.com/wp-content/uploads/2016/09/Treatment-Time.png);
+    background-position: 0 92%;
+    background-repeat: no-repeat;
+}
 .background-8th {
     background: url(http://www.litecure.com/wp-content/uploads/2016/09/Exposure-time2-300x297.png);
     background-position: 50%;
@@ -3457,11 +3470,11 @@ a:active, a:hover{
     background-size: contain;
 }
 .background-18th {
-     background: url(http://www.litecure.com/wp-content/uploads/2016/09/Therapeutic-Window.png);
-     background-position: 50%;
-     background-repeat: no-repeat;
-     background-size: contain;
- }
+    background: url(http://www.litecure.com/wp-content/uploads/2016/09/Therapeutic-Window.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
 .photobiomodulation .blog-content.article-area h2 {
     font-family: AvenirNext;
     color: #54585a;
@@ -3565,7 +3578,9 @@ a:active, a:hover{
     padding: 19px 0px 0px 0px;
     margin-bottom: 30px;
 }
-
+.home-page{
+    margin-bottom:50px;
+}
 
 .loading-publications{
     padding-top: 40px;
