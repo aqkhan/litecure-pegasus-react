@@ -7,32 +7,28 @@ import axios from 'axios';
 
 class research extends Component {
     state = {
-        researchContent:null,
+        page:null,
         err:null,
-        leadtext:null
     }
     componentWillMount(){
         axios.get(API_PATH + 'pages')
             .then((res) => {
-                console.log("ongoing research",res);
                 res.data.pages.map((item)=>{
                     if(item.type === 'default'){
-                        this.setState({researchContent: item.content,leadtext:item.leadText });
-
+                        this.setState({page: item });
                     }
                 })
-                console.log("content for support",this.state.content);
             })
             .catch(err => {
                 console.log("error", err);
             })
     }
     render() {
-        let {researchContent,leadtext} = this.state;
-        return (
+        let {page} = this.state;
+        return (page &&
             <div>
-                <ResearchHeader  leadtext={leadtext}/>
-                <ResearchContent content={researchContent} />
+                <ResearchHeader  leadtext={page.leadtext} imgUrl={page.featuredImage && page.featuredImage.url}/>
+                <ResearchContent content={page.content} />
                 <RequestDemo/>
             </div>
         )

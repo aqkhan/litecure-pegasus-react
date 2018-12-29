@@ -52,6 +52,11 @@ app.prepare().then(() => {
         app.render(req, res, actualPage, queryParams);
     });
 
+    server.get('/detail/:name', (req, res) => {
+        const actualPage = "/detail";
+        const queryParams = {name: req.params.name};
+        app.render(req, res, actualPage, queryParams);
+    });
     server.get('*', (req, res) => {
         const parsedUrl = parse(req.url, true);
         const { pathname, query = {} } = parsedUrl;
@@ -60,7 +65,8 @@ app.prepare().then(() => {
             return app.render(req, res, route.page, query);
         }
         return handle(req, res, 'index');
-    })
+    });
+
 
 
 

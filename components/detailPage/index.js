@@ -9,31 +9,26 @@ import {API_PATH} from '../apiconfig';
 
 class detailPage extends Component{
     state = {
-        employee: null,
+        page: null,
         err:null
     }
     componentWillMount(){
-        axios.get(API_PATH +'pages')
+        let {slug}= this.props;
+        axios.get(API_PATH +'pages/'+slug)
             .then((res)=>{
-                let temp=[];
-                res.data.pages.forEach((val)=>{
-                    if (val.type==="employment"){
-                        temp.push(val);
-                    }
-
-                });
-
-                this.setState({employee:temp})
-
+                this.setState({page:res.data.page});
+                console.log(this.state.page)
             })
             .catch(err=>{throw err});
     }
     render(){
-        return(
+        let {page}= this.state;
+        return(page &&
             <div>
-                <Detailheader/>
-                <DetailContent/>
-            </div>)
+            <Detailheader imgUrl={page.featuredImage && page.featuredImage.url} headerImageLable={page.headerImageLable} leadText={page.leadText}/>
+            <DetailContent content={page.content}/>
+            </div>
+            )
     }
 }
 

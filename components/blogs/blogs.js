@@ -4,7 +4,6 @@ import BlogsHeader from './blogHeader';
 import BlogCategory from './blogCategory';
 import {API_PATH} from '../apiconfig'
 import axios from 'axios';
-import PublicationCategory from "../publication/caseStudies";
 
 class blogs extends Component {
     state = {

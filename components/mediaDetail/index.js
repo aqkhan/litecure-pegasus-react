@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Link from 'next/link';
 import RequestDemo from '../requestDemo';
 import axios from "axios";
 
@@ -54,6 +55,8 @@ class MediaDetail extends Component{
                                     </div>
 
                                 </div>
+                                <div className="spec-btn-div">
+                                    <Link href={'/product/'+value.slug}><div className="spec-learn"><a>Learn More</a></div></Link></div>
                             </div>
                         </section>
                     </section>

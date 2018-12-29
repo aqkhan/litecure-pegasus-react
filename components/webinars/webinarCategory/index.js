@@ -14,13 +14,7 @@ class webinarsCategoty extends Component {
         publicationsCopy: null,
         publicationDestructure: null,
         totalPages:null,
-        final: null,
-        one: true,
-        two: true,
-        three: true,
-        regenerativeMedicine:"5c0ff50063580f122d7e750b",
-        rehabilitation:"5c0ffaeb63580f122d7e750e",
-        photobiomodulation:"5c0ff0d663580f122d7e7509"
+        final: null
     };
     async componentWillReceiveProps(nextProps) {
         let {publicationCategory, publications, page, categoryList} = nextProps;
@@ -29,22 +23,32 @@ class webinarsCategoty extends Component {
         await this.setDisplay();
     }
     setDisplay(){
-        let { regenerativeMedicine,rehabilitation,photobiomodulation } = this.state;
+        let newCheck=true;
         let temp=[];
-        this.state.publications&&this.state.publications.forEach((val)=>{
-            let check = 0;
-            val.selectTags.forEach(data=>{
-                if (check ===0){
-                    if ( data === regenerativeMedicine ||
-                        data === rehabilitation ||
-                        data === photobiomodulation
-                    ){
-                        temp.push(val);
-                        check = 1;
+        this.state.categoryList.forEach((tag)=>{
+            if (tag.check===true){
+                newCheck=false;
+            }
+        })
+
+        if(newCheck){
+            temp=this.state.publications?this.state.publications:[];
+        }
+        else {
+            this.state.publications&&this.state.publications.forEach((val)=>{
+                let check = 0;
+                val.selectTags.forEach(data=>{
+                    if (check ===0){
+                        this.state.categoryList.forEach((tag)=>{
+                            if ( data === tag.id && tag.check===true){
+                                temp.push(val);
+                                check = 1;
+                            }
+                        })
                     }
-                }
-            })
-        });
+                })
+            });
+        }
         let restructured = RestructorData(temp, 10);
         console.log("restructured",restructured);
         this.setState({publicationDestructure:restructured, final: restructured[0], totalPages: restructured.length}, function () {
@@ -59,36 +63,11 @@ class webinarsCategoty extends Component {
     }
 
     checkChange(value){
-        switch (value) {
-            case 1:
-                let one = this.state.one;
-                this.setState({one:!one});
-                if(one){
-                    this.setState({regenerativeMedicine:"nothing"},function () {
-                        this.setDisplay();
-                    })
-                }
-                else {
-                    this.setState({regenrativeMadicine:"5c0ff50063580f122d7e750b"},function () {
-                        this.setDisplay();
-                    })
-                }
-                break;
-            case 2:
-                let two = this.state.two;
-                this.setState({two:!two});
-                if(two){
-                    this.setState({rehabilitation:"nothing"},function () {
-                        this.setDisplay();
-                    })
-                }
-                else {
-                    this.setState({rehabilitation:"5c0ffaeb63580f122d7e750e"},function () {
-                        this.setDisplay();
-                    })
-                }
-                break;
-        }
+        let temp = [...this.state.categoryList];
+        let change = temp[value].check;
+        temp[value].check=!change;
+        this.setState({categoryList:temp});
+        this.setDisplay();
     }
 
     render(){
@@ -96,7 +75,7 @@ class webinarsCategoty extends Component {
         let cards=null;
         let categories = null;
         if(categoryList) {
-            categories = categoryList.map((value,index)=>(<li key={index} onClick={()=>this.checkChange(1)}><input type="checkbox" name="Regenerative Medicine" checked={value.check}/><span>{value.name}</span></li>))
+            categories = categoryList.map((value,index)=>(<li key={index} onClick={()=>this.checkChange(index)}><input type="checkbox" checked={value.check}/><span>{value.name}</span></li>))
         }
         if(final){
             cards = final.map((value,index)=>(<div key={index} className="post-casestudy">

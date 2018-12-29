@@ -7,9 +7,7 @@ class DetailContent extends Component {
         return <section className="employees">
             <div className="container">
                 <div className="detail-emp">
-                    <div className="description-text">
-                        <h1>PlaceHolder</h1>
-                        <p>Add text</p>
+                    <div className="description-text" dangerouslySetInnerHTML={{__html:this.props.content}}>
                     </div>
                 </div>
             </div>

@@ -3583,3 +3583,27 @@ a:active, a:hover{
     padding-top: 40px;
     padding-left: 50px;
 }
+.spec-btn-div{
+    display: flex;
+    justify-content: center;
+}
+.spec-learn{
+    border: solid 2px white;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 1.5px;
+    text-align: center;
+    color: #ffffff;
+    padding: 14px 45px;
+    margin: 50px 2px 35px 1px;
+    cursor: pointer;
+
+}
+.spec-learn:hover{
+    color: #8e7222d6;
+}

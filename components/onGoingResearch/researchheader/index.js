@@ -2,11 +2,11 @@ import React from 'react';
 import Router from 'next/router';
 
 const researchHeader = (props) => {
-    let {leadtext} = props;
+    let {leadtext,imgUrl} = props;
     return(
         <section className="new-home-cards">
             <section className="section-one publication-header" style={{
-                background: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)),url('/static/images/buffalo.jpg')`,
+                background: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)),url(${imgUrl})`,
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",}} >
                 <div className="third-row">
