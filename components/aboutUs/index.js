@@ -78,7 +78,7 @@ class AboutUs extends Component{
                                                 development engineers that together represent over 100 years of experience in
                                                 the field of laser development and systems</p>
                                             <div className="button">
-                                                <a href="#">BENEFITS OF LASER THERAPY</a>
+                                                <Link href="/published-paper-detail/shining-examples-three-case-studies-shed-light-on-the-widespread-benefits-of-laser-therapy"><a>BENEFITS OF LASER THERAPY</a></Link>
                                                 <Link href="/support"><a >CONTACT US </a></Link>
                                             </div>
                                         </div>
