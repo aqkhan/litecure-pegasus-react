@@ -79,7 +79,7 @@ class AboutUs extends Component{
                                                 the field of laser development and systems</p>
                                             <div className="button">
                                                 <a href="#">BENEFITS OF LASER THERAPY</a>
-                                                <a href="#">CONTACT US </a>
+                                                <Link href="/support"><a >CONTACT US </a></Link>
                                             </div>
                                         </div>
                                     </div>
