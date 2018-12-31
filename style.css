@@ -148,12 +148,15 @@ a:active, a:hover{
     list-style-type: none;
     justify-content: center;
     margin-top: -16px;
+    margin-bottom:0px;
+    padding-bottom:0px;
 }
 
 .new-header .second-row .navbar li{
     list-style-type: none;
     padding: 25px;
     text-decoration: none;
+    padding-bottom:14px;
 
 }
 .new-header .second-row .navbar li .active{
