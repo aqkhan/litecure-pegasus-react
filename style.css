@@ -451,7 +451,7 @@ a:active, a:hover{
 }
 .socialicons {
     font-size: 22px;
-    margin-left: 20px;
+    margin-left: 16px;
     color: #ffffff;
 }
 .socialicons:hover{
@@ -1357,6 +1357,7 @@ a:active, a:hover{
 .product-det .first-section .yellow-section .image-margin img{
     width:100%;
     mix-blend-mode: multiply;
+    height: 100%;
 }
 .product-det .first-section .yellow-section .image-margin h1{
     font-family: UniSansCAPS;
@@ -2701,6 +2702,7 @@ a:active, a:hover{
     position: absolute;
     right: -208px;
     top: -18px;
+    padding: 25px 20px;
 }
 .modulation-header  .photobiomodulation-header .photo-header-second p {
     font-family: AvenirNext;
@@ -2711,7 +2713,7 @@ a:active, a:hover{
     font-weight: 700;
 }
 .modulation-header  .product-image img {
-    height: 673px;
+    /*height: 673px;*/
     z-index: -1;
 }
 
