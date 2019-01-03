@@ -14,7 +14,7 @@ class research extends Component {
         axios.get(API_PATH + 'pages')
             .then((res) => {
                 res.data.pages.map((item)=>{
-                    if(item.type === 'default'){
+                    if(item.type === 'onGoingResearch'){
                         this.setState({page: item });
                     }
                 })
@@ -27,7 +27,7 @@ class research extends Component {
         let {page} = this.state;
         return (page &&
             <div>
-                <ResearchHeader  leadtext={page.leadtext} imgUrl={page.featuredImage && page.featuredImage.url}/>
+                <ResearchHeader  leadtext={page.leadtext} imgUrl={page.featuredImage && page.featuredImage.url} headerImageLabel={page.headerImageLabel}/>
                 <ResearchContent content={page.content} />
                 <RequestDemo/>
             </div>

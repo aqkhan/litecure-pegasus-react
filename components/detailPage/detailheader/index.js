@@ -19,7 +19,7 @@ class detailHeader extends Component{
                         <div className="container custom-container">
                             <div className="row flex">
                                 <div className="header-text publication-text">
-                                    <p><br/><span>{this.props.headerImageLable}</span></p>
+                                    <p><br/><span>{this.props.headerImageLabel}</span></p>
                                 </div>
                             </div>
                         </div>

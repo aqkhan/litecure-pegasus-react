@@ -25,7 +25,7 @@ class detailPage extends Component{
         let {page}= this.state;
         return(page &&
             <div>
-            <Detailheader imgUrl={page.featuredImage && page.featuredImage.url} headerImageLable={page.headerImageLable} leadText={page.leadText}/>
+            <Detailheader imgUrl={page.featuredImage && page.featuredImage.url} headerImageLabel={page.headerImageLabel} leadText={page.leadText}/>
             <DetailContent content={page.content}/>
             </div>
             )

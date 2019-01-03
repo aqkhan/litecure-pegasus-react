@@ -45,7 +45,7 @@ class  Home extends Component{
                                     <div className="container custom-container">
                                         <div className="row flex">
                                             <div className="header-text publication-text home-page">
-                                                <p><br/><span>{value.headerImageLable}</span></p>
+                                                <p><br/><span>{value.headerImageLabel}</span></p>
                                             </div>
                                         </div>
                                     </div>
@@ -77,7 +77,7 @@ class  Home extends Component{
                                 <div className="container custom-container">
                                     <div className="row flex">
                                         <div className="header-text">
-                                            <p><br/><span>{value.headerImageLable}</span></p>
+                                            <p><br/><span>{value.headerImageLabel}</span></p>
                                         </div>
                                     </div>
                                 </div>
