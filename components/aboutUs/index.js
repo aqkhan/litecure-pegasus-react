@@ -25,7 +25,7 @@ class AboutUs extends Component{
             allProducts=products.map(value=>{
                 return(
                     <div key={value._id}>
-                        <div className="col-sm-4 p-0" >
+                        <div className="col-sm-12 col-md-12 col-lg-4 p-0" >
                             <div className="image-margin">
                                 <img src={value.featuredImage && value.featuredImage.url} height="320" width="320"/>
                                 <div className="view-text">
@@ -78,7 +78,7 @@ class AboutUs extends Component{
                                                 development engineers that together represent over 100 years of experience in
                                                 the field of laser development and systems</p>
                                             <div className="button">
-                                                <a href="#">BENEFITS OF LASER THERAPY</a>
+                                                <Link href="/published-paper-detail/shining-examples-three-case-studies-shed-light-on-the-widespread-benefits-of-laser-therapy"><a>BENEFITS OF LASER THERAPY</a></Link>
                                                 <Link href="/support"><a >CONTACT US </a></Link>
                                             </div>
                                         </div>

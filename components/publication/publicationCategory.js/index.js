@@ -28,7 +28,7 @@ class PublicationCategoty extends Component {
              if (tag.check===true){
                  newCheck=false;
              }
-         })
+         });
 
          if(newCheck){
              temp=this.state.publications?this.state.publications:[];

@@ -18,7 +18,7 @@ class index extends Component{
             <section>
                 <Header type={type}/>
                 {this.props.children}
-                <Footer/>
+                <Footer test={type}/>
             </section>
         )
     }

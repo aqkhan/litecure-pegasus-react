@@ -2,63 +2,72 @@ import React, { Component } from 'react';
 import RequestDemo from '../requestDemo';
 import {API_PATH} from '../apiconfig';
 import axios from 'axios';
+import Link from "next/link";
 class TextDetail extends Component{
     state={
-        content: null
+        content: null,
     }
     componentWillMount(){
         axios.get(API_PATH + 'pages')
             .then((res) => {
-                console.log("support",res);
+                let temp=[];
                 res.data.pages.map((item)=>{
                     if(item.type === 'support'){
-                        this.setState({content: item.content});
+                        temp.push(item);
                     }
+                });
+                this.setState({content: temp});
                 })
-                console.log("content for support",this.state.content);
-            })
             .catch(err => {
                 console.log("error", err);
             })
     }
     render() {
-        return(
+        let content = null;
+        if (this.state.content){
+            content = this.state.content.map((data,index)=>{
+             if (index===0){
+                 return (<section className="classification">
+                     <section className="first-section">
+                         <div className="container custom-container">
+                             <div className="row flex">
+                                 <div className="header-text">
+                                     <p> Support </p>
+                                 </div>
+                             </div>
+                         </div>
+                         <div className="fourth-row text-area">
+                             <div className=" container">
+                                 <div className="row ">
+                                     <div className="col-sm-12 ">
+                                         <div className="learnmore-header ex-class">
+                                             <div className="data alotted-html">
+                                                 <div className="description-dev">
+                                                     <div className="publication-description"
+                                                          dangerouslySetInnerHTML={{__html: data.content}}/>
+                                                 </div>
+
+                                             </div>
+
+                                             <div className="button">
+                                                 <a href="#">TERMS IN LASER THERAPY</a>
+                                                 <Link href="/published-paper-detail/shining-examples-three-case-studies-shed-light-on-the-widespread-benefits-of-laser-therapy"><a className="benefits">BENEFITS OF LASER THERAPY</a></Link>
+                                                 <Link href="/resources"><a href="#">RESOURCES &amp; LINKS </a></Link>
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+
+                         </div>
+                     </section>
+                 </section>)
+             }
+            });
+        }
+        return (
             <div>
-                <section className="classification">
-                    <section className="first-section">
-                        <div className="container custom-container">
-                            <div className="row flex">
-                                <div className="header-text">
-                                    <p> Support </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="fourth-row text-area">
-                            <div className=" container">
-                                <div className="row ">
-                                    <div className="col-sm-12 ">
-                                        <div className="learnmore-header ex-class">
-                                            <div className="data alotted-html">
-                                                <div className="description-dev">
-                                                    <div className="publication-description"
-                                                         dangerouslySetInnerHTML={{__html: this.state.content}}/>
-                                                </div>
-
-                                            </div>
-
-                                            <div className="button">
-                                                <a href="#">TERMS IN LASER THERAPY</a>
-                                                <a href="#" className="benefits">BENEFITS OF LASER THERAPY</a>
-                                                <a href="#">RESOURCES &amp; LINKS </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </section>
-                </section>
+                {content&&content}
                 <RequestDemo/>
             </div>
         )
