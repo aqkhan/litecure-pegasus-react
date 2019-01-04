@@ -3,7 +3,7 @@
  */
 import React from 'react';
 const photomodulationHeader = (props) => {
-    let {sendData} = props;
+    let {sendData,headerImageLabel, leadText} = props;
     return(
        <section  className="modulation-header" style={{
            background: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)),url('/static/images/buffalo.jpg')`,
@@ -13,9 +13,9 @@ const photomodulationHeader = (props) => {
                <div className="container custom-container">
                    <div className="product-image">
                        <img src="/static/images/computern.png" alt=""/></div>
-                   <div className="photo-header"><p>Photobiomodulation</p></div>
+                   <div className="photo-header"><p>{headerImageLabel}</p></div>
                    <div className="photo-header-second">
-                       <p>{sendData}<br/> <span>Evidence</span>
+                       <p>{sendData}<br/> <span>{leadText}</span>
                        </p>
                    </div>
                </div>

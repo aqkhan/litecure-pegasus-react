@@ -27,7 +27,7 @@ class research extends Component {
         let {page} = this.state;
         return (page &&
             <div>
-                <ResearchHeader  leadtext={page.leadtext} imgUrl={page.featuredImage && page.featuredImage.url} headerImageLabel={page.headerImageLabel}/>
+                <ResearchHeader  leadText={page.leadText} imgUrl={page.featuredImage && page.featuredImage.url} headerImageLabel={page.headerImageLabel}/>
                 <ResearchContent content={page.content} />
                 <RequestDemo/>
             </div>

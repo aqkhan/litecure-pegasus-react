@@ -2,13 +2,24 @@ import React , {Component} from 'react';
 import RequestDemo from '../requestDemo'
 import axios from "axios";
 import Link from "next/link";
+import {API_PATH} from "../apiconfig";
 
 class AboutUs extends Component{
     state ={
-        products: null
-    }
+        products: null,
+        page:null,
+    };
 
     componentWillMount(){
+        axios.get(API_PATH +'pages')
+            .then((res)=>{
+                res.data.pages.forEach((val)=>{
+                    if (val.type==="aboutUs"){
+                        this.setState({page:val})
+                    }
+                });
+            })
+            .catch(err=>{throw err});
         axios('http://54.234.86.247:3000/api/products')
             .then((res)=>{
                 this.setState({products:res.data.products})
@@ -19,7 +30,8 @@ class AboutUs extends Component{
     }
 
     render() {
-        let {products} =  this.state;
+        let {products,page} =  this.state;
+        console.log("page",page);
         let allProducts=null;
         if (products) {
             allProducts=products.map(value=>{
@@ -39,56 +51,34 @@ class AboutUs extends Component{
                 )
         })
     }
-        return(
+        return page&&(
             <div>
                 <section className="company-profile">
-                    <section className="first-section" >
+                    <section className="first-section"
+                             style={{background: `linear-gradient(rgba(14, 13, 13, 0.77), rgba(10, 9, 9, 0.72)),
+                    url(${page.featuredImage && page.featuredImage.url})`,
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                    width: "100%",
+                    backgroundPosition: "right"}}>
                         <div className="fourth-row text-area new">
                             <div className=" container">
                                 <div className="row ">
                                     <div className="col-sm-4 p-0">
                                         <div className="PROFILE">
-                                            <h1>COMPANY PROFILE</h1>
-                                            <p>
-                                                Pegasus Therapy Laser is part of the<br/> veterinary division of LiteCure,
-                                                LLC.<br/> Combining physics, laser science, and <br/>engineering, LiteCure, LLC is
-                                                a leading<br/> medical device manufacturing company <br/>bringing advanced
-                                                laser technology and<br/> innovative solutions to the health
-                                                care<br/> industry.</p>
-
+                                            <h1>{page.headerImageLabel}</h1>
+                                            <p>{page.leadText}</p>
                                         </div>
                                     </div>
                                     <div className="col-sm-8 ">
-                                        <div className=" learnmore-header">
-
-                                            <p>
-                                                Located in Newark, Delaware, LiteCure provides expertise in design,
-                                                manufacturing, production and support. LiteCure provides highly reliable
-                                                products and the resources and tools to successfully incorporate the technology
-                                                and products into any practice.<br/><br/>
-
-                                                LiteCure is an FDA-registered manufacturer providing FDA cleared products for a
-                                                variety of medical applications. Each product has been designed and manufactured
-                                                under stringent quality control systems that are certified to meet ISO-9001 and
-                                                ISO-13485 standards for medical devices.<br/><br/>
-
-                                                With over 12 years of state-of-the-art laser development and manufacturing
-                                                expertise, LiteCure ensures its customers the best in technology and design.
-                                                LiteCure employs a highly experienced management team of research and
-                                                development engineers that together represent over 100 years of experience in
-                                                the field of laser development and systems</p>
-                                            <div className="button">
-                                                <Link href="/published-paper-detail/shining-examples-three-case-studies-shed-light-on-the-widespread-benefits-of-laser-therapy"><a>BENEFITS OF LASER THERAPY</a></Link>
-                                                <Link href="/support"><a >CONTACT US </a></Link>
-                                            </div>
-                                        </div>
+                                        <div className=" learnmore-header" dangerouslySetInnerHTML={{__html:page.content}}/>
                                     </div>
                                 </div>
                             </div>
                             <div className="container custom-container">
                                 <div className="row flex">
                                     <div className="about">
-                                        <h1>ABOUT US</h1>
+                                        <h1>{page.title}</h1>
                                     </div>
                                 </div>
                             </div>

@@ -525,17 +525,18 @@ a:active, a:hover{
     padding-left: 73px;
 
 }
-.new-request-demo .section-four .flex-custom .form-top-text{
+.new-request-demo .section-four .flex-custom p{
     font-family: 'Roboto', sans-serif;
     font-size: 28px;
     font-weight: 300;
     font-style: normal;
     font-stretch: normal;
     line-height: 1;
+    width: 100%;
     letter-spacing: -0.1px;
     color: #d8d8d8;
 }
-.new-request-demo .section-four .flex-custom input
+.new-request-demo .section-four .flex-custom p input
 {
     background: transparent;
     border:none;
@@ -1495,12 +1496,12 @@ a:active, a:hover{
 
 }
 .new-media-detail .first-section .image-section{
-    background: linear-gradient(rgba(8, 7, 7, 0.72), rgba(10, 9, 9, 0.8)), url(/static/images/donkey.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 500px;
-    min-width: 100%;
-    background-position: center;
+    /*background: linear-gradient(rgba(8, 7, 7, 0.72), rgba(10, 9, 9, 0.8)), url(/static/images/donkey.jpg);*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+    /*height: 500px;*/
+    /*min-width: 100%;*/
+    /*background-position: center;*/
 }
 .width-container{
     min-width: 1349px!important;
@@ -1592,6 +1593,10 @@ a:active, a:hover{
 
 }
 
+
+.new-media-detail .first-section .year .video-icon:hover{
+    cursor: pointer;
+}
 /*section-one:END*/
 
 
@@ -1658,7 +1663,7 @@ a:active, a:hover{
     padding-top: 30px;
 }
 
-.new-media-detail-containers .second-section .fourth-row .learnmore-header .button{
+.new-media-detail-containers .second-section .fourth-row .learnmore-header div{
     margin: 50px 2px 83px 1px;
     float: right;
 }
@@ -1678,7 +1683,12 @@ a:active, a:hover{
     margin: 0 10px;
 
 }
-.new-media-detail-containers .second-section .fourth-row .learnmore-header .cost-btn{
+
+.new-media-detail-containers .second-section .fourth-row .learnmore-header a button{
+    background: transparent;
+    border: none;
+}
+.new-media-detail-containers .second-section .fourth-row .learnmore-header a:last-child{
     background-color: #efb817;
     border: solid 2px #efb817;
 }
@@ -1710,12 +1720,12 @@ a:active, a:hover{
 
 /*.company-profile .first-section:START*/
 .company-profile .first-section{
-    background: linear-gradient(rgba(14, 13, 13, 0.77), rgba(10, 9, 9, 0.72)),  url(/static/images/white_horse_stock_4_by_phoenixs_stock.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    /*height: 1632px;*/
-    width: 100%;
-    background-position: right;
+    /*background: linear-gradient(rgba(14, 13, 13, 0.77), rgba(10, 9, 9, 0.72)),  url(/static/images/white_horse_stock_4_by_phoenixs_stock.png);*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+    /*!*height: 1632px;*!*/
+    /*width: 100%;*/
+    /*background-position: right;*/
 }
 
 .company-profile .first-section .custom-container .HEADERS{
@@ -1823,6 +1833,10 @@ a:active, a:hover{
     letter-spacing: 0.6px;
     color: #ffffff;
 }
+.company-profile .first-section .fourth-row .learnmore-header div{
+    margin: 50px 2px 83px 1px;
+    float: right;
+}
 .company-profile .first-section .fourth-row .learnmore-header .button{
     margin: 50px 2px 83px 1px;
     float: right;
@@ -1842,6 +1856,11 @@ a:active, a:hover{
     padding: 14px 45px;
     margin: 0 10px;
 
+}
+
+.company-profile .first-section .fourth-row .learnmore-header button{
+    background: transparent;
+    border: none;
 }
 .company-profile .first-section .fourth-row .about{
     margin-top: 12%;

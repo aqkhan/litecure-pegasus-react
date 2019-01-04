@@ -3,7 +3,6 @@ import Link from 'next/link';
 class Footer extends Component{
     state={
         check:false,
-        test:null
     };
     componentWillMount() {
         if (typeof document !== 'undefined') {

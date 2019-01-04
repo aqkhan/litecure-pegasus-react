@@ -58,11 +58,6 @@ app.prepare().then(() => {
         app.render(req, res, actualPage, queryParams);
     });
 
-    server.get('/products', (req, res) => {
-        const actualPage = "/products";
-        const queryParams = {name: req.params.name};
-        app.render(req, res, actualPage, queryParams);
-    });
 
 
     server.get('*', (req, res) => {

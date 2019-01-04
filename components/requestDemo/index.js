@@ -1,48 +1,60 @@
 import React , {Component} from 'react';
+import axios from "axios";
+import {API_PATH} from "../apiconfig";
 
 class RequestDemo extends Component{
-
+    state = {
+        page:null,
+    };
+    componentWillMount() {
+        axios.get(API_PATH + 'pages')
+            .then((res) => {
+                let temp = [];
+                res.data.pages.forEach((val) => {
+                    if (val.type === "requestADemo") {
+                        temp.push(val);
+                    }
+                });
+                this.setState({page: temp})
+            })
+            .catch(err => {
+                throw err
+            });
+    }
     render() {
-        return (
-            <div>
-                <section className="new-request-demo ">
+        let page=null;
+        if (this.state.page) {
+            page = this.state.page.map((value, index)=> {
+                return <section className="new-request-demo " key={index}>
                     <section className="section-four">
-                        <div className="section-four-background"></div>
+                        <div className="section-four-background"/>
                         <div className="container">
                             <div className="row flex requestitbro">
-                                <p> REQUEST <span> A DEMO</span></p>
+                                <p>{value.headerImageLabel}</p>
                             </div>
                             <div className="small-upper-line flex">
-                                <div className="line"></div>
+                                <div className="line"/>
                             </div>
                             <div className="row flex">
                                 <div className="taketheflowbro">
                                     <p>
-                                        See what makes Pegasus equine lasers different from anything else
-                                        on the market today.<br/> Schedule a demo at your offices, or come pay us a visit.
-                                        Either way, we know you'll like what you see.
+                                        {value.leadText}
                                     </p>
                                 </div>
                             </div>
                             <div className="row">
-                                <div className="col-12 flex-custom ">
-                                    <p className="form-top-text">Set up your demonstration today!</p>
-                                    <input type="text" placeholder="Your Name"/>
-                                    <input type="email" placeholder="Your E-mail"/>
-                                    <input type="number" placeholder="Work Phone"/>
-                                    <input type="text" placeholder="Business Name "/>
-                                    <input type="text" placeholder="City and State"/>
-                                    <a href="#">
-                                        SEND
-                                    </a>
-                                </div>
+                                <div className="col-12 flex-custom " dangerouslySetInnerHTML={{__html:value.content}}/>
                             </div>
-
                         </div>
-
-
                     </section>
                 </section>
+            })
+        }
+        return (
+            <div>
+                {
+                    page&&page
+                }
                 <section className="new-subscribe">
                     <section className="section-five">
                         <div className="custom-container container">

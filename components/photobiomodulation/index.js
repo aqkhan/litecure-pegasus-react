@@ -10,8 +10,11 @@ import TempleteSix from "./templetes/six";
 import TempleteThree from "./templetes/three";
 import TempleteFour from "./templetes/four";
 import TempleteSeven from "./templetes/seven";
+import axios from "axios";
+import {API_PATH} from "../apiconfig";
 class PhotobiomodulationDetail extends Component {
     state = {
+        page:null,
         sendtoHeader: "What is Photobiomodulation?",
         temp1:true,
         temp2:false,
@@ -28,6 +31,21 @@ class PhotobiomodulationDetail extends Component {
         six: "",
         seven: ""
     };
+    componentWillMount() {
+        axios.get(API_PATH + 'pages')
+            .then((res) => {
+                let temp = [];
+                res.data.pages.forEach((val) => {
+                    if (val.type === "photobiomodulation") {
+                        temp.push(val);
+                    }
+                });
+                this.setState({page: temp})
+            })
+            .catch(err => {
+                throw err
+            });
+    }
 
     changeContent(val) {
         switch (val) {
@@ -169,10 +187,10 @@ class PhotobiomodulationDetail extends Component {
     }
 
     render() {
-        let {sendtoHeader, one, two, three, four, five, six, seven, temp1,temp2,temp3,temp4, temp5,temp6,temp7} = this.state;
-        return (
+        let {page,sendtoHeader, one, two, three, four, five, six, seven, temp1,temp2,temp3,temp4, temp5,temp6,temp7} = this.state;
+        return page&&(
             <div>
-                <PhotobiomodulationHeader sendData={sendtoHeader}/>
+                <PhotobiomodulationHeader headerImageLabel={page[0].headerImageLabel} leadText={page[0].leadText} sendData={sendtoHeader}/>
                 <section className="photobiomodulation">
                     <section className="blog-content-blogpage-only blog-content article-area">
                         <div className="article-container">
