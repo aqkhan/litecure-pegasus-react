@@ -8,7 +8,7 @@ class Header extends Component{
     }
 
     handleScroll() {
-        if ($(window).scrollTop() >= 86) {
+        if ($(window).scrollTop() >= 86.5) {
             $('.second-row').addClass('fixed-header');
         }
         else {

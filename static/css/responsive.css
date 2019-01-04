@@ -27,6 +27,7 @@
         height: 20px;
     }
     .socialicons:first-child{
+        margin-right: 16px;
         margin-left: 0px;
     }
     .menu-button  div{
@@ -169,7 +170,7 @@
     }
 
     .redcolor p{
-        margin-top: 30px;
+        margin-top: 0px;
         font-size: 20px;
     }
 
@@ -296,9 +297,9 @@
       width: 100%;
       margin-top: 20%;
      }
-     .first-section .text-area{
-        margin-top: 37%;
-     }
+     /*.first-section .text-area{*/
+        /*margin-top: 37%;*/
+     /*}*/
      
      .first-section .fourth-row .learnmore-header{
         padding-left: 0px;
@@ -404,9 +405,9 @@
     height: auto;
     padding-top: 1px;
     }
-    .first-section .text-area {
-    margin-top: 37%;
-    }
+    /*.first-section .text-area {*/
+    /*margin-top: 37%;*/
+    /*}*/
     .first-section .fourth-row .learnmore-header a {
     margin-top: 20px;
     font-size: 8px;
@@ -942,9 +943,9 @@
         width: 6%;
         height: 20px;
     }
-    .socialicons:first-child{
-        margin-left: 0px;
-    }
+    /*.socialicons:first-child{*/
+        /*margin-left: 0px;*/
+    /*}*/
 
     .menu-button  div{
         border: 1px solid white;
@@ -1280,7 +1281,7 @@
         font-size: 30px;
     }
     .first-section .year .video-icon{
-        margin: 32% 0 0 57%;
+        margin: 32% 0 0 0%;
     }
     .second-section .fourth-row .learnmore-header .button{
         display: flex;
@@ -1705,7 +1706,7 @@
         font-size: 30px;
     }
     .first-section .year .video-icon{
-        margin: 32% 0 0 57%;
+        margin: 32% 0 0 0%;
     }
     .second-section .fourth-row .learnmore-header .button{
         display: flex;
@@ -1741,7 +1742,7 @@
     padding-top: 1px;
     }
     .first-section .text-area {
-    margin-top: 8%;
+    margin-top: 0%;
     }
     .first-section .fourth-row .learnmore-header a {
     margin-top: 20px;
@@ -1984,10 +1985,10 @@
         font-size: 18px;
     }
 
-    .redcolor p{
-        margin-top: 30px;
-        font-size: 20px;
-    }
+    /*.redcolor p{*/
+        /*margin-top: 30px;*/
+        /*font-size: 20px;*/
+    /*}*/
 
     .footer-menu1 .text-bold{
         font-size: 13px;
@@ -2078,11 +2079,11 @@
      /*==================== page product Det responsive START ======================*/
      /*first section START*/
      .first-section .header-image{
-        margin-top: 10%;
-     }
-     .first-section .text-area{
-        margin-top: 31%;
-     }
+        margin-top: 10%;}
+     /*}*/
+     /*.first-section .text-area{*/
+        /*margin-top: 31%;*/
+     /*}*/
      .first-section .fourth-row .learnmore-header a{
         padding: 14px 18px;
      }
@@ -2729,10 +2730,10 @@
         font-size: 18px;
     }
 
-    .redcolor p{
-        margin-top: 30px;
-        font-size: 20px;
-    }
+    /*.redcolor p{*/
+        /*margin-top: 30px;*/
+        /*font-size: 20px;*/
+    /*}*/
 
     .footer-menu1 .text-bold{
         font-size: 13px;

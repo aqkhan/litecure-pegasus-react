@@ -37,7 +37,7 @@ class AboutUs extends Component{
             allProducts=products.map(value=>{
                 return(
                     <div key={value._id}>
-                        <div className="col-sm-4 p-0" >
+                        <div className="col-sm-12 col-md-12 col-lg-4 p-0" >
                             <div className="image-margin">
                                 <img src={value.featuredImage && value.featuredImage.url} height="320" width="320"/>
                                 <div className="view-text">

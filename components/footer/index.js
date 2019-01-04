@@ -52,10 +52,10 @@ class Footer extends Component{
         return(
             <footer className="footer">
                 <div className="container give-bottom">
-                    <div className="container">
-                        <div className="container">
+                    <div className="container responsive-container">
+                        <div className="container responsive-container">
                             <div className=" responsive-flex row mt-5">
-                                <div className="col-sm-2 responsive-no-off all-width col-2 mt-5">
+                                <div className="col-sm-2 responsive-no-off all-width col-2 mt-5 responsiv-foot">
                                     <div className="redcolor"><p className="make-bold"><strong>Websites</strong></p></div>
                                     <div className="footer-menu">
                                         <div><a href="#">companion</a></div>
@@ -64,7 +64,7 @@ class Footer extends Component{
                                         <div><a href="#">Corporate</a></div>
                                     </div>
                                 </div>
-                                <div className="col-sm-2 col-2 all-width mt-5">
+                                <div className="col-sm-2 col-2 all-width mt-5 responsiv-foot">
                                     <div className="redcolor"><p className="make-bold"><strong>LiteCure</strong></p></div>
                                     <div className="footer-menu">
                                         <div><Link href="/about-us"><a>About US</a></Link></div>
@@ -75,7 +75,7 @@ class Footer extends Component{
                                         <div><Link href="/employees"><a>Careers</a></Link></div>
                                     </div>
                                 </div>
-                                <div className="col-md-3 all-width mt-5">
+                                <div className="col-md-3 all-width mt-5 responsiv-foot">
                                     <div className="redcolor"><p className="make-bold"><strong>Facebook</strong></p></div>
 
                                     <div className="footer-menu">
@@ -94,7 +94,7 @@ class Footer extends Component{
                                             </div>}
                                     </div>
                                 </div>
-                                <div className="col-sm-2 col-2 social-icons mt-5">
+                                <div className="col-sm-2 col-2 social-icons mt-5 responsiv-foot">
                                     <Link href="https://www.linkedin.com/company/litecure-llc"><a><i className="fa fa-linkedin-square redcolor socialicons socialicons1" /></a></Link>
                                     <Link href="https://twitter.com/PegasusLaser"><a><i className="fa fa-twitter redcolor socialicons socialicons1"/></a></Link>
                                     <Link href="mailto:customer.service@litecure.com"><a><i className="fa fa-envelope redcolor  socialicons socialicons1" /></a></Link>

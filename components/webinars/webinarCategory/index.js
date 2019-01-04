@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import Link from 'next/link';
 import ReactPaginate from 'react-paginate';
-import {configureAnchors}  from 'react-scrollable-anchor';
 import { RestructorData } from "../../functions";
 import ContentLoader  from 'react-content-loader'
 import $ from "jquery";
