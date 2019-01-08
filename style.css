@@ -59,6 +59,9 @@ a:active, a:hover{
 .for-responsive-only{
     /*display:none;*/
 }
+.fb_iframe_widget iframe{
+    max-width: 310px;
+}
 .flex {
     display:flex;
     justify-content: center;
@@ -3653,6 +3656,13 @@ a:active, a:hover{
     .show-header{
         display: block;
     }
+    .new-media-detail-containers .second-section .fourth-row .learnmore-header div{
+        display: flex;
+    }
+    .new-media-detail-containers .second-section .fourth-row .learnmore-header a{
+        padding: unset;
+        font-size: 10px;
+    }
     .new-header .HEADERS .col-7 img {
         width: auto;
         height: 26px;
@@ -4597,6 +4607,12 @@ a:active, a:hover{
 
         padding:11px;
         padding-top: 23px;
+    }
+    .new-media-detail-containers .second-section .fourth-row .learnmore-header div{
+        display: flex;
+    }
+    .new-media-detail-containers .second-section .fourth-row .learnmore-header a{
+        padding:3px 45px;
     }
     .flex-end-row {
         justify-content: flex-start;
