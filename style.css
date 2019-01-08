@@ -3654,6 +3654,7 @@ a:active, a:hover{
     min-width: 288px;
 }
 @media (max-width: 479px) and (min-width: 320px){
+
     .res-div{
         width:100%;
         padding-left:0px!important;
@@ -3894,13 +3895,18 @@ a:active, a:hover{
         width: 79%;
     }
     .product-det .first-section .yellow-section .prodct{
-        font-size:69.4px;
+        font-size:61.4px;
     }
     .product-det .first-section .yellow-section .image-margin{
         width:auto;
     }
     .cards-section .Second-section .image-container{
-  margin: 5px 11px;
+        margin: 5px 0px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     .product-det .first-section .fourth-row .learnmore-header .button{
         float:unset;
@@ -3941,7 +3947,36 @@ a:active, a:hover{
 
     .inside-list-3 {
         padding-right: 9px!important;
-        padding-top: 31px;}
+        padding-top: 31px;
+    }
+    .header-image{
+        width: 100%;
+    }
+    .product-det .first-section .yellow-section .view-text{
+        width:91%;
+    }
+    .cards-section .Second-section .image-container .image-overlay{
+        width: 251px;
+        left: 62px;
+    }
+    .cards-section .Second-section .image-container .image{
+        max-width: 250px!important;
+        min-height:200px;
+    }
+    .cards-section .Second-section .image-container .overlay{
+        width: 200px;
+        height: 145px;
+        left: 70px;
+    }
+    .cards-section .Second-section .image-container .text h5{
+        font-size:25px
+    }
+    .cards-section .Second-section .image-container .text p{
+        padding:33px 0px 0px 20px;
+    }
+    .fb_iframe_widget_fluid span {
+        width: 305px!important;
+    }
 }
 
 @media (max-width: 767px) and (min-width: 685px){
@@ -4169,6 +4204,9 @@ a:active, a:hover{
 
 }
 @media (max-width: 574px) and (min-width: 480px){
+    .fb_iframe_widget_fluid span {
+        width: 305px!important;
+    }
     .res-div{
         width:100%;
         padding-left:0px!important;
@@ -4605,6 +4643,9 @@ a:active, a:hover{
 
 }
 @media (max-width: 991px) and (min-width: 768px){
+    .product-det .first-section .yellow-section .prodct{
+        font-size: 158.4px;
+    }
     .new-header .HEADERS .col-7 img {
         width: auto;
         height: 26px;
@@ -4857,13 +4898,31 @@ a:active, a:hover{
     }
 @media (max-width: 574px) and (min-width: 411px){
     .cards-section .Second-section .image-container{
-        margin:5px 40px ;
+        /*margin:5px 40px ;*/
     }
     .childlist{
         margin-top: 10px;
     }
 }
 @media (max-width: 1199px) and (min-width: 1024px){
+
+    .cards-section .Second-section .image-container .image {
+        max-width: 257px;
+        min-height: 237px;
+    }
+    .cards-section .Second-section .image-container .text p {
+        padding: 30px 0 0 20px;
+    }
+    .cards-section .Second-section .image-container .overlay {
+        width: 257px;
+        height: 237px;
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+    .cards-section .Second-section .image-container .image-overlay{
+        width:257px;
+    }
+
     .new-header .HEADERS .col-7 img {
         width: auto;
         height: 26px;
