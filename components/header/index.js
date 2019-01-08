@@ -528,7 +528,7 @@ responsiveHeader=()=>{
                                             onMouseLeave={() => this.setState({dropdown: false})}><span
                                             className={evidence}><a>Evidence</a></span>
                                             {dropdown && <ul className="childlist">
-                                                <div className="triangle-up"/>
+                                                {/*<div className="triangle-up"/>*/}
                                                 {/*<li onClick={() => this.publicationDropdownFunc()}><span*/}
                                                     {/*className={publications}><a>Publications</a></span>*/}
                                                     {/*{publicationDropdown && <ul>*/}
