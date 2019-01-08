@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Head from "next/head";
 import $ from "jquery";
 class Header extends Component {
+
     componentDidMount() {
         window.addEventListener('scroll', this.handleScroll);
     }
@@ -39,6 +40,8 @@ class Header extends Component {
         dropdown: false,
         wdropdown: false,
         publicationDropdown: false,
+        empowerDsDeliverySystemDropDown:false,
+        ptcDropDown:false,
         showHeaderList:'hide-header',
 
     };
@@ -58,7 +61,7 @@ class Header extends Component {
         let {publicationDropdown} = this.state
         this.setState({publicationDropdown: !publicationDropdown})
     }
-responsiveHeader=()=>{
+    responsiveHeader=()=>{
         if (this.state.showHeaderList === 'hide-header'){
             this.setState({showHeaderList:'show-header'})
         }
@@ -66,7 +69,7 @@ responsiveHeader=()=>{
             this.setState({showHeaderList:'hide-header'})
         }
         console.log('function-hit');
-};
+    };
     changeHover(type) {
         switch (type) {
             case "product":
@@ -425,7 +428,7 @@ responsiveHeader=()=>{
     }
 
     render() {
-        let {products, ptc, empowerDsDeliverySystem, about, evidence, publications, wdropdown, education, publishedPapers, ongoingresearch, blogs, resources, support, employees, advisoryboard, webinars, caseStudies, articles, photobiomodulation, productDropDown, dropdown, publicationDropdown} = this.state;
+        let {products, ptc, ptcDropDown, empowerDsDeliverySystem, empowerDsDeliverySystemDropDown, about, evidence, publications, wdropdown, education, publishedPapers, ongoingresearch, blogs, resources, support, employees, advisoryboard, webinars, caseStudies, articles, photobiomodulation, productDropDown, dropdown, publicationDropdown} = this.state;
         return (
             <div>
                 <Head>
@@ -477,56 +480,57 @@ responsiveHeader=()=>{
                             <div className={"container showhide custom-container "  +  this.state.showHeaderList}>
                                 <div className="row  justify-center align-center">
                                     <ul className="responsive-column navbar flex-row nav-color">
-                                        <li onMouseEnter={() => this.setState({productDropDown: true})}
-                                            onMouseLeave={() => this.setState({productDropDown: false})}><span
-                                            className={products}><Link href="/products"><a>PRODUCTS</a></Link></span>
-                                            {productDropDown && <ul className="childlist childlist-first">
+                                        <li onMouseLeave={() => this.setState({productDropDown: false})}><span
+                                            className={products}><Link href="/products"><a onMouseEnter={() => this.setState({productDropDown: true})}>PRODUCTS</a></Link></span>
+                                             <ul className="childlist childlist-first">
                                                 {/*<div className="triangle-up"/>*/}
                                                 {/*<li ><span><img src="https://rs-cms.s3.amazonaws.com/pics/4HWnKn12zXWvEs6-.png"/></span>*/}
                                                 {/*<span className={empowerDsDeliverySystem}><Link href={"/product/empower-ds-delivery-system"}><a>EMPOWER DS DELIVERY SYSTEM</a></Link></span></li>*/}
                                                 {/*<li ><span><img src="https://rs-cms.s3.amazonaws.com/pics/nwQkU1NKyZByRecL.png"/></span>*/}
                                                 {/*<span className={ptc}><Link href={"/product/ptc"}><a>PEGASUS THERAPY COMPACT</a></Link></span></li>*/}
                                                 <li>
-                                                    <div className="header-list-div-1">
-                                                        <div className="header-list-main-div-1">
+                                                    {
+                                                        productDropDown &&
+                                                        <div className="header-list-div-1">
+                                                        <div className="header-list-main-div-1" onMouseLeave={() => this.setState({productDropDown: false})}>
                                                             <div className="inside-list">
                                                                 <ul className="header-main-ul">
-
-                                                                    <li><a>EMPOWER DS DELIVERY SYSTEM</a></li>
-                                                                    <li><a>PEGASUS THERAPY COMPACT</a></li>
+                                                                    <li><span className={empowerDsDeliverySystem} onMouseEnter={()=>this.setState({empowerDsDeliverySystemDropDown:true})} onMouseLeave={()=>this.setState({empowerDsDeliverySystemDropDown:false})}><Link href={"/product/empower-ds-delivery-system"}><a>EMPOWER DS DELIVERY SYSTEM</a></Link></span></li>
+                                                                    <li><span className={ptc} onMouseEnter={()=>this.setState({ptcDropDown:true})} onMouseLeave={()=>this.setState({ptcDropDown:false})}><Link href={"/product/ptc"}><a>PEGASUS THERAPY COMPACT</a></Link></span></li>
                                                                 </ul>
                                                             </div>
-                                                            <div className="header-list-hr"></div>
-                                                            <div className="inside-list-two-1">
-                                                                {/*<ul>*/}
-                                                                {/*<li><a>PUBLISHED PAPERS</a></li>*/}
-                                                                {/*<li><a>CASE STUDIES</a></li>*/}
-                                                                {/*<li><a>ARTICLES</a></li>*/}
+                                                            {
+                                                                empowerDsDeliverySystemDropDown&&
+                                                                <div className="header-line-div">
+                                                                <div className="header-list-hr"/>
+                                                                <div className="inside-list-two-1">
+                                                                    <div className="img-div-h-list">
+                                                                        <img src="/static/images/2018-09-12.png"/>
+                                                                    </div>
+                                                                    <div className="product-detail-div">
+                                                                        <p>Empower DS provides the versatility you need to treat your toughest cases. Four application- specific treatment heads, the patented laser-contact ball and the toughest fiber available make Pegasus therapy lasers clinically practical and ruggedly durable.</p></div>
 
-
-                                                                {/*</ul>*/}
-                                                                <div className="img-div-h-list"></div>
-
-                                                                <div className="product-detail-div">
-                                                                    <p className="product-detail-p">Lorem Ipsum is
-                                                                        simply dummy text of the printing and type
-                                                                        setting industry. Lorem Ipsum has been the
-                                                                        industry's standard dummy text ever since the
-                                                                        1500s, when an unknown printer took a galley of
-                                                                        type and scrambled it to make a type spec
-                                                                        imen book. It has survived not only five
-                                                                        centuries, but also the leap into
-                                                                        electronic </p></div>
-
+                                                                </div>
                                                             </div>
+                                                            }{ptcDropDown&&<div className="header-line-div">
+                                                                <div className="header-list-hr"/>
+                                                                <div className="inside-list-two-1">
+                                                                    <div className="img-div-h-list">
+                                                                        <img src="/static/images/ptc-400px.png"/>
+                                                                    </div>
+                                                                    <div className="product-detail-div">
+                                                                        <p>Powerful, safe, and easy-to-use, this doctor-prescribed modality effectively treats a wide variety of conditions including pre-surgical, post-surgical, acute, and chronic disease states.</p></div>
+
+                                                                </div>
+                                                            </div>
+                                                        }
                                                         </div>
-                                                    </div>
+                                                    </div>}
                                                 </li>
-                                            </ul>}
+                                            </ul>
                                         </li>
-                                        <li onMouseEnter={() => this.setState({dropdown: true})}
-                                            onMouseLeave={() => this.setState({dropdown: false})}><span
-                                            className={evidence}><a>Evidence</a></span>
+                                        <li onMouseLeave={() => this.setState({dropdown: false})}><span
+                                            className={evidence} onMouseEnter={() => this.setState({dropdown: true})}><a>Evidence</a></span>
                                             {dropdown && <ul className="childlist">
                                                 {/*<div className="triangle-up"/>*/}
                                                 {/*<li onClick={() => this.publicationDropdownFunc()}><span*/}
@@ -551,45 +555,47 @@ responsiveHeader=()=>{
                                                 {/*<li><span className={ongoingresearch}><Link href="/ongoingresearch"><a>On Going Research</a></Link></span>*/}
                                                 {/*</li>*/}
                                                      <li><div className="header-list-div-2">
-                                                     <div className="header-list-main-div-2">
+                                                     <div className="header-list-main-div-2" onMouseLeave={() => this.setState({dropdown: false})}>
                                                      <div className="inside-list">
                                                      <ul className="header-main-ul">
 
-                                                     <li><a>PUBLICATIONS</a></li>
-                                                     <li><a>PHOTOBIOMODULATION</a></li>
-                                                     <li><a>ADVISORY BOARD</a></li>
-                                                 <li><a>On GOING SEARCH</a></li>
+                                                         <li onClick={() => this.publicationDropdownFunc()}><span className={publications}><a>PUBLICATIONS</a></span></li>
+                                                         <li><span className={photobiomodulation}><Link href="/photobiomodulation"><a>PHOTOBIOMODULATION</a></Link></span></li>
+                                                         <li><span className={advisoryboard}><Link href="/advisory-board-members"><a>ADVISORY BOARD</a></Link></span></li>
+                                                         <li><span className={ongoingresearch}><Link href="/ongoingresearch"><a>On GOING SEARCH</a></Link></span></li>
                                                  </ul>
                                                  </div>
-                                                 <div className="header-list-hr"></div>
-                                                     <div className="inside-list-two">
-                                                     <ul>
-                                                     <li><a>PUBLISHED PAPERS</a></li>
-                                                 <li><a>CASE STUDIES</a></li>
-                                                 <li><a>ARTICLES</a></li>
-
-
-                                                 </ul>
-                                                 </div>
+                                                         {publicationDropdown &&
+                                                         <div className="header-line-div">
+                                                             <div className="header-list-hr"/>
+                                                             <div className="inside-list-two">
+                                                                 <ul>
+                                                                     <li><span className={publishedPapers}><Link href="/published-papers"><a>PUBLISHED PAPERS</a></Link></span></li>
+                                                                     <li><span className={caseStudies}><Link href="/casestudies"><a>CASE STUDIES</a></Link></span></li>
+                                                                     <li><span className={articles}><Link href="/articles"><a>ARTICLES</a></Link></span></li>
+                                                                 </ul>
+                                                             </div>
+                                                         </div>}
                                                  </div>
                                                  </div></li>
                                             </ul>}
                                         </li>
                                         <li><span className={blogs}><Link href="/blogs"><a>Blog</a></Link></span></li>
-                                        <li onMouseEnter={() => this.setState({wdropdown: true})}
-                                            onMouseLeave={() => this.setState({wdropdown: false})}>
-                                            <span className={education}><a >Education</a></span>
-                                            {wdropdown && <ul className="childlist">
+                                        <li onMouseLeave={() => this.setState({wdropdown: false})}>
+                                            <span className={education} onMouseEnter={() => this.setState({wdropdown: true})}><a >Education</a></span>
+                                            {
+                                                wdropdown &&
+                                                <ul className="childlist">
                                                 {/*<div className="triangle-up"/>*/}
 
                                                 {/*<li><span className={webinars}><Link href="/webinars"><a>Webinars</a></Link></span></li>*/}
                                                 <li>
                                                     <div className="header-list-div-3">
-                                                        <div className="header-list-main-div-3">
+                                                        <div className="header-list-main-div-3" onMouseLeave={() => this.setState({wdropdown: false})}>
                                                             <div className="inside-list-3">
                                                                 <ul className="header-main-ul">
 
-                                                                    <li><a>Webinar</a></li>
+                                                                    <li><span className={webinars}><Link href="/webinars"><a>Webinar</a></Link></span></li>
 
                                                                 </ul>
                                                             </div>
