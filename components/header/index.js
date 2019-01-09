@@ -590,34 +590,35 @@ class Header extends Component {
                                             </ul>}
                                         </li>
                                         <li><span className={blogs}><Link href="/blogs"><a>Blog</a></Link></span></li>
-                                        <li onMouseLeave={() => this.setState({wdropdown: false})}>
-                                            <span className={education} onMouseEnter={() => this.setState({wdropdown: true})}><a >Education</a></span>
-                                            {
-                                                wdropdown &&
-                                                <ul className="childlist">
-                                                {/*<div className="triangle-up"/>*/}
+                                        <li><span className={webinars}><Link href="/webinars"><a>Webinar</a></Link></span></li>
+                                        {/*<li onMouseLeave={() => this.setState({wdropdown: false})}>*/}
+                                            {/*<span className={education} onMouseEnter={() => this.setState({wdropdown: true})}><a >Education</a></span>*/}
+                                            {/*{*/}
+                                                {/*wdropdown &&*/}
+                                                {/*<ul className="childlist">*/}
+                                                {/*/!*<div className="triangle-up"/>*!/*/}
 
-                                                {/*<li><span className={webinars}><Link href="/webinars"><a>Webinars</a></Link></span></li>*/}
-                                                <li>
-                                                    <div className="header-list-div-3">
-                                                        <div className="close-btn-div">
-                                                            <i class="fa fa-times"></i>
-                                                        </div>
-                                                        <div className="header-list-main-div-3" onMouseLeave={() => this.setState({wdropdown: false})}>
+                                                {/*/!*<li><span className={webinars}><Link href="/webinars"><a>Webinars</a></Link></span></li>*!/*/}
+                                                {/*<li>*/}
+                                                    {/*<div className="header-list-div-3">*/}
+                                                        {/*<div className="close-btn-div">*/}
+                                                            {/*<i class="fa fa-times"></i>*/}
+                                                        {/*</div>*/}
+                                                        {/*<div className="header-list-main-div-3" onMouseLeave={() => this.setState({wdropdown: false})}>*/}
 
-                                                            <div className="inside-list-3">
+                                                            {/*<div className="inside-list-3">*/}
 
-                                                                <ul className="header-main-ul">
+                                                                {/*<ul className="header-main-ul">*/}
 
-                                                                    <li><span className={webinars}><Link href="/webinars"><a>Webinar</a></Link></span></li>
+                                                                    {/*<li><span className={webinars}><Link href="/webinars"><a>Webinar</a></Link></span></li>*/}
 
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ul>}
-                                        </li>
+                                                                {/*</ul>*/}
+                                                            {/*</div>*/}
+                                                        {/*</div>*/}
+                                                    {/*</div>*/}
+                                                {/*</li>*/}
+                                            {/*</ul>}*/}
+                                        {/*</li>*/}
                                         <li><span className={resources}><Link href="/resources"><a>RESOURCES</a></Link></span>
                                         </li>
                                         <li><span className={about}><Link href="/about-us"><a>About</a></Link></span>
