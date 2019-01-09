@@ -492,9 +492,9 @@ class Header extends Component {
                                                     {
                                                         productDropDown &&
                                                         <div className="header-list-div-1">
-                                                            <div className="close-btn-div">
-                                                                <i class="fa fa-times"></i>
-                                                            </div>
+                                                            {/*<div className="close-btn-div">*/}
+                                                                {/*<i class="fa fa-times"></i>*/}
+                                                            {/*</div>*/}
                                                         <div className="header-list-main-div-1" onMouseLeave={() => this.setState({productDropDown: false})}>
                                                             <div className="inside-list">
 
@@ -560,9 +560,9 @@ class Header extends Component {
                                                 {/*<li><span className={ongoingresearch}><Link href="/ongoingresearch"><a>On Going Research</a></Link></span>*/}
                                                 {/*</li>*/}
                                                      <li><div className="header-list-div-2">
-                                                         <div className="close-btn-div">
-                                                             <i class="fa fa-times"></i>
-                                                         </div>
+                                                         {/*<div className="close-btn-div">*/}
+                                                             {/*<i class="fa fa-times"></i>*/}
+                                                         {/*</div>*/}
                                                      <div className="header-list-main-div-2" onMouseLeave={() => this.setState({dropdown: false})}>
 
                                                      <div className="inside-list">
@@ -600,9 +600,9 @@ class Header extends Component {
                                                 {/*<li><span className={webinars}><Link href="/webinars"><a>Webinars</a></Link></span></li>*/}
                                                 <li>
                                                     <div className="header-list-div-3">
-                                                        <div className="close-btn-div">
-                                                            <i class="fa fa-times"></i>
-                                                        </div>
+                                                        {/*<div className="close-btn-div">*/}
+                                                            {/*<i class="fa fa-times"></i>*/}
+                                                        {/*</div>*/}
                                                         <div className="header-list-main-div-3" onMouseLeave={() => this.setState({wdropdown: false})}>
 
                                                             <div className="inside-list-3">
