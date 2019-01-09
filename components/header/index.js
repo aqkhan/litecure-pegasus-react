@@ -481,7 +481,7 @@ class Header extends Component {
                                 <div className="row  justify-center align-center">
                                     <ul className="responsive-column navbar flex-row nav-color">
                                         <li onMouseLeave={() => this.setState({productDropDown: false})}><span
-                                            className={products}><Link href="/products"><a onMouseEnter={() => this.setState({productDropDown: true})}>PRODUCTS</a></Link></span>
+                                            className={products} ><Link href="/products"><a onMouseEnter={() => this.setState({productDropDown: true})}>PRODUCTS</a></Link></span>
                                              <ul className="childlist childlist-first">
                                                 {/*<div className="triangle-up"/>*/}
                                                 {/*<li ><span><img src="https://rs-cms.s3.amazonaws.com/pics/4HWnKn12zXWvEs6-.png"/></span>*/}
@@ -492,9 +492,14 @@ class Header extends Component {
                                                     {
                                                         productDropDown &&
                                                         <div className="header-list-div-1">
+                                                            <div className="close-btn-div">
+                                                                <i class="fa fa-times"></i>
+                                                            </div>
                                                         <div className="header-list-main-div-1" onMouseLeave={() => this.setState({productDropDown: false})}>
                                                             <div className="inside-list">
+
                                                                 <ul className="header-main-ul">
+
                                                                     <li><span className={empowerDsDeliverySystem} onMouseEnter={()=>this.setState({empowerDsDeliverySystemDropDown:true})} onMouseLeave={()=>this.setState({empowerDsDeliverySystemDropDown:false})}><Link href={"/product/empower-ds-delivery-system"}><a>EMPOWER DS DELIVERY SYSTEM</a></Link></span></li>
                                                                     <li><span className={ptc} onMouseEnter={()=>this.setState({ptcDropDown:true})} onMouseLeave={()=>this.setState({ptcDropDown:false})}><Link href={"/product/ptc"}><a>PEGASUS THERAPY COMPACT</a></Link></span></li>
                                                                 </ul>
@@ -555,7 +560,11 @@ class Header extends Component {
                                                 {/*<li><span className={ongoingresearch}><Link href="/ongoingresearch"><a>On Going Research</a></Link></span>*/}
                                                 {/*</li>*/}
                                                      <li><div className="header-list-div-2">
+                                                         <div className="close-btn-div">
+                                                             <i class="fa fa-times"></i>
+                                                         </div>
                                                      <div className="header-list-main-div-2" onMouseLeave={() => this.setState({dropdown: false})}>
+
                                                      <div className="inside-list">
                                                      <ul className="header-main-ul">
 
@@ -591,8 +600,13 @@ class Header extends Component {
                                                 {/*<li><span className={webinars}><Link href="/webinars"><a>Webinars</a></Link></span></li>*/}
                                                 <li>
                                                     <div className="header-list-div-3">
+                                                        <div className="close-btn-div">
+                                                            <i class="fa fa-times"></i>
+                                                        </div>
                                                         <div className="header-list-main-div-3" onMouseLeave={() => this.setState({wdropdown: false})}>
+
                                                             <div className="inside-list-3">
+
                                                                 <ul className="header-main-ul">
 
                                                                     <li><span className={webinars}><Link href="/webinars"><a>Webinar</a></Link></span></li>
