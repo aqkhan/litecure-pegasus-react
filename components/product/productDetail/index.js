@@ -126,11 +126,12 @@ class ProductDetail extends Component{
                     <div className="image-container">
                         <div className="image-overlay"/>
                         <img src={value.featuredImage && value.featuredImage.url} className="image"/>
-                        <div className="overlay">
+                    <Link href={"/product/"+value.slug}><a>
+                        <div className="overlay" onClick={()=>this.apiCall(value.slug)}>
                             <div className="text">
                                 <h5>{value.title}</h5>
                             </div>
-                        </div>
+                        </div></a></Link>
                     </div>
                 </div>
             })

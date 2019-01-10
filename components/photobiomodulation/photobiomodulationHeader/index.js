@@ -12,7 +12,7 @@ const photomodulationHeader = (props) => {
            <div className="photobiomodulation-header">
                <div className="container custom-container">
                    <div className="product-image">
-                       <img src="/static/images/computern.png" alt=""/></div>
+                       <img src="/static/images/ptc-400px.png" alt=""/></div>
                    <div className="photo-header"><p>{headerImageLabel}</p></div>
                    <div className="photo-header-second">
                        <p>{sendData}<br/> <span>{leadText}</span>
