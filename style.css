@@ -2557,7 +2557,7 @@ a:active, a:hover{
     background-size: 100% 100%;
 }
 .authors-details-card .author-img-div{
-    background-color: red;
+    background-color: #c7c9c7;
     width: 150px;
     height: 150px;
     border-radius: 80px;
@@ -3668,7 +3668,13 @@ a:active, a:hover{
 
 @media (max-width:321px) and (min-width: 320px) {
     .casestudy .post-casestudy>div:nth-child(2) a:last-child{
-        margin-left:-34px!important;
+        margin-left:16px!important;
+    }
+    .modulation-header .photobiomodulation-header .photo-header-second p{
+        font-size: 25px!important;
+    }
+    .content-dev .title-dev p {
+        font-size: 9px!important;
     }
     .header-main-ul{
         width: 188px!important;
@@ -3679,10 +3685,19 @@ a:active, a:hover{
     .header-main-ul li a{
         font-size: 13px!important;
     }
+    .cards-section .Second-section .image-container .overlay{
+        left: 46px!important;
+    }
+    .casestudy .casestudy-text .list-dev ul li span{
+        width: 100%!important;
+    }
 }
 @media (max-width:361px) and (min-width: 360px) {
     .casestudy .post-casestudy>div:nth-child(2) a:last-child{
         margin-left:-22px!important;
+    }
+    .cards-section .Second-section .image-container .overlay{
+        left: 63px!important;
     }
 
 }
@@ -3695,16 +3710,44 @@ a:active, a:hover{
     /*height:100vh;*/
     align-items: flex-start;
 }
+    /*.new-home-cards .section-one{*/
+        /*background-size: contain!important;*/
+    /*}*/
+    .modulation-header .photobiomodulation-header .product-image{
+        right:-46px;
+    }
+    .modulation-header .photobiomodulation-header .photo-header-second p{
+        padding-left:40px;
+    }
+    .photo-header p{
+       color: transparent;
+    }
+    .content-dev .description-dev p img{
+        height:100%;
+        width:100%;
+    }
+    .authors-details-card .card{
+        width:100%!important;
+    }
+    .full-study-btn{
+        margin-left:0px;
+    }
+    .content-dev .title-dev p{
+        font-size:10px
+    }
     .close-btn-div{
         display: block!important;
         display:flex!important;
     }
-    /*.header-line-div{*/
-        /*display: none;*/
-    /*}*/
+    .img-div-h-list,.product-detail-div{
+        display: none;
+    }
     .res-div{
         width:100%;
         padding-left:0px!important;
+    }
+    .casestudy .post-casestudy>div:nth-child(2){
+        flex-direction:column;
     }
     .show-header{
         display: block;
@@ -3855,18 +3898,31 @@ a:active, a:hover{
     .casestudy .casestudy-text .list-dev ul li span{
         margin-top: 4px;
         margin-left: 2px;
+        width: 200px;
     }
     .casestudy .casestudy-text .list-dev ul li {
         margin-top: 2px;
         display: inline-flex;
+        padding-bottom: 9px;
+    }
+    .company-profile .first-section .fourth-row .learnmore-header div{
+        display:flex;
+        flex-direction:column;
+    }
+    .company-profile .first-section .fourth-row .learnmore-header a{
+        margin-top: 5px;
+    }
+    .company-profile .first-section .yellow-section .image-margin img{
+        height:100%
     }
     .casestudy .post-casestudy>div:nth-child(2) a {
         font-size: 10px;
+        padding-top: 10px;
     }
     .casestudy .post-casestudy>div:nth-child(2) a:last-child {
         padding: 1px 10px;
         font-size: 8px!important;
-        margin-top: 33px;
+        margin-top: 11px;
         bottom:2px;
         position: relative;
         
@@ -4118,7 +4174,6 @@ a:active, a:hover{
         /*background-size: contain!important;*/
     /*}*/
 }
-
 @media (max-width: 767px) and (min-width: 685px){
     .res-div{
         width:100%;
@@ -4561,9 +4616,7 @@ a:active, a:hover{
         margin: 0px 60px 0px 0px;
         float:left;
     }
-    /*.cards-section .Second-section .image-container{*/
-        /*margin: 5px 39px!important;*/
-    /*}*/
+
 
 }
 @media (max-width: 684px) and (min-width: 575px){
@@ -4783,7 +4836,7 @@ a:active, a:hover{
     }
 
 }
-@media (max-width: 991px) and (min-width: 768px){
+@media (max-width: 992px) and (min-width: 768px){
     .product-det .first-section .yellow-section .prodct{
         font-size: 158.4px;
     }
@@ -4796,6 +4849,9 @@ a:active, a:hover{
 
         padding:11px;
         padding-top: 23px;
+    }
+    .authors-details-card .card{
+        width: 100%!important;
     }
     .new-media-detail-containers .second-section .fourth-row .learnmore-header div{
         display: flex;
@@ -5062,9 +5118,31 @@ a:active, a:hover{
         width: 100%;
     }
     .new-home-cards .section-one{
+        /*background-size: contain!important;*/
+        background-size: 100% 100%;
+    }
+    .cards-section .Second-section .image-container .image{
+      margin-left: 24px;
+    }
+    .cards-section .Second-section .image-container .image-overlay{
+        display:none
+    }
+    .cards-section .Second-section .image-container .overlay{
+        left:25px
+    }
+    .photobiomodulation .btn_container>button{
+        margin-right: 0px;
+    }
+    .advisory-board-img{
         background-size: contain!important;
     }
+    .company-profile .first-section .fourth-row .learnmore-header div{
 
+        display:flex;
+    }
+    .company-profile .first-section .yellow-section .image-margin img{
+        height:100%;
+    }
 }
 @media (max-width: 574px) and (min-width: 411px){
     .cards-section .Second-section .image-container{
@@ -5072,6 +5150,9 @@ a:active, a:hover{
     }
     .childlist{
         margin-top: 10px;
+    }
+    .cards-section .Second-section .image-container .overlay{
+        left: 87px!important;
     }
 }
 @media (max-width: 1199px) and (min-width: 1024px){
@@ -5252,10 +5333,13 @@ a:active, a:hover{
     .advisory-page-para{
         width: 100%;
     }
-    /*.new-home-cards .section-one{*/
-        /*background-size: contain!important;*/
-    /*}*/
-
+    .cards-section .Second-section .image-container .text h5{
+        font-size:30px;
+        text-align:center;
+    }
+    .company-profile .first-section .yellow-section .image-margin img{
+        height: 100%;
+    }
 
 }
 

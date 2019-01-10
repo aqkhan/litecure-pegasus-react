@@ -54,7 +54,7 @@ class Advisory extends Component {
         if (advisoryBanner){
             banner=advisoryBanner.map((value,index) =><div>
                 <section className="new-home-cards" key={index}>
-                    <section className="section-one" style={{
+                    <section className="section-one advisory-board-img" style={{
                         background: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)),url(${value.featuredImage && value.featuredImage.url})`,
                         }} >
                         <div className="third-row">

@@ -481,7 +481,7 @@ class Header extends Component {
                                 <div className="row  justify-center align-center">
                                     <ul className="responsive-column navbar flex-row nav-color">
                                         <li onMouseLeave={() => this.setState({productDropDown: false})}><span
-                                            className={products} ><Link href="/products"><a onClick={() => this.setState({productDropDown: !productDropDown})}>PRODUCTS</a></Link></span>
+                                            className={products} ><a onClick={() => this.setState({productDropDown: !productDropDown})}>PRODUCTS</a></span>
                                              <ul className="childlist childlist-first">
                                                 {/*<div className="triangle-up"/>*/}
                                                 {/*<li ><span><img src="https://rs-cms.s3.amazonaws.com/pics/4HWnKn12zXWvEs6-.png"/></span>*/}
@@ -499,7 +499,7 @@ class Header extends Component {
                                                             <div className="inside-list">
 
                                                                 <ul className="header-main-ul">
-
+                                                                    <li><span className={products}><Link href="/products"><a>PRODUCTS</a></Link></span></li>
                                                                     <li><span className={empowerDsDeliverySystem} onMouseEnter={()=>this.setState({empowerDsDeliverySystemDropDown:true})} onMouseLeave={()=>this.setState({empowerDsDeliverySystemDropDown:false})}><Link href={"/product/empower-ds-delivery-system"}><a>EMPOWER DS DELIVERY SYSTEM</a></Link></span></li>
                                                                     <li><span className={ptc} onMouseEnter={()=>this.setState({ptcDropDown:true})} onMouseLeave={()=>this.setState({ptcDropDown:false})}><Link href={"/product/ptc"}><a>PEGASUS THERAPY COMPACT</a></Link></span></li>
                                                                 </ul>
