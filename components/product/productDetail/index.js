@@ -135,7 +135,7 @@ class ProductDetail extends Component{
                     <Link href={"/product/"+value.slug}><a>
                         <div className="overlay" onClick={()=>this.apiCall(value.slug)}>
                             <div className="text">
-                                <h5>{value.title}</h5>
+                                <h5>{value.leadText}</h5>
                             </div>
                         </div></a></Link>
                     </div>
