@@ -40,7 +40,7 @@ class Header extends Component {
         dropdown: false,
         wdropdown: false,
         publicationDropdown: false,
-        empowerDsDeliverySystemDropDown:false,
+        empowerDsDeliverySystemDropDown:true,
         ptcDropDown:false,
         showHeaderList:'hide-header',
 
@@ -78,6 +78,7 @@ class Header extends Component {
                     ongoingresearch: "",
                     education: "",
                     products: "active",
+                    allProducts:"active",
                     ptc: "",
                     empowerDsDeliverySystem: "",
                     evidence: "",
@@ -100,6 +101,7 @@ class Header extends Component {
                     ongoingresearch: "",
                     education: "",
                     products: "active",
+                    allProducts:"",
                     ptc: "active",
                     empowerDsDeliverySystem: "",
                     evidence: "",
@@ -122,6 +124,7 @@ class Header extends Component {
                     ongoingresearch: "",
                     education: "",
                     products: "active",
+                    allProducts:"",
                     ptc: "",
                     empowerDsDeliverySystem: "active",
                     evidence: "",
@@ -144,6 +147,7 @@ class Header extends Component {
                     ongoingresearch: "",
                     education: "",
                     products: "",
+                    allProducts:"",
                     ptc: "",
                     empowerDsDeliverySystem: "",
                     evidence: "",
@@ -166,6 +170,7 @@ class Header extends Component {
                     ongoingresearch: "",
                     education: "",
                     products: "",
+                    allProducts:"",
                     ptc: "",
                     empowerDsDeliverySystem: "",
                     evidence: "",
@@ -187,6 +192,7 @@ class Header extends Component {
                     webinars: "",
                     education: "",
                     products: "",
+                    allProducts:"",
                     ptc: "",
                     empowerDsDeliverySystem: "",
                     ongoingresearch: "",
@@ -209,6 +215,7 @@ class Header extends Component {
                     webinars: "",
                     education: "",
                     products: "",
+                    allProducts:"",
                     ptc: "",
                     empowerDsDeliverySystem: "",
                     evidence: "active",
@@ -231,6 +238,7 @@ class Header extends Component {
                     webinars: "active",
                     education: "active",
                     products: "",
+                    allProducts:"",
                     ptc: "",
                     empowerDsDeliverySystem: "",
                     evidence: "",
@@ -253,6 +261,7 @@ class Header extends Component {
                     webinars: "",
                     education: "",
                     products: "",
+                    allProducts:"",
                     ptc: "",
                     empowerDsDeliverySystem: "",
                     evidence: "active",
@@ -275,6 +284,7 @@ class Header extends Component {
                     webinars: "",
                     education: "",
                     products: "",
+                    allProducts:"",
                     ptc: "",
                     empowerDsDeliverySystem: "",
                     evidence: "active",
@@ -297,6 +307,7 @@ class Header extends Component {
                     webinars: "",
                     education: "",
                     products: "",
+                    allProducts:"",
                     ptc: "",
                     empowerDsDeliverySystem: "",
                     evidence: "active",
@@ -319,6 +330,7 @@ class Header extends Component {
                     webinars: "",
                     education: "",
                     products: "",
+                    allProducts:"",
                     ptc: "",
                     empowerDsDeliverySystem: "",
                     evidence: "active",
@@ -341,6 +353,7 @@ class Header extends Component {
                     webinars: "",
                     education: "",
                     products: "",
+                    allProducts:"",
                     ptc: "",
                     empowerDsDeliverySystem: "",
                     ongoingresearch: "",
@@ -364,6 +377,7 @@ class Header extends Component {
                     education: "",
                     ongoingresearch: "",
                     products: "",
+                    allProducts:"",
                     ptc: "",
                     empowerDsDeliverySystem: "",
                     evidence: "",
@@ -386,6 +400,7 @@ class Header extends Component {
                     education: "",
                     ongoingresearch: "",
                     products: "",
+                    allProducts:"",
                     ptc: "",
                     empowerDsDeliverySystem: "",
                     evidence: "",
@@ -408,6 +423,7 @@ class Header extends Component {
                     ongoingresearch: "",
                     education: "",
                     products: "",
+                    allProducts:"",
                     ptc: "",
                     empowerDsDeliverySystem: "",
                     evidence: "",
@@ -428,7 +444,7 @@ class Header extends Component {
     }
 
     render() {
-        let {products, ptc, ptcDropDown, empowerDsDeliverySystem, empowerDsDeliverySystemDropDown, about, evidence, publications, wdropdown, education, publishedPapers, ongoingresearch, blogs, resources, support, employees, advisoryboard, webinars, caseStudies, articles, photobiomodulation, productDropDown, dropdown, publicationDropdown} = this.state;
+        let {products,allProducts, ptc, ptcDropDown, empowerDsDeliverySystem, empowerDsDeliverySystemDropDown, about, evidence, publications, wdropdown, education, publishedPapers, ongoingresearch, blogs, resources, support, employees, advisoryboard, webinars, caseStudies, articles, photobiomodulation, productDropDown, dropdown, publicationDropdown} = this.state;
         return (
             <div>
                 <Head>
@@ -449,8 +465,8 @@ class Header extends Component {
                           href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
                           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
                           crossOrigin="anonymous"/>
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-                    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"/>
+                    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"/>
                 </Head>
 
                 <section className="new-header">
@@ -471,9 +487,9 @@ class Header extends Component {
                             <div className="for-responsive-only">
                                 <div className="custom-container">
                                     <div className="menu-button  click " onClick={()=>this.responsiveHeader()} >
-                                        <div></div>
-                                        <div></div>
-                                        <div></div>
+                                        <div/>
+                                        <div/>
+                                        <div/>
                                     </div>
                                 </div>
                             </div>
@@ -499,9 +515,9 @@ class Header extends Component {
                                                             <div className="inside-list">
 
                                                                 <ul className="header-main-ul">
-                                                                    <li><span className={products}><Link href="/products"><a>PRODUCTS</a></Link></span></li>
-                                                                    <li><span className={empowerDsDeliverySystem} onMouseEnter={()=>this.setState({empowerDsDeliverySystemDropDown:true})} onMouseLeave={()=>this.setState({empowerDsDeliverySystemDropDown:false})}><Link href={"/product/empower-ds-delivery-system"}><a>EMPOWER DS DELIVERY SYSTEM</a></Link></span></li>
-                                                                    <li><span className={ptc} onMouseEnter={()=>this.setState({ptcDropDown:true})} onMouseLeave={()=>this.setState({ptcDropDown:false})}><Link href={"/product/ptc"}><a>PEGASUS THERAPY COMPACT</a></Link></span></li>
+                                                                    <li><span className={allProducts}><Link href="/products"><a>PRODUCTS</a></Link></span></li>
+                                                                    <li><span className={empowerDsDeliverySystem} onMouseEnter={()=>this.setState({empowerDsDeliverySystemDropDown:true, ptcDropDown:false})}><Link href={"/product/empower-ds-delivery-system"}><a>EMPOWER DS DELIVERY SYSTEM</a></Link></span></li>
+                                                                    <li><span className={ptc} onMouseEnter={()=>this.setState({ptcDropDown:true, empowerDsDeliverySystemDropDown:false})}><Link href={"/product/ptc"}><a>PEGASUS THERAPY COMPACT</a></Link></span></li>
                                                                 </ul>
                                                             </div>
                                                             {
