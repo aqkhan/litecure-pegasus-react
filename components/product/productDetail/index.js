@@ -122,10 +122,16 @@ class ProductDetail extends Component{
                     )
             });
             allProductCards=products.map(value=>{
-                return <div className="col-sm-6 col-lg-3 p-0 " key={value._id}>
+                return <div className="col-md-4 p-0 " key={value._id} style={{
+                    background: `linear-gradient(rgba(239, 184, 23, 0.1), rgba(239, 184, 23, 0.1)),url(${value.featuredImage && value.featuredImage.url})`,
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: "center",
+                    backgroundSize: "100%",
+                    border:"1px solid #efb817",
+                }}>
                     <div className="image-container">
                         <div className="image-overlay"/>
-                        <img src={value.featuredImage && value.featuredImage.url} className="image"/>
+                        {/*<img src={value.featuredImage && value.featuredImage.url} className="image"/>*/}
                     <Link href={"/product/"+value.slug}><a>
                         <div className="overlay" onClick={()=>this.apiCall(value.slug)}>
                             <div className="text">

@@ -137,7 +137,18 @@ a:active, a:hover{
     width: 100%;
     background-position: center;
 }
+.images-flex{
+    display:flex;
+    justify-content: space-between;
+    padding-top: 85px;
 
+}
+.images-flex .col-md-4{
+
+    min-height:400px;
+
+
+}
 .new-header .custom-container .HEADERS{
     background-color: #191d24;
 
@@ -1483,8 +1494,8 @@ a:active, a:hover{
 
 .cards-section .Second-section .image-container .image {
     display: block;
-    max-width: 337px;
-    min-height: 312px;
+    /*max-width: 337px;*/
+    /*min-height: 312px;*/
 
 }
 
@@ -1494,13 +1505,16 @@ a:active, a:hover{
     bottom: 0;
     left: 0;
     right: 0;
-    width: 300px;
-    height: 265px;
+    width: 406px;
+    height: 344px;
     opacity: 0;
     transition: .5s ease;
     background-color: #efb817;
     margin-top: 26px;
     margin-left: 18px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
 }
 
 .cards-section .Second-section .image-container:hover .overlay {
@@ -1531,7 +1545,7 @@ a:active, a:hover{
     letter-spacing: normal;
     color: #ffffff;
     text-align: left;
-    padding: 5px 0px 0px 40px;
+    padding: 5px 0px 0px 25px;
 }
 
 /*second-section:END*/
