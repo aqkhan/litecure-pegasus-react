@@ -11,7 +11,7 @@ class ProductDetail extends Component{
         err: null,
         slug:null,
         products: null
-    }
+    };
 
     componentWillMount(){
         let slug =this.props.slug;
@@ -46,6 +46,7 @@ class ProductDetail extends Component{
         let {product,err,slug,products} = this.state;
         let detailProduct=null;
         let allProducts=null;
+        let allProductCards=null;
         if (product){
             {
                     if (product.slug===slug){
@@ -119,8 +120,21 @@ class ProductDetail extends Component{
                                     </div>
                         </div>
                     )
+            });
+            allProductCards=products.map(value=>{
+                return <div className="col-sm-6 col-lg-3 p-0 " key={value._id}>
+                    <div className="image-container">
+                        <div className="image-overlay"/>
+                        <img src={value.featuredImage && value.featuredImage.url} className="image"/>
+                        <div className="overlay">
+                            <div className="text">
+                                <h5>{value.title}</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             })
-        }
+        };
         return(
             err?<div>
                 <section className="product-det">
@@ -171,104 +185,105 @@ class ProductDetail extends Component{
                         <section className="Second-section">
                             <div className="container custom-container">
                                 <div className="row images-flex">
-                                    <div className="col-sm-6 col-lg-3 p-0 ">
-                                        <div className="image-container">
-                                            <div className="image-overlay"/>
-                                            <img src="/static/images/doctorwithhourse.jpg" className="image"/>
-                                            <div className="overlay">
-                                                <div className="text">
-                                                    <p>08.12.19</p>
-                                                    <h5>FEATURED <br/>CONTENT <br/>TITLE HERE</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-sm-6 col-lg-3 p-0">
-                                        <div className="image-container">
-                                            <img src="/static/images/straight-egyptian-arabians-horse.jpg" className="image"/>
-                                            <div className="overlay">
-                                                <div className="text">
-                                                    <p>08.12.19</p>
-                                                    <h5>FEATURED <br/>CONTENT <br/>TITLE HERE</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-sm-6 col-lg-3 p-0">
+                                    {allProductCards && allProductCards}
+                                    {/*<div className="col-sm-6 col-lg-3 p-0 ">*/}
+                                        {/*<div className="image-container">*/}
+                                            {/*<div className="image-overlay"/>*/}
+                                            {/*<img src="/static/images/doctorwithhourse.jpg" className="image"/>*/}
+                                            {/*<div className="overlay">*/}
+                                                {/*<div className="text">*/}
+                                                    {/*<p>08.12.19</p>*/}
+                                                    {/*<h5>FEATURED <br/>CONTENT <br/>TITLE HERE</h5>*/}
+                                                {/*</div>*/}
+                                            {/*</div>*/}
+                                        {/*</div>*/}
+                                    {/*</div>*/}
+                                    {/*<div className="col-sm-6 col-lg-3 p-0">*/}
+                                        {/*<div className="image-container">*/}
+                                            {/*<img src="/static/images/straight-egyptian-arabians-horse.jpg" className="image"/>*/}
+                                            {/*<div className="overlay">*/}
+                                                {/*<div className="text">*/}
+                                                    {/*<p>08.12.19</p>*/}
+                                                    {/*<h5>FEATURED <br/>CONTENT <br/>TITLE HERE</h5>*/}
+                                                {/*</div>*/}
+                                            {/*</div>*/}
+                                        {/*</div>*/}
+                                    {/*</div>*/}
+                                    {/*<div className="col-sm-6 col-lg-3 p-0">*/}
 
-                                        <div className="image-container">
-                                            <img src="/static/images/whitehourse.jpg" className="image"/>
-                                            <div className="overlay">
-                                                <div className="text">
-                                                    <p>08.12.19</p>
-                                                    <h5>FEATURED <br/>CONTENT <br/>TITLE HERE</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-sm-6 col-lg-3 p-0">
+                                        {/*<div className="image-container">*/}
+                                            {/*<img src="/static/images/whitehourse.jpg" className="image"/>*/}
+                                            {/*<div className="overlay">*/}
+                                                {/*<div className="text">*/}
+                                                    {/*<p>08.12.19</p>*/}
+                                                    {/*<h5>FEATURED <br/>CONTENT <br/>TITLE HERE</h5>*/}
+                                                {/*</div>*/}
+                                            {/*</div>*/}
+                                        {/*</div>*/}
+                                    {/*</div>*/}
+                                    {/*<div className="col-sm-6 col-lg-3 p-0">*/}
 
-                                        <div className="image-container">
-                                            <img src="/static/images/695128.jpg" className="image" />
-                                            <div className="overlay">
-                                                <div className="text">
-                                                    <p>08.12.19</p>
-                                                    <h5>FEATURED <br/>CONTENT <br/>TITLE HERE</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-sm-6 col-lg-3 p-0">
+                                        {/*<div className="image-container">*/}
+                                            {/*<img src="/static/images/695128.jpg" className="image" />*/}
+                                            {/*<div className="overlay">*/}
+                                                {/*<div className="text">*/}
+                                                    {/*<p>08.12.19</p>*/}
+                                                    {/*<h5>FEATURED <br/>CONTENT <br/>TITLE HERE</h5>*/}
+                                                {/*</div>*/}
+                                            {/*</div>*/}
+                                        {/*</div>*/}
+                                    {/*</div>*/}
+                                    {/*<div className="col-sm-6 col-lg-3 p-0">*/}
 
-                                        <div className="image-container">
-                                            <img src="/static/images/straight-egyptian-arabians-horse.jpg" className="image"/>
-                                            <div className="overlay">
-                                                <div className="text">
-                                                    <p>08.12.19</p>
-                                                    <h5>FEATURED <br/>CONTENT <br/>TITLE HERE</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-sm-6 col-lg-3 p-0">
+                                        {/*<div className="image-container">*/}
+                                            {/*<img src="/static/images/straight-egyptian-arabians-horse.jpg" className="image"/>*/}
+                                            {/*<div className="overlay">*/}
+                                                {/*<div className="text">*/}
+                                                    {/*<p>08.12.19</p>*/}
+                                                    {/*<h5>FEATURED <br/>CONTENT <br/>TITLE HERE</h5>*/}
+                                                {/*</div>*/}
+                                            {/*</div>*/}
+                                        {/*</div>*/}
+                                    {/*</div>*/}
+                                    {/*<div className="col-sm-6 col-lg-3 p-0">*/}
 
-                                        <div className="image-container">
-                                            <img src="/static/images/345446.jpg" className="image"/>
-                                            <div className="overlay">
-                                                <div className="text">
-                                                    <p>08.12.19</p>
-                                                    <h5>FEATURED <br/>CONTENT <br/>TITLE HERE</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-sm-6 col-lg-3 p-0">
+                                        {/*<div className="image-container">*/}
+                                            {/*<img src="/static/images/345446.jpg" className="image"/>*/}
+                                            {/*<div className="overlay">*/}
+                                                {/*<div className="text">*/}
+                                                    {/*<p>08.12.19</p>*/}
+                                                    {/*<h5>FEATURED <br/>CONTENT <br/>TITLE HERE</h5>*/}
+                                                {/*</div>*/}
+                                            {/*</div>*/}
+                                        {/*</div>*/}
+                                    {/*</div>*/}
+                                    {/*<div className="col-sm-6 col-lg-3 p-0">*/}
 
-                                        <div className="image-container">
-                                            <img src="/static/images/British-Horse-Racing-Frankel-Jockey-Wallpaper.jpg"
-                                                 className="image"/>
-                                            <div className="overlay">
-                                                <div className="text">
-                                                    <p>08.12.19</p>
-                                                    <h5>FEATURED <br/>CONTENT <br/>TITLE HERE</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-sm-6 col-lg-3 p-0">
+                                        {/*<div className="image-container">*/}
+                                            {/*<img src="/static/images/British-Horse-Racing-Frankel-Jockey-Wallpaper.jpg"*/}
+                                                 {/*className="image"/>*/}
+                                            {/*<div className="overlay">*/}
+                                                {/*<div className="text">*/}
+                                                    {/*<p>08.12.19</p>*/}
+                                                    {/*<h5>FEATURED <br/>CONTENT <br/>TITLE HERE</h5>*/}
+                                                {/*</div>*/}
+                                            {/*</div>*/}
+                                        {/*</div>*/}
+                                    {/*</div>*/}
+                                    {/*<div className="col-sm-6 col-lg-3 p-0">*/}
 
-                                        <div className="image-container">
-                                            <div className="image-overlay"></div>
-                                            <img src="/static/images/hourse.jpg" className="image"/>
-                                            <div className="overlay">
-                                                <div className="text">
-                                                    <p>08.12.19</p>
-                                                    <h5>FEATURED <br/>CONTENT <br/>TITLE HERE</h5>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        {/*<div className="image-container">*/}
+                                            {/*<div className="image-overlay"></div>*/}
+                                            {/*<img src="/static/images/hourse.jpg" className="image"/>*/}
+                                            {/*<div className="overlay">*/}
+                                                {/*<div className="text">*/}
+                                                    {/*<p>08.12.19</p>*/}
+                                                    {/*<h5>FEATURED <br/>CONTENT <br/>TITLE HERE</h5>*/}
+                                                {/*</div>*/}
+                                            {/*</div>*/}
+                                        {/*</div>*/}
 
-                                    </div>
+                                    {/*</div>*/}
 
                                 </div>
                             </div>
