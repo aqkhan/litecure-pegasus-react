@@ -481,7 +481,7 @@ class Header extends Component {
                                 <div className="row  justify-center align-center">
                                     <ul className="responsive-column navbar flex-row nav-color">
                                         <li onMouseLeave={() => this.setState({productDropDown: false})}><span
-                                            className={products} ><Link href="/products"><a onMouseEnter={() => this.setState({productDropDown: true})}>PRODUCTS</a></Link></span>
+                                            className={products} ><Link href="/products"><a onClick={() => this.setState({productDropDown: !productDropDown})}>PRODUCTS</a></Link></span>
                                              <ul className="childlist childlist-first">
                                                 {/*<div className="triangle-up"/>*/}
                                                 {/*<li ><span><img src="https://rs-cms.s3.amazonaws.com/pics/4HWnKn12zXWvEs6-.png"/></span>*/}
@@ -535,7 +535,7 @@ class Header extends Component {
                                             </ul>
                                         </li>
                                         <li onMouseLeave={() => this.setState({dropdown: false})}><span
-                                            className={evidence} onMouseEnter={() => this.setState({dropdown: true})}><a>Evidence</a></span>
+                                            className={evidence} onClick={() => this.setState({dropdown: !dropdown})}><a>Evidence</a></span>
                                             {dropdown && <ul className="childlist">
                                                 {/*<div className="triangle-up"/>*/}
                                                 {/*<li onClick={() => this.publicationDropdownFunc()}><span*/}
