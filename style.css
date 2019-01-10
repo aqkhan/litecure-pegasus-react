@@ -66,29 +66,49 @@ a:active, a:hover{
     max-width: 310px;
 }
 .flex {
-    display:flex;
+    display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .flex-column {
-    display:flex;
+    display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
     flex-direction:column;
     align-items:center;
 }
 
 .flex-row {
-    display:flex;
+    display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
     flex-direction:row;
     justify-content: center;
 }
 .flex-end-row {
-    display:flex;
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;    /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;  /* TWEENER - IE 10 */
+	display: -webkit-flex; /* NEW - Chrome */
+	display: flex;
     flex-direction:row;
     justify-content: flex-end;
 }
 .flex-start-row {
-    display:flex;
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;    /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;  /* TWEENER - IE 10 */
+	display: -webkit-flex; /* NEW - Chrome */
+	display: flex;;
     flex-direction:row;
     justify-content: flex-start;
 }
@@ -120,6 +140,8 @@ a:active, a:hover{
 
 .new-header .custom-container .HEADERS{
     background-color: #191d24;
+
+
 }
 
 .new-header .HEADERS .col-7 img{
@@ -229,7 +251,11 @@ a:active, a:hover{
     margin: 0px 5px 5px 0px;
 }
 .childlist-first li{
-    /*display:flex;*/
+    /*display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;*/
     align-items: center;
 }
 .childlist-first li span:first-child{
@@ -527,7 +553,11 @@ a:active, a:hover{
     width: 66%;
 }
 .new-request-demo .section-four .flex-custom{
-    display:flex;
+    display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
     flex-direction:column;
     align-items: flex-start;
     justify-content: flex-start;
@@ -777,7 +807,11 @@ a:active, a:hover{
 .new-stories .section-three .big-text p {
     font-family: UniSansCAPS;
     font-size: 370px;
-    display:flex;
+    display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom:0px;
@@ -1351,7 +1385,8 @@ a:active, a:hover{
     width: 330px;
     margin-top: 18px;
     display: flex;
-    flex-direction: column;justify-content: center;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 
 }
@@ -2296,7 +2331,11 @@ a:active, a:hover{
 
 /* publication casestudy secion start */
 .casestudy .casestudy-primary{
-    display:flex;
+    display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
     justify-content: space-between;
     padding-top:43px;
 }
@@ -2736,9 +2775,15 @@ a:active, a:hover{
 .modulation-header  .photobiomodulation-header .product-image {
     text-align: right;
     position: absolute;
-    right: -208px;
-    top: -18px;
+    right: 66px;
+    top: 55px;
     padding: 25px 20px;
+}
+.article-area ol li{
+    word-wrap: break-word;
+}
+.new-request-demo .section-four .flex-custom p{
+    margin-top: 17px;
 }
 .modulation-header  .photobiomodulation-header .photo-header-second p {
     font-family: AvenirNext;
@@ -3665,7 +3710,6 @@ a:active, a:hover{
         font-size: 14px!important;
     }
 }
-
 @media (max-width:321px) and (min-width: 320px) {
     .casestudy .post-casestudy>div:nth-child(2) a:last-child{
         margin-left:16px!important;
@@ -3710,6 +3754,25 @@ a:active, a:hover{
     /*height:100vh;*/
     align-items: flex-start;
 }
+    .article-container{
+        width: 100%;
+    }
+    .banner_container{
+        flex-direction: column;
+    }
+    .banner_container>div{
+        width:100%;
+    }
+    .banner_container .button_product{
+        margin-left: 26px;
+    }
+    .modal-body img{
+        height: 100%;
+        width: 100%;
+    }
+    .content-dev .title-dev span{
+        padding: 30px 40px 0px 0px;
+    }
     /*.new-home-cards .section-one{*/
         /*background-size: contain!important;*/
     /*}*/
@@ -3906,7 +3969,11 @@ a:active, a:hover{
         padding-bottom: 9px;
     }
     .company-profile .first-section .fourth-row .learnmore-header div{
-        display:flex;
+        display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
         flex-direction:column;
     }
     .company-profile .first-section .fourth-row .learnmore-header a{
@@ -3925,7 +3992,7 @@ a:active, a:hover{
         margin-top: 11px;
         bottom:2px;
         position: relative;
-        
+
 
     }
     .casestudy .post-casestudy .img-dev {
@@ -4046,7 +4113,7 @@ a:active, a:hover{
     }
     .new-header .second-row .navbar li{
         padding: 8px;
-        /*z-index:2;*/
+        z-index:2;
     }
     .header-list-div-1,.header-list-div-2,.header-list-div-3{
         height:100vh;
@@ -4056,7 +4123,7 @@ a:active, a:hover{
     .header-list-main-div-1{
         padding-left: 0px!important;
         flex-direction:column;
-        margin-top: 22px;
+        margin-top: -86px;
     }
     .inside-list-two-1{
         flex-direction:column;
@@ -4072,6 +4139,7 @@ a:active, a:hover{
     .header-list-main-div-2{
         padding-left:0px!important;
         flex-direction:column;
+        padding-top: 0px!important;
     }
     .header-list-div-2 .inside-list-two{
         padding-left: 110px;
@@ -4304,7 +4372,11 @@ a:active, a:hover{
     }
     .casestudy .casestudy-text .list-dev ul li {
         margin-top: 2px;
-        display:flex;
+        display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
     }
     .casestudy .post-casestudy>div:nth-child(2) a {
         font-size: 10px;
@@ -4532,7 +4604,11 @@ a:active, a:hover{
     }
     .casestudy .casestudy-text .list-dev ul li {
         margin-top: 2px;
-        display:flex;
+        display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
     }
     .casestudy .post-casestudy>div:nth-child(2) a {
         font-size: 10px;
@@ -4749,7 +4825,11 @@ a:active, a:hover{
     }
     .casestudy .casestudy-text .list-dev ul li {
         margin-top: 2px;
-        display:flex;
+        display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
     }
     .casestudy .post-casestudy>div:nth-child(2) a {
         font-size: 10px;
@@ -4839,6 +4919,19 @@ a:active, a:hover{
 @media (max-width: 992px) and (min-width: 768px){
     .product-det .first-section .yellow-section .prodct{
         font-size: 158.4px;
+        padding-top: 56px!important;
+
+
+    }
+    .new-header .custom-container .HEADERS{
+        display: -webkit-flex;
+        display: -webkit-box;
+    }
+    .product-det .first-section .fourth-row .learnmore-header a{
+        margin-top: 15px;
+    }
+    .product-det .first-section .yellow-section .view-text{
+        margin-top:0px;
     }
     .new-header .HEADERS .col-7 img {
         width: auto;
@@ -4861,9 +4954,12 @@ a:active, a:hover{
     }
     .flex-end-row {
         justify-content: flex-start;
+       -webkit-justify-content: flex-start;
     }
     .flex-end-row:nth-child(2) {
         justify-content: flex-end;
+        -webkit-justify-content: flex-end;
+
     }
     .new-header .second-row{
         /*display:none;*/
@@ -4888,7 +4984,7 @@ a:active, a:hover{
         width: 100%;
     }
     .new-subscribe .section-five p{
-        margin-right:0px;
+        margin-right:12px;
     }
 
     /*!* slider *!*/
@@ -4983,7 +5079,11 @@ a:active, a:hover{
     }
     .casestudy .casestudy-text .list-dev ul li {
         margin-top: 2px;
-        display:flex;
+        display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
     }
     .casestudy .post-casestudy>div:nth-child(2) a {
         font-size: 10px;
@@ -5102,7 +5202,11 @@ a:active, a:hover{
         /*padding: 17px 61px 50px 8px;*/
         padding: 0px;
         margin: 0px;
-        display:flex;
+        display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
         justify-content:space-between;
     }
     .modulation-header .photobiomodulation-header .product-image{
@@ -5138,7 +5242,11 @@ a:active, a:hover{
     }
     .company-profile .first-section .fourth-row .learnmore-header div{
 
-        display:flex;
+        display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
     }
     .company-profile .first-section .yellow-section .image-margin img{
         height:100%;
@@ -5230,7 +5338,7 @@ a:active, a:hover{
         width: 100%;
     }
     .new-subscribe .section-five p{
-        margin-right:0px;
+        margin-right:16px;
     }
 
     /*!* slider *!*/
@@ -5456,4 +5564,12 @@ background-color: rgba(0, 0, 0, 0.9);
     justify-content: center;
     padding-top: 20px;
     display: none;
+}
+.new-request-demo .section-four .flex-custom p input:focus{
+    outline:none;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+    margin: 0;
 }

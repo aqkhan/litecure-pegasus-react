@@ -499,7 +499,6 @@ class Header extends Component {
                                                             <div className="inside-list">
 
                                                                 <ul className="header-main-ul">
-
                                                                     <li><span className={empowerDsDeliverySystem} onMouseEnter={()=>this.setState({empowerDsDeliverySystemDropDown:true})} onMouseLeave={()=>this.setState({empowerDsDeliverySystemDropDown:false})}><Link href={"/product/empower-ds-delivery-system"}><a>EMPOWER DS DELIVERY SYSTEM</a></Link></span></li>
                                                                     <li><span className={ptc} onMouseEnter={()=>this.setState({ptcDropDown:true})} onMouseLeave={()=>this.setState({ptcDropDown:false})}><Link href={"/product/ptc"}><a>PEGASUS THERAPY COMPACT</a></Link></span></li>
                                                                 </ul>
