@@ -3,6 +3,7 @@ import Employe from './employmentPage/index'
 import Employmentheader from './employmentHeader/employmentheader'
 import axios from 'axios';
 import {API_PATH} from '../apiconfig';
+import RequestDemo from '../requestDemo';
 
 class employeesPage extends Component{
     state = {
@@ -33,7 +34,7 @@ class employeesPage extends Component{
 
                 <Employmentheader title = {employee[0].title} leadText = {employee[0].leadText} imgUrl = {employee[0].featuredImage&&employee[0].featuredImage.url}/>
                 <Employe content ={employee[0].content}/>
-
+                    <RequestDemo/>
             </div>)
     }
 }

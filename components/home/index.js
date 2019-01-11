@@ -104,8 +104,15 @@ class  Home extends Component{
         if ( this.state.stories){
             stories = this.state.stories.map((value,index)=>
                 <Carousel.Item key={index}>
-                    <div className="section-three-overlay1"/>
-                    <img width={'auto'} height={500} alt="900x500" src={value.featuredImage && value.featuredImage.url } />
+                    <div className="section-three-overlay1" />
+                    {/*<img width={'auto'} height={500} alt="900x500" src={value.featuredImage && value.featuredImage.url } />*/}
+                    <div className="home-slider-div" style={{
+                        background: `url(${value.featuredImage && value.featuredImage.url})`,
+                        backgroundRepeat: "no-repeat",
+                        backgroundSize: "cover",
+                        // alt:"900x500",
+
+                    }}/>
                     <Carousel.Caption>
                         <div className="slider-text">
                             <h1>STORIES</h1><br/>

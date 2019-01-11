@@ -141,6 +141,7 @@ a:active, a:hover{
     display:flex;
     justify-content: space-between;
     padding-top: 85px;
+    padding-bottom: 85px;
 
 }
 .images-flex .col-md-4{
@@ -3860,7 +3861,12 @@ margin-top:88px!important;
     }
     .casestudy .casestudy-primary{
         flex-direction: column;
-        align-items: center;
+        /*align-items: center;*/
+    }
+    .casestudy .casestudy-primary>div:nth-child(2){
+        width: 100%;
+        display: flex;
+        flex-direction: column;justify-content: center;
     }
 
 
@@ -3997,7 +4003,7 @@ margin-top:88px!important;
         padding-left:0px;
     }
     .casestudy .casestudy-text .list-dev ul li span{
-        margin-top: 4px;
+        /*margin-top: 4px;*/
         margin-left: 2px;
         width: 200px;
     }
@@ -4005,6 +4011,7 @@ margin-top:88px!important;
         margin-top: 2px;
         display: inline-flex;
         padding-bottom: 9px;
+        align-items: center;
     }
     .company-profile .first-section .fourth-row .learnmore-header div{
         display: -webkit-box;
@@ -4958,13 +4965,27 @@ margin-top:88px!important;
 @media (max-width: 992px) and (min-width: 768px){
     .product-det .first-section .yellow-section .prodct{
         font-size: 158.4px;
-        padding-top: 56px!important;
+        padding-top: 104px!important;
 
 
+    }
+    .home-slider-div{
+        background-size:contain;
+        height: 500px!important;
+        filter: grayscale(1);
+    }
+    .product-det .first-section .yellow-section .image-margin h1{
+        padding: 21px 0px;
     }
     .new-header .custom-container .HEADERS{
         display: -webkit-flex;
         display: -webkit-box;
+    }
+    .images-flex .col-md-4{
+        min-height:267px;
+    }
+    .product-det .first-section .yellow-section .image-margin{
+        margin-bottom: 29px;
     }
     .product-det .first-section .fourth-row .learnmore-header a{
         margin-top: 15px;
@@ -5029,6 +5050,8 @@ margin-top:88px!important;
     /*!* slider *!*/
     .slider-text h1{
         font-size: 164px;
+        padding: 360px 1px 121px 1px!important;
+        align-items:unset;
     }
     .custom-container{
         width:100%!important;
@@ -5216,7 +5239,18 @@ margin-top:88px!important;
     }
     .header-list-main-div-1{
         padding-left: 0px!important;
-        flex-direction: column;
+        /*flex-direction: column;*/
+    }
+    .header-list-main-div-1 .inside-list{
+        width: 269px!important;
+    }
+    .product-detail-div p{
+        width:284px!important;
+        padding:0px;
+
+    }
+    .img-div-h-list img{
+        margin-left:0px!important;
     }
     .inside-list-two-1{
         margin-top: 20px;
@@ -5249,7 +5283,7 @@ margin-top:88px!important;
 	display: -ms-flexbox;
 	display: -webkit-flex;
 	display: flex;
-        justify-content:space-between;
+        justify-content:space-around;
         margin-bottom: 16px;
     }
     .modulation-header .photobiomodulation-header .product-image{
@@ -5629,4 +5663,8 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .mobile-header{
     display: none;
+}
+.home-slider-div{
+  background-size:cover;
+    height: 700px;
 }
