@@ -31,7 +31,7 @@ class employeesPage extends Component{
 
             return employee&&(<div>
 
-                <Employmentheader title = {employee[0].title} leadText = {employee[0].leadText} imgUrl = {employee[0].featuredImage&&employee[0].featuredImage.url}/>
+                <Employmentheader headerImageLabel = {employee[0].headerImageLabel} leadText = {employee[0].leadText} imgUrl = {employee[0].featuredImage&&employee[0].featuredImage.url}/>
                 <Employe content ={employee[0].content}/>
 
             </div>)

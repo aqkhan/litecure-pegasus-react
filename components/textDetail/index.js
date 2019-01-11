@@ -48,12 +48,11 @@ class TextDetail extends Component{
                                                  </div>
 
                                              </div>
-
-                                             <div className="button">
-                                                 <a href="#">TERMS IN LASER THERAPY</a>
-                                                 <Link href="/published-paper-detail/shining-examples-three-case-studies-shed-light-on-the-widespread-benefits-of-laser-therapy"><a className="benefits">BENEFITS OF LASER THERAPY</a></Link>
-                                                 <Link href="/resources"><a href="#">RESOURCES &amp; LINKS </a></Link>
-                                             </div>
+                                             {/*<div className="button">*/}
+                                                 {/*<a href="#">TERMS IN LASER THERAPY</a>*/}
+                                                 {/*<Link href="/published-paper-detail/shining-examples-three-case-studies-shed-light-on-the-widespread-benefits-of-laser-therapy"><a className="benefits">BENEFITS OF LASER THERAPY</a></Link>*/}
+                                                 {/*<Link href="/resources"><a href="#">RESOURCES &amp; LINKS </a></Link>*/}
+                                             {/*</div>*/}
                                          </div>
                                      </div>
                                  </div>
