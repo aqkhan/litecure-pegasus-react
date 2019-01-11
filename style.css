@@ -3735,7 +3735,7 @@ a:active, a:hover{
         font-size: 9px!important;
     }
     .header-main-ul{
-        width: 188px!important;
+        width: 100%!important;
     }
     .header-main-ul li{
         text-align: center;
@@ -3748,6 +3748,9 @@ a:active, a:hover{
     }
     .casestudy .casestudy-text .list-dev ul li span{
         width: 100%!important;
+    }
+    .new-header .second-row .navbar li{
+        text-align: left!important;
     }
 }
 @media (max-width:361px) and (min-width: 360px) {
@@ -3768,6 +3771,27 @@ a:active, a:hover{
     /*height:100vh;*/
     align-items: flex-start;
 }
+    .desktop-header{
+        display: none;
+    }
+    .mobile-header{
+        display: block!important;
+    }
+.first-mob-list{
+margin-top:88px!important;
+    top:0px!important;
+}
+.childlist-2{
+    position:relative!important;
+    top:10px;
+    margin-top: 0px!important;
+}
+    .first-mob-list{
+        position: relative;
+    }
+    .childlist-2 .inside-list{
+        display: block;
+    }
     .article-container{
         width: 100%;
     }
@@ -4130,14 +4154,15 @@ a:active, a:hover{
         z-index:2;
     }
     .header-list-div-1,.header-list-div-2,.header-list-div-3{
-        height:100vh;
+       min-height:100%!important;
         background-color: transparent!important;
         border-top:none!important;
     }
     .header-list-main-div-1{
         padding-left: 0px!important;
-        flex-direction:column;
+        /*flex-direction:column;*/
         margin-top: -86px;
+        padding-top: 0px!important;
     }
     .inside-list-two-1{
         flex-direction:column;
@@ -5099,6 +5124,9 @@ a:active, a:hover{
 	display: -webkit-flex;
 	display: flex;
     }
+    .digit-icons.main li{
+        padding: 14.5px;
+    }
     .casestudy .post-casestudy>div:nth-child(2) a {
         font-size: 10px;
     }
@@ -5222,6 +5250,7 @@ a:active, a:hover{
 	display: -webkit-flex;
 	display: flex;
         justify-content:space-between;
+        margin-bottom: 16px;
     }
     .modulation-header .photobiomodulation-header .product-image{
         width: 100%;
@@ -5246,7 +5275,13 @@ a:active, a:hover{
         display:none
     }
     .cards-section .Second-section .image-container .overlay{
-        left:25px
+        left:25px;
+        width:100%;
+    }
+    .product-det .first-section .fourth-row .learnmore-header {
+        padding: 30px 0px 30px 53px;
+        width: 100%;
+        padding-top: 11%;
     }
     .photobiomodulation .btn_container>button{
         margin-right: 0px;
@@ -5271,7 +5306,12 @@ a:active, a:hover{
         /*margin:5px 40px ;*/
     }
     .childlist{
-        margin-top: 10px;
+        margin-top: 38px;
+
+
+    }
+    .first-mob-list{
+position: relative;
     }
     .cards-section .Second-section .image-container .overlay{
         left: 87px!important;
@@ -5586,4 +5626,7 @@ input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
         -webkit-appearance: none;
     margin: 0;
+}
+.mobile-header{
+    display: none;
 }
