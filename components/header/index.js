@@ -495,10 +495,10 @@ class Header extends Component {
                             </div>
                             <div className={"container showhide custom-container "  +  this.state.showHeaderList}>
                                 <div className="row  justify-center align-center">
-                                    <ul className="responsive-column navbar flex-row nav-color">
+                                    <ul className="responsive-column navbar flex-row nav-color desktop-header ">
                                         <li onMouseLeave={() => this.setState({productDropDown: false})}><span
                                             className={products} ><a onClick={() => this.setState({productDropDown: !productDropDown})}>PRODUCTS</a></span>
-                                             <ul className="childlist childlist-first">
+                                             <ul className="childlist childlist-first  ">
                                                 {/*<div className="triangle-up"/>*/}
                                                 {/*<li ><span><img src="https://rs-cms.s3.amazonaws.com/pics/4HWnKn12zXWvEs6-.png"/></span>*/}
                                                 {/*<span className={empowerDsDeliverySystem}><Link href={"/product/empower-ds-delivery-system"}><a>EMPOWER DS DELIVERY SYSTEM</a></Link></span></li>*/}
@@ -515,7 +515,7 @@ class Header extends Component {
                                                             <div className="inside-list">
 
                                                                 <ul className="header-main-ul">
-                                                                    <li><span className={allProducts}><Link href="/products"><a>PRODUCTS</a></Link></span></li>
+                                                                    <li><span className={allProducts}><Link href="/products"><a>ALL PRODUCTS</a></Link></span></li>
                                                                     <li><span className={empowerDsDeliverySystem} onMouseEnter={()=>this.setState({empowerDsDeliverySystemDropDown:true, ptcDropDown:false})}><Link href={"/product/empower-ds-delivery-system"}><a>EMPOWER DS DELIVERY SYSTEM</a></Link></span></li>
                                                                     <li><span className={ptc} onMouseEnter={()=>this.setState({ptcDropDown:true, empowerDsDeliverySystemDropDown:false})}><Link href={"/product/ptc"}><a>PEGASUS THERAPY COMPACT</a></Link></span></li>
                                                                 </ul>
@@ -638,6 +638,93 @@ class Header extends Component {
                                                         {/*</div>*/}
                                                     {/*</li>*/}
                                                 {/*</ul>}*/}
+                                        {/*</li>*/}
+                                        <li><span className={resources}><Link href="/resources"><a>RESOURCES</a></Link></span>
+                                        </li>
+                                        <li><span className={about}><Link href="/about-us"><a>About</a></Link></span>
+                                        </li>
+                                        <li><span className={support}><Link href="/support"><a>Support</a></Link></span>
+                                        </li>
+                                        <li><span className={employees}><Link href="/employees"><a>Employees</a></Link></span>
+                                        </li>
+                                    </ul>
+                                    <ul className="responsive-column navbar flex-row nav-color mobile-header">
+                                        <li><span
+                                            className={products} ><a onClick={() => this.setState({productDropDown: !productDropDown})}>PRODUCTS</a></span>
+                                            {productDropDown &&<ul className="childlist childlist-first first-mob-list ">
+                                                <li>
+                                                        <div className="header-list-div-1">
+                                                            <div className="header-list-main-div-1">
+                                                                <div className="inside-list ">
+                                                                    <ul className="header-main-ul ">
+                                                                        <li><span className={allProducts}><Link href="/products"><a>ALL PRODUCTS</a></Link></span></li>
+                                                                        <li><span className={empowerDsDeliverySystem} onMouseEnter={()=>this.setState({empowerDsDeliverySystemDropDown:true, ptcDropDown:false})}><Link href={"/product/empower-ds-delivery-system"}><a>EMPOWER DS DELIVERY SYSTEM</a></Link></span></li>
+                                                                        <li><span className={ptc} onMouseEnter={()=>this.setState({ptcDropDown:true, empowerDsDeliverySystemDropDown:false})}><Link href={"/product/ptc"}><a>PEGASUS THERAPY COMPACT</a></Link></span></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                </li>
+                                            </ul>}
+                                        </li>
+                                        <li><span
+                                            className={evidence} onClick={() => this.setState({dropdown: !dropdown})}><a>Evidence</a></span>
+                                            {dropdown && <ul className="childlist childlist-2">
+                                                <li><div className="header-list-div-2">
+
+                                                    <div className="header-list-main-div-2">
+
+                                                        <div className="inside-list">
+                                                            <ul className="header-main-ul">
+                                                                <li onClick={() => this.publicationDropdownFunc()}><span className={publications}><a>PUBLICATIONS</a></span>
+                                                                    {publicationDropdown &&<ul className="publication-list">
+                                                                        <li><span className={publishedPapers}><Link href="/published-papers"><a>PUBLISHED PAPERS</a></Link></span></li>
+                                                                        <li><span className={caseStudies}><Link href="/casestudies"><a>CASE STUDIES</a></Link></span></li>
+                                                                        <li><span className={articles}><Link href="/articles"><a>ARTICLES</a></Link></span></li>
+                                                                    </ul>}
+                                                                </li>
+                                                                <li><span className={photobiomodulation}><Link href="/photobiomodulation"><a>PHOTOBIOMODULATION</a></Link></span></li>
+                                                                <li><span className={advisoryboard}><Link href="/advisory-board-members"><a>ADVISORY BOARD</a></Link></span></li>
+                                                                <li><span className={ongoingresearch}><Link href="/ongoingresearch"><a>On GOING SEARCH</a></Link></span></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div></li>
+                                            </ul>}
+                                        </li>
+                                        <li><span className={blogs}><Link href="/blogs"><a>Blog</a></Link></span></li>
+                                        <li><span className={webinars}><Link href="/webinars"><a>Webinar</a></Link></span></li>
+                                        {/*<li onMouseLeave={() => this.setState({wdropdown: false})}>*/}
+                                        {/*<span className={education}*/}
+                                        {/*onMouseEnter={() => this.setState({wdropdown: true})}><a>Education</a></span>*/}
+                                        {/*{*/}
+                                        {/*wdropdown &&*/}
+                                        {/*<ul className="childlist">*/}
+                                        {/*/!*<div className="triangle-up"/>*!/*/}
+
+                                        {/*/!*<li><span className={webinars}><Link href="/webinars"><a>Webinars</a></Link></span></li>*!/*/}
+                                        {/*<li>*/}
+                                        {/*<div className="header-list-div-3">*/}
+                                        {/*<div className="close-btn-div">*/}
+                                        {/*<i class="fa fa-times"></i>*/}
+                                        {/*</div>*/}
+                                        {/*<div className="header-list-main-div-3"*/}
+                                        {/*onMouseLeave={() => this.setState({wdropdown: false})}>*/}
+
+                                        {/*<div className="inside-list-3">*/}
+
+                                        {/*<ul className="header-main-ul">*/}
+
+                                        {/*<li><span className={webinars}><Link*/}
+                                        {/*href="/webinars"><a>Webinar</a></Link></span>*/}
+                                        {/*</li>*/}
+
+                                        {/*</ul>*/}
+                                        {/*</div>*/}
+                                        {/*</div>*/}
+                                        {/*</div>*/}
+                                        {/*</li>*/}
+                                        {/*</ul>}*/}
                                         {/*</li>*/}
                                         <li><span className={resources}><Link href="/resources"><a>RESOURCES</a></Link></span>
                                         </li>
