@@ -39,7 +39,8 @@ class  Home extends Component{
                             <section className="section-one publication-header" style={{
                                 background: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)),url(${value.featuredImage && value.featuredImage.url})`,
                                 backgroundRepeat: "no-repeat",
-                                backgroundSize: "100% 100%",
+                                backgroundSize: "cover",
+                                backgroundPosition: "center",
                             }}>
                                 <div className="third-row">
                                     <div className="container custom-container">
