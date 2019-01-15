@@ -3073,6 +3073,10 @@ a:active, a:hover{
     background-color: #efb817;
     box-shadow: 0px 0px 1px 8px rgba(47, 23, 23, 0.5);
 }
+.carousel-control:focus, .carousel-control:hover{
+    background-color: transparent;
+    opacity: 0.5;
+}
 /* advisory-board css start */
 
 .pride .article-area.remove {

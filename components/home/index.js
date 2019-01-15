@@ -39,7 +39,7 @@ class  Home extends Component{
                             <section className="section-one publication-header" style={{
                                 background: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)),url(${value.featuredImage && value.featuredImage.url})`,
                                 backgroundRepeat: "no-repeat",
-                                backgroundSize: "cover",
+                                backgroundSize: "100% 100%",
                             }}>
                                 <div className="third-row">
                                     <div className="container custom-container">
@@ -72,7 +72,7 @@ class  Home extends Component{
                         <section className="section-one" style={{
                             background: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)),url(${value.featuredImage && value.featuredImage.url})`,
                             backgroundRepeat: "no-repeat",
-                            backgroundSize: "cover",}} >
+                            backgroundSize: "100% 100%",}} >
                             <div className="third-row">
                                 <div className="container custom-container">
                                     <div className="row flex">
@@ -107,7 +107,7 @@ class  Home extends Component{
                     <div className="section-three-overlay1" />
                     {/*<img width={'auto'} height={500} alt="900x500" src={value.featuredImage && value.featuredImage.url } />*/}
                     <div className="home-slider-div" style={{
-                        background: `url(${value.featuredImage && value.featuredImage.url})`,
+                        background: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)), url(${value.featuredImage && value.featuredImage.url})`,
                         backgroundRepeat: "no-repeat",
                         backgroundSize: "cover",
                         // alt:"900x500",
@@ -128,7 +128,7 @@ class  Home extends Component{
             <div>
                 {pages}
 
-{stories&&<Carousel interval={2000}>
+{stories&&<Carousel interval={5000}>
     {stories}
 </Carousel>}
                 <RequestDemo/>
