@@ -111,7 +111,6 @@ class  Home extends Component{
                         backgroundRepeat: "no-repeat",
                         backgroundSize: "cover",
                         // alt:"900x500",
-
                     }}/>
                     <Carousel.Caption>
                         <div className="slider-text">
