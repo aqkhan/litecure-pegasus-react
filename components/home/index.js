@@ -1,30 +1,43 @@
-import  React , { Component } from 'react';
+import React, {Component} from 'react';
 import RequestDemo from '../requestDemo';
 import {API_PATH} from '../apiconfig'
 import {Carousel} from 'react-bootstrap';
 import Link from 'next/link'
 import axios from 'axios'
-class  Home extends Component{
+
+class Home extends Component {
     state = {
-        pages:null,
-        stories:null
-    }
+        pages: null,
+        products: null,
+        stories: null,
+        err: null
+    };
+
     componentWillMount() {
-        axios.get(API_PATH +'pages')
-            .then((res)=>{
-                let temp=[];
-                res.data.pages.forEach((val)=>{
-                    if (val.type==="homepage"){
+        axios.get(API_PATH + 'pages')
+            .then((res) => {
+                let temp = [];
+                res.data.pages.forEach((val) => {
+                    if (val.type === "homepage") {
                         temp.push(val);
                     }
                 });
-                this.setState({pages:temp})
+                this.setState({pages: temp})
             })
-            .catch(err=>{throw err});
+            .catch(err => {
+                throw err
+            });
+        axios.get(API_PATH + 'products')
+            .then((res) => {
+                this.setState({products: res.data.products})
+            })
+            .catch(err => {
+                this.setState({err: err})
+            });
 
         axios.get(API_PATH + 'stories')
-            .then((res)=>{
-            this.setState({stories:res.data.stories})
+            .then((res) => {
+                this.setState({stories: res.data.stories})
             })
     }
 
@@ -32,48 +45,16 @@ class  Home extends Component{
     render() {
         let stories = null;
         let pages;
-        if (this.state.pages){
-            pages = this.state.pages.map((value, index)=>{
-                    if(index===1){
-                        return <section className="new-home-cards">
-                            <section className="section-one publication-header" style={{
-                                background: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)),url(${value.featuredImage && value.featuredImage.url})`,
-                                backgroundRepeat: "no-repeat",
-                                backgroundSize: "cover",
-                                backgroundPosition: "center",
-                            }}>
-                                <div className="third-row">
-                                    <div className="container custom-container">
-                                        <div className="row flex">
-                                            <div className="header-text publication-text home-page">
-                                                <p><br/><span>{value.headerImageLabel}</span></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="small-upper-line flex">
-                                    <div className="line"></div>
-                                </div>
-                                <div className="fourth-row">
-                                    <div className="custom-container container">
-                                        <div className="row flex">
-                                            <div className="flex-column learnmore-header">
-                                                <p>{value.leadText}</p>
-                                                <Link href="/products"><a>
-                                                    VIEW PRODUCTS
-                                                </a></Link>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-                        </section>
-                    }
-                    return<section className="new-home-cards" key={index}>
+        let products = null;
+        if (this.state.pages) {
+            pages = this.state.pages.map((value, index) => {
+                if (index === 0)
+                    return <section className="new-home-cards" key={index}>
                         <section className="section-one" style={{
                             background: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)),url(${value.featuredImage && value.featuredImage.url})`,
                             backgroundRepeat: "no-repeat",
-                            backgroundSize: "100% 100%",}} >
+                            backgroundSize: "100% 100%",
+                        }}>
                             <div className="third-row">
                                 <div className="container custom-container">
                                     <div className="row flex">
@@ -84,13 +65,16 @@ class  Home extends Component{
                                 </div>
                             </div>
                             <div className="small-upper-line flex">
-                                <div className="line"> </div>
+                                <div className="line"></div>
                             </div>
                             <div className="fourth-row">
                                 <div className="custom-container container">
                                     <div className="row flex">
                                         <div className="flex-column learnmore-header learn-home">
-                                            <div className='detail-content'><div className="home-start-content" dangerouslySetInnerHTML={{__html: value.leadText}}/></div>
+                                            <div className='detail-content'>
+                                                <div className="home-start-content"
+                                                     dangerouslySetInnerHTML={{__html: value.leadText}}/>
+                                            </div>
                                             <Link><a href="/detail/home-main">
                                                 LEARN MORE
                                             </a></Link>
@@ -100,12 +84,37 @@ class  Home extends Component{
                             </div>
                         </section>
                     </section>
-        })}
+            })
+        }
+        if (this.state.products) {
+            products = this.state.products.map((value, index) => <Carousel.Item key={index}>
+                <div className="section-three-overlay1"/>
+                {/*<img width={'auto'} height={500} alt="900x500" src={value.featuredImage && value.featuredImage.url } />*/}
+                <div className="home-slider-div" style={{
+                    background: `url(${value.featuredImage && value.featuredImage.url})`,
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                }}/>
+                <Carousel.Caption>
+                    <div className="slider-text">
+                        <h1>Products</h1><br/>
+                        <div className="paragraph-text">
+                            <p>{value.leadText}</p>
+                        </div>
+                        <Link href={'/product/' + value.slug}>
+                            <a>
+                                VIEW
+                            </a>
+                        </Link>
+                    </div>
 
-        if ( this.state.stories){
-            stories = this.state.stories.map((value,index)=>
+                </Carousel.Caption>
+            </Carousel.Item>)
+        }
+        if (this.state.stories) {
+            stories = this.state.stories.map((value, index) =>
                 <Carousel.Item key={index}>
-                    <div className="section-three-overlay1" />
+                    <div className="section-three-overlay1"/>
                     {/*<img width={'auto'} height={500} alt="900x500" src={value.featuredImage && value.featuredImage.url } />*/}
                     <div className="home-slider-div" style={{
                         background: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)), url(${value.featuredImage && value.featuredImage.url})`,
@@ -124,17 +133,20 @@ class  Home extends Component{
                 </Carousel.Item>
             )
         }
-        return(
+        return (
             <div>
                 {pages}
-
-{stories&&<Carousel interval={5000}>
-    {stories}
-</Carousel>}
+                {products && <Carousel interval={5000}>
+                    {products}
+                </Carousel>}
+                {stories && <Carousel interval={5000}>
+                    {stories}
+                </Carousel>}
                 <RequestDemo/>
-                </div>
+            </div>
         )
 
+    }
 }
-}
+
 export default Home;

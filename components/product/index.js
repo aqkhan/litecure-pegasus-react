@@ -7,7 +7,7 @@ class  Product extends Component{
             state = {
                 products : null,
                 err:null
-            }
+            };
             componentWillMount(){
                 axios.get(API_PATH + 'products')
                     .then((res)=>{
