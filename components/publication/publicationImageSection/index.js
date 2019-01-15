@@ -33,7 +33,7 @@ class publicImgSection extends Component {
                             </ul>
                         </div>
                         <div style={{
-                            background: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)),url('/static/images/buffalo.jpg')`,
+                            background: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)),url('/static/images/buffalo.png')`,
                             backgroundRepeat: "no-repeat",
                             backgroundSize: "cover",}}>
                             <ul>

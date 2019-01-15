@@ -6,7 +6,7 @@ const webinarsHeader = (props) => {
     return(
         <section className="new-home-cards">
             <section className="section-one publication-header" style={{
-                background: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)),url('/static/images/buffalo.jpg')`,
+                background: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)),url('/static/images/buffalo.png')`,
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",}} >
                 <div className="third-row">

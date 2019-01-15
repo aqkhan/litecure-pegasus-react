@@ -21,7 +21,7 @@ const detailCard = () => {
                         <a href="#">
                             <div className="outer-dev">
                                 <div className="img-dev">
-                                    <img src="/static/images/buffalo.jpg"/>
+                                    <img src="/static/images/buffalo.png"/>
                                 </div>
                                 <div className="text-card">
                                     <h5>Benefits and Best Practices for Administering Laser Therapy in an On-Contact Method</h5>
@@ -33,7 +33,7 @@ const detailCard = () => {
                         <a href="#">
                             <div className="outer-dev">
                                 <div className="img-dev">
-                                    <img src="/static/images/buffalo.jpg"/>
+                                    <img src="/static/images/buffalo.png"/>
                                 </div>
                                 <div className="text-card">
                                     <h5>Benefits and Best Practices for Administering Laser Therapy in an On-Contact Method</h5>
@@ -45,7 +45,7 @@ const detailCard = () => {
                         <a href="#">
                             <div className="outer-dev">
                                 <div className="img-dev">
-                                    <img src="/static/images/buffalo.jpg"/>
+                                    <img src="/static/images/buffalo.png"/>
                                 </div>
                                 <div className="text-card">
                                     <h5>Benefits and Best Practices for Administering Laser Therapy in an On-Contact Method</h5>
@@ -57,7 +57,7 @@ const detailCard = () => {
                         <a href="#">
                             <div className="outer-dev">
                                 <div className="img-dev">
-                                    <img src="/static/images/buffalo.jpg"/>
+                                    <img src="/static/images/buffalo.png"/>
                                 </div>
                                 <div className="text-card">
                                     <h5>Benefits and Best Practices for Administering Laser Therapy in an On-Contact Method</h5>
@@ -69,7 +69,7 @@ const detailCard = () => {
                         <a href="#">
                             <div className="outer-dev">
                                 <div className="img-dev">
-                                    <img src="/static/images/buffalo.jpg"/>
+                                    <img src="/static/images/buffalo.png"/>
                                 </div>
                                 <div className="text-card">
                                     <h5>Benefits and Best Practices for Administering Laser Therapy in an On-Contact Method</h5>
