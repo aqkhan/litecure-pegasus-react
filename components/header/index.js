@@ -606,7 +606,7 @@ class Header extends Component {
                                             </ul>}
                                         </li>
                                         <li><span className={blogs}><Link href="/blogs"><a>Blog</a></Link></span></li>
-                                        <li><span className={webinars}><Link href="/webinars"><a>Webinar</a></Link></span></li>
+                                        <li><span className={webinars}><Link href="/webinars"><a>Webinars</a></Link></span></li>
                                         {/*<li onMouseLeave={() => this.setState({wdropdown: false})}>*/}
                                             {/*<span className={education}*/}
                                                   {/*onMouseEnter={() => this.setState({wdropdown: true})}><a>Education</a></span>*/}

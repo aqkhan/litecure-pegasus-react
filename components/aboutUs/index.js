@@ -36,19 +36,21 @@ class AboutUs extends Component{
         if (products) {
             allProducts=products.map(value=>{
                 return(
-                    <div key={value._id}>
-                        <div className="col-sm-12 col-md-12 col-lg-4 p-0" >
-                            <div className="image-margin">
-                                <img src={value.featuredImage && value.featuredImage.url} height="320" width="320"/>
-                                <div className="view-text">
-                                    <h1>{value.title}</h1>
-                                    <p><Link href={'/product/'+value.slug}><a>VIEW PRODUCT</a></Link>
-                                    </p>
-                                </div>
+                    <div className="col-sm-4 ex-image" key={value._id} >
+                            <div className="image-margin " style={{
+                                backgroundImage: `url(${value.featuredImage && value.featuredImage.url})`,
+                                backgroundRepeat: "no-repeat",
+                                backgroundPosition: "center",
+                                backgroundSize: "contain",
+                            }}>
                             </div>
+                        <div className="view-text">
+                            <h1>{value.title}</h1>
+                            <p><Link href={'/product/'+value.slug}><a>VIEW PRODUCT</a></Link>
+                            </p>
                         </div>
                     </div>
-                )
+                                   )
         })
     }
         return page&&(
