@@ -11,7 +11,8 @@ class employementHeader extends Component{
             <section className="section-one publication-header" style={{
                 background: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)),url(${this.props.imgUrl})`,
                 backgroundRepeat: "no-repeat",
-                backgroundSize: "cover",}} >
+                backgroundSize: "cover",
+                backgroundPosition: "center",}} >
                 <div className="third-row">
                     <div className="container custom-container">
                         <div className="row flex">
