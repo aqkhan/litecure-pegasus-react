@@ -58,7 +58,7 @@ class webinars extends Component {
         }
         return (
             <div>
-                <WebinarsHeader webinarCategory={"Webinar"}/>
+                <WebinarsHeader webinarCategory={"All Webinars"}/>
                 <WebinarsCategory publications={publications} categoryList={newCategories} publicationCategory={"Webinar"} page={"/webinar/"}/>
                 <RequestDemo/>
             </div>

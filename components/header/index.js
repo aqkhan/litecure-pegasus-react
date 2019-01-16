@@ -21,7 +21,6 @@ class Header extends Component {
         products: "",
         ptc: "",
         empowerDsDeliverySystem: "",
-        resources: "",
         about: "",
         support: "",
         employees: "",
@@ -87,7 +86,6 @@ class Header extends Component {
                     photobiomodulation: "",
                     blogs: "",
                     advisoryboard: "",
-                    resources: "",
                     about: "",
                     support: "",
                     employees: ""
@@ -109,7 +107,6 @@ class Header extends Component {
                     photobiomodulation: "",
                     blogs: "",
                     advisoryboard: "",
-                    resources: "",
                     about: "",
                     support: "",
                     employees: ""
@@ -131,7 +128,6 @@ class Header extends Component {
                     photobiomodulation: "",
                     blogs: "",
                     advisoryboard: "",
-                    resources: "",
                     about: "",
                     support: "",
                     employees: ""
@@ -153,29 +149,6 @@ class Header extends Component {
                     photobiomodulation: "",
                     advisoryboard: "",
                     blogs: "active",
-                    resources: "",
-                    about: "",
-                    support: "",
-                    employees: ""
-                });
-                return;
-            case "resources":
-                this.setState({
-                    webinars: "",
-                    education: "",
-                    products: "",
-                    allProducts:"",
-                    ptc: "",
-                    empowerDsDeliverySystem: "",
-                    evidence: "",
-                    publications: "",
-                    blogs: "",
-                    publishedPapers: "",
-                    caseStudies: "",
-                    articles: "",
-                    advisoryboard: "",
-                    photobiomodulation: "",
-                    resources: "active",
                     about: "",
                     support: "",
                     employees: ""
@@ -197,7 +170,6 @@ class Header extends Component {
                     articles: "",
                     advisoryboard: "",
                     photobiomodulation: "",
-                    resources: "",
                     about: "",
                     support: "",
                     employees: ""
@@ -219,7 +191,6 @@ class Header extends Component {
                     articles: "",
                     advisoryboard: "",
                     photobiomodulation: "",
-                    resources: "",
                     about: "",
                     support: "",
                     employees: ""
@@ -241,7 +212,6 @@ class Header extends Component {
                     articles: "",
                     advisoryboard: "",
                     photobiomodulation: "",
-                    resources: "",
                     about: "",
                     support: "",
                     employees: ""
@@ -263,7 +233,6 @@ class Header extends Component {
                     articles: "active",
                     advisoryboard: "",
                     photobiomodulation: "",
-                    resources: "",
                     about: "",
                     support: "",
                     employees: ""
@@ -285,7 +254,6 @@ class Header extends Component {
                     articles: "",
                     advisoryboard: "",
                     photobiomodulation: "active",
-                    resources: "",
                     about: "",
                     support: "",
                     employees: ""
@@ -307,7 +275,6 @@ class Header extends Component {
                     articles: "",
                     advisoryboard: "active",
                     photobiomodulation: "",
-                    resources: "",
                     about: "",
                     support: "",
                     employees: ""
@@ -329,7 +296,6 @@ class Header extends Component {
                     articles: "",
                     advisoryboard: "",
                     photobiomodulation: "",
-                    resources: "",
                     about: "active",
                     support: "",
                     employees: ""
@@ -351,7 +317,6 @@ class Header extends Component {
                     articles: "",
                     advisoryboard: "",
                     photobiomodulation: "",
-                    resources: "",
                     about: "",
                     support: "active",
                     employees: ""
@@ -373,7 +338,6 @@ class Header extends Component {
                     articles: "",
                     advisoryboard: "",
                     photobiomodulation: "",
-                    resources: "",
                     about: "",
                     support: "",
                     employees: "active"
@@ -395,7 +359,6 @@ class Header extends Component {
                     articles: "",
                     advisoryboard: "",
                     photobiomodulation: "",
-                    resources: "",
                     about: "",
                     support: "",
                     employees: ""
@@ -405,7 +368,7 @@ class Header extends Component {
     }
 
     render() {
-        let {products,allProducts, ptc, ptcDropDown, empowerDsDeliverySystem, empowerDsDeliverySystemDropDown, about, evidence, publications, wdropdown, education, publishedPapers, blogs, resources, support, employees, advisoryboard, webinars, caseStudies, articles, photobiomodulation, productDropDown, dropdown, publicationDropdown} = this.state;
+        let {products,allProducts, ptc, ptcDropDown, empowerDsDeliverySystem, empowerDsDeliverySystemDropDown, about, evidence, publications, wdropdown, education, publishedPapers, blogs, support, employees, advisoryboard, webinars, caseStudies, articles, photobiomodulation, productDropDown, dropdown, publicationDropdown} = this.state;
         return (
             <div>
                 <Head>
@@ -460,18 +423,10 @@ class Header extends Component {
                                         <li onMouseLeave={() => this.setState({productDropDown: false})}><span
                                             className={products} ><a onClick={() => this.setState({productDropDown: !productDropDown})}>PRODUCTS</a></span>
                                              <ul className="childlist childlist-first  ">
-                                                {/*<div className="triangle-up"/>*/}
-                                                {/*<li ><span><img src="https://rs-cms.s3.amazonaws.com/pics/4HWnKn12zXWvEs6-.png"/></span>*/}
-                                                {/*<span className={empowerDsDeliverySystem}><Link href={"/product/empower-ds-delivery-system"}><a>EMPOWER DS DELIVERY SYSTEM</a></Link></span></li>*/}
-                                                {/*<li ><span><img src="https://rs-cms.s3.amazonaws.com/pics/nwQkU1NKyZByRecL.png"/></span>*/}
-                                                {/*<span className={ptc}><Link href={"/product/ptc"}><a>PEGASUS THERAPY COMPACT</a></Link></span></li>*/}
                                                 <li>
                                                     {
                                                         productDropDown &&
                                                         <div className="header-list-div-1">
-                                                            {/*<div className="close-btn-div">*/}
-                                                                {/*<i class="fa fa-times"></i>*/}
-                                                            {/*</div>*/}
                                                         <div className="header-list-main-div-1" onMouseLeave={() => this.setState({productDropDown: false})}>
                                                             <div className="inside-list">
 
@@ -514,32 +469,7 @@ class Header extends Component {
                                         <li onMouseLeave={() => this.setState({dropdown: false})}><span
                                             className={evidence} onClick={() => this.setState({dropdown: !dropdown})}><a>Evidence</a></span>
                                             {dropdown && <ul className="childlist">
-                                                {/*<div className="triangle-up"/>*/}
-                                                {/*<li onClick={() => this.publicationDropdownFunc()}><span*/}
-                                                    {/*className={publications}><a>Publications</a></span>*/}
-                                                    {/*{publicationDropdown && <ul>*/}
-                                                        {/*<li><span className={publishedPapers}><Link*/}
-                                                            {/*href="/published-papers"><a>Published Papers</a></Link></span>*/}
-                                                        {/*</li>*/}
-                                                        {/*<li><span className={caseStudies}><Link href="/casestudies"><a >Case Studies</a></Link></span>*/}
-                                                        {/*</li>*/}
-                                                        {/*<li><span className={articles}><Link href="/articles"><a>Articles</a></Link></span>*/}
-                                                        {/*</li>*/}
-
-                                                    {/*</ul>}*/}
-                                                {/*</li>*/}
-                                                {/*<li><span className={photobiomodulation}><Link*/}
-                                                    {/*href="/photobiomodulation"><a>Photobiomodulation</a></Link></span>*/}
-                                                {/*</li>*/}
-                                                {/*<li><span className={advisoryboard}><Link*/}
-                                                    {/*href="/advisory-board-members"><a>Advisory Board</a></Link></span>*/}
-                                                {/*</li>*/}
-                                                {/*<li><span className={ongoingresearch}><Link href="/ongoingresearch"><a>On Going Research</a></Link></span>*/}
-                                                {/*</li>*/}
                                                      <li><div className="header-list-div-2">
-                                                         {/*<div className="close-btn-div">*/}
-                                                             {/*<i class="fa fa-times"></i>*/}
-                                                         {/*</div>*/}
                                                      <div className="header-list-main-div-2" onMouseLeave={() => this.setState({dropdown: false})}>
 
                                                      <div className="inside-list">
@@ -567,40 +497,6 @@ class Header extends Component {
                                         </li>
                                         <li><span className={blogs}><Link href="/blogs"><a>Blog</a></Link></span></li>
                                         <li><span className={webinars}><Link href="/webinars"><a>Webinars</a></Link></span></li>
-                                        {/*<li onMouseLeave={() => this.setState({wdropdown: false})}>*/}
-                                            {/*<span className={education}*/}
-                                                  {/*onMouseEnter={() => this.setState({wdropdown: true})}><a>Education</a></span>*/}
-                                            {/*{*/}
-                                                {/*wdropdown &&*/}
-                                                {/*<ul className="childlist">*/}
-                                                    {/*/!*<div className="triangle-up"/>*!/*/}
-
-                                                    {/*/!*<li><span className={webinars}><Link href="/webinars"><a>Webinars</a></Link></span></li>*!/*/}
-                                                    {/*<li>*/}
-                                                        {/*<div className="header-list-div-3">*/}
-                                                            {/*<div className="close-btn-div">*/}
-                                                                {/*<i class="fa fa-times"></i>*/}
-                                                            {/*</div>*/}
-                                                            {/*<div className="header-list-main-div-3"*/}
-                                                                 {/*onMouseLeave={() => this.setState({wdropdown: false})}>*/}
-
-                                                                {/*<div className="inside-list-3">*/}
-
-                                                                    {/*<ul className="header-main-ul">*/}
-
-                                                                        {/*<li><span className={webinars}><Link*/}
-                                                                            {/*href="/webinars"><a>Webinar</a></Link></span>*/}
-                                                                        {/*</li>*/}
-
-                                                                    {/*</ul>*/}
-                                                                {/*</div>*/}
-                                                            {/*</div>*/}
-                                                        {/*</div>*/}
-                                                    {/*</li>*/}
-                                                {/*</ul>}*/}
-                                        {/*</li>*/}
-                                        <li><span className={resources}><Link href="/resources"><a>RESOURCES</a></Link></span>
-                                        </li>
                                         <li><span className={about}><Link href="/about-us"><a>About</a></Link></span>
                                         </li>
                                         <li><span className={support}><Link href="/support"><a>Support</a></Link></span>
@@ -653,40 +549,6 @@ class Header extends Component {
                                         </li>
                                         <li><span className={blogs}><Link href="/blogs"><a>Blog</a></Link></span></li>
                                         <li><span className={webinars}><Link href="/webinars"><a>Webinar</a></Link></span></li>
-                                        {/*<li onMouseLeave={() => this.setState({wdropdown: false})}>*/}
-                                        {/*<span className={education}*/}
-                                        {/*onMouseEnter={() => this.setState({wdropdown: true})}><a>Education</a></span>*/}
-                                        {/*{*/}
-                                        {/*wdropdown &&*/}
-                                        {/*<ul className="childlist">*/}
-                                        {/*/!*<div className="triangle-up"/>*!/*/}
-
-                                        {/*/!*<li><span className={webinars}><Link href="/webinars"><a>Webinars</a></Link></span></li>*!/*/}
-                                        {/*<li>*/}
-                                        {/*<div className="header-list-div-3">*/}
-                                        {/*<div className="close-btn-div">*/}
-                                        {/*<i class="fa fa-times"></i>*/}
-                                        {/*</div>*/}
-                                        {/*<div className="header-list-main-div-3"*/}
-                                        {/*onMouseLeave={() => this.setState({wdropdown: false})}>*/}
-
-                                        {/*<div className="inside-list-3">*/}
-
-                                        {/*<ul className="header-main-ul">*/}
-
-                                        {/*<li><span className={webinars}><Link*/}
-                                        {/*href="/webinars"><a>Webinar</a></Link></span>*/}
-                                        {/*</li>*/}
-
-                                        {/*</ul>*/}
-                                        {/*</div>*/}
-                                        {/*</div>*/}
-                                        {/*</div>*/}
-                                        {/*</li>*/}
-                                        {/*</ul>}*/}
-                                        {/*</li>*/}
-                                        <li><span className={resources}><Link href="/resources"><a>RESOURCES</a></Link></span>
-                                        </li>
                                         <li><span className={about}><Link href="/about-us"><a>About</a></Link></span>
                                         </li>
                                         <li><span className={support}><Link href="/support"><a>Support</a></Link></span>
@@ -700,11 +562,7 @@ class Header extends Component {
 
                     </section>
                 </section>
-
-
             </div>
-
-
         )
     }
 

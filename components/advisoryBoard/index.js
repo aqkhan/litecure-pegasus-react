@@ -56,6 +56,10 @@ class Advisory extends Component {
                 <section className="new-home-cards" key={index}>
                     <section className="section-one advisory-board-img" style={{
                         background: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)),url(${value.featuredImage && value.featuredImage.url})`,
+                        backgroundRepeat: "no-repeat",
+                        backgroundSize: "100% 100%",
+                        minHeight:"600px",
+                        backgroundPosition: "center"
                         }} >
                         <div className="third-row">
                             <div className="container custom-container">
@@ -69,6 +73,7 @@ class Advisory extends Component {
                         <div className="small-upper-line flex">
                             <div className="line"> </div>
                         </div>
+                    </section>
                         <div className="blog-content-teambio-responsive-only pride">
                             <section className="container-fluid article-area remove">
                                 <div className="customer-support">
@@ -82,7 +87,6 @@ class Advisory extends Component {
                                 </div>
                             </section>
                         </div>
-                    </section>
                 </section>
                 </div>
             )
