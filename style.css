@@ -709,8 +709,6 @@ a:active, a:hover{
     display: inline-table;
     margin-top:27px;
 }
-
-
 .home-wrapper .vertical-container{
     background: #EFB816;
     height: 128px;
@@ -2355,6 +2353,17 @@ a:active, a:hover{
     font-size: 208px;
     opacity:0.4;
 }
+.publication-header .detial-text p{
+    margin-bottom:26px;
+}
+.publication-header .detial-text p span{
+    font-size: 54px!important;
+    font-weight: bold;
+    opacity: 1!important;
+}
+.publication-header .detial-text h4{
+    font-size: 18px!important;
+}
 .empty-div{
     min-height: 59px;
     background:#EFB817;
@@ -3800,6 +3809,7 @@ a:active, a:hover{
     }
 }
 @media (max-width:321px) and (min-width: 320px) {
+
     .casestudy .post-casestudy>div:nth-child(2) a:last-child{
         margin-left:16px!important;
     }
@@ -3838,6 +3848,34 @@ a:active, a:hover{
 
 }
 @media (max-width: 479px) and (min-width: 320px){
+    .home-wrapper .flex-container>div:nth-child(1){
+        padding:0 10px;
+        width:50%;
+        padding-left: 16px;
+    }
+    .home-wrapper .flex-container>div:nth-child(3){
+        padding:0 10px;
+        width:50%;
+    }
+    .home-wrapper .flex-container .text-container p{
+        font-size:18px;
+        text-align:left;
+    }
+    .home-wrapper .btn-txt p{
+        font-size:10px;
+    }
+    .home-wrapper .btn-txt a{
+        padding: 6px 10px;
+        font-size:10px;
+        margin-top:15px;
+    }
+    .home-wrapper .vertical-container {
+        height: 93px;
+        width:4px;
+    }
+    .home-wrapper .section-one {
+        min-height: 231px;
+    }
 .new-header .second-row .navbar{
     flex-direction: column!important;
     background-color: rgba(25, 29, 36, 0.9);
@@ -5037,6 +5075,38 @@ margin-top:88px!important;
 
 }
 @media (max-width: 992px) and (min-width: 768px){
+    .home-wrapper .flex-container>div:nth-child(1){
+        padding:0 10px;
+        width:31%;
+        padding-left: 16px;
+    }
+    .home-wrapper .flex-container>div:nth-child(3){
+        padding:0 10px;
+        width:31%;
+    }
+    .home-wrapper .flex-container .text-container p{
+        font-size:28px;
+        text-align:left;
+    }
+    .home-wrapper .btn-txt p{
+        font-size:16px;
+    }
+    .home-wrapper .btn-txt a{
+        padding: 6px 10px;
+        font-size:10px;
+        margin-top:15px;
+    }
+    .home-wrapper .vertical-container {
+        height: 116px;
+        width:4px;
+    }
+    .home-wrapper .section-one {
+        min-height: 298px;
+    }
+    .home-wrapper .third-row{
+        width:100%;
+    }
+
     .product-det .first-section .yellow-section .prodct{
         font-size: 158.4px;
         padding-top: 104px!important;
