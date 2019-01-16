@@ -665,7 +665,71 @@ a:active, a:hover{
 
 /*Home*/
 
+.home-wrapper .flex-container{
+    display:flex;
+    justify-content:center;
+}
+.home-wrapper .flex-container>div:nth-child(1){
+    width:33.33%;
+    padding: 0 48px 0 82px;
+    display:flex;
+    align-items: center;
+}
+.home-wrapper .flex-container>div:nth-child(3){
+    width:33.33%;
+    padding: 0 48px;
+    display:flex;
+    align-items: center;
+}
+.home-wrapper .flex-container .text-container p{
+    font-family: UniSansCAPS;
+    font-size: 41px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 0.97;
+    letter-spacing: -1px;
+    text-align: center;
+    color: #efb817;
+    margin-bottom:20px;
+}
+.home-wrapper .btn-txt a {
+    border: solid 2px #efb817;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 1.5px;
+    text-align: center;
+    color: #ffffff;
+    padding: 12px 40px;
+    display: inline-table;
+    margin-top:27px;
+}
 
+
+.home-wrapper .vertical-container{
+    background: #EFB816;
+    height: 128px;
+    width: 6px;
+}
+.home-wrapper .btn-txt p{
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.32;
+}
+.home-wrapper .section-one{
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+}
 /*.new-home-cards .section-one:START*/
 .new-home-cards .section-one{
     /*background: linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)),url(/static/images/buffalo.jpg);*/
