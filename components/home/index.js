@@ -49,7 +49,7 @@ class Home extends Component {
         if (this.state.pages) {
             pages = this.state.pages.map((value, index) => {
                 if (index === 0)
-                    return <section className="new-home-cards" key={index}>
+                    return <section className="new-home-cards home-wrapper" key={index}>
                         <section className="section-one" style={{
                             background: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)),url(${value.featuredImage && value.featuredImage.url})`,
                             backgroundRepeat: "no-repeat",
@@ -57,27 +57,18 @@ class Home extends Component {
                         }}>
                             <div className="third-row">
                                 <div className="container custom-container">
-                                    <div className="row flex">
-                                        <div className="header-text">
-                                            <p><br/><span>{value.headerImageLabel}</span></p>
+                                    <div className="flex-container">
+                                        <div className="text-container">
+                                            <p>{value.headerImageLabel}</p>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="small-upper-line flex">
-                                <div className="line"></div>
-                            </div>
-                            <div className="fourth-row">
-                                <div className="custom-container container">
-                                    <div className="row flex">
-                                        <div className="flex-column learnmore-header learn-home">
-                                            <div className='detail-content'>
-                                                <div className="home-start-content"
-                                                     dangerouslySetInnerHTML={{__html: value.leadText}}/>
+                                        <div>
+                                            <div className="vertical-container"></div>
+                                        </div>
+                                        <div className="btn-txt">
+                                            <div>
+                                                <p>{value.leadText}</p>
+                                                <a href="/detail/home-main">LEARN MORE</a>
                                             </div>
-                                            <Link><a href="/detail/home-main">
-                                                LEARN MORE
-                                            </a></Link>
                                         </div>
                                     </div>
                                 </div>
