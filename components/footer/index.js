@@ -88,9 +88,10 @@ class Footer extends Component{
                                                             className="fb-xfbml-parse-ignore"><a
                                                     href="https://www.facebook.com/PegasusLaser/">Pegasus Therapy
                                                     Laser</a></blockquote>
-                                            </div>:<div><p><span>JULY 7, 2018</span><br/>
-                                                Rowdy Can Walk!<br/>
-                                                <span>WATCH VIDEO</span></p>
+                                            </div>:<div><p>
+                                                <span><a
+                                                    href="https://www.facebook.com/PegasusLaser/">Pegasus Therapy
+                                                    Laser</a></span></p>
                                             </div>}
                                     </div>
                                 </div>

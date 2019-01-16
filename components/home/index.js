@@ -151,10 +151,10 @@ class Home extends Component {
         return (
             <div>
                 {pages}
-                {products && <Carousel interval={3000} indicators={false} controls={false}>
+                {products && <Carousel interval={3000} indicators={false} controls={false} pauseOnHover={false}>
                     {products}
                 </Carousel>}
-                {stories && <Carousel interval={5000}>
+                {stories && <Carousel interval={5000} pauseOnHover={false}>
                     {stories}
                 </Carousel>}
                 <RequestDemo/>
