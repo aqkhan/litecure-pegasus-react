@@ -10,26 +10,26 @@ import Router from 'next/router';
 class detailHeader extends Component{
     render(){
         return(
-            <section className="new-home-cards home-wrapper">
-                <section className="section-one" style={{
+            <section className="new-home-cards">
+                <section className="section-one publication-header" style={{
                     background: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)),url(${this.props.imgUrl})`,
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "100% 100%",
-                }}>
+                    backgroundPosition:"center",}} >
                     <div className="third-row">
                         <div className="container custom-container">
-                            <div className="flex-container">
-                                <div className="text-container">
-                                    <p>{this.props.headerImageLabel}</p>
-                                </div>
-                                <div>
-                                    <div className="vertical-container"></div>
-                                </div>
-                                <div className="btn-txt">
-                                    <p>{this.props.leadText}</p>
+                            <div className="row flex">
+                                <div className="header-text publication-text detial-text">
+                                    <p><br/><span>{this.props.headerImageLabel}</span></p>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div className="small-upper-line flex">
+                        <div className="line"> </div>
+                    </div>
+                    <div className="pagename detial-text">
+                        <h4>{this.props.leadText}</h4>
                     </div>
                 </section>
                 <div className="empty-div">
