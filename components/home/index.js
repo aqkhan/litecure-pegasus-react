@@ -88,27 +88,41 @@ class Home extends Component {
         }
         if (this.state.products) {
             products = this.state.products.map((value, index) => <Carousel.Item key={index}>
-                <div className="section-three-overlay1"/>
-                {/*<img width={'auto'} height={500} alt="900x500" src={value.featuredImage && value.featuredImage.url } />*/}
-                <div className="home-slider-div" style={{
-                    background: `url(${value.featuredImage && value.featuredImage.url})`,
-                    backgroundRepeat: "no-repeat",
-                    backgroundSize: "cover",
-                }}/>
-                <Carousel.Caption>
-                    <div className="slider-text">
-                        <h1>Products</h1><br/>
-                        <div className="paragraph-text">
-                            <p>{value.leadText}</p>
+                <section className="new-home-cards">
+                    <section className="section-one publication-header" style={{
+                        background: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)),url(${value.featuredImage && value.featuredImage.url})`,
+                        backgroundRepeat: "no-repeat",
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                    }}>
+                        <div className="third-row">
+                            <div className="container custom-container">
+                                <div className="row flex">
+                                    <div className="header-text publication-text home-page">
+                                        <p><br/><span>PRODUCTS</span></p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <Link href={'/product/' + value.slug}>
-                            <a>
-                                VIEW
-                            </a>
-                        </Link>
-                    </div>
-
-                </Carousel.Caption>
+                        <div className="small-upper-line flex">
+                            <div className="line"></div>
+                        </div>
+                        <div className="fourth-row">
+                            <div className="custom-container container">
+                                <div className="row flex">
+                                    <div className="flex-column learnmore-header">
+                                        <p>{value.leadText}</p>
+                                        <Link href={'/product/' + value.slug}>
+                                            <a>
+                                                VIEW
+                                            </a>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
             </Carousel.Item>)
         }
         if (this.state.stories) {
@@ -136,7 +150,7 @@ class Home extends Component {
         return (
             <div>
                 {pages}
-                {products && <Carousel interval={5000}>
+                {products && <Carousel interval={3000} indicators={false} controls={false}>
                     {products}
                 </Carousel>}
                 {stories && <Carousel interval={5000}>
