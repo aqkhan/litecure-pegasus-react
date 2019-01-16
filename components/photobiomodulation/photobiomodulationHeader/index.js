@@ -3,12 +3,12 @@
  */
 import React from 'react';
 const photomodulationHeader = (props) => {
-    let {sendData,headerImageLabel, leadText} = props;
+    let {sendData,headerImageLabel, leadText, featuredImage} = props;
     return(
        <section  className="modulation-header" style={{
-           background: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)),url('/static/images/buffalo.png')`,
+           background: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)),url(${featuredImage})`,
            backgroundRepeat: "no-repeat",
-           backgroundSize: "cover",
+           backgroundSize: "100% 100%",
            backgroundPosition: "center",}}>
            <div className="photobiomodulation-header">
                <div className="container custom-container">

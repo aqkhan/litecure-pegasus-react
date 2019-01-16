@@ -35,7 +35,6 @@ class Header extends Component {
         photobiomodulation: "",
         advisoryboard: "",
         webinars: "",
-        ongoingresearch: "",
         productDropDown: false,
         dropdown: false,
         wdropdown: false,
@@ -75,7 +74,6 @@ class Header extends Component {
             case "product":
                 this.setState({
                     webinars: "",
-                    ongoingresearch: "",
                     education: "",
                     products: "active",
                     allProducts:"active",
@@ -98,7 +96,6 @@ class Header extends Component {
             case "ptc":
                 this.setState({
                     webinars: "",
-                    ongoingresearch: "",
                     education: "",
                     products: "active",
                     allProducts:"",
@@ -121,7 +118,6 @@ class Header extends Component {
             case "empower-ds-delivery-system":
                 this.setState({
                     webinars: "",
-                    ongoingresearch: "",
                     education: "",
                     products: "active",
                     allProducts:"",
@@ -144,7 +140,6 @@ class Header extends Component {
             case "blogs":
                 this.setState({
                     webinars: "",
-                    ongoingresearch: "",
                     education: "",
                     products: "",
                     allProducts:"",
@@ -167,7 +162,6 @@ class Header extends Component {
             case "resources":
                 this.setState({
                     webinars: "",
-                    ongoingresearch: "",
                     education: "",
                     products: "",
                     allProducts:"",
@@ -195,7 +189,6 @@ class Header extends Component {
                     allProducts:"",
                     ptc: "",
                     empowerDsDeliverySystem: "",
-                    ongoingresearch: "",
                     evidence: "active",
                     publications: "active",
                     blogs: "",
@@ -220,7 +213,6 @@ class Header extends Component {
                     empowerDsDeliverySystem: "",
                     evidence: "active",
                     publications: "active",
-                    ongoingresearch: "",
                     blogs: "",
                     publishedPapers: "",
                     caseStudies: "active",
@@ -242,7 +234,6 @@ class Header extends Component {
                     ptc: "",
                     empowerDsDeliverySystem: "",
                     evidence: "",
-                    ongoingresearch: "",
                     publications: "",
                     blogs: "",
                     publishedPapers: "",
@@ -267,7 +258,6 @@ class Header extends Component {
                     evidence: "active",
                     publications: "active",
                     blogs: "",
-                    ongoingresearch: "",
                     publishedPapers: "",
                     caseStudies: "",
                     articles: "active",
@@ -289,7 +279,6 @@ class Header extends Component {
                     empowerDsDeliverySystem: "",
                     evidence: "active",
                     publications: "",
-                    ongoingresearch: "",
                     blogs: "",
                     publishedPapers: "",
                     caseStudies: "",
@@ -311,36 +300,12 @@ class Header extends Component {
                     ptc: "",
                     empowerDsDeliverySystem: "",
                     evidence: "active",
-                    ongoingresearch: "",
                     publications: "",
                     blogs: "",
                     publishedPapers: "",
                     caseStudies: "",
                     articles: "",
                     advisoryboard: "active",
-                    photobiomodulation: "",
-                    resources: "",
-                    about: "",
-                    support: "",
-                    employees: ""
-                });
-                return;
-            case "ongoingresearch":
-                this.setState({
-                    webinars: "",
-                    education: "",
-                    products: "",
-                    allProducts:"",
-                    ptc: "",
-                    empowerDsDeliverySystem: "",
-                    evidence: "active",
-                    ongoingresearch: "active",
-                    publications: "",
-                    blogs: "",
-                    publishedPapers: "",
-                    caseStudies: "",
-                    articles: "",
-                    advisoryboard: "",
                     photobiomodulation: "",
                     resources: "",
                     about: "",
@@ -356,7 +321,6 @@ class Header extends Component {
                     allProducts:"",
                     ptc: "",
                     empowerDsDeliverySystem: "",
-                    ongoingresearch: "",
                     evidence: "",
                     publications: "",
                     blogs: "",
@@ -375,7 +339,6 @@ class Header extends Component {
                 this.setState({
                     webinars: "",
                     education: "",
-                    ongoingresearch: "",
                     products: "",
                     allProducts:"",
                     ptc: "",
@@ -398,7 +361,6 @@ class Header extends Component {
                 this.setState({
                     webinars: "",
                     education: "",
-                    ongoingresearch: "",
                     products: "",
                     allProducts:"",
                     ptc: "",
@@ -420,7 +382,6 @@ class Header extends Component {
             default:
                 this.setState({
                     webinars: "",
-                    ongoingresearch: "",
                     education: "",
                     products: "",
                     allProducts:"",
@@ -444,7 +405,7 @@ class Header extends Component {
     }
 
     render() {
-        let {products,allProducts, ptc, ptcDropDown, empowerDsDeliverySystem, empowerDsDeliverySystemDropDown, about, evidence, publications, wdropdown, education, publishedPapers, ongoingresearch, blogs, resources, support, employees, advisoryboard, webinars, caseStudies, articles, photobiomodulation, productDropDown, dropdown, publicationDropdown} = this.state;
+        let {products,allProducts, ptc, ptcDropDown, empowerDsDeliverySystem, empowerDsDeliverySystemDropDown, about, evidence, publications, wdropdown, education, publishedPapers, blogs, resources, support, employees, advisoryboard, webinars, caseStudies, articles, photobiomodulation, productDropDown, dropdown, publicationDropdown} = this.state;
         return (
             <div>
                 <Head>
@@ -587,7 +548,6 @@ class Header extends Component {
                                                          <li onClick={() => this.publicationDropdownFunc()}><span className={publications}><a>PUBLICATIONS</a></span></li>
                                                          <li><span className={photobiomodulation}><Link href="/photobiomodulation"><a>PHOTOBIOMODULATION</a></Link></span></li>
                                                          <li><span className={advisoryboard}><Link href="/advisory-board-members"><a>ADVISORY BOARD</a></Link></span></li>
-                                                         <li><span className={ongoingresearch}><Link href="/ongoingresearch"><a>On GOING SEARCH</a></Link></span></li>
                                                  </ul>
                                                  </div>
                                                          {publicationDropdown &&
@@ -685,8 +645,7 @@ class Header extends Component {
                                                                 </li>
                                                                 <li><span className={photobiomodulation}><Link href="/photobiomodulation"><a>PHOTOBIOMODULATION</a></Link></span></li>
                                                                 <li><span className={advisoryboard}><Link href="/advisory-board-members"><a>ADVISORY BOARD</a></Link></span></li>
-                                                                <li><span className={ongoingresearch}><Link href="/ongoingresearch"><a>On GOING SEARCH</a></Link></span></li>
-                                                            </ul>
+                                                                </ul>
                                                         </div>
                                                     </div>
                                                 </div></li>

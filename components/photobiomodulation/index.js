@@ -12,6 +12,7 @@ import TempleteFour from "./templetes/four";
 import TempleteSeven from "./templetes/seven";
 import axios from "axios";
 import {API_PATH} from "../apiconfig";
+import Link from 'next/link';
 class PhotobiomodulationDetail extends Component {
     state = {
         page:null,
@@ -29,7 +30,8 @@ class PhotobiomodulationDetail extends Component {
         four: "",
         five: "",
         six: "",
-        seven: ""
+        seven: "",
+        current:1
     };
     componentWillMount() {
         axios.get(API_PATH + 'pages')
@@ -65,7 +67,8 @@ class PhotobiomodulationDetail extends Component {
                     five: "",
                     six: "",
                     seven: "",
-                    sendtoHeader: "What is Photobiomodulation?"
+                    sendtoHeader: "What is Photobiomodulation?",
+                    current:1
                 });
                 break;
             case 2:
@@ -84,7 +87,8 @@ class PhotobiomodulationDetail extends Component {
                     temp5:false,
                     temp6:false,
                     temp7:false,
-                    sendtoHeader: "Reaching Target Tissue"
+                    sendtoHeader: "Reaching Target Tissue",
+                    current:2
                 });
                 break;
             case 3:
@@ -103,7 +107,8 @@ class PhotobiomodulationDetail extends Component {
                     temp5:false,
                     temp6:false,
                     temp7:false,
-                    sendtoHeader: "Wavelength Selection"
+                    sendtoHeader: "Wavelength Selection",
+                    current:3
                 });
                 break;
             case 4:
@@ -122,7 +127,8 @@ class PhotobiomodulationDetail extends Component {
                     temp5:false,
                     temp6:false,
                     temp7:false,
-                    sendtoHeader: "The Role of Power"
+                    sendtoHeader: "The Role of Power",
+                    current:4
                 });
                 break;
             case 5:
@@ -141,7 +147,8 @@ class PhotobiomodulationDetail extends Component {
                     temp5:true,
                     temp6:false,
                     temp7:false,
-                    sendtoHeader: "Understanding Dosing"
+                    sendtoHeader: "Understanding Dosing",
+                    current:5
                 });
                 break;
             case 6:
@@ -160,7 +167,8 @@ class PhotobiomodulationDetail extends Component {
                     temp5:false,
                     temp6:true,
                     temp7:false,
-                    sendtoHeader: "Pulsing & Frequencies"
+                    sendtoHeader: "Pulsing & Frequencies",
+                    current:6
                 });
 
                 break;
@@ -180,9 +188,19 @@ class PhotobiomodulationDetail extends Component {
                     temp5:false,
                     temp6:false,
                     temp7:true,
-                    sendtoHeader: "Glossary of Terms"
+                    sendtoHeader: "Glossary of Terms",
+                    current:7
                 });
                 break;
+        }
+    }
+    nextSection(){
+        let section = this.state.current;
+        if(section===7){
+            this.changeContent(1);
+        }
+        else {
+            this.changeContent(section+1);
         }
     }
 
@@ -190,7 +208,7 @@ class PhotobiomodulationDetail extends Component {
         let {page,sendtoHeader, one, two, three, four, five, six, seven, temp1,temp2,temp3,temp4, temp5,temp6,temp7} = this.state;
         return page&&(
             <div>
-                <PhotobiomodulationHeader headerImageLabel={page[0].headerImageLabel} leadText={page[0].leadText} sendData={sendtoHeader}/>
+                <PhotobiomodulationHeader headerImageLabel={page[0].headerImageLabel} leadText={page[0].leadText} sendData={sendtoHeader} featuredImage={page[0].featuredImage && page[0].featuredImage.url}/>
                 <section className="photobiomodulation">
                     <section className="blog-content-blogpage-only blog-content article-area">
                         <div className="article-container">
@@ -221,23 +239,14 @@ class PhotobiomodulationDetail extends Component {
                                         </ul>
                                     </div>
                                     <div className="right_btn_container">
-                                        <a href="/page/products">
+                                        <Link href="/products"><a>
                                             <button className="btn button_product dark_gray">
                                                 <div className="button_icon">
                                                     <p> VIEW OUR PRODUCTS
                                                         <i className="fa fa-angle-right dark_color"> </i>
                                                     </p></div>
                                             </button>
-                                        </a>
-                                        <a href="/page/education">
-                                            <button className="btn button_product lite_gray">
-                                                <div className="button_icon ">
-                                                    <p className="COMPANIONACADEMY"> COMPANION ACADEMY
-                                                        <i className="fa fa-angle-right lite_color"> </i>
-                                                    </p>
-                                                </div>
-                                            </button>
-                                        </a>
+                                        </a></Link>
                                     </div>
                                 </div>
                             </div>
@@ -252,14 +261,14 @@ class PhotobiomodulationDetail extends Component {
                             </div>
                             <div className="container custom-container">
                                 <div className="btn_container right_btn_container">
-                                    <button className="btn button_product btn_red">
+                                    <button className="btn button_product btn_red" onClick={()=>this.nextSection()}>
                                         <div className="button_icon ">
                                             <p> NEXT PAGE OF THIS SECTION
                                                 <i className="	fa fa-angle-right"> </i>
                                             </p>
                                         </div>
                                     </button>
-                                    <button className="btn button_product btn_sky">
+                                    <button className="btn button_product btn_sky" onClick={() => this.changeContent(7)}>
                                         <div className="button_icon ">
                                             <p> SKIP TO GLOSSARY SECTION
                                                 <i className="	fa fa-angle-right"> </i>
