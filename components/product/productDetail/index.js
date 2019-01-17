@@ -92,7 +92,7 @@ class ProductDetail extends Component{
                                                       <br/>
                                                       <div className="button">
                                                           <a href="#requestDemo">REQUEST A DEMO</a>
-                                                          <a href="#">TALK TO A REP </a>
+                                                          <a href="/support">TALK TO A REP </a>
                                                       </div>
                                                   </div>
                                               </div>
@@ -193,105 +193,6 @@ class ProductDetail extends Component{
                             <div className="container custom-container">
                                 <div className="row images-flex">
                                     {allProductCards && allProductCards}
-                                    {/*<div className="col-sm-6 col-lg-3 p-0 ">*/}
-                                        {/*<div className="image-container">*/}
-                                            {/*<div className="image-overlay"/>*/}
-                                            {/*<img src="/static/images/doctorwithhourse.jpg" className="image"/>*/}
-                                            {/*<div className="overlay">*/}
-                                                {/*<div className="text">*/}
-                                                    {/*<p>08.12.19</p>*/}
-                                                    {/*<h5>FEATURED <br/>CONTENT <br/>TITLE HERE</h5>*/}
-                                                {/*</div>*/}
-                                            {/*</div>*/}
-                                        {/*</div>*/}
-                                    {/*</div>*/}
-                                    {/*<div className="col-sm-6 col-lg-3 p-0">*/}
-                                        {/*<div className="image-container">*/}
-                                            {/*<img src="/static/images/straight-egyptian-arabians-horse.jpg" className="image"/>*/}
-                                            {/*<div className="overlay">*/}
-                                                {/*<div className="text">*/}
-                                                    {/*<p>08.12.19</p>*/}
-                                                    {/*<h5>FEATURED <br/>CONTENT <br/>TITLE HERE</h5>*/}
-                                                {/*</div>*/}
-                                            {/*</div>*/}
-                                        {/*</div>*/}
-                                    {/*</div>*/}
-                                    {/*<div className="col-sm-6 col-lg-3 p-0">*/}
-
-                                        {/*<div className="image-container">*/}
-                                            {/*<img src="/static/images/whitehourse.jpg" className="image"/>*/}
-                                            {/*<div className="overlay">*/}
-                                                {/*<div className="text">*/}
-                                                    {/*<p>08.12.19</p>*/}
-                                                    {/*<h5>FEATURED <br/>CONTENT <br/>TITLE HERE</h5>*/}
-                                                {/*</div>*/}
-                                            {/*</div>*/}
-                                        {/*</div>*/}
-                                    {/*</div>*/}
-                                    {/*<div className="col-sm-6 col-lg-3 p-0">*/}
-
-                                        {/*<div className="image-container">*/}
-                                            {/*<img src="/static/images/695128.jpg" className="image" />*/}
-                                            {/*<div className="overlay">*/}
-                                                {/*<div className="text">*/}
-                                                    {/*<p>08.12.19</p>*/}
-                                                    {/*<h5>FEATURED <br/>CONTENT <br/>TITLE HERE</h5>*/}
-                                                {/*</div>*/}
-                                            {/*</div>*/}
-                                        {/*</div>*/}
-                                    {/*</div>*/}
-                                    {/*<div className="col-sm-6 col-lg-3 p-0">*/}
-
-                                        {/*<div className="image-container">*/}
-                                            {/*<img src="/static/images/straight-egyptian-arabians-horse.jpg" className="image"/>*/}
-                                            {/*<div className="overlay">*/}
-                                                {/*<div className="text">*/}
-                                                    {/*<p>08.12.19</p>*/}
-                                                    {/*<h5>FEATURED <br/>CONTENT <br/>TITLE HERE</h5>*/}
-                                                {/*</div>*/}
-                                            {/*</div>*/}
-                                        {/*</div>*/}
-                                    {/*</div>*/}
-                                    {/*<div className="col-sm-6 col-lg-3 p-0">*/}
-
-                                        {/*<div className="image-container">*/}
-                                            {/*<img src="/static/images/345446.jpg" className="image"/>*/}
-                                            {/*<div className="overlay">*/}
-                                                {/*<div className="text">*/}
-                                                    {/*<p>08.12.19</p>*/}
-                                                    {/*<h5>FEATURED <br/>CONTENT <br/>TITLE HERE</h5>*/}
-                                                {/*</div>*/}
-                                            {/*</div>*/}
-                                        {/*</div>*/}
-                                    {/*</div>*/}
-                                    {/*<div className="col-sm-6 col-lg-3 p-0">*/}
-
-                                        {/*<div className="image-container">*/}
-                                            {/*<img src="/static/images/British-Horse-Racing-Frankel-Jockey-Wallpaper.jpg"*/}
-                                                 {/*className="image"/>*/}
-                                            {/*<div className="overlay">*/}
-                                                {/*<div className="text">*/}
-                                                    {/*<p>08.12.19</p>*/}
-                                                    {/*<h5>FEATURED <br/>CONTENT <br/>TITLE HERE</h5>*/}
-                                                {/*</div>*/}
-                                            {/*</div>*/}
-                                        {/*</div>*/}
-                                    {/*</div>*/}
-                                    {/*<div className="col-sm-6 col-lg-3 p-0">*/}
-
-                                        {/*<div className="image-container">*/}
-                                            {/*<div className="image-overlay"></div>*/}
-                                            {/*<img src="/static/images/hourse.jpg" className="image"/>*/}
-                                            {/*<div className="overlay">*/}
-                                                {/*<div className="text">*/}
-                                                    {/*<p>08.12.19</p>*/}
-                                                    {/*<h5>FEATURED <br/>CONTENT <br/>TITLE HERE</h5>*/}
-                                                {/*</div>*/}
-                                            {/*</div>*/}
-                                        {/*</div>*/}
-
-                                    {/*</div>*/}
-
                                 </div>
                             </div>
                             <div className="container">
