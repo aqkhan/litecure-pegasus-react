@@ -64,13 +64,11 @@ class AboutUs extends Component{
             this.state.pages.map((data,index)=>{
                 if(index===0){
                     page1 = <section className="new-media-detail" key={index}>
-                        <section className="first-section">
+                        <section className="first-section hourse-div">
                             <div className="container custom-container image-section image-container" style={{
                                 background: `linear-gradient(rgba(8, 7, 7, 0.72), rgba(10, 9, 9, 0.8)), url(${data.featuredImage&&data.featuredImage.url})`,
                                 backgroundRepeat: "no-repeat",
                                 backgroundSize: "100% 100%",
-                                minHeight: "600px",
-                                minWidth: "100%",
                                 backgroundPosition: "center"
                             }}>
                                 <div className="container width-container">

@@ -268,8 +268,8 @@ class PhotobiomodulationDetail extends Component {
                                             </p>
                                         </div>
                                     </button>
-                                    <button className="btn button_product btn_sky" onClick={() => this.changeContent(7)}>
-                                        <div className="button_icon ">
+                                    <button className="btn button_product btn_sky btn-mobile" onClick={() => this.changeContent(7)}>
+                                        <div className="button_icon">
                                             <p> SKIP TO GLOSSARY SECTION
                                                 <i className="	fa fa-angle-right"> </i>
                                             </p>
