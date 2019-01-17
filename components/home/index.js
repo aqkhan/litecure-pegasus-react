@@ -53,8 +53,8 @@ class Home extends Component {
                         <section className="section-one" style={{
                             background: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)),url(${value.featuredImage && value.featuredImage.url})`,
                             backgroundRepeat: "no-repeat",
-                            backgroundPosition:"center",
-                            backgroundSize:"100% 100%",
+                            backgroundSize: "cover",
+                            backgroundPosition: "center",
 
                         }}>
                             <div className="third-row">
@@ -126,7 +126,8 @@ class Home extends Component {
                     <div className="home-slider-div" style={{
                         background: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)), url(${value.featuredImage && value.featuredImage.url})`,
                         backgroundRepeat: "no-repeat",
-                        backgroundSize:"100% 100%",
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
                         // alt:"900x500",
                     }}/>
                     <Carousel.Caption>

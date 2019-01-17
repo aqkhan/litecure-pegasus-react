@@ -739,7 +739,7 @@ a:active, a:hover{
     line-height: 1.32;
 }
 .home-wrapper .section-one{
-    min-height: 650px;
+    min-height: 708px;
     display: flex;
     align-items: center;
     display: -webkit-box;
@@ -749,10 +749,7 @@ a:active, a:hover{
 }
 /*.new-home-cards .section-one:START*/
 .new-home-cards .section-one{
-    /*background: linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)),url(/static/images/buffalo.jpg);*/
-
-    /*background-repeat: no-repeat;*/
-    /*background-size: cover;*/
+    min-height: 600px;
 }
 
 .new-home-cards .section-one .custom-container .HEADERS{
@@ -2048,8 +2045,8 @@ a:active, a:hover{
     position: absolute;
     width: 331px;
     display: flex;
-    margin-left: 56px;
-    align-items: center;
+    margin-left: 140px;
+    align-items: left;
     flex-direction: column;
     justify-content: space-between;
     height: 129px;
@@ -3023,6 +3020,9 @@ a:active, a:hover{
     padding: 20px 10px;
     margin-top: 20px;
 }
+.photobiomodulation .blog-content.article-area .right_btn_container .button_product:first-child{
+    margin-left:52px;
+}
 .photobiomodulation .blog-content.article-area .right_btn_container .button_icon .COMPANIONACADEMY {
     padding-left: 5px;
     padding-right: 25px;
@@ -3879,11 +3879,34 @@ a:active, a:hover{
 
 }
 @media (max-width: 479px) and (min-width: 320px){
+
+    .public-img .primary-container>div:nth-child(1){
+        padding: 47px 78px 51px 0px;
+    }
+    .casestudy .casestudy-primary>div:nth-child(1) {
+        background: #fff;
+        width: 50%;
+    }
+    .company-profile .first-section .text-area{
+        padding-bottom: 13px;
+    }
+    .pride .lead_text_area p{
+        width:100%;
+        padding:0px;
+    }
+    .advisory-page-heading{
+        padding: 25px 0px 28px 0;
+        text-align:left;
+    }
+    .new-home-cards .section-one{
+        min-height: 283px;
+    }
+
     .images-flex .col-md-4{
         margin-bottom:18px;
     }
     .home-wrapper .flex-container>div:nth-child(1){
-        padding:0 16px;
+        padding:0 18px;
         width:50%;
     }
     .home-wrapper .flex-container>div:nth-child(3){
@@ -4357,7 +4380,7 @@ margin-top:88px!important;
         /*padding-top: 31px;*/
     }
     .header-main-ul{
-        padding: 0px 30px!important;
+        padding: 0 0 0 30px!important;
     }
     .header-image{
         width: 100%;
@@ -4451,6 +4474,25 @@ margin-top:88px!important;
     /*}*/
 }
 @media (max-width: 767px) and (min-width: 685px){
+    .pride .lead_text_area p{
+        width:100%!important;
+        padding:0px;
+    }
+    .advisory-page-heading{
+        padding: 25px 0px 28px 0;
+        text-align:left;
+        justify-content:unset;
+        width:100%!important;
+    }
+    .new-home-cards .section-one{
+        min-height: 283px;
+    }
+    .advisory-page-para{
+        width:100%;
+    }
+
+
+
     .home-slider-div {
         height:296px!important;
     }
@@ -4966,6 +5008,26 @@ margin-top:88px!important;
 
 }
 @media (max-width: 684px) and (min-width: 575px){
+    .advisory-page-para{
+        width:100%;
+        justify-content:unset;
+    }
+    .pride .lead_text_area p{
+        width:100%!important;
+        padding:0px;
+    }
+    .advisory-page-heading{
+        padding: 25px 0px 28px 0;
+        text-align:left;
+        justify-content: unset;
+    }
+    .new-home-cards .section-one{
+        min-height: 283px;
+    }
+
+
+
+
     .home-slider-div {
         height:296px!important;
     }
@@ -5221,6 +5283,23 @@ margin-top:88px!important;
 
 }
 @media (max-width: 992px) and (min-width: 768px){
+    .pride .lead_text_area p{
+        width:100%!important;
+        padding:0px;
+    }
+    .advisory-page-heading{
+        padding: 25px 0px 28px 0;
+        text-align:left;
+        justify-content:unset;
+        width:100%!important;
+    }
+    .new-home-cards .section-one{
+        min-height: 283px;
+    }
+    .advisory-page-para{
+        width:100%;
+    }
+
     .home-wrapper .flex-container>div:nth-child(1){
         padding:0 10px;
         width:40%;
@@ -5644,6 +5723,23 @@ position: relative;
     }
 }
 @media (max-width: 1199px) and (min-width: 1024px){
+    .advisory-page-para{
+        width:100%;
+        justify-content:unset;
+    }
+    .pride .lead_text_area p{
+        width:100%!important;
+        padding:0px;
+    }
+    .advisory-page-heading{
+        padding: 25px 0px 28px 0;
+        text-align:left;
+        justify-content: unset;
+    }
+    .new-home-cards .section-one{
+        min-height: 334px;
+    }
+
     .home-wrapper .flex-container>div:nth-child(1){
         padding:0 10px;
         width:37%;
