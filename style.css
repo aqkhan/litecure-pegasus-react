@@ -2016,6 +2016,11 @@ a:active, a:hover{
 .company-profile .first-section .fourth-row .about{
     margin-top: 12%;
 }
+.hourse-div{
+    min-height: 600px;
+    min-width: 100%;
+    display: flex;
+}
 .company-profile .first-section .fourth-row .about h1{
     font-family: UniSansCAPS;
     font-size: 294.4px;
@@ -3879,7 +3884,30 @@ a:active, a:hover{
 
 }
 @media (max-width: 479px) and (min-width: 320px){
+    .paragraph_container iframe{
+        width:100%;
+    }
+    .photobiomodulation .blog-content.article-area .right_btn_container .button_icon p {
+        font-size: 16px;
+        margin-bottom: 0;
+        padding-left: 10px;
+        padding-right: 12px;
+        color: #fff;
+    }
+    .content-dev .description-dev p iframe{
+        width:100%;
+        height: 512px;
+    }
 
+
+    .hourse-div{
+        min-height: 339px;
+        min-width: 100%;
+        display: flex;
+    }
+    .hourse-div .year .video-icon{
+        margin: 10% 0 0 57%;
+    }
     .public-img .primary-container>div:nth-child(1){
         padding: 47px 78px 51px 0px;
     }
@@ -4430,8 +4458,13 @@ margin-top:88px!important;
         display: block;
         padding: 20px 0px;
         margin: 0px;
-        width:100vw
-
+        position: relative;
+        left: -36px;
+    }
+    .photobiomodulation .blog-content.article-area .right_btn_container .btn-mobile{
+        left:16px!important;
+        padding-left:5px;
+        margin:10px 0px;
     }
     .photobiomodulation .blog-content.article-area .right_btn_container .button_icon p{
         font-size: 14px;
@@ -4474,43 +4507,63 @@ margin-top:88px!important;
     /*}*/
 }
 @media (max-width: 767px) and (min-width: 685px){
+    .paragraph_container iframe{
+        width:100%;
+    }
+
+    .content-dev .description-dev p iframe{
+        width:100%;
+        height: 512px;
+    }
+
+
+    .hourse-div{
+        min-height: 339px;
+        min-width: 100%;
+        display: flex;
+    }
+    .hourse-div .year .video-icon{
+        margin: 10% 0 0 57%;
+    }
+    .public-img .primary-container>div:nth-child(1){
+        padding: 47px 78px 51px 0px;
+    }
+    .casestudy .casestudy-primary>div:nth-child(1) {
+        background: #fff;
+        width: 50%;
+    }
+    .company-profile .first-section .text-area{
+        padding-bottom: 13px;
+    }
     .pride .lead_text_area p{
-        width:100%!important;
+        width:100%;
         padding:0px;
     }
     .advisory-page-heading{
         padding: 25px 0px 28px 0;
         text-align:left;
-        justify-content:unset;
-        width:100%!important;
     }
     .new-home-cards .section-one{
         min-height: 283px;
     }
-    .advisory-page-para{
-        width:100%;
-    }
 
-
-
-    .home-slider-div {
-        height:296px!important;
+    .images-flex .col-md-4{
+        margin-bottom:18px;
     }
     .home-wrapper .flex-container>div:nth-child(1){
-        padding:0 10px;
-        width:49%;
-        padding-left: 16px;
+        padding:0 18px;
+        width:50%;
     }
     .home-wrapper .flex-container>div:nth-child(3){
-        padding:0 0 0 40px;
-        width:49%;
+        padding:0 10px;
+        width:50%;
     }
     .home-wrapper .flex-container .text-container p{
-        font-size:33px;
+        font-size:18px;
         text-align:left;
     }
     .home-wrapper .btn-txt p{
-        font-size:18px;
+        font-size:10px;
     }
     .home-wrapper .btn-txt a{
         padding: 6px 10px;
@@ -4518,18 +4571,136 @@ margin-top:88px!important;
         margin-top:15px;
     }
     .home-wrapper .vertical-container {
-        height: 126px;
+        height: 93px;
         width:4px;
     }
     .home-wrapper .section-one {
-        min-height: 415px;
+        min-height: 231px;
     }
-    .home-wrapper .third-row{
+    .new-header .second-row .navbar{
+        flex-direction: column!important;
+        background-color: rgba(25, 29, 36, 0.9);
+        z-index: 2;
+        border-top: 1px solid #efb817;
+        /*height:100vh;*/
+        align-items: flex-start;
+    }
+    .desktop-header{
+        display: none;
+    }
+    .mobile-header{
+        display: block!important;
+    }
+    .first-mob-list{
+        margin-top:88px!important;
+        top:0px!important;
+    }
+    .childlist-2{
+        position:relative!important;
+        top:10px;
+        margin-top: 0px!important;
+    }
+    .first-mob-list{
+        position: relative;
+    }
+    .childlist-2 .inside-list{
+        display: block;
+    }
+    .article-container{
+        width: 100%;
+    }
+    .banner_container{
+        flex-direction: column;
+    }
+    .banner_container>div{
         width:100%;
+    }
+    .banner_container .button_product{
+        margin-left: 26px;
+    }
+    .modal-body img{
+        height: 100%;
+        width: 100%;
+    }
+    .content-dev .title-dev span{
+        padding: 30px 40px 0px 0px;
+    }
+    /*.new-home-cards .section-one{*/
+    /*background-size: contain!important;*/
+    /*}*/
+    .modulation-header .photobiomodulation-header .product-image{
+        right:-46px;
+    }
+    .modulation-header .photobiomodulation-header .photo-header-second p{
+        padding-left:40px;
+    }
+    .photo-header p{
+        color: transparent;
+    }
+    .content-dev .description-dev p img{
+        height:100%;
+        width:100%;
+    }
+    .authors-details-card .card{
+        width:100%!important;
+    }
+    .full-study-btn{
+        margin-left:0px;
+    }
+    .content-dev .title-dev p{
+        font-size:10px
+    }
+    .close-btn-div{
+        display: block!important;
+        display:flex!important;
+    }
+    .img-div-h-list,.product-detail-div{
+        display: none;
     }
     .res-div{
         width:100%;
         padding-left:0px!important;
+    }
+    .casestudy .post-casestudy>div:nth-child(2){
+        flex-direction:column;
+    }
+    .show-header{
+        display: block;
+        animation: fadeIn  ease-in;
+        animation-direction: alternate;
+        -webkit-animation-duration: 0.4s;
+
+
+    }
+    .casestudy .casestudy-primary{
+        flex-direction: column;
+        /*align-items: center;*/
+    }
+    .casestudy .casestudy-primary>div:nth-child(2){
+        width: 100%;
+        display: flex;
+        flex-direction: column;justify-content: center;
+    }
+
+
+
+    @-webkit-keyframes fadeIn {
+        from {
+            opacity: 0;
+
+        }
+        to {
+            opacity: 1;
+
+        }
+    }
+
+    .new-media-detail-containers .second-section .fourth-row .learnmore-header div{
+        display: flex;
+    }
+    .new-media-detail-containers .second-section .fourth-row .learnmore-header a{
+        padding: unset;
+        font-size: 10px;
     }
     .new-header .HEADERS .col-7 img {
         width: auto;
@@ -4543,7 +4714,7 @@ margin-top:88px!important;
         justify-content: flex-end;
     }
     .new-header .second-row{
-        display:none;
+        /*display:none;*/
     }
     .new-home-cards .section-one .third-row .header-text p{
         font-size:38px;
@@ -4556,7 +4727,7 @@ margin-top:88px!important;
         padding: 55px 0px;
     }
     .publication-header .third-row .header-text p span{
-        font-size:116px;
+        font-size:51px;
     }
     .fourth-row{
         width:100%;
@@ -4566,10 +4737,17 @@ margin-top:88px!important;
     }
     .new-subscribe .section-five p{
         margin-right:0px;
+        margin-right: 0px;
+        padding: 0 20px;
+        font-size: 15px;
+        margin-bottom:10px;
     }
-    .new-request-demo .section-four .requestitbro p{
-        font-size:66px;
+    .new-header .custom-container .HEADERS {
+        background-color: #191d24;
+        display: flex;
+        flex-wrap: nowrap;
     }
+
     /* slider */
     .slider-text h1{
         font-size: 42px;
@@ -4597,13 +4775,19 @@ margin-top:88px!important;
     .carousel-inner>.item>img{
         height: 248px;
     }
+    .new-request-demo .section-four .requestitbro p{
+        font-size:42px;
+    }
     /* input form */
     .new-request-demo .section-four .flex-custom input {
         width: 68%;
         margin-top: 0px;
     }
+    .home-slider-div {
+        height:296px!important;
+    }
     .publication-header {
-        min-height: 511px;
+        min-height: 456px;
     }
     /* footer responsive */
     .responsiv-foot{
@@ -4620,7 +4804,6 @@ margin-top:88px!important;
     .footer-menu-last{
         margin-top:0px!important;
     }
-
     .give-bottom{
         margin-bottom:24px;
     }
@@ -4628,56 +4811,68 @@ margin-top:88px!important;
         padding-left:0px;
         padding-bottom:0px;
     }
-    .another-left {
-        justify-content: flex-start;
-    }
-    .socialicons{
-        margin-left:0px;
-        margin-right:16px;
-    }
-    .custom-flex-footer {
-        padding-left: 64px;
-    }
 
+    /* product page */
+    .first-product .first-section .third-row .header-text p{
+        font-size:64px;
+    }
     /* blog page */
     .casestudy .casestudy-text span:nth-child(1){
         font-size:16px;
     }
     .casestudy .casestudy-text span:nth-child(2){
-        font-size:10px;
+        font-size:11px;
         padding-left:0px;
     }
     .casestudy .casestudy-text .list-dev ul{
         padding-left:0px;
     }
     .casestudy .casestudy-text .list-dev ul li span{
-        margin-top: 2px;
+        /*margin-top: 4px;*/
         margin-left: 2px;
+        width: 200px;
     }
     .casestudy .casestudy-text .list-dev ul li {
         margin-top: 2px;
+        display: inline-flex;
+        padding-bottom: 9px;
+        align-items: center;
+    }
+    .company-profile .first-section .fourth-row .learnmore-header div{
         display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction:column;
+    }
+    .company-profile .first-section .fourth-row .learnmore-header a{
+        margin-top: 5px;
+    }
+    .company-profile .first-section .yellow-section .image-margin img{
+        height:100%
     }
     .casestudy .post-casestudy>div:nth-child(2) a {
         font-size: 10px;
+        padding-top: 10px;
     }
     .casestudy .post-casestudy>div:nth-child(2) a:last-child {
         padding: 1px 10px;
         font-size: 8px!important;
-        margin-top: 33px;
+        margin-top: 11px;
         bottom:2px;
+        position: relative;
+
+
     }
     .casestudy .post-casestudy .img-dev {
-        width: 110px;
+        width: 100%!important;
         height: auto;
     }
     .casestudy .post-casestudy {
         margin-top: 20px;
         margin-bottom: 9px;
+        flex-direction: column;
     }
     .casestudy-text {
         padding-top: 18px;
@@ -4691,6 +4886,7 @@ margin-top:88px!important;
         width: 25px;
         height: 25px;
     }
+
     /* resourse page */
     .new-media-detail .first-section .year .quarter p{
         font-size:24px;
@@ -4699,7 +4895,13 @@ margin-top:88px!important;
         min-width:100%;
     }
     .new-media-detail-containers .second-section .fourth-row .BENEFITS h1{
-        font-size:50px;
+        font-size:48px;
+    }
+    .odd-product .second-section .PTL-PEGASUS span{
+        font-size:58px;
+    }
+    .odd-product .second-section .PTL-PEGASUS p{
+        font-size:68px;
     }
     /* about page */
     .company-profile .first-section .fourth-row .about h1{
@@ -4707,14 +4909,12 @@ margin-top:88px!important;
     }
     .company-profile .first-section .yellow-section .prodct{
         font-size:66px;
-        position: absolute;
-        top: 52px;
     }
     .company-profile .first-section .yellow-section .view-text{
         width:auto;
     }
     .company-profile .first-section .yellow-section{
-        height:668px;
+        height:auto;
     }
     .company-profile .first-section .yellow-section .image-margin{
         margin-left:0px;
@@ -4722,11 +4922,13 @@ margin-top:88px!important;
     }
     .company-profile .first-section .yellow-section .image-margin p{
         margin-top:0px;
+        margin-left:0px;
         padding-left:0px;
     }
     .view-text a{
         padding:0px;
         font-size:11px;
+        padding-left:0px;
     }
     /* support page */
     .classification .first-section .fourth-row .learnmore-header{
@@ -4737,10 +4939,10 @@ margin-top:88px!important;
         padding: 10px 10px;
         margin-bottom:8px;
     }
-    /*.button-div.two-button {*/
-        /*display: flex;*/
-        /*flex-direction: column;*/
-    /*}*/
+    .button-div.two-button {
+        display: flex;
+        flex-direction: column;
+    }
     .button-div.two-button {
         padding: 20px;
         padding-left: 0px;
@@ -4749,13 +4951,180 @@ margin-top:88px!important;
         margin: 0px 60px 0px 0px;
         float:left;
     }
-    .cards-section .Second-section .image-container .image-overlay{
-        width:299px;
+    /* employ page */
+    .employees {
+        padding:20px 10px;
     }
+    .product-det .first-section .third-row .header-text p{
+        font-size: 68px;
+    }
+    .product-det .first-section .yellow-section .image-margin img{
+        width: 79%;
+    }
+    .product-det .first-section .yellow-section .prodct{
+        font-size:61.4px;
+    }
+    .product-det .first-section .yellow-section .image-margin{
+        width:auto;
+    }
+    .cards-section .Second-section .image-container{
+        margin: 5px 0px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .product-det .first-section .fourth-row .learnmore-header .button{
+        float:unset;
+    }
+    .product-det .first-section .fourth-row .learnmore-header a{
+        margin-bottom:5px;
+    }
+    .new-header .second-row .navbar li{
+        padding: 8px;
+        z-index:2;
+    }
+    .header-list-div-1,.header-list-div-2,.header-list-div-3{
+        min-height:100%!important;
+        background-color: transparent!important;
+        border-top:none!important;
+    }
+    .header-list-main-div-1{
+        padding-left: 0px!important;
+        /*flex-direction:column;*/
+        margin-top: -86px;
+        padding-top: 0px!important;
+    }
+    .inside-list-two-1{
+        flex-direction:column;
+    }
+    .product-detail-div p{
+        width:100%!important;
 
+    }
+    .inside-list{
+        min-width: unset!important;
+        display: flex;justify-content: flex-end;
+    }
+    .header-list-main-div-2{
+        padding-left:0px!important;
+        flex-direction:column;
+        padding-top: 0px!important;
+    }
+    .header-list-div-2 .inside-list-two{
+        padding-left: 110px;
+        padding-top: 27px;
+    }
+    /*.header-list-main-div-2{*/
+    /*margin-top:31px;*/
+    /*}*/
 
+    .inside-list-3 {
+        padding-right: 9px!important;
+        /*padding-top: 31px;*/
+    }
+    .header-main-ul{
+        padding: 0 0 0 30px!important;
+    }
+    .header-image{
+        width: 100%;
+    }
+    .product-det .first-section .yellow-section .view-text{
+        width:56%;
+        left: 23%;
+        margin-top: 71px;
+    }
+    .cards-section .Second-section .image-container .image-overlay{
+        width: 251px;
+        left: 80px;
+        display:none;
+    }
+    .cards-section .Second-section .image-container .image{
+        max-width: 250px!important;
+        min-height:200px;
+    }
+    .cards-section .Second-section .image-container .overlay{
+        width: 200px;
+        height: 145px;
+        left: 70px;
+    }
+    .cards-section .Second-section .image-container .text h5{
+        font-size:25px
+    }
+    .cards-section .Second-section .image-container .text p{
+        padding:33px 0px 0px 20px;
+    }
+    .fb_iframe_widget_fluid span {
+        width: 305px!important;
+    }
+    .photobiomodulation .blog-content.article-area .main_section{
+        display: block;
+    }
+    .blog-content.article-area .paragraph-area{
+        margin-left:0px;
+    }
+    .photobiomodulation .blog-content.article-area .right_btn_container {
+        padding: 0px;
+        width: 100vw;
+    }
+    .photobiomodulation .btn_container{
+        display: block;
+    }
+    .photobiomodulation .blog-content.article-area .right_btn_container .button_product {
+        display: block;
+        padding: 20px 0px;
+        margin: 0px;
+    }
+    .photobiomodulation .blog-content.article-area .right_btn_container .btn-mobile{
+        margin: 10px 0px;
+        margin-left: 52px;
+    }
+    .photobiomodulation .blog-content.article-area .right_btn_container .button_icon p{
+        font-size: 14px;
+    }
+    .modulation-header .product-image img{
+        width:100%;
+    }
+    .public-img .primary-container{
+        flex-direction: column;
+    }
+    .public-img .primary-container>div:nth-child(2){
+        width: 100%;
+    }
+    .digit-icons.main li{
+        padding: 11px;
+    }
+    .advisory-page-para{
+        width: 100%;
+    }
+    .advisory-page-para{
+        font-size:22px;
+    }
+    .member-wrapper .member-headshot img{
+        width:100%;}
+
+    .member-wrapper .customer-support .top-content h1{
+        font-size: 19px;
+    }
+    .member-wrapper .customer-support .top-content {
+        padding: 45px 0 45px 25px;
+    }
+    .bio-para{
+        padding: 0 0px 20px 0px;
+    }
+    .product-det .first-section .yellow-section .image-margin h1{
+        font-size:18px;
+    }
+    /*.new-home-cards .section-one{*/
+    /*background-size: contain!important;*/
 }
 @media (max-width: 574px) and (min-width: 480px){
+    .content-dev .description-dev p iframe{
+        width:100%;
+        height: 512px;
+    }
+
     .home-wrapper .flex-container>div:nth-child(1){
         padding:0 10px;
         width:50%;
@@ -5008,44 +5377,63 @@ margin-top:88px!important;
 
 }
 @media (max-width: 684px) and (min-width: 575px){
-    .advisory-page-para{
+    .paragraph_container iframe{
         width:100%;
-        justify-content:unset;
+    }
+
+    .content-dev .description-dev p iframe{
+        width:100%;
+        height: 512px;
+    }
+
+
+    .hourse-div{
+        min-height: 339px;
+        min-width: 100%;
+        display: flex;
+    }
+    .hourse-div .year .video-icon{
+        margin: 10% 0 0 57%;
+    }
+    .public-img .primary-container>div:nth-child(1){
+        padding: 47px 78px 51px 0px;
+    }
+    .casestudy .casestudy-primary>div:nth-child(1) {
+        background: #fff;
+        width: 50%;
+    }
+    .company-profile .first-section .text-area{
+        padding-bottom: 13px;
     }
     .pride .lead_text_area p{
-        width:100%!important;
+        width:100%;
         padding:0px;
     }
     .advisory-page-heading{
         padding: 25px 0px 28px 0;
         text-align:left;
-        justify-content: unset;
     }
     .new-home-cards .section-one{
         min-height: 283px;
     }
 
-
-
-
-    .home-slider-div {
-        height:296px!important;
+    .images-flex .col-md-4{
+        margin-bottom:18px;
     }
     .home-wrapper .flex-container>div:nth-child(1){
-        padding:0 10px;
-        width:49%;
-        padding-left: 16px;
+        padding:0 18px;
+        width:50%;
     }
     .home-wrapper .flex-container>div:nth-child(3){
-        padding:0 0 0 40px;
-        width:49%;
+        padding:0 10px;
+        width:50%;
     }
     .home-wrapper .flex-container .text-container p{
-        font-size:33px;
+        font-size:18px;
         text-align:left;
     }
     .home-wrapper .btn-txt p{
-        font-size:18px;
+        font-size:10px;
     }
     .home-wrapper .btn-txt a{
         padding: 6px 10px;
@@ -5053,18 +5441,136 @@ margin-top:88px!important;
         margin-top:15px;
     }
     .home-wrapper .vertical-container {
-        height: 126px;
+        height: 93px;
         width:4px;
     }
     .home-wrapper .section-one {
-        min-height: 415px;
+        min-height: 231px;
     }
-    .home-wrapper .third-row{
+    .new-header .second-row .navbar{
+        flex-direction: column!important;
+        background-color: rgba(25, 29, 36, 0.9);
+        z-index: 2;
+        border-top: 1px solid #efb817;
+        /*height:100vh;*/
+        align-items: flex-start;
+    }
+    .desktop-header{
+        display: none;
+    }
+    .mobile-header{
+        display: block!important;
+    }
+    .first-mob-list{
+        margin-top:88px!important;
+        top:0px!important;
+    }
+    .childlist-2{
+        position:relative!important;
+        top:10px;
+        margin-top: 0px!important;
+    }
+    .first-mob-list{
+        position: relative;
+    }
+    .childlist-2 .inside-list{
+        display: block;
+    }
+    .article-container{
+        width: 100%;
+    }
+    .banner_container{
+        flex-direction: column;
+    }
+    .banner_container>div{
         width:100%;
+    }
+    .banner_container .button_product{
+        margin-left: 26px;
+    }
+    .modal-body img{
+        height: 100%;
+        width: 100%;
+    }
+    .content-dev .title-dev span{
+        padding: 30px 40px 0px 0px;
+    }
+    /*.new-home-cards .section-one{*/
+    /*background-size: contain!important;*/
+    /*}*/
+    .modulation-header .photobiomodulation-header .product-image{
+        right:-46px;
+    }
+    .modulation-header .photobiomodulation-header .photo-header-second p{
+        padding-left:40px;
+    }
+    .photo-header p{
+        color: transparent;
+    }
+    .content-dev .description-dev p img{
+        height:100%;
+        width:100%;
+    }
+    .authors-details-card .card{
+        width:100%!important;
+    }
+    .full-study-btn{
+        margin-left:0px;
+    }
+    .content-dev .title-dev p{
+        font-size:10px
+    }
+    .close-btn-div{
+        display: block!important;
+        display:flex!important;
+    }
+    .img-div-h-list,.product-detail-div{
+        display: none;
     }
     .res-div{
         width:100%;
         padding-left:0px!important;
+    }
+    .casestudy .post-casestudy>div:nth-child(2){
+        flex-direction:column;
+    }
+    .show-header{
+        display: block;
+        animation: fadeIn  ease-in;
+        animation-direction: alternate;
+        -webkit-animation-duration: 0.4s;
+
+
+    }
+    .casestudy .casestudy-primary{
+        flex-direction: column;
+        /*align-items: center;*/
+    }
+    .casestudy .casestudy-primary>div:nth-child(2){
+        width: 100%;
+        display: flex;
+        flex-direction: column;justify-content: center;
+    }
+
+
+
+    @-webkit-keyframes fadeIn {
+        from {
+            opacity: 0;
+
+        }
+        to {
+            opacity: 1;
+
+        }
+    }
+
+    .new-media-detail-containers .second-section .fourth-row .learnmore-header div{
+        display: flex;
+    }
+    .new-media-detail-containers .second-section .fourth-row .learnmore-header a{
+        padding: unset;
+        font-size: 10px;
     }
     .new-header .HEADERS .col-7 img {
         width: auto;
@@ -5078,7 +5584,7 @@ margin-top:88px!important;
         justify-content: flex-end;
     }
     .new-header .second-row{
-        display:none;
+        /*display:none;*/
     }
     .new-home-cards .section-one .third-row .header-text p{
         font-size:38px;
@@ -5091,7 +5597,7 @@ margin-top:88px!important;
         padding: 55px 0px;
     }
     .publication-header .third-row .header-text p span{
-        font-size:116px;
+        font-size:51px;
     }
     .fourth-row{
         width:100%;
@@ -5101,10 +5607,17 @@ margin-top:88px!important;
     }
     .new-subscribe .section-five p{
         margin-right:0px;
+        margin-right: 0px;
+        padding: 0 20px;
+        font-size: 15px;
+        margin-bottom:10px;
     }
-    .new-request-demo .section-four .requestitbro p{
-        font-size:66px;
+    .new-header .custom-container .HEADERS {
+        background-color: #191d24;
+        display: flex;
+        flex-wrap: nowrap;
     }
+
     /* slider */
     .slider-text h1{
         font-size: 42px;
@@ -5132,13 +5645,19 @@ margin-top:88px!important;
     .carousel-inner>.item>img{
         height: 248px;
     }
+    .new-request-demo .section-four .requestitbro p{
+        font-size:42px;
+    }
     /* input form */
     .new-request-demo .section-four .flex-custom input {
         width: 68%;
         margin-top: 0px;
     }
+    .home-slider-div {
+        height:296px!important;
+    }
     .publication-header {
-        min-height: 511px;
+        min-height: 456px;
     }
     /* footer responsive */
     .responsiv-foot{
@@ -5155,7 +5674,6 @@ margin-top:88px!important;
     .footer-menu-last{
         margin-top:0px!important;
     }
-
     .give-bottom{
         margin-bottom:24px;
     }
@@ -5163,56 +5681,68 @@ margin-top:88px!important;
         padding-left:0px;
         padding-bottom:0px;
     }
-    .another-left {
-        justify-content: flex-start;
-    }
-    .socialicons{
-        margin-left:0px;
-        margin-right:16px;
-    }
-    .custom-flex-footer {
-        padding-left: 64px;
-    }
 
+    /* product page */
+    .first-product .first-section .third-row .header-text p{
+        font-size:64px;
+    }
     /* blog page */
     .casestudy .casestudy-text span:nth-child(1){
         font-size:16px;
     }
     .casestudy .casestudy-text span:nth-child(2){
-        font-size:10px;
+        font-size:11px;
         padding-left:0px;
     }
     .casestudy .casestudy-text .list-dev ul{
         padding-left:0px;
     }
     .casestudy .casestudy-text .list-dev ul li span{
-        margin-top: 2px;
+        /*margin-top: 4px;*/
         margin-left: 2px;
+        width: 200px;
     }
     .casestudy .casestudy-text .list-dev ul li {
         margin-top: 2px;
+        display: inline-flex;
+        padding-bottom: 9px;
+        align-items: center;
+    }
+    .company-profile .first-section .fourth-row .learnmore-header div{
         display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction:column;
+    }
+    .company-profile .first-section .fourth-row .learnmore-header a{
+        margin-top: 5px;
+    }
+    .company-profile .first-section .yellow-section .image-margin img{
+        height:100%
     }
     .casestudy .post-casestudy>div:nth-child(2) a {
         font-size: 10px;
+        padding-top: 10px;
     }
     .casestudy .post-casestudy>div:nth-child(2) a:last-child {
         padding: 1px 10px;
         font-size: 8px!important;
-        margin-top: 33px;
+        margin-top: 11px;
         bottom:2px;
+        position: relative;
+
+
     }
     .casestudy .post-casestudy .img-dev {
-        width: 110px;
+        width: 100%!important;
         height: auto;
     }
     .casestudy .post-casestudy {
         margin-top: 20px;
         margin-bottom: 9px;
+        flex-direction: column;
     }
     .casestudy-text {
         padding-top: 18px;
@@ -5226,6 +5756,7 @@ margin-top:88px!important;
         width: 25px;
         height: 25px;
     }
+
     /* resourse page */
     .new-media-detail .first-section .year .quarter p{
         font-size:24px;
@@ -5234,7 +5765,13 @@ margin-top:88px!important;
         min-width:100%;
     }
     .new-media-detail-containers .second-section .fourth-row .BENEFITS h1{
-        font-size:50px;
+        font-size:48px;
+    }
+    .odd-product .second-section .PTL-PEGASUS span{
+        font-size:58px;
+    }
+    .odd-product .second-section .PTL-PEGASUS p{
+        font-size:68px;
     }
     /* about page */
     .company-profile .first-section .fourth-row .about h1{
@@ -5255,11 +5792,13 @@ margin-top:88px!important;
     }
     .company-profile .first-section .yellow-section .image-margin p{
         margin-top:0px;
-        display: table-row;
+        margin-left:0px;
+        padding-left:0px;
     }
     .view-text a{
         padding:0px;
         font-size:11px;
+        padding-left:0px;
     }
     /* support page */
     .classification .first-section .fourth-row .learnmore-header{
@@ -5271,6 +5810,8 @@ margin-top:88px!important;
         margin-bottom:8px;
     }
     .button-div.two-button {
+        display: flex;
+        flex-direction: column;
     }
     .button-div.two-button {
         padding: 20px;
@@ -5278,11 +5819,185 @@ margin-top:88px!important;
     }
     .classification .first-section .fourth-row .learnmore-header .button {
         margin: 0px 60px 0px 0px;
-        float: left;
+        float:left;
     }
+    /* employ page */
+    .employees {
+        padding:20px 10px;
+    }
+    .product-det .first-section .third-row .header-text p{
+        font-size: 68px;
+    }
+    .product-det .first-section .yellow-section .image-margin img{
+        width: 79%;
+    }
+    .product-det .first-section .yellow-section .prodct{
+        font-size:61.4px;
+    }
+    .product-det .first-section .yellow-section .image-margin{
+        width:auto;
+    }
+    .cards-section .Second-section .image-container{
+        margin: 5px 0px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .product-det .first-section .fourth-row .learnmore-header .button{
+        float:unset;
+    }
+    .product-det .first-section .fourth-row .learnmore-header a{
+        margin-bottom:5px;
+    }
+    .new-header .second-row .navbar li{
+        padding: 8px;
+        z-index:2;
+    }
+    .header-list-div-1,.header-list-div-2,.header-list-div-3{
+        min-height:100%!important;
+        background-color: transparent!important;
+        border-top:none!important;
+    }
+    .header-list-main-div-1{
+        padding-left: 0px!important;
+        /*flex-direction:column;*/
+        margin-top: -86px;
+        padding-top: 0px!important;
+    }
+    .inside-list-two-1{
+        flex-direction:column;
+    }
+    .product-detail-div p{
+        width:100%!important;
+
+    }
+    .inside-list{
+        min-width: unset!important;
+        display: flex;justify-content: flex-end;
+    }
+    .header-list-main-div-2{
+        padding-left:0px!important;
+        flex-direction:column;
+        padding-top: 0px!important;
+    }
+    .header-list-div-2 .inside-list-two{
+        padding-left: 110px;
+        padding-top: 27px;
+    }
+    /*.header-list-main-div-2{*/
+    /*margin-top:31px;*/
+    /*}*/
+
+    .inside-list-3 {
+        padding-right: 9px!important;
+        /*padding-top: 31px;*/
+    }
+    .header-main-ul{
+        padding: 0 0 0 30px!important;
+    }
+    .header-image{
+        width: 100%;
+    }
+    .product-det .first-section .yellow-section .view-text{
+        width:56%;
+        left: 23%;
+        margin-top: 71px;
+    }
+    .cards-section .Second-section .image-container .image-overlay{
+        width: 251px;
+        left: 80px;
+        display:none;
+    }
+    .cards-section .Second-section .image-container .image{
+        max-width: 250px!important;
+        min-height:200px;
+    }
+    .cards-section .Second-section .image-container .overlay{
+        width: 200px;
+        height: 145px;
+        left: 70px;
+    }
+    .cards-section .Second-section .image-container .text h5{
+        font-size:25px
+    }
+    .cards-section .Second-section .image-container .text p{
+        padding:33px 0px 0px 20px;
+    }
+    .fb_iframe_widget_fluid span {
+        width: 305px!important;
+    }
+    .photobiomodulation .blog-content.article-area .main_section{
+        display: block;
+    }
+    .blog-content.article-area .paragraph-area{
+        margin-left:0px;
+    }
+    .photobiomodulation .blog-content.article-area .right_btn_container {
+        padding: 0px;
+        width: 100vw;
+    }
+    .photobiomodulation .btn_container{
+        display: block;
+    }
+    .photobiomodulation .blog-content.article-area .right_btn_container .button_product {
+        display: block;
+        padding: 20px 0px;
+        margin: 0px;
+    }
+    .photobiomodulation .blog-content.article-area .right_btn_container .btn-mobile{
+        margin: 10px 0px;
+        margin-left: 52px;
+    }
+    .photobiomodulation .blog-content.article-area .right_btn_container .button_icon p{
+        font-size: 14px;
+    }
+    .modulation-header .product-image img{
+        width:100%;
+    }
+    .public-img .primary-container{
+        flex-direction: column;
+    }
+    .public-img .primary-container>div:nth-child(2){
+        width: 100%;
+    }
+    .digit-icons.main li{
+        padding: 11px;
+    }
+    .advisory-page-para{
+        width: 100%;
+    }
+    .advisory-page-para{
+        font-size:22px;
+    }
+    .member-wrapper .member-headshot img{
+        width:100%;}
+
+    .member-wrapper .customer-support .top-content h1{
+        font-size: 19px;
+    }
+    .member-wrapper .customer-support .top-content {
+        padding: 45px 0 45px 25px;
+    }
+    .bio-para{
+        padding: 0 0px 20px 0px;
+    }
+    .product-det .first-section .yellow-section .image-margin h1{
+        font-size:18px;
+    }
+    /*.new-home-cards .section-one{*/
+    /*background-size: contain!important;*/
 
 }
 @media (max-width: 992px) and (min-width: 768px){
+    .photobiomodulation .blog-content.article-area .right_btn_container .button_icon p {
+        font-size: 16px;
+        margin-bottom: 0;
+        padding-left: 10px;
+        padding-right: 12px;
+        color: #fff;
+    }
     .pride .lead_text_area p{
         width:100%!important;
         padding:0px;
