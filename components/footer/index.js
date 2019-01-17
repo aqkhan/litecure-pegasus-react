@@ -58,7 +58,7 @@ class Footer extends Component{
                                 <div className="col-sm-2 responsive-no-off all-width col-2 mt-5 responsiv-foot">
                                     <div className="redcolor"><p className="make-bold"><strong>Websites</strong></p></div>
                                     <div className="footer-menu">
-                                        <div><a href="#">companion</a></div>
+                                        <div><a href="#">Companion</a></div>
                                         <div><a href="#">Equine</a></div>
                                         <div><a href="#">Medical</a></div>
                                         <div><a href="#">Corporate</a></div>
