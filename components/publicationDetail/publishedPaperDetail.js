@@ -18,7 +18,7 @@
         render() {
             let {slug} = this.state;
                 return(<div>
-                    <PublicationHeader publicationCategory={"Published Paper"}/>
+                    <PublicationHeader publicationCategory={"Published Paper"} headerImg={'/static/images/silhouette-3599868_1920.jpg'}/>
                     <DetailContent slug={slug}/>
                     {/*<DetailCard/>*/}
                     <RequestDemo/>

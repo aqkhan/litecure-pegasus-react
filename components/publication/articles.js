@@ -59,7 +59,7 @@ class PublishedPapers extends Component {
         }
         return (
             <div>
-                <PublicationHeader publicationCategory={"Articles"}/>
+                <PublicationHeader publicationCategory={"Articles"} headerImg={'/static/images/wp2019201.jpg'}/>
                 <PublicImgSection publicationCategory={"Articles"}/>
                 <PublicationCategory publications={publications} categoryList={newCategories} publicationCategory={"Articles"} page={"/article-detail/"}/>
                 <RequestDemo/>

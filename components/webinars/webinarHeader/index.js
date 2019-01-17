@@ -2,11 +2,11 @@ import React from 'react';
 import Router from 'next/router';
 
 const webinarsHeader = (props) => {
-    let {webinarCategory} = props;
+    let {webinarCategory, headerImg} = props;
     return(
         <section className="new-home-cards">
             <section className="section-one publication-header" style={{
-                background: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)),url('/static/images/girlhourse.jpg')`,
+                background: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)),url(${headerImg})`,
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "center",}} >

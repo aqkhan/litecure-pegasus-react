@@ -15,7 +15,7 @@ class  post extends Component{
     render() {
         let {slug} = this.state;
         return(<div>
-            <BlogHeader blogCategory={"Posts"}/>
+            <BlogHeader blogCategory={"Posts"} headerImg={'/static/images/silhouette-3599868_1920.jpg'}/>
             <DetailContent slug={slug}/>
             {/*<DetailCard/>*/}
             <RequestDemo/>

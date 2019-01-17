@@ -16,7 +16,7 @@ class  webinar extends Component{
     render() {
         let {slug} = this.state;
         return(<div>
-            <WebinarsHeader webinarCategory={"Webinars"}/>
+            <WebinarsHeader webinarCategory={"Webinars"} headerImg={'/static/images/buffalo.png'}/>
             <DetailContent slug={slug}/>
             {/*<DetailCard/>*/}
             <RequestDemo/>

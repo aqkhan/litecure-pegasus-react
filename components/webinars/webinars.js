@@ -58,7 +58,7 @@ class webinars extends Component {
         }
         return (
             <div>
-                <WebinarsHeader webinarCategory={"All Webinars"}/>
+                <WebinarsHeader webinarCategory={"All Webinars"} headerImg={'/static/images/girlhourse.jpg'}/>
                 <WebinarsCategory publications={publications} categoryList={newCategories} publicationCategory={"Webinar"} page={"/webinar/"}/>
                 <RequestDemo/>
             </div>

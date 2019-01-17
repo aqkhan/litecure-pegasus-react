@@ -61,7 +61,7 @@ class PublishedPapers extends Component {
         }
         return (
             <div>
-                <PublicationHeader publicationCategory={"Case Studies"}/>
+                <PublicationHeader publicationCategory={"Case Studies"} headerImg={'/static/images/girlhourse.jpg'}/>
                 <PublicImgSection publicationCategory={"Case Studies"}/>
                 <PublicationCategory publications={publications} categoryList={newCategories} publicationCategory={"Case Studies"} page={"/casestudy-detail/"}/>
                 <RequestDemo/>

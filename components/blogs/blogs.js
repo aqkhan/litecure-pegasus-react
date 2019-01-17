@@ -59,7 +59,7 @@ class blogs extends Component {
         }
         return (
             <div>
-                <BlogsHeader blogCategory={"Posts"}/>
+                <BlogsHeader blogCategory={"Posts"} headerImg={'/static/images/blog.jpg'}/>
                 <BlogCategory publications={publications} categoryList={newCategories} publicationCategory={"Posts"} page={"/post/"}/>
                 <RequestDemo/>
             </div>

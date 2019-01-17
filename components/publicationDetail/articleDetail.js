@@ -18,7 +18,7 @@ class  ArticleDetail extends Component{
     render() {
         let {slug} = this.state;
         return(<div>
-            <PublicationHeader publicationCategory={"Article"}/>
+            <PublicationHeader publicationCategory={"Article"} headerImg={'/static/images/buffalo.png'}/>
             <DetailContent slug={slug}/>
             {/*<DetailCard/>*/}
             <RequestDemo/>
