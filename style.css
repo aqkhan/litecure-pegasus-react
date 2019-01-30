@@ -2020,6 +2020,7 @@ a:active, a:hover{
     min-height: 600px;
     min-width: 100%;
     display: flex;
+    cursor: pointer;
 }
 .company-profile .first-section .fourth-row .about h1{
     font-family: UniSansCAPS;
@@ -6801,4 +6802,10 @@ input[type=number]::-webkit-outer-spin-button {
 .home-slider-div{
   background-size:cover;
     height: 700px;
+}
+.benefits-background{
+    background: rgba(69, 73, 80, 1);
+}
+.benefits-head p span{
+    font-size: 120px!important;
 }

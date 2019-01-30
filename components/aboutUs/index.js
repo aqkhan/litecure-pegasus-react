@@ -64,14 +64,14 @@ class AboutUs extends Component{
             this.state.pages.map((data,index)=>{
                 if(index===0){
                     page1 = <section className="new-media-detail" key={index}>
-                        <section className="first-section hourse-div">
+                        <section className="first-section hourse-div" data-toggle="modal" data-target="#myModal">
                             <div className="container custom-container image-section image-container" style={{
                                 background: `linear-gradient(rgba(8, 7, 7, 0.72), rgba(10, 9, 9, 0.8)), url(${data.featuredImage&&data.featuredImage.url})`,
                                 backgroundRepeat: "no-repeat",
                                 backgroundSize: "100% 100%",
                                 backgroundPosition: "center"
                             }}>
-                                <div className="container width-container">
+                                <div className="container width-container" >
                                     <div className="row flex year">
                                         <div className="col-sm-1"></div>
                                         <div className="col-sm-8">
@@ -82,7 +82,7 @@ class AboutUs extends Component{
                                         </div>
                                         <div className="col-sm-3">
                                             <a><img src="/static/images/images-(3).png"
-                                                    className="video-icon" data-toggle="modal" data-target="#myModal"/></a>
+                                                    className="video-icon" /></a>
                                             <div className="modal fade" id="myModal" role="dialog">
                                                 <div className="modal-dialog">
                                                     <div className="modal-content">
