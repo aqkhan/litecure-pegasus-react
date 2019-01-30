@@ -1,9 +1,8 @@
 import  React, {Component} from 'react';
-import RequestDemo from '../requestDemo';
 import {API_PATH} from '../apiconfig';
 import axios from 'axios';
-import BenefitsHeader from './benefitLaserTherapyHeader/benefitLaserTherapyHeader';
-import BenefitContent from './benefitLaserTherapyContent/benefitLaserTherapyContent';
+import Detailheader from './detailheader/index'
+import DetailContent from './contentdetail/index'
 
 class BenefitLaserTherapy extends Component {
     state = {
@@ -23,15 +22,14 @@ class BenefitLaserTherapy extends Component {
                 console.log("error", err);
             })
     }
-    render() {
-        let {page} = this.state;
-        return (page &&
+    render(){
+        let {page}= this.state;
+        return(page &&
             <div>
-                <BenefitsHeader  leadText={page.leadText} imgUrl={page.featuredImage && page.featuredImage.url} headerImageLabel={page.headerImageLabel}/>
-                <BenefitContent content={page.content} />
-                <RequestDemo/>
+            <Detailheader imgUrl={page.featuredImage && page.featuredImage.url} headerImageLabel={page.headerImageLabel} leadText={page.leadText}/>
+            <DetailContent content={page.content}/>
             </div>
-        )
+            )
     }
 }
 export default BenefitLaserTherapy;
