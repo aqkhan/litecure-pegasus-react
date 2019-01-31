@@ -13,7 +13,7 @@ class Home extends Component {
         err: null
     };
 
-    componentWillMount() {
+    componentDidMount() {
         axios.get(API_PATH + 'pages')
             .then((res) => {
                 let temp = [];
@@ -141,7 +141,7 @@ class Home extends Component {
                 </Carousel.Item>
             )
         }
-        return (
+        return pages?(
             <div>
                 {pages}
                 {products && <Carousel interval={3000} indicators={false} controls={false} pauseOnHover={false}>
@@ -152,7 +152,14 @@ class Home extends Component {
                 </Carousel>}
                 <RequestDemo/>
             </div>
-        )
+        ):(<div className="splash">
+        <div className="lds-ellipsis">
+            <div/>
+            <div/>
+            <div/>
+            <div/>
+        </div>
+            </div>)
 
     }
 }

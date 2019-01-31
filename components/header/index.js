@@ -45,12 +45,10 @@ class Header extends Component {
     };
 
     componentWillMount() {
-        console.log("header", this.props.type)
         this.changeHover(this.props.type)
     }
 
     componentWillReceiveProps(nextProps, nextContext) {
-        console.log("header", this.props.type)
         this.changeHover(this.props.type)
     }
 
@@ -66,7 +64,6 @@ class Header extends Component {
         else if (this.state.showHeaderList === 'show-header'){
             this.setState({showHeaderList:'hide-header'})
         }
-        console.log('function-hit');
     };
     changeHover(type) {
         switch (type) {
@@ -373,7 +370,7 @@ class Header extends Component {
             <div>
                 <Head>
                     <title>Pegasus</title>
-                    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+                    <meta httpEquiv="x-ua-compatible" content="ie=edge"/>
                     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                     <link rel="stylesheet"
                           href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>

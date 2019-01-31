@@ -68,7 +68,7 @@ class AboutUs extends Component{
                             <div className="container custom-container image-section image-container" style={{
                                 background: `linear-gradient(rgba(8, 7, 7, 0.72), rgba(10, 9, 9, 0.8)), url(${data.featuredImage&&data.featuredImage.url})`,
                                 backgroundRepeat: "no-repeat",
-                                backgroundSize: "100% 100%",
+                                backgroundSize: "cover",
                                 backgroundPosition: "center"
                             }}>
                                 <div className="container width-container" >
@@ -98,7 +98,10 @@ class AboutUs extends Component{
                         </section>
                     </section>}
                 else if(index===1){
-                    page2= <section className="second-section hours-img" >
+                    page2= <section className="second-section hours-img" style={data.featuredImage && {background:`linear-gradient(rgba(8, 7, 7, 0.90), rgba(10, 9, 9, 0.8)), url(${data.featuredImage && data.featuredImage.url})`,
+                    "backgroundRepeat": "no-repeat",
+                    "backgroundSize": "cover",
+                    "backgroundPosition": "center"}}>
                         <div className="fourth-row text-area">
                             <div className=" container">
                                 <div className="row ">
