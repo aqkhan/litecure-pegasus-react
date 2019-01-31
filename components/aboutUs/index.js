@@ -11,7 +11,7 @@ class AboutUs extends Component{
         pages:null
     };
 
-    componentWillMount(){
+    componentDidMount(){
         axios.get(API_PATH +'pages')
             .then((res)=>{
                 let temp=[];
@@ -127,7 +127,7 @@ class AboutUs extends Component{
                 }
             })
         }
-        return(
+        return page?(
             <div>
                 {page&&<section className="company-profile">
                     <section className="first-section"
@@ -182,7 +182,14 @@ class AboutUs extends Component{
                 {page1&&page1}
                 <RequestDemo/>
             </div>
-        )
+        ):(<div className="splash">
+        <div className="lds-ellipsis">
+            <div/>
+            <div/>
+            <div/>
+            <div/>
+        </div>
+            </div>)
     }
 
 }

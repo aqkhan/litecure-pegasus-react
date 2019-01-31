@@ -10,7 +10,7 @@ class employeesPage extends Component{
         employee: null,
         err:null
     }
-    componentWillMount(){
+    componentDidMount(){
         axios.get(API_PATH +'pages')
             .then((res)=>{
                 let temp=[];
@@ -30,11 +30,18 @@ class employeesPage extends Component{
 
         let {employee} = this.state;
 
-            return employee&&(<div>
+            return employee?(<div>
 
                 <Employmentheader headerImageLabel = {employee[0].headerImageLabel} leadText = {employee[0].leadText} imgUrl = {employee[0].featuredImage&&employee[0].featuredImage.url}/>
                 <Employe content ={employee[0].content}/>
                     <RequestDemo/>
+            </div>):(<div className="splash">
+        <div className="lds-ellipsis">
+            <div/>
+            <div/>
+            <div/>
+            <div/>
+            </div>
             </div>)
     }
 }

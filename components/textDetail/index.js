@@ -7,7 +7,7 @@ class TextDetail extends Component{
     state={
         content: null,
     }
-    componentWillMount(){
+    componentDidMount(){
         axios.get(API_PATH + 'pages')
             .then((res) => {
                 let temp=[];
@@ -67,12 +67,19 @@ class TextDetail extends Component{
              }
             });
         }
-        return (
+        return content?(
             <div>
                 {content&&content}
                 <RequestDemo/>
             </div>
-        )
+        ):(<div className="splash">
+        <div className="lds-ellipsis">
+            <div/>
+            <div/>
+            <div/>
+            <div/>
+            </div>
+            </div>)
     }
 }
 

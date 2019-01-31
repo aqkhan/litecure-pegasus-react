@@ -9,7 +9,7 @@ class BenefitLaserTherapy extends Component {
         page:null,
         err:null,
     }
-    componentWillMount(){
+    componentDidMount(){
         axios.get(API_PATH + 'pages')
             .then((res) => {
                 res.data.pages.map((item)=>{
@@ -24,12 +24,19 @@ class BenefitLaserTherapy extends Component {
     }
     render(){
         let {page}= this.state;
-        return(page &&
+        return page?(page &&
             <div>
             <Detailheader imgUrl={page.featuredImage && page.featuredImage.url} headerImageLabel={page.headerImageLabel} leadText={page.leadText}/>
             <DetailContent content={page.content}/>
             </div>
-            )
+            ):(<div className="splash">
+            <div className="lds-ellipsis">
+                <div/>
+                <div/>
+                <div/>
+                <div/>
+            </div>
+                </div>)
     }
 }
 export default BenefitLaserTherapy;

@@ -439,7 +439,7 @@ class Header extends Component {
                                                                 <div className="header-list-hr"/>
                                                                 <div className="inside-list-two-1">
                                                                     <div className="img-div-h-list">
-                                                                        <img src="/static/images/2018-09-12.png"/>
+                                                                        <img src="/static/images/Pegasus-Heads.png"/>
                                                                     </div>
                                                                     <div className="product-detail-div">
                                                                         <p>Empower DS provides the versatility you need to treat your toughest cases. Four application- specific treatment heads, the patented laser-contact ball and the toughest fiber available make Pegasus therapy lasers clinically practical and ruggedly durable.</p></div>
