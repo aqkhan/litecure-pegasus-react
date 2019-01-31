@@ -1749,12 +1749,9 @@ a:active, a:hover{
     cursor: pointer;
 }
 /*section-one:END*/
-
-
-
 /*second-section:START*/
 .new-media-detail-containers .second-section{
-    background: linear-gradient(rgba(8, 7, 7, 0.90), rgba(10, 9, 9, 0.8)), url(/static/images/horse-form.png);
+    /* background: linear-gradient(rgba(8, 7, 7, 0.90), rgba(10, 9, 9, 0.8)), url(/static/images/horse-form.png); */
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -6869,3 +6866,7 @@ input[type=number]::-webkit-outer-spin-button {
   ::-webkit-scrollbar-thumb:hover {
     background: #555; 
   }
+.social-block{
+    margin-left: 15px;
+    width: 100%;
+}
