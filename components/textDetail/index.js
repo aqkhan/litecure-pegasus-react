@@ -28,7 +28,10 @@ class TextDetail extends Component{
             content = this.state.content.map((data,index)=>{
              if (index===0){
                  return (<section className="classification">
-                     <section className="first-section">
+                     <section className="first-section" style={data.featuredImage && {background:`linear-gradient(rgba(14, 13, 13, 0.89), rgba(10, 9, 9, 0.86)), url(${data.featuredImage && data.featuredImage.url})`,
+                        "backgroundRepeat": "no-repeat",
+                        "backgroundSize": "cover",
+                        "backgroundPosition": "center"}}>
                          <div className="container custom-container">
                              <div className="row flex">
                                  <div className="header-text">
