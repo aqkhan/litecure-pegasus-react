@@ -1,11 +1,9 @@
-
 import  React , { Component } from 'react';
 import RequestDemo from '../requestDemo';
 import BlogHeader from '../publication/publicationHeader';
 import DetailContent from './detailContent';
 import axios from "axios";
 import {API_PATH} from "../apiconfig";
-import BlogsHeader from "../publication/blogs";
 
 class  post extends Component{
     state={
@@ -28,7 +26,7 @@ class  post extends Component{
     render() {
         let {slug, page} = this.state;
         return(<div>
-            {page && <BlogsHeader publicationCategory={"Post"} headerImg={page && page.featuredImage && page.featuredImage.url} heading={"BLOG"}/>}
+            {page && <BlogHeader publicationCategory={"Post"} headerImg={page && page.featuredImage && page.featuredImage.url} heading={"BLOG"}/>}
             <DetailContent slug={slug}/>
             {/*<DetailCard/>*/}
             <RequestDemo/>

@@ -33,7 +33,6 @@ class blogs extends Component {
 
         axios.get(API_PATH + 'posts')
             .then((res) => {
-            console.log("datacoming",res);
                 let temp = [];
                 let tempArray = [];
                 res.data.posts.forEach((val) => {

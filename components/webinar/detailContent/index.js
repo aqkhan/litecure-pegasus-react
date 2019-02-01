@@ -19,7 +19,6 @@ class detailContent extends Component {
 
                     axios.get(API_PATH + 'tags/'+item)
                     .then((respo)=>{
-                        console.log("seelctedtags are coing ", respo);
                         this.state.category.push(respo.data.tag.title);
                         this.setState({category: this.state.category});
                     })
