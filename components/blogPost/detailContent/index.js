@@ -20,7 +20,6 @@ class detailContent extends Component {
     }
     render() {
         let {post,err} = this.state;
-        console.log("post",post)
         return (
             <div>
                 {post &&<section className="content-dev">

@@ -26,7 +26,6 @@ class detailContent extends Component {
                         .catch(err => console.log(err));
                 });
 
-             console.log("all categories",this.state.category);
             })
             .catch(err => {
                 this.setState({err:err})
@@ -34,7 +33,6 @@ class detailContent extends Component {
     }
     render() {
         let {webinar,err, category} = this.state;
-        console.log("webinar",webinar);
         return (
             <div>
 

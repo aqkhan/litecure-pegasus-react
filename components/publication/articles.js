@@ -13,7 +13,7 @@ class PublishedPapers extends Component {
         allCategoryList:null,
         page:null,
         err:null
-    }
+    };
     componentDidMount(){
         axios.get(API_PATH + 'pages')
             .then((res)=>{

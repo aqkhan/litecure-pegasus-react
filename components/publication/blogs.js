@@ -52,7 +52,6 @@ class blogs extends Component {
     }
     render() {
         let {publications,categoryList,allCategoryList,page} = this.state;
-        console.log("khasmi yadha" + page);
         let uniqueNames=[];
         if (categoryList){
             uniqueNames =  categoryList.filter(function(item, pos){

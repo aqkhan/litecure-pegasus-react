@@ -1,22 +1,33 @@
 
 import  React , { Component } from 'react';
 import RequestDemo from '../requestDemo';
-import WebinarsHeader from '../webinars/webinarHeader';
+import WebinarsHeader from '../publication/publicationHeader';
 import DetailContent from './detailContent';
-import webinars from "../webinars/webinars";
+import axios from "axios";
+import {API_PATH} from "../apiconfig";
 
 class  webinar extends Component{
     state={
-        slug:null
+        slug:null,
+        page:null
     };
     componentWillMount() {
         let {slug} = this.props;
         this.setState({ slug:slug })
+        axios.get(API_PATH + 'pages')
+            .then((res)=>{
+                res.data.pages.forEach((val) => {
+                    if (val.type === "webinars") {
+                        this.setState({page: val})
+                    }
+                });
+            })
+            .catch(err => console.log(err));
     };
     render() {
-        let {slug} = this.state;
+        let {slug, page} = this.state;
         return(<div>
-            <WebinarsHeader webinarCategory={"Webinars"} headerImg={'/static/images/buffalo.png'}/>
+            {page && <WebinarsHeader publicationCategory={"Webinar"} headerImg={page && page.featuredImage && page.featuredImage.url} heading={"WEBINARS"}/>}
             <DetailContent slug={slug}/>
             {/*<DetailCard/>*/}
             <RequestDemo/>

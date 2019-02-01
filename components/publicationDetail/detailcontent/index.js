@@ -19,7 +19,6 @@ class DetailContent extends Component {
     }
     render() {
         let {publication,err} = this.state;
-        console.log("publication",publication)
         return (
             <div>
                 {publication &&<section className="content-dev">

@@ -17,7 +17,6 @@ class PublicationCategoty extends Component {
     };
     async componentWillReceiveProps(nextProps) {
         let {publicationCategory, publications, page, categoryList} = nextProps;
-        console.log("new check 10",categoryList)
         await this.setState({publicationCategory:publicationCategory,publications:publications, page,categoryList});
         await this.setDisplay();
           }
@@ -49,7 +48,6 @@ class PublicationCategoty extends Component {
              });
          }
          let restructured = RestructorData(temp, 10);
-         console.log("restructured",restructured);
      this.setState({publicationDestructure:restructured, final: restructured[0], totalPages: restructured.length}, function () {
      })
     };

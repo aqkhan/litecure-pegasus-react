@@ -17,7 +17,6 @@ class detailPage extends Component{
         axios.get(API_PATH +'pages/'+slug)
             .then((res)=>{
                 this.setState({page:res.data.page});
-                console.log(this.state.page)
             })
             .catch(err=>{throw err});
     }
