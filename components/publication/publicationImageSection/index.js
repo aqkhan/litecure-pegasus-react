@@ -35,8 +35,7 @@ class publicImgSection extends Component {
                         <div style={{
                             background: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)),url('/static/images/buffalo.png')`,
                             backgroundRepeat: "no-repeat",
-                            backgroundSize: "cover",
-                            backgroundPosition: "center",}}>
+                            backgroundSize: "cover", backgroundPosition: "center",}}>
                             <ul>
                                 <li><span><a className="active">Publications</a></span></li>
                                 <li><span><Link href="/published-papers"><a className={publishedPapers}>Published Papers</a></Link></span></li>
