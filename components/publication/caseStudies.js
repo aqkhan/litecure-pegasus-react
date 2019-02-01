@@ -2,7 +2,7 @@ import  React, {Component} from 'react';
 import RequestDemo from '../requestDemo';
 import PublicationHeader from '../publication/publicationHeader/index';
 import PublicImgSection from '../publication/publicationImageSection/index';
-import PublicationCategory from './publicationCategory.js/index'
+import PublicationCategory from './publicationCategory/index'
 import {API_PATH} from '../apiconfig'
 import axios from 'axios';
 
@@ -11,10 +11,19 @@ class PublishedPapers extends Component {
         publications:null,
         categoryList:null,
         allCategoryList:null,
+        page:null,
         err:null
     };
     componentDidMount(){
-
+        axios.get(API_PATH + 'pages')
+        .then((res)=>{
+            res.data.pages.forEach((val) => {
+                if (val.type === "publication") {
+                    this.setState({page: val})
+                }
+            });
+          })
+        .catch(err => console.log(err));
         axios.get(API_PATH + 'tags')
             .then((res)=>{
                 this.setState({allCategoryList:res.data.tags});
@@ -42,7 +51,7 @@ class PublishedPapers extends Component {
         }
 
     render() {
-        let {publications,categoryList,allCategoryList} = this.state;
+        let {publications,categoryList,allCategoryList,page} = this.state;
         let uniqueNames=[];
         if (categoryList){
              uniqueNames =  categoryList.filter(function(item, pos){
@@ -61,7 +70,7 @@ class PublishedPapers extends Component {
         }
         return (
             <div>
-                <PublicationHeader publicationCategory={"Case Studies"} headerImg={'/static/images/girlhourse.jpg'}/>
+               {page && <PublicationHeader publicationCategory={"Case Studies"} headerImg={page && page.featuredImage && page.featuredImage.url} heading={"PUBLICATIONS"}/>}
                 <PublicImgSection publicationCategory={"Case Studies"}/>
                 <PublicationCategory publications={publications} categoryList={newCategories} publicationCategory={"Case Studies"} page={"/casestudy-detail/"}/>
                 <RequestDemo/>

@@ -1,37 +1,46 @@
 import  React, {Component} from 'react';
 import RequestDemo from '../requestDemo';
-import BlogsHeader from './blogHeader';
-import BlogCategory from './blogCategory';
-import {API_PATH} from '../apiconfig'
+import WebinarsHeader from './publicationHeader/index';
+import WebinarsCategory from './publicationCategory/index';
+import {API_PATH} from '../apiconfig';
 import axios from 'axios';
 
-class blogs extends Component {
+
+class webinars extends Component {
     state = {
         publications:null,
         categoryList:null,
         allCategoryList:null,
+        page:null,
         err:null
     };
     componentDidMount(){
 
+        axios.get(API_PATH + 'pages')
+            .then((res)=>{
+                res.data.pages.forEach((val) => {
+                    if (val.type === "webinars") {
+                        this.setState({page: val})
+                    }
+                });
+              })
+            .catch(err => console.log(err));
         axios.get(API_PATH + 'tags')
             .then((res)=>{
                 this.setState({allCategoryList:res.data.tags});
             })
             .catch(err => console.log(err));
 
-        axios.get(API_PATH + 'posts')
+        axios.get(API_PATH + 'webinars')
             .then((res) => {
-            console.log("datacoming",res);
                 let temp = [];
                 let tempArray = [];
-                res.data.posts.forEach((val) => {
+                res.data.webinars.forEach((val) => {
                     val.selectTags.forEach((item)=>{
                         tempArray.push(item);
                     });
-                    temp.push(val);
-                this.setState({blogs: temp})
-            });
+                    temp.push(val)
+                });
                 this.setState({categoryList:tempArray});
                 this.setState({publications: temp})
             })
@@ -40,7 +49,7 @@ class blogs extends Component {
             })
     }
     render() {
-        let {publications,categoryList,allCategoryList} = this.state;
+        let {publications,categoryList,allCategoryList,page} = this.state;
         let uniqueNames=[];
         if (categoryList){
             uniqueNames =  categoryList.filter(function(item, pos){
@@ -59,11 +68,11 @@ class blogs extends Component {
         }
         return (
             <div>
-                <BlogsHeader blogCategory={"Posts"} headerImg={'/static/images/blog.jpg'}/>
-                <BlogCategory publications={publications} categoryList={newCategories} publicationCategory={"Posts"} page={"/post/"}/>
+               {page && <WebinarsHeader publicationCategory={"All Webinars"} headerImg={page && page.featuredImage && page.featuredImage.url} heading={"WEBINARS"}/>}
+                <WebinarsCategory publications={publications} categoryList={newCategories} publicationCategory={"Webinar"} page={"/webinar/"}/>
                 <RequestDemo/>
             </div>
         )
     }
 }
-export default blogs;
+export default webinars;

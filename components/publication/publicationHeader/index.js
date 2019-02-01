@@ -2,7 +2,7 @@ import React from 'react';
 import Router from 'next/router';
 
 const publicationHeader = (props) => {
-    let {publicationCategory,headerImg} = props;
+    let {publicationCategory,headerImg,heading} = props;
     return(
         <section className="new-home-cards">
             <section className="section-one publication-header" style={{
@@ -14,7 +14,7 @@ const publicationHeader = (props) => {
                     <div className="container custom-container">
                         <div className="row flex">
                             <div className="header-text publication-text">
-                                <p><br/><span>PUBLICATIONS</span></p>
+                                <p><br/><span>{heading}</span></p>
                             </div>
                         </div>
                     </div>
