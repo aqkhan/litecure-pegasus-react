@@ -8,7 +8,7 @@ const photomodulationHeader = (props) => {
        <section  className="modulation-header" style={{
            background: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)),url(${featuredImage})`,
            backgroundRepeat: "no-repeat",
-           backgroundSize: "100% 100%",
+           backgroundSize: "cover",
            backgroundPosition: "center",}}>
            <div className="photobiomodulation-header">
                <div className="container custom-container">
