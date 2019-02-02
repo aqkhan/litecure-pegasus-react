@@ -1,7 +1,8 @@
 {
-  "name": "with-css-modules",
+  "name": "litecure-pegasus-react",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "",
+  "main": "server.js",
   "scripts": {
     "dev": "nodemon server.js",
     "build": "next build",
@@ -9,19 +10,32 @@
     "export": "npm run build && next export",
     "test": "NODE_ENV=production nodemon server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aqkhan/litecure-pegasus-react.git"
+  },
+  "keywords": [
+    "Next.js"
+  ],
+  "author": "Arslan Khan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aqkhan/litecure-pegasus-react/issues"
+  },
+  "homepage": "https://github.com/aqkhan/litecure-pegasus-react#readme",
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
-    "axios": "^0.18.0",
     "express": "^4.16.4",
+    "axios": "^0.18.0",
     "jquery": "^3.3.1",
-    "next": "7.0.2",
     "nodemon": "^1.18.8",
-    "react": "^16.4.2",
     "react-bootstrap": "^0.32.4",
     "react-content-loader": "^3.4.1",
-    "react-dom": "^16.4.2",
     "react-modal": "^3.7.1",
     "react-paginate": "^6.0.0",
-    "react-scrollable-anchor": "^0.6.1"
+    "react-scrollable-anchor": "^0.6.1",
+    "next": "^7.0.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
   }
 }
