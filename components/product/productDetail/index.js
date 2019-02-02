@@ -173,11 +173,11 @@ class ProductDetail extends Component{
                     backgroundRepeat: "no-repeat",
                     backgroundPosition: "center",
                     backgroundSize: "100%",
-                    minHeight:"312px"
+                    minHeight:"312px",
+                    cursor:"pointer"
                 }}>
                     <div className="image-container">
                         <div className="image-overlay"/>
-                        {/* <img src={  item.featuredImage && item.featuredImage.url } className="image"/> */}
                         <div className="overlay">
                             <div className="text">
                                 {
