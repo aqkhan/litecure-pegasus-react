@@ -10,7 +10,8 @@ class ProductDetail extends Component{
         product: null,
         err: null,
         slug:null,
-        products: null
+        products: null,
+        stories:null
     };
 
     componentWillMount(){
@@ -29,24 +30,34 @@ class ProductDetail extends Component{
             })
             .catch(err=>{
                 this.setState({err:err})
-            })
+            });
         axios.get(API_PATH +'products')
             .then((res)=>{
                 this.setState({products:res.data.products})
             })
             .catch(err=>{
                 this.setState({err:err})
+            });
+        axios.get(API_PATH +'stories')
+            .then((res)=>{
+                this.setState({stories:res.data.stories})
+                // console.log("data of stories", this.state.stories);
+
+            })
+            .catch(err=>{
+                this.setState({err:err})
             })
     }
-    shouldComponentUpdate(nextProps, nextState, nextContext) {
-        return nextState.slug !== this.state.slug || nextState.products!==this.state.products
-    }
+    // shouldComponentUpdate(nextProps, nextState, nextContext) {
+    //     return nextState.slug !== this.state.slug || nextState.products!==this.state.products
+    // }
 
     render() {
-        let {product,err,slug,products} = this.state;
+        let {product,err,slug,products, stories} = this.state;
         let detailProduct=null;
         let allProducts=null;
         let allProductCards=null;
+        let allStoriesCards=null;
         if (product){
             {
                     if (product.slug===slug){
@@ -142,6 +153,27 @@ class ProductDetail extends Component{
                 </div>
             })
         };
+
+        if(stories){
+            allStoriesCards = stories.map((item,index)=>{
+                let date = new Date(item.publishedDate);
+                return  <div className="col-sm-6 col-lg-3 p-0" key={index}>
+                    <div className="image-container">
+                        <div className="image-overlay"/>
+                        <img src={  item.featuredImage && item.featuredImage.url } className="image"/>
+                        <div className="overlay">
+                            <div className="text">
+                                {
+                                    item.publishedDate &&
+                                    <p>{date.getMonth()}.{date.getDate()}.{date.getFullYear()}</p>
+                                }
+                                <h5>{item.title}</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            })
+        }
         return(
             err?<div>
                 <section className="product-det">
@@ -175,8 +207,7 @@ class ProductDetail extends Component{
                             <div className="container custom-container">
                                 <div className="row view-area">
                                     <div className="col-sm-2"></div>
-
-                                    {allProducts}
+                                    {allProducts && allProducts}
                                     <div className="col-sm-2"></div>
                                 </div>
                             </div>
@@ -193,6 +224,15 @@ class ProductDetail extends Component{
                             <div className="container custom-container">
                                 <div className="row images-flex">
                                     {allProductCards && allProductCards}
+                                </div>
+                            </div>
+                        </section>
+                    </section>
+                        <section  className="stories-cards-section">
+                         <section className="third-section">
+                            <div className="container custom-container">
+                                <div className="row flex">
+                                    {allStoriesCards && allStoriesCards}
                                 </div>
                             </div>
                             <div className="container">
@@ -213,7 +253,8 @@ class ProductDetail extends Component{
                                 </div>
                             </div>
                         </section>
-                    </section>
+                        </section>
+
                 <ScrollableAnchor id={'requestDemo'}>
                 <RequestDemo/>
                 </ScrollableAnchor>

@@ -1634,6 +1634,83 @@ a:active, a:hover{
 }
 
 /*second-section:END*/
+/*third-section:START*/
+
+.stories-cards-section .third-section{
+    background-color: #191d24;
+
+}
+
+
+.stories-cards-section .third-section .image-container {
+    position: relative;
+    width: 50%;
+}
+.stories-cards-section .third-section .image-container .image-overlay{
+    background-color: rgba(239, 184, 23, 0.3);
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    position: absolute;
+    width: 337px;
+}
+
+.stories-cards-section .third-section .image-container .image {
+    display: block;
+    max-width: 337px;
+    min-height: 312px;
+
+}
+
+.stories-cards-section .third-section .image-container .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 300px;
+    height: 265px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #efb817;
+    margin-top: 26px;
+    margin-left: 18px;
+}
+
+.stories-cards-section .third-section .image-container:hover .overlay {
+    opacity: 1;
+}
+
+.stories-cards-section .third-section .image-container .text {
+    position: absolute;
+}
+.stories-cards-section .third-section .image-container .text p{
+    font-family: OpenSans;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.4px;
+    padding: 50px 0px 0px 20px;
+    color: #58282f;
+}
+.stories-cards-section .third-section .image-container .text h5{
+    font-family: UniSansCAPS;
+    font-size: 45px;
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 0.89;
+    letter-spacing: normal;
+    color: #ffffff;
+    text-align: left;
+    padding: 5px 0px 0px 40px;
+}
+
+
+/*third-section:END*/
 
 
 
