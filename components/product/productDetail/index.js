@@ -52,6 +52,17 @@ class ProductDetail extends Component{
     //     return nextState.slug !== this.state.slug || nextState.products!==this.state.products
     // }
 
+     getId=(url)=> {
+        let regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+        let match = url.match(regExp);
+
+        if (match && match[2].length == 11) {
+            return match[2];
+        } else {
+            return 'error';
+        }
+    };
+
     render() {
         let {product,err,slug,products, stories} = this.state;
         let detailProduct=null;
@@ -157,7 +168,7 @@ class ProductDetail extends Component{
         if(stories){
             allStoriesCards = stories.map((item,index)=>{
                 let date = new Date(item.publishedDate);
-                return  <div className="col-sm-6 col-lg-3 p-0" key={index}>
+                return  <div className="col-sm-6 col-lg-3 p-0" key={index} data-toggle="modal" data-target={"#myModal3"+index}>
                     <div className="image-container">
                         <div className="image-overlay"/>
                         <img src={  item.featuredImage && item.featuredImage.url } className="image"/>
@@ -252,6 +263,28 @@ class ProductDetail extends Component{
                                     </div>
                                 </div>
                             </div>
+                             {
+                                 stories && stories.map((item, index)=>{
+                                     let videoId = this.getId(item.videoLink);
+                                     return (<div className="container">
+                                     {/*<!-- The Modal -->*/}
+                                     <div className="modal fade" id={"myModal3"+index}>
+                                         <div className="modal-dialog modal-lg">
+                                             <div className="modal-content modal-content-product">
+                                                 {/*<!-- Modal Header -->*/}
+                                                 <div className="modal-header">
+                                                     <button type="button" className="close" data-dismiss="modal">&times;</button>
+                                                 </div>
+                                                 {/*<!-- Modal body -->*/}
+                                                 <div className="modal-body">
+                                                     <div>
+                                                         <iframe width="560" height="315" src={`//www.youtube.com/embed/${videoId}`} frameBorder="0" allowFullScreen></iframe></div>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </div>)})
+                             }
                         </section>
                         </section>
 

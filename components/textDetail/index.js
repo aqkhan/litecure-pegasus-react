@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import RequestDemo from '../requestDemo';
 import {API_PATH} from '../apiconfig';
 import axios from 'axios';
-import Link from "next/link";
+// import Link from "next/link";
 class TextDetail extends Component{
     state={
         content: null,
