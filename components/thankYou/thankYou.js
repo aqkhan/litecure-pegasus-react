@@ -26,6 +26,11 @@ class Thankyou extends Component {
         return page?(page &&
             <div>
             <section className="new-home-cards">
+            <div className="empty-div">
+                    <div className="container">
+                        <div className="course-text1"><div onClick={() => Router.back()}><i className="fa fa-chevron-left"> </i></div><p>BACK TO PREVIOUS </p></div>
+                    </div>
+                </div>
                 <section className="section-one publication-header" style={{
                     background: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)),url(${page && page.featuredImage && page.featuredImage.url})`,
                     backgroundRepeat: "no-repeat",
@@ -45,11 +50,6 @@ class Thankyou extends Component {
                     </div>
                     <div className="thankyou-description" dangerouslySetInnerHTML={{__html:page && page.content}}/>>   
                         </section>
-                <div className="empty-div">
-                    <div className="container">
-                        <div className="course-text1"><div onClick={() => Router.back()}><i className="fa fa-chevron-left"> </i></div><p>BACK TO PREVIOUS </p></div>
-                    </div>
-                </div>
             </section></div>
             ):(<div className="splash">
             <div className="lds-ellipsis">
