@@ -3,7 +3,7 @@ import Link from 'next/link';
 import ReactPaginate from 'react-paginate';
 import { RestructorData } from "../../functions";
 import ContentLoader  from 'react-content-loader';
-import $ from 'jquery';
+import ScrollableAnchor, { goToAnchor, configureAnchors  } from 'react-scrollable-anchor';
 class PublicationCategoty extends Component {
     state={
         publicationCategory: null,
@@ -54,18 +54,17 @@ class PublicationCategoty extends Component {
 
     returnData = (index) => {
         this.setState({final: this.state.publicationDestructure[index.selected]});
-        $('html, body').animate({
-            scrollTop: $("#scroll").offset().top
-        }, 1000);
-    }
+        configureAnchors({offset: -60, scrollDuration: 1000});
+        goToAnchor('scroll')
+    };
 
-    checkChange(value){
+    checkChange=(value)=>{
                 let temp = [...this.state.categoryList];
                 let change = temp[value].check;
                 temp[value].check=!change;
                 this.setState({categoryList:temp});
                 this.setDisplay();
-        }
+        };
 
     render(){
         let {publicationCategory, categoryList, page, final,totalPages} = this.state;
@@ -87,7 +86,10 @@ class PublicationCategoty extends Component {
             ))
         }
         return (
-            <section className="casestudy" id="scroll">
+            <section className="casestudy">
+                <ScrollableAnchor id={'scroll'}>
+                    <div/>
+                </ScrollableAnchor>
                 <div className="container">
                     <div className="casestudy-primary">
                         <div>
@@ -100,6 +102,7 @@ class PublicationCategoty extends Component {
                                     </ul>
                                 </div>
                             </div>
+
                         </div>
                         <div>
                             {cards?cards: <div className="loading-publications"><ContentLoader

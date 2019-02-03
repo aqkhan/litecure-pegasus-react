@@ -1,25 +1,12 @@
 import React, {Component} from "react";
 import Link from 'next/link';
 import Head from "next/head";
-import $ from "jquery";
 class Header extends Component {
-
-    componentDidMount() {
-        window.addEventListener('scroll', this.handleScroll);
-    }
-
-    handleScroll() {
-        if ($(window).scrollTop() >= 86.5) {
-            $('.second-row').addClass('fixed-header');
-        }
-        else {
-            $('.second-row').removeClass('fixed-header');
-        }
-    }
 
     state = {
         products: "",
         ptc: "",
+        scrollClass: "",
         empowerDsDeliverySystem: "",
         about: "",
         support: "",
@@ -42,6 +29,24 @@ class Header extends Component {
         ptcDropDown:false,
         showHeaderList:'hide-header',
 
+    };
+    componentDidMount() {
+        if(typeof window !== "undefined"){
+            window.addEventListener('scroll', this.handleScroll);
+        }
+    }
+
+    handleScroll=(event)=> {
+        let scrollTop = event.target.scrollingElement.scrollTop;
+        // console.log("event", event.target.scrollingElement.scrollTop);
+        // console.log("window", window.scrollY);
+            if (scrollTop >= 86.5){
+                this.setState({scrollClass:'fixed-header'})
+        }
+            else {
+                this.setState({scrollClass:''})
+
+            }
     };
 
     componentWillMount() {
@@ -365,7 +370,7 @@ class Header extends Component {
     }
 
     render() {
-        let {products,allProducts, ptc, ptcDropDown, empowerDsDeliverySystem, empowerDsDeliverySystemDropDown, about, evidence, publications, wdropdown, education, publishedPapers, blogs, support, employees, advisoryboard, webinars, caseStudies, articles, photobiomodulation, productDropDown, dropdown, publicationDropdown} = this.state;
+        let {products,allProducts, scrollClass, ptc, ptcDropDown, empowerDsDeliverySystem, empowerDsDeliverySystemDropDown, about, evidence, publications, wdropdown, education, publishedPapers, blogs, support, employees, advisoryboard, webinars, caseStudies, articles, photobiomodulation, productDropDown, dropdown, publicationDropdown} = this.state;
         return (
             <div>
                 <Head>
@@ -404,7 +409,7 @@ class Header extends Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="second-row">
+                        <div className={"second-row "+scrollClass}>
                             <div className="for-responsive-only">
                                 <div className="custom-container">
                                     <div className="menu-button  click " onClick={()=>this.responsiveHeader()} >

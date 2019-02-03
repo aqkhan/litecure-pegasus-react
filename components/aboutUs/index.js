@@ -40,7 +40,10 @@ class AboutUs extends Component {
     render() {
         let {products, pages, error} = this.state;
         let renderProducts = null;
-        let one, two, three, defaults = null;
+        let one =[];
+        let two =[];
+        let three =[];
+        let defaults = [];
         if (products) {
             renderProducts = products.map(value => {
                 return (
@@ -64,9 +67,77 @@ class AboutUs extends Component {
         if (pages !== null && pages.length > 0) {
             pages.forEach((data, index) => {
                 if (data.templateOrder === 'one') {
-                    one = data;
-                } else if (data.templateOrder === 'three') {
-                    three = <section className="new-media-detail" key={index}>
+                    one = [...one,<section className="company-profile">
+                        <section className="first-section"
+                                 style={{
+                                     background: `linear-gradient(rgba(14, 13, 13, 0.77), rgba(10, 9, 9, 0.72)),
+                    url(${data.featuredImage && data.featuredImage.url})`,
+                                     backgroundRepeat: "no-repeat",
+                                     backgroundSize: "cover",
+                                     width: "100%",
+                                     backgroundPosition: "center"
+                                 }}>
+                            <div className="fourth-row text-area new">
+                                <div className=" container">
+                                    <div className="row ">
+                                        <div className="col-sm-4 p-0">
+                                            <div className="PROFILE">
+                                                <h1>{data.headerImageLabel && data.headerImageLabel}</h1>
+                                                <p>{data.leadText}</p>
+                                            </div>
+                                        </div>
+                                        <div className="col-sm-8 ">
+                                            <div className=" learnmore-header"
+                                                 dangerouslySetInnerHTML={{__html: data.content}}/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="container custom-container">
+                                    <div className="row flex">
+                                        <div className="about">
+                                            <h1>{data.title}</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </section>]
+                }
+                else if (data.templateOrder === 'two') {
+                    two = [...two,<section className="new-media-detail-containers" key={index}>
+                        <section className="second-section hours-img" style={data.featuredImage && {
+                            background: `linear-gradient(rgba(8, 7, 7, 0.90), rgba(10, 9, 9, 0.8)), url(${data.featuredImage && data.featuredImage.url})`,
+                            "backgroundRepeat": "no-repeat",
+                            "backgroundSize": "cover",
+                            "backgroundPosition": "center"
+                        }}>
+                            <div className="fourth-row text-area">
+                                <div className=" container">
+                                    <div className="row ">
+                                        <div className="col-sm-4 p-0">
+                                        <div className="LASER-THREAT">
+                                            <h1>{data.headerImageLabel}</h1>
+                                            <p>{data.leadText}</p></div>
+                                        </div>
+                                        <div className="col-sm-8">
+                                            <div className=" learnmore-header"
+                                                 dangerouslySetInnerHTML={{__html: data.content}}/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="container custom-container">
+                                    <div className="row flex">
+                                        <div className="BENEFITS">
+                                            <h1>{data.metaTitle}</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </section>]
+                }
+                else if (data.templateOrder === 'three') {
+                    three = [...three,<section className="new-media-detail" key={index}>
                         <section className="first-section hourse-div" data-toggle="modal" data-target="#myModal">
                             <div className="container custom-container image-section image-container" style={{
                                 background: `linear-gradient(rgba(8, 7, 7, 0.72), rgba(10, 9, 9, 0.8)), url(${data.featuredImage && data.featuredImage.url})`,
@@ -110,99 +181,39 @@ class AboutUs extends Component {
                                 </div>
                             </div>
                         </section>
-                    </section>
-                } else if (data.templateOrder === 'two') {
-                    two = <section className="new-media-detail-containers" key={index}>
-                        <section className="second-section hours-img" style={data.featuredImage && {
-                            background: `linear-gradient(rgba(8, 7, 7, 0.90), rgba(10, 9, 9, 0.8)), url(${data.featuredImage && data.featuredImage.url})`,
-                            "backgroundRepeat": "no-repeat",
-                            "backgroundSize": "cover",
-                            "backgroundPosition": "center"
-                        }}>
-                            <div className="fourth-row text-area">
-                                <div className=" container">
-                                    <div className="row ">
-                                        <div className="LASER-THREAT">
-                                            <h1>{data.headerImageLabel}</h1>
-                                            <p>{data.leadText}</p></div>
-                                        <div className="col-sm-12">
-                                            <div className=" learnmore-header"
-                                                 dangerouslySetInnerHTML={{__html: data.content}}/>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="container custom-container">
-                                    <div className="row flex">
-                                        <div className="BENEFITS">
-                                            <h1>{data.metaTitle}</h1>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    </section>
-                } else {
-                    defaults = <DefaultComponent featuredImage={data.featuredImage}
+                    </section>]
+                }  else {
+                    defaults = [...defaults,<DefaultComponent featuredImage={data.featuredImage}
                                                  headerImageLabel={data.headerImageLabel && data.headerImageLabel}
                                                  metaTitle={data.metaTitle && data.metaTitle}
                                                  leadText={data.leadText && data.leadText}
-                                                 content={data.content && data.content}/>
+                                                 content={data.content && data.content}/>]
                 }
             })
         }
-        return (pages && products ? (
+        return (pages!==null&& pages.length>0 ? (
             <div>
-                {one && <section className="company-profile">
-                    <section className="first-section"
-                             style={{
-                                 background: `linear-gradient(rgba(14, 13, 13, 0.77), rgba(10, 9, 9, 0.72)),
-                    url(${one.featuredImage && one.featuredImage.url})`,
-                                 backgroundRepeat: "no-repeat",
-                                 backgroundSize: "cover",
-                                 width: "100%",
-                                 backgroundPosition: "right"
-                             }}>
-                        <div className="fourth-row text-area new">
-                            <div className=" container">
-                                <div className="row ">
-                                    <div className="col-sm-4 p-0">
-                                        <div className="PROFILE">
-                                            <h1>{one.headerImageLabel && one.headerImageLabel}</h1>
-                                            <p>{one.leadText}</p>
-                                        </div>
-                                    </div>
-                                    <div className="col-sm-8 ">
-                                        <div className=" learnmore-header"
-                                             dangerouslySetInnerHTML={{__html: one.content}}/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="container custom-container">
-                                <div className="row flex">
-                                    <div className="about">
-                                        <h1>{one.title}</h1>
-                                    </div>
-                                </div>
-                            </div>
+                {one.length >0 && one }
+                {
+                    <section className="company-profile">
+                    <section className="first-section">
+                    <div className="yellow-section">
+                    <div className="container custom-container">
+                        <div className="row view-area">
+                            {renderProducts && renderProducts}
                         </div>
-                        <div className="yellow-section">
-                            <div className="container custom-container">
-                                <div className="row view-area">
-                                    {renderProducts && renderProducts}
-                                </div>
-                            </div>
-                            <div className="container custom-container">
-                                <div className="row flex">
-                                    <h1 className="prodct">PRODUCTS</h1>
-                                </div>
-                            </div>
+                    </div>
+                    <div className="container custom-container">
+                        <div className="row flex">
+                            <h1 className="prodct">PRODUCTS</h1>
                         </div>
-
+                    </div>
+                    </div>
                     </section>
-                </section>}
-                {two && two}
-                {three && three}
-                {defaults && defaults}
+                    </section>}
+                {two.length >0 && two}
+                {three.length >0  && three}
+                {defaults.length >0 && defaults}
                 <RequestDemo/>
             </div>
         ) : error ? (<div className="splash">
@@ -218,7 +229,6 @@ class AboutUs extends Component {
             </div>
         </div>))
     }
-
 }
 
 export default AboutUs;

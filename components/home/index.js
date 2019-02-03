@@ -51,11 +51,13 @@ class Home extends Component {
 
     render() {
         let {pages, products, stories, error} = this.state;
-        let renderStories, one, renderProducts, defaults = null;
+        let renderStories, renderProducts  = null;
+        let one =[];
+        let defaults =[];
         if (pages !== null && pages.length > 0) {
-            this.state.pages.forEach((value, index) => {
+            pages.forEach((value, index) => {
                     if (value.templateOrder === 'one') {
-                        one = <section className="new-home-cards home-wrapper" key={index}>
+                        one = [...one, <section className="new-home-cards home-wrapper" key={index}>
                             <section className="section-one" style={value.featuredImage && value.featuredImage.url && {
                                 background: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)),url(${value.featuredImage && value.featuredImage.url})`,
                                 backgroundRepeat: "no-repeat",
@@ -81,13 +83,15 @@ class Home extends Component {
                                     </div>
                                 </div>
                             </section>
-                        </section>
+                        </section>]
                     } else {
-                        defaults = <DefaultComponent featuredImage={value.featuredImage}
-                                                     headerImageLabel={value.headerImageLabel && value.headerImageLabel}
-                                                     metaTitle={value.metaTitle && value.metaTitle}
-                                                     leadText={value.leadText && value.leadText}
-                                                     content={value.content && value.content}/>
+                        defaults =[...defaults,
+                            <DefaultComponent featuredImage={value.featuredImage}
+                                              headerImageLabel={value.headerImageLabel && value.headerImageLabel}
+                                              metaTitle={value.metaTitle && value.metaTitle}
+                                              leadText={value.leadText && value.leadText}
+                                              content={value.content && value.content}/>
+                        ]
                     }
                 }
             )
@@ -148,15 +152,14 @@ class Home extends Component {
                             <div className="paragraph-text" dangerouslySetInnerHTML={{__html: value.shortDescription}}/>
                             <span>{value.author}</span>
                         </div>
-
                     </Carousel.Caption>
                 </Carousel.Item>
             )
         }
-        return (one && renderStories && renderProducts ? (
+        return (pages!==null && pages.length>0 ? (
             <div>
-                {one}
-                {defaults}
+                {one.length>0 && one}
+                {defaults.length>0 && defaults}
                 {renderProducts && <Carousel interval={3000} indicators={false} controls={false} pauseOnHover={false}>
                     {renderProducts}
                 </Carousel>}
@@ -177,7 +180,6 @@ class Home extends Component {
                 <div/>
             </div>
         </div>))
-
     }
 }
 

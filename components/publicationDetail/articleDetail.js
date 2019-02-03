@@ -16,7 +16,7 @@ class  ArticleDetail extends Component{
     };
     componentWillMount() {
         let {slug} = this.props;
-        this.setState({ slug:slug })
+        this.setState({ slug:slug });
         axios.get(API_PATH + 'pages')
             .then((res)=>{
                 res.data.pages.forEach((val) => {

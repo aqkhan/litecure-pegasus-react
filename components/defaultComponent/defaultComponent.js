@@ -19,11 +19,9 @@ const defaultComponent = (props) =>{
                     </div>
                     <div className=" container">
                         <div className="row ">
-                            <div className="col-sm-4 p-0">
                                 <div className="LASER-THREAT">
                                     <h1>{props.metaTitle}</h1>
                                     <p>{props.leadText}</p></div>
-                            </div>
                             <div className="col-sm-8 ">
                                 <div className=" learnmore-header"
                                      dangerouslySetInnerHTML={{__html: props.content}}/>

@@ -1,23 +1,27 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 import '../style.css'
 import Layout from "../components/layout";
-import { withRouter } from "next/router";
+import {withRouter} from "next/router";
 import AdvisoryDetail from '../components/advisoryBoardMemberDetail';
+
 class AdvisoryBoardMemberDetail extends Component {
-    state={
-        slug:null
+    state = {
+        slug: null
     };
-    componentWillMount() {
+
+    componentDidMount() {
         let slug = this.props.router.query.name;
-        this.setState({ slug:slug })
+        this.setState({slug: slug})
     };
+
     render() {
         let {slug} = this.state;
         return (
             <Layout type={"advisoryboard"}>
-                <AdvisoryDetail slug={slug}/>
+                {slug && <AdvisoryDetail slug={slug}/>}
             </Layout>
         )
     }
 }
+
 export default withRouter(AdvisoryBoardMemberDetail);

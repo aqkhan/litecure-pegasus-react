@@ -1960,13 +1960,8 @@ a:active, a:hover{
 
 /*.company-profile .first-section:START*/
 .company-profile .first-section{
-    /*background: linear-gradient(rgba(14, 13, 13, 0.77), rgba(10, 9, 9, 0.72)),  url(/static/images/white_horse_stock_4_by_phoenixs_stock.png);*/
-    /*background-repeat: no-repeat;*/
-    /*background-size: cover;*/
-    /*!*height: 1632px;*!*/
-    /*width: 100%;*/
-    /*background-position: right;*/
-}
+    background: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 100%);
+    }
 
 .company-profile .first-section .custom-container .HEADERS{
     background-color: #191d24;
@@ -6495,7 +6490,7 @@ margin-top:88px!important;
         margin-right: 0px;
     }
     .advisory-board-img{
-        background-size: contain!important;
+        background-size: cover!important;
     }
     .company-profile .first-section .fourth-row .learnmore-header div{
 
