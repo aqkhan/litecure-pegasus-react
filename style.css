@@ -750,6 +750,7 @@ a:active, a:hover{
 /*.new-home-cards .section-one:START*/
 .new-home-cards .section-one{
     min-height: 600px;
+    background: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 100%);
 }
 
 .new-home-cards .section-one .custom-container .HEADERS{
@@ -1937,6 +1938,16 @@ a:active, a:hover{
     color: #efb817;
     opacity: 0.6;
 }
+
+.new-media-detail-containers .second-section .fourth-row .BENEFITS h2{
+    font-family: UniSansCAPS;
+    font-size: 120px;
+    font-weight: 100;
+    font-style: normal;
+    font-stretch: normal;
+    text-align: center;
+    color: #efb817;
+}
 /*.new-media-detail-containers .second-section .fourth-row .performance h1{*/
     /*font-size: 219px;*/
     /*letter-spacing: -21.4px;*/
@@ -2602,7 +2613,7 @@ a:active, a:hover{
 }
 .casestudy .post-casestudy .img-dev img{
     width: 100%;
-    height:auto;
+    min-height:150px;
 }
 
 .casestudy .post-casestudy>div:nth-child(2){

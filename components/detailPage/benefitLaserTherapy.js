@@ -8,7 +8,7 @@ class BenefitLaserTherapy extends Component {
     state = {
         page:null,
         err:null,
-    }
+    };
     componentDidMount(){
         axios.get(API_PATH + 'pages')
             .then((res) => {
