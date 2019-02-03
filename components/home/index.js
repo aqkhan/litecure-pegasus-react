@@ -14,14 +14,6 @@ class Home extends Component {
         err: null
     };
 
-    getInitialProps() {
-        this.setState({pages: null})
-    }
-
-    componentWillMount() {
-        this.setState({pages: null})
-    }
-
     componentDidMount() {
         axios.get(API_PATH + 'pages')
             .then((res) => {
@@ -59,9 +51,9 @@ class Home extends Component {
 
     render() {
         let {pages, products, stories, error} = this.state;
-        let renderStories, renderProducts = null;
-        let one = [];
-        let defaults = [];
+        let renderStories, renderProducts  = null;
+        let one =[];
+        let defaults =[];
         if (pages !== null && pages.length > 0) {
             pages.forEach((value, index) => {
                     if (value.templateOrder === 'one') {
@@ -93,7 +85,7 @@ class Home extends Component {
                             </section>
                         </section>]
                     } else {
-                        defaults = [...defaults,
+                        defaults =[...defaults,
                             <DefaultComponent featuredImage={value.featuredImage}
                                               headerImageLabel={value.headerImageLabel && value.headerImageLabel}
                                               metaTitle={value.metaTitle && value.metaTitle}
@@ -164,10 +156,10 @@ class Home extends Component {
                 </Carousel.Item>
             )
         }
-        return (pages !== null && pages.length > 0 ? (
+        return (pages!==null && pages.length>0 ? (
             <div>
-                {one.length > 0 && one}
-                {defaults.length > 0 && defaults}
+                {one.length>0 && one}
+                {defaults.length>0 && defaults}
                 {renderProducts && <Carousel interval={3000} indicators={false} controls={false} pauseOnHover={false}>
                     {renderProducts}
                 </Carousel>}
