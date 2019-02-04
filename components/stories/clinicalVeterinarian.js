@@ -3,7 +3,7 @@ import RequestDemo from '../requestDemo';
 import StoriesHeader from './storiesHeader/storiesHeader';
 import DefaultComponent from "../defaultComponent/defaultComponent";
 import StoriesMiddleSection from "./storiesMiddleSection/storiesMiddleSection";
-// import StoriesCategory from "./storiesCategories/storiesCategories;"
+// import StoriesCategory from "./storiesCategories/storiesCategories";
 import {API_PATH} from '../apiconfig'
 import axios from 'axios';
 
@@ -28,15 +28,9 @@ class clinicalVeterinarian extends Component {
                 console.log("error", err);
                 this.setState({error:"404 Not Found"})
             });
-        axios.get(API_PATH + 'stories')
+        axios.get(API_PATH + 'stories/category/clinicalVeterinarian')
             .then((res) => {
-                let temp = [];
-                res.data.stories.forEach((val) => {
-                    if (val.selectCategory === "clinicalVeterinarian") {
-                        temp.push(val);
-                    }
-                });
-                this.setState({stories: temp})
+                this.setState({stories: res.data.stories})
             })
             .catch(err => {
                 console.log("error", err);
