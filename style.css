@@ -3202,10 +3202,10 @@ a:active, a:hover{
 
 }
 .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next{
-    margin-right:-30px!important;
+    margin-right:-24px!important;
 }
 .carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev{
-    margin-left:-30px!important;
+    margin-left:-24px!important;
 }
 .slider-text{
     width: 100%;

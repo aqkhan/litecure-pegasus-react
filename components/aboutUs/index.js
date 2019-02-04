@@ -138,13 +138,13 @@ class AboutUs extends Component {
                 }
                 else if (data.templateOrder === 'three') {
                     three = [...three,<section className="new-media-detail" key={index}>
-                        <section className="first-section hourse-div" data-toggle="modal" data-target="#myModal">
-                            <div className="container custom-container image-section image-container" style={{
+                        <section className="first-section hourse-div" data-toggle="modal" data-target="#myModal" style={{
                                 background: `linear-gradient(rgba(8, 7, 7, 0.72), rgba(10, 9, 9, 0.8)), url(${data.featuredImage && data.featuredImage.url})`,
                                 backgroundRepeat: "no-repeat",
                                 backgroundSize: "cover",
                                 backgroundPosition: "center"
                             }}>
+                            <div className="container custom-container image-section image-container">
                                 <div className="container width-container">
                                     <div className="row flex year">
                                         <div className="col-sm-1"></div>
