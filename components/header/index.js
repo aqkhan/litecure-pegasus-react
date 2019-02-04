@@ -31,6 +31,7 @@ class Header extends Component {
 
     };
     componentDidMount() {
+        this.changeHover(this.props.type)
         if(typeof window !== "undefined"){
             window.addEventListener('scroll', this.handleScroll);
         }
@@ -49,13 +50,13 @@ class Header extends Component {
             }
     };
 
-    componentWillMount() {
-        this.changeHover(this.props.type)
-    }
-
-    componentWillReceiveProps(nextProps, nextContext) {
-        this.changeHover(this.props.type)
-    }
+    // componentWillMount() {
+    //        this.changeHover(this.props.type)
+    // }
+    //
+    // componentWillReceiveProps(nextProps, nextContext) {
+    //     this.changeHover(this.props.type)
+    // }
 
 
     publicationDropdownFunc() {

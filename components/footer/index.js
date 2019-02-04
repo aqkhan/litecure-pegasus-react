@@ -4,30 +4,33 @@ class Footer extends Component{
     state={
         check:false,
     };
-    componentWillMount() {
+    // componentWillMount() {
+    //     if (typeof document !== 'undefined') {
+    //         this.callFbScript(document, 'script', 'facebook-jssdk');
+    //     }
+    //     if (typeof window !== 'undefined'){
+    //         this.callFbScript(document, 'script', 'facebook-jssdk');
+    //     }
+    // }
+
+    componentDidMount() {
         if (typeof document !== 'undefined') {
             this.callFbScript(document, 'script', 'facebook-jssdk');
         }
+        if (typeof window !== 'undefined'){
+            this.callFbScript(document, 'script', 'facebook-jssdk');
+        }
     }
-    // componentWillUpdate() {
-    //         this.callFbScript(document, 'script', 'facebook-jssdk');
-    // }
-    // componentDidMount() {
-    //     this.callFbScript(document, 'script', 'facebook-jssdk');
-    // }
     // componentWillReceiveProps(nextProps, nextContext) {
-    //     let {test}=nextProps;
-    //     this.setState({test})
-    //     this.callFbScript(document, 'script', 'facebook-jssdk');
-    // }
-    // componentDidUpdate(prevProps, prevState, snapshot) {
-    //     this.callFbScript(document, 'script', 'facebook-jssdk');
-    // }
-    // shouldComponentUpdate(nextProps, nextState, nextContext) {
-    //     return true;
-    // }
+    //     if (typeof document !== 'undefined') {
+    //         this.callFbScript(document, 'script', 'facebook-jssdk');
+    //     }
+    //     if (typeof window !== 'undefined'){
+    //         this.callFbScript(document, 'script', 'facebook-jssdk');
+    //     }
+    //      }
 
-    callFbScript(d, s, id){
+    callFbScript=(d, s, id)=>{
             setTimeout(()=>{
                 let js, fjs = d.getElementsByTagName(s)[0];
                 if (d.getElementById(id)) return;
@@ -36,17 +39,8 @@ class Footer extends Component{
                 fjs.parentNode.insertBefore(js, fjs,);
                 this.setState({check:true})
                 },100)
-    }
+    };
 
-    // callFbScript2(d, s, id){
-    //     setTimeout(()=>{
-    //         let js, fjs = d.getElementsByTagName(s)[0];
-    //         if (d.getElementById(id)) return;
-    //         js = d.createElement(s); js.id = id;
-    //         js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2';
-    //         fjs.parentNode.insertBefore(js, fjs,);
-    //     },500)
-    // }
 
     render(){
         return(
@@ -117,11 +111,8 @@ class Footer extends Component{
                                 <p>Legal</p>
                                 <p>Terms of  Use</p>
                                 <p>Privacy Policy</p>
-
                             </div>
                         </div>
-
-
                     </div>
                 </div>
             </footer>

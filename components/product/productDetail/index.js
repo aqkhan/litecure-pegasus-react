@@ -14,16 +14,8 @@ class ProductDetail extends Component{
         stories:null
     };
 
-    componentWillMount(){
+    componentDidMount(){
         let slug =this.props.slug;
-        this.apiCall(slug);
-    }
-    // componentWillReceiveProps(nextProps, nextContext) {
-    //     let slug =nextProps.slug;
-    //     this.apiCall(slug);
-    // }
-
-    apiCall(slug){
         axios.get(API_PATH +'products/'+slug)
             .then((res)=>{
                 this.setState({product:res.data.product, slug:slug})
@@ -48,9 +40,6 @@ class ProductDetail extends Component{
                 this.setState({err:err})
             })
     }
-    // shouldComponentUpdate(nextProps, nextState, nextContext) {
-    //     return nextState.slug !== this.state.slug || nextState.products!==this.state.products
-    // }
 
      getId=(url)=> {
         let regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
@@ -136,7 +125,7 @@ class ProductDetail extends Component{
                                             <img src={value.featuredImage && value.featuredImage.url} height="320" width="320"/>
                                             <div className="view-text">
                                                 <h1>{value.title}</h1>
-                                                <p><Link href={"/product/"+value.slug}><a onClick={()=>this.apiCall(value.slug)}>VIEW PRODUCT</a></Link></p>
+                                                <p><Link href={"/product/"+value.slug}><a>VIEW PRODUCT</a></Link></p>
                                             </div>
                                         </div>
                                     </div>
@@ -272,7 +261,7 @@ class ProductDetail extends Component{
                              {
                                  stories && stories.map((item, index)=>{
                                      let videoId = this.getId(item.videoLink);
-                                     return (<div className="container">
+                                     return (<div className="container" key={index}>
                                      {/*<!-- The Modal -->*/}
                                      <div className="modal fade" id={"myModal3"+index}>
                                          <div className="modal-dialog modal-lg">
