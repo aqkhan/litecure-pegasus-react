@@ -6768,6 +6768,11 @@ background-color: rgba(0, 0, 0, 0.9);
     justify-content: center;
     padding-top: 38px;
 }
+.header-list-main-div-4 {
+    display: flex;
+    padding-top: 38px;
+    padding-left: 415px;
+}
 .inside-list-3{
     padding-right: 165px!important;
 }
