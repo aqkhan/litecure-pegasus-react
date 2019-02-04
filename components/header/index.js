@@ -23,6 +23,8 @@ class Header extends Component {
         webinars: "",
         stories:"",
         clinicalVeterinarian:"",
+        athlete:"",
+        horseRider:"",
         productDropDown: false,
         dropdown: false,
         wdropdown: false,
@@ -96,7 +98,9 @@ class Header extends Component {
                     support: "",
                     employees: "",
                     stories:"",
-                    clinicalVeterinarian:""
+                    clinicalVeterinarian:"",
+                    athlete:"",
+                    horseRider:""
                 });
                 return;
             case "ptc":
@@ -119,7 +123,9 @@ class Header extends Component {
                     support: "",
                     employees: "",
                     stories:"",
-                    clinicalVeterinarian:""
+                    clinicalVeterinarian:"",
+                    athlete:"",
+                    horseRider:""
                 });
                 return;
             case "empower-ds-delivery-system":
@@ -142,7 +148,9 @@ class Header extends Component {
                     support: "",
                     employees: "",
                     stories:"",
-                    clinicalVeterinarian:""
+                    clinicalVeterinarian:"",
+                    athlete:"",
+                    horseRider:""
                 });
                 return;
             case "blogs":
@@ -165,7 +173,9 @@ class Header extends Component {
                     support: "",
                     employees: "",
                     stories:"",
-                    clinicalVeterinarian:""
+                    clinicalVeterinarian:"",
+                    athlete:"",
+                    horseRider:""
                 });
                 return;
             case "publishedPapers":
@@ -188,7 +198,9 @@ class Header extends Component {
                     support: "",
                     employees: "",
                     stories:"",
-                    clinicalVeterinarian:""
+                    clinicalVeterinarian:"",
+                    athlete:"",
+                    horseRider:""
                 });
                 return;
             case "caseStudies":
@@ -211,7 +223,9 @@ class Header extends Component {
                     support: "",
                     employees: "",
                     stories:"",
-                    clinicalVeterinarian:""
+                    clinicalVeterinarian:"",
+                    athlete:"",
+                    horseRider:""
                 });
                 return;
             case "webinars":
@@ -234,7 +248,9 @@ class Header extends Component {
                     support: "",
                     employees: "",
                     stories:"",
-                    clinicalVeterinarian:""
+                    clinicalVeterinarian:"",
+                    athlete:"",
+                    horseRider:""
                 });
                 return;
             case "articles":
@@ -257,7 +273,9 @@ class Header extends Component {
                     support: "",
                     employees: "",
                     stories:"",
-                    clinicalVeterinarian:""
+                    clinicalVeterinarian:"",
+                    athlete:"",
+                    horseRider:""
                 });
                 return;
             case "photobiomodulation":
@@ -280,7 +298,9 @@ class Header extends Component {
                     support: "",
                     employees: "",
                     stories:"",
-                    clinicalVeterinarian:""
+                    clinicalVeterinarian:"",
+                    athlete:"",
+                    horseRider:""
                 });
                 return;
             case "advisoryboard":
@@ -303,7 +323,9 @@ class Header extends Component {
                     support: "",
                     employees: "",
                     stories:"",
-                    clinicalVeterinarian:""
+                    clinicalVeterinarian:"",
+                    athlete:"",
+                    horseRider:""
                 });
                 return;
             case "about":
@@ -326,7 +348,9 @@ class Header extends Component {
                     support: "",
                     employees: "",
                     stories:"",
-                    clinicalVeterinarian:""
+                    clinicalVeterinarian:"",
+                    athlete:"",
+                    horseRider:""
                 });
                 return;
             case "support":
@@ -349,7 +373,9 @@ class Header extends Component {
                     support: "active",
                     employees: "",
                     stories:"",
-                    clinicalVeterinarian:""
+                    clinicalVeterinarian:"",
+                    athlete:"",
+                    horseRider:""
                 });
                 return;
             case "employees":
@@ -372,7 +398,9 @@ class Header extends Component {
                     support: "",
                     employees: "active",
                     stories:"",
-                    clinicalVeterinarian:""
+                    clinicalVeterinarian:"",
+                    athlete:"",
+                    horseRider:""
                 });
                 return;
                 case "clinicalVeterinarian":
@@ -395,7 +423,59 @@ class Header extends Component {
                     support: "",
                     employees: "",
                     stories:"active",
-                    clinicalVeterinarian:"active"
+                    clinicalVeterinarian:"active",
+                    athlete:"",
+                    horseRider:""
+                });
+                return;
+                case "athlete":
+                this.setState({
+                    webinars: "",
+                    education: "",
+                    products: "",
+                    allProducts:"",
+                    ptc: "",
+                    empowerDsDeliverySystem: "",
+                    evidence: "",
+                    publications: "",
+                    blogs: "",
+                    publishedPapers: "",
+                    caseStudies: "",
+                    articles: "",
+                    advisoryboard: "",
+                    photobiomodulation: "",
+                    about: "",
+                    support: "",
+                    employees: "",
+                    stories:"active",
+                    clinicalVeterinarian:"",
+                    athlete:"active",
+                    horseRider:""
+                });
+                return;
+                case "horseRider":
+                this.setState({
+                    webinars: "",
+                    education: "",
+                    products: "",
+                    allProducts:"",
+                    ptc: "",
+                    empowerDsDeliverySystem: "",
+                    evidence: "",
+                    publications: "",
+                    blogs: "",
+                    publishedPapers: "",
+                    caseStudies: "",
+                    articles: "",
+                    advisoryboard: "",
+                    photobiomodulation: "",
+                    about: "",
+                    support: "",
+                    employees: "",
+                    stories:"active",
+                    clinicalVeterinarian:"",
+                    athlete:"",
+                    horseRider:"active"
                 });
                 return;
             default:
@@ -418,7 +498,9 @@ class Header extends Component {
                     support: "",
                     employees: "",
                     stories:"",
-                    clinicalVeterinarian:""
+                    clinicalVeterinarian:"",
+                    athlete:"",
+                    horseRider:""
                 });
         }
 
@@ -426,7 +508,7 @@ class Header extends Component {
 
     render() {
         let {products,allProducts, scrollClass, ptc, ptcDropDown, empowerDsDeliverySystem, empowerDsDeliverySystemDropDown, about, evidence, publications, publishedPapers, blogs, support, employees, advisoryboard, webinars, caseStudies, articles, photobiomodulation, productDropDown, dropdown, publicationDropdown,stories,
-        clinicalVeterinarian ,storiesDropDown} = this.state;
+        clinicalVeterinarian ,storiesDropDown, athlete, horseRider} = this.state;
         return (
             <div>
                 <Head>
@@ -561,8 +643,8 @@ class Header extends Component {
                                                      <div className="inside-list">
                                                      <ul className="header-main-ul">
                                                         <li><span className={clinicalVeterinarian}><Link href="/clinical-veterinarian"><a>CLINICAL VETERINARIAN</a></Link></span></li>
-                                                        <li><span className={advisoryboard}><Link href="/athlete"><a>ATHLETE</a></Link></span></li>
-                                                        <li><span className={photobiomodulation}><Link href="/horse-owner-rider"><a>HORSE OWNER/RIDER</a></Link></span></li>
+                                                        <li><span className={athlete}><Link href="/athlete"><a>ATHLETE</a></Link></span></li>
+                                                        <li><span className={horseRider}><Link href="/horse-owner-rider"><a>HORSE OWNER/RIDER</a></Link></span></li>
                                                  </ul>
                                                  </div>
                                                  </div>
@@ -631,8 +713,8 @@ class Header extends Component {
                                                         <div className="inside-list">
                                                             <ul className="header-main-ul">
                                                                 <li><span className={clinicalVeterinarian}><Link href="/clinical-veterinarian"><a>CLINICAL VETERINARIAN</a></Link></span></li>
-                                                                <li><span className={advisoryboard}><Link href="/athlete"><a>ATHLETE</a></Link></span></li>
-                                                                <li><span className={photobiomodulation}><Link href="/horse-owner-rider"><a>HORSE OWNER/RIDER</a></Link></span></li>
+                                                                <li><span className={athlete}><Link href="/athlete"><a>ATHLETE</a></Link></span></li>
+                                                                <li><span className={horseRider}><Link href="/horse-owner-rider"><a>HORSE OWNER/RIDER</a></Link></span></li>
                                                                 </ul>
                                                         </div>
                                                     </div>
