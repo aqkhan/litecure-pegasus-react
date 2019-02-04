@@ -269,7 +269,10 @@ class ProductDetail extends Component {
                             </div>
                             {
                                 stories && stories.map((item, index) => {
-                                    let videoId = this.getId(item.videoLink);
+                                    let videoId = null;
+                                    if(item.videoLink){
+                                        videoId = this.getId(item.videoLink);
+                                    }
                                     return (<div className="container" key={index}>
                                         {/*<!-- The Modal -->*/}
                                         <div className="modal fade" id={"myModal3" + index}>
@@ -283,9 +286,9 @@ class ProductDetail extends Component {
                                                     {/*<!-- Modal body -->*/}
                                                     <div className="modal-body">
                                                         <div>
-                                                            <iframe width="560" height="315"
+                                                            {videoId && <iframe width="560" height="315"
                                                                     src={`//www.youtube.com/embed/${videoId}`}
-                                                                    frameBorder="0" allowFullScreen></iframe>
+                                                                    frameBorder="0" allowFullScreen/>}
                                                         </div>
                                                     </div>
                                                 </div>
