@@ -21,12 +21,15 @@ class Header extends Component {
         photobiomodulation: "",
         advisoryboard: "",
         webinars: "",
+        stories:"",
+        clinicalVeterinarian:"",
         productDropDown: false,
         dropdown: false,
         wdropdown: false,
         publicationDropdown: false,
         empowerDsDeliverySystemDropDown:true,
         ptcDropDown:false,
+        storiesDropDown:false,
         showHeaderList:'hide-header',
 
     };
@@ -91,7 +94,9 @@ class Header extends Component {
                     advisoryboard: "",
                     about: "",
                     support: "",
-                    employees: ""
+                    employees: "",
+                    stories:"",
+                    clinicalVeterinarian:""
                 });
                 return;
             case "ptc":
@@ -112,7 +117,9 @@ class Header extends Component {
                     advisoryboard: "",
                     about: "",
                     support: "",
-                    employees: ""
+                    employees: "",
+                    stories:"",
+                    clinicalVeterinarian:""
                 });
                 return;
             case "empower-ds-delivery-system":
@@ -133,7 +140,9 @@ class Header extends Component {
                     advisoryboard: "",
                     about: "",
                     support: "",
-                    employees: ""
+                    employees: "",
+                    stories:"",
+                    clinicalVeterinarian:""
                 });
                 return;
             case "blogs":
@@ -154,7 +163,9 @@ class Header extends Component {
                     blogs: "active",
                     about: "",
                     support: "",
-                    employees: ""
+                    employees: "",
+                    stories:"",
+                    clinicalVeterinarian:""
                 });
                 return;
             case "publishedPapers":
@@ -175,7 +186,9 @@ class Header extends Component {
                     photobiomodulation: "",
                     about: "",
                     support: "",
-                    employees: ""
+                    employees: "",
+                    stories:"",
+                    clinicalVeterinarian:""
                 });
                 return;
             case "caseStudies":
@@ -196,7 +209,9 @@ class Header extends Component {
                     photobiomodulation: "",
                     about: "",
                     support: "",
-                    employees: ""
+                    employees: "",
+                    stories:"",
+                    clinicalVeterinarian:""
                 });
                 return;
             case "webinars":
@@ -217,7 +232,9 @@ class Header extends Component {
                     photobiomodulation: "",
                     about: "",
                     support: "",
-                    employees: ""
+                    employees: "",
+                    stories:"",
+                    clinicalVeterinarian:""
                 });
                 return;
             case "articles":
@@ -238,7 +255,9 @@ class Header extends Component {
                     photobiomodulation: "",
                     about: "",
                     support: "",
-                    employees: ""
+                    employees: "",
+                    stories:"",
+                    clinicalVeterinarian:""
                 });
                 return;
             case "photobiomodulation":
@@ -259,7 +278,9 @@ class Header extends Component {
                     photobiomodulation: "active",
                     about: "",
                     support: "",
-                    employees: ""
+                    employees: "",
+                    stories:"",
+                    clinicalVeterinarian:""
                 });
                 return;
             case "advisoryboard":
@@ -280,7 +301,9 @@ class Header extends Component {
                     photobiomodulation: "",
                     about: "",
                     support: "",
-                    employees: ""
+                    employees: "",
+                    stories:"",
+                    clinicalVeterinarian:""
                 });
                 return;
             case "about":
@@ -301,7 +324,9 @@ class Header extends Component {
                     photobiomodulation: "",
                     about: "active",
                     support: "",
-                    employees: ""
+                    employees: "",
+                    stories:"",
+                    clinicalVeterinarian:""
                 });
                 return;
             case "support":
@@ -322,7 +347,9 @@ class Header extends Component {
                     photobiomodulation: "",
                     about: "",
                     support: "active",
-                    employees: ""
+                    employees: "",
+                    stories:"",
+                    clinicalVeterinarian:""
                 });
                 return;
             case "employees":
@@ -343,7 +370,32 @@ class Header extends Component {
                     photobiomodulation: "",
                     about: "",
                     support: "",
-                    employees: "active"
+                    employees: "active",
+                    stories:"",
+                    clinicalVeterinarian:""
+                });
+                return;
+                case "clinicalVeterinarian":
+                this.setState({
+                    webinars: "",
+                    education: "",
+                    products: "",
+                    allProducts:"",
+                    ptc: "",
+                    empowerDsDeliverySystem: "",
+                    evidence: "",
+                    publications: "",
+                    blogs: "",
+                    publishedPapers: "",
+                    caseStudies: "",
+                    articles: "",
+                    advisoryboard: "",
+                    photobiomodulation: "",
+                    about: "",
+                    support: "",
+                    employees: "",
+                    stories:"active",
+                    clinicalVeterinarian:"active"
                 });
                 return;
             default:
@@ -364,14 +416,17 @@ class Header extends Component {
                     photobiomodulation: "",
                     about: "",
                     support: "",
-                    employees: ""
+                    employees: "",
+                    stories:"",
+                    clinicalVeterinarian:""
                 });
         }
 
     }
 
     render() {
-        let {products,allProducts, scrollClass, ptc, ptcDropDown, empowerDsDeliverySystem, empowerDsDeliverySystemDropDown, about, evidence, publications, wdropdown, education, publishedPapers, blogs, support, employees, advisoryboard, webinars, caseStudies, articles, photobiomodulation, productDropDown, dropdown, publicationDropdown} = this.state;
+        let {products,allProducts, scrollClass, ptc, ptcDropDown, empowerDsDeliverySystem, empowerDsDeliverySystemDropDown, about, evidence, publications, publishedPapers, blogs, support, employees, advisoryboard, webinars, caseStudies, articles, photobiomodulation, productDropDown, dropdown, publicationDropdown,stories,
+        clinicalVeterinarian ,storiesDropDown} = this.state;
         return (
             <div>
                 <Head>
@@ -498,6 +553,22 @@ class Header extends Component {
                                                  </div></li>
                                             </ul>}
                                         </li>
+                                        <li onMouseLeave={() => this.setState({storiesDropDown: false})}><span
+                                            className={stories} onClick={() => this.setState({storiesDropDown: !storiesDropDown})}><a>STORIES</a></span>
+                                            {storiesDropDown && <ul className="childlist">
+                                                     <li><div className="header-list-div-2">
+                                                     <div className="header-list-main-div-2" onMouseLeave={() => this.setState({storiesDropDown: false})}>
+                                                     <div className="inside-list">
+                                                     <ul className="header-main-ul">
+                                                        <li><span className={clinicalVeterinarian}><Link href="/clinical-veterinarian"><a>CLINICAL VETERINARIAN</a></Link></span></li>
+                                                        <li><span className={advisoryboard}><Link href="/athlete"><a>ATHLETE</a></Link></span></li>
+                                                        <li><span className={photobiomodulation}><Link href="/horse-owner-rider"><a>HORSE OWNER/RIDER</a></Link></span></li>
+                                                 </ul>
+                                                 </div>
+                                                 </div>
+                                                 </div></li>
+                                            </ul>}
+                                        </li>
                                         <li><span className={blogs}><Link href="/blogs"><a>Blog</a></Link></span></li>
                                         <li><span className={webinars}><Link href="/webinars"><a>Webinars</a></Link></span></li>
                                         <li><span className={about}><Link href="/about-us"><a>About</a></Link></span>
@@ -544,6 +615,24 @@ class Header extends Component {
                                                                 </li>
                                                                 <li><span className={photobiomodulation}><Link href="/photobiomodulation"><a>PHOTOBIOMODULATION</a></Link></span></li>
                                                                 <li><span className={advisoryboard}><Link href="/advisory-board-members"><a>ADVISORY BOARD</a></Link></span></li>
+                                                                </ul>
+                                                        </div>
+                                                    </div>
+                                                </div></li>
+                                            </ul>}
+                                        </li>
+                                        <li><span
+                                            className={stories} onClick={() => this.setState({storiesDropDown: !storiesDropDown})}><a>STORIES</a></span>
+                                            {storiesDropDown && <ul className="childlist childlist-2">
+                                                <li><div className="header-list-div-2">
+
+                                                    <div className="header-list-main-div-2">
+
+                                                        <div className="inside-list">
+                                                            <ul className="header-main-ul">
+                                                                <li><span className={clinicalVeterinarian}><Link href="/clinical-veterinarian"><a>CLINICAL VETERINARIAN</a></Link></span></li>
+                                                                <li><span className={advisoryboard}><Link href="/athlete"><a>ATHLETE</a></Link></span></li>
+                                                                <li><span className={photobiomodulation}><Link href="/horse-owner-rider"><a>HORSE OWNER/RIDER</a></Link></span></li>
                                                                 </ul>
                                                         </div>
                                                     </div>
