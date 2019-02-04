@@ -3,7 +3,7 @@ import RequestDemo from '../requestDemo';
 import StoriesHeader from './storiesHeader/storiesHeader';
 import DefaultComponent from "../defaultComponent/defaultComponent";
 import StoriesMiddleSection from "./storiesMiddleSection/storiesMiddleSection";
-// import StoriesCategory from "./storiesCategories/storiesCategories";
+import StoriesCategory from "./storiesCategories/storiesCategories";
 import {API_PATH} from '../apiconfig'
 import axios from 'axios';
 
@@ -75,7 +75,7 @@ class clinicalVeterinarian extends Component {
                 }
                 {defaults.length>0 && defaults}
                 <StoriesMiddleSection storiesCategory={"Clinical Veterinarian"}/>
-                {/* {stories.length>0 && <StoriesCategory stories={stories} storiesCategory={"Clinical Veterinarian"}/>} */}
+                 {stories !==null && stories.length>0 && <StoriesCategory stories={stories} storiesCategory={"Clinical Veterinarian"}/>}
                 <RequestDemo/>
             </div>
         )

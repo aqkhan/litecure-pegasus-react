@@ -7,47 +7,14 @@ import ScrollableAnchor, { goToAnchor, configureAnchors  } from 'react-scrollabl
 class StoriesCategory extends Component {
     state={
         storiesCategory: null,
-        stories: null,
-        publicationsCopy: null,
         publicationDestructure: null,
         totalPages:null,
         final: null
     };
-    async componentWillReceiveProps(nextProps) {
-        let {publicationCategory, stories} = nextProps;
-        await this.setState({publicationCategory:publicationCategory,stories:stories});
-        await this.setDisplay();
-          }
-     setDisplay(){
-        let newCheck=true;
-        let temp=[];
-         this.state.categoryList.forEach((tag)=>{
-             if (tag.check===true){
-                 newCheck=false;
-             }
-         });
-
-         if(newCheck){
-             temp=this.state.publications?this.state.publications:[];
-         }
-         else {
-             this.state.publications&&this.state.publications.forEach((val)=>{
-                 let check = 0;
-                 val.selectTags.forEach(data=>{
-                     if (check ===0){
-                         this.state.categoryList.forEach((tag)=>{
-                             if ( data === tag.id && tag.check===true){
-                                 temp.push(val);
-                                 check = 1;
-                             }
-                         })
-                     }
-                 })
-             });
-         }
-         let restructured = RestructorData(temp, 10);
-     this.setState({publicationDestructure:restructured, final: restructured[0], totalPages: restructured.length}, function () {
-     })
+     componentDidMount() {
+        let {storiesCategory, stories} = this.props;
+        let restructured = RestructorData(stories, 10);
+     this.setState({publicationDestructure:restructured, final: restructured[0], totalPages: restructured.length, storiesCategory});
     };
 
     returnData = (index) => {
@@ -56,22 +23,13 @@ class StoriesCategory extends Component {
         goToAnchor('scroll')
     };
 
-    checkChange=(value)=>{
-                let temp = [...this.state.categoryList];
-                let change = temp[value].check;
-                temp[value].check=!change;
-                this.setState({categoryList:temp});
-                this.setDisplay();
-        };
-
     render(){
-        let {publicationCategory, final,totalPages} = this.state;
+        let {storiesCategory, final,totalPages} = this.state;
         let cards=null;
-
         if(final){
             cards = final.map((value,index)=>(<div key={index} className="post-casestudy">
                     <div className="img-dev">
-                        <Link href={page+value.slug}><a><img src={value.featuredImage?value.featuredImage.url:"https://rs-cms.s3.amazonaws.com/pics/Yk_kkbCUx-_NPr_2.png"}/></a></Link>
+                        <img src={value.featuredImage?value.featuredImage.url:"https://rs-cms.s3.amazonaws.com/pics/Yk_kkbCUx-_NPr_2.png"}/>
                     </div>
                 </div>
             ))
@@ -85,13 +43,7 @@ class StoriesCategory extends Component {
                     <div className="casestudy-primary">
                         <div>
                             <div className="casestudy-text">
-                                <span>{publicationCategory}</span>
-                                <span>Filter by topic categories</span>
-                                <div className="list-dev">
-                                    <ul>
-                                        {categories && categories}
-                                    </ul>
-                                </div>
+                                <span>{storiesCategory}</span>
                             </div>
 
                         </div>
