@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import Link from 'next/link';
 import ReactPaginate from 'react-paginate';
 import { RestructorData } from "../../functions";
 import ContentLoader  from 'react-content-loader';
@@ -36,22 +35,30 @@ class StoriesCategory extends Component {
         let {storiesCategory, final,totalPages} = this.state;
         let cards=null;
         if(final){
-            cards = final.map((value,index)=>(<div key={index} className="post-stories">
-            <div className="row reverse-content">
-            <div className="col-sm-6">
-                    <div className="img-div">
-                        <img src={value.featuredImage?value.featuredImage.url:"https://rs-cms.s3.amazonaws.com/pics/Yk_kkbCUx-_NPr_2.png"}/>
+            cards = final.map((value,index)=>{
+                let videoId = null;
+                if(value.videoLink !==""){
+                    videoId =  this.getId(value.videoLink);
+                }
+                return (<div key={index} className="post-stories">
+                        <div className="row reverse-content">
+                            <div className="col-sm-6">
+                                <div className="img-div">
+                                    {videoId ? <iframe width="100%" height="100%"
+                                                       src={`//www.youtube.com/embed/${videoId}`}
+                                                       frameBorder="0" allowFullScreen/>:<img src={value.featuredImage&&value.featuredImage.url}/>}
+                                </div>
+                            </div>
+                            <div className="col-sm-6 text-div">
+                                <div className="heading-div"><h1>{value.title}</h1></div>
+                                <div className="short-desc-div" dangerouslySetInnerHTML={{__html: value.shortDescription}}/>
+                                <div className="long-desc-div" dangerouslySetInnerHTML={{__html: value.longDescription}}/>
+                                <div className="author-div"><p><span>Author :</span> {value.author}</p></div>
+                            </div>
+                        </div>
                     </div>
-                 </div>
-                 <div className="col-sm-6 text-div">
-                 <div className="heading-div"><h1>{value.title}</h1></div>
-                 <div className="short-desc-div" dangerouslySetInnerHTML={{__html: value.shortDescription}}/>
-                 <div className="long-desc-div"dangerouslySetInnerHTML={{__html: value.longDescription}}/>
-                 <div className="author-div"><p><span>Author :</span> {value.author}</p></div>
-                 </div>
-                 </div>   
-                </div>
-            ))
+                )
+            })
         }
         return (
             <section className="stories">
