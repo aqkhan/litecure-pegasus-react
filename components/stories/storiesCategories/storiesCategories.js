@@ -8,15 +8,14 @@ class StoriesCategory extends Component {
     state={
         storiesCategory: null,
         stories: null,
-        page:null,
         publicationsCopy: null,
         publicationDestructure: null,
         totalPages:null,
         final: null
     };
     async componentWillReceiveProps(nextProps) {
-        let {publicationCategory, publications, page, categoryList} = nextProps;
-        await this.setState({publicationCategory:publicationCategory,publications:publications, page,categoryList});
+        let {publicationCategory, stories} = nextProps;
+        await this.setState({publicationCategory:publicationCategory,stories:stories});
         await this.setDisplay();
           }
      setDisplay(){
@@ -66,20 +65,13 @@ class StoriesCategory extends Component {
         };
 
     render(){
-        let {publicationCategory, categoryList, page, final,totalPages} = this.state;
+        let {publicationCategory, final,totalPages} = this.state;
         let cards=null;
-        let categories = null;
-        if(categoryList) {
-            categories = categoryList.map((value,index)=>(<li key={index} onClick={()=>this.checkChange(index)}><input type="checkbox" checked={value.check}/><span>{value.name}</span></li>))
-        }
+
         if(final){
             cards = final.map((value,index)=>(<div key={index} className="post-casestudy">
                     <div className="img-dev">
                         <Link href={page+value.slug}><a><img src={value.featuredImage?value.featuredImage.url:"https://rs-cms.s3.amazonaws.com/pics/Yk_kkbCUx-_NPr_2.png"}/></a></Link>
-                    </div>
-                    <div>
-                        <Link href={page+value.slug}><a>{value.title}</a></Link>
-                        <Link href={page+value.slug}><a>Read More</a></Link>
                     </div>
                 </div>
             ))
