@@ -97,7 +97,20 @@ class PublishedPapers extends Component {
         }
         return (
             <div>
-                {one.length>0 && one}
+                {
+                    (one.length>0 ?one: error ? (<div className="splash">
+                        <div className="lds-ellipsis">
+                            <h1><strong>{error}</strong></h1>
+                        </div>
+                    </div>) : (<div className="splash">
+                        <div className="lds-ellipsis">
+                            <div/>
+                            <div/>
+                            <div/>
+                            <div/>
+                        </div>
+                    </div>))
+                }
                 {defaults.length>0 && defaults}
                 <PublicImgSection publicationCategory={"Articles"}/>
                 <PublicationCategory publications={publications} categoryList={newCategories} publicationCategory={"Articles"} page={"/article-detail/"}/>

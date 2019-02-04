@@ -1,6 +1,7 @@
 import  React, {Component} from 'react';
 import RequestDemo from '../requestDemo';
 import WebinarsHeader from './publicationHeader/index';
+import DefaultComponent from "../defaultComponent/defaultComponent";
 import WebinarsCategory from './publicationCategory/index';
 import {API_PATH} from '../apiconfig';
 import axios from 'axios';
@@ -11,25 +12,33 @@ class webinars extends Component {
         publications:null,
         categoryList:null,
         allCategoryList:null,
-        page:null,
-        err:null
+        pages:null,
+        error:null
     };
     componentDidMount(){
-
         axios.get(API_PATH + 'pages')
             .then((res)=>{
+                let temp = [];
                 res.data.pages.forEach((val) => {
                     if (val.type === "webinars") {
-                        this.setState({page: val})
+                        temp.push(val);
                     }
                 });
-              })
-            .catch(err => console.log(err));
+                this.setState({pages: temp})
+            })
+            .catch(err =>{
+                console.log("error", err);
+                this.setState({error:"404 Not Found"})
+            });
+
         axios.get(API_PATH + 'tags')
             .then((res)=>{
                 this.setState({allCategoryList:res.data.tags});
             })
-            .catch(err => console.log(err));
+            .catch(err =>{
+                console.log("error",err);
+                this.setState({error:"404 Not Found"})
+            });
 
         axios.get(API_PATH + 'webinars')
             .then((res) => {
@@ -45,12 +54,15 @@ class webinars extends Component {
                 this.setState({publications: temp})
             })
             .catch(err => {
-                this.setState({err:err})
+                console.log("error", err);
+                this.setState({error:"404 Not Found"})
             })
     }
     render() {
-        let {publications,categoryList,allCategoryList,page} = this.state;
+        let {publications,categoryList,allCategoryList,pages, error} = this.state;
         let uniqueNames=[];
+        let one = [];
+        let defaults = [];
         if (categoryList){
             uniqueNames =  categoryList.filter(function(item, pos){
                 return categoryList.indexOf(item)=== pos;
@@ -66,9 +78,39 @@ class webinars extends Component {
                 })
             ));
         }
+        if(pages!== null && pages.length>0){
+            pages.forEach((item,index)=>{
+                if(item.templateOrder==='one'){
+                    one =[...one, <WebinarsHeader publicationCategory={"All Webinars"} key={index} headerImg={item && item.featuredImage && item.featuredImage.url} heading={"WEBINARS"}/>]
+                }
+                else {
+                    defaults =[...defaults,
+                        <DefaultComponent featuredImage={item.featuredImage}
+                                          headerImageLabel={item.headerImageLabel && item.headerImageLabel}
+                                          metaTitle={item.metaTitle && item.metaTitle}
+                                          leadText={item.leadText && item.leadText}
+                                          content={item.content && item.content}/>
+                    ]
+                }
+            })
+        }
         return (
             <div>
-               {page && <WebinarsHeader publicationCategory={"All Webinars"} headerImg={page && page.featuredImage && page.featuredImage.url} heading={"WEBINARS"}/>}
+                {
+                    (one.length>0 ? one: error ? (<div className="splash">
+                        <div className="lds-ellipsis">
+                            <h1><strong>{error}</strong></h1>
+                        </div>
+                    </div>) : (<div className="splash">
+                        <div className="lds-ellipsis">
+                            <div/>
+                            <div/>
+                            <div/>
+                            <div/>
+                        </div>
+                    </div>))
+                }
+                {defaults.length>0 && defaults}
                 <WebinarsCategory publications={publications} categoryList={newCategories} publicationCategory={"Webinar"} page={"/webinar/"}/>
                 <RequestDemo/>
             </div>
