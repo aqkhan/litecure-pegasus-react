@@ -3328,10 +3328,6 @@ a:active, a:hover{
     color: #fff;
     font-size: 10px;
 }
-/*.pride .article-area h1, .article-area p {*/
-/*padding-left: 66px;*/
-/*padding-right: 66px;*/
-/*}*/
 .pride .customer-support .hoverd-images {
     margin: 0 auto;
     display: -ms-inline-flexbox;
@@ -6965,3 +6961,69 @@ input[type=number]::-webkit-outer-spin-button {
     text-align: center;
     margin-top: 70px;
 }
+/* stories page start */
+.stories .stories-text{
+    padding-top: 50px;
+    padding-bottom: 31px;
+}
+.stories .stories-text span{
+    font-size: 27px;
+    color: #EFB817;
+    font-weight: 700;
+}
+.post-area .post-stories{
+    margin-bottom: 20px;
+}
+.post-stories:nth-child(odd) .reverse-content{
+    display: flex;
+    flex-direction: row;
+}
+.post-stories:nth-child(2n) .reverse-content{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.post-stories .img-dev{
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.post-stories .img-div{
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+}
+.post-stories .img-div img{
+    width: 100%;
+}
+.post-stories .text-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+}
+.text-div .heading-div h1{
+    font-size: 30px;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #5a6775;
+    margin-top: 10px;
+}
+.text-div .short-desc-div p, .text-div .short-desc-div p,.text-div .author-div p{
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    text-align: left;
+    color: #8d9599;
+}
+.text-div .author-div p span{
+    font-weight: 600;
+}
+/* stories page end */

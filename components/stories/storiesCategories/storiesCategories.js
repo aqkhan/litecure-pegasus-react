@@ -22,32 +22,53 @@ class StoriesCategory extends Component {
         configureAnchors({offset: -60, scrollDuration: 1000});
         goToAnchor('scroll')
     };
+    getId=(url)=> {
+        let regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+        let match = url.match(regExp);
 
+        if (match && match[2].length == 11) {
+            return match[2];
+        } else {
+            return 'error';
+        }
+    };
     render(){
         let {storiesCategory, final,totalPages} = this.state;
         let cards=null;
         if(final){
-            cards = final.map((value,index)=>(<div key={index} className="post-casestudy">
-                    <div className="img-dev">
+            cards = final.map((value,index)=>(<div key={index} className="post-stories">
+            <div className="row reverse-content">
+            <div className="col-sm-6">
+                    <div className="img-div">
                         <img src={value.featuredImage?value.featuredImage.url:"https://rs-cms.s3.amazonaws.com/pics/Yk_kkbCUx-_NPr_2.png"}/>
                     </div>
+                 </div>
+                 <div className="col-sm-6 text-div">
+                 <div className="heading-div"><h1>{value.title}</h1></div>
+                 <div className="short-desc-div" dangerouslySetInnerHTML={{__html: value.shortDescription}}/>
+                 <div className="long-desc-div"dangerouslySetInnerHTML={{__html: value.longDescription}}/>
+                 <div className="author-div"><p><span>Author :</span> {value.author}</p></div>
+                 </div>
+                 </div>   
                 </div>
             ))
         }
         return (
-            <section className="casestudy">
+            <section className="stories">
                 <ScrollableAnchor id={'scroll'}>
                     <div/>
                 </ScrollableAnchor>
                 <div className="container">
-                    <div className="casestudy-primary">
-                        <div>
-                            <div className="casestudy-text">
+                    <div className="row">
+                        <div className="col-sm-12">
+                            <div className="stories-text">
                                 <span>{storiesCategory}</span>
                             </div>
-
                         </div>
-                        <div>
+                        </div>
+                        <div className="row">
+                            <div className="col-sm-12">
+                            <div className="post-area">
                             {cards?cards: <div className="loading-publications"><ContentLoader
                                 height={160}
                                 width={550}
@@ -77,6 +98,7 @@ class StoriesCategory extends Component {
                                                containerClassName={"digit-icons main"}
                                                subContainerClassName={"container column"}
                                                activeClassName={"p-one"} />
+                            </div>
                             </div>
                         </div>
                     </div>
