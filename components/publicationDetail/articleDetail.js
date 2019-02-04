@@ -1,40 +1,84 @@
 /**
  * Created by FaZi on 12/10/2018.
  */
-import  React , { Component } from 'react';
+import React, {Component} from 'react';
 import RequestDemo from '../requestDemo';
 import PublicationHeader from '../publication/publicationHeader/index';
 import DetailContent from '../publicationDetail/detailcontent/index';
 import axios from "axios";
 import {API_PATH} from "../apiconfig";
-// import DetailCard from '../publicationDetail/detailCard';
+import DefaultComponent from "../publication/articles";
 
-class  ArticleDetail extends Component{
-    state={
-        slug:null,
-        page:null
+
+class ArticleDetail extends Component {
+    state = {
+        slug: null,
+        pages: null,
+        error: null
     };
+
     componentWillMount() {
         let {slug} = this.props;
-        this.setState({ slug:slug });
+        this.setState({slug: slug});
         axios.get(API_PATH + 'pages')
-            .then((res)=>{
+            .then((res) => {
+                let temp = [];
                 res.data.pages.forEach((val) => {
                     if (val.type === "publication") {
-                        this.setState({page: val})
+                        temp.push(val);
                     }
                 });
+                this.setState({pages: temp})
             })
-            .catch(err => console.log(err));
+            .catch(err => {
+                console.log("error", err);
+                this.setState({error: "404 Not Found"})
+            });
     };
+
     render() {
-        let {slug,page} = this.state;
-        return(<div>
-            {page && <PublicationHeader publicationCategory={"Article"} headerImg={page && page.featuredImage && page.featuredImage.url} heading={"PUBLICATIONS"}/>}
-            <DetailContent slug={slug}/>
+        let {slug, pages, error} = this.state;
+        let one = [];
+        let defaults = [];
+        if (pages !== null && pages.length > 0) {
+            pages.forEach((item, index) => {
+                if (item.templateOrder === 'one') {
+                    one = [...one, <PublicationHeader publicationCategory={"Article"}
+                                                      headerImg={item && item.featuredImage && item.featuredImage.url}
+                                                      heading={"PUBLICATIONS"}/>]
+                } else {
+                    defaults = [...defaults,
+                        <DefaultComponent featuredImage={item.featuredImage}
+                                          headerImageLabel={item.headerImageLabel && item.headerImageLabel}
+                                          metaTitle={item.metaTitle && item.metaTitle}
+                                          leadText={item.leadText && item.leadText}
+                                          content={item.content && item.content}/>
+                    ]
+                }
+            })
+        }
+
+        return (<div>
+            {
+                (one.length > 0 ? one : error ? (<div className="splash">
+                    <div className="lds-ellipsis">
+                        <h1><strong>{error}</strong></h1>
+                    </div>
+                </div>) : (<div className="splash">
+                    <div className="lds-ellipsis">
+                        <div/>
+                        <div/>
+                        <div/>
+                        <div/>
+                    </div>
+                </div>))
+            }
+            {defaults.length > 0 && defaults}
+            <DetailContent slug={slug && slug}/>
             {/*<DetailCard/>*/}
             <RequestDemo/>
         </div>)
     }
 }
+
 export default ArticleDetail;

@@ -6,7 +6,7 @@ class DetailContent extends Component {
     state = {
         publication:null,
         err:null
-    }
+    };
     componentWillMount() {
         let {slug}= this.props;
         axios.get(API_PATH +'publications/'+slug)
