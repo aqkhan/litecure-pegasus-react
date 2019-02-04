@@ -74,7 +74,7 @@ class clinicalVeterinarian extends Component {
                     </div>))
                 }
                 {defaults.length>0 && defaults}
-                <StoriesMiddleSection storiesCategory={"Clinical Veterinarian"}/>
+                <StoriesMiddleSection storiesCategory={"Horse Owner/Rider"}/>
                 {stories !==null && stories.length>0 && <StoriesCategory stories={stories} storiesCategory={"Clinical Veterinarian"}/>}
                 <RequestDemo/>
             </div>

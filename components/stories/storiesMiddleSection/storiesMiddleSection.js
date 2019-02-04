@@ -14,7 +14,7 @@ class StoriesMiddleSection extends Component {
             break;
             case "Athlete": this.setState({ clinicalVeterinarian:"", athlete:"active", horseRider:""})
                 break;
-            case "Horse Rider": this.setState({ clinicalVeterinarian:"", athlete:"", horseRider:"active"})
+            case "Horse Owner/Rider": this.setState({ clinicalVeterinarian:"", athlete:"", horseRider:"active"})
                 break;
         }
     }
@@ -36,7 +36,7 @@ class StoriesMiddleSection extends Component {
                             <ul>
                                 <li><span><Link href="/clinical-veterinarian"><a className={clinicalVeterinarian}>Clinical Viterinarian</a></Link></span></li>
                                 <li><span><Link  href="/athlete"><a className={athlete}>Athlete</a></Link></span></li>
-                                <li><span><Link  href="/horse-owner-rider"><a className={horseRider}>Horse Rider</a></Link></span></li>
+                                <li><span><Link  href="/horse-owner-rider"><a className={horseRider}>Horse Owner/Rider</a></Link></span></li>
                             </ul>
                         </div>
                     </div>
