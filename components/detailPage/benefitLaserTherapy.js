@@ -1,10 +1,10 @@
 import  React, {Component} from 'react';
 import {API_PATH} from '../apiconfig';
 import axios from 'axios';
-import Detailheader from './detailheader/index'
-import DetailContent from './contentdetail/index'
-import DefaultComponent from '../defaultComponent/defaultComponent'
-
+import Detailheader from './detailheader/index';
+import DetailContent from './contentdetail/index';
+import DefaultComponent from '../defaultComponent/defaultComponent';
+import RequestDemo from '../requestDemo';
 class BenefitLaserTherapy extends Component {
     state = {
         pages:null,
@@ -51,6 +51,7 @@ class BenefitLaserTherapy extends Component {
             <div>
                 {one && one}
                 {defaults && defaults}
+                <RequestDemo/>
             </div>
             : error ? (<div className="splash">
             <div className="lds-ellipsis">

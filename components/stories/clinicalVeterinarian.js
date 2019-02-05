@@ -28,7 +28,7 @@ class clinicalVeterinarian extends Component {
                 console.log("error", err);
                 this.setState({error:"404 Not Found"})
             });
-        axios.get(API_PATH + 'stories/category/clinicalVeterinarian')
+        axios.get(API_PATH + 'stories/category/veterinarian')
             .then((res) => {
                 this.setState({stories: res.data.stories})
             })
@@ -44,7 +44,7 @@ class clinicalVeterinarian extends Component {
         if(pages!== null && pages.length>0){
             pages.forEach((item,index)=>{
                 if(item.templateOrder==='one'){
-                    one =[...one, <StoriesHeader publicationCategory={"Clinical Veterinarian"} key={index} headerImg={item && item.featuredImage && item.featuredImage.url} heading={"Stories"}/>]
+                    one =[...one, <StoriesHeader publicationCategory={"Veterinarian"} key={index} headerImg={item && item.featuredImage && item.featuredImage.url} heading={"Stories"}/>]
                 }
                 else {
                     defaults =[...defaults,
@@ -74,8 +74,8 @@ class clinicalVeterinarian extends Component {
                     </div>))
                 }
                 {defaults.length>0 && defaults}
-                <StoriesMiddleSection storiesCategory={"Clinical Veterinarian"}/>
-                 {stories !==null && stories.length>0 && <StoriesCategory stories={stories} storiesCategory={"Clinical Veterinarian"}/>}
+                <StoriesMiddleSection storiesCategory={"Veterinarian"}/>
+                 {stories !==null && stories.length>0 && <StoriesCategory stories={stories} storiesCategory={"Veterinarian"}/>}
                 <RequestDemo/>
             </div>
         )

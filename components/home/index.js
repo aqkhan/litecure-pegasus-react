@@ -11,7 +11,7 @@ class Home extends Component {
         pages: null,
         products: null,
         stories: null,
-        err: null
+        error: null
     };
 
     componentDidMount() {
@@ -76,7 +76,7 @@ class Home extends Component {
                                             <div className="btn-txt">
                                                 <div>
                                                     <p>{value.leadText}</p>
-                                                    <a href="/detail/home-main">LEARN MORE</a>
+                                                    <a href="/benefit-laser-therapy">LEARN MORE</a>
                                                 </div>
                                             </div>
                                         </div>

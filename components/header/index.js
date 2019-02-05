@@ -645,9 +645,9 @@ class Header extends Component {
                                                      <div className="header-list-main-div-4" onMouseLeave={() => this.setState({storiesDropDown: false})}>
                                                      <div className="inside-list">
                                                      <ul className="header-main-ul">
-                                                        <li><span className={clinicalVeterinarian}><Link href="/clinical-veterinarian"><a>CLINICAL VETERINARIAN</a></Link></span></li>
-                                                        <li><span className={athlete}><Link href="/athlete"><a>ATHLETE</a></Link></span></li>
-                                                        <li><span className={horseRider}><Link href="/horse-owner-rider"><a>HORSE OWNER/RIDER</a></Link></span></li>
+                                                        <li><span className={clinicalVeterinarian}><Link href="/clinical-veterinarian"><a>VETERINARIAN</a></Link></span></li>
+                                                        <li><span className={athlete}><Link href="/athlete"><a>Equine Athlete</a></Link></span></li>
+                                                        <li><span className={horseRider}><Link href="/horse-owner-rider"><a>Horse Owner</a></Link></span></li>
                                                  </ul>
                                                  </div>
                                                  </div>
@@ -715,9 +715,9 @@ class Header extends Component {
 
                                                         <div className="inside-list">
                                                             <ul className="header-main-ul">
-                                                                <li><span className={clinicalVeterinarian}><Link href="/clinical-veterinarian"><a>CLINICAL VETERINARIAN</a></Link></span></li>
-                                                                <li><span className={athlete}><Link href="/athlete"><a>ATHLETE</a></Link></span></li>
-                                                                <li><span className={horseRider}><Link href="/horse-owner-rider"><a>HORSE OWNER/RIDER</a></Link></span></li>
+                                                                <li><span className={clinicalVeterinarian}><Link href="/clinical-veterinarian"><a>VETERINARIAN</a></Link></span></li>
+                                                                <li><span className={athlete}><Link href="/athlete"><a>Equine Athlete</a></Link></span></li>
+                                                                <li><span className={horseRider}><Link href="/horse-owner-rider"><a>Horse Owner</a></Link></span></li>
                                                                 </ul>
                                                         </div>
                                                     </div>

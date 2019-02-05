@@ -44,7 +44,7 @@ class clinicalVeterinarian extends Component {
         if(pages!== null && pages.length>0){
             pages.forEach((item,index)=>{
                 if(item.templateOrder==='one'){
-                    one =[...one, <StoriesHeader publicationCategory={"Athlete"} key={index} headerImg={item && item.featuredImage && item.featuredImage.url} heading={"Stories"}/>]
+                    one =[...one, <StoriesHeader publicationCategory={"Equine Athlete"} key={index} headerImg={item && item.featuredImage && item.featuredImage.url} heading={"Stories"}/>]
                 }
                 else {
                     defaults =[...defaults,
@@ -74,8 +74,8 @@ class clinicalVeterinarian extends Component {
                     </div>))
                 }
                 {defaults.length>0 && defaults}
-                <StoriesMiddleSection storiesCategory={"Athlete"}/>
-                {stories !==null && stories.length>0 && <StoriesCategory stories={stories} storiesCategory={"Athlete"}/>}
+                <StoriesMiddleSection storiesCategory={"Equine Athlete"}/>
+                {stories !==null && stories.length>0 && <StoriesCategory stories={stories} storiesCategory={"Equine Athlete"}/>}
                 <RequestDemo/>
             </div>
         )

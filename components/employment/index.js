@@ -4,12 +4,13 @@ import Employmentheader from './employmentHeader/employmentheader'
 import axios from 'axios';
 import {API_PATH} from '../apiconfig';
 import RequestDemo from '../requestDemo';
+import DefaultComponent from "../defaultComponent/defaultComponent";
 
 class employeesPage extends Component{
     state = {
-        employee: null,
-        err:null
-    }
+        pages: null,
+        error:null
+    };
     componentDidMount(){
         axios.get(API_PATH +'pages')
             .then((res)=>{
@@ -18,31 +19,55 @@ class employeesPage extends Component{
                     if (val.type==="employment"){
                         temp.push(val);
                     }
-
                 });
 
-                this.setState({employee:temp})
+                this.setState({pages:temp})
 
             })
             .catch(err=>{throw err});
     }
     render(){
 
-        let {employee} = this.state;
-
-            return employee?(<div>
-
-                <Employmentheader headerImageLabel = {employee[0].headerImageLabel} leadText = {employee[0].leadText} imgUrl = {employee[0].featuredImage&&employee[0].featuredImage.url}/>
-                <Employe content ={employee[0].content}/>
+        let {pages,error} = this.state;
+        let one = [];
+        let defaults =[];
+            if(pages && pages.length>0){
+                pages.forEach((item,index)=>{
+                    if (item.templateOrder==='one'){
+                        one = [
+                            ...one,<div>
+                                <Employmentheader headerImageLabel = {item.headerImageLabel} leadText = {item.leadText} imgUrl = {item.featuredImage&&item.featuredImage.url}/>
+                                <Employe content ={item.content}/>
+                            </div>
+                        ]
+                    }
+                    else {
+                        defaults = [...defaults,
+                            <DefaultComponent featuredImage={item.featuredImage}
+                                              headerImageLabel={item.headerImageLabel && item.headerImageLabel}
+                                              metaTitle={item.metaTitle && item.metaTitle}
+                                              leadText={item.leadText && item.leadText}
+                                              content={item.content && item.content}/>
+                        ]
+                    }
+                })
+            }
+            return (pages&& pages.length>0?(<div>
+                {one && one.length>0 && one}
+                {defaults && defaults.length> 0 && defaults}
                     <RequestDemo/>
-            </div>):(<div className="splash">
-        <div className="lds-ellipsis">
-            <div/>
-            <div/>
-            <div/>
-            <div/>
-            </div>
-            </div>)
+            </div>): error ? (<div className="splash">
+                <div className="lds-ellipsis">
+                    <h1><strong>{error}</strong></h1>
+                </div>
+            </div>) : (<div className="splash">
+                <div className="lds-ellipsis">
+                    <div/>
+                    <div/>
+                    <div/>
+                    <div/>
+                </div>
+            </div>))
     }
 }
 

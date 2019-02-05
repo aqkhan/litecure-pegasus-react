@@ -10,23 +10,37 @@ import {API_PATH} from '../apiconfig';
 class detailPage extends Component{
     state = {
         page: null,
-        err:null
-    }
+        error:null
+    };
     componentWillMount(){
         let {slug}= this.props;
         axios.get(API_PATH +'pages/'+slug)
             .then((res)=>{
                 this.setState({page:res.data.page});
             })
-            .catch(err=>{throw err});
+            .catch(err=>{
+                console.log("error", err);
+                this.setState({error:err});
+               });
     }
     render(){
-        let {page}= this.state;
-        return(page &&
+        let {page, error}= this.state;
+        return(page?
             <div>
             <Detailheader imgUrl={page.featuredImage && page.featuredImage.url} headerImageLabel={page.headerImageLabel} leadText={page.leadText}/>
             <DetailContent content={page.content}/>
-            </div>
+            </div>: error ? (<div className="splash">
+                <div className="lds-ellipsis">
+                    <h1><strong>{error}</strong></h1>
+                </div>
+            </div>) : (<div className="splash">
+                <div className="lds-ellipsis">
+                    <div/>
+                    <div/>
+                    <div/>
+                    <div/>
+                </div>
+            </div>)
             )
     }
 }
