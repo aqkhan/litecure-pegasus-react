@@ -56,7 +56,7 @@ class StoriesCategory extends Component {
                                                        src={`//www.youtube.com/embed/${videoId}`}
                                                        frameBorder="0" allowFullScreen/> : value.featuredImage ?
                                         <img src={value.featuredImage && value.featuredImage.url}/> :
-                                        <img src='https://rs-cms.s3.amazonaws.com/pics/Yk_kkbCUx-_NPr_2.png'/>}
+                                        <img src='/static/images/placeholder.png'/>}
                                 </div>
                             </div>
                             <div className="col-sm-6 text-div">

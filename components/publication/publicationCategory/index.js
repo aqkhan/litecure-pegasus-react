@@ -76,7 +76,7 @@ class PublicationCategoty extends Component {
         if(final){
             cards = final.map((value,index)=>(<div key={index} className="post-casestudy">
                     <div className="img-dev">
-                        <Link href={page+value.slug}><a><img src={value.featuredImage?value.featuredImage.url:"https://rs-cms.s3.amazonaws.com/pics/Yk_kkbCUx-_NPr_2.png"}/></a></Link>
+                        <Link href={page+value.slug}><a><img src={value.featuredImage?value.featuredImage.url:'/static/images/placeholder.png'}/></a></Link>
                     </div>
                     <div>
                         <Link href={page+value.slug}><a>{value.title}</a></Link>

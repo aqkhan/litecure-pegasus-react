@@ -164,8 +164,8 @@ class ProductDetail extends Component {
         if (stories) {
             allStoriesCards = stories.map((item, index) => {
                 let date = new Date(item.publishedDate);
-                return <div className="col-md-3 p-0" key={index} data-toggle="modal" data-target={"#myModal3" + index}
-                            style={{
+                return <div className="col-md-3 p-0 stories-image-background" key={index} data-toggle="modal" data-target={"#myModal3" + index}
+                            style={item.featuredImage &&{
                                 background: `url(${item.featuredImage && item.featuredImage.url})`,
                                 backgroundRepeat: "no-repeat",
                                 backgroundPosition: "center",
