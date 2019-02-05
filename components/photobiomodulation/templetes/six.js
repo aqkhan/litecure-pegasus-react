@@ -20,8 +20,8 @@ class TempleteSix extends Component {
                         claims about specific pulsing protocols and application-specific wavelengths. These claims
                         can be misleading and can create confusion. In reality these product-specific bells and
                         whistles are more marketing hype than science. A review  <a href="http://www.litecure.com/references/"> by Hashmi et al.</a> that looked at CW versus pulsed light concluded that more evidence is needed.16 In general, the use of pulsing decreases light delivered to the surface and hence to the target.</p>
-                    <p>Companion lasers do have the option to be operated in a pulsed mode. In the pulsing mode for
-                        Companion lasers, the laser is gated: it cycles its CW power on an off and consequently delivers
+                    <p> Pegasus lasers do have the option to be operated in a pulsed mode. In the pulsing mode for
+                        Pegasus lasers, the laser is gated: it cycles its CW power on an off and consequently delivers
                         a lower average output power. If you are treating a small region and would like to treat for a
                         longer time at a lower power, then switching to a pulsed mode will <a href="http://www.litecure.com/about-photobiomodulation/importance-of-power/"> decrease the effective power </a> and <a href="http://www.litecure.com/about-photobiomodulation/understanding-dosing/">dose delivered to the target</a> by 50%.</p>
                 </div>

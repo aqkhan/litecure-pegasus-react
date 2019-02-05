@@ -51,7 +51,7 @@ class TempleteSeven extends Component {
                         </div>
                     </div>
                     <div className="seven-p-t">
-                    <p>Definition: Area of the skin surface that is treated. For Companion lasers, this area is larger
+                    <p>Definition: Area of the skin surface that is treated. For Pegasus lasers, this area is larger
                         than the beam area.</p>
                     <h1>Treatment Time:</h1>
                     </div>
@@ -87,7 +87,7 @@ class TempleteSeven extends Component {
                     </div>
                     <div className="seven-p-t">
                     <p>Definition: Time that surface is exposed to the beam.</p>
-                    <p>For scanning treatment with a LiteCure laser, the total treatment area is covered. Assuming a
+                    <p>For scanning treatment with a Pegasus laser, the total treatment area is covered. Assuming a
                         uniform treatment to the skin, then the total exposure time of the skin to the beam during the
                         treatment is related to the total treatment time by the ratio of the beam area to the treatment
                         area. Hence, ts = t x (As/At).</p>
@@ -147,7 +147,7 @@ class TempleteSeven extends Component {
                     </div>
                     <div className="seven-p-t">
                     <p>Definition: This term is used for pulsed lasers. It is the percentage of one period in which the
-                        laser is emitting. For LiteCure lasers operating in pulsed mode, the duty cycle 50%.</p>
+                        laser is emitting. For Pegasus lasers operating in pulsed mode, the duty cycle 50%.</p>
                     <h1>ENERGY DELIVERED:</h1>
                     </div>
                     <div className="banner_main">
@@ -227,7 +227,7 @@ class TempleteSeven extends Component {
                     </div>
                     <div className="seven-p-t">
                     <p>This is the total energy delivered divided by the total treatment area.</p>
-                    <p>For LiteCure Lasers, the dose will be the total energy delivered to an area divided by the total
+                    <p>For Pegasus Lasers, the dose will be the total energy delivered to an area divided by the total
                         area (skin surface area) to which it was delivered. This assumes that scanning covers the
                         treatment area evenly to distribute an even dose to the tissue. By scanning the entire area
                         evenly any inhomogeneities in the beam are averaged over the whole treatment area.</p>
