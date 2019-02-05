@@ -168,7 +168,7 @@ a:active, a:hover {
     justify-content: space-between;
     padding-top: 85px;
     padding-bottom: 85px;
-
+    flex-direction: row-reverse;
 }
 
 .images-flex .col-md-4 {
