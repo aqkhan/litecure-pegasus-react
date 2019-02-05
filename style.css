@@ -1824,7 +1824,10 @@ a:active, a:hover {
 .stories-cards-section .third-section {
     background-color: #191d24;
 }
-
+.stories-cards-section .card-custom-flex{
+    flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
+}
 .stories-cards-section .third-section .stories-image-background {
     background: url(/static/images/placeholder.png);
     background-repeat: no-repeat;
