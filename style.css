@@ -8242,6 +8242,116 @@ input[type=number]::-webkit-outer-spin-button {
 .search-engine:focus {
     width: 100%;
     border: 1px solid #EFB817;
-    
 }
 /* search-bar css ends*/
+/* search page css start */
+/* Layout for search container */
+.search {
+	position: relative;
+	text-align: center;
+}
+.search__inner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #f0f0f0;
+}
+.overall{
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    box-shadow: 0 0px 8px rgba(0,0,0,0.19), 0px 2px 6px rgba(0,0,0,0.23);
+    border-radius: 5px;
+    background: #fff;
+}
+.overall .make-it-slow:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.make-weblined{
+	text-align: center;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 0px;
+    margin-bottom: 77px;
+    margin-top: -45px;
+}
+    
+.make-weblined .col-2{
+     padding: 0px;
+    margin: 0px 20px;
+    margin-top: 40px;
+}
+
+.make-weblined .col-2:first-child{
+padding: 0px;
+    margin: 0px 21px;
+    margin-top: 40px;	
+  
+}
+.custom-container .extra{
+    padding: 0px;
+}
+.overall:hover
+{
+	cursor: pointer;
+    box-shadow: 0 0px 18px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.image{
+	height: 100px;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.custom-container{
+	width: 1349px;
+	margin:0 auto;
+}
+.make-webline{
+	justify-content: center;
+	margin-top: -45px;
+}
+.overall img{
+margin-top: 14px;
+max-height: 100px;
+margin: 0px;
+}
+.overall p{
+margin-bottom: 0px;
+}
+
+.make-webline .col-2{
+padding: 0px;
+   margin: 0px 20px;
+   margin-top: 40px;
+}
+.search__inner--up {
+	color: #dce6e6;
+	background: #333;
+}
+
+.search__inner_1--down {
+	top: 16%;
+    color: #333;
+    background: #eae9e9;
+    overflow-x: hidden;
+}
+ .search__inner_1--down .header .headerh2{
+    text-align: left;
+    margin: 29px 1px 0px 15px;
+    max-width: 100px;
+    font-size: 2rem;
+    letter-spacing: 0px;
+}
+.header  hr{
+ margin: 16px 18px 40px 15px;
+    height: 0px;
+}
+.search__inner_1--down{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+/* search page css end */
