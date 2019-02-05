@@ -290,8 +290,8 @@ class TempleteSeven extends Component {
                     <h2><strong>Term: </strong> near-infrared (NIR) window</h2>
                     <h2><strong>Abbreviation or Other Terminology Used: </strong>therapeutic or optical window</h2>
                     <h2><strong>Definition: </strong>The range of wavelengths from 650 nm to 1350 nm where light has its
-                        maximum depth of penetration in biological tissue (see figure below). Visit the <a href="http://www.litecure.com/about-photobiomodulation/wavelength-selection/">Wavelength Selection</a>
-                        page for details about water absorption and to see the various absorption coefficients as a function of wavelength on a <a href="http://www.litecure.com/about-photobiomodulation/wavelength-selection/">linear scale.</a> </h2>
+                        maximum depth of penetration in biological tissue (see figure below). Visit the <a href="#">Wavelength Selection</a>
+                        page for details about water absorption and to see the various absorption coefficients as a function of wavelength on a <a href="#">linear scale.</a> </h2>
                     </div>
                     <div className="banner_main">
                         <div className="container custom_div">
@@ -334,9 +334,7 @@ class TempleteSeven extends Component {
                         laser (light) therapy. Ann Biomed Eng. 2012; 40(2): 516-533.</li>
                     <li>Wu S, Xing D. Intracellular signaling cascades following light irradiation. Laser Photonics
                         Rev. 2014; 8(1): 115–130.</li>
-                        <li>FDA website <a href="http://www.fda.gov/RadiationEmittingProducts/Radiation
-                        EmittingProductsandProcedures/HomeBusinessandEntertainment/LaserProductsandIns
-                        truments/ucm451697.htm">
+                        <li>FDA website <a href="#">
                             http://www.fda.gov/RadiationEmittingProducts/Radiation
                             EmittingProductsandProcedures/HomeBusinessandEntertainment/LaserProductsandIns
                             truments/ucm451697.htm

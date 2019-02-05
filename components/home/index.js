@@ -57,33 +57,44 @@ class Home extends Component {
         if (pages !== null && pages.length > 0) {
             pages.forEach((value, index) => {
                     if (value.templateOrder === 'one') {
-                        one = [...one, <section className="new-home-cards home-wrapper" key={index}>
-                            <section className="section-one" style={value.featuredImage && value.featuredImage.url && {
-                                background: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)),url(${value.featuredImage && value.featuredImage.url})`,
-                                backgroundRepeat: "no-repeat",
-                                backgroundSize: "cover",
-                                backgroundPosition: "center",
-                            }}>
-                                <div className="third-row">
-                                    <div className="container custom-container">
-                                        <div className="flex-container">
-                                            <div className="text-container">
-                                                <p>{value.headerImageLabel}</p>
+                        one = [...one,
+                            <section className="new-home-cards" key={index}>
+                             <section className="section-one" style={value.featuredImage&&{
+                            background: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)),url(${value.featuredImage && value.featuredImage.url})`,
+                            backgroundRepeat: "no-repeat",
+                            backgroundSize: "cover",
+                            backgroundPosition:"center"
+                        }}>
+                            <div className="third-row">
+                                <div className="container custom-container">
+                                    <div className="row flex">
+                                        <div className="header-text custom-header-text">
+                                            <p><br/><span>{value.headerImageLabel}</span></p>
                                             </div>
-                                            <div>
-                                                <div className="vertical-container"/>
-                                            </div>
-                                            <div className="btn-txt">
-                                                <div>
-                                                    <p>{value.leadText}</p>
-                                                    <a href="/benefit-laser-therapy">LEARN MORE</a>
-                                                </div>
-                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="small-upper-line flex">
+                                <div className="line"></div>
+                            </div>
+                            <div className="fourth-row">
+                                <div className="custom-container container">
+                                    <div className="row flex">
+                                        <div className="flex-column learnmore-header learn-home">
+                                            <div className='detail-content'>
+                                                <div className="home-start-content"
+                                                     dangerouslySetInnerHTML={{__html: value.leadText}}/>
+                                                     </div>
+                                            <Link><a href="/benefit-laser-therapy">
+                                                LEARN MORE
+                                            </a></Link>
                                         </div>
                                     </div>
                                 </div>
-                            </section>
-                        </section>]
+                                </div>
+                                </section>
+                                </section>
+                        ]
                     } else {
                         defaults =[...defaults,
                             <DefaultComponent featuredImage={value.featuredImage}
