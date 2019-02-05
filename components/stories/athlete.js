@@ -28,7 +28,7 @@ class clinicalVeterinarian extends Component {
                 console.log("error", err);
                 this.setState({error:"404 Not Found"})
             });
-        axios.get(API_PATH + 'stories/category/athlete ')
+        axios.get(API_PATH + 'stories/category/5c59f3f843a88f39f9abdcb1')
             .then((res) => {
                 this.setState({stories: res.data.stories})
             })
