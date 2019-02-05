@@ -575,7 +575,7 @@ class Header extends Component {
 
                                                                 <ul className="header-main-ul">
                                                                     <li><span className={allProducts}><Link href="/products"><a>ALL PRODUCTS</a></Link></span></li>
-                                                                    <li><span className={empowerDsDeliverySystem} onMouseEnter={()=>this.setState({empowerDsDeliverySystemDropDown:true, ptcDropDown:false})}><Link href={"/product/empower-ds-delivery-system"}><a>EMPOWER DS DELIVERY SYSTEM</a></Link></span></li>
+                                                                    <li><span className={empowerDsDeliverySystem} onMouseEnter={()=>this.setState({empowerDsDeliverySystemDropDown:true, ptcDropDown:false})}><Link href={"/product/empower-delivery-system"}><a>EMPOWER DELIVERY SYSTEM</a></Link></span></li>
                                                                     <li><span className={ptc} onMouseEnter={()=>this.setState({ptcDropDown:true, empowerDsDeliverySystemDropDown:false})}><Link href={"/product/ptc"}><a>PEGASUS THERAPY COMPACT</a></Link></span></li>
                                                                 </ul>
                                                             </div>
@@ -673,7 +673,7 @@ class Header extends Component {
                                                                 <div className="inside-list ">
                                                                     <ul className="header-main-ul ">
                                                                         <li><span className={allProducts}><Link href="/products"><a>ALL PRODUCTS</a></Link></span></li>
-                                                                        <li><span className={empowerDsDeliverySystem} onMouseEnter={()=>this.setState({empowerDsDeliverySystemDropDown:true, ptcDropDown:false})}><Link href={"/product/empower-ds-delivery-system"}><a>EMPOWER DS DELIVERY SYSTEM</a></Link></span></li>
+                                                                        <li><span className={empowerDsDeliverySystem} onMouseEnter={()=>this.setState({empowerDsDeliverySystemDropDown:true, ptcDropDown:false})}><Link href={"/product/empower-delivery-system"}><a>EMPOWER DELIVERY SYSTEM</a></Link></span></li>
                                                                         <li><span className={ptc} onMouseEnter={()=>this.setState({ptcDropDown:true, empowerDsDeliverySystemDropDown:false})}><Link href={"/product/ptc"}><a>PEGASUS THERAPY COMPACT</a></Link></span></li>
                                                                     </ul>
                                                                 </div>
