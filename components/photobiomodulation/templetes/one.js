@@ -10,10 +10,10 @@ class TempleteOne extends Component{
                     <p>
                         Photobiomodulation therapy is defined as a form of light therapy that utilizes non-ionizing light sources,
                         including lasers, light emitting diodes, and/or broadband light, in the visible (400 – 700 nm) and near-infrared
-                        (700 – 1100 nm)<a href="http://www.litecure.com/about-photobiomodulation/photobiomodulation-glossary/"> electromagnetic spectrum</a>. It is a nonthermal process involving endogenous chromophores eliciting
+                        (700 – 1100 nm)<a href="#"> electromagnetic spectrum</a>. It is a nonthermal process involving endogenous chromophores eliciting
                         photophysical (i.e., linear and nonlinear) and photochemical events at various biological scales. This process
                         results in beneficial therapeutic outcomes including but not limited to the alleviation of pain or inflammation,
-                        immunomodulation, and promotion of wound healing and tissue regeneration.<a href="http://www.litecure.com/blog/2016/10/14/photobiomodulation-therapy-is-making-a-name-for-itself/"> The term photobiomodulation
+                        immunomodulation, and promotion of wound healing and tissue regeneration.<a href="#"> The term photobiomodulation
                         (PBM) therapy is now being used</a> by researchers and practitioners instead of terms such as low level laser therapy (LLLT),
                         cold laser, or laser therapy.</p>
                     <p>

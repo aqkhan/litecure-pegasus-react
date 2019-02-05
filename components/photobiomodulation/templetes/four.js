@@ -13,13 +13,13 @@ class TempleteFour extends Component {
                     <p>
                         Power seems simple but simply stating the output power does not relate the whole story when discussing
                         therapy laser treatment. Not only is power important, but also the size of the area that is being treated.
-                        Typical <a href="http://www.litecure.com/about-photobiomodulation/photobiomodulation-glossary/">power units for
+                        Typical <a href="#">power units for
                         a laser are watts (abbreviated as W)</a>. Power is a measure of the number of photons
                         emitted from the laser each second. Early therapeutic lasers had very low powers (less than 0.5 W)
-                        and very small <a href="http://www.litecure.com/about-photobiomodulation/photobiomodulation-glossary/">beam areas (or spot sizes)</a>; consequently, early studies were often disappointing because the
-                        low powers were not able to provide sufficient number of photons <a href="http://www.litecure.com/about-photobiomodulation/reaching-target-tissue/">to reach deeper affected tissue</a> .</p>
+                        and very small <a href="#">beam areas (or spot sizes)</a>; consequently, early studies were often disappointing because the
+                        low powers were not able to provide sufficient number of photons <a href="#">to reach deeper affected tissue</a> .</p>
                     <p>
-                        <a href="https://www.fda.gov/radiation-emittingproducts/radiationemittingproductsandprocedures/homebusinessandentertainment/laserproductsandinstruments/default.htm">
+                        <a href="#">
                             The Food and Drug Administration (FDA) classifies laser according their output power and recognizes
                             four major classes (I to IV) of lasers</a>, including three subclasses (IIa, IIIa, and IIIb).  In December 2003,
                         the FDA approved the first class IV laser for the relief of minor muscle and joint pain.  In October 2006, LiteCure,
@@ -34,19 +34,19 @@ class TempleteFour extends Component {
                     </p>
                     <p>
                         It is important to note that the Pegasus therapy lasers not only have higher power but also have a larger beam area,
-                        making them better capable of <a href="http://www.litecure.com/about-photobiomodulation/understanding-dosing/">delivering therapeutic dose</a> to larger treatment areas.
+                        making them better capable of <a href="#">delivering therapeutic dose</a> to larger treatment areas.
                     </p>
                     <h1>Why are Higher Powers Needed?</h1>
                     <p>
                         Simply stated the greater the number of photons delivered to the surface, the greater
                         the number of photons at any tissue depth. There is a threshold, a minimum number of photons
                         that are needed to “turn on” the therapeutic effects of laser light. Hundreds of scientific studies
-                        have been done <a href="http://www.litecure.com/blog/studies/peripheralnerves/">
+                        have been done <a href="#">
                         in vitro and have characterized the dosages needed to achieve a cellular response with light.
                     </a>
                         These studies provide a baseline for the amount of laser energy needed to achieve results at the cellular level.
-                        PBM therapy is non-invasive; the light is applied to the surface of the skin. <a href="http://www.litecure.com/about-photobiomodulation/maximize-clinical-results/"> Some of that light is reflected by the skin </a> or absorbed by other chromophores that are not associated with the injured cells and therefore do not
-                        contribute to PBM. <a href="http://www.litecure.com/about-photobiomodulation/understanding-dosing/">
+                        PBM therapy is non-invasive; the light is applied to the surface of the skin. <a href="#"> Some of that light is reflected by the skin </a> or absorbed by other chromophores that are not associated with the injured cells and therefore do not
+                        contribute to PBM. <a href="#">
                         Sufficient dose needs to be applied </a> to the skin so that despite these losses sufficient dose reaches the skin and PBM occurs at the target tissue.
                     </p>
                     <div className="banner_main">
