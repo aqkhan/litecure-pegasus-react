@@ -19,7 +19,7 @@ class TempleteSeven extends Component {
                                     </button>
                                 </div>
                                 <div className="text_container"><p>Terminology Commonly Used: &nbsp;Spot
-                                    Size<br/>Symbol: &nbsp;As<br/>Units: &nbsp;cm2<br/></p></div>
+                                    Size<br/>Symbol: &nbsp;As<br/>Units: &nbsp;cm&#xb2;<br/></p></div>
                             </div>
                         </div>
                     </div>
@@ -46,7 +46,7 @@ class TempleteSeven extends Component {
                                             className="	fa fa-plus lite_gray" data-toggle="modal" data-target="#myModal1"> </i></p></div>
                                     </button>
                                 </div>
-                                <div className="text_container"><p>Symbol: &nbsp;At<br/>Units: &nbsp;cm2<br/></p></div>
+                                <div className="text_container"><p>Symbol: &nbsp;At<br/>Units: &nbsp;cm&#xb2;<br/></p></div>
                             </div>
                         </div>
                     </div>
@@ -178,7 +178,7 @@ class TempleteSeven extends Component {
                                     </button>
                                 </div>
                                 <div className="text_container"><p>Terminology Commonly Used:&nbsp; Power density
-                                    Symbol:&nbsp;&nbsp;E Units:&nbsp; W/cm2</p></div>
+                                    Symbol:&nbsp;&nbsp;E Units:&nbsp; W/cm&#xb2;</p></div>
                             </div>
                         </div>
                     </div>
@@ -196,14 +196,14 @@ class TempleteSeven extends Component {
                                             className="	fa fa-plus lite_gray" data-toggle="modal" data-target="#myModal9"> </i></p></div>
                                     </button>
                                 </div>
-                                <div className="text_container"><p>Units:&nbsp; J/cm2</p></div>
+                                <div className="text_container"><p>Units:&nbsp; J/cm&#xb2;</p></div>
                             </div>
                         </div>
                     </div>
                     <div className="seven-p-t">
                     <p>Standard Dosimetry Definition:</p>
                     <p>Dose = Irradiance x exposure time = E x ts</p>
-                    <p>Units: joules/cm2 = J/cm2</p>
+                    <p>Units: joules/cm&#xb2; = J/cm&#xb2;</p>
                     <p>For calculation of dose delivered during scanning:</p>
                     <p>First, let us assume that the treatment beam is uniform.</p>
                     <p>In this case, the irradiance would then be the power divided by the beam area, E=F/As.</p>
@@ -290,10 +290,8 @@ class TempleteSeven extends Component {
                     <h2><strong>Term: </strong> near-infrared (NIR) window</h2>
                     <h2><strong>Abbreviation or Other Terminology Used: </strong>therapeutic or optical window</h2>
                     <h2><strong>Definition: </strong>The range of wavelengths from 650 nm to 1350 nm where light has its
-                        maximum depth of penetration in biological tissue (see figure below). Visit the
-                        <a href="http://www.litecure.com/about-photobiomodulation/wavelength-selection/">Wavelength Selection</a>
-                        page for details about water absorption and to see the various absorption coefficients
-                        as a function of wavelength on a <a href="http://www.litecure.com/about-photobiomodulation/wavelength-selection/">linear scale.</a> </h2>
+                        maximum depth of penetration in biological tissue (see figure below). Visit the <a href="http://www.litecure.com/about-photobiomodulation/wavelength-selection/">Wavelength Selection</a>
+                        page for details about water absorption and to see the various absorption coefficients as a function of wavelength on a <a href="http://www.litecure.com/about-photobiomodulation/wavelength-selection/">linear scale.</a> </h2>
                     </div>
                     <div className="banner_main">
                         <div className="container custom_div">

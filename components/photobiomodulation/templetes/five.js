@@ -16,13 +16,10 @@ class TempleteFive extends Component {
                     <p>
                         However, we do know from cadaver, animal studies, and modeling that the absorption of the laser
                         in the skin and fat layers on its way to the target tissue can significantly reduce the dose
-                        that gets to the target tissue. The most prevalent method of indicating
-                        <a href="http://www.litecure.com/about-photobiomodulation/photobiomodulation-glossary/">
-                        laser therapy dosage
-                        </a> is
-                        to measure the density of energy applied to the tissue surface. This is typically expressed in
-                        J/cm2. Some variation in clinical effects can be observed; particularly at very high (>50W) or
-                        very low (&lt;1 W) power settings using the same J/cm2 dose. The measurement technique works well for
+                        that gets to the target tissue. The most prevalent method of indicating <a href="http://www.litecure.com/about-photobiomodulation/photobiomodulation-glossary/">
+                         laser therapy dosage</a> is to measure the density of energy applied to the tissue surface. This is typically expressed in
+                        J/cm&#xb2;. Some variation in clinical effects can be observed; particularly at very high (>50W) or
+                        very low (&lt;1 W) power settings using the same J/cm&#xb2; dose. The measurement technique works well for
                         typical treatment protocols, but is not absolutely ideal. Companion Animal Health provides a
                         treatment guide with each device with recommended dosing for different clinical
                         conditions.</p>

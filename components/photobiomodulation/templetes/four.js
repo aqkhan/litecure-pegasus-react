@@ -45,14 +45,9 @@ class TempleteFour extends Component {
                         in vitro and have characterized the dosages needed to achieve a cellular response with light.
                     </a>
                         These studies provide a baseline for the amount of laser energy needed to achieve results at the cellular level.
-                        PBM therapy is non-invasive; the light is applied to the surface of the skin.
-                        <a href="http://www.litecure.com/about-photobiomodulation/maximize-clinical-results/">
-                        Some of that light is reflected by
-                        the skin
-                    </a> or absorbed by other chromophores that are not associated with the injured cells and therefore do not
+                        PBM therapy is non-invasive; the light is applied to the surface of the skin. <a href="http://www.litecure.com/about-photobiomodulation/maximize-clinical-results/"> Some of that light is reflected by the skin </a> or absorbed by other chromophores that are not associated with the injured cells and therefore do not
                         contribute to PBM. <a href="http://www.litecure.com/about-photobiomodulation/understanding-dosing/">
-                        Sufficient dose needs to be applied </a> to the skin so
-                        that despite these losses sufficient dose reaches the skin and PBM occurs at the target tissue.
+                        Sufficient dose needs to be applied </a> to the skin so that despite these losses sufficient dose reaches the skin and PBM occurs at the target tissue.
                     </p>
                     <div className="banner_main">
                         <div className="container custom_div">
