@@ -127,7 +127,9 @@ class ProductDetail extends Component {
                     <div key={value._id}>
                         <div className="col-sm-4">
                             <div className="image-margin">
-                                <img src={value.featuredImage && value.featuredImage.url} height="320" width="320"/>
+                                <div className="image-div">
+                                    <img src={value.featuredImage && value.featuredImage.url}/>
+                                </div>
                                 <div className="view-text">
                                     <h1>{value.title}</h1>
                                     <p><Link href={"/product/" + value.slug}><a>VIEW PRODUCT</a></Link></p>
@@ -171,7 +173,7 @@ class ProductDetail extends Component {
                                 backgroundPosition: "center",
                                 backgroundSize: "100%",
                                 minHeight: "312px",
-                                cursor: "pointer"
+                                cursor: "pointer",
                             }}>
                     <div className="image-container">
                         <div className="image-overlay"/>
