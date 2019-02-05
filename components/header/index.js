@@ -1,6 +1,6 @@
-import React, {Component} from "react";
-import Link from 'next/link';
 import Head from "next/head";
+import Link from 'next/link';
+import React, { Component } from "react";
 class Header extends Component {
 
     state = {
@@ -541,8 +541,11 @@ class Header extends Component {
                                     <div className="col-sm-7 col-7 flex-end-row  ">
                                         <Link href="/"><a><img src="/static/images/logos1.png"/></a></Link>
                                     </div>
-                                    <div className="col-sm-5 col-5 flex-end-row ">
+                                    <div className="col-sm-5 col-5">
+                                    <div className="flex-end-row ">
+                                    <input type="text" name="search" class="search-engine"/>
                                         <img src="/static/images/magnifier.png" width="18px" height="18px"/>
+                                    </div>
                                     </div>
                                 </div>
                             </div>
