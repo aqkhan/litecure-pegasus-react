@@ -1677,17 +1677,18 @@ a:active, a:hover {
     background: transparent;
     padding: 10px 10px;
 }
-
 .product-det .first-section .yellow-section .image-margin {
     margin-top: 120px;
 }
-
+.image-margin .image-div{
+    width: 100%;
+    height: 340px;
+}
 .product-det .first-section .yellow-section .image-margin img {
     width: 100%;
     mix-blend-mode: multiply;
-    height: 100%;
+    /* height: 100%; */
 }
-
 .product-det .first-section .yellow-section .image-margin h1 {
     font-family: UniSansCAPS;
     font-size: 36px;
@@ -1831,6 +1832,7 @@ a:active, a:hover {
     background-size: 100%;
     min-height: 312px;
     cursor: pointer;
+    border:1px solid #efb817;
 }
 
 
