@@ -186,10 +186,10 @@ a:active, a:hover {
 }
 .new-header .HEADERS .col-5 img {
     transform: scaleX(-1);
-    position: absolute;
+    /* position: absolute;
     top: 16px;
     right: 10px;
-    z-index: -1;
+    z-index: -1; */
 }
 .new-header .first-row {
     background-color: #191d24;
