@@ -131,11 +131,14 @@ class ProductDetail extends Component {
                 return value.slug !== slug && (
                         <div className="col-sm-4" key={value._id}>
                             <div className="image-margin">
-                                <div className="image-div">
-                                    {value.featuredImage?<img src={value.featuredImage && value.featuredImage.url}/>
-                                    :<img src='/static/images/placeholder.png'/>}
-
-                                </div>
+                            <div className="image-div product-placeholder"  style={value.featuredImage && {
+                            backgroundImage: `url(${value.featuredImage && value.featuredImage.url})`,
+                            backgroundRepeat: "no-repeat",
+                            backgroundPosition: "center",
+                            backgroundSize: "contain",
+                        }}>
+                                    {/* <img src={value.featuredImage && value.featuredImage.url}/> */}
+                                    </div>                                 
                                 <div className="view-text">
                                     <h1>{value.title}</h1>
                                     <p><Link href={"/product/" + value.slug}><a>VIEW PRODUCT</a></Link></p>
