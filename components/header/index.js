@@ -694,7 +694,7 @@ class Header extends Component {
                                     </div>
                                     <div className="col-sm-5 col-5">
                                         <div className="flex-end-row ">
-                                            <input type="text" name="search" class="search-engine"/>
+                                            {/* <input type="text" name="search" class="search-engine"/> */}
                                             <img src="/static/images/magnifier.png" width="18px" height="18px"/>
                                         </div>
                                     </div>
