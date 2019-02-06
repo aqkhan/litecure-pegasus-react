@@ -586,10 +586,10 @@ class Header extends Component {
                                                 <ul className="header-main-ul">
                                                     {navigationChilds && navigationChilds.length>0 &&
                                                     navigationChilds.map((items,indexx)=>{
-                                                        if(items.headerImage && items.leadText){
+                                                        if(items.headerImage || items.leadText){
                                                             return(
                                                                 <li key={indexx}><span
-                                                                                       onMouseEnter={() => this.changeImageAndText(items.headerImage && items.headerImage.url, items.leadText)}>{items.linked?<Link
+                                                                                       onMouseEnter={() => this.changeImageAndText(items.headerImage && items.headerImage.url, items.leadText ? items.leadText:"")}>{items.linked?<Link
                                                                     href={items.linkTo}><a>{items.navigationName}</a></Link>:<a>{items.navigationName}</a>}</span>
                                                                 </li>
                                                             )
@@ -634,16 +634,16 @@ class Header extends Component {
                                             <ul className="header-main-ul ">
                                                 {navigationChilds && navigationChilds.length>0 &&
                                                     navigationChilds.map((items,indexx)=>{
-                                                        if(items.headerImage && items.leadText){
+                                                        if(items.headerImage || items.leadText){
                                                             return(
                                                                 <li key={indexx}><span
-                                                                    onMouseEnter={() => this.changeImageAndText(items.headerImage && items.headerImage.url, items.leadText)}>{items.linked?<Link
+                                                                    onMouseEnter={() => this.changeImageAndText(items.headerImage && items.headerImage.url, items.leadText ? items.leadText:"")}>{items.linked?<Link
                                                                     href={items.linkTo}><a>{items.navigationName}</a></Link>:<a>{items.navigationName}</a>}</span>
                                                                 </li>
                                                             )
                                                         }
                                                         else {
-                                                            return <li key={indexx}><span >{items.linked?<Link
+                                                            return <li key={indexx}><span onClick={()=>this.toggleHandlerr()}>{items.linked?<Link
                                                                 href={items.linkTo}><a>{items.navigationName}</a></Link>:<a>{items.navigationName}</a>}</span>
                                                             </li>
                                                         }
