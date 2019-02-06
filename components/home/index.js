@@ -108,7 +108,9 @@ class Home extends Component {
             )
         }
         if (products) {
-            renderProducts = this.state.products.map((value, index) => <Carousel.Item key={index}>
+            let duplicate = [...this.state.products];
+            let reverse = duplicate.reverse();
+            renderProducts = reverse && reverse.map((value, index) => <Carousel.Item key={index}>
                 <section className="new-home-cards">
                     <section className="section-one publication-header" style={{
                         background: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)),url(${value.featuredImage && value.featuredImage.url})`,
@@ -147,7 +149,9 @@ class Home extends Component {
             </Carousel.Item>)
         }
         if (stories) {
-            renderStories = this.state.stories.map((value, index) =>
+            let dummy = [...stories];
+            let reverse = dummy.reverse();
+            renderStories = reverse.map((value, index) =>
                 <Carousel.Item key={index}>
                     <div className="section-three-overlay1"/>
                     <div className="home-slider-div" style={{
