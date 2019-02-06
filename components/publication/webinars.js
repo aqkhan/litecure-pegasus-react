@@ -44,7 +44,9 @@ class webinars extends Component {
             .then((res) => {
                 let temp = [];
                 let tempArray = [];
-                res.data.webinars.forEach((val) => {
+                let duplicate = [...res.data.webinars];
+                let reverse = duplicate.reverse();
+                reverse.forEach((val) => {
                     val.selectTags.forEach((item)=>{
                         tempArray.push(item);
                     });

@@ -43,7 +43,9 @@ class CaseStudies extends Component {
             .then((res) => {
                 let temp = [];
                 let tempArray = [];
-                res.data.publications.forEach((val) => {
+                let duplicate = [...res.data.publications];
+                let reverse = duplicate.reverse();
+                reverse.forEach((val) => {
                     if (val.publicationCategory === "case-studies") {
                         val.selectTags.forEach((item)=>{
                             tempArray.push(item);

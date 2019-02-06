@@ -14,7 +14,9 @@ class StoriesCategory extends Component {
 
     componentDidMount() {
         let {storiesCategory, stories} = this.props;
-        let restructured = RestructorData(stories, 5);
+        let duplicate = [...stories];
+        let reverse = duplicate.reverse();
+        let restructured = RestructorData(reverse, 5);
         this.setState({
             publicationDestructure: restructured,
             final: restructured[0],

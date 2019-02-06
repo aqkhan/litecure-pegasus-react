@@ -43,7 +43,9 @@ class blogs extends Component {
             .then((res) => {
                 let temp = [];
                 let tempArray = [];
-                res.data.posts.forEach((val) => {
+                let duplicate = [...res.data.posts];
+                let reverse = duplicate.reverse();
+                reverse.forEach((val) => {
                     val.selectTags.forEach((item)=>{
                         tempArray.push(item);
                     });
