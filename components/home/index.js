@@ -110,43 +110,47 @@ class Home extends Component {
         if (products) {
             let duplicate = [...this.state.products];
             let reverse = duplicate.reverse();
-            renderProducts = reverse && reverse.map((value, index) => <Carousel.Item key={index}>
-                <section className="new-home-cards">
-                    <section className="section-one publication-header" style={{
-                        background: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)),url(${value.featuredImage && value.featuredImage.url})`,
-                        backgroundRepeat: "no-repeat",
-                        backgroundSize: "contain",
-                        backgroundPosition: "center",
-                    }}>
-                        <div className="third-row">
-                            <div className="container custom-container">
-                                <div className="row flex">
-                                    <div className="header-text publication-text home-page">
-                                        <p><br/><span>PRODUCTS</span></p>
+            renderProducts = reverse && reverse.map((value, index) =>{
+                if(value.type==='product'){
+                    return <Carousel.Item key={index}>
+                    <section className="new-home-cards">
+                        <section className="section-one publication-header" style={{
+                            background: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)),url(${value.featuredImage && value.featuredImage.url})`,
+                            backgroundRepeat: "no-repeat",
+                            backgroundSize: "contain",
+                            backgroundPosition: "center",
+                        }}>
+                            <div className="third-row">
+                                <div className="container custom-container">
+                                    <div className="row flex">
+                                        <div className="header-text publication-text home-page">
+                                            <p><br/><span>PRODUCTS</span></p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="small-upper-line flex">
-                            <div className="line"/>
-                        </div>
-                        <div className="fourth-row">
-                            <div className="custom-container container">
-                                <div className="row flex">
-                                    <div className="flex-column learnmore-header">
-                                        <p>{value.leadText}</p>
-                                        <Link href={'/product/' + value.slug}>
-                                            <a>
-                                                VIEW
-                                            </a>
-                                        </Link>
+                            <div className="small-upper-line flex">
+                                <div className="line"/>
+                            </div>
+                            <div className="fourth-row">
+                                <div className="custom-container container">
+                                    <div className="row flex">
+                                        <div className="flex-column learnmore-header">
+                                            <p>{value.leadText}</p>
+                                            <Link href={'/product/' + value.slug}>
+                                                <a>
+                                                    VIEW
+                                                </a>
+                                            </Link>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </section>
                     </section>
-                </section>
-            </Carousel.Item>)
+                </Carousel.Item>
+                }
+            } )
         }
         if (stories) {
             let duplicate = [...stories];
