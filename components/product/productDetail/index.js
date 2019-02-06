@@ -243,7 +243,7 @@ class ProductDetail extends Component {
                     <section className="stories-cards-section">
                         <section className="third-section">
                             <div className="container custom-container">
-                                <div className="row flex card-custom-flex">
+                                <div className="row flex">
                                     {allStoriesCards && allStoriesCards}
                                 </div>
                             </div>
