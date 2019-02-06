@@ -1,6 +1,9 @@
 import Head from "next/head";
 import Link from 'next/link';
-import React, { Component } from "react";
+import React, {Component} from "react";
+import axios from 'axios';
+import {API_PATH} from '../apiconfig'
+
 class Header extends Component {
 
     state = {
@@ -21,38 +24,67 @@ class Header extends Component {
         photobiomodulation: "",
         advisoryboard: "",
         webinars: "",
-        stories:"",
-        clinicalVeterinarian:"",
-        athlete:"",
-        horseRider:"",
+        stories: "",
+        clinicalVeterinarian: "",
+        athlete: "",
+        horseRider: "",
         productDropDown: false,
         dropdown: false,
         wdropdown: false,
         publicationDropdown: false,
-        empowerDsDeliverySystemDropDown:true,
-        ptcDropDown:false,
-        storiesDropDown:false,
-        showHeaderList:'hide-header',
+        empowerDsDeliverySystemDropDown: true,
+        ptcDropDown: false,
+        storiesDropDown: false,
+        showHeaderList: 'hide-header',
 
     };
+
+    componentWillMount() {
+        let {navigations, dispatch} = this.props;
+        if (navigations) {
+        }
+        else {
+            axios.get(API_PATH +'navigations')
+                .then(res => {
+                    axios.get(API_PATH +'navigations/'+res.data.navigations[0].slug)
+                        .then(response => {
+                            dispatch({
+                                type: 'SET_DATA',
+                                payLoad: {
+                                    navigations: res.data.navigations && res.data.navigations,
+                                    navigationChilds: response.data.navigationChilds,
+                                    image: response.data.navigationChilds[response.data.navigationChilds.length - 1].headerImage && response.data.navigationChilds[response.data.navigationChilds.length - 1].headerImage.url,
+                                    leadText: response.data.navigationChilds[response.data.navigationChilds.length - 1].leadText
+                                }
+                            })
+                        })
+                        .catch(error => {
+                            console.log("error",error);
+                        })
+                })
+                .catch(error => {
+                    console.log("error1", error)
+                })
+        }
+    }
+
     componentDidMount() {
         this.changeHover(this.props.type);
-        if(typeof window !== "undefined"){
+        if (typeof window !== "undefined") {
             window.addEventListener('scroll', this.handleScroll);
         }
     }
 
-    handleScroll=(event)=> {
+    handleScroll = (event) => {
         let scrollTop = event.target.scrollingElement.scrollTop;
         // console.log("event", event.target.scrollingElement.scrollTop);
         // console.log("window", window.scrollY);
-            if (scrollTop >= 86.5){
-                this.setState({scrollClass:'fixed-header'})
-        }
-            else {
-                this.setState({scrollClass:''})
+        if (scrollTop >= 86.5) {
+            this.setState({scrollClass: 'fixed-header'})
+        } else {
+            this.setState({scrollClass: ''})
 
-            }
+        }
     };
 
     // componentWillMount() {
@@ -68,14 +100,15 @@ class Header extends Component {
         let {publicationDropdown} = this.state
         this.setState({publicationDropdown: !publicationDropdown})
     }
-    responsiveHeader=()=>{
-        if (this.state.showHeaderList === 'hide-header'){
-            this.setState({showHeaderList:'show-header'})
-        }
-        else if (this.state.showHeaderList === 'show-header'){
-            this.setState({showHeaderList:'hide-header'})
+
+    responsiveHeader = () => {
+        if (this.state.showHeaderList === 'hide-header') {
+            this.setState({showHeaderList: 'show-header'})
+        } else if (this.state.showHeaderList === 'show-header') {
+            this.setState({showHeaderList: 'hide-header'})
         }
     };
+
     changeHover(type) {
         switch (type) {
             case "product":
@@ -83,7 +116,7 @@ class Header extends Component {
                     webinars: "",
                     education: "",
                     products: "active",
-                    allProducts:"active",
+                    allProducts: "active",
                     ptc: "",
                     empowerDsDeliverySystem: "",
                     evidence: "",
@@ -97,10 +130,10 @@ class Header extends Component {
                     about: "",
                     support: "",
                     employees: "",
-                    stories:"",
-                    clinicalVeterinarian:"",
-                    athlete:"",
-                    horseRider:""
+                    stories: "",
+                    clinicalVeterinarian: "",
+                    athlete: "",
+                    horseRider: ""
                 });
                 return;
             case "ptc":
@@ -108,7 +141,7 @@ class Header extends Component {
                     webinars: "",
                     education: "",
                     products: "active",
-                    allProducts:"",
+                    allProducts: "",
                     ptc: "active",
                     empowerDsDeliverySystem: "",
                     evidence: "",
@@ -122,10 +155,10 @@ class Header extends Component {
                     about: "",
                     support: "",
                     employees: "",
-                    stories:"",
-                    clinicalVeterinarian:"",
-                    athlete:"",
-                    horseRider:""
+                    stories: "",
+                    clinicalVeterinarian: "",
+                    athlete: "",
+                    horseRider: ""
                 });
                 return;
             case "empower-ds-delivery-system":
@@ -133,7 +166,7 @@ class Header extends Component {
                     webinars: "",
                     education: "",
                     products: "active",
-                    allProducts:"",
+                    allProducts: "",
                     ptc: "",
                     empowerDsDeliverySystem: "active",
                     evidence: "",
@@ -147,10 +180,10 @@ class Header extends Component {
                     about: "",
                     support: "",
                     employees: "",
-                    stories:"",
-                    clinicalVeterinarian:"",
-                    athlete:"",
-                    horseRider:""
+                    stories: "",
+                    clinicalVeterinarian: "",
+                    athlete: "",
+                    horseRider: ""
                 });
                 return;
             case "blogs":
@@ -158,7 +191,7 @@ class Header extends Component {
                     webinars: "",
                     education: "",
                     products: "",
-                    allProducts:"",
+                    allProducts: "",
                     ptc: "",
                     empowerDsDeliverySystem: "",
                     evidence: "",
@@ -172,10 +205,10 @@ class Header extends Component {
                     about: "",
                     support: "",
                     employees: "",
-                    stories:"",
-                    clinicalVeterinarian:"",
-                    athlete:"",
-                    horseRider:""
+                    stories: "",
+                    clinicalVeterinarian: "",
+                    athlete: "",
+                    horseRider: ""
                 });
                 return;
             case "publishedPapers":
@@ -183,7 +216,7 @@ class Header extends Component {
                     webinars: "",
                     education: "",
                     products: "",
-                    allProducts:"",
+                    allProducts: "",
                     ptc: "",
                     empowerDsDeliverySystem: "",
                     evidence: "active",
@@ -197,10 +230,10 @@ class Header extends Component {
                     about: "",
                     support: "",
                     employees: "",
-                    stories:"",
-                    clinicalVeterinarian:"",
-                    athlete:"",
-                    horseRider:""
+                    stories: "",
+                    clinicalVeterinarian: "",
+                    athlete: "",
+                    horseRider: ""
                 });
                 return;
             case "caseStudies":
@@ -208,7 +241,7 @@ class Header extends Component {
                     webinars: "",
                     education: "",
                     products: "",
-                    allProducts:"",
+                    allProducts: "",
                     ptc: "",
                     empowerDsDeliverySystem: "",
                     evidence: "active",
@@ -222,10 +255,10 @@ class Header extends Component {
                     about: "",
                     support: "",
                     employees: "",
-                    stories:"",
-                    clinicalVeterinarian:"",
-                    athlete:"",
-                    horseRider:""
+                    stories: "",
+                    clinicalVeterinarian: "",
+                    athlete: "",
+                    horseRider: ""
                 });
                 return;
             case "webinars":
@@ -233,7 +266,7 @@ class Header extends Component {
                     webinars: "active",
                     education: "active",
                     products: "",
-                    allProducts:"",
+                    allProducts: "",
                     ptc: "",
                     empowerDsDeliverySystem: "",
                     evidence: "",
@@ -247,10 +280,10 @@ class Header extends Component {
                     about: "",
                     support: "",
                     employees: "",
-                    stories:"",
-                    clinicalVeterinarian:"",
-                    athlete:"",
-                    horseRider:""
+                    stories: "",
+                    clinicalVeterinarian: "",
+                    athlete: "",
+                    horseRider: ""
                 });
                 return;
             case "articles":
@@ -258,7 +291,7 @@ class Header extends Component {
                     webinars: "",
                     education: "",
                     products: "",
-                    allProducts:"",
+                    allProducts: "",
                     ptc: "",
                     empowerDsDeliverySystem: "",
                     evidence: "active",
@@ -272,10 +305,10 @@ class Header extends Component {
                     about: "",
                     support: "",
                     employees: "",
-                    stories:"",
-                    clinicalVeterinarian:"",
-                    athlete:"",
-                    horseRider:""
+                    stories: "",
+                    clinicalVeterinarian: "",
+                    athlete: "",
+                    horseRider: ""
                 });
                 return;
             case "photobiomodulation":
@@ -283,7 +316,7 @@ class Header extends Component {
                     webinars: "",
                     education: "",
                     products: "",
-                    allProducts:"",
+                    allProducts: "",
                     ptc: "",
                     empowerDsDeliverySystem: "",
                     evidence: "active",
@@ -297,10 +330,10 @@ class Header extends Component {
                     about: "",
                     support: "",
                     employees: "",
-                    stories:"",
-                    clinicalVeterinarian:"",
-                    athlete:"",
-                    horseRider:""
+                    stories: "",
+                    clinicalVeterinarian: "",
+                    athlete: "",
+                    horseRider: ""
                 });
                 return;
             case "advisoryboard":
@@ -308,7 +341,7 @@ class Header extends Component {
                     webinars: "",
                     education: "",
                     products: "",
-                    allProducts:"",
+                    allProducts: "",
                     ptc: "",
                     empowerDsDeliverySystem: "",
                     evidence: "active",
@@ -322,10 +355,10 @@ class Header extends Component {
                     about: "",
                     support: "",
                     employees: "",
-                    stories:"",
-                    clinicalVeterinarian:"",
-                    athlete:"",
-                    horseRider:""
+                    stories: "",
+                    clinicalVeterinarian: "",
+                    athlete: "",
+                    horseRider: ""
                 });
                 return;
             case "about":
@@ -333,7 +366,7 @@ class Header extends Component {
                     webinars: "",
                     education: "",
                     products: "",
-                    allProducts:"",
+                    allProducts: "",
                     ptc: "",
                     empowerDsDeliverySystem: "",
                     evidence: "",
@@ -347,10 +380,10 @@ class Header extends Component {
                     about: "active",
                     support: "",
                     employees: "",
-                    stories:"",
-                    clinicalVeterinarian:"",
-                    athlete:"",
-                    horseRider:""
+                    stories: "",
+                    clinicalVeterinarian: "",
+                    athlete: "",
+                    horseRider: ""
                 });
                 return;
             case "support":
@@ -358,7 +391,7 @@ class Header extends Component {
                     webinars: "",
                     education: "",
                     products: "",
-                    allProducts:"",
+                    allProducts: "",
                     ptc: "",
                     empowerDsDeliverySystem: "",
                     evidence: "",
@@ -372,10 +405,10 @@ class Header extends Component {
                     about: "",
                     support: "active",
                     employees: "",
-                    stories:"",
-                    clinicalVeterinarian:"",
-                    athlete:"",
-                    horseRider:""
+                    stories: "",
+                    clinicalVeterinarian: "",
+                    athlete: "",
+                    horseRider: ""
                 });
                 return;
             case "employees":
@@ -383,7 +416,7 @@ class Header extends Component {
                     webinars: "",
                     education: "",
                     products: "",
-                    allProducts:"",
+                    allProducts: "",
                     ptc: "",
                     empowerDsDeliverySystem: "",
                     evidence: "",
@@ -397,18 +430,18 @@ class Header extends Component {
                     about: "",
                     support: "",
                     employees: "active",
-                    stories:"",
-                    clinicalVeterinarian:"",
-                    athlete:"",
-                    horseRider:""
+                    stories: "",
+                    clinicalVeterinarian: "",
+                    athlete: "",
+                    horseRider: ""
                 });
                 return;
-                case "clinicalVeterinarian":
+            case "clinicalVeterinarian":
                 this.setState({
                     webinars: "",
                     education: "",
                     products: "",
-                    allProducts:"",
+                    allProducts: "",
                     ptc: "",
                     empowerDsDeliverySystem: "",
                     evidence: "",
@@ -422,18 +455,18 @@ class Header extends Component {
                     about: "",
                     support: "",
                     employees: "",
-                    stories:"active",
-                    clinicalVeterinarian:"active",
-                    athlete:"",
-                    horseRider:""
+                    stories: "active",
+                    clinicalVeterinarian: "active",
+                    athlete: "",
+                    horseRider: ""
                 });
                 return;
-                case "athlete":
+            case "athlete":
                 this.setState({
                     webinars: "",
                     education: "",
                     products: "",
-                    allProducts:"",
+                    allProducts: "",
                     ptc: "",
                     empowerDsDeliverySystem: "",
                     evidence: "",
@@ -447,18 +480,18 @@ class Header extends Component {
                     about: "",
                     support: "",
                     employees: "",
-                    stories:"active",
-                    clinicalVeterinarian:"",
-                    athlete:"active",
-                    horseRider:""
+                    stories: "active",
+                    clinicalVeterinarian: "",
+                    athlete: "active",
+                    horseRider: ""
                 });
                 return;
-                case "horseRider":
+            case "horseRider":
                 this.setState({
                     webinars: "",
                     education: "",
                     products: "",
-                    allProducts:"",
+                    allProducts: "",
                     ptc: "",
                     empowerDsDeliverySystem: "",
                     evidence: "",
@@ -472,10 +505,10 @@ class Header extends Component {
                     about: "",
                     support: "",
                     employees: "",
-                    stories:"active",
-                    clinicalVeterinarian:"",
-                    athlete:"",
-                    horseRider:"active"
+                    stories: "active",
+                    clinicalVeterinarian: "",
+                    athlete: "",
+                    horseRider: "active"
                 });
                 return;
             default:
@@ -483,7 +516,7 @@ class Header extends Component {
                     webinars: "",
                     education: "",
                     products: "",
-                    allProducts:"",
+                    allProducts: "",
                     ptc: "",
                     empowerDsDeliverySystem: "",
                     evidence: "",
@@ -497,18 +530,138 @@ class Header extends Component {
                     about: "",
                     support: "",
                     employees: "",
-                    stories:"",
-                    clinicalVeterinarian:"",
-                    athlete:"",
-                    horseRider:""
+                    stories: "",
+                    clinicalVeterinarian: "",
+                    athlete: "",
+                    horseRider: ""
                 });
         }
 
     }
 
+    toggleHandler = () => {
+        this.props.dispatch({
+            type: 'toggle'
+        })
+    };
+    toggleHandlerr = () => {
+        this.props.dispatch({
+            type: 'togglef'
+        })
+    };
+
+    changeImageAndText =(imageUrl, leadText)=>{
+      this.props.dispatch({
+          type:'imageAndHeader',
+          payLoad: {
+              image:imageUrl,
+              leadText: leadText
+          }
+      })
+    };
+
+
     render() {
-        let {products,allProducts, scrollClass, ptc, ptcDropDown, empowerDsDeliverySystem, empowerDsDeliverySystemDropDown, about, evidence, publications, publishedPapers, blogs, support, employees, advisoryboard, webinars, caseStudies, articles, photobiomodulation, productDropDown, dropdown, publicationDropdown,stories,
-        clinicalVeterinarian ,storiesDropDown, athlete, horseRider} = this.state;
+        let {
+            products, allProducts, scrollClass, ptc, ptcDropDown, empowerDsDeliverySystem, empowerDsDeliverySystemDropDown, about, evidence, publications, publishedPapers, blogs, support, employees, advisoryboard, webinars, caseStudies, articles, photobiomodulation, productDropDown, dropdown, publicationDropdown, stories,
+            clinicalVeterinarian, storiesDropDown, athlete, horseRider
+        } = this.state;
+        let {navigations, toggle, navigationChilds, image, leadText} = this.props;
+        let mainNavigation = [];
+        let mobileMainNavigation= [];
+        if (navigations) {
+            navigations.forEach((item, index) => {
+                // if(item.template==='one'){
+                mainNavigation = [...mainNavigation,
+                    <li onMouseLeave={() => this.toggleHandlerr()} key={index}><span
+                        className={products}>{item.linked ?
+                        <Link to={item.linkTo}><a>{item.navigationName}</a></Link> : <a
+                            onClick={() => this.toggleHandler()}>{item.navigationName}</a>}</span>
+                        <ul className="childlist childlist-first  ">
+                            <li>
+                                {
+                                    toggle &&
+                                    <div className="header-list-div-1">
+                                        <div className="header-list-main-div-1"
+                                             onMouseLeave={() => this.setState({productDropDown: false})}>
+                                            <div className="inside-list">
+                                                <ul className="header-main-ul">
+                                                    if(navigationChilds){
+                                                    navigationChilds.map((items,indexx)=>{
+                                                        if(items.headerImage && items.leadText){
+                                                            return(
+                                                                <li key={indexx}><span
+                                                                                       onMouseEnter={() => this.changeImageAndText(items.headerImage && items.headerImage.url, items.leadText)}>{items.linked?<Link
+                                                                    href={items.linkTo}><a>{items.navigationName}</a></Link>:<a>{items.navigationName}</a>}</span>
+                                                                </li>
+                                                            )
+                                                        }
+                                                        else {
+                                                            return <li key={indexx}><span >{items.linked?<Link
+                                                                href={items.linkTo}><a>{items.navigationName}</a></Link>:<a>{items.navigationName}</a>}</span>
+                                                            </li>
+                                                        }
+                                                    })
+                                                }
+                                                </ul>
+                                            </div>
+                                            {
+                                                <div className="header-line-div">
+                                                    <div className="header-list-hr"/>
+                                                    <div className="inside-list-two-1">
+                                                        <div className="img-div-h-list">
+                                                            <img
+                                                                src={image}/>
+                                                        </div>
+                                                        <div className="product-detail-div">
+                                                            <p>{leadText}</p></div>
+                                                    </div>
+                                                </div>
+                                            }
+                                        </div>
+                                    </div>}
+                            </li>
+                        </ul>
+                    </li>]
+                // }
+                mobileMainNavigation =[...mobileMainNavigation,
+                    <li><span
+                        className={products}><a
+                        onClick={() => this.toggleHandler()}>{item.navigationName}</a></span>
+                        {toggle &&
+                        <ul className="childlist childlist-first first-mob-list ">
+                            <li>
+                                <div className="header-list-div-1">
+                                    <div className="header-list-main-div-1">
+                                        <div className="inside-list ">
+                                            <ul className="header-main-ul ">
+                                                if(navigationChilds){
+                                                navigationChilds.map((items,indexx)=>{
+                                                    if(items.headerImage && items.leadText){
+                                                        return(
+                                                            <li key={indexx}><span
+                                                                onMouseEnter={() => this.changeImageAndText(items.headerImage && items.headerImage.url, items.leadText)}>{items.linked?<Link
+                                                                href={items.linkTo}><a>{items.navigationName}</a></Link>:<a>{items.navigationName}</a>}</span>
+                                                            </li>
+                                                        )
+                                                    }
+                                                    else {
+                                                        return <li key={indexx}><span >{items.linked?<Link
+                                                            href={items.linkTo}><a>{items.navigationName}</a></Link>:<a>{items.navigationName}</a>}</span>
+                                                        </li>
+                                                    }
+                                                })
+                                            }
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>}
+                    </li>
+                ]
+            })
+        }
         return (
             <div>
                 <Head>
@@ -542,120 +695,102 @@ class Header extends Component {
                                         <Link href="/"><a><img src="/static/images/logos1.png"/></a></Link>
                                     </div>
                                     <div className="col-sm-5 col-5">
-                                    <div className="flex-end-row ">
-                                    <input type="text" name="search" class="search-engine"/>
-                                        <img src="/static/images/magnifier.png" width="18px" height="18px"/>
-                                    </div>
+                                        <div className="flex-end-row ">
+                                            <input type="text" name="search" class="search-engine"/>
+                                            <img src="/static/images/magnifier.png" width="18px" height="18px"/>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div className={"second-row "+scrollClass}>
+                        <div className={"second-row " + scrollClass}>
                             <div className="for-responsive-only">
                                 <div className="custom-container">
-                                    <div className="menu-button  click " onClick={()=>this.responsiveHeader()} >
+                                    <div className="menu-button  click " onClick={() => this.responsiveHeader()}>
                                         <div/>
                                         <div/>
                                         <div/>
                                     </div>
                                 </div>
                             </div>
-                            <div className={"container showhide custom-container "  +  this.state.showHeaderList}>
+                            <div className={"container showhide custom-container " + this.state.showHeaderList}>
                                 <div className="row  justify-center align-center">
                                     <ul className="responsive-column navbar flex-row nav-color desktop-header ">
-                                        <li onMouseLeave={() => this.setState({productDropDown: false})}><span
-                                            className={products} ><a onClick={() => this.setState({productDropDown: !productDropDown})}>PRODUCTS</a></span>
-                                             <ul className="childlist childlist-first  ">
+                                            {mainNavigation && mainNavigation.length >0 && mainNavigation}
+                                        <li onMouseLeave={() => this.setState({dropdown: false})}><span
+                                            className={evidence}
+                                            onClick={() => this.setState({dropdown: !dropdown})}><a>Evidence</a></span>
+                                            {dropdown && <ul className="childlist">
                                                 <li>
-                                                    {
-                                                        productDropDown &&
-                                                        <div className="header-list-div-1">
-                                                        <div className="header-list-main-div-1" onMouseLeave={() => this.setState({productDropDown: false})}>
-                                                            <div className="inside-list">
+                                                    <div className="header-list-div-2">
+                                                        <div className="header-list-main-div-2"
+                                                             onMouseLeave={() => this.setState({dropdown: false})}>
 
+                                                            <div className="inside-list">
                                                                 <ul className="header-main-ul">
-                                                                    <li><span className={allProducts}><Link href="/products"><a>ALL PRODUCTS</a></Link></span></li>
-                                                                    <li><span className={empowerDsDeliverySystem} onMouseEnter={()=>this.setState({empowerDsDeliverySystemDropDown:true, ptcDropDown:false})}><Link href={"/product/empower-delivery-system"}><a>EMPOWER DELIVERY SYSTEM</a></Link></span></li>
-                                                                    <li><span className={ptc} onMouseEnter={()=>this.setState({ptcDropDown:true, empowerDsDeliverySystemDropDown:false})}><Link href={"/product/ptc"}><a>PEGASUS THERAPY COMPACT</a></Link></span></li>
+
+                                                                    <li onClick={() => this.publicationDropdownFunc()}>
+                                                                        <span
+                                                                            className={publications}><a>PUBLICATIONS</a></span>
+                                                                    </li>
+                                                                    <li><span className={photobiomodulation}><Link
+                                                                        href="/photobiomodulation"><a>PHOTOBIOMODULATION</a></Link></span>
+                                                                    </li>
+                                                                    <li><span className={advisoryboard}><Link
+                                                                        href="/advisory-board-members"><a>ADVISORY BOARD</a></Link></span>
+                                                                    </li>
                                                                 </ul>
                                                             </div>
-                                                            {
-                                                                empowerDsDeliverySystemDropDown&&
-                                                                <div className="header-line-div">
+                                                            {publicationDropdown &&
+                                                            <div className="header-line-div">
                                                                 <div className="header-list-hr"/>
-                                                                <div className="inside-list-two-1">
-                                                                    <div className="img-div-h-list">
-                                                                        <img src="/static/images/Pegasus-Heads.png"/>
-                                                                    </div>
-                                                                    <div className="product-detail-div">
-                                                                        <p>Empower DS provides the versatility you need to treat your toughest cases. Four application- specific treatment heads, the patented laser-contact ball and the toughest fiber available make Pegasus therapy lasers clinically practical and ruggedly durable.</p></div>
-
+                                                                <div className="inside-list-two">
+                                                                    <ul>
+                                                                        <li><span className={publishedPapers}><Link
+                                                                            href="/published-papers"><a>PUBLISHED PAPERS</a></Link></span>
+                                                                        </li>
+                                                                        <li><span className={caseStudies}><Link
+                                                                            href="/casestudies"><a>CASE STUDIES</a></Link></span>
+                                                                        </li>
+                                                                        <li><span className={articles}><Link
+                                                                            href="/articles"><a>ARTICLES</a></Link></span>
+                                                                        </li>
+                                                                    </ul>
                                                                 </div>
-                                                            </div>
-                                                            }{ptcDropDown&&<div className="header-line-div">
-                                                                <div className="header-list-hr"/>
-                                                                <div className="inside-list-two-1">
-                                                                    <div className="img-div-h-list">
-                                                                        <img src="/static/images/ptc-400px.png"/>
-                                                                    </div>
-                                                                    <div className="product-detail-div">
-                                                                        <p>Powerful, safe, and easy-to-use, this doctor-prescribed modality effectively treats a wide variety of conditions including pre-surgical, post-surgical, acute, and chronic disease states.</p></div>
-
-                                                                </div>
-                                                            </div>
-                                                        }
+                                                            </div>}
                                                         </div>
-                                                    </div>}
+                                                    </div>
                                                 </li>
-                                            </ul>
-                                        </li>
-                                        <li onMouseLeave={() => this.setState({dropdown: false})}><span
-                                            className={evidence} onClick={() => this.setState({dropdown: !dropdown})}><a>Evidence</a></span>
-                                            {dropdown && <ul className="childlist">
-                                                     <li><div className="header-list-div-2">
-                                                     <div className="header-list-main-div-2" onMouseLeave={() => this.setState({dropdown: false})}>
-
-                                                     <div className="inside-list">
-                                                     <ul className="header-main-ul">
-
-                                                         <li onClick={() => this.publicationDropdownFunc()}><span className={publications}><a>PUBLICATIONS</a></span></li>
-                                                         <li><span className={photobiomodulation}><Link href="/photobiomodulation"><a>PHOTOBIOMODULATION</a></Link></span></li>
-                                                         <li><span className={advisoryboard}><Link href="/advisory-board-members"><a>ADVISORY BOARD</a></Link></span></li>
-                                                 </ul>
-                                                 </div>
-                                                         {publicationDropdown &&
-                                                         <div className="header-line-div">
-                                                             <div className="header-list-hr"/>
-                                                             <div className="inside-list-two">
-                                                                 <ul>
-                                                                     <li><span className={publishedPapers}><Link href="/published-papers"><a>PUBLISHED PAPERS</a></Link></span></li>
-                                                                     <li><span className={caseStudies}><Link href="/casestudies"><a>CASE STUDIES</a></Link></span></li>
-                                                                     <li><span className={articles}><Link href="/articles"><a>ARTICLES</a></Link></span></li>
-                                                                 </ul>
-                                                             </div>
-                                                         </div>}
-                                                 </div>
-                                                 </div></li>
                                             </ul>}
                                         </li>
                                         <li onMouseLeave={() => this.setState({storiesDropDown: false})}><span
-                                            className={stories} onClick={() => this.setState({storiesDropDown: !storiesDropDown})}><a>STORIES</a></span>
+                                            className={stories}
+                                            onClick={() => this.setState({storiesDropDown: !storiesDropDown})}><a>STORIES</a></span>
                                             {storiesDropDown && <ul className="childlist">
-                                                     <li><div className="header-list-div-2">
-                                                     <div className="header-list-main-div-4" onMouseLeave={() => this.setState({storiesDropDown: false})}>
-                                                     <div className="inside-list">
-                                                     <ul className="header-main-ul">
-                                                        <li><span className={clinicalVeterinarian}><Link href="/clinical-veterinarian"><a>VETERINARIAN</a></Link></span></li>
-                                                        <li><span className={athlete}><Link href="/athlete"><a>Equine Athlete</a></Link></span></li>
-                                                        <li><span className={horseRider}><Link href="/horse-owner-rider"><a>Horse Owner</a></Link></span></li>
-                                                 </ul>
-                                                 </div>
-                                                 </div>
-                                                 </div></li>
+                                                <li>
+                                                    <div className="header-list-div-2">
+                                                        <div className="header-list-main-div-4"
+                                                             onMouseLeave={() => this.setState({storiesDropDown: false})}>
+                                                            <div className="inside-list">
+                                                                <ul className="header-main-ul">
+                                                                    <li><span className={clinicalVeterinarian}><Link
+                                                                        href="/clinical-veterinarian"><a>VETERINARIAN</a></Link></span>
+                                                                    </li>
+                                                                    <li><span className={athlete}><Link href="/athlete"><a>Equine Athlete</a></Link></span>
+                                                                    </li>
+                                                                    <li><span className={horseRider}><Link
+                                                                        href="/horse-owner-rider"><a>Horse Owner</a></Link></span>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
                                             </ul>}
                                         </li>
                                         <li><span className={blogs}><Link href="/blogs"><a>Blog</a></Link></span></li>
-                                        <li><span className={webinars}><Link href="/webinars"><a>Webinars</a></Link></span></li>
+                                        <li><span className={webinars}><Link
+                                            href="/webinars"><a>Webinars</a></Link></span></li>
                                         <li><span className={about}><Link href="/about-us"><a>About</a></Link></span>
                                         </li>
                                         <li><span className={support}><Link href="/support"><a>Support</a></Link></span>
@@ -664,68 +799,76 @@ class Header extends Component {
                                         </li>
                                     </ul>
                                     <ul className="responsive-column navbar flex-row nav-color mobile-header">
+                                        {mobileMainNavigation && mobileMainNavigation.length>0 && mobileMainNavigation}
                                         <li><span
-                                            className={products} ><a onClick={() => this.setState({productDropDown: !productDropDown})}>PRODUCTS</a></span>
-                                            {productDropDown &&<ul className="childlist childlist-first first-mob-list ">
+                                            className={evidence}
+                                            onClick={() => this.setState({dropdown: !dropdown})}><a>Evidence</a></span>
+                                            {dropdown && <ul className="childlist childlist-2">
                                                 <li>
-                                                        <div className="header-list-div-1">
-                                                            <div className="header-list-main-div-1">
-                                                                <div className="inside-list ">
-                                                                    <ul className="header-main-ul ">
-                                                                        <li><span className={allProducts}><Link href="/products"><a>ALL PRODUCTS</a></Link></span></li>
-                                                                        <li><span className={empowerDsDeliverySystem} onMouseEnter={()=>this.setState({empowerDsDeliverySystemDropDown:true, ptcDropDown:false})}><Link href={"/product/empower-delivery-system"}><a>EMPOWER DELIVERY SYSTEM</a></Link></span></li>
-                                                                        <li><span className={ptc} onMouseEnter={()=>this.setState({ptcDropDown:true, empowerDsDeliverySystemDropDown:false})}><Link href={"/product/ptc"}><a>PEGASUS THERAPY COMPACT</a></Link></span></li>
-                                                                    </ul>
-                                                                </div>
+                                                    <div className="header-list-div-2">
+
+                                                        <div className="header-list-main-div-2">
+
+                                                            <div className="inside-list">
+                                                                <ul className="header-main-ul">
+                                                                    <li onClick={() => this.publicationDropdownFunc()}>
+                                                                        <span
+                                                                            className={publications}><a>PUBLICATIONS</a></span>
+                                                                        {publicationDropdown &&
+                                                                        <ul className="publication-list">
+                                                                            <li><span className={publishedPapers}><Link
+                                                                                href="/published-papers"><a>PUBLISHED PAPERS</a></Link></span>
+                                                                            </li>
+                                                                            <li><span className={caseStudies}><Link
+                                                                                href="/casestudies"><a>CASE STUDIES</a></Link></span>
+                                                                            </li>
+                                                                            <li><span className={articles}><Link
+                                                                                href="/articles"><a>ARTICLES</a></Link></span>
+                                                                            </li>
+                                                                        </ul>}
+                                                                    </li>
+                                                                    <li><span className={photobiomodulation}><Link
+                                                                        href="/photobiomodulation"><a>PHOTOBIOMODULATION</a></Link></span>
+                                                                    </li>
+                                                                    <li><span className={advisoryboard}><Link
+                                                                        href="/advisory-board-members"><a>ADVISORY BOARD</a></Link></span>
+                                                                    </li>
+                                                                </ul>
                                                             </div>
                                                         </div>
+                                                    </div>
                                                 </li>
                                             </ul>}
                                         </li>
                                         <li><span
-                                            className={evidence} onClick={() => this.setState({dropdown: !dropdown})}><a>Evidence</a></span>
-                                            {dropdown && <ul className="childlist childlist-2">
-                                                <li><div className="header-list-div-2">
-
-                                                    <div className="header-list-main-div-2">
-
-                                                        <div className="inside-list">
-                                                            <ul className="header-main-ul">
-                                                                <li onClick={() => this.publicationDropdownFunc()}><span className={publications}><a>PUBLICATIONS</a></span>
-                                                                    {publicationDropdown &&<ul className="publication-list">
-                                                                        <li><span className={publishedPapers}><Link href="/published-papers"><a>PUBLISHED PAPERS</a></Link></span></li>
-                                                                        <li><span className={caseStudies}><Link href="/casestudies"><a>CASE STUDIES</a></Link></span></li>
-                                                                        <li><span className={articles}><Link href="/articles"><a>ARTICLES</a></Link></span></li>
-                                                                    </ul>}
-                                                                </li>
-                                                                <li><span className={photobiomodulation}><Link href="/photobiomodulation"><a>PHOTOBIOMODULATION</a></Link></span></li>
-                                                                <li><span className={advisoryboard}><Link href="/advisory-board-members"><a>ADVISORY BOARD</a></Link></span></li>
-                                                                </ul>
-                                                        </div>
-                                                    </div>
-                                                </div></li>
-                                            </ul>}
-                                        </li>
-                                        <li><span
-                                            className={stories} onClick={() => this.setState({storiesDropDown: !storiesDropDown})}><a>STORIES</a></span>
+                                            className={stories}
+                                            onClick={() => this.setState({storiesDropDown: !storiesDropDown})}><a>STORIES</a></span>
                                             {storiesDropDown && <ul className="childlist childlist-2">
-                                                <li><div className="header-list-div-2">
+                                                <li>
+                                                    <div className="header-list-div-2">
 
-                                                    <div className="header-list-main-div-2">
+                                                        <div className="header-list-main-div-2">
 
-                                                        <div className="inside-list">
-                                                            <ul className="header-main-ul">
-                                                                <li><span className={clinicalVeterinarian}><Link href="/clinical-veterinarian"><a>VETERINARIAN</a></Link></span></li>
-                                                                <li><span className={athlete}><Link href="/athlete"><a>Equine Athlete</a></Link></span></li>
-                                                                <li><span className={horseRider}><Link href="/horse-owner-rider"><a>Horse Owner</a></Link></span></li>
+                                                            <div className="inside-list">
+                                                                <ul className="header-main-ul">
+                                                                    <li><span className={clinicalVeterinarian}><Link
+                                                                        href="/clinical-veterinarian"><a>VETERINARIAN</a></Link></span>
+                                                                    </li>
+                                                                    <li><span className={athlete}><Link href="/athlete"><a>Equine Athlete</a></Link></span>
+                                                                    </li>
+                                                                    <li><span className={horseRider}><Link
+                                                                        href="/horse-owner-rider"><a>Horse Owner</a></Link></span>
+                                                                    </li>
                                                                 </ul>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div></li>
+                                                </li>
                                             </ul>}
                                         </li>
                                         <li><span className={blogs}><Link href="/blogs"><a>Blog</a></Link></span></li>
-                                        <li><span className={webinars}><Link href="/webinars"><a>Webinar</a></Link></span></li>
+                                        <li><span className={webinars}><Link
+                                            href="/webinars"><a>Webinar</a></Link></span></li>
                                         <li><span className={about}><Link href="/about-us"><a>About</a></Link></span>
                                         </li>
                                         <li><span className={support}><Link href="/support"><a>Support</a></Link></span>

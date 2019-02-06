@@ -8,9 +8,21 @@ const reducer = (state, action) => {
             return {
                 ...state,
                 navigations: action.payLoad.navigations,
-                navigationchilds: action.payLoad.certs,
+                navigationChilds: action.payLoad.navigationChilds,
                 image: action.payLoad.image,
                 leadText: action.payLoad.leadText
+            };
+        case 'toggle':
+            return{
+              ...state, toggle: !state.toggle
+            };
+        case 'imageAndHeader':
+            return{
+                ...state, image:action.payLoad.image, leadText:action.payLoad.leadText
+            };
+        case 'togglef':
+            return {
+                ...state, toggle:false
             };
         default:
             return state;
@@ -26,7 +38,7 @@ export class PegsusProvider extends Component {
         },
         toggle: false,
         navigations: null,
-        navigatoionchilds: null,
+        navigationChilds: null,
         image: null,
         leadText: null
     };
