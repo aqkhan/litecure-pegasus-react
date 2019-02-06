@@ -586,7 +586,7 @@ class Header extends Component {
                                              onMouseLeave={() => this.setState({productDropDown: false})}>
                                             <div className="inside-list">
                                                 <ul className="header-main-ul">
-                                                    if(navigationChilds){
+                                                    {navigationChilds && navigationChilds.length>0 &&
                                                     navigationChilds.map((items,indexx)=>{
                                                         if(items.headerImage && items.leadText){
                                                             return(
@@ -601,8 +601,7 @@ class Header extends Component {
                                                                 href={items.linkTo}><a>{items.navigationName}</a></Link>:<a>{items.navigationName}</a>}</span>
                                                             </li>
                                                         }
-                                                    })
-                                                }
+                                                    })}
                                                 </ul>
                                             </div>
                                             {
@@ -635,23 +634,22 @@ class Header extends Component {
                                     <div className="header-list-main-div-1">
                                         <div className="inside-list ">
                                             <ul className="header-main-ul ">
-                                                if(navigationChilds){
-                                                navigationChilds.map((items,indexx)=>{
-                                                    if(items.headerImage && items.leadText){
-                                                        return(
-                                                            <li key={indexx}><span
-                                                                onMouseEnter={() => this.changeImageAndText(items.headerImage && items.headerImage.url, items.leadText)}>{items.linked?<Link
+                                                {navigationChilds && navigationChilds.length>0 &&
+                                                    navigationChilds.map((items,indexx)=>{
+                                                        if(items.headerImage && items.leadText){
+                                                            return(
+                                                                <li key={indexx}><span
+                                                                    onMouseEnter={() => this.changeImageAndText(items.headerImage && items.headerImage.url, items.leadText)}>{items.linked?<Link
+                                                                    href={items.linkTo}><a>{items.navigationName}</a></Link>:<a>{items.navigationName}</a>}</span>
+                                                                </li>
+                                                            )
+                                                        }
+                                                        else {
+                                                            return <li key={indexx}><span >{items.linked?<Link
                                                                 href={items.linkTo}><a>{items.navigationName}</a></Link>:<a>{items.navigationName}</a>}</span>
                                                             </li>
-                                                        )
-                                                    }
-                                                    else {
-                                                        return <li key={indexx}><span >{items.linked?<Link
-                                                            href={items.linkTo}><a>{items.navigationName}</a></Link>:<a>{items.navigationName}</a>}</span>
-                                                        </li>
-                                                    }
-                                                })
-                                            }
+                                                        }
+                                                    })}
                                             </ul>
                                         </div>
                                     </div>
