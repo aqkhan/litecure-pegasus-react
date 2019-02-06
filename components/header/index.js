@@ -610,10 +610,10 @@ class Header extends Component {
                                                     <div className="inside-list-two-1">
                                                         <div className="img-div-h-list">
                                                             <img
-                                                                src={image}/>
+                                                                src={image && image}/>
                                                         </div>
                                                         <div className="product-detail-div">
-                                                            <p>{leadText}</p></div>
+                                                            <p>{leadText && leadText}</p></div>
                                                     </div>
                                                 </div>
                                             }
