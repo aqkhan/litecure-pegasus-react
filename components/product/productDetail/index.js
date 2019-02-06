@@ -187,7 +187,7 @@ class ProductDetail extends Component {
                             <div className="text">
                                 {
                                     item.publishedDate &&
-                                    <p>{date.getMonth()+1}.{date.getDate()}.{date.getFullYear()}</p>
+                                    <p>{date.getMonth()+1}.{date.getDate()+1}.{date.getFullYear()}</p>
                                 }
                                 <h5>{item.title}</h5>
                             </div>

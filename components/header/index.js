@@ -39,7 +39,8 @@ class Header extends Component {
 
     };
 
-    componentWillMount() {
+
+    componentDidMount() {
         let {navigations, dispatch} = this.props;
         if (navigations) {
         }
@@ -66,9 +67,6 @@ class Header extends Component {
                     console.log("error1", error)
                 })
         }
-    }
-
-    componentDidMount() {
         this.changeHover(this.props.type);
         if (typeof window !== "undefined") {
             window.addEventListener('scroll', this.handleScroll);
@@ -597,7 +595,7 @@ class Header extends Component {
                                                             )
                                                         }
                                                         else {
-                                                            return <li key={indexx}><span >{items.linked?<Link
+                                                            return <li key={indexx}><span onClick={()=>this.toggleHandlerr()}>{items.linked?<Link
                                                                 href={items.linkTo}><a>{items.navigationName}</a></Link>:<a>{items.navigationName}</a>}</span>
                                                             </li>
                                                         }
@@ -684,7 +682,7 @@ class Header extends Component {
                     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"/>
                 </Head>
 
-                <section className="new-header">
+                {mainNavigation && mainNavigation.length >0 &&<section className="new-header">
                     <section className="first-section">
                         <div className="first-row">
                             <div className="container custom-container">
@@ -879,7 +877,7 @@ class Header extends Component {
                         </div>
 
                     </section>
-                </section>
+                </section>}
             </div>
         )
     }
