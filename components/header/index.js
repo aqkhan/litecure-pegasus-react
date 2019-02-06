@@ -36,7 +36,7 @@ class Header extends Component {
 
     };
     componentDidMount() {
-        this.changeHover(this.props.type)
+        this.changeHover(this.props.type);
         if(typeof window !== "undefined"){
             window.addEventListener('scroll', this.handleScroll);
         }
