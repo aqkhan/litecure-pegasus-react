@@ -202,8 +202,6 @@ class AboutUs extends Component {
                         <div className="row view-area">
                             {renderProducts && renderProducts}
                         </div>
-                    </div>
-                    <div className="container custom-container">
                         <div className="row flex">
                             <h1 className="prodct">PRODUCTS</h1>
                         </div>

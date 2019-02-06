@@ -124,8 +124,7 @@ class ProductDetail extends Component {
         if (products) {
             allProducts = products.map(value => {
                 return value.slug !== slug && (
-                    <div key={value._id}>
-                        <div className="col-sm-4">
+                        <div className="col-sm-4" key={value._id}>
                             <div className="image-margin">
                                 <div className="image-div">
                                     <img src={value.featuredImage && value.featuredImage.url}/>
@@ -136,7 +135,6 @@ class ProductDetail extends Component {
                                 </div>
                             </div>
                         </div>
-                    </div>
                 )
             });
             allProductCards = products.map(value => {
@@ -219,15 +217,13 @@ class ProductDetail extends Component {
                             <div>
                                 {detailProduct}
                             </div>
-                            <div className="yellow-section">
+                        </section>
+                        <section style={{background:"black"}}>
+                        <div className="yellow-section">
                                 <div className="container custom-container">
                                     <div className="row view-area">
-                                        <div className="col-sm-2"></div>
                                         {allProducts && allProducts}
-                                        <div className="col-sm-2"></div>
                                     </div>
-                                </div>
-                                <div className="container custom-container">
                                     <div className="row flex">
                                         <h1 className="prodct">PRODUCTS</h1>
                                     </div>
@@ -247,7 +243,7 @@ class ProductDetail extends Component {
                     <section className="stories-cards-section">
                         <section className="third-section">
                             <div className="container custom-container">
-                                <div className="row flex">
+                                <div className="row flex card-custom-flex">
                                     {allStoriesCards && allStoriesCards}
                                 </div>
                             </div>
