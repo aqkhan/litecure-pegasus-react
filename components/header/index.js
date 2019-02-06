@@ -2,6 +2,7 @@ import Head from "next/head";
 import Link from 'next/link';
 import React, {Component} from "react";
 import axios from 'axios';
+import arraySort from 'array-sort';
 import {API_PATH} from '../apiconfig'
 
 class Header extends Component {
@@ -49,11 +50,13 @@ class Header extends Component {
                 .then(res => {
                     axios.get(API_PATH +'navigations/'+res.data.navigations[0].slug)
                         .then(response => {
+                            let duplicate = [...response.data.navigationChilds];
+                            let order = arraySort(duplicate,'order');
                             dispatch({
                                 type: 'SET_DATA',
                                 payLoad: {
                                     navigations: res.data.navigations && res.data.navigations,
-                                    navigationChilds: response.data.navigationChilds,
+                                    navigationChilds: order,
                                     image: response.data.navigationChilds[response.data.navigationChilds.length - 1].headerImage && response.data.navigationChilds[response.data.navigationChilds.length - 1].headerImage.url,
                                     leadText: response.data.navigationChilds[response.data.navigationChilds.length - 1].leadText
                                 }
@@ -585,6 +588,7 @@ class Header extends Component {
                                             <div className="inside-list">
                                                 <ul className="header-main-ul">
                                                     {navigationChilds && navigationChilds.length>0 &&
+
                                                     navigationChilds.map((items,indexx)=>{
                                                         if(items.headerImage || items.leadText){
                                                             return(
