@@ -170,6 +170,7 @@ a:active, a:hover {
 }
 .new-header .custom-container .HEADERS {
     background-color: #191d24;
+    display: -webkit-box;
 }
 .new-header .HEADERS .col-7 img {
     width: auto;
