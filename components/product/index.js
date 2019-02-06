@@ -13,13 +13,19 @@ class  Product extends Component{
                     .then((res)=>{
                             this.setState({products:res.data.products})
                     })
-                    .catch(err=>{this.setState({err:err})})
+                    .catch(err=>{
+                        console.log("error", err);
+                        this.setState({error:"Products Not Found"})}
+                        )
             }
     render() {
+                let {error} = this.state;
                 let dynamic=null;
                 if (this.state.products)
                 {
-                  dynamic =  this.state.products.map((value,index)=>{
+                    let duplicate = [...this.state.products];
+                    let reverse = duplicate.reverse();
+                  dynamic =  reverse.map((value,index)=>{
                       // if (index===0){
                           return <section className="first-product"  key={index}>
                           <section className="first-section">
@@ -134,39 +140,18 @@ class  Product extends Component{
             this.state.products ? <div>
                 {dynamic}
                 <RequestDemo/>
-            </div>:<div>
-                <section className="first-product">
-                <section className="first-section">
-                    <div className="third-row">
-                        <div className="container custom-container">
-                            <div className="row flex">
-                                <div className="header-text text-extra">
-                                    <p className="Product-text"><span>Loading ... </span></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="container custom-container">
-                            <div className="row flex">
-                                <div className="header-image">
-                                    </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="small-upper-line flex">
-                        <div className="line line-ex"> </div>
-                    </div>
-                    <div className="fourth-row">
-                        <div className="custom-container container">
-                            <div className="row flex">
-                                <div className="flex-column learnmore-header learn-ex">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                </section>
-                <RequestDemo/>
-            </div>
+            </div>:error ? (<div className="splash">
+                <div className="lds-ellipsis">
+                    <h1><strong>{error}</strong></h1>
+                </div>
+            </div>) : (<div className="splash">
+                <div className="lds-ellipsis">
+                    <div/>
+                    <div/>
+                    <div/>
+                    <div/>
+                </div>
+            </div>)
         )
     }
 }

@@ -149,8 +149,8 @@ class Home extends Component {
             </Carousel.Item>)
         }
         if (stories) {
-            let dummy = [...stories];
-            let reverse = dummy.reverse();
+            let duplicate = [...stories];
+            let reverse = duplicate.reverse();
             renderStories = reverse.map((value, index) =>
                 <Carousel.Item key={index}>
                     <div className="section-three-overlay1"/>

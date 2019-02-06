@@ -8,7 +8,7 @@ import RequestDemo from "../../requestDemo";
 class ProductDetail extends Component {
     state = {
         product: null,
-        err: null,
+        error: null,
         slug: null,
         products: null,
         stories: null
@@ -21,23 +21,26 @@ class ProductDetail extends Component {
                 this.setState({product: res.data.product, slug: slug})
             })
             .catch(err => {
-                this.setState({err: err})
+                console.log("error", err);
+                this.setState({error: "Product Not Found"})
             });
+
         axios.get(API_PATH + 'products')
             .then((res) => {
                 this.setState({products: res.data.products})
             })
             .catch(err => {
-                this.setState({err: err})
+                console.log("error", err);
+                this.setState({error: "Products Not Found"})
             });
+
         axios.get(API_PATH + 'stories')
             .then((res) => {
                 this.setState({stories: res.data.stories})
-                // console.log("data of stories", this.state.stories);
-
             })
             .catch(err => {
-                this.setState({err: err})
+                console.log("error", err);
+                this.setState({error: "Stories Not Found"})
             })
     }
 
@@ -53,7 +56,7 @@ class ProductDetail extends Component {
     };
 
     render() {
-        let {product, err, slug, products, stories} = this.state;
+        let {product, error, slug, products, stories} = this.state;
         let detailProduct = null;
         let allProducts = null;
         let allProductCards = null;
@@ -102,7 +105,7 @@ class ProductDetail extends Component {
                                                 <div className=" learnmore-header">
                                                     <div className='detail-content'>
                                                         <div
-                                                            dangerouslySetInnerHTML={{__html: product.longDescription}}></div>
+                                                            dangerouslySetInnerHTML={{__html: product.longDescription}}/>
                                                     </div>
                                                     <br/>
                                                     <br/>
@@ -122,12 +125,16 @@ class ProductDetail extends Component {
             }
         }
         if (products) {
-            allProducts = products.map(value => {
+            let duplicate = [...products];
+            let reverse= duplicate.reverse();
+            allProducts = reverse.map(value => {
                 return value.slug !== slug && (
                         <div className="col-sm-4" key={value._id}>
                             <div className="image-margin">
                                 <div className="image-div">
-                                    <img src={value.featuredImage && value.featuredImage.url}/>
+                                    {value.featuredImage?<img src={value.featuredImage && value.featuredImage.url}/>
+                                    :<img src='/static/images/placeholder.png'/>}
+
                                 </div>
                                 <div className="view-text">
                                     <h1>{value.title}</h1>
@@ -137,7 +144,7 @@ class ProductDetail extends Component {
                         </div>
                 )
             });
-            allProductCards = products.map(value => {
+            allProductCards = reverse.map(value => {
                 return <div className="col-md-4 p-0 " key={value._id} style={{
                     background: `linear-gradient(rgba(239, 184, 23, 0.1), rgba(239, 184, 23, 0.1)),url(${value.featuredImage && value.featuredImage.url})`,
                     backgroundRepeat: "no-repeat",
@@ -158,11 +165,12 @@ class ProductDetail extends Component {
                     </div>
                 </div>
             })
-        }
-        ;
+        };
 
         if (stories) {
-            allStoriesCards = stories.map((item, index) => {
+            let duplicate = [...stories];
+            let reverse = duplicate.reverse();
+            allStoriesCards = reverse.map((item, index) => {
                 let date = new Date(item.publishedDate);
                 return <div className="col-md-3 p-0 stories-image-background" key={index} data-toggle="modal" data-target={"#myModal3" + index}
                             style={item.featuredImage &&{
@@ -179,7 +187,7 @@ class ProductDetail extends Component {
                             <div className="text">
                                 {
                                     item.publishedDate &&
-                                    <p>{date.getMonth()}.{date.getDate()}.{date.getFullYear()}</p>
+                                    <p>{date.getMonth()+1}.{date.getDate()}.{date.getFullYear()}</p>
                                 }
                                 <h5>{item.title}</h5>
                             </div>
@@ -189,28 +197,7 @@ class ProductDetail extends Component {
             })
         }
         return (
-            err ? <div>
-                <section className="product-det">
-                    <section className="first-section">
-                        <div className="third-row">
-                            <div className="container custom-container">
-                                <div className="row flex">
-                                    <div className="header-text">
-                                        <p><span>Product Not found</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="container custom-container">
-                                <div className="row flex">
-                                    <div className="header-image" style={{background: 'black'}}>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </section>
-                <RequestDemo/>
-            </div> : product ?
+             product ?
                 <div>
                     <section className="product-det">
                         <section className="first-section">
@@ -301,29 +288,18 @@ class ProductDetail extends Component {
                     <ScrollableAnchor id={'requestDemo'}>
                         <RequestDemo/>
                     </ScrollableAnchor>
-                </div> : <div>
-                    <section className="product-det">
-                        <section className="first-section">
-                            <div className="third-row">
-                                <div className="container custom-container">
-                                    <div className="row flex">
-                                        <div className="header-text">
-                                            <p><span>Loading ...</span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="container custom-container">
-                                    <div className="row flex">
-                                        <div className="header-image" style={{background: 'black'}}>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                    </section>
-                    <RequestDemo/>
-                </div>
+                </div>: error ? (<div className="splash">
+                     <div className="lds-ellipsis">
+                         <h1><strong>{error}</strong></h1>
+                     </div>
+                 </div>) : (<div className="splash">
+                    <div className="lds-ellipsis">
+                        <div/>
+                        <div/>
+                        <div/>
+                        <div/>
+                    </div>
+                </div>)
         )
     }
 }

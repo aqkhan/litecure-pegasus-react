@@ -583,7 +583,7 @@ class Header extends Component {
                                     toggle &&
                                     <div className="header-list-div-1">
                                         <div className="header-list-main-div-1"
-                                             onMouseLeave={() => this.setState({productDropDown: false})}>
+                                             onMouseLeave={() => this.toggleHandlerr()}>
                                             <div className="inside-list">
                                                 <ul className="header-main-ul">
                                                     {navigationChilds && navigationChilds.length>0 &&
