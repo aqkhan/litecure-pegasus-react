@@ -117,8 +117,9 @@ a:active, a:hover {
     display: -ms-flexbox; /* TWEENER - IE 10 */
     display: -webkit-flex; /* NEW - Chrome */
     display: flex;
-    flex-direction: row;
+    flex-direction: row; 
     justify-content: flex-end;
+    -webkit-box-pack: end; 
     position: relative;
     z-index: 0;
 }
@@ -169,6 +170,7 @@ a:active, a:hover {
 }
 .new-header .custom-container .HEADERS {
     background-color: #191d24;
+    display: -webkit-box;
 }
 .new-header .HEADERS .col-7 img {
     width: auto;
@@ -183,6 +185,7 @@ a:active, a:hover {
 }
 .new-header .HEADERS .col-5 img {
     transform: scaleX(-1);
+    cursor: pointer;
     /* position: absolute;
     top: 16px;
     right: 10px;
@@ -1460,7 +1463,7 @@ a:active, a:hover {
 }
 
 .other-header {
-    position: unset;
+    position: relative;
     width: auto;
 }
 
