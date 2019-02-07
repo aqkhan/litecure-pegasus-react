@@ -1581,7 +1581,12 @@ a:active, a:hover {
     margin: 20px 2px 0px 1px;
     /* float: right; */
 }
-
+.header-video-div{
+    display: -webkit-box;
+    display:flex;
+    justify-content: flex-end;
+    margin-top: -34px;
+}
 .product-det .first-section .fourth-row .learnmore-header a {
     border: solid 2px #efb817;
     text-decoration: none;

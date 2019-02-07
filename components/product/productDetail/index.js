@@ -4,6 +4,7 @@ import axios from 'axios';
 import {API_PATH} from '../../apiconfig';
 import ScrollableAnchor, { configureAnchors, goToAnchor } from 'react-scrollable-anchor';
 import RequestDemo from "../../requestDemo";
+import embed from 'embed-video';
 class ProductDetail extends Component {
     state = {
         product: null,
@@ -46,24 +47,13 @@ class ProductDetail extends Component {
         configureAnchors({ scrollDuration: 2000})
         goToAnchor('requestDemo')
     }
-
-    getId = (url) => {
-        let regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
-        let match = url.match(regExp);
-
-        if (match && match[2].length == 11) {
-            return match[2];
-        } else {
-            return 'error';
-        }
-    };
-
     render() {
         let {product, error, slug, products, stories} = this.state;
         let detailProduct = null;
         let allProducts = null;
         let allProductCards = null;
         let allStoriesCards = null;
+        let reverse = null;
         if (product) {
             {
                 if (product.slug === slug) {
@@ -120,6 +110,7 @@ class ProductDetail extends Component {
                                                     <div className="button">
                                                         <a href="/support">TALK TO A REP </a>
                                                     </div>
+                                                        {product.embedVideo && <div className="header-video-div" dangerouslySetInnerHTML={{__html:embed(product.embedVideo,{ attr:{width:"50%", height:200}})  }}/> }
                                                 </div>
                                             </div>
                                         </div>
@@ -179,7 +170,7 @@ class ProductDetail extends Component {
 
         if (stories) {
             let duplicate = [...stories];
-            let reverse = duplicate.reverse();
+            reverse = duplicate.reverse();
             allStoriesCards = reverse.map((item, index) => {
                 let date = new Date(item.publishedDate);
                 return <div className="col-md-3 p-0 stories-image-background" key={index} data-toggle="modal" data-target={"#myModal3" + index}
@@ -263,11 +254,7 @@ class ProductDetail extends Component {
                                 </div>
                             </div>
                             {
-                                stories && stories.map((item, index) => {
-                                    let videoId = null;
-                                    if(item.videoLink){
-                                        videoId = this.getId(item.videoLink);
-                                    }
+                                stories && reverse.map((item, index) => {
                                     return (<div className="container" key={index}>
                                         {/*<!-- The Modal -->*/}
                                         <div className="modal fade" id={"myModal3" + index}>
@@ -280,11 +267,7 @@ class ProductDetail extends Component {
                                                     </div>
                                                     {/*<!-- Modal body -->*/}
                                                     <div className="modal-body">
-                                                        <div>
-                                                            {videoId && <iframe width="560" height="315"
-                                                                    src={`//www.youtube.com/embed/${videoId}`}
-                                                                    frameBorder="0" allowFullScreen/>}
-                                                        </div>
+                                                    {item.videoLink && <div dangerouslySetInnerHTML={{__html:embed(item.videoLink,{ attr:{width:"560", height:315}})}}/>}
                                                     </div>
                                                 </div>
                                             </div>
