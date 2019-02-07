@@ -4,6 +4,7 @@ import axios from 'axios';
 import {API_PATH} from '../../apiconfig';
 import ScrollableAnchor, { configureAnchors, goToAnchor } from 'react-scrollable-anchor';
 import RequestDemo from "../../requestDemo";
+import {Carousel} from 'react-bootstrap';
 import embed from 'embed-video';
 class ProductDetail extends Component {
     state = {
@@ -50,7 +51,7 @@ class ProductDetail extends Component {
     render() {
         let {product, error, slug, products, stories} = this.state;
         let detailProduct = null;
-        let allProducts = null;
+        let renderProducts = null;
         let allProductCards = null;
         let allStoriesCards = null;
         let reverse = null;
@@ -125,26 +126,45 @@ class ProductDetail extends Component {
         if (products) {
             let duplicate = [...products];
             let reverse= duplicate.reverse();
-            allProducts = reverse.map(value => {
-                return value.slug !== slug && (
-                        <div className="col-sm-4" key={value._id}>
-                            <div className="image-margin">
-                            <div className="image-div product-placeholder"  style={value.featuredImage && {
-                            backgroundImage: `url(${value.featuredImage && value.featuredImage.url})`,
+            renderProducts = reverse && reverse.map((value, index) =>{
+                    return <Carousel.Item key={index}>
+                    <section className="new-home-cards">
+                        <section className="section-one publication-header" style={{
+                            background: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)),url(${value.featuredImage && value.featuredImage.url})`,
                             backgroundRepeat: "no-repeat",
-                            backgroundPosition: "center",
                             backgroundSize: "contain",
+                            backgroundPosition: "center",
                         }}>
-                                    {/* <img src={value.featuredImage && value.featuredImage.url}/> */}
-                                    </div>                                 
-                                <div className="view-text">
-                                    <h1>{value.title}</h1>
-                                    <p><Link href={"/product/" + value.slug}><a>VIEW PRODUCT</a></Link></p>
+                            <div className="third-row">
+                                <div className="container custom-container">
+                                    <div className="row flex">
+                                        <div className="header-text publication-text home-page">
+                                            <p><br/><span>PRODUCTS</span></p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                )
-            });
+                            <div className="small-upper-line flex">
+                                <div className="line"/>
+                            </div>
+                            <div className="fourth-row">
+                                <div className="custom-container container">
+                                    <div className="row flex">
+                                        <div className="flex-column learnmore-header">
+                                            <p>{value.leadText}</p>
+                                            <Link href={'/product/' + value.slug}>
+                                                <a>
+                                                    VIEW
+                                                </a>
+                                            </Link>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </section>
+                </Carousel.Item>
+            } )
             allProductCards = reverse.map(value => {
                 return <div className="col-md-4 p-0 " key={value._id} style={{
                     background: `linear-gradient(rgba(239, 184, 23, 0.1), rgba(239, 184, 23, 0.1)),url(${value.featuredImage && value.featuredImage.url})`,
@@ -210,11 +230,13 @@ class ProductDetail extends Component {
                         <div className="yellow-section">
                                 <div className="container custom-container">
                                     <div className="row view-area">
-                                        {allProducts && allProducts}
+                                    {renderProducts && <Carousel interval={3000} indicators={false} controls={false} pauseOnHover={false}>
+                                        {renderProducts}
+                                    </Carousel>}
                                     </div>
-                                    <div className="row flex">
+                                    {/* <div className="row flex">
                                         <h1 className="prodct">PRODUCTS</h1>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </section>
