@@ -1352,6 +1352,7 @@ a:active, a:hover {
     background: linear-gradient(rgba(8, 7, 7, 0.87), rgba(10, 9, 9, 0.85)), url(/static/images/female-vet-with-woman.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     /*height: 1817px;*/
     width: 100%;
 }
@@ -1550,10 +1551,30 @@ a:active, a:hover {
 .product-det .first-section .third-row .header-text p b {
     font-family: fantasy;
 }
-
+.product-det .first-section .header-btn .button {
+    margin: 50px 2px 50px 1px;
+}
+.product-det .header-btn{
+    justify-content: center;
+}
+.product-det .first-section .header-btn a {
+    border: solid 2px #efb817;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 1.5px;
+    text-align: center;
+    color: #ffffff;
+    padding: 14px 45px;
+    margin: 0 10px;
+}
 .product-det .first-section .fourth-row .learnmore-header .button {
-    margin: 50px 2px 83px 1px;
-    float: right;
+    margin: 20px 2px 0px 1px;
+    /* float: right; */
 }
 
 .product-det .first-section .fourth-row .learnmore-header a {
@@ -1570,7 +1591,6 @@ a:active, a:hover {
     color: #ffffff;
     padding: 14px 45px;
     margin: 0 10px;
-
 }
 
 .product-det .yellow-section {
