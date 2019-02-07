@@ -7781,12 +7781,18 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .post-stories:nth-child(odd) .reverse-content {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
+    -webkit-flex-direction: row;
     flex-direction: row;
 }
 
 .post-stories:nth-child(2n) .reverse-content {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
+    -webkit-flex-direction: row;
     flex-direction: row-reverse;
 }
 
@@ -7812,8 +7818,12 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .post-stories .text-div {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
+    -webkit-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
     justify-content: center;
     padding-left: 30px;
 }
