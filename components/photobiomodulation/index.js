@@ -50,8 +50,8 @@ class PhotobiomodulationDetail extends Component {
     }
 
     changeContent(val) {
-        configureAnchors({offset: -10, scrollDuration: 800});
-        goToAnchor('section1', false);
+        configureAnchors({offset: -20, scrollDuration: 800});
+        goToAnchor('section1');
         switch (val) {
             case 1:
                 this.setState({

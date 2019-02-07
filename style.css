@@ -1562,6 +1562,7 @@ a:active, a:hover {
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
     font-size: 22px;
+    cursor: pointer;
     font-weight: 800;
     font-style: normal;
     font-stretch: normal;

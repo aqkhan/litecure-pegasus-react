@@ -182,7 +182,7 @@ class Home extends Component {
                 {renderProducts && <Carousel interval={3000} indicators={false} controls={false} pauseOnHover={false}>
                     {renderProducts}
                 </Carousel>}
-                {renderStories && <Carousel interval={5000} pauseOnHover={false}>
+                {renderStories && <Carousel interval={7000} pauseOnHover={false}>
                     {renderStories}
                 </Carousel>}
                 <RequestDemo/>

@@ -2,9 +2,8 @@ import React, {Component} from 'react';
 import Link from 'next/link'
 import axios from 'axios';
 import {API_PATH} from '../../apiconfig';
-import ScrollableAnchor from 'react-scrollable-anchor';
+import ScrollableAnchor, { configureAnchors, goToAnchor } from 'react-scrollable-anchor';
 import RequestDemo from "../../requestDemo";
-
 class ProductDetail extends Component {
     state = {
         product: null,
@@ -42,6 +41,10 @@ class ProductDetail extends Component {
                 console.log("error", err);
                 this.setState({error: "Stories Not Found"})
             })
+    }
+    scroll=()=>{
+        configureAnchors({ scrollDuration: 2000})
+        goToAnchor('requestDemo')
     }
 
     getId = (url) => {
@@ -85,7 +88,7 @@ class ProductDetail extends Component {
                             </div>
                             <div className="row header-btn">
                                 <div className="button">
-                                    <a href="#requestDemo">REQUEST A DEMO</a>
+                                    <a onClick={()=>this.scroll()}>REQUEST A DEMO</a>
                                 </div>
                             </div>
                             <div className="fourth-row text-area">
@@ -291,10 +294,10 @@ class ProductDetail extends Component {
                             }
                         </section>
                     </section>
-
                     <ScrollableAnchor id={'requestDemo'}>
-                        <RequestDemo/>
+                        <div/>
                     </ScrollableAnchor>
+                    <RequestDemo/>
                 </div>: error ? (<div className="splash">
                      <div className="lds-ellipsis">
                          <h1><strong>{error}</strong></h1>
