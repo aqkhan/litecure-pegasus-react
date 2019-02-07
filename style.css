@@ -1469,6 +1469,10 @@ a:active, a:hover {
 }
 
 /* employees page styling */
+.benefit-video-con{
+    padding: 0;
+    background-color: #17191A;
+}
 .employees {
     background-color: #54585a;
     padding: 40px;

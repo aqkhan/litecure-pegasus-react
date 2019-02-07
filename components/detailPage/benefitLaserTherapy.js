@@ -35,7 +35,7 @@ class BenefitLaserTherapy extends Component {
                 if (item.templateOrder==='one'){
                     one = [...one,<div key={index}>
                         <Detailheader imgUrl={item.featuredImage && item.featuredImage.url} headerImageLabel={item.headerImageLabel} leadText={item.leadText}/>
-                        <DetailContent content={item.content}/>
+                        <DetailContent content={item.content} embedVideo={item.embedVideo && item.embedVideo}/>
                     </div>]
                 }
                 else {
