@@ -1,6 +1,3 @@
-/**
- * Created by FaZi on 12/11/2018.
- */
 import React, {Component} from 'react';
 import PhotobiomodulationHeader from './photobiomodulationHeader';
 import TempleteOne from './templetes/one.js';
@@ -10,12 +7,14 @@ import TempleteSix from "./templetes/six";
 import TempleteThree from "./templetes/three";
 import TempleteFour from "./templetes/four";
 import TempleteSeven from "./templetes/seven";
+import ScrollableAnchor, { configureAnchors, goToAnchor } from 'react-scrollable-anchor'
 import axios from "axios";
 import {API_PATH} from "../apiconfig";
 import Link from 'next/link';
 class PhotobiomodulationDetail extends Component {
     state = {
-        page:null,
+        pages: null,
+        error: null,
         sendtoHeader: "What is Photobiomodulation?",
         temp1:true,
         temp2:false,
@@ -42,14 +41,17 @@ class PhotobiomodulationDetail extends Component {
                         temp.push(val);
                     }
                 });
-                this.setState({page: temp})
+                this.setState({pages: temp})
             })
             .catch(err => {
-                throw err
+                console.log("error", errr)
+                this.setState({error:"404 Page Note Found"})
             });
     }
 
     changeContent(val) {
+        configureAnchors({offset: -10, scrollDuration: 800});
+        goToAnchor('section1', false);
         switch (val) {
             case 1:
                 this.setState({
@@ -205,10 +207,13 @@ class PhotobiomodulationDetail extends Component {
     }
 
     render() {
-        let {page,sendtoHeader, one, two, three, four, five, six, seven, temp1,temp2,temp3,temp4, temp5,temp6,temp7} = this.state;
-        return page&&(
+        let {pages, error,sendtoHeader, one, two, three, four, five, six, seven, temp1,temp2,temp3,temp4, temp5,temp6,temp7} = this.state;
+        return (pages && pages.length >0 ?(
             <div>
-                <PhotobiomodulationHeader headerImageLabel={page[0].headerImageLabel} leadText={page[0].leadText} sendData={sendtoHeader} featuredImage={page[0].featuredImage && page[0].featuredImage.url}/>
+                <PhotobiomodulationHeader headerImageLabel={pages[0].headerImageLabel} leadText={pages[0].leadText} sendData={sendtoHeader} featuredImage={pages[0].featuredImage && pages[0].featuredImage.url}/>
+                <ScrollableAnchor id={'section1'}>
+                    <div/>
+                </ScrollableAnchor>
                 <section className="photobiomodulation">
                     <section className="blog-content-blogpage-only blog-content article-area">
                         <div className="article-container">
@@ -283,7 +288,18 @@ class PhotobiomodulationDetail extends Component {
                     </section>
                 </section>
             </div>
-        );
+        ): error ? (<div className="splash">
+        <div className="lds-ellipsis">
+            <h1><strong>{error}</strong></h1>
+        </div>
+    </div>) : (<div className="splash">
+        <div className="lds-ellipsis">
+            <div/>
+            <div/>
+            <div/>
+            <div/>
+        </div>
+    </div>));
     }
 
 }

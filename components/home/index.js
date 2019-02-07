@@ -50,7 +50,7 @@ class Home extends Component {
 
 
     render() {
-        let {pages, products, stories, error} = this.state;
+            let {pages, products, stories, error} = this.state;
         let renderStories, renderProducts  = null;
         let one =[];
         let defaults =[];
