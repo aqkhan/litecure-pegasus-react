@@ -83,6 +83,11 @@ class ProductDetail extends Component {
                                     </div>
                                 </div>
                             </div>
+                            <div className="row header-btn">
+                                <div className="button">
+                                    <a href="#requestDemo">REQUEST A DEMO</a>
+                                </div>
+                            </div>
                             <div className="fourth-row text-area">
                                 <div className="overlay-section">
                                     <div className=" container">
@@ -110,7 +115,6 @@ class ProductDetail extends Component {
                                                     <br/>
                                                     <br/>
                                                     <div className="button">
-                                                        <a href="#requestDemo">REQUEST A DEMO</a>
                                                         <a href="/support">TALK TO A REP </a>
                                                     </div>
                                                 </div>
