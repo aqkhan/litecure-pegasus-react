@@ -21,9 +21,7 @@ class TempleteOne extends Component{
                         literature, are relatively straightforward. There is consensus that the application of a therapeutic dose of light to
                         impaired or dysfunctional tissue leads to a cellular response mediated by mitochondrial mechanisms that reduce pain and
                         inflammation and speed healing.</p>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dB9MIW9fduk" frameBorder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen/>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/J8tx_T1M_Yo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <p>The primary target (chromophore) for the process is the cytochrome c complex, which is found in the inner membrane of the
                         cell mitochondria. Cytochrome c is a vital component of the electron transport chain that drives cellular metabolism. As
                         light is absorbed, cytochrome c is stimulated, leading to increased production of adenosine triphosphate (ATP), the molecule
