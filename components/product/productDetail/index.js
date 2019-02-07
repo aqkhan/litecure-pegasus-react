@@ -134,6 +134,7 @@ class ProductDetail extends Component {
                             backgroundRepeat: "no-repeat",
                             backgroundSize: "contain",
                             backgroundPosition: "center",
+                            backgroundColor: "rgba(247, 187, 12, 0.6)",
                         }}>
                             <div className="third-row">
                                 <div className="container custom-container">
@@ -226,20 +227,20 @@ class ProductDetail extends Component {
                                 {detailProduct}
                             </div>
                         </section>
-                        <section style={{background:"black"}}>
-                        <div className="yellow-section">
+                        {/* <section style={{background:"black"}}> */}
+                        {/* <div className="yellow-section">
                                 <div className="container custom-container">
-                                    <div className="row view-area">
-                                    {renderProducts && <Carousel interval={3000} indicators={false} controls={false} pauseOnHover={false}>
+                                    <div className="row view-area"> */}
+                                    {renderProducts && <Carousel interval={3000} indicators={false} controls={true} pauseOnHover={false}>
                                         {renderProducts}
                                     </Carousel>}
-                                    </div>
+                                    {/* </div> */}
                                     {/* <div className="row flex">
                                         <h1 className="prodct">PRODUCTS</h1>
                                     </div> */}
-                                </div>
-                            </div>
-                        </section>
+                                {/* </div> */}
+                            {/* </div> */}
+                        {/* </section> */}
                     </section>
                     <section className="cards-section">
                         <section className="Second-section">
