@@ -37,38 +37,40 @@ class Header extends Component {
         ptcDropDown: false,
         storiesDropDown: false,
         showHeaderList: 'hide-header',
-
+        navigations:null,
+        navigationChilds:null,
+        toggle:false,
+        image:null,
+        leadText:null
     };
 
 
     componentDidMount() {
-        let {navigations, dispatch} = this.props;
-        if (navigations) {
-        }
-        else {
+        let {navigations, dispatch, navigationChilds, image, leadText} = this.props;
+        if (!navigations) {
             axios.get(API_PATH +'navigations')
-                .then(res => {
-                    axios.get(API_PATH +'navigations/'+res.data.navigations[0].slug)
-                        .then(response => {
-                            let duplicate = [...response.data.navigationChilds];
-                            let order = arraySort(duplicate,'order');
-                            dispatch({
-                                type: 'SET_DATA',
-                                payLoad: {
-                                    navigations: res.data.navigations && res.data.navigations,
-                                    navigationChilds: order,
-                                    image: response.data.navigationChilds[response.data.navigationChilds.length - 1].headerImage && response.data.navigationChilds[response.data.navigationChilds.length - 1].headerImage.url,
-                                    leadText: response.data.navigationChilds[response.data.navigationChilds.length - 1].leadText
-                                }
-                            })
+            .then(res => {
+                axios.get(API_PATH +'navigations/'+res.data.navigations[0].slug)
+                    .then(response => {
+                        let duplicate = [...response.data.navigationChilds];
+                        let order = arraySort(duplicate,'order');
+                        dispatch({
+                            type: 'SET_DATA',
+                            payLoad: {
+                                navigations: res.data.navigations && res.data.navigations,
+                                navigationChilds: order,
+                                image: response.data.navigationChilds[response.data.navigationChilds.length - 1].headerImage && response.data.navigationChilds[response.data.navigationChilds.length - 1].headerImage.url,
+                                leadText: response.data.navigationChilds[response.data.navigationChilds.length - 1].leadText
+                            }
                         })
-                        .catch(error => {
-                            console.log("error",error);
-                        })
-                })
-                .catch(error => {
-                    console.log("error1", error)
-                })
+                    })
+                    .catch(error => {
+                        console.log("error",error);
+                    })
+            })
+            .catch(error => {
+                console.log("error1", error)
+            })
         }
         this.changeHover(this.props.type);
         if (typeof window !== "undefined") {

@@ -8,14 +8,13 @@ import axios from 'axios'
 
 class Home extends Component {
     state = {
-        pages: null,
-        products: null,
-        stories: null,
         error: null
     };
 
     componentDidMount() {
-        axios.get(API_PATH + 'pages')
+        let {pages, dispatch, products, stories} = this.props;
+        if (!pages) {
+            axios.get(API_PATH + 'pages')
             .then((res) => {
                 let temp = [];
                 res.data.pages.forEach((val) => {
@@ -23,38 +22,59 @@ class Home extends Component {
                         temp.push(val);
                     }
                 });
-                this.setState({pages: temp})
+                dispatch({
+                    type: 'pages',
+                    payLoad: {
+                        pages:temp
+                    }
+                })
             })
             .catch(err => {
                 console.log("error", err);
                 this.setState({error: "404 Home Page Not Found"})
             });
+        }
+    
 
-        axios.get(API_PATH + 'products')
+        if(!products){
+            axios.get(API_PATH + 'products')
             .then((res) => {
-                this.setState({products: res.data.products})
+                dispatch({
+                    type: 'products',
+                    payLoad: {
+                        products:res.data.products
+                    }
+                })
             })
             .catch(err => {
                 console.log("error", err);
                 this.setState({error: err})
             });
-
-        axios.get(API_PATH + 'stories')
+        }
+        
+        if(!stories){
+            axios.get(API_PATH + 'stories')
             .then((res) => {
-                this.setState({stories: res.data.stories})
+                dispatch({
+                    type: 'stories',
+                    payLoad: {
+                        stories:res.data.stories
+                    }
+                })
             })
             .catch(err => {
                 this.setState({error: err})
             });
+        }
     }
 
 
     render() {
-            let {pages, products, stories, error} = this.state;
+            let {pages, products, stories, error} = this.props;
         let renderStories, renderProducts  = null;
         let one =[];
         let defaults =[];
-        if (pages !== null && pages.length > 0) {
+        if (pages  && pages.length> 0) {
             pages.forEach((value, index) => {
                     if (value.templateOrder === 'one') {
                         one = [...one,
@@ -107,8 +127,8 @@ class Home extends Component {
                 }
             )
         }
-        if (products) {
-            let duplicate = [...this.state.products];
+        if (products  && products.length>0) {
+            let duplicate = [...products];
             let reverse = duplicate.reverse();
             renderProducts = reverse && reverse.map((value, index) =>{
                 if(value.type==='product'){
@@ -152,7 +172,7 @@ class Home extends Component {
                 }
             } )
         }
-        if (stories) {
+        if (stories && stories.length>0) {
             let duplicate = [...stories];
             let reverse = duplicate.reverse();
             renderStories = reverse.map((value, index) =>
@@ -175,7 +195,7 @@ class Home extends Component {
                 </Carousel.Item>
             )
         }
-        return (pages!==null && pages.length>0 ? (
+        return (pages && pages.length> 0 ? (
             <div>
                 {one.length>0 && one}
                 {defaults.length>0 && defaults}

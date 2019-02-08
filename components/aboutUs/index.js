@@ -7,13 +7,13 @@ import {API_PATH} from "../apiconfig";
 
 class AboutUs extends Component {
     state = {
-        products: null,
-        pages: null,
         error: null
     };
 
     componentDidMount() {
-        axios.get(API_PATH + 'pages')
+        let {dispatch, pages, products} = this.props;
+        if(!pages){
+            axios.get(API_PATH + 'pages')
             .then((res) => {
                 let temp = [];
                 res.data.pages.forEach((val) => {
@@ -21,24 +21,38 @@ class AboutUs extends Component {
                         temp.push(val);
                     }
                 });
-                this.setState({pages: temp})
+                dispatch({
+                    type: 'pages',
+                    payLoad: {
+                        pages:temp
+                    }
+                })
             })
             .catch(err => {
                 console.log("error ", err);
                 this.setState({error: "404 About Us Page Not Found"})
             });
-        axios(API_PATH + 'products')
+        }
+        if(!products){
+            axios(API_PATH + 'products')
             .then((res) => {
-                this.setState({products: res.data.products})
+                dispatch({
+                    type: 'products',
+                    payLoad: {
+                        products:res.data.products
+                    }
+                })
             })
             .catch(err => {
                 console.log("error ", err);
                 this.setState({error: "404 Products Not Found"})
             })
+        }
     }
 
     render() {
-        let {products, pages, error} = this.state;
+        let {products, pages} = this.props;
+        let {error} = this.state;
         let renderProducts = null;
         let one =[];
         let two =[];
@@ -64,7 +78,7 @@ class AboutUs extends Component {
                 )
             })
         }
-        if (pages !== null && pages.length > 0) {
+        if (pages && pages.length > 0) {
             pages.forEach((data, index) => {
                 if (data.templateOrder === 'one') {
                     one = [...one,<section className="company-profile">

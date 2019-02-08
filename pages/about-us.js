@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import '../style.css'
-import AboutUs from "../components/aboutUs";
+import AboutUs from "../components/aboutUs/aboutUsContainer";
 import Layout from "../components/layout";
 class index extends Component{
     render(){

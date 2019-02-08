@@ -10,7 +10,8 @@ const reducer = (state, action) => {
                 navigations: action.payLoad.navigations,
                 navigationChilds: action.payLoad.navigationChilds,
                 image: action.payLoad.image,
-                leadText: action.payLoad.leadText
+                leadText: action.payLoad.leadText,
+                toggle:action.payLoad.toggle
             };
         case 'toggle':
             return{
@@ -24,9 +25,20 @@ const reducer = (state, action) => {
             return {
                 ...state, toggle:false
             };
+        case 'pages':
+            return {
+                ...state, pages: action.payLoad.pages
+            }; 
+        case 'products':
+        return {
+            ...state, products: action.payLoad.products
+            };
+        case 'stories':
+            return {
+                ...state, stories: action.payLoad.stories
+            }; 
         default:
             return state;
-
     }
 };
 
@@ -40,7 +52,13 @@ export class PegsusProvider extends Component {
         navigations: null,
         navigationChilds: null,
         image: null,
-        leadText: null
+        leadText: null,
+        pages: null,
+        products:null,
+        publications:null,
+        stories:null,
+        blogs:null,
+        webinars:null,
     };
 
     render() {
