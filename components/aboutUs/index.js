@@ -15,16 +15,10 @@ class AboutUs extends Component {
         if(!pages){
             axios.get(API_PATH + 'pages')
             .then((res) => {
-                let temp = [];
-                res.data.pages.forEach((val) => {
-                    if (val.type === "aboutUs") {
-                        temp.push(val);
-                    }
-                });
                 dispatch({
                     type: 'pages',
                     payLoad: {
-                        pages:temp
+                        pages:res.data.pages
                     }
                 })
             })
@@ -80,7 +74,7 @@ class AboutUs extends Component {
         }
         if (pages && pages.length > 0) {
             pages.forEach((data, index) => {
-                if (data.templateOrder === 'one') {
+                if (data.templateOrder === 'one' && data.type === "aboutUs") {
                     one = [...one,<section className="company-profile">
                         <section className="first-section"
                                  style={{
@@ -117,7 +111,7 @@ class AboutUs extends Component {
                         </section>
                     </section>]
                 }
-                else if (data.templateOrder === 'two') {
+                else if (data.templateOrder === 'two' && data.type === "aboutUs") {
                     two = [...two,<section className="new-media-detail-containers" key={index}>
                         <section className="second-section hours-img" style={data.featuredImage && {
                             background: `linear-gradient(rgba(8, 7, 7, 0.90), rgba(10, 9, 9, 0.8)), url(${data.featuredImage && data.featuredImage.url})`,
@@ -150,7 +144,7 @@ class AboutUs extends Component {
                         </section>
                     </section>]
                 }
-                else if (data.templateOrder === 'three') {
+                else if (data.templateOrder === 'three' && data.type === "aboutUs") {
                     three = [...three,<section className="new-media-detail" key={index}>
                         <section className="first-section hourse-div" data-toggle="modal" data-target="#myModal" style={{
                                 background: `linear-gradient(rgba(8, 7, 7, 0.72), rgba(10, 9, 9, 0.8)), url(${data.featuredImage && data.featuredImage.url})`,
@@ -196,7 +190,7 @@ class AboutUs extends Component {
                             </div>
                         </section>
                     </section>]
-                }  else {
+                }  else if(data.type === "aboutUs") {
                     defaults = [...defaults,<DefaultComponent featuredImage={data.featuredImage}
                                                  headerImageLabel={data.headerImageLabel && data.headerImageLabel}
                                                  metaTitle={data.metaTitle && data.metaTitle}

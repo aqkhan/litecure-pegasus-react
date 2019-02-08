@@ -16,16 +16,10 @@ class Home extends Component {
         if (!pages) {
             axios.get(API_PATH + 'pages')
             .then((res) => {
-                let temp = [];
-                res.data.pages.forEach((val) => {
-                    if (val.type === "homepage") {
-                        temp.push(val);
-                    }
-                });
                 dispatch({
                     type: 'pages',
                     payLoad: {
-                        pages:temp
+                        pages:res.data.pages
                     }
                 })
             })
@@ -76,7 +70,7 @@ class Home extends Component {
         let defaults =[];
         if (pages  && pages.length> 0) {
             pages.forEach((value, index) => {
-                    if (value.templateOrder === 'one') {
+                    if (value.templateOrder === 'one' && value.type === "homepage") {
                         one = [...one,
                             <section className="new-home-cards" key={index}>
                              <section className="section-one" style={value.featuredImage&&{
@@ -115,7 +109,7 @@ class Home extends Component {
                                 </section>
                                 </section>
                         ]
-                    } else {
+                    } else if( value.type === "homepage") {
                         defaults =[...defaults,
                             <DefaultComponent featuredImage={value.featuredImage}
                                               headerImageLabel={value.headerImageLabel && value.headerImageLabel}
