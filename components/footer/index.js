@@ -89,9 +89,10 @@ class Footer extends Component{
                                             </div>}
                                     </div>
                                 </div>
-                                <div className="col-sm-2 col-2 social-icons mt-5 responsiv-foot">
+                                <div className="col-sm-3 col-3 social-icons mt-5 responsiv-foot">
                                     <div className="redcolor social-block"><p className="make-bold"><strong>Social Channels</strong></p></div>
                                     <div>
+                                    <Link href="https://www.facebook.com/PegasusLaser/"><a><i className="fa fa-facebook redcolor socialicons socialicons1" /></a></Link>
                                     <Link href="https://www.linkedin.com/company/pegasus-therapy/about/"><a><i className="fa fa-linkedin-square redcolor socialicons socialicons1" /></a></Link>
                                     <Link href="https://twitter.com/PegasusLaser"><a><i className="fa fa-twitter redcolor socialicons socialicons1"/></a></Link>
                                     <Link href="mailto:customer.service@litecure.com"><a><i className="fa fa-envelope redcolor  socialicons socialicons1" /></a></Link>
