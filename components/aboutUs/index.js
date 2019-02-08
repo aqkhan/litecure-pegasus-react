@@ -117,7 +117,7 @@ class AboutUs extends Component {
                             background: `linear-gradient(rgba(8, 7, 7, 0.90), rgba(10, 9, 9, 0.8)), url(${data.featuredImage && data.featuredImage.url})`,
                             "backgroundRepeat": "no-repeat",
                             "backgroundSize": "cover",
-                            "backgroundPosition": "center"
+                            "backgroundPosition": "center",
                         }}>
                             <div className="fourth-row text-area">
                                 <div className=" container">

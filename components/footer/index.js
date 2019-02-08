@@ -106,7 +106,7 @@ class Footer extends Component{
                 <div className="container give-bottom custom-container">
                     <div className="row mt-6 pb-5  footer-menu-last">
                         <div className="col-12 custom-flex-footer">
-                            <div className="give-amazing-margin"><p>Copyright  © 2018 LiteCure, LLC. All rights reserved.</p> </div>
+                            <div className="give-amazing-margin"><p>Copyright  © 2019 LiteCure, LLC. All rights reserved.</p> </div>
                             <div className="flex another-left">
                                 <p>Legal</p>
                                 <p>Terms of  Use</p>
