@@ -688,6 +688,7 @@ class Header extends Component {
                     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"/>
                 </Head>
 
+
                 {mainNavigation && mainNavigation.length >0 &&<section className="new-header">
                     <section className="first-section">
                         <div className="first-row">
