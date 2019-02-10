@@ -674,7 +674,6 @@ class Header extends Component {
                     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                     <link rel="stylesheet" href="/static/css/font-awesome.min.css"/>
                     <link rel="stylesheet" href="/static/css/bootstrap.css"/>
-                    <link rel="stylesheet" href="/static/css/responsive.css"/>
                     <link rel="stylesheet" href="/static/css/bootstrap.min.css"/>
                     <script src="/static/js/jquery-3.3.1.min.js"/>
                     <link rel="stylesheet" href="/static/css/bootstrap4.min.css" crossOrigin="anonymous"/>

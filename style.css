@@ -8074,3 +8074,2877 @@ padding: 0px;
     justify-content: flex-start;
 }
 /* search page css end */
+
+/*footer:START*/
+@media (max-width: 479px) and (min-width: 320px){
+
+    .section-one .HEADERS .col-5{
+        padding-right: 25px;
+        padding-top: 9px;
+    }
+    .section-four .taketheflowbro p br{
+        display:none
+    }
+    .custom-container{
+        max-width: 100%;
+    }
+    /*.section-one:START*/
+    .section-one .HEADERS .col-7 img{
+        width: auto;
+        height: 50px;
+        padding-top: 0px;
+    }
+    .responsive-column{
+        display: flex;
+        flex-direction: column!important;
+        text-align: left!important;
+    }
+    .menu-button{
+        width: 10%;
+        height: 20px;
+    }
+    .socialicons:first-child{
+        margin-right: 16px;
+        margin-left: 0px;
+    }
+    .menu-button  div{
+        border: 1px solid white;
+        height: 1px;
+        margin-bottom: 9px;
+    }
+    .for-responsive-only{
+        display: block;
+        height: 50px;
+        margin-top: 18px;
+        margin-right: 20px;
+    }
+    .for-responsive-only .custom-container{
+        display:flex;
+        justify-content: flex-end;
+    }
+
+    .showhide{
+        display:none;
+    }
+    .responsive-no-off{
+        margin-left: 0px!important;
+    }
+    .give-amazing-margin{
+        margin-left: 0px;
+    }
+    .footer-menu-last{
+        display:flex;
+        flex-direction:column;
+
+    }
+    .custom-flex-footer{
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+    }
+    .another-left{
+        margin-left: 0px;
+    }
+    .social-icons{
+        flex: 0 0 100%;
+        max-width: 100%;
+        width: 100%;
+        text-align: center;
+    }
+    .all-width{
+
+        flex: 0 0 100%;
+        max-width: 100%;
+        width: 100%;
+        text-align: center;
+    }
+    .responsive-flex{
+        display: flex;
+        flex-direction: column;
+    }
+    .section-one .third-row .header-text p{
+        font-size: 36px;
+    }
+    .section-one .fourth-row .learnmore-header{
+        width:100%;
+    }
+    .section-two .fourth-row .learnmore-header{
+        width:100%;
+    }
+    .section-two .big-text p{
+        font-size: 21vw;
+        height: 202px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+    .section-three .big-text p{
+        font-size: 26vw;
+        -webkit-text-stroke: 1px #f7f7f8;
+        height: 142px;
+        padding: 0px!important;
+        margin: 106px 1px 1px 1px;
+    }
+    .section-three .fourth-row .learnmore-header{
+        width:100%;
+    }
+    .section-three .fourth-row .learnmore-header p{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .section-four .taketheflowbro{
+        width:100%;
+    }
+    .section-four .flex-custom{
+        padding: 0px!important;
+    }
+    .section-four .requestitbro p{
+        font-size: 39px;
+    }
+    .section-four .taketheflowbro p{
+        font-size: 15px;
+    }
+    .section-four .flex-custom .form-top-text{
+        font-size: 16px;
+        margin-top: 35px;
+    }
+    .section-four .flex-custom input{
+        width: 100%;
+    }
+    .section-five p{
+        margin-right:0px;
+        text-align: center;
+    }
+    .section-five{
+        padding-bottom: 20px;
+    }
+    /*.section-one:END*/
+    /*footer:START*/
+    .foot-area{
+        width: 100%;
+        height: auto;
+    }
+
+    .footer-area{
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 40px;
+    }
+
+    .main-container{
+        padding: 0px;
+    }
+
+    .footer-paragraph p{
+        width: 100%;
+        padding: 0px;
+        font-size: 12px;
+    }
+
+    .footer-menu p{
+        font-size: 18px;
+    }
+
+    .redcolor p{
+        margin-top: 0px;
+        font-size: 20px;
+    }
+
+    .footer-menu1 .text-bold{
+        font-size: 13px;
+    }
+
+    .socialicons{
+        font-size: 14px;
+    }
+    .socialicon1{
+        font-size: 14px;
+    }
+    .list1{
+        margin: 10px;
+    }
+    .footer-menu-last p{
+        padding-bottom: 10%;
+        text-align: center;
+    }
+    .list2{
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+
+    }
+    .footer-menu-last .reserved p{
+        margin:0px;
+    }
+    .Copyright-area .footer-menu-last{
+        width: 100%;
+    }
+    .foot-area .container{
+        padding:0px;
+    }
+    .Copyright-area .footer-menu-last .terms{
+        margin:0px;
+        justify-content:center;
+    }
+    .Copyright-area{
+        margin-top: 10px;
+    }
+    .list2 p{
+        font-size: 10px;
+    }
+    .Copyright-area .footer-menu-last{
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center
+    }
+    .Copyright-area .footer-menu-last .terms p{
+        font-size: 8px;
+        padding: 0px 0%;
+        width: 78px;
+
+    }
+    .Copyright-area .footer-menu-last .terms p, .Copyright-area .footer-menu-last .terms a{
+        padding:0px;
+        margin:7px;
+        font-size:8px;
+        text-align: center;
+    }
+    .Copyright-area .reserved{
+        padding-left: 0px;
+        padding: 0 11px;
+
+    }
+
+    /*footer:END*/
+    /*==================== page product cat responsive START ======================*/
+    /*first section START*/
+    .first-section .HEADERS .col-7 img{
+        height: 50px;
+    }
+    .first-section .fourth-row .learnmore-header{
+        width: 84%;
+    }
+    .head-img{
+        width: 100%;
+    }
+    .first-section .third-row .header-text p{
+        font-size: 11vw;
+    }
+    /*first section END*/
+    /*second section START*/
+    .second-section .PTL-PEGASUS span{
+        font-size: 30px;
+    }
+    .second-section .PTL-PEGASUS p{
+        font-size: 26px;
+        padding-top: 6px;
+    }
+    .second-section .image-container .image34{
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    /*second section END*/
+    /*third section START*/
+    .third-section .PTC-PEGASUS span{
+        font-size: 30px;
+    }
+    .third-section .PTC-PEGASUS p{
+        font-size: 24px;
+        padding-top: 6px;
+    }
+    .third-section .image-container .image34{
+        width: 100%;
+    }
+    /*third section END*/
+
+    /*=============================== page product cat responsive END ========================*/
+
+    /*==================== page product Det responsive START ======================*/
+    /*first section START*/
+    .first-section{
+        background-size: 100% 100%;
+        height: auto;
+    }
+    .first-section .third-row .header-text p{
+        font-size: 12vw;
+    }
+    .header-image .head-img1{
+        width: 100%;
+        margin-top: 20%;
+    }
+    /*.first-section .text-area{*/
+    /*margin-top: 37%;*/
+    /*}*/
+
+    .first-section .fourth-row .learnmore-header{
+        padding-left: 0px;
+    }
+    .first-section .fourth-row .learnmore-header .button{
+        display: flex;
+        flex-direction: column;
+    }
+    .first-section .fourth-row .learnmore-header a{
+        margin-top: 20px;
+        font-size: 7px;
+    }
+    /*first section END*/
+    /*second section START*/
+    .first-section .yellow-section{
+        height: 100%;
+        padding-bottom: 41%;
+    }
+
+    .first-section .yellow-section .image-margin h1{
+        font-size: 24px;
+        line-height: 27px;
+    }
+    .first-section .yellow-section .image-margin p{
+        font-size: 10px;
+    }
+    .first-section .yellow-section .image-margin {
+        margin-top: 209px;
+    }
+    .first-section .yellow-section .prodct{
+        font-size: 20vw;
+        margin-top: 25%;
+        font-weight: 900;
+    }
+
+
+    /*second section END*/
+    .Second-section .image-container .image {
+
+
+    }
+    .Second-section .image-container .overlay{
+        width: 260px;
+        height: 260px;
+        margin-left: 10px;
+    }
+    .Second-section .image-container .text h5{
+        font-size: 36px;
+    }
+    .Second-section .image-container{
+        margin: 5px 20px;
+    }
+    /*third section END*/
+    /*=============================== page product Det responsive END ========================*/
+
+    /*=============================== page Media Det responsive START ==========================*/
+    .first-section .year .quarter span{
+        font-size: 30px;
+    }
+    .first-section .year .quarter p{
+        font-size: 30px;
+    }
+    .first-section .year .video-icon{
+        margin: 32% 0 0 57%;
+    }
+    .first-section .second-row{
+        padding-top: 1px;
+        height: auto;
+    }
+    .second-section .fourth-row .learnmore-header{
+        padding-left: 0px;
+    }
+    .second-section .fourth-row .learnmore-header .button{
+        display: flex;
+        flex-direction: column;
+    }
+    .second-section .fourth-row .learnmore-header a{
+        margin-top: 20px;
+        font-size: 9px;
+    }
+    .second-section .fourth-row .BENEFITS h1{
+        font-size: 22vw;
+    }
+    .third-section .PTL-PEGASUS p{
+        font-size: 26px;
+    }
+    .third-section .PTL-PEGASUS span{
+        font-size: 30px;
+    }
+    .third-section .image-container .image34{
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    /*======================== page Media Det responsive END ======================*/
+    /*======================== page Text Det responsive START ======================*/
+    .first-section {
+        background-size: cover;
+        height: auto;
+    }
+    .first-section .second-row {
+        background-color: #191d24;
+        height: auto;
+        padding-top: 1px;
+    }
+    /*.first-section .text-area {*/
+    /*margin-top: 37%;*/
+    /*}*/
+    .first-section .fourth-row .learnmore-header a {
+        margin-top: 20px;
+        font-size: 8px;
+    }
+    .first-section .header-text p{
+        font-size: 26px;
+    }
+    .first-section .fourth-row .learnmore-header .button{
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+    }
+    .first-section .fourth-row .learnmore-header{
+        padding-left: 0px;
+    }
+    .first-section .PROFILE{
+        padding-top: 0px;
+    }
+    .first-section .PROFILE p{
+        font-size: 15px;
+    }
+    .first-section .PROFILE h1{
+        font-size: 26px;
+    }
+
+    /*======================== page Text Det responsive END ======================*/
+
+    /*======================== page Text Land responsive START ======================*/
+    .first-section .fourth-row .about h1{
+        font-size: 22vw;
+    }
+    .first-section .yellow-section .image-margin .img-pegasus{
+        width: 100%;
+    }
+    .first-section .second-row {
+        background-color: #17191d;
+        height: auto;
+        padding-top: 1px;
+    }
+
+    .first-section .yellow-section .prodct{
+        font-size: 21vw;
+
+    }
+    .first-section .fourth-row .learnmore-header .button{
+        display: flex;
+        flex-direction: column;
+    }
+    .first-section .fourth-row .learnmore-header a{
+        margin: 20px;
+        font-size: 8px;
+    }
+    .first-section .yellow-section .image-margin .view-text1 h1{
+        font-size: 26px;
+    }
+    .first-section .yellow-section .image-margin .view-text h1{
+        font-size: 26px;
+    }
+    /*======================== page Text Land responsive END ======================*/
+}
+@media (max-width: 574px) and (min-width: 480px){
+
+    .section-one .HEADERS .col-5{
+        padding-right: 25px;
+        padding-top: 9px;
+    }
+    .section-four .taketheflowbro p br{
+        display:none
+    }
+    .custom-container{
+        max-width: 100%;
+    }
+    /*.section-one:START*/
+    .section-one .HEADERS .col-7 img{
+        width: auto;
+        height: 50px;
+
+    }
+    .responsive-column{
+        display: flex;
+        flex-direction: column!important;
+        text-align: left!important;
+    }
+    .menu-button{
+        width: 6%;
+        height: 20px;
+    }
+    .socialicons:first-child{
+        margin-left: 0px;
+    }
+    .menu-button  div{
+        border: 1px solid white;
+        height: 1px;
+        margin-bottom: 9px;
+    }
+    .for-responsive-only{
+        display: block;
+        height: 50px;
+        margin-top: 18px;
+        margin-right: 20px;
+    }
+    .for-responsive-only .custom-container{
+        display:flex;
+        justify-content: flex-end;
+    }
+    .showhide{
+        display:none;
+    }
+    .responsive-no-off{
+        margin-left: 0px!important;
+    }
+    .give-amazing-margin{
+        margin-left: 0px;
+    }
+    .footer-menu-last{
+        display:flex;
+        flex-direction:column;
+
+    }
+    .custom-flex-footer{
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+    }
+    .another-left{
+        margin-left: 0px;
+    }
+    .social-icons{
+        flex: 0 0 100%;
+        max-width: 100%;
+        width: 100%;
+        text-align: center;
+    }
+    .all-width{
+
+        flex: 0 0 100%;
+        max-width: 100%;
+        width: 100%;
+        text-align: center;
+    }
+    .responsive-flex{
+        display: flex;
+        flex-direction: column;
+    }
+    .section-one .third-row .header-text p{
+        font-size: 36px;
+    }
+    .section-one .fourth-row .learnmore-header{
+        width:100%;
+    }
+    .section-two .fourth-row .learnmore-header{
+        width:100%;
+    }
+    .section-two .big-text p{
+        font-size: 21vw;
+        height: 202px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+    .section-three .big-text p{
+        font-size: 26vw;
+        -webkit-text-stroke: 1px #f7f7f8;
+        height: 142px;
+        padding: 0px!important;
+        margin: 106px 1px 1px 1px;
+    }
+    .section-three .fourth-row .learnmore-header{
+        width:100%;
+    }
+    .section-three .fourth-row .learnmore-header p{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .section-four .taketheflowbro{
+        width:100%;
+    }
+    .section-four .flex-custom{
+        padding: 0px!important;
+    }
+    .section-four .requestitbro p{
+        font-size: 39px;
+    }
+    .section-four .taketheflowbro p{
+        font-size: 15px;
+    }
+    .section-four .flex-custom .form-top-text{
+        font-size: 16px;
+        margin-top: 35px;
+    }
+    .section-four .flex-custom input{
+        width: 100%;
+    }
+    .section-five p{
+        margin-right:8px;
+        text-align: center;
+    }
+    .section-five{
+        padding-bottom: 20px;
+    }
+    /*.section-one:END*/
+    /*footer:START*/
+    .foot-area{
+        width: 100%;
+        height: auto;
+    }
+
+    .footer-area{
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 40px;
+    }
+
+    .main-container{
+        padding: 0px;
+    }
+
+    .footer-paragraph p{
+        width: 100%;
+        padding: 0px;
+        font-size: 12px;
+    }
+
+    .footer-menu p{
+        font-size: 18px;
+    }
+
+    .redcolor p{
+        margin-top: 30px;
+        font-size: 20px;
+    }
+
+    .footer-menu1 .text-bold{
+        font-size: 13px;
+    }
+
+    .socialicons{
+        font-size: 14px;
+    }
+    .socialicon1{
+        font-size: 14px;
+    }
+    .list1{
+        margin: 10px;
+    }
+    .footer-menu-last p{
+        padding-bottom: 10%;
+        text-align: center;
+    }
+    .list2{
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+
+    }
+    .footer-menu-last .reserved p{
+        margin:0px;
+    }
+    .Copyright-area .footer-menu-last{
+        width: 100%;
+    }
+    .foot-area .container{
+        padding:0px;
+    }
+    .Copyright-area .footer-menu-last .terms{
+        margin:0px;
+        justify-content:center;
+    }
+    .Copyright-area{
+        margin-top: 10px;
+    }
+    .list2 p{
+        font-size: 10px;
+    }
+    .Copyright-area .footer-menu-last{
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center
+    }
+    .Copyright-area .footer-menu-last .terms p{
+        font-size: 8px;
+        padding: 0px 0%;
+        width: 78px;
+
+    }
+    .Copyright-area .footer-menu-last .terms p, .Copyright-area .footer-menu-last .terms a{
+        padding:0px;
+        margin:7px;
+        font-size:8px;
+        text-align: center;
+    }
+    .Copyright-area .reserved{
+        padding-left: 0px;
+        padding: 0 11px;
+
+    }
+
+    /*footer:END*/
+    /*==================== page product cat responsive START ======================*/
+    /*first section START*/
+    .first-section .HEADERS .col-7 img{
+        height: 50px;
+    }
+    .first-section .fourth-row .learnmore-header{
+        width: 84%;
+    }
+    .head-img{
+        width: 100%;
+    }
+    .first-section .third-row .header-text p{
+        font-size: 11vw;
+    }
+    /*first section END*/
+    /*second section START*/
+    .second-section .PTL-PEGASUS span{
+        font-size: 30px;
+    }
+    .second-section .PTL-PEGASUS p{
+        font-size: 26px;
+        padding-top: 6px;
+    }
+    .second-section .image-container .image34{
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    /*second section END*/
+    /*third section START*/
+    .third-section .PTC-PEGASUS span{
+        font-size: 30px;
+    }
+    .third-section .PTC-PEGASUS p{
+        font-size: 24px;
+        padding-top: 6px;
+    }
+    .third-section .image-container .image34{
+        width: 100%;
+    }
+    /*third section END*/
+
+    /*=============================== page product cat responsive END ========================*/
+
+    /*==================== page product Det responsive START ======================*/
+    /*first section START*/
+    .first-section{
+        background-size: 100% 100%;
+        height: auto;
+    }
+    .first-section .third-row .header-text p{
+        font-size: 12vw;
+    }
+    .header-image .head-img1{
+        width: 100%;
+        margin-top: 20%;
+    }
+    .first-section .text-area{
+        margin-top: 37%;
+    }
+    .first-section .fourth-row .learnmore-header{
+        padding-left: 0px;
+    }
+    .first-section .fourth-row .learnmore-header .button{
+        display: flex;
+        flex-direction: column;
+    }
+    .first-section .fourth-row .learnmore-header a{
+        margin-top: 20px;
+        font-size: 7px;
+    }
+    /*first section END*/
+    /*second section START*/
+    .first-section .yellow-section{
+        height: 100%;
+        padding-bottom: 41%;
+    }
+    .first-section .yellow-section .image-margin img{
+        width: 100%;
+    }
+    .first-section .yellow-section .image-margin h1{
+        font-size: 24px;
+        line-height: 27px;
+    }
+    .first-section .yellow-section .image-margin p{
+        font-size: 10px;
+    }
+    .first-section .yellow-section .image-margin {
+        margin-top: 209px;
+    }
+    .first-section .yellow-section .prodct{
+        font-size: 20vw;
+        margin-top: 25%;
+        font-weight: 900;
+    }
+
+
+    /*second section END*/
+    .Second-section .image-container .image {
+
+
+    }
+    .Second-section .image-container .overlay{
+        width: 260px;
+        height: 260px;
+        margin-left: 10px;
+    }
+    .Second-section .image-container .text h5{
+        font-size: 36px;
+    }
+    .Second-section .image-container{
+        margin: 5px 20px;
+    }
+    /*third section END*/
+    /*=============================== page product Det responsive END ========================*/
+
+
+    /*===========================page Media Det responsive START================================*/
+    .first-section .year .quarter span{
+        font-size: 30px;
+    }
+    .first-section .year .quarter p{
+        font-size: 30px;
+    }
+    .first-section .year .video-icon{
+        margin: 32% 0 0 57%;
+    }
+    .second-section .fourth-row .learnmore-header .button{
+        display: flex;
+        flex-direction: column;
+    }
+    .second-section .fourth-row .learnmore-header a{
+        margin-top: 20px;
+        font-size: 9px;
+    }
+    .second-section .fourth-row .BENEFITS h1{
+        font-size: 22vw;
+    }
+    .third-section .PTL-PEGASUS p{
+        font-size: 26px;
+    }
+    .third-section .PTL-PEGASUS span{
+        font-size: 30px;
+    }
+    .third-section .image-container .image34{
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    /* =============================page Media Det responsive END =========================*/
+    /*======================== page Text Det responsive START ======================*/
+    .first-section {
+        background-size: cover;
+        height: auto;
+    }
+    .first-section .second-row {
+        background-color: #191d24;
+        height: auto;
+        padding-top: 1px;
+    }
+    .first-section .text-area {
+        margin-top: 8%;
+    }
+    .first-section .fourth-row .learnmore-header a {
+        margin-top: 20px;
+        font-size: 8px;
+    }
+    .first-section .header-text p{
+        font-size: 26px;
+    }
+    .first-section .fourth-row .learnmore-header .button{
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+    }
+    .first-section .fourth-row .learnmore-header{
+        padding-left: 0px;
+    }
+
+    /*======================== page Text Det responsive END ======================*/
+
+    /*======================== page Text Land responsive START ======================*/
+    .first-section .fourth-row .about h1{
+        font-size: 22vw;
+    }
+    .first-section .yellow-section .image-margin .img-pegasus{
+        width: 100%;
+    }
+    .first-section .second-row {
+        background-color: #17191d;
+        height: auto;
+        padding-top: 1px;
+    }
+    .first-section .fourth-row .learnmore-header .button{
+        display: flex;
+        flex-direction: column;
+    }
+    .first-section .fourth-row .learnmore-header a{
+        margin: 20px;
+        font-size: 8px;
+    }
+    .first-section .yellow-section .image-margin .view-text1 h1{
+        font-size: 26px;
+    }
+    .first-section .yellow-section .image-margin .view-text h1{
+        font-size: 26px;
+    }
+    /*======================== page Text Land responsive END ======================*/
+}
+@media (max-width: 684px) and (min-width: 575px){
+
+    .section-one .HEADERS .col-5{
+        padding-right: 25px;
+        padding-top: 9px;
+    }
+    .section-four .taketheflowbro p br{
+        display:none
+    }
+    .custom-container{
+        max-width: 100%;
+    }
+    /*.section-one:START*/
+    .section-one .HEADERS .col-7 img{
+        width: auto;
+        height: 65px;
+        padding-top: 8px;
+    }
+    .responsive-column{
+        display: flex;
+        flex-direction: column!important;
+        text-align: left!important;
+    }
+    .menu-button{
+        width: 6%;
+        height: 20px;
+    }
+    /*.socialicons:first-child{*/
+    /*margin-left: 0px;*/
+    /*}*/
+
+    .menu-button  div{
+        border: 1px solid white;
+        height: 1px;
+        margin-bottom: 9px;
+    }
+    .for-responsive-only{
+        display: block;
+        height: 50px;
+        margin-top: 18px;
+        margin-right: 20px;
+    }
+    .for-responsive-only .custom-container{
+        display:flex;
+        justify-content: flex-end;
+    }
+    .showhide{
+        display:none;
+    }
+    .responsive-no-off{
+        margin-left: 0px!important;
+    }
+    .give-amazing-margin{
+        margin-left: 0px;
+    }
+    .footer-menu-last{
+        display:flex;
+        flex-direction:column;
+
+    }
+    .custom-flex-footer{
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+    }
+    .another-left{
+        margin-left: 0px;
+    }
+    .social-icons{
+        flex: 0 0 100%;
+        max-width: 100%;
+        width: 100%;
+        text-align: center;
+    }
+    .all-width{
+
+        flex: 0 0 100%;
+        max-width: 100%;
+        width: 100%;
+        text-align: center;
+    }
+    .responsive-flex{
+        display: flex;
+        flex-direction: column;
+    }
+    .section-one .third-row .header-text p{
+        font-size: 36px;
+    }
+    .section-one .fourth-row .learnmore-header{
+        width:100%;
+    }
+    .section-two .fourth-row .learnmore-header{
+        width:100%;
+    }
+    .section-two .big-text p{
+        font-size: 21vw;
+        height: 202px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+    .section-three .big-text p{
+        font-size: 26vw;
+        -webkit-text-stroke: 1px #f7f7f8;
+        height: 142px;
+        padding: 0px!important;
+        margin: 106px 1px 1px 1px;
+    }
+    .section-three .fourth-row .learnmore-header{
+        width:100%;
+    }
+    .section-three .fourth-row .learnmore-header p{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .section-four .taketheflowbro{
+        width:100%;
+    }
+    .section-four .flex-custom{
+        padding: 0px!important;
+    }
+    .section-four .requestitbro p{
+        font-size: 39px;
+    }
+    .section-four .taketheflowbro p{
+        font-size: 15px;
+    }
+    .section-four .flex-custom .form-top-text{
+        font-size: 16px;
+        margin-top: 35px;
+    }
+    .section-four .flex-custom input{
+        width: 100%;
+    }
+    .section-five p{
+        margin-right: 10px;
+        text-align: center;
+    }
+    .section-five{
+        padding-bottom: 0px;
+    }
+    /*.section-one:END*/
+    /*footer:START*/
+    .foot-area{
+        width: 100%;
+        height: auto;
+    }
+
+    .footer-area{
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 40px;
+    }
+
+    .main-container{
+        padding: 0px;
+    }
+
+    .footer-paragraph p{
+        width: 100%;
+        padding: 0px;
+        font-size: 12px;
+    }
+
+    .footer-menu p{
+        font-size: 18px;
+    }
+
+    .redcolor p{
+        margin-top: 30px;
+        font-size: 20px;
+    }
+
+    .footer-menu1 .text-bold{
+        font-size: 13px;
+    }
+
+    .socialicons{
+        font-size: 14px;
+    }
+    .socialicon1{
+        font-size: 14px;
+    }
+    .list1{
+        margin: 10px;
+    }
+    .footer-menu-last p{
+        padding-bottom: 10%;
+        text-align: center;
+    }
+    .list2{
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+
+    }
+    .footer-menu-last .reserved p{
+        margin:0px;
+    }
+    .Copyright-area .footer-menu-last{
+        width: 100%;
+    }
+    .foot-area .container{
+        padding:0px;
+    }
+    .Copyright-area .footer-menu-last .terms{
+        margin:0px;
+        justify-content:center;
+    }
+    .Copyright-area{
+        margin-top: 10px;
+    }
+    .list2 p{
+        font-size: 10px;
+    }
+    .Copyright-area .footer-menu-last{
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center
+    }
+    .Copyright-area .footer-menu-last .terms p{
+        font-size: 8px;
+        padding: 0px 0%;
+        width: 78px;
+
+    }
+    .Copyright-area .footer-menu-last .terms p, .Copyright-area .footer-menu-last .terms a{
+        padding:0px;
+        margin:7px;
+        font-size:8px;
+        text-align: center;
+    }
+    .Copyright-area .reserved{
+        padding-left: 0px;
+        padding: 0 11px;
+
+    }
+
+    /*footer:END*/
+    /*==================== page product cat responsive START ======================*/
+    /*first section START*/
+    .first-section .HEADERS .col-7 img{
+        height: 50px;
+    }
+    .first-section .fourth-row .learnmore-header{
+        width: 84%;
+    }
+    .head-img{
+        width: 100%;
+    }
+    .first-section .third-row .header-text p{
+        font-size: 11vw;
+    }
+    /*first section END*/
+    /*second section START*/
+    .second-section .PTL-PEGASUS span{
+        font-size: 30px;
+    }
+    .second-section .PTL-PEGASUS p{
+        font-size: 26px;
+        padding-top: 6px;
+    }
+    .second-section .image-container .image34{
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    /*second section END*/
+    /*third section START*/
+    .third-section .PTC-PEGASUS span{
+        font-size: 30px;
+    }
+    .third-section .PTC-PEGASUS p{
+        font-size: 24px;
+        padding-top: 6px;
+    }
+    .third-section .image-container .image34{
+        width: 100%;
+    }
+    /*third section END*/
+
+    /*=============================== page product cat responsive END ========================*/
+    /*==================== page product Det responsive START ======================*/
+    /*first section START*/
+    .first-section{
+        background-size: 100% 100%;
+        height: auto;
+    }
+    .first-section .third-row .header-text p{
+        font-size: 12vw;
+    }
+    .header-image .head-img1{
+        width: 100%;
+        margin-top: 20%;
+    }
+    .first-section .text-area{
+        margin-top: 37%;
+    }
+    .first-section .fourth-row .learnmore-header{
+        padding-left: 0px;
+    }
+    .first-section .fourth-row .learnmore-header .button{
+        display: flex;
+        flex-direction: column;
+    }
+    .first-section .fourth-row .learnmore-header a{
+        margin-top: 20px;
+        font-size: 7px;
+    }
+    /*first section END*/
+    /*second section START*/
+    .first-section .yellow-section{
+        height: 100%;
+        padding-bottom: 41%;
+    }
+    .first-section .yellow-section .image-margin img{
+        width: 100%;
+    }
+    .first-section .yellow-section .image-margin h1{
+        font-size: 24px;
+        line-height: 27px;
+    }
+    .first-section .yellow-section .image-margin p{
+        font-size: 10px;
+    }
+    .first-section .yellow-section .image-margin {
+        margin-top: 209px;
+    }
+    .first-section .yellow-section .prodct{
+        font-size: 20vw;
+        margin-top: 25%;
+        font-weight: 900;
+    }
+
+
+    /*second section END*/
+    .Second-section .image-container .image {
+
+
+    }
+    .Second-section .image-container .overlay{
+        width: 260px;
+        height: 260px;
+        margin-left: 10px;
+    }
+    .Second-section .image-container .text h5{
+        font-size: 36px;
+    }
+    .Second-section .image-container{
+        margin: 5px 20px;
+    }
+    /*third section END*/
+    /*=============================== page product Det responsive END ========================*/
+
+
+
+    /*=======================page Media Det responsive START===========================*/
+    .first-section .year .quarter span{
+        font-size: 30px;
+    }
+    .first-section .year .quarter p{
+        font-size: 30px;
+    }
+    .first-section .year .video-icon{
+        margin: 32% 0 0 0%;
+    }
+    .second-section .fourth-row .learnmore-header .button{
+        display: flex;
+        flex-direction: column;
+    }
+    .second-section .fourth-row .learnmore-header a{
+        margin-top: 20px;
+        font-size: 9px;
+    }
+    .second-section .fourth-row .BENEFITS h1{
+        font-size: 22vw;
+    }
+    .third-section .PTL-PEGASUS p{
+        font-size: 26px;
+    }
+    .third-section .PTL-PEGASUS span{
+        font-size: 30px;
+    }
+    .third-section .image-container .image34{
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    /*========================page Media Det responsive END =======================*/
+    /*======================== page Text Det responsive START ======================*/
+    .first-section {
+        background-size: cover;
+        height: auto;
+    }
+    .first-section .second-row {
+        background-color: #191d24;
+        height: auto;
+        padding-top: 1px;
+    }
+    .first-section .text-area {
+        margin-top: 8%;
+    }
+    .first-section .fourth-row .learnmore-header a {
+        margin-top: 20px;
+        font-size: 8px;
+    }
+    .first-section .header-text p{
+        font-size: 26px;
+    }
+    .first-section .fourth-row .learnmore-header .button{
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+    }
+    .first-section .fourth-row .learnmore-header{
+        padding-left: 0px;
+    }
+
+    /*======================== page Text Det responsive END ======================*/
+
+    /*======================== page Text Land responsive START ======================*/
+    .first-section .fourth-row .about h1{
+        font-size: 22vw;
+    }
+    .first-section .yellow-section .image-margin .img-pegasus{
+        width: 100%;
+    }
+    .first-section .second-row {
+        background-color: #17191d;
+        height: auto;
+        padding-top: 1px;
+    }
+    .first-section .fourth-row .learnmore-header .button{
+        display: flex;
+        flex-direction: column;
+    }
+    .first-section .fourth-row .learnmore-header a{
+        margin: 20px;
+        font-size: 8px;
+    }
+    .first-section .yellow-section .image-margin .view-text1 h1{
+        font-size: 26px;
+    }
+    .first-section .yellow-section .image-margin .view-text h1{
+        font-size: 26px;
+    }
+    /*======================== page Text Land responsive END ======================*/
+}
+@media (max-width: 767px) and (min-width: 685px){
+
+    .section-one .HEADERS .col-5{
+        padding-right: 25px;
+        padding-top: 9px;
+    }
+    .section-four .taketheflowbro p br{
+        display:none
+    }
+    .custom-container{
+        max-width: 100%;
+    }
+    /*.section-one:START*/
+    .section-one .HEADERS .col-7 img{
+        width: auto;
+        height: 65px;
+        padding-top: 8px;
+    }
+    .responsive-column{
+        display: flex;
+        flex-direction: column!important;
+        text-align: left!important;
+    }
+    .menu-button{
+        width: 6%;
+        height: 20px;
+    }
+    .socialicons:first-child{
+        margin-left: 0px;
+    }
+    .menu-button  div{
+        border: 1px solid white;
+        height: 1px;
+        margin-bottom: 9px;
+    }
+    .for-responsive-only{
+        display: block;
+        height: 50px;
+        margin-top: 18px;
+        margin-right: 20px;
+    }
+    .for-responsive-only .custom-container{
+        display:flex;
+        justify-content: flex-end;
+    }
+    .showhide{
+        display:none;
+    }
+    .responsive-no-off{
+        margin-left: 0px!important;
+    }
+    .give-amazing-margin{
+        margin-left: 0px;
+    }
+    .footer-menu-last{
+        display:flex;
+        flex-direction:column;
+
+    }
+    .custom-flex-footer{
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+    }
+    .another-left{
+        margin-left: 0px;
+    }
+    .social-icons{
+        flex: 0 0 100%;
+        max-width: 100%;
+        width: 100%;
+        text-align: center;
+    }
+    .all-width{
+
+        flex: 0 0 100%;
+        max-width: 100%;
+        width: 100%;
+        text-align: center;
+    }
+    .responsive-flex{
+        display: flex;
+        flex-direction: column;
+    }
+    .section-one .third-row .header-text p{
+        font-size: 36px;
+    }
+    .section-one .fourth-row .learnmore-header{
+        width:100%;
+    }
+    .section-two .fourth-row .learnmore-header{
+        width:100%;
+    }
+    .section-two .big-text p{
+        font-size: 21vw;
+        height: 202px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+    .section-three .big-text p{
+        font-size: 26vw;
+        -webkit-text-stroke: 1px #f7f7f8;
+        height: 142px;
+        padding: 0px!important;
+        margin: 106px 1px 1px 1px;
+    }
+    .section-three .fourth-row .learnmore-header{
+        width:100%;
+    }
+    .section-three .fourth-row .learnmore-header p{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .section-four .taketheflowbro{
+        width:100%;
+    }
+    .section-four .flex-custom{
+        padding: 0px!important;
+    }
+    .section-four .requestitbro p{
+        font-size: 39px;
+    }
+    .section-four .taketheflowbro p{
+        font-size: 15px;
+    }
+    .section-four .flex-custom .form-top-text{
+        font-size: 16px;
+        margin-top: 35px;
+    }
+    .section-four .flex-custom input{
+        width: 100%;
+    }
+    .section-five p{
+        margin-right:10px;
+        text-align: center;
+    }
+    .section-five{
+        padding-bottom: 0px;
+    }
+    /*.section-one:END*/
+    /*footer:START*/
+    .foot-area{
+        width: 100%;
+        height: auto;
+    }
+
+    .footer-area{
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 40px;
+    }
+
+    .main-container{
+        padding: 0px;
+    }
+
+    .footer-paragraph p{
+        width: 100%;
+        padding: 0px;
+        font-size: 12px;
+    }
+
+    .footer-menu p{
+        font-size: 18px;
+    }
+
+    .redcolor p{
+        margin-top: 30px;
+        font-size: 20px;
+    }
+
+    .footer-menu1 .text-bold{
+        font-size: 13px;
+    }
+
+    .socialicons{
+        font-size: 14px;
+    }
+    .socialicon1{
+        font-size: 14px;
+    }
+    .list1{
+        margin: 10px;
+    }
+    .footer-menu-last p{
+        padding-bottom: 10%;
+        text-align: center;
+    }
+    .list2{
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+
+    }
+    .footer-menu-last .reserved p{
+        margin:0px;
+    }
+    .Copyright-area .footer-menu-last{
+        width: 100%;
+    }
+    .foot-area .container{
+        padding:0px;
+    }
+    .Copyright-area .footer-menu-last .terms{
+        margin:0px;
+        justify-content:center;
+    }
+    .Copyright-area{
+        margin-top: 10px;
+    }
+    .list2 p{
+        font-size: 10px;
+    }
+    .Copyright-area .footer-menu-last{
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center
+    }
+    .Copyright-area .footer-menu-last .terms p{
+        font-size: 8px;
+        padding: 0px 0%;
+        width: 78px;
+
+    }
+    .Copyright-area .footer-menu-last .terms p, .Copyright-area .footer-menu-last .terms a{
+        padding:0px;
+        margin:7px;
+        font-size:8px;
+        text-align: center;
+    }
+    .Copyright-area .reserved{
+        padding-left: 0px;
+        padding: 0 11px;
+
+    }
+
+    /*footer:END*/
+    /*==================== page product cat responsive START ======================*/
+    /*first section START*/
+    .first-section .HEADERS .col-7 img{
+        height: 50px;
+    }
+    .first-section .fourth-row .learnmore-header{
+        width: 84%;
+    }
+    .head-img{
+        width: 100%;
+    }
+    .first-section .third-row .header-text p{
+        font-size: 11vw;
+    }
+    /*first section END*/
+    /*second section START*/
+    .second-section .PTL-PEGASUS span{
+        font-size: 30px;
+    }
+    .second-section .PTL-PEGASUS p{
+        font-size: 26px;
+        padding-top: 6px;
+    }
+    .second-section .image-container .image34{
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    /*second section END*/
+    /*third section START*/
+    .third-section .PTC-PEGASUS span{
+        font-size: 30px;
+    }
+    .third-section .PTC-PEGASUS p{
+        font-size: 24px;
+        padding-top: 6px;
+    }
+    .third-section .image-container .image34{
+        width: 100%;
+    }
+    /*third section END*/
+
+    /*=============================== page product cat responsive END ========================*/
+
+    /*==================== page product Det responsive START ======================*/
+    /*first section START*/
+    .first-section .yellow-section{
+        height: 633px;
+    }
+    .first-section .yellow-section .view-area{
+        margin-top: 9%;
+    }
+    .first-section .header-image{
+        margin-top: 10%;
+    }
+    .first-section .text-area{
+        margin-top: 31%;
+    }
+    .first-section .fourth-row .learnmore-header a{
+        padding: 14px 18px;
+    }
+    .first-section .SPECIFICATIONS h1{
+        font-size: 24px;
+    }
+    .first-section .SPECIFICATIONS p{
+        font-size: 14px;
+    }
+    .first-section .fourth-row .learnmore-header p{
+        font-size: 14px;
+    }
+    /*first section END*/
+    /*second section START*/
+    .first-section .yellow-section .image-margin img {
+        width: 271px;
+        height: 257px;
+        margin-left: -62px;
+    }
+    .first-section .yellow-section .image-margin h1{
+        font-size: 18px;
+        line-height: 1.50;
+    }
+    .first-section .yellow-section .image-margin p{
+        font-size: 9px;
+    }
+    .first-section .yellow-section .prodct{
+        font-size: 21vw;
+        padding-top: 28%;
+    }
+
+
+    /*second section END*/
+
+    /*=============================== page product Det responsive END ========================*/
+
+    /*=======================page Media Det responsive START===========================*/
+    .first-section .year .quarter span{
+        font-size: 30px;
+    }
+    .first-section .year .quarter p{
+        font-size: 30px;
+    }
+    .first-section .year .video-icon{
+        margin: 32% 0 0 0%;
+    }
+    .second-section .fourth-row .learnmore-header .button{
+        display: flex;
+        flex-direction: column;
+    }
+    .second-section .fourth-row .learnmore-header a{
+        margin-top: 20px;
+        font-size: 9px;
+    }
+    .second-section .fourth-row .BENEFITS h1{
+        font-size: 22vw;
+    }
+    .third-section .PTL-PEGASUS p{
+        font-size: 26px;
+    }
+    .third-section .PTL-PEGASUS span{
+        font-size: 30px;
+    }
+    .third-section .image-container .image34{
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    /*========================page Media Det responsive END =======================*/
+    /*======================== page Text Det responsive START ======================*/
+    .first-section {
+        background-size: cover;
+        height: auto;
+    }
+    .first-section .second-row {
+        background-color: #191d24;
+        height: auto;
+        padding-top: 1px;
+    }
+    .first-section .text-area {
+        margin-top: 0%;
+    }
+    .first-section .fourth-row .learnmore-header a {
+        margin-top: 20px;
+        font-size: 8px;
+    }
+    .first-section .header-text p{
+        font-size: 26px;
+    }
+    .first-section .fourth-row .learnmore-header .button{
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+    }
+    .first-section .fourth-row .learnmore-header{
+        padding-left: 0px;
+    }
+
+    /*======================== page Text Det responsive END ======================*/
+
+    /*======================== page Text Land responsive START ======================*/
+    .first-section .fourth-row .about h1{
+        font-size: 22vw;
+    }
+    .first-section .yellow-section .image-margin .img-pegasus{
+        width: 100%;
+    }
+    .first-section .second-row {
+        background-color: #17191d;
+        height: auto;
+        padding-top: 1px;
+    }
+    .first-section .fourth-row .learnmore-header .button{
+        display: flex;
+        flex-direction: column;
+    }
+    .first-section .fourth-row .learnmore-header a{
+        margin: 20px;
+        font-size: 8px;
+    }
+    .first-section .yellow-section .image-margin .view-text1 h1{
+        font-size: 26px;
+    }
+    .first-section .yellow-section .image-margin .view-text h1{
+        font-size: 26px;
+    }
+    /*======================== page Text Land responsive END ======================*/
+
+}
+@media (max-width: 991px) and (min-width: 768px){
+
+    .section-one .HEADERS .col-5{
+        padding-right: 25px;
+        padding-top: 9px;
+    }
+    .section-four .taketheflowbro p br{
+        display:none;
+    }
+    .custom-container{
+        max-width: 100%;
+    }
+    /*.section-one:START*/
+    .section-one .HEADERS .col-7 img{
+        width: auto;
+        height: 65px;
+        padding-top: 8px;
+    }
+    .section-four .flex-custom{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .section-four .flex-custom a{
+        margin-left:7%;
+    }
+    .responsive-column{
+        display: flex;
+
+        text-align: left!important;
+    }
+    .menu-button{
+        width: 10%;
+        height: 20px;
+    }
+    .socialicons:first-child{
+        margin-left: 0px;
+    }
+    .menu-button  div{
+        border: 1px solid black;
+        height: 1px;
+        margin-bottom: 9px;
+    }
+    .for-responsive-only{
+        display: none;
+        height: 50px;
+        margin-top: 18px;
+        margin-left: 20px;
+    }
+    .showhide{
+        display:inline;
+    }
+    .responsive-no-off{
+        margin-left: 0px!important;
+    }
+    .give-amazing-margin{
+        margin-left: 0px;
+    }
+    .footer-menu-last{
+        display:flex;
+        flex-direction:column;
+
+    }
+    .custom-flex-footer{
+        display: flex;
+        flex-direction: row;
+        padding: 0px;
+    }
+    .another-left{
+        margin-left: 0px;
+    }
+    .social-icons{
+        flex: 0 0 100%;
+        max-width: 24%;
+        width: 24%;
+        text-align: center;
+        padding-top:33px;
+    }
+    .all-width{
+
+        flex: 0 0 100%;
+        max-width: 24%;
+        width: 24%;
+        text-align: center;
+    }
+    .responsive-flex{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .section-one .third-row .header-text p{
+        font-size: 36px;
+    }
+
+    .section-one .fourth-row .learnmore-header{
+        width:50%;
+    }
+
+    .section-two .fourth-row .learnmore-header{
+        width:50%;
+    }
+
+    .section-three .big-text .col-12{
+        padding: 50px 0px!important;
+    }
+
+    .section-two .big-text p{
+        font-size: 20.5vw;
+        height: 202px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        margin-top: 58px;
+    }
+
+    .section-three .big-text p{
+        font-size: 26vw;
+        -webkit-text-stroke: 1.3px #f7f7f8;
+        height: 142px;
+        padding: 0px!important;
+        margin: 106px 1px 1px 1px;
+    }
+
+    .section-three .fourth-row .learnmore-header{
+        width:50%;
+    }
+
+    .section-three .fourth-row .learnmore-header p{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .section-four .taketheflowbro{
+        width:50%;
+    }
+
+    .section-four .flex-custom{
+        padding: 0px!important;
+        padding-left: 10%;
+    }
+    .section-four .requestitbro p{
+        font-size: 39px;
+    }
+    .section-four .taketheflowbro p{
+        font-size: 15px;
+    }
+    .section-four .flex-custom .form-top-text{
+        font-size: 16px;
+        margin-top: 35px;
+        margin-left: 50px;
+    }
+    .section-four .flex-custom input{
+        width: 50%;
+        margin-left:50px;
+    }
+    .section-five p{
+        margin-right: 25px;
+        text-align: center;
+    }
+    .social-icons{
+        margin-right:0px;
+    }
+    .section-five{
+        padding-bottom: 0px;
+    }
+    /*.section-one:END*/
+    /*footer:START*/
+    .foot-area{
+        width: 100%;
+        height: auto;
+    }
+
+    .footer-area{
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 40px;
+    }
+
+    .main-container{
+        padding: 0px;
+    }
+
+    .footer-paragraph p{
+        width: 100%;
+        padding: 0px;
+        font-size: 12px;
+    }
+
+    .footer-menu p{
+        font-size: 18px;
+    }
+
+    /*.redcolor p{*/
+    /*margin-top: 30px;*/
+    /*font-size: 20px;*/
+    /*}*/
+
+    .footer-menu1 .text-bold{
+        font-size: 13px;
+    }
+
+    .socialicons{
+        font-size: 25px;
+    }
+    .socialicon1{
+        font-size: 14px;
+    }
+    .list1{
+        margin: 10px;
+    }
+    .footer-menu-last p{
+        padding-bottom: 10%;
+        text-align: center;
+    }
+    .list2{
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+
+    }
+    .footer-menu-last .reserved p{
+        margin:0px;
+    }
+    .Copyright-area .footer-menu-last{
+        width: 100%;
+    }
+    .foot-area .container{
+        padding:0px;
+    }
+    .Copyright-area .footer-menu-last .terms{
+        margin:0px;
+        justify-content:center;
+    }
+    .Copyright-area{
+        margin-top: 10px;
+    }
+    .list2 p{
+        font-size: 10px;
+    }
+    .Copyright-area .footer-menu-last{
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center
+    }
+    .Copyright-area .footer-menu-last .terms p{
+        font-size: 8px;
+        padding: 0px 0%;
+        width: 78px;
+
+    }
+    .Copyright-area .footer-menu-last .terms p, .Copyright-area .footer-menu-last .terms a{
+        padding:0px;
+        margin:7px;
+        font-size:8px;
+        text-align: center;
+    }
+    .Copyright-area .reserved{
+        padding-left: 0px;
+        padding: 0 11px;
+
+    }
+
+    /*footer:END*/
+
+    /*====================== page product cat START=======================*/
+    .second-section .image-container .image34{
+        width: 100%;
+        margin-left: 0px;
+    }
+    .second-section .PTL-PEGASUS p{
+        font-size: 50px;
+    }
+    .second-section .PTL-PEGASUS span{
+        font-size: 50px
+    }
+    .third-section .PTC-PEGASUS span{
+        font-size: 50px
+    }
+    .third-section .PTC-PEGASUS p{
+        font-size: 50px
+    }
+
+    /*====================== page product cat END =======================*/
+    /*==================== page product Det responsive START ======================*/
+    /*first section START*/
+    .first-section .header-image{
+        margin-top: 10%;}
+    /*}*/
+    /*.first-section .text-area{*/
+    /*margin-top: 31%;*/
+    /*}*/
+    .first-section .fourth-row .learnmore-header a{
+        padding: 14px 18px;
+    }
+    .first-section .SPECIFICATIONS h1{
+        font-size: 24px;
+    }
+    .first-section .SPECIFICATIONS p{
+        font-size: 14px;
+    }
+    .first-section .fourth-row .learnmore-header p{
+        font-size: 14px;
+    }
+    /*first section END*/
+    /*second section START*/
+    /* .first-section .yellow-section{
+       height: 633px;
+    } */
+    .first-section .yellow-section .view-area{
+        margin-top: 9%;
+    }
+    .first-section .yellow-section .image-margin img {
+        width: 271px;
+        height: 257px;
+        margin-left: -62px;
+    }
+    .first-section .yellow-section .image-margin h1{
+        font-size: 18px;
+        line-height: 1.50;
+    }
+    .first-section .yellow-section .image-margin p{
+        font-size: 9px;
+    }
+    .first-section .yellow-section .prodct{
+        font-size: 21vw;
+        padding-top: 28%;
+    }
+
+    /*second section END*/
+
+    /*=============================== page product Det responsive END ========================*/
+    /*======================== page Text Det responsive START ======================*/
+
+
+    .first-section .fourth-row .learnmore-header a {
+        margin-top: 20px;
+        font-size: 8px;
+    }
+
+    .first-section .header-text p{
+        font-size: 26px;
+    }
+    .first-section .fourth-row .learnmore-header .button{
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /*======================== page Text Det responsive END ======================*/
+
+    /*======================== page Text Land responsive START ======================*/
+    .first-section .fourth-row .about h1{
+        font-size: 21vw;
+    }
+    .first-section .yellow-section .image-margin .img-pegasus{
+        width: 100%;
+    }
+    .first-section .yellow-section .image-margin .view-text1 h1{
+        font-size: 16px;
+    }
+    .first-section .yellow-section .image-margin .view-text h1{
+        font-size: 16px;
+    }
+    .first-section .fourth-row .learnmore-header .button {
+        margin: 41px;
+    }
+    .section-four .requestitbro p{
+        padding-top: 182px;
+    }
+    .second-section .fourth-row .BENEFITS h1{
+        font-size: 21vw;
+    }
+    .third-section .image-container .image34{
+        width: 100%;
+        margin-left: 0px;
+    }
+    .second-section .fourth-row .learnmore-header .button{
+        display: flex;
+    }
+    .second-section .fourth-row .learnmore-header a{
+        font-size: 8px;
+    }
+    /*======================== page Text Land responsive END ======================*/
+}
+@media (max-width: 1023px) and (min-width: 992px){
+
+    .section-one .HEADERS .col-5{
+        padding-right: 25px;
+        padding-top: 9px;
+    }
+    .section-four .taketheflowbro p br{
+        display:none;
+    }
+    .custom-container{
+        max-width: 100%;
+    }
+    /*.section-one:START*/
+    .section-one .HEADERS .col-7 img{
+        width: auto;
+        height: 65px;
+        padding-top: 8px;
+    }
+    .section-four .flex-custom{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .section-four .flex-custom a{
+        margin-left:7%;
+    }
+    .responsive-column{
+        display: flex;
+
+        text-align: left!important;
+    }
+    .menu-button{
+        width: 10%;
+        height: 20px;
+    }
+    .socialicons:first-child{
+        margin-left: 0px;
+    }
+    .menu-button  div{
+        border: 1px solid black;
+        height: 1px;
+        margin-bottom: 9px;
+    }
+    .for-responsive-only{
+        display: none;
+        height: 50px;
+        margin-top: 18px;
+        margin-left: 20px;
+    }
+    .showhide{
+        display:inline;
+    }
+    .responsive-no-off{
+        margin-left: 0px!important;
+    }
+    .give-amazing-margin{
+        margin-left: 0px;
+    }
+    .footer-menu-last{
+        display:flex;
+        flex-direction:column;
+
+    }
+    .custom-flex-footer{
+        display: flex;
+        flex-direction: row;
+        padding: 0px;
+    }
+    .another-left{
+        margin-left: 0px;
+    }
+    .social-icons{
+        flex: 0 0 100%;
+        max-width: 24%;
+        width: 24%;
+        text-align: center;
+        padding-top:33px;
+    }
+    .all-width{
+
+        flex: 0 0 100%;
+        max-width: 24%;
+        width: 24%;
+        text-align: center;
+    }
+    .responsive-flex{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .section-one .third-row .header-text p{
+        font-size: 36px;
+    }
+
+    .section-one .fourth-row .learnmore-header{
+        width:50%;
+    }
+
+    .section-two .fourth-row .learnmore-header{
+        width:50%;
+    }
+
+    .section-three .big-text .col-12{
+        padding: 50px 0px!important;
+    }
+
+    .section-two .big-text p{
+        font-size: 20.5vw;
+        height: 202px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        margin-top: 58px;
+    }
+
+    .section-three .big-text p{
+        font-size: 26vw;
+        -webkit-text-stroke: 2.3px #f7f7f8;
+        height: 142px;
+        padding: 0px!important;
+        margin: 106px 1px 1px 1px;
+    }
+
+    .section-three .fourth-row .learnmore-header{
+        width:50%;
+    }
+
+    .section-three .fourth-row .learnmore-header p{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .section-four .taketheflowbro{
+        width:50%;
+    }
+
+    .section-four .flex-custom{
+        padding: 0px!important;
+        padding-left: 10%;
+    }
+    .section-four .requestitbro p{
+        font-size: 39px;
+    }
+    .section-four .taketheflowbro p{
+        font-size: 15px;
+    }
+    .section-four .flex-custom .form-top-text{
+        font-size: 16px;
+        margin-top: 35px;
+        margin-left: 50px;
+    }
+    .section-four .flex-custom input{
+        width: 50%;
+        margin-left:50px;
+    }
+    .section-five p{
+        margin-right: 25px;
+        text-align: center;
+    }
+    .social-icons{
+        margin-right:0px;
+    }
+    .section-five{
+        padding-bottom: 0px;
+    }
+    /*.section-one:END*/
+    /*footer:START*/
+    .foot-area{
+        width: 100%;
+        height: auto;
+    }
+
+    .footer-area{
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 40px;
+    }
+
+    .main-container{
+        padding: 0px;
+    }
+
+    .footer-paragraph p{
+        width: 100%;
+        padding: 0px;
+        font-size: 12px;
+    }
+
+    .footer-menu p{
+        font-size: 18px;
+    }
+
+    .redcolor p{
+        margin-top: 30px;
+        font-size: 20px;
+    }
+
+    .footer-menu1 .text-bold{
+        font-size: 13px;
+    }
+
+    .socialicons{
+        font-size: 25px;
+    }
+    .socialicon1{
+        font-size: 14px;
+    }
+    .list1{
+        margin: 10px;
+    }
+    .footer-menu-last p{
+        padding-bottom: 10%;
+        text-align: center;
+    }
+    .list2{
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+
+    }
+    .footer-menu-last .reserved p{
+        margin:0px;
+    }
+    .Copyright-area .footer-menu-last{
+        width: 100%;
+    }
+    .foot-area .container{
+        padding:0px;
+    }
+    .Copyright-area .footer-menu-last .terms{
+        margin:0px;
+        justify-content:center;
+    }
+    .Copyright-area{
+        margin-top: 10px;
+    }
+    .list2 p{
+        font-size: 10px;
+    }
+    .Copyright-area .footer-menu-last{
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center
+    }
+    .Copyright-area .footer-menu-last .terms p{
+        font-size: 8px;
+        padding: 0px 0%;
+        width: 78px;
+
+    }
+    .Copyright-area .footer-menu-last .terms p, .Copyright-area .footer-menu-last .terms a{
+        padding:0px;
+        margin:7px;
+        font-size:8px;
+        text-align: center;
+    }
+    .Copyright-area .reserved{
+        padding-left: 0px;
+        padding: 0 11px;
+
+    }
+
+    /*footer:END*/
+
+    /*====================== page product cat START=======================*/
+    .second-section .image-container .image34{
+        width: 100%;
+        margin-left: 0px;
+    }
+    .second-section .PTL-PEGASUS p{
+        font-size: 50px;
+    }
+    .second-section .PTL-PEGASUS span{
+        font-size: 50px
+    }
+    .third-section .PTC-PEGASUS span{
+        font-size: 50px
+    }
+    .third-section .PTC-PEGASUS p{
+        font-size: 50px
+    }
+
+    /*====================== page product cat END =======================*/
+    /*==================== page product Det responsive START ======================*/
+    /*first section START*/
+    .first-section .header-image{
+        margin-top: 10%;
+    }
+    .first-section .text-area{
+        margin-top: 31%;
+    }
+    .first-section .fourth-row .learnmore-header a{
+        padding: 14px 18px;
+    }
+    .first-section .SPECIFICATIONS h1{
+        font-size: 24px;
+    }
+    .first-section .SPECIFICATIONS p{
+        font-size: 14px;
+    }
+    .first-section .fourth-row .learnmore-header p{
+        font-size: 14px;
+    }
+    /*first section END*/
+    /*second section START*/
+    .first-section .yellow-section{
+        height: 633px;
+    }
+    .first-section .yellow-section .view-area{
+        margin-top: 9%;
+    }
+    .first-section .yellow-section .image-margin img {
+        width: 271px;
+        height: 257px;
+        margin-left: -62px;
+    }
+    .first-section .yellow-section .image-margin h1{
+        font-size: 18px;
+        line-height: 1.50;
+    }
+    .first-section .yellow-section .image-margin p{
+        font-size: 9px;
+    }
+    .first-section .yellow-section .prodct{
+        font-size: 21vw;
+        padding-top: 28%;
+    }
+    /*======================== page Text Land responsive START ======================*/
+    .first-section .fourth-row .about h1{
+        font-size: 21vw;
+    }
+    .first-section .second-row {
+        background-color: #17191d;
+        height: auto;
+        padding-top: 1px;
+    }
+    .first-section .yellow-section .image-margin .img-pegasus{
+        width: 100%;
+    }
+    .first-section .yellow-section .image-margin .view-text1 h1{
+        font-size: 16px;
+    }
+    .first-section .yellow-section .image-margin .view-text h1{
+        font-size: 16px;
+    }
+    .first-section .fourth-row .learnmore-header .button {
+        margin: 41px;
+    }
+    .section-four .requestitbro p{
+        padding-top: 182px;
+    }
+
+    /*======================== page Text Land responsive END ======================*/
+    /*second section END*/
+
+    /*=============================== page product Det responsive END ========================*/
+}
+@media (max-width: 1199px) and (min-width: 1024px){
+
+    .section-one .HEADERS .col-5{
+        padding-right: 25px;
+        padding-top: 9px;
+    }
+    .section-four .taketheflowbro p br{
+        display:none;
+    }
+    .custom-container{
+        max-width: 100%;
+    }
+    /*.section-one:START*/
+    .section-one .HEADERS .col-7 img{
+        width: auto;
+        height: 65px;
+        padding-top: 8px;
+    }
+    .section-four .flex-custom{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .section-four .flex-custom a{
+        margin-left:7%;
+    }
+    .responsive-column{
+        display: flex;
+
+        text-align: left!important;
+    }
+    .menu-button{
+        width: 10%;
+        height: 20px;
+        display: none;
+    }
+    .socialicons:first-child{
+        margin-left: 0px;
+    }
+    .menu-button  div{
+        border: 1px solid black;
+        height: 1px;
+        margin-bottom: 9px;
+    }
+    .for-responsive-only{
+        /*display: none;*/
+        height: 50px;
+        margin-top: 18px;
+        margin-left: 20px;
+    }
+    .showhide{
+        display:inline;
+    }
+    .responsive-no-off{
+        margin-left: 0px!important;
+    }
+    .give-amazing-margin{
+        margin-left: 0px;
+    }
+    .footer-menu-last{
+        display:flex;
+        flex-direction:column;
+
+    }
+    .custom-flex-footer{
+        display: flex;
+        flex-direction: row;
+        padding: 0px;
+    }
+    .another-left{
+        margin-left: 0px;
+    }
+    .social-icons{
+        flex: 0 0 100%;
+        max-width: 24%;
+        width: 24%;
+        text-align: center;
+        padding-top:33px;
+    }
+    .all-width{
+
+        flex: 0 0 100%;
+        max-width: 24%;
+        width: 24%;
+        text-align: center;
+    }
+    .responsive-flex{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .section-one .third-row .header-text p{
+        font-size: 36px;
+    }
+
+    .section-one .fourth-row .learnmore-header{
+        width:50%;
+    }
+
+    .section-two .fourth-row .learnmore-header{
+        width:50%;
+    }
+
+    .section-three .big-text .col-12{
+        padding: 50px 0px!important;
+    }
+
+    .section-two .big-text p{
+        font-size: 20.5vw;
+        height: 202px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        margin-top: 58px;
+    }
+
+    .section-three .big-text p{
+        font-size: 26vw;
+        -webkit-text-stroke: 2.3px #f7f7f8;
+        height: 142px;
+        padding: 0px!important;
+        margin: 106px 1px 1px 1px;
+    }
+
+    .section-three .fourth-row .learnmore-header{
+        width:50%;
+    }
+
+    .section-three .fourth-row .learnmore-header p{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .section-four .taketheflowbro{
+        width:50%;
+    }
+
+    .section-four .flex-custom{
+        padding: 0px!important;
+        padding-left: 10%;
+    }
+    .section-four .requestitbro p{
+        font-size: 39px;
+    }
+    .section-four .taketheflowbro p{
+        font-size: 15px;
+    }
+    .section-four .flex-custom .form-top-text{
+        font-size: 16px;
+        margin-top: 35px;
+        margin-left: 50px;
+    }
+    .section-four .flex-custom input{
+        width: 50%;
+        margin-left:50px;
+    }
+    .section-five p{
+        margin-right: 25px;
+        text-align: center;
+    }
+    .social-icons{
+        margin-right:0px;
+    }
+    .section-five{
+        padding-bottom: 0px;
+    }
+    /*.section-one:END*/
+    /*footer:START*/
+    .foot-area{
+        width: 100%;
+        height: auto;
+    }
+
+    .footer-area{
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 40px;
+    }
+
+    .main-container{
+        padding: 0px;
+    }
+
+    .footer-paragraph p{
+        width: 100%;
+        padding: 0px;
+        font-size: 12px;
+    }
+
+    .footer-menu p{
+        font-size: 18px;
+    }
+
+    /*.redcolor p{*/
+    /*margin-top: 30px;*/
+    /*font-size: 20px;*/
+    /*}*/
+
+    .footer-menu1 .text-bold{
+        font-size: 13px;
+    }
+
+    .socialicons{
+        font-size: 25px;
+    }
+    .socialicon1{
+        font-size: 14px;
+    }
+    .list1{
+        margin: 10px;
+    }
+    .footer-menu-last p{
+        padding-bottom: 10%;
+        text-align: center;
+    }
+    .list2{
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+
+    }
+    .footer-menu-last .reserved p{
+        margin:0px;
+    }
+    .Copyright-area .footer-menu-last{
+        width: 100%;
+    }
+    .foot-area .container{
+        padding:0px;
+    }
+    .Copyright-area .footer-menu-last .terms{
+        margin:0px;
+        justify-content:center;
+    }
+    .Copyright-area{
+        margin-top: 10px;
+    }
+    .list2 p{
+        font-size: 10px;
+    }
+    .Copyright-area .footer-menu-last{
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center
+    }
+    .Copyright-area .footer-menu-last .terms p{
+        font-size: 8px;
+        padding: 0px 0%;
+        width: 78px;
+
+    }
+    .Copyright-area .footer-menu-last .terms p, .Copyright-area .footer-menu-last .terms a{
+        padding:0px;
+        margin:7px;
+        font-size:8px;
+        text-align: center;
+    }
+    .Copyright-area .reserved{
+        padding-left: 0px;
+        padding: 0 11px;
+
+    }
+
+    /*footer:END*/
+
+    /*====================== page product cat START=======================*/
+    .second-section .image-container .image34{
+        width: 100%;
+        margin-left: 0px;
+    }
+    .product-det .first-section .yellow-section .prodct{
+        font-size: 184.4px!important;
+    }
+    .first-section .yellow-section .prodct{
+        font-size: 20vw;
+    }
+    .first-section .yellow-section .image-margin h1{
+        font-size: 28px;
+    }
+    .Second-section .image-container .image {
+
+    }
+    .Second-section .image-container .overlay{
+        width: 225px;
+        height: 255px;
+    }
+    .Second-section .image-container .text h5{
+        font-size: 30px;
+    }
+    /*====================== page product cat END =======================*/
+
+    /*======================== page Text Land responsive START ======================*/
+    .first-section .fourth-row .about h1{
+        font-size: 21vw;
+    }
+    .first-section .yellow-section .image-margin .img-pegasus{
+        width: 100%;
+    }
+    .first-section .second-row {
+        background-color: #17191d;
+        height: auto;
+        padding-top: 1px;
+    }
+    .first-section .yellow-section .image-margin .view-text1 h1{
+        font-size: 16px;
+    }
+    .first-section .yellow-section .image-margin .view-text h1{
+        font-size: 16px;
+    }
+    .first-section .fourth-row .learnmore-header .button {
+        margin: 41px;
+    }
+    .section-four .requestitbro p{
+        padding-top: 182px;
+    }
+
+    /*======================== page Text Land responsive END ======================*/
+
+    .second-section .fourth-row .BENEFITS h1{
+        font-size: 21vw;
+    }
+    .third-section .image-container .image34{
+        width: 100%;
+        margin-left: 0px;
+    }
+    .second-section .fourth-row .learnmore-header .button{
+        display: flex;
+    }
+    .second-section .fourth-row .learnmore-header a{
+        font-size: 8px;
+    }
+}
+/*footer:END*/
