@@ -45,8 +45,10 @@ class Header extends Component {
     };
 
 
+
     componentDidMount() {
-        let {navigations, dispatch, navigationChilds, image, leadText} = this.props;
+        let {navigations, dispatch} = this.props;
+
         if (!navigations) {
             axios.get(API_PATH +'navigations')
             .then(res => {
@@ -569,7 +571,7 @@ class Header extends Component {
             products, allProducts, scrollClass, ptc, ptcDropDown, empowerDsDeliverySystem, empowerDsDeliverySystemDropDown, about, evidence, publications, publishedPapers, blogs, support, employees, advisoryboard, webinars, caseStudies, articles, photobiomodulation, productDropDown, dropdown, publicationDropdown, stories,
             clinicalVeterinarian, storiesDropDown, athlete, horseRider
         } = this.state;
-        let {navigations, toggle, navigationChilds, image, leadText} = this.props;
+        let {navigations, toggle, navigationChilds, image, leadText, gtag} = this.props;
         let mainNavigation = [];
         let mobileMainNavigation= [];
         if (navigations) {
@@ -686,6 +688,12 @@ class Header extends Component {
                           crossOrigin="anonymous"/>
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"/>
                     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"/>
+                    <link rel="shortcut icon" href="/static/images/favicon.png"/>
+                    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134138528-1"/>
+                    <script>
+                        {gtag}
+                    </script>
+
                 </Head>
 
 

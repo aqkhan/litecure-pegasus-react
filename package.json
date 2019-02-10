@@ -30,6 +30,7 @@
     "embed-video": "^2.0.4",
     "express": "^4.16.4",
     "next": "^7.0.2",
+    "next-ga": "^2.3.4",
     "nodemon": "^1.18.8",
     "react": "^16.7.0",
     "react-bootstrap": "^0.32.4",

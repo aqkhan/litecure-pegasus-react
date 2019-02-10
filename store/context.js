@@ -59,6 +59,10 @@ export class PegsusProvider extends Component {
         stories:null,
         blogs:null,
         webinars:null,
+        gtag:`window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'UA-134138528-1');`
     };
 
     render() {

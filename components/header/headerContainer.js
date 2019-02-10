@@ -10,8 +10,8 @@ class HeaderContainer extends Component{
         return(
                 <PegasusConsumer>
                     {
-                        (({dispatch, toggle, navigations, navigationChilds, image, leadText}) =>(
-                            <Header dispatch={dispatch} toggle={toggle} navigations={navigations} image={image} navigationChilds={navigationChilds} leadText={leadText} type={this.props.type}/>
+                        (({dispatch, toggle, navigations, navigationChilds, image, leadText, gtag}) =>(
+                            <Header dispatch={dispatch} toggle={toggle} navigations={navigations} image={image} navigationChilds={navigationChilds} leadText={leadText} type={this.props.type} gtag={gtag}/>
                         ))
                     }
                 </PegasusConsumer>
