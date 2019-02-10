@@ -27,7 +27,19 @@ class RequestDemo extends Component{
             page = this.state.page.map((value, index)=> {
                 return <section className="new-request-demo " key={index}>
                     <section className="section-four">
-                        <div className="section-four-background"/>
+                        <div  className="section-four-background" style={value.featuredImage&&{
+                            backgroundColor: "#191d24",
+                            backgroundImage: `linear-gradient(261deg, rgba(0, 0, 0, 0), #191d24), url(${value.featuredImage && value.featuredImage.url})`,
+                            backgroundPosition: "bottom",
+                            backgroundRepeat: "no-repeat",
+                            backgroundSize: "contain",
+                            position: "absolute",
+                            left: 0,
+                            right: 0,
+                            top: 0,
+                            bottom: 0,
+                            zIndex: -1,
+                        }}/>
                         <div className="container">
                             <div className="row flex requestitbro">
                                 <p>{value.headerImageLabel}</p>
