@@ -8,84 +8,97 @@ import axios from 'axios';
 
 class blogs extends Component {
     state = {
-        publications:null,
-        categoryList:null,
-        allCategoryList:null,
-        pages:null,
-        error:null
+        error: null
     };
-    componentDidMount(){
-        axios.get(API_PATH + 'pages')
-            .then((res)=>{
-                let temp = [];
-                res.data.pages.forEach((val) => {
-                    if (val.type === "blog") {
-                        temp.push(val);
-                    }
+
+    componentDidMount() {
+        let {dispatch, pages, posts, tags} = this.props;
+        if(!pages) {
+            axios.get(API_PATH + 'pages')
+                .then((res) => {
+                    dispatch({
+                        type: 'pages',
+                        payLoad: {
+                            pages: res.data.pages
+                        }
+                    })
+                })
+                .catch(err => {
+                    console.log("error ", err);
+                    this.setState({error: "404 About Us Page Not Found"})
                 });
-                this.setState({pages: temp})
-            })
-            .catch(err =>{
-                console.log("error", err);
-                this.setState({error:"404 Not Found"})
-            });
-
-        axios.get(API_PATH + 'tags')
-            .then((res)=>{
-                this.setState({allCategoryList:res.data.tags});
-            })
-            .catch(err =>{
-                console.log("error",err);
-                this.setState({error:"404 Not Found"})
-            });
-
-        axios.get(API_PATH + 'posts')
-            .then((res) => {
-                let temp = [];
-                let tempArray = [];
-                let duplicate = [...res.data.posts];
-                let reverse = duplicate.reverse();
-                reverse.forEach((val) => {
-                    val.selectTags.forEach((item)=>{
-                        tempArray.push(item);
+        }
+        if(!tags){
+            axios.get(API_PATH + 'tags')
+                .then((res) => {
+                    dispatch({
+                        type: 'tags',
+                        payLoad: {
+                            tags: res.data.tags
+                        }
                     });
-                    temp.push(val);
-                this.setState({blogs: temp})
-            });
-                this.setState({categoryList:tempArray});
-                this.setState({publications: temp})
-            })
-            .catch(err => {
-                console.log("error", err);
-                this.setState({error:" 404 Not Found"})
-            })
+                })
+                .catch(err => {
+                    console.log("error", err);
+                    this.setState({error: "404 Not Found"})
+                });
+        }
+
+        if(!posts){
+            axios.get(API_PATH + 'posts')
+                .then((res) => {
+                    let duplicate = [...res.data.posts];
+                    let reverse = duplicate.reverse();
+                    dispatch({
+                        type: 'posts',
+                        payLoad: {
+                            posts: reverse
+                        }
+                    });
+                })
+                .catch(err => {
+                    console.log("error", err);
+                    this.setState({error: "Not Found"})
+                })
+        }
     }
     render() {
-        let {publications,categoryList,allCategoryList,pages, error} = this.state;
-        let uniqueNames=[];
-        let one = [];
-        let defaults = [];
-        if (categoryList){
-            uniqueNames =  categoryList.filter(function(item, pos){
-                return categoryList.indexOf(item)=== pos;
+        let {error} = this.state;
+        let {pages, tags, posts} = this.props;
+        let requiredPublications = [];
+        let categoryList = [];
+        if(posts){
+            posts.forEach((val) => {
+                val.selectTags.forEach((item) => {
+                    categoryList.push(item);
+                });
+                requiredPublications.push(val);
             });
         }
-        let newCategories=[];
-        if(uniqueNames.length!==0){
-            uniqueNames.forEach((key)=>(
-                allCategoryList && allCategoryList.forEach(data=>{
-                    if (key===data._id){
-                        newCategories.push({id:key,name:data.title, check:false})
+        let uniqueNames = [];
+        let one = [];
+        let defaults = [];
+        if (categoryList) {
+            uniqueNames = categoryList.filter(function (item, pos) {
+                return categoryList.indexOf(item) === pos;
+            });
+        }
+        let newCategories = [];
+        if (uniqueNames.length !== 0) {
+            uniqueNames.forEach((key) => (
+                tags && tags.forEach(data => {
+                    if (key === data._id) {
+                        newCategories.push({id: key, name: data.title, check: false})
                     }
                 })
             ));
         }
-        if(pages!== null && pages.length>0){
-            pages.forEach((item,index)=>{
-                if(item.templateOrder==='one'){
+        if (pages !== null && pages.length > 0) {
+            pages.forEach((item, index) => {
+                if(item.templateOrder==='one' && item.type === "blog"){
                     one =[...one, <BlogsHeader publicationCategory={"Posts"} key={index} headerImg={item && item.featuredImage && item.featuredImage.url} heading={"BLOG"}/>]
                 }
-                else {
+                else if( item.type === "blog") {
                     defaults =[...defaults,
                         <DefaultComponent featuredImage={item.featuredImage}
                                           headerImageLabel={item.headerImageLabel && item.headerImageLabel}
@@ -113,7 +126,8 @@ class blogs extends Component {
                     </div>))
                 }
                 {defaults.length>0 && defaults}
-                <BlogCategory publications={publications} categoryList={newCategories} publicationCategory={"Posts"} page={"/post/"}/>
+                {requiredPublications && requiredPublications.length>0 &&<BlogCategory publications={requiredPublications && requiredPublications} categoryList={newCategories}
+                publicationCategory={"Posts"} page={"/post/"}/>}
                 <RequestDemo/>
             </div>
         )

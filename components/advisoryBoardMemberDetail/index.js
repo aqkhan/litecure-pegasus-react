@@ -6,24 +6,40 @@ import Router from 'next/router';
 
 class AdvisoryBoardMemberDetail extends Component {
     state = {
-        member: null,
         error: null
     };
 
     componentDidMount() {
-        let {slug} = this.props;
-        axios.get(API_PATH + 'teamMembers/' + slug)
-            .then((res) => {
-                this.setState({member: res.data.teamMember})
-            })
-            .catch(err => {
-                console.log("error",err);
-                this.setState({error: "404 Not Found"})
-            })
+        let {dispatch, advisoryTeamMembers} = this.props;
+        if(!advisoryTeamMembers)
+            axios.get(API_PATH + 'teamMembers')
+                .then((res => {
+                    let temp = [];
+                    res.data.teamMembers.forEach((val) => {
+                        if (val.team === "advisory-board") {
+                            temp.push(val);
+                        }
+                    });
+                    dispatch({
+                        type: 'advisoryTeamMembers',
+                        payLoad: {
+                            advisoryTeamMembers:temp
+                        }
+                    });
+                }))
+                .catch(err => {
+                    console.log("error", err);
+                    this.setState({error: "404 Not Found"})
+                });
     }
 
     render() {
-        let {member, error} = this.state;
+        let { advisoryTeamMembers, slug} = this.props;
+        let {error} = this.state;
+        let member = null;
+        if(advisoryTeamMembers){
+            member = advisoryTeamMembers.find(element=> element.slug===slug)
+        }
         return (member ? (<div>
                 <div className="empty-div">
                     <div className="container">

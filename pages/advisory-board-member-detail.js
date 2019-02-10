@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import '../style.css'
 import Layout from "../components/layout";
 import {withRouter} from "next/router";
-import AdvisoryDetail from '../components/advisoryBoardMemberDetail';
+import AdvisoryDetail from '../components/advisoryBoardMemberDetail/advisoryBoardMemberDetailContainer';
 
 class AdvisoryBoardMemberDetail extends Component {
     state = {

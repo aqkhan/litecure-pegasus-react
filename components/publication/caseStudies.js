@@ -9,85 +9,101 @@ import axios from 'axios';
 
 class CaseStudies extends Component {
     state = {
-        publications:null,
-        categoryList:null,
-        allCategoryList:null,
-        pages:null,
         error:null
     };
     componentDidMount(){
-        axios.get(API_PATH + 'pages')
-        .then((res)=>{
-            let temp = [];
-            res.data.pages.forEach((val) => {
-                if (val.type === "publication") {
-                    temp.push(val);
-                }
-            });
-            this.setState({pages: temp})
-        })
-            .catch(err =>{
-                console.log("error", err);
-                this.setState({error:"404 Not Found"})
-            });
-        axios.get(API_PATH + 'tags')
-            .then((res)=>{
-                this.setState({allCategoryList:res.data.tags});
-            })
-            .catch(err =>{
-                console.log("error",err);
-                this.setState({error:"404 Not Found"})
-            });
-
-        axios.get(API_PATH + 'publications')
-            .then((res) => {
-                let temp = [];
-                let tempArray = [];
-                let duplicate = [...res.data.publications];
-                let reverse = duplicate.reverse();
-                reverse.forEach((val) => {
-                    if (val.publicationCategory === "case-studies") {
-                        val.selectTags.forEach((item)=>{
-                            tempArray.push(item);
-                        });
-                        temp.push(val);
-                    }
+        let {dispatch, pages, publications, tags} = this.props;
+        if(!pages) {
+            axios.get(API_PATH + 'pages')
+                .then((res) => {
+                    dispatch({
+                        type: 'pages',
+                        payLoad: {
+                            pages: res.data.pages
+                        }
+                    })
+                })
+                .catch(err => {
+                    console.log("error ", err);
+                    this.setState({error: "404 About Us Page Not Found"})
                 });
-                this.setState({categoryList:tempArray});
-                this.setState({publications: temp})
-            })
-            .catch(err => {
-                console.log("error", err);
-                this.setState({error:"Not Found"})
-            })
+        }
+
+        if(!tags){
+            axios.get(API_PATH + 'tags')
+                .then((res) => {
+                    dispatch({
+                        type: 'tags',
+                        payLoad: {
+                            tags: res.data.tags
+                        }
+                    });
+                })
+                .catch(err => {
+                    console.log("error", err);
+                    this.setState({error: "404 Not Found"})
+                });
+        }
+
+        if(!publications){
+            axios.get(API_PATH + 'publications')
+                .then((res) => {
+                    let duplicate = [...res.data.publications];
+                    let reverse = duplicate.reverse();
+                    dispatch({
+                        type: 'publications',
+                        payLoad: {
+                            publications: reverse
+                        }
+                    });
+                })
+                .catch(err => {
+                    console.log("error", err);
+                    this.setState({error: "Not Found"})
+                })
+        }
     }
     render() {
-        let {publications,categoryList,allCategoryList,pages, error} = this.state;
-        let uniqueNames=[];
-        let one = [];
-        let defaults = [];
-        if (categoryList){
-            uniqueNames =  categoryList.filter(function(item, pos){
-                return categoryList.indexOf(item)=== pos;
+        let {error} = this.state;
+        let {pages, tags, publications} = this.props;
+        let requiredPublications = [];
+        let categoryList = [];
+        if(publications){
+            publications.forEach((val) => {
+                if (val.publicationCategory === "case-studies") {
+                    val.selectTags.forEach((item) => {
+                        categoryList.push(item);
+                    });
+                    requiredPublications.push(val);
+                }
             });
         }
-        let newCategories=[];
-        if(uniqueNames.length!==0){
-            uniqueNames.forEach((key)=>(
-                allCategoryList && allCategoryList.forEach(data=>{
-                    if (key===data._id){
-                        newCategories.push({id:key,name:data.title, check:false})
+
+        let uniqueNames = [];
+        let one = [];
+        let defaults = [];
+        if (categoryList) {
+            uniqueNames = categoryList.filter(function (item, pos) {
+                return categoryList.indexOf(item) === pos;
+            });
+        }
+        let newCategories = [];
+        if (uniqueNames.length !== 0) {
+            uniqueNames.forEach((key) => (
+                tags && tags.forEach(data => {
+                    if (key === data._id) {
+                        newCategories.push({id: key, name: data.title, check: false})
                     }
                 })
             ));
         }
         if(pages!== null && pages.length>0){
             pages.forEach((item,index)=>{
-                if(item.templateOrder==='one'){
+                if(item.templateOrder==='one' && item.type === "publication"){
                     one =[...one, <PublicationHeader publicationCategory={"Case Studies"} key={index} headerImg={item && item.featuredImage && item.featuredImage.url} heading={"PUBLICATIONS"}/>]
                 }
-                else {
-                    defaults =[...defaults,
+                else if(item.type === "publication") {
+                    defaults = [...defaults,
                         <DefaultComponent featuredImage={item.featuredImage}
                                           headerImageLabel={item.headerImageLabel && item.headerImageLabel}
                                           metaTitle={item.metaTitle && item.metaTitle}
@@ -115,7 +131,7 @@ class CaseStudies extends Component {
                 }
                 {defaults.length>0 && defaults}
                 <PublicImgSection publicationCategory={"Case Studies"}/>
-                <PublicationCategory publications={publications} categoryList={newCategories} publicationCategory={"Case Studies"} page={"/casestudy-detail/"}/>
+                {requiredPublications && requiredPublications.length>0 &&<PublicationCategory publications={requiredPublications && requiredPublications} categoryList={newCategories} publicationCategory={"Case Studies"} page={"/casestudy-detail/"}/>}
                 <RequestDemo/>
             </div>
         )

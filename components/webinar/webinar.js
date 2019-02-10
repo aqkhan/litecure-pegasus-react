@@ -5,42 +5,78 @@ import WebinarsHeader from '../publication/publicationHeader';
 import DetailContent from './detailContent';
 import axios from "axios";
 import {API_PATH} from "../apiconfig";
-import BlogHeader from "../blogPost/post";
 
 class  webinar extends Component{
-    state={
-        pages: null,
+    state = {
         error: null
     };
 
-    componentWillMount() {
-        let {slug} = this.props;
-        this.setState({slug: slug});
-        axios.get(API_PATH + 'pages')
-            .then((res) => {
-                let temp = [];
-                res.data.pages.forEach((val) => {
-                    if (val.type === "webinars") {
-                        temp.push(val);
-                    }
+    componentDidMount() {
+        let {dispatch, pages, webinars, tags} = this.props;
+        if (!pages) {
+            axios.get(API_PATH + 'pages')
+                .then((res) => {
+                    dispatch({
+                        type: 'pages',
+                        payLoad: {
+                            pages: res.data.pages
+                        }
+                    })
+                })
+                .catch(err => {
+                    console.log("error ", err);
+                    this.setState({error: "404 About Us Page Not Found"})
                 });
-                this.setState({pages: temp})
-            })
-            .catch(err => {
-                console.log("error", err);
-                this.setState({error: "404 Not Found"})
-            });
-    };
+        }
+
+        if(!tags){
+            axios.get(API_PATH + 'tags')
+                .then((res) => {
+                    dispatch({
+                        type: 'tags',
+                        payLoad: {
+                            tags: res.data.tags
+                        }
+                    });
+                })
+                .catch(err => {
+                    console.log("error", err);
+                    this.setState({error: "404 Not Found"})
+                });
+        }
+        if(!webinars){
+            axios.get(API_PATH + 'webinars')
+                .then((res) => {
+                    let duplicate = [...res.data.webinars];
+                    let reverse = duplicate.reverse();
+                    dispatch({
+                        type: 'webinars',
+                        payLoad: {
+                            webinars: reverse
+                        }
+                    });
+                })
+                .catch(err => {
+                    console.log("error", err);
+                    this.setState({error: "Not Found"})
+                })
+        }
+    }
 
     render() {
-        let {slug, pages, error} = this.state;
+        let {slug, pages, webinars, tags} = this.props;
+        let {error} = this.state;
+        let webinar = null;
+        if(webinars){
+            webinar = webinars.find(element=> element.slug===slug)
+        }
         let one = [];
         let defaults = [];
         if (pages !== null && pages.length > 0) {
             pages.forEach((item, index) => {
-                if (item.templateOrder === 'one') {
+                if (item.templateOrder === 'one' && item.type === "webinars") {
                     one = [...one, <WebinarsHeader publicationCategory={"Webinar"} headerImg={item && item.featuredImage && item.featuredImage.url} heading={"WEBINARS"} key={index}/>]
-                } else {
+                } else if(item.type === "webinars") {
                     defaults = [...defaults,
                         <DefaultComponent featuredImage={item.featuredImage}
                                           headerImageLabel={item.headerImageLabel && item.headerImageLabel}
@@ -68,7 +104,7 @@ class  webinar extends Component{
                 </div>))
             }
             {defaults.length > 0 && defaults}
-            <DetailContent slug={slug}/>
+            {webinar&& <DetailContent webinar={webinar} tags={tags}/>}
             {/*<DetailCard/>*/}
             <RequestDemo/>
         </div>)

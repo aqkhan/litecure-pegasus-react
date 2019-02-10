@@ -4,21 +4,11 @@ import axios from "axios";
 import {API_PATH} from "../../apiconfig";
 class DetailContent extends Component {
     state = {
-        publication:null,
         err:null
-    };
-    componentWillMount() {
-        let {slug}= this.props;
-        axios.get(API_PATH +'publications/'+slug)
-            .then((res) => {
-                this.setState({publication: res.data.publication})
-            })
-            .catch(err => {
-                this.setState({err:err})
-            })
     }
     render() {
-        let {publication,err} = this.state;
+        let {err} = this.state;
+        let {publication} = this.props
         return (
             <div>
                 {publication &&<section className="content-dev">
