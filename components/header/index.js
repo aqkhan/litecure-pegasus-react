@@ -672,22 +672,14 @@ class Header extends Component {
                     <title>Pegasus</title>
                     <meta httpEquiv="x-ua-compatible" content="ie=edge"/>
                     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-                    <link rel="stylesheet"
-                          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+                    <link rel="stylesheet" href="/static/css/font-awesome.min.css"/>
                     <link rel="stylesheet" href="/static/css/bootstrap.css"/>
                     <link rel="stylesheet" href="/static/css/responsive.css"/>
-                    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet"/>
-                    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:300" rel="stylesheet"/>
-                    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"/>
-                    <link rel="stylesheet"
-                          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
-                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"/>
-                    <link rel="stylesheet"
-                          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-                          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-                          crossOrigin="anonymous"/>
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"/>
-                    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"/>
+                    <link rel="stylesheet" href="/static/css/bootstrap.min.css"/>
+                    <script src="/static/js/jquery-3.3.1.min.js"/>
+                    <link rel="stylesheet" href="/static/css/bootstrap4.min.css" crossOrigin="anonymous"/>
+                    <script src="/static/js/popper.min.js"/>
+                    <script src="/static/js/bootstrap.min.js"/>
                     <link rel="shortcut icon" href="/static/images/favicon.png"/>
                     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134138528-1"/>
                     <script>
