@@ -244,7 +244,7 @@ class ProductDetail extends Component {
              product ?
                 <div>
                     <section className="product-det">
-                        <section className="first-section" style={page && page.featuredImage && {background: "url("+page.featuredImage.url+")"}}>
+                        <section className="first-section" style={page && page.featuredImage && {background: "linear-gradient(rgba(8, 7, 7, 0.87), rgba(10, 9, 9, 0.85)),url("+page.featuredImage.url+")"}}>
                             <div>
                                 {detailProduct}
                             </div>
