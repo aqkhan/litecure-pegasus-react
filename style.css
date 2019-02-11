@@ -104,8 +104,9 @@
 }
 
 .show {
-    display: flex !important;
+    display: block !important;
     align-items: center;
+    opacity: unset;
 }
 
 a:active, a:hover {
@@ -1649,6 +1650,7 @@ a:active, a:hover {
     display:flex;
     justify-content: flex-end;
     margin-top: 10px;
+    cursor: pointer;
 }
 .product-det .first-section .fourth-row .learnmore-header a {
     border: solid 2px #efb817;

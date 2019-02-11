@@ -137,8 +137,26 @@ class ProductDetail extends Component {
                                                 </div>
                                             </div>
                                         </div>
-                                        {product.embedVideo && <div className="header-video-div" dangerouslySetInnerHTML={{__html:embed(product.embedVideo,{ attr:{width:"100%", height:200}})  }}/> }
-                                    </div>
+                                        {product.embedVideo && <div className="header-video-div"  data-toggle="modal" data-target="#myModal31" dangerouslySetInnerHTML={{__html:embed(product.embedVideo,{ attr:{width:"100%", height:200}})  }}/> }
+                                        <div className="container">
+                                            {/*<!-- The Modal -->*/}
+                                            <div className="modal fade" id="myModal31">
+                                                <div className="modal-dialog modal-lg">
+                                                    <div className="modal-content modal-content-product">
+                                                        {/*<!-- Modal Header -->*/}
+                                                        <div className="modal-header">
+                                                            <button type="button" className="close"
+                                                                    data-dismiss="modal">&times;</button>
+                                                        </div>
+                                                        {/*<!-- Modal body -->*/}
+                                                        <div className="modal-body">
+                                                            {product.embedVideo && <div className="header-video-div" dangerouslySetInnerHTML={{__html:embed(product.embedVideo,{ attr:{width:"100%", height:200}})  }}/> }
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
                                 </div>
                             </div>
                         </div>
