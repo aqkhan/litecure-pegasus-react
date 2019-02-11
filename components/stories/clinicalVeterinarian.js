@@ -50,7 +50,7 @@ class clinicalVeterinarian extends Component {
         let {stories,pages} = this.props;
         let requiredStories = null;
         if (stories){
-            requiredStories = stories.filter(stories => stories.selectCategory.find(element=>element==="5c59f40a43a88f39f9abdcb2"))
+            requiredStories = stories.filter(stories => stories.selectCategory.find(element=>element==="5c59ecac52b58d379abc6c91"))
         }
         let {error} = this.state;
         let one = [];
