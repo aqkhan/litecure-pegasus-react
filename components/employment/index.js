@@ -8,40 +8,42 @@ import DefaultComponent from "../defaultComponent/defaultComponent";
 
 class employeesPage extends Component{
     state = {
-        pages: null,
         error:null
     };
     componentDidMount(){
-        axios.get(API_PATH +'pages')
-            .then((res)=>{
-                let temp=[];
-                res.data.pages.forEach((val)=>{
-                    if (val.type==="employment"){
-                        temp.push(val);
-                    }
+        let {pages, dispatch} = this.props;
+        if (!pages) {
+            axios.get(API_PATH + 'pages')
+                .then((res) => {
+                    dispatch({
+                        type: 'pages',
+                        payLoad: {
+                            pages:res.data.pages
+                        }
+                    })
+                })
+                .catch(err => {
+                    console.log("error", err);
+                    this.setState({error: "404 Home Page Not Found"})
                 });
-
-                this.setState({pages:temp})
-
-            })
-            .catch(err=>{throw err});
+        }
     }
     render(){
-
-        let {pages,error} = this.state;
+        let {error} = this.state;
+        let {pages} = this.props;
         let one = [];
         let defaults =[];
             if(pages && pages.length>0){
                 pages.forEach((item,index)=>{
-                    if (item.templateOrder==='one'){
+                    if (item.templateOrder==='one' && item.type === "employment"){
                         one = [
-                            ...one,<div>
+                            ...one,<div key={index}>
                                 <Employmentheader headerImageLabel = {item.headerImageLabel} leadText = {item.leadText} imgUrl = {item.featuredImage&&item.featuredImage.url}/>
                                 <Employe content ={item.content}/>
                             </div>
                         ]
                     }
-                    else {
+                    else if( item.type === "employment") {
                         defaults = [...defaults,
                             <DefaultComponent featuredImage={item.featuredImage}
                                               headerImageLabel={item.headerImageLabel && item.headerImageLabel}

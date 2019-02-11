@@ -3,35 +3,37 @@ import RequestDemo from '../requestDemo';
 import DefaultComponent from '../defaultComponent/defaultComponent';
 import {API_PATH} from '../apiconfig';
 import axios from 'axios';
-// import Link from "next/link";
 class TextDetail extends Component{
     state={
-        pages: null,
         error: null
-    }
+    };
     componentDidMount(){
-        axios.get(API_PATH + 'pages')
-            .then((res) => {
-                let temp=[];
-                res.data.pages.map((item)=>{
-                    if(item.type === 'support'){
-                        temp.push(item);
-                    }
-                });
-                this.setState({pages: temp});
+        let {pages, dispatch} = this.props;
+        if (!pages) {
+            axios.get(API_PATH + 'pages')
+                .then((res) => {
+                    dispatch({
+                        type: 'pages',
+                        payLoad: {
+                            pages:res.data.pages
+                        }
+                    })
                 })
-            .catch(err => {
-                console.log("error", err);
-            })
+                .catch(err => {
+                    console.log("error", err);
+                    this.setState({error: "404 Home Page Not Found"})
+                });
+        }
     }
     render() {
-        let {pages, error} = this.state;
+        let {error} = this.state;
+        let {pages} = this.props;
         let one = [];
         let defaults=[];
         if (pages !== null && pages.length > 0) {
             pages.forEach((data, index) => {
-                if (data.templateOrder === 'one') {
-                    one = [...one,<section className="classification">
+                if (data.templateOrder === 'one' && data.type ==="support") {
+                    one = [...one,<section className="classification" key={index}>
                      <section className="first-section" style={data.featuredImage && {background:`linear-gradient(rgba(14, 13, 13, 0.89), rgba(10, 9, 9, 0.86)), url(${data.featuredImage && data.featuredImage.url})`,
                         "backgroundRepeat": "no-repeat",
                         "backgroundSize": "cover",
@@ -69,7 +71,7 @@ class TextDetail extends Component{
                      </section>
                  </section>]
              }
-             else {
+             else if(data.type ==="support") {
                 defaults =[...defaults,
                     <DefaultComponent featuredImage={data.featuredImage}
                                       headerImageLabel={data.headerImageLabel && data.headerImageLabel}

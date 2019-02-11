@@ -8,48 +8,53 @@ import {Carousel} from 'react-bootstrap';
 import embed from 'embed-video';
 class ProductDetail extends Component {
     state = {
-        product: null,
         error: null,
-        slug: null,
-        products: null,
-        stories: null
     };
 
     componentDidMount() {
-        let slug = this.props.slug;
-        axios.get(API_PATH + 'products/' + slug)
-            .then((res) => {
-                this.setState({product: res.data.product, slug: slug})
-            })
-            .catch(err => {
-                console.log("error", err);
-                this.setState({error: "Product Not Found"})
-            });
+        let {dispatch, products, stories} = this.props;
+        if(!products){
+            axios.get(API_PATH + 'products')
+                .then((res) => {
+                    dispatch({
+                        type: 'products',
+                        payLoad: {
+                            products:res.data.products
+                        }
+                    })
+                })
+                .catch(err => {
+                    console.log("error", err);
+                    this.setState({error: err})
+                });
+        }
 
-        axios.get(API_PATH + 'products')
-            .then((res) => {
-                this.setState({products: res.data.products})
-            })
-            .catch(err => {
-                console.log("error", err);
-                this.setState({error: "Products Not Found"})
-            });
-
-        axios.get(API_PATH + 'stories')
-            .then((res) => {
-                this.setState({stories: res.data.stories})
-            })
-            .catch(err => {
-                console.log("error", err);
-                this.setState({error: "Stories Not Found"})
-            })
+        if(!stories){
+            axios.get(API_PATH + 'stories')
+                .then((res) => {
+                    dispatch({
+                        type: 'stories',
+                        payLoad: {
+                            stories:res.data.stories
+                        }
+                    })
+                })
+                .catch(err => {
+                    this.setState({error: err})
+                });
+        }
     }
     scroll=()=>{
         configureAnchors({ scrollDuration: 2000})
         goToAnchor('requestDemo')
-    }
+    };
     render() {
-        let {product, error, slug, products, stories} = this.state;
+        let { slug, products, stories} = this.props;
+        let { error} = this.state;
+        let product = null;
+        if(products){
+            product = products.find(element=> element.slug===slug)
+        }
         let detailProduct = null;
         let renderProducts = null;
         let allProductCards = null;
@@ -165,7 +170,7 @@ class ProductDetail extends Component {
                         </section>
                     </section>
                 </Carousel.Item>
-            } )
+            } );
             allProductCards = reverse.map(value => {
                 return <div className="col-md-4 p-0 " key={value._id} style={{
                     background: `linear-gradient(rgba(239, 184, 23, 0.1), rgba(239, 184, 23, 0.1)),url(${value.featuredImage && value.featuredImage.url})`,

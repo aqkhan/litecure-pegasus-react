@@ -7,7 +7,6 @@ class detailContent extends Component {
     render() {
         let {webinar, tags} = this.props;
         let {err} = this.state;
-        console.log("webinar", webinar);
         let category = [];
         webinar.selectTags.forEach((value)=>{
             tags.forEach((valuee)=>{
@@ -16,17 +15,18 @@ class detailContent extends Component {
               }
             })
         });
+        console.log(category)
         return (
             <div>
                 {webinar &&<section className="content-dev">
                     <div className="container">
-                        <h1 className="color-yellow">Categories</h1>
+                        {category.length !== 0 && category && <h1 className="color-yellow">Categories</h1>}
                         {
                             category.length !== 0 && category.map((item,index)=>{
                                 return(
                                     <div className="publication-description" key={index}>
                                         {
-                                            {item}
+                                            item
                                     }
                                     </div>
                                 )

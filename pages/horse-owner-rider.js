@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import '../style.css'
 import Layout from "../components/layout";
 import { withRouter } from "next/router";
-import HorseRiderComponent from '../components/stories/horseRider';
+import HorseRiderComponent from '../components/stories/horseOwnerContainer';
 
 class HorseRider extends Component {
     render() {

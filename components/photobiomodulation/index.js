@@ -32,21 +32,23 @@ class PhotobiomodulationDetail extends Component {
         seven: "",
         current:1
     };
-    componentWillMount() {
-        axios.get(API_PATH + 'pages')
-            .then((res) => {
-                let temp = [];
-                res.data.pages.forEach((val) => {
-                    if (val.type === "photobiomodulation") {
-                        temp.push(val);
-                    }
+    componentDidMount() {
+        let {pages, dispatch} = this.props;
+        if (!pages) {
+            axios.get(API_PATH + 'pages')
+                .then((res) => {
+                    dispatch({
+                        type: 'pages',
+                        payLoad: {
+                            pages:res.data.pages
+                        }
+                    })
+                })
+                .catch(err => {
+                    console.log("error", err);
+                    this.setState({error: "404 Home Page Not Found"})
                 });
-                this.setState({pages: temp})
-            })
-            .catch(err => {
-                console.log("error", errr)
-                this.setState({error:"404 Page Note Found"})
-            });
+        }
     }
 
     changeContent(val) {
@@ -207,10 +209,15 @@ class PhotobiomodulationDetail extends Component {
     }
 
     render() {
-        let {pages, error,sendtoHeader, one, two, three, four, five, six, seven, temp1,temp2,temp3,temp4, temp5,temp6,temp7} = this.state;
-        return (pages && pages.length >0 ?(
+        let { error,sendtoHeader, one, two, three, four, five, six, seven, temp1,temp2,temp3,temp4, temp5,temp6,temp7} = this.state;
+        let {pages} = this.props;
+        let page = null;
+        if(pages){
+            page = pages.find(element=> element.type==="photobiomodulation")
+        }
+        return (page?(
             <div>
-                <PhotobiomodulationHeader headerImageLabel={pages[0].headerImageLabel} leadText={pages[0].leadText} sendData={sendtoHeader} featuredImage={pages[0].featuredImage && pages[0].featuredImage.url}/>
+                <PhotobiomodulationHeader headerImageLabel={page.headerImageLabel} leadText={page.leadText} sendData={sendtoHeader} featuredImage={page.featuredImage && page.featuredImage.url}/>
                 <ScrollableAnchor id={'section1'}>
                     <div/>
                 </ScrollableAnchor>

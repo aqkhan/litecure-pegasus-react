@@ -8,15 +8,15 @@ class PublicationCategoty extends Component {
     state={
         categoryList:[],
         publications: null,
-        publicationsCopy: null,
         publicationDestructure: null,
         totalPages:null,
         final: null
     };
      componentDidMount() {
         let { publications, categoryList} = this.props;
-         this.setState({publications:[...publications],categoryList:[...categoryList]});
-         this.setDisplay();
+         this.setState({publications:[...publications],categoryList:[...categoryList]},function () {
+             this.setDisplay();
+         });
      }
      setDisplay(){
          let {publications} = this.state;
@@ -29,7 +29,7 @@ class PublicationCategoty extends Component {
              }
          });
 
-         if(newCheck && publications){
+         if(newCheck){
              restructured = RestructorData(publications, 10);
          }
          else {

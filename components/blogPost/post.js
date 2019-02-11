@@ -4,45 +4,65 @@ import BlogHeader from '../publication/publicationHeader';
 import DetailContent from './detailContent';
 import axios from "axios";
 import {API_PATH} from "../apiconfig";
-import PublicationHeader from "../publicationDetail/caseStudyDetail";
 
 class post extends Component {
     state = {
-        slug: null,
-        pages: null,
         error: null
     };
 
-    componentWillMount() {
-        let {slug} = this.props;
-        this.setState({slug: slug});
-        axios.get(API_PATH + 'pages')
-            .then((res) => {
-                let temp = [];
-                res.data.pages.forEach((val) => {
-                    if (val.type === "blog") {
-                        temp.push(val);
-                    }
+    componentDidMount() {
+        let {dispatch, pages, posts} = this.props;
+        if (!pages) {
+            axios.get(API_PATH + 'pages')
+                .then((res) => {
+                    dispatch({
+                        type: 'pages',
+                        payLoad: {
+                            pages: res.data.pages
+                        }
+                    })
+                })
+                .catch(err => {
+                    console.log("error ", err);
+                    this.setState({error: "404 About Us Page Not Found"})
                 });
-                this.setState({pages: temp})
-            })
-            .catch(err => {
-                console.log("error", err);
-                this.setState({error: "404 Not Found"})
-            });
+        }
+        if(!posts){
+            axios.get(API_PATH + 'posts')
+                .then((res) => {
+                    let duplicate = [...res.data.posts];
+                    let reverse = duplicate.reverse();
+                    dispatch({
+                        type: 'posts',
+                        payLoad: {
+                            posts: reverse
+                        }
+                    });
+                })
+                .catch(err => {
+                    console.log("error", err);
+                    this.setState({error: "Not Found"})
+                })
+        }
+
     };
 
     render() {
-        let {slug, pages, error} = this.state;
+        let {slug, pages, posts } = this.props;
+        let {error} = this.state;
+        let post = null;
+        if(posts){
+            post = posts.find(element=> element.slug===slug)
+        }
         let one = [];
         let defaults = [];
         if (pages !== null && pages.length > 0) {
             pages.forEach((item, index) => {
-                if (item.templateOrder === 'one') {
+                if (item.templateOrder === 'one' && item.type ==="blog") {
                     one = [...one, <BlogHeader publicationCategory={"Post"}
                                                headerImg={item && item.featuredImage && item.featuredImage.url}
                                                heading={"BLOG"} key={index}/>]
-                } else {
+                } else if(item.type ==="blog"){
                     defaults = [...defaults,
                         <DefaultComponent featuredImage={item.featuredImage}
                                           headerImageLabel={item.headerImageLabel && item.headerImageLabel}
@@ -70,7 +90,7 @@ class post extends Component {
                 </div>))
             }
             {defaults.length > 0 && defaults}
-            <DetailContent slug={slug}/>
+            {post && <DetailContent post={post}/>}
             {/*<DetailCard/>*/}
             <RequestDemo/>
         </div>)

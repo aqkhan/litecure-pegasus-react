@@ -7,38 +7,40 @@ import DefaultComponent from '../defaultComponent/defaultComponent';
 import RequestDemo from '../requestDemo';
 class BenefitLaserTherapy extends Component {
     state = {
-        pages:null,
         error:null,
     };
     componentDidMount(){
-        axios.get(API_PATH + 'pages')
-            .then((res) => {
-                let temp = [];
-                res.data.pages.forEach((item)=>{
-                    if(item.type === 'laserTherapy'){
-                        temp.push(item);
-                    }
+        let {pages, dispatch} = this.props;
+        if (!pages) {
+            axios.get(API_PATH + 'pages')
+                .then((res) => {
+                    dispatch({
+                        type: 'pages',
+                        payLoad: {
+                            pages:res.data.pages
+                        }
+                    })
+                })
+                .catch(err => {
+                    console.log("error", err);
+                    this.setState({error: "404 Home Page Not Found"})
                 });
-                this.setState({pages: temp });
-            })
-            .catch(err => {
-                console.log("error", err);
-                this.setState({errer:err})
-            })
+        }
     }
     render(){
-        let {pages, error}= this.state;
+        let { error} = this.state;
+        let {pages} = this.props;
         let one = [];
         let defaults =[];
         if(pages!==null && pages.length>0){
             pages.forEach((item,index)=>{
-                if (item.templateOrder==='one'){
+                if (item.templateOrder==='one' && item.type === "laserTherapy"){
                     one = [...one,<div key={index}>
                         <Detailheader imgUrl={item.featuredImage && item.featuredImage.url} headerImageLabel={item.headerImageLabel} leadText={item.leadText}/>
                         <DetailContent content={item.content} embedVideo={item.embedVideo && item.embedVideo}/>
                     </div>]
                 }
-                else {
+                else if(item.type === "laserTherapy"){
                     defaults=[...defaults,<DefaultComponent featuredImage={item.featuredImage}
                                                             headerImageLabel={item.headerImageLabel && item.headerImageLabel}
                                                             metaTitle={item.metaTitle && item.metaTitle}

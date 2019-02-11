@@ -9,44 +9,58 @@ import axios from 'axios';
 
 class clinicalVeterinarian extends Component {
     state = {
-        stories:null,
-        pages:null,
         error:null
     };
     componentDidMount(){
-        axios.get(API_PATH + 'pages')
-            .then((res)=>{
-                let temp = [];
-                res.data.pages.forEach((val) => {
-                    if (val.type === "stories") {
-                        temp.push(val);
-                    }
+        let {pages, dispatch, stories} = this.props;
+        if (!pages) {
+            axios.get(API_PATH + 'pages')
+                .then((res) => {
+                    dispatch({
+                        type: 'pages',
+                        payLoad: {
+                            pages:res.data.pages
+                        }
+                    })
+                })
+                .catch(err => {
+                    console.log("error", err);
+                    this.setState({error: "404 Home Page Not Found"})
                 });
-                this.setState({pages: temp})
-            })
-            .catch(err =>{
-                console.log("error", err);
-                this.setState({error:"404 Not Found"})
-            });
-        axios.get(API_PATH + 'stories/category/5c59ecac52b58d379abc6c91')
-            .then((res) => {
-                this.setState({stories: res.data.stories})
-            })
-            .catch(err => {
-                console.log("error", err);
-                this.setState({error:"Not Found"})
-            })
+        }
+
+
+
+        if(!stories){
+            axios.get(API_PATH + 'stories')
+                .then((res) => {
+                    dispatch({
+                        type: 'stories',
+                        payLoad: {
+                            stories:res.data.stories
+                        }
+                    })
+                })
+                .catch(err => {
+                    this.setState({error: err})
+                });
+        }
     }
     render() {
-        let {stories,pages, error} = this.state;
+        let {stories,pages} = this.props;
+        let requiredStories = null;
+        if (stories){
+            requiredStories = stories.filter(stories => stories.selectCategory.find(element=>element==="5c59f40a43a88f39f9abdcb2"))
+        }
+        let {error} = this.state;
         let one = [];
         let defaults = [];
         if(pages!== null && pages.length>0){
             pages.forEach((item,index)=>{
-                if(item.templateOrder==='one'){
+                if(item.templateOrder==='one' && item.type === "stories"){
                     one =[...one, <StoriesHeader publicationCategory={"Veterinarian"} key={index} headerImg={item && item.featuredImage && item.featuredImage.url} heading={"Stories"}/>]
                 }
-                else {
+                else if(item.type === "stories") {
                     defaults =[...defaults,
                         <DefaultComponent featuredImage={item.featuredImage}
                                           headerImageLabel={item.headerImageLabel && item.headerImageLabel}
@@ -75,7 +89,7 @@ class clinicalVeterinarian extends Component {
                 }
                 {defaults.length>0 && defaults}
                 <StoriesMiddleSection storiesCategory={"Veterinarian"}/>
-                 {stories !==null && stories.length>0 && <StoriesCategory stories={stories} storiesCategory={"Veterinarian"}/>}
+                 {requiredStories !==null && requiredStories.length>0 && <StoriesCategory stories={requiredStories} storiesCategory={"Veterinarian"}/>}
                 <RequestDemo/>
             </div>
         )
