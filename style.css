@@ -2331,7 +2331,10 @@ a:active, a:hover {
 .company-profile .first-section .fourth-row .about {
     margin-top: 12%;
 }
-
+.golden-bar{
+    background-color:#efb817;
+    height:10px;
+}
 .hourse-div {
     min-height: 600px;
     min-width: 100%;

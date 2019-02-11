@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import RequestDemo from '../requestDemo';
 import DefaultComponent from '../defaultComponent/defaultComponent'
 import axios from "axios";
+import {Carousel} from 'react-bootstrap';
 import Link from "next/link";
 import {API_PATH} from "../apiconfig";
 
@@ -53,23 +54,45 @@ class AboutUs extends Component {
         let three =[];
         let defaults = [];
         if (products) {
-            renderProducts = products.map(value => {
-                return (
-                    <div className="col-sm-4 ex-image" key={value._id}>
-                        <div className="image-margin " style={value.featuredImage && {
-                            backgroundImage: `url(${value.featuredImage && value.featuredImage.url})`,
+            renderProducts = products.map((value, index) => {
+                return <Carousel.Item key={index}>
+                    <section className="new-home-cards">
+                        <section className="section-one publication-header" style={{
+                            background: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)),url(${value.featuredImage && value.featuredImage.url})`,
                             backgroundRepeat: "no-repeat",
-                            backgroundPosition: "center",
                             backgroundSize: "contain",
+                            backgroundPosition: "center",
+                            backgroundColor: "rgba(247, 187, 12, 0.6)",
                         }}>
-                        </div>
-                        <div className="view-text">
-                            <h1>{value.title}</h1>
-                            <p><Link href={'/product/' + value.slug}><a>VIEW PRODUCT</a></Link>
-                            </p>
-                        </div>
-                    </div>
-                )
+                            <div className="third-row">
+                                <div className="container custom-container">
+                                    <div className="row flex">
+                                        <div className="header-text publication-text home-page">
+                                            <p><br/><span>PRODUCTS</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="small-upper-line flex">
+                                <div className="line"/>
+                            </div>
+                            <div className="fourth-row">
+                                <div className="custom-container container">
+                                    <div className="row flex">
+                                        <div className="flex-column learnmore-header">
+                                            <p>{value.leadText}</p>
+                                            <Link href={'/product/' + value.slug}>
+                                                <a>
+                                                    VIEW
+                                                </a>
+                                            </Link>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </section>
+                </Carousel.Item>
             })
         }
         if (pages && pages.length > 0) {
@@ -202,24 +225,14 @@ class AboutUs extends Component {
         return (pages!==null&& pages.length>0 ? (
             <div>
                 {one.length >0 && one }
-                {
-                    <section className="company-profile">
-                    <section className="first-section">
-                    <div className="yellow-section">
-                    <div className="container custom-container">
-                        <div className="row view-area">
-                            {renderProducts && renderProducts}
-                        </div>
-                        <div className="row flex">
-                            <h1 className="prodct">PRODUCTS</h1>
-                        </div>
-                    </div>
-                    </div>
-                    </section>
-                    </section>}
+                <div className="golden-bar"></div>
                 {two.length >0 && two}
                 {three.length >0  && three}
                 {defaults.length >0 && defaults}
+                {
+                    renderProducts && <Carousel interval={3000} indicators={false} controls={true} pauseOnHover={false}>
+                        {renderProducts}
+                    </Carousel>}
                 <RequestDemo/>
             </div>
         ) : error ? (<div className="splash">

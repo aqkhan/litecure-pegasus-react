@@ -188,27 +188,27 @@ class ProductDetail extends Component {
                     </section>
                 </Carousel.Item>
             } );
-            allProductCards = reverse.map(value => {
-                return <div className="col-md-4 p-0 " key={value._id} style={{
-                    background: `linear-gradient(rgba(239, 184, 23, 0.1), rgba(239, 184, 23, 0.1)),url(${value.featuredImage && value.featuredImage.url})`,
-                    backgroundRepeat: "no-repeat",
-                    backgroundPosition: "center",
-                    backgroundSize: "100%",
-                    border: "1px solid #efb817",
-                }}>
-                    <div className="image-container">
-                        <div className="image-overlay"/>
-                        {/*<img src={value.featuredImage && value.featuredImage.url} className="image"/>*/}
-                        <Link href={"/product/" + value.slug}><a>
-                            <div className="overlay" onClick={() => this.apiCall(value.slug)}>
-                                <div className="text">
-                                    <h5>{value.leadText}</h5>
-                                </div>
-                            </div>
-                        </a></Link>
-                    </div>
-                </div>
-            })
+            // allProductCards = reverse.map(value => {
+            //     return <div className="col-md-4 p-0 " key={value._id} style={{
+            //         background: `linear-gradient(rgba(239, 184, 23, 0.1), rgba(239, 184, 23, 0.1)),url(${value.featuredImage && value.featuredImage.url})`,
+            //         backgroundRepeat: "no-repeat",
+            //         backgroundPosition: "center",
+            //         backgroundSize: "100%",
+            //         border: "1px solid #efb817",
+            //     }}>
+            //         <div className="image-container">
+            //             <div className="image-overlay"/>
+            //             {/*<img src={value.featuredImage && value.featuredImage.url} className="image"/>*/}
+            //             <Link href={"/product/" + value.slug}><a>
+            //                 <div className="overlay" onClick={() => this.apiCall(value.slug)}>
+            //                     <div className="text">
+            //                         <h5>{value.leadText}</h5>
+            //                     </div>
+            //                 </div>
+            //             </a></Link>
+            //         </div>
+            //     </div>
+            // })
         };
 
         if (stories) {
@@ -264,15 +264,15 @@ class ProductDetail extends Component {
                             {/* </div> */}
                         {/* </section> */}
                     </section>
-                    <section className="cards-section">
-                        <section className="Second-section">
-                            <div className="container custom-container">
-                                <div className="row images-flex">
-                                    {allProductCards && allProductCards}
-                                </div>
-                            </div>
-                        </section>
-                    </section>
+                    {/*<section className="cards-section">*/}
+                        {/*<section className="Second-section">*/}
+                            {/*<div className="container custom-container">*/}
+                                {/*<div className="row images-flex">*/}
+                                    {/*{allProductCards && allProductCards}*/}
+                                {/*</div>*/}
+                            {/*</div>*/}
+                        {/*</section>*/}
+                    {/*</section>*/}
                     <section className="stories-cards-section">
                         <section className="third-section">
                             <div className="container custom-container">
