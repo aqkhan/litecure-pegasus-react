@@ -1647,15 +1647,17 @@ a:active, a:hover {
 }
 .header-video-div{
     background-image: url("/static/images/insight-system.PNG");
-    display: -webkit-box;
-    display:flex;
-    justify-content: flex-end;
-    margin-top: 10px;
-    cursor: pointer;
-    height: 200px;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+    display: -webkit-box;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    cursor: pointer;
+    height: 200px;
 }
 .product-det .first-section .fourth-row .learnmore-header a {
     border: solid 2px #efb817;
