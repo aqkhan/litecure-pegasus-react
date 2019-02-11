@@ -678,7 +678,7 @@ class Header extends Component {
                     <link rel="stylesheet" href="/static/css/bootstrap4.min.css" crossOrigin="anonymous"/>
                     <script src="/static/js/popper.min.js"/>
                     <script src="/static/js/bootstrap.min.js"/>
-                    <link rel="shortcut icon" href="/static/images/favicon.png"/>
+                    <link rel="shortcut icon" href="/static/images/logos1.png"/>
                     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134138528-1"/>
                     <script>
                         {gtag}
