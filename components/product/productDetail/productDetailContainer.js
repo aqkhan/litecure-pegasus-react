@@ -10,8 +10,8 @@ class ProductContainer extends Component{
         return(
             <PegasusConsumer>
                 {
-                    (({dispatch, products, stories}) =>(
-                        <Product dispatch={dispatch} products={products} stories={stories} slug={this.props.slug}/>
+                    (({dispatch, products, stories, pages}) =>(
+                        <Product dispatch={dispatch} products={products} stories={stories} slug={this.props.slug} pages={pages}/>
                     ))
                 }
             </PegasusConsumer>

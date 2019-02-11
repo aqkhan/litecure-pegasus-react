@@ -1409,7 +1409,7 @@ a:active, a:hover {
 
 /*.product-det .first-section:START*/
 .product-det .first-section {
-    background: linear-gradient(rgba(8, 7, 7, 0.87), rgba(10, 9, 9, 0.85)), url(/static/images/female-vet-with-woman.png);
+    background: linear-gradient(rgba(8, 7, 7, 0.87), rgba(10, 9, 9, 0.85)), url(https://rs-cms.s3.amazonaws.com/pics/D6wlX0zn3JOdrpwH.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

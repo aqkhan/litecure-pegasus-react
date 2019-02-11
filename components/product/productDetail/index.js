@@ -12,7 +12,7 @@ class ProductDetail extends Component {
     };
 
     componentDidMount() {
-        let {dispatch, products, stories} = this.props;
+        let {dispatch, products, stories, pages} = this.props;
         if(!products){
             axios.get(API_PATH + 'products')
                 .then((res) => {
@@ -26,6 +26,21 @@ class ProductDetail extends Component {
                 .catch(err => {
                     console.log("error", err);
                     this.setState({error: err})
+                });
+        }
+
+        if (!pages) {
+            axios.get(API_PATH + 'pages')
+                .then((res) => {
+                    dispatch({
+                        type: 'pages',
+                        payLoad: {
+                            pages:res.data.pages
+                        }
+                    })
+                })
+                .catch(err => {
+                    this.setState({error: "404 Home Page Not Found"})
                 });
         }
 
@@ -49,12 +64,14 @@ class ProductDetail extends Component {
         goToAnchor('requestDemo')
     };
     render() {
-        let { slug, products, stories} = this.props;
+        let { slug, products, stories, pages} = this.props;
         let { error} = this.state;
         let product = null;
         if(products){
             product = products.find(element=> element.slug===slug)
         }
+        let page = pages && pages.find(sin => sin.type === "product");
+        console.log(page);
         let detailProduct = null;
         let renderProducts = null;
         let allProductCards = null;
@@ -227,7 +244,7 @@ class ProductDetail extends Component {
              product ?
                 <div>
                     <section className="product-det">
-                        <section className="first-section">
+                        <section className="first-section" style={page && page.featuredImage && {background: "url("+page.featuredImage.url+")"}}>
                             <div>
                                 {detailProduct}
                             </div>
