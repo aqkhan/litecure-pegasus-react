@@ -182,7 +182,8 @@ a:active, a:hover {
     display: flex;
     flex-direction: row; 
     justify-content: flex-end;
-    -webkit-box-pack: end; 
+    -webkit-box-pack: end;
+    align-items: center;
     position: relative;
     z-index: 0;
 }
@@ -250,10 +251,12 @@ a:active, a:hover {
     transform: scaleX(-1);
     cursor: pointer;
     margin-left: 15px;
-    /* position: absolute;
+}
+.new-header .HEADERS .col-5 .search-icon-ab{
+    position: absolute;
     top: 16px;
-    right: 10px;
-    z-index: -1; */
+    right: 45px;
+    z-index: -1;
 }
 .new-header .first-row {
     background-color: #191d24;
