@@ -4177,6 +4177,7 @@ a:active, a:hover {
         z-index: 2;
         border-top: 1px solid #efb817;
         align-items: flex-start;
+        display: none;
     }
     .desktop-header {
         display: none;
@@ -4186,7 +4187,7 @@ a:active, a:hover {
     }
 
     .first-mob-list {
-        margin-top: 88px !important;
+        margin-top: 0 !important;
         top: 0px !important;
     }
 
@@ -7203,7 +7204,7 @@ a:active, a:hover {
 }
 @media (max-width: 574px) and (min-width: 411px) {
     .childlist {
-        margin-top: 38px;
+        margin-top: 0;
     }
     .first-mob-list {
         position: relative;
