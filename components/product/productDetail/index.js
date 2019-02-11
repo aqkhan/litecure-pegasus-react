@@ -137,9 +137,9 @@ class ProductDetail extends Component {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="header-video-div"  data-toggle="modal" data-target="#myModal31">
+                                        {product.embedVideo &&<div className="header-video-div"  data-toggle="modal" data-target="#myModal31">
                                             <img src="../../static/images/play-btn.png" width={150} height={100} />
-                                        </div>
+                                        </div>}
                                         <div className="container">
                                             {/*<!-- The Modal -->*/}
                                             <div className="modal fade" id="myModal31">
