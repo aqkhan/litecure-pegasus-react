@@ -290,8 +290,8 @@ class TempleteSeven extends Component {
                     <h2><strong>Term: </strong> near-infrared (NIR) window</h2>
                     <h2><strong>Abbreviation or Other Terminology Used: </strong>therapeutic or optical window</h2>
                     <h2><strong>Definition: </strong>The range of wavelengths from 650 nm to 1350 nm where light has its
-                        maximum depth of penetration in biological tissue (see figure below). Visit the <a href="#">Wavelength Selection</a>
-                        page for details about water absorption and to see the various absorption coefficients as a function of wavelength on a <a href="#">linear scale.</a> </h2>
+                        maximum depth of penetration in biological tissue (see figure below). Visit the Wavelength Selection
+                        page for details about water absorption and to see the various absorption coefficients as a function of wavelength on a linear scale. </h2>
                     </div>
                     <div className="banner_main">
                         <div className="container custom_div">
@@ -334,11 +334,11 @@ class TempleteSeven extends Component {
                         laser (light) therapy. Ann Biomed Eng. 2012; 40(2): 516-533.</li>
                     <li>Wu S, Xing D. Intracellular signaling cascades following light irradiation. Laser Photonics
                         Rev. 2014; 8(1): 115–130.</li>
-                        <li>FDA website <a href="#">
+                        <li>FDA website
                             http://www.fda.gov/RadiationEmittingProducts/Radiation
                             EmittingProductsandProcedures/HomeBusinessandEntertainment/LaserProductsandIns
                             truments/ucm451697.htm
-                        </a> </li>
+                        </li>
                     <li>FDA website www.accessdata.fda.gov (Accessed March 16, 2015.)</li>
                     <li>Conforti M, Fachinetti GP. High power laser therapy treatment compared to simple segmental
                         physical rehabilitation in whiplash injuries (1° and 2° grade of the Quebec Task Force

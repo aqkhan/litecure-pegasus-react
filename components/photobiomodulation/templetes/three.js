@@ -9,7 +9,7 @@ class TempleteThree extends Component {
                     </div>
                     <p>
                         As opposed to white light, which contains a broad range of wavelengths, laser light has a
-                        specific wavelength. The unit used to measure <a href="#">wavelength is nanometer (nm)</a>. Much research has
+                        specific wavelength. The unit used to measure wavelength is nanometer (nm). Much research has
                         been done to investigate how melanin, blood, fat and water absorb light and this has lead
                         researchers to define a window or range of wavelengths through which light can penetrate
                         biological tissue. This window is referred to as the optical or therapeutic window. Typically
@@ -28,9 +28,9 @@ class TempleteThree extends Component {
                                             className="	fa fa-plus lite_gray" data-toggle="modal" data-target="#myModal15"> </i></p></div>
                                     </button>
                                 </div>
-                                <div className="text_container"><p><a href="#">From Hamblin MR, Demidova TN. Mechanisms of low level
+                                <div className="text_container"><p>From Hamblin MR, Demidova TN. Mechanisms of low level
                                     light therapy. extends Proc. of SPIE Photonics. 2006; 6140: 614001-01-12. doi:
-                                    10.1117/12.646294</a></p></div>
+                                    10.1117/12.646294</p></div>
                             </div>
                         </div>
                         <div></div>
@@ -43,7 +43,7 @@ class TempleteThree extends Component {
                         where the absorption by other chromophores is minimized. Both of these wavelengths are in the therapeutic or optical window and are
                         effective for laser therapy. Since melanin absorption dominates at lower wavelengths, 980 nm is better for maximal penetration for
                         skin with melanin.</p>
-                        <p><a href="#"> Pegasus’s CTO, Luis DeTaboada</a>, has also done modeling of the penetration depth of the various wavelengths of
+                        <p> Pegasus’s CTO, Luis DeTaboada, has also done modeling of the penetration depth of the various wavelengths of
                         laser to compare them.</p>
                     <h1>Figure 2:</h1>
                     </div>
@@ -56,9 +56,9 @@ class TempleteThree extends Component {
                                             className="	fa fa-plus lite_gray" data-toggle="modal" data-target="#myModal16"> </i></p></div>
                                     </button>
                                 </div>
-                                <div className="text_container"><p><a href="#">Data generated from
+                                <div className="text_container"><p>Data generated from
                                     Hale and Querry. Optical constants of water in the 200 nm to 200 μm wavelength
-                                    region. Appl. Opt. 1973; 12: 555-563</a>.</p>
+                                    region. Appl. Opt. 1973; 12: 555-563.</p>
                                 </div>
                             </div>
                         </div>
@@ -81,7 +81,7 @@ class TempleteThree extends Component {
                                     </button>
                                 </div>
                                 <div className="text_container"><p>Linear plot of Absorption Coefficient vs. Wavelength. Data for the absorption coefficients
-                                    were obtained from <a href="#">Oregon Medical Laser Center</a>.</p></div>
+                                    were obtained from Oregon Medical Laser Center.</p></div>
                             </div>
                         </div>
                         <p>The main components in the tissue that absorb light are: melanin, oxyhemoglobin, deoxyhemoglobin, fat, and water. Melanin

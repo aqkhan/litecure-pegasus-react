@@ -11,8 +11,8 @@ class TempleteTwo extends Component {
                         For PBM to occur, light needs to reach the mitochondria of the damaged target tissue. Laser therapy is applied to the surface
                         of the skin. The best clinical results are achieved when a sufficient amount of light (number of photons) reaches the target
                         tissue.  There are a number of factors that can help maximize the light that reaches the target tissue.  These include:</p>
-                    <p><a href="#">proper wavelength selection</a>,<a href="#"> sufficient laser power</a>,<a href="#"> reducing reflections</a>,
-                        and<a href="#"> minimizing absorption by molecules not involved in photobiomodulation</a>.</p>
+                    <p>proper wavelength selection, sufficient laser power, reducing reflections,
+                        and minimizing absorption by molecules not involved in photobiomodulation.</p>
                 </div>
             </div>
         )

@@ -19,11 +19,11 @@ class TempleteSix extends Component {
                         As photobiomodulation therapy has become more popular, manufacturers have made elaborate
                         claims about specific pulsing protocols and application-specific wavelengths. These claims
                         can be misleading and can create confusion. In reality these product-specific bells and
-                        whistles are more marketing hype than science. A review  <a href="#"> by Hashmi et al.</a> that looked at CW versus pulsed light concluded that more evidence is needed.16 In general, the use of pulsing decreases light delivered to the surface and hence to the target.</p>
+                        whistles are more marketing hype than science. A review by Hashmi et al. that looked at CW versus pulsed light concluded that more evidence is needed.16 In general, the use of pulsing decreases light delivered to the surface and hence to the target.</p>
                     <p> Pegasus lasers do have the option to be operated in a pulsed mode. In the pulsing mode for
                         Pegasus lasers, the laser is gated: it cycles its CW power on an off and consequently delivers
                         a lower average output power. If you are treating a small region and would like to treat for a
-                        longer time at a lower power, then switching to a pulsed mode will <a href="#"> decrease the effective power </a> and <a href="#">dose delivered to the target</a> by 50%.</p>
+                        longer time at a lower power, then switching to a pulsed mode will decrease the effective power and dose delivered to the target by 50%.</p>
                 </div>
             </div>
         )

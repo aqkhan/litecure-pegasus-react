@@ -1849,6 +1849,7 @@ a:active, a:hover {
 .stories-cards-section .third-section {
     background-color: #191d24;
 }
+
 .stories-cards-section .third-section .stories-image-background {
     background: url(/static/images/placeholder.png);
     background-repeat: no-repeat;
@@ -1884,17 +1885,15 @@ a:active, a:hover {
 
 .stories-cards-section .third-section .image-container .overlay {
     position: absolute;
-    top: 30px;
+    top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    width: 300px;
-    height: 200px;
+    width: 334px;
+    height: 308px;
     opacity: 0;
     transition: .5s ease;
     background-color: #efb817;
-    margin-top: 26px;
-    margin-left: 18px;
 }
 
 .stories-cards-section .third-section .image-container:hover .overlay {
@@ -2623,6 +2622,21 @@ a:active, a:hover {
     line-height: 1.32;
     color: #efb817;
     margin-top: 8%;
+}
+.stories-header{
+    display: flex;
+    justify-content: center;
+    padding: 30px 0
+}
+.stories-header h1{
+    font-family: UniSansCAPS;
+    font-size: 36px;
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 0.89;
+    letter-spacing: 1.1px;
+    color: #ffffff;
 }
 .detail-product-content {
     font-family: 'Roboto', sans-serif;

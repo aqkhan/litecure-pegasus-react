@@ -74,7 +74,7 @@ class ProductDetail extends Component {
         console.log(page);
         let detailProduct = null;
         let renderProducts = null;
-        let allProductCards = null;
+        // let allProductCards = null;
         let allStoriesCards = null;
         let reverse = null;
         if (product) {
@@ -131,7 +131,7 @@ class ProductDetail extends Component {
                                                     <br/>
                                                     <br/>
                                                     <div className="button">
-                                                        <a href="/support">TALK TO A REP </a>
+                                                        <a onClick={()=>this.scroll()} style={{cursor:"pointer"}}>TALK TO A REP </a>
                                                     </div>
                                                         {product.embedVideo && <div className="header-video-div" dangerouslySetInnerHTML={{__html:embed(product.embedVideo,{ attr:{width:"50%", height:200}})  }}/> }
                                                 </div>
@@ -216,14 +216,15 @@ class ProductDetail extends Component {
             reverse = duplicate.reverse();
             allStoriesCards = reverse.map((item, index) => {
                 let date = new Date(item.publishedDate);
-                return <div className="col-md-3 p-0 stories-image-background" key={index} data-toggle="modal" data-target={"#myModal3" + index}
+                return <div className="col-md-3 p-0 stories-image-background " key={index} data-toggle="modal" data-target={"#myModal3" + index}
                             style={item.featuredImage &&{
                                 background: `url(${item.featuredImage && item.featuredImage.url})`,
                                 backgroundRepeat: "no-repeat",
                                 backgroundPosition: "center",
-                                backgroundSize: "100%",
+                                backgroundSize: "cover",
                                 minHeight: "312px",
                                 cursor: "pointer",
+                                // filter: "grayscale(100%)",
                             }}>
                     <div className="image-container">
                         <div className="image-overlay"/>
@@ -276,6 +277,9 @@ class ProductDetail extends Component {
                     <section className="stories-cards-section">
                         <section className="third-section">
                             <div className="container custom-container">
+                                <div className="stories-header">
+                                    <h1>Hear From Current Users</h1>
+                                </div>
                                 <div className="row flex">
                                     {allStoriesCards && allStoriesCards}
                                 </div>

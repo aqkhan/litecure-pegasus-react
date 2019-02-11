@@ -73,7 +73,7 @@ class RequestDemo extends Component{
                             <div className="row flex">
 
                                 <p>
-                                    Stay up to date. Subscribe to the Pegasus feed :)
+                                    Subscribe to stay up to date with Pegasus
                                 </p>
                                 <a href="#">
                                     SUBSCRIBE
