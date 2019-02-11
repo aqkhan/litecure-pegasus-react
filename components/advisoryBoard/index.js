@@ -7,12 +7,28 @@ import DefaultComponent from "../defaultComponent/defaultComponent";
 
 class Advisory extends Component {
     state = {
-        pages: null,
-        advisoryTeamMember: null,
         error:null
     };
 
     componentDidMount() {
+        let {dispatch, pages, advisoryTeamMembers} = this.props;
+        if(!pages){
+            axios.get(API_PATH + 'pages')
+                .then((res) => {
+                    dispatch({
+                        type: 'pages',
+                        payLoad: {
+                            pages:res.data.pages
+                        }
+                    })
+                })
+                .catch(err => {
+                    console.log("error ", err);
+                    this.setState({error: "404 About Us Page Not Found"})
+                });
+        }
+
+        if(!advisoryTeamMembers)
         axios.get(API_PATH + 'teamMembers')
             .then((res => {
                 let temp = [];
@@ -21,36 +37,27 @@ class Advisory extends Component {
                         temp.push(val);
                     }
                 });
-                this.setState({advisoryTeamMember: temp})
+                dispatch({
+                    type: 'advisoryTeamMembers',
+                    payLoad: {
+                        advisoryTeamMembers:temp
+                    }
+                });
             }))
             .catch(err => {
                 console.log("error", err);
                 this.setState({error: "404 Not Found"})
             });
-        axios.get(API_PATH + 'pages')
-            .then((res) => {
-                let temp = [];
-                res.data.pages.forEach((val) => {
-                    if (val.type === "advisoryBoard") {
-                        temp.push(val);
-                    }
-                });
-                this.setState({pages: temp})
-            })
-            .catch(err => {
-                console.log("error", err);
-                this.setState({error :" 404 Not Found"});
-            });
-
     }
 
     render() {
-        let {advisoryTeamMember, pages, error} = this.state;
+        let {advisoryTeamMembers, pages} = this.props;
+        let {error} = this.state;
         let cards = null;
         let one = [];
         let defaults = [];
-        if (advisoryTeamMember != null && advisoryTeamMember.length>0) {
-            cards = advisoryTeamMember.map((data, index) => <div className="outter-container" key={index}>
+        if (advisoryTeamMembers != null && advisoryTeamMembers.length>0) {
+            cards = advisoryTeamMembers.map((data, index) => <div className="outter-container" key={index}>
                     <Link href={'/advisory-board-member-detail/' + data.slug}><a>
                         <div className="imagecon"
                              style={{backgroundImage: `url(${data.memberImage && data.memberImage.url})`}}/>
@@ -65,7 +72,7 @@ class Advisory extends Component {
         }
         if (pages!==null && pages.length>0) {
              pages.forEach((value, index) =>{
-                 if (value.templateOrder==="one"){
+                 if (value.templateOrder==="one" && value.type === "advisoryBoard"){
                      one =[...one,
                              <section className="new-home-cards" key={index}>
                                  <section className="section-one advisory-board-img" style={{
@@ -104,7 +111,7 @@ class Advisory extends Component {
                              </section>
                      ]
                  }
-                 else {
+                 else if(value.type === "advisoryBoard") {
                      defaults =[...defaults,
                          <DefaultComponent featuredImage={value.featuredImage}
                                            headerImageLabel={value.headerImageLabel && value.headerImageLabel}

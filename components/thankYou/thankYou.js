@@ -5,24 +5,32 @@ import axios from 'axios';
 
 class Thankyou extends Component {
     state = {
-        page:null,
         err:null,
-    }
+    };
     componentDidMount(){
-        axios.get(API_PATH + 'pages')
-            .then((res) => {
-                res.data.pages.map((item)=>{
-                    if(item.type === 'thankYou'){
-                        this.setState({page: item });
-                    }
+        let {pages, dispatch} = this.props;
+        if (!pages) {
+            axios.get(API_PATH + 'pages')
+                .then((res) => {
+                    dispatch({
+                        type: 'pages',
+                        payLoad: {
+                            pages:res.data.pages
+                        }
+                    })
                 })
-            })
-            .catch(err => {
-                console.log("error", err);
-            })
-    }
+                .catch(err => {
+                    console.log("error", err);
+                    this.setState({error: "404 Home Page Not Found"})
+                });
+        }
+            }
     render(){
-        let {page}= this.state;
+        let {pages} = this.props;
+        let page = null;
+        if(pages){
+            page = pages.find(element=> element.type==="thankYou")
+        }
         return page?(page &&
             <div>
             <section className="new-home-cards">

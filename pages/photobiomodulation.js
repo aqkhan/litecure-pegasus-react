@@ -1,11 +1,8 @@
-/**
- * Created by FaZi on 12/11/2018.
- */
 import React, { Component } from "react";
 import '../style.css'
 import Layout from "../components/layout";
 import { withRouter } from "next/router";
-import Photobiomodudlations from "../components/photobiomodulation/index";
+import Photobiomodudlations from "../components/photobiomodulation/photobiomodulationContainer";
 
 class Photobiomodulation extends Component {
     render() {

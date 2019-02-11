@@ -5,7 +5,7 @@ import React, { Component } from "react";
 import '../style.css'
 import Layout from "../components/layout";
 import { withRouter } from "next/router";
-import PublicationDetails from '../components/publicationDetail/articleDetail';
+import PublicationDetails from '../components/publicationDetail/articleDetailContainer';
 
 class ArticleDetail extends Component {
     state={

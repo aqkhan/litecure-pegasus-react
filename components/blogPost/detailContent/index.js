@@ -1,28 +1,11 @@
 import React, {Component} from 'react';
-import Link from 'next/link';
-import axios from "axios";
-import {API_PATH} from "../../apiconfig";
+
 
 class detailContent extends Component {
-    state = {
-        post:null,
-        err:null
-    }
-    componentWillMount() {
-        let {slug}= this.props;
-        axios.get(API_PATH +'posts/'+slug)
-            .then((res) => {
-                this.setState({post: res.data.post})
-            })
-            .catch(err => {
-                this.setState({err:err})
-            })
-    }
     render() {
-        let {post,err} = this.state;
-        return (
-            <div>
-                {post &&<section className="content-dev">
+        let {post} = this.props;
+        return post &&(
+            <section className="content-dev">
                     <div className="container">
                         <div className="title-dev">
                             <p className="w-text">{post.title}</p>
@@ -52,17 +35,7 @@ class detailContent extends Component {
                             {/*</div>*/}
                         </div>
                     </div>
-                </section>}
-                {
-                    err && <section className="content-dev">
-                        <div className="container">
-                            <div className="title-dev">
-                                <h1><b>Invalid post Link</b></h1>
-                            </div>
-                        </div>
-                    </section>
-                }
-            </div>
+                </section>
         );
     }
 }

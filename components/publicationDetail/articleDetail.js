@@ -12,41 +12,62 @@ import DefaultComponent from "../publication/articles";
 
 class ArticleDetail extends Component {
     state = {
-        slug: null,
-        pages: null,
         error: null
     };
 
-    componentWillMount() {
-        let {slug} = this.props;
-        this.setState({slug: slug});
-        axios.get(API_PATH + 'pages')
-            .then((res) => {
-                let temp = [];
-                res.data.pages.forEach((val) => {
-                    if (val.type === "publication") {
-                        temp.push(val);
-                    }
+    componentDidMount() {
+        let {dispatch, pages, publications} = this.props;
+
+        if (!pages) {
+            axios.get(API_PATH + 'pages')
+                .then((res) => {
+                    dispatch({
+                        type: 'pages',
+                        payLoad: {
+                            pages: res.data.pages
+                        }
+                    })
+                })
+                .catch(err => {
+                    console.log("error ", err);
+                    this.setState({error: "404 About Us Page Not Found"})
                 });
-                this.setState({pages: temp})
-            })
-            .catch(err => {
-                console.log("error", err);
-                this.setState({error: "404 Not Found"})
-            });
-    };
+        }
+        if(!publications){
+            axios.get(API_PATH + 'publications')
+                .then((res) => {
+                    let duplicate = [...res.data.publications];
+                    let reverse = duplicate.reverse();
+                    dispatch({
+                        type: 'publications',
+                        payLoad: {
+                            publications: reverse
+                        }
+                    });
+                })
+                .catch(err => {
+                    console.log("error", err);
+                    this.setState({error: "Not Found"})
+                })
+        }
+    }
 
     render() {
-        let {slug, pages, error} = this.state;
+        let {slug, pages, publications} = this.props;
+        let {error} = this.state;
+        let publication = null;
+        if(publications){
+            publication = publications.find(element=> element.slug===slug)
+        }
         let one = [];
         let defaults = [];
         if (pages !== null && pages.length > 0) {
             pages.forEach((item, index) => {
-                if (item.templateOrder === 'one') {
+                if (item.templateOrder === 'one' && item.type === "publication") {
                     one = [...one, <PublicationHeader publicationCategory={"Article"}
                                                       headerImg={item && item.featuredImage && item.featuredImage.url}
                                                       heading={"PUBLICATIONS"}/>]
-                } else {
+                } else if(item.type === "publication"){
                     defaults = [...defaults,
                         <DefaultComponent featuredImage={item.featuredImage}
                                           headerImageLabel={item.headerImageLabel && item.headerImageLabel}
@@ -74,7 +95,7 @@ class ArticleDetail extends Component {
                 </div>))
             }
             {defaults.length > 0 && defaults}
-            <DetailContent slug={slug && slug}/>
+            {publication&&<DetailContent publication={publication}/>}
             {/*<DetailCard/>*/}
             <RequestDemo/>
         </div>)

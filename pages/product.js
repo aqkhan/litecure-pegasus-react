@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import '../style.css'
 import Layout from "../components/layout";
 import { withRouter } from "next/router";
-import ProductDetail from "../components/product/productDetail";
+import ProductDetail from "../components/product/productDetail/productDetailContainer";
 class Product extends Component {
     state={
         slug:null

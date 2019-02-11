@@ -36,7 +36,30 @@ const reducer = (state, action) => {
         case 'stories':
             return {
                 ...state, stories: action.payLoad.stories
-            }; 
+            };
+
+        case 'advisoryTeamMembers':
+            return {
+                ...state, advisoryTeamMembers: action.payLoad.advisoryTeamMembers
+            };
+
+        case 'publications':
+            return {
+                ...state, publications: action.payLoad.publications
+            };
+        case 'webinars':
+            return {
+                ...state, webinars: action.payLoad.webinars
+            };
+        case 'posts':
+            return {
+                ...state, posts: action.payLoad.posts
+            };
+
+        case 'tags':
+            return {
+                ...state, tags: action.payLoad.tags
+            };
         default:
             return state;
     }
@@ -57,8 +80,10 @@ export class PegsusProvider extends Component {
         products:null,
         publications:null,
         stories:null,
-        blogs:null,
+        posts:null,
         webinars:null,
+        tags:null,
+        advisoryTeamMembers:null,
         gtag:`window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());

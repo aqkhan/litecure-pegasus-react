@@ -8,84 +8,98 @@ import axios from 'axios';
 
 
 class webinars extends Component {
-    state = {
-        publications:null,
-        categoryList:null,
-        allCategoryList:null,
-        pages:null,
-        error:null
-    };
-    componentDidMount(){
-        axios.get(API_PATH + 'pages')
-            .then((res)=>{
-                let temp = [];
-                res.data.pages.forEach((val) => {
-                    if (val.type === "webinars") {
-                        temp.push(val);
-                    }
-                });
-                this.setState({pages: temp})
-            })
-            .catch(err =>{
-                console.log("error", err);
-                this.setState({error:"404 Not Found"})
-            });
+        state = {
+            error: null
+        };
 
-        axios.get(API_PATH + 'tags')
-            .then((res)=>{
-                this.setState({allCategoryList:res.data.tags});
-            })
-            .catch(err =>{
-                console.log("error",err);
-                this.setState({error:"404 Not Found"})
-            });
-
-        axios.get(API_PATH + 'webinars')
-            .then((res) => {
-                let temp = [];
-                let tempArray = [];
-                let duplicate = [...res.data.webinars];
-                let reverse = duplicate.reverse();
-                reverse.forEach((val) => {
-                    val.selectTags.forEach((item)=>{
-                        tempArray.push(item);
+        componentDidMount() {
+            let {dispatch, pages, webinars, tags} = this.props;
+            if(!pages) {
+                axios.get(API_PATH + 'pages')
+                    .then((res) => {
+                        dispatch({
+                            type: 'pages',
+                            payLoad: {
+                                pages: res.data.pages
+                            }
+                        })
+                    })
+                    .catch(err => {
+                        console.log("error ", err);
+                        this.setState({error: "404 About Us Page Not Found"})
                     });
-                    temp.push(val)
-                });
-                this.setState({categoryList:tempArray});
-                this.setState({publications: temp})
-            })
-            .catch(err => {
-                console.log("error", err);
-                this.setState({error:"404 Not Found"})
-            })
+            }
+            if(!tags){
+                axios.get(API_PATH + 'tags')
+                    .then((res) => {
+                        dispatch({
+                            type: 'tags',
+                            payLoad: {
+                                tags: res.data.tags
+                            }
+                        });
+                    })
+                    .catch(err => {
+                        console.log("error", err);
+                        this.setState({error: "404 Not Found"})
+                    });
+            }
+
+            if(!webinars){
+                axios.get(API_PATH + 'webinars')
+                    .then((res) => {
+                        let duplicate = [...res.data.webinars];
+                        let reverse = duplicate.reverse();
+                        dispatch({
+                            type: 'webinars',
+                            payLoad: {
+                                webinars: reverse
+                            }
+                        });
+                    })
+                    .catch(err => {
+                        console.log("error", err);
+                        this.setState({error: "Not Found"})
+                    })
+            }
     }
     render() {
-        let {publications,categoryList,allCategoryList,pages, error} = this.state;
-        let uniqueNames=[];
-        let one = [];
-        let defaults = [];
-        if (categoryList){
-            uniqueNames =  categoryList.filter(function(item, pos){
-                return categoryList.indexOf(item)=== pos;
+        let {error} = this.state;
+        let {pages, tags, webinars} = this.props;
+        let requiredPublications = [];
+        let categoryList = [];
+        if(webinars){
+            webinars.forEach((val) => {
+                    val.selectTags.forEach((item) => {
+                        categoryList.push(item);
+                    });
+                    requiredPublications.push(val);
             });
         }
-        let newCategories=[];
-        if(uniqueNames.length!==0){
-            uniqueNames.forEach((key)=>(
-                allCategoryList && allCategoryList.forEach(data=>{
-                    if (key===data._id){
-                        newCategories.push({id:key,name:data.title, check:false})
+        let uniqueNames = [];
+        let one = [];
+        let defaults = [];
+        if (categoryList) {
+            uniqueNames = categoryList.filter(function (item, pos) {
+                return categoryList.indexOf(item) === pos;
+            });
+        }
+        let newCategories = [];
+        if (uniqueNames.length !== 0) {
+            uniqueNames.forEach((key) => (
+                tags && tags.forEach(data => {
+                    if (key === data._id) {
+                        newCategories.push({id: key, name: data.title, check: false})
                     }
                 })
             ));
         }
-        if(pages!== null && pages.length>0){
-            pages.forEach((item,index)=>{
-                if(item.templateOrder==='one'){
+        if (pages !== null && pages.length > 0) {
+            pages.forEach((item, index) => {
+                if(item.templateOrder ==='one'  && item.type === "webinars"){
                     one =[...one, <WebinarsHeader publicationCategory={"All Webinars"} key={index} headerImg={item && item.featuredImage && item.featuredImage.url} heading={"WEBINARS"}/>]
                 }
-                else {
+                else if(item.type === "webinars"){
                     defaults =[...defaults,
                         <DefaultComponent featuredImage={item.featuredImage}
                                           headerImageLabel={item.headerImageLabel && item.headerImageLabel}
@@ -99,7 +113,7 @@ class webinars extends Component {
         return (
             <div>
                 {
-                    (one.length>0 ? one: error ? (<div className="splash">
+                    (one.length > 0 ? one : error ? (<div className="splash">
                         <div className="lds-ellipsis">
                             <h1><strong>{error}</strong></h1>
                         </div>
@@ -112,8 +126,9 @@ class webinars extends Component {
                         </div>
                     </div>))
                 }
-                {defaults.length>0 && defaults}
-                <WebinarsCategory publications={publications} categoryList={newCategories} publicationCategory={"Webinar"} page={"/webinar/"}/>
+                {defaults.length > 0 && defaults}
+                {requiredPublications && requiredPublications.length>0 &&<WebinarsCategory publications={requiredPublications && requiredPublications} categoryList={newCategories}
+                publicationCategory={"Webinar"} page={"/webinar/"}/>}
                 <RequestDemo/>
             </div>
         )

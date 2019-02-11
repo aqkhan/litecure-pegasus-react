@@ -1,11 +1,10 @@
 import React from 'react';
 import {PegsusProvider} from "../store/context";
 import App, { Container } from 'next/app';
-import Router from "next/router";
-import withGA from "next-ga";
+import {withRouter} from "next/router";
 
 class MyApp extends App {
-    static async getInitialProps({ Component, router, ctx }) {
+    static async getInitialProps({ Component, ctx }) {
         let pageProps = {};
 
         if (Component.getInitialProps) {
@@ -28,4 +27,4 @@ class MyApp extends App {
     }
 }
 
-export default withGA('UA-134138528-1', Router)(MyApp);
+export default withRouter(MyApp);

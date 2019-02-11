@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import '../style.css'
 import Layout from "../components/layout";
 import { withRouter } from "next/router";
-import ClinicalVeterinarianComponent from '../components/stories/clinicalVeterinarian';
+import ClinicalVeterinarianComponent from '../components/stories/clinicalVeterinarianContainer';
 
 class ClinicalVeterinarian extends Component {
     render() {

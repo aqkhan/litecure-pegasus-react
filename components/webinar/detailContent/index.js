@@ -1,49 +1,32 @@
 import React, {Component} from 'react';
-import Link from 'next/link';
-import axios from "axios";
-import {API_PATH} from "../../apiconfig";
 
 class detailContent extends Component {
     state = {
-        webinar:null,
         err:null,
-        category: []
-    }
-    componentWillMount() {
-        let {slug}= this.props;
-        axios.get(API_PATH +'webinars/'+slug)
-            .then((res) => {
-                this.setState({webinar: res.data.webinar});
-
-                res.data.webinar.selectTags.map((item)=>{
-
-                    axios.get(API_PATH + 'tags/'+item)
-                    .then((respo)=>{
-                        this.state.category.push(respo.data.tag.title);
-                        this.setState({category: this.state.category});
-                    })
-                        .catch(err => console.log(err));
-                });
-
-            })
-            .catch(err => {
-                this.setState({err:err})
-            })
-    }
+    };
     render() {
-        let {webinar,err, category} = this.state;
+        let {webinar, tags} = this.props;
+        let {err} = this.state;
+        let category = [];
+        webinar.selectTags.forEach((value)=>{
+            tags.forEach((valuee)=>{
+              if(value === valuee._id){
+                  category.push(valuee.title)
+              }
+            })
+        });
+        console.log(category)
         return (
             <div>
-
                 {webinar &&<section className="content-dev">
                     <div className="container">
-                        <h1 className="color-yellow">Categories</h1>
+                        {category.length !== 0 && category && <h1 className="color-yellow">Categories</h1>}
                         {
                             category.length !== 0 && category.map((item,index)=>{
                                 return(
                                     <div className="publication-description" key={index}>
                                         {
-                                        item
+                                            item
                                     }
                                     </div>
                                 )

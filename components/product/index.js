@@ -5,25 +5,33 @@ import {API_PATH} from '../apiconfig'
 import RequestDemo from '../requestDemo';
 class  Product extends Component{
             state = {
-                products : null,
                 err:null
             };
-            componentWillMount(){
-                axios.get(API_PATH + 'products')
-                    .then((res)=>{
-                            this.setState({products:res.data.products})
-                    })
-                    .catch(err=>{
-                        console.log("error", err);
-                        this.setState({error:"Products Not Found"})}
-                        )
+            componentDidMount(){
+                let {dispatch, products} = this.props;
+                if(!products){
+                    axios.get(API_PATH + 'products')
+                        .then((res) => {
+                            dispatch({
+                                type: 'products',
+                                payLoad: {
+                                    products:res.data.products
+                                }
+                            })
+                        })
+                        .catch(err => {
+                            console.log("error", err);
+                            this.setState({error: err})
+                        });
+                }
             }
     render() {
                 let {error} = this.state;
+                let {products} = this.props;
                 let dynamic=null;
-                if (this.state.products)
+                if (products)
                 {
-                    let duplicate = [...this.state.products];
+                    let duplicate = [...products];
                     let reverse = duplicate.reverse();
                   dynamic =  reverse.map((value,index)=>{
                       // if (index===0){
@@ -137,7 +145,7 @@ class  Product extends Component{
                     })
                 }
         return (
-            this.state.products ? <div>
+            products ? <div>
                 {dynamic}
                 <RequestDemo/>
             </div>:error ? (<div className="splash">

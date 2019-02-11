@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import '../style.css'
 import Layout from "../components/layout";
 import { withRouter } from "next/router";
-import BenefitLaserTherapy from "../components/detailPage/benefitLaserTherapy";
+import BenefitLaserTherapy from "../components/detailPage/benefitLasertherapyContainer";
 
 
 class Benefits extends Component {

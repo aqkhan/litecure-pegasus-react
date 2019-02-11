@@ -6,23 +6,23 @@ import ContentLoader  from 'react-content-loader';
 import ScrollableAnchor, { goToAnchor, configureAnchors  } from 'react-scrollable-anchor';
 class PublicationCategoty extends Component {
     state={
-        publicationCategory: null,
         categoryList:[],
         publications: null,
-        page:null,
-        publicationsCopy: null,
         publicationDestructure: null,
         totalPages:null,
         final: null
     };
-    async componentWillReceiveProps(nextProps) {
-        let {publicationCategory, publications, page, categoryList} = nextProps;
-        await this.setState({publicationCategory:publicationCategory,publications:publications, page,categoryList});
-        await this.setDisplay();
-          }
+     componentDidMount() {
+        let { publications, categoryList} = this.props;
+         this.setState({publications:[...publications],categoryList:[...categoryList]},function () {
+             this.setDisplay();
+         });
+     }
      setDisplay(){
+         let {publications} = this.state;
         let newCheck=true;
         let temp=[];
+         let restructured = null;
          this.state.categoryList.forEach((tag)=>{
              if (tag.check===true){
                  newCheck=false;
@@ -30,7 +30,7 @@ class PublicationCategoty extends Component {
          });
 
          if(newCheck){
-             temp=this.state.publications?this.state.publications:[];
+             restructured = RestructorData(publications, 10);
          }
          else {
              this.state.publications&&this.state.publications.forEach((val)=>{
@@ -46,10 +46,9 @@ class PublicationCategoty extends Component {
                      }
                  })
              });
+             restructured = RestructorData(temp,10);
          }
-         let restructured = RestructorData(temp, 10);
-     this.setState({publicationDestructure:restructured, final: restructured[0], totalPages: restructured.length}, function () {
-     })
+     this.setState({publicationDestructure:restructured, final: restructured[0], totalPages: restructured.length});
     };
 
     returnData = (index) => {
@@ -67,7 +66,8 @@ class PublicationCategoty extends Component {
         };
 
     render(){
-        let {publicationCategory, categoryList, page, final,totalPages} = this.state;
+        let {categoryList, final,totalPages} = this.state;
+        let {publicationCategory, page} = this.props;
         let cards=null;
         let categories = null;
         if(categoryList) {
@@ -85,7 +85,7 @@ class PublicationCategoty extends Component {
                 </div>
             ))
         }
-        return (
+        return cards &&(
             <section className="casestudy">
                 <ScrollableAnchor id={'scroll'}>
                     <div/>

@@ -1,11 +1,9 @@
-/**
- * Created by FaZi on 12/10/2018.
- */
+
 import React, { Component } from "react";
 import '../style.css'
 import Layout from "../components/layout";
 import { withRouter } from "next/router";
-import Webinar from '../components/webinar/webinar';
+import Webinar from '../components/webinar/webinarContainer';
 
 class webinar extends Component {
     state={

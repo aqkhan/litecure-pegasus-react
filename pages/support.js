@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import '../style.css'
-import TextDetail from "../components/support";
+import TextDetail from "../components/support/supportContainer";
 import Layout from "../components/layout";
 class index extends Component{
 
