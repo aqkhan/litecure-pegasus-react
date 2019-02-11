@@ -679,10 +679,10 @@ class Header extends Component {
                     <script src="/static/js/popper.min.js"/>
                     <script src="/static/js/bootstrap.min.js"/>
                     <link rel="shortcut icon" href="/static/images/favicon.png"/>
-                    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134138528-1"/>
-                    <script>
-                        {gtag}
-                    </script>
+                    {/*<script async src="https://www.googletagmanager.com/gtag/js?id=UA-134138528-1"/>*/}
+                    {/*<script>*/}
+                        {/*{gtag}*/}
+                    {/*</script>*/}
 
                 </Head>
 
