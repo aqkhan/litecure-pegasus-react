@@ -14,12 +14,12 @@ class Footer extends Component{
     // }
 
     componentDidMount() {
-        if (typeof document !== 'undefined') {
-            this.callFbScript(document, 'script', 'facebook-jssdk');
-        }
-        if (typeof window !== 'undefined'){
-            this.callFbScript(document, 'script', 'facebook-jssdk');
-        }
+        // if (typeof document !== 'undefined') {
+        //     this.callFbScript(document, 'script', 'facebook-jssdk');
+        // }
+        // if (typeof window !== 'undefined'){
+        //     this.callFbScript(document, 'script', 'facebook-jssdk');
+        // }
     }
     // componentWillReceiveProps(nextProps, nextContext) {
     //     if (typeof document !== 'undefined') {
@@ -31,14 +31,14 @@ class Footer extends Component{
     //      }
 
     callFbScript=(d, s, id)=>{
-            setTimeout(()=>{
-                let js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) return;
-                js = d.createElement(s); js.id = id;
-                js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2';
-                fjs.parentNode.insertBefore(js, fjs,);
-                this.setState({check:true})
-                },100)
+            // setTimeout(()=>{
+            //     let js, fjs = d.getElementsByTagName(s)[0];
+            //     if (d.getElementById(id)) return;
+            //     js = d.createElement(s); js.id = id;
+            //     js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2';
+            //     fjs.parentNode.insertBefore(js, fjs,);
+            //     this.setState({check:true})
+            //     },100)
     };
 
 
@@ -73,20 +73,20 @@ class Footer extends Component{
                                     <div className="redcolor"><p className="make-bold"><strong>Facebook</strong></p></div>
 
                                     <div className="footer-menu">
-                                        {this.state.check?
-                                            <div className="fb-page" data-href="https://www.facebook.com/PegasusLaser/"
-                                                 data-tabs="timeline" data-width="500" data-height="300"
-                                                 data-small-header="false" data-adapt-container-width="true"
-                                                 data-hide-cover="false" data-show-facepile="true">
-                                                <blockquote cite="https://www.facebook.com/PegasusLaser/"
-                                                            className="fb-xfbml-parse-ignore"><a
-                                                    href="https://www.facebook.com/PegasusLaser/">Pegasus Therapy
-                                                    Laser</a></blockquote>
-                                            </div>:<div><p>
-                                                <span><a
-                                                    href="https://www.facebook.com/PegasusLaser/">Pegasus Therapy
-                                                    Laser</a></span></p>
-                                            </div>}
+                                        {/*{this.state.check?*/}
+                                            {/*<div className="fb-page" data-href="https://www.facebook.com/PegasusLaser/"*/}
+                                                 {/*data-tabs="timeline" data-width="500" data-height="300"*/}
+                                                 {/*data-small-header="false" data-adapt-container-width="true"*/}
+                                                 {/*data-hide-cover="false" data-show-facepile="true">*/}
+                                                {/*<blockquote cite="https://www.facebook.com/PegasusLaser/"*/}
+                                                            {/*className="fb-xfbml-parse-ignore"><a*/}
+                                                    {/*href="https://www.facebook.com/PegasusLaser/">Pegasus Therapy*/}
+                                                    {/*Laser</a></blockquote>*/}
+                                            {/*</div>:<div><p>*/}
+                                                {/*<span><a*/}
+                                                    {/*href="https://www.facebook.com/PegasusLaser/">Pegasus Therapy*/}
+                                                    {/*Laser</a></span></p>*/}
+                                            {/*</div>}*/}
                                     </div>
                                 </div>
                                 <div className="col-sm-3 col-3 social-icons mt-5 responsiv-foot">
