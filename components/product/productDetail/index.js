@@ -133,10 +133,11 @@ class ProductDetail extends Component {
                                                     <div className="button">
                                                         <a onClick={()=>this.scroll()} style={{cursor:"pointer"}}>TALK TO A REP </a>
                                                     </div>
-                                                        {product.embedVideo && <div className="header-video-div" dangerouslySetInnerHTML={{__html:embed(product.embedVideo,{ attr:{width:"50%", height:200}})  }}/> }
+
                                                 </div>
                                             </div>
                                         </div>
+                                        {product.embedVideo && <div className="header-video-div" dangerouslySetInnerHTML={{__html:embed(product.embedVideo,{ attr:{width:"100%", height:200}})  }}/> }
                                     </div>
                                 </div>
                             </div>
@@ -224,7 +225,6 @@ class ProductDetail extends Component {
                                 backgroundSize: "cover",
                                 minHeight: "312px",
                                 cursor: "pointer",
-                                // filter: "grayscale(100%)",
                             }}>
                     <div className="image-container">
                         <div className="image-overlay"/>
@@ -245,7 +245,12 @@ class ProductDetail extends Component {
              product ?
                 <div>
                     <section className="product-det">
-                        <section className="first-section" style={page && page.featuredImage && {background: "linear-gradient(rgba(8, 7, 7, 0.87), rgba(10, 9, 9, 0.85)),url("+page.featuredImage.url+")"}}>
+                        <section className="first-section" style={page && page.featuredImage && {background: "linear-gradient(rgba(8, 7, 7, 0.87), rgba(10, 9, 9, 0.85)),url("+page.featuredImage.url+")",
+                            backgroundRepeat: "no-repeat",
+                            backgroundPosition: "center",
+                            backgroundSize: "cover",
+                            minHeight: "312px",
+                            cursor: "pointer",}}>
                             <div>
                                 {detailProduct}
                             </div>

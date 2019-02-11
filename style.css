@@ -248,6 +248,7 @@ a:active, a:hover {
 .new-header .HEADERS .col-5 img {
     transform: scaleX(-1);
     cursor: pointer;
+    margin-left: 15px;
     /* position: absolute;
     top: 16px;
     right: 10px;
@@ -1647,7 +1648,7 @@ a:active, a:hover {
     display: -webkit-box;
     display:flex;
     justify-content: flex-end;
-    margin-top: -34px;
+    margin-top: 10px;
 }
 .product-det .first-section .fourth-row .learnmore-header a {
     border: solid 2px #efb817;

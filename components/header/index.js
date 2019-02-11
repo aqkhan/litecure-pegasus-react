@@ -61,8 +61,8 @@ class Header extends Component {
                             payLoad: {
                                 navigations: res.data.navigations && res.data.navigations,
                                 navigationChilds: order,
-                                image: response.data.navigationChilds[response.data.navigationChilds.length - 1].headerImage && response.data.navigationChilds[response.data.navigationChilds.length - 1].headerImage.url,
-                                leadText: response.data.navigationChilds[response.data.navigationChilds.length - 1].leadText
+                                image: response.data.navigationChilds[3].headerImage && response.data.navigationChilds[3].headerImage.url,
+                                leadText: response.data.navigationChilds[3].leadText
                             }
                         })
                     })
@@ -699,6 +699,7 @@ class Header extends Component {
                                         <div className="flex-end-row ">
                                             {/* <input type="text" name="search" class="search-engine"/> */}
                                             <img src="/static/images/magnifier.png" width="18px" height="18px"/>
+                                            <a href="https://portal.litecure.com/store/customer/account/login/" target="_blank"><img src="/static/images/webstore.png" width="18px" height="18px"/></a>
                                         </div>
                                     </div>
                                 </div>
