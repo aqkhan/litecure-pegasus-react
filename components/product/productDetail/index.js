@@ -137,7 +137,7 @@ class ProductDetail extends Component {
                                                 </div>
                                             </div>
                                         </div>
-                                        {product.embedVideo && <div className="header-video-div"  data-toggle="modal" data-target="#myModal31" dangerouslySetInnerHTML={{__html:embed(product.embedVideo,{ attr:{width:"100%", height:200}})  }}/> }
+                                        <div className="header-video-div"  data-toggle="modal" data-target="#myModal31"/>
                                         <div className="container">
                                             {/*<!-- The Modal -->*/}
                                             <div className="modal fade" id="myModal31">
