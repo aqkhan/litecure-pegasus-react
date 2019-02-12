@@ -5,6 +5,7 @@ import {API_PATH} from '../apiconfig'
 import {Carousel} from 'react-bootstrap';
 import Link from 'next/link'
 import axios from 'axios'
+import embed from 'embed-video';
 
 class Home extends Component {
     state = {
@@ -28,7 +29,7 @@ class Home extends Component {
                 this.setState({error: "404 Home Page Not Found"})
             });
         }
-    
+
 
         if(!products){
             axios.get(API_PATH + 'products')
@@ -45,7 +46,7 @@ class Home extends Component {
                 this.setState({error: err})
             });
         }
-        
+
         if(!stories){
             axios.get(API_PATH + 'stories')
             .then((res) => {
@@ -65,7 +66,7 @@ class Home extends Component {
 
     render() {
             let {pages, products, stories, error} = this.props;
-        let renderStories, renderProducts  = null;
+        let renderStories, renderProducts,storiesPopup  = null;
         let one =[];
         let defaults =[];
         if (pages  && pages.length> 0) {
@@ -170,8 +171,8 @@ class Home extends Component {
             let duplicate = [...stories];
             let reverse = duplicate.reverse();
             renderStories = reverse.map((value, index) =>
-                <Carousel.Item key={index}>
-                    <div className="section-three-overlay1"/>
+                <Carousel.Item key={index} data-toggle="modal" data-target={"#myModal4" + index}>
+                    <div className="section-three-overlay1" />
                     <div className="home-slider-div" style={{
                         background: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)), url(${value.featuredImage && value.featuredImage.url})`,
                         backgroundRepeat: "no-repeat",
@@ -186,8 +187,45 @@ class Home extends Component {
                             <span>{value.author}</span>
                         </div>
                     </Carousel.Caption>
+                    {/*<div className="container" key={index}>*/}
+                        {/*<div className="modal fade" id={"myModal4" + index}>*/}
+                            {/*<div className="modal-dialog modal-lg">*/}
+                                {/*<div className="modal-content modal-content-product">*/}
+                                    {/*<div className="modal-header">*/}
+                                        {/*<button type="button" className="close"*/}
+                                                {/*data-dismiss="modal">&times;</button>*/}
+                                    {/*</div>*/}
+                                    {/*<div className="modal-body">*/}
+                                        {/*{value.videoLink && <div dangerouslySetInnerHTML={{__html:embed(value.videoLink,{ attr:{width:"560", height:315}})}}/>}*/}
+                                    {/*</div>*/}
+                                {/*</div>*/}
+                            {/*</div>*/}
+                        {/*</div>*/}
+                    {/*</div>*/}
                 </Carousel.Item>
             )
+            {
+                storiesPopup=stories && reverse.map((item, index) => {
+                    return (<div className="container" key={index}>
+                        {/*<!-- The Modal -->*/}
+                        <div className="modal fade" id={"myModal4" + index}>
+                            <div className="modal-dialog modal-lg">
+                                <div className="modal-content modal-content-product">
+                                    {/*<!-- Modal Header -->*/}
+                                    <div className="modal-header">
+                                        <button type="button" className="close"
+                                                data-dismiss="modal">&times;</button>
+                                    </div>
+                                    {/*<!-- Modal body -->*/}
+                                    <div className="modal-body">
+                                        {item.videoLink && <div dangerouslySetInnerHTML={{__html:embed(item.videoLink,{ attr:{width:"560", height:315}})}}/>}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>)
+                })
+            }
         }
         return (pages && pages.length> 0 ? (
             <div>
@@ -199,6 +237,7 @@ class Home extends Component {
                 {renderStories && <Carousel interval={7000} pauseOnHover={false}>
                     {renderStories}
                 </Carousel>}
+                {storiesPopup && storiesPopup}
                 <RequestDemo/>
             </div>
         ) : error ? (<div className="splash">

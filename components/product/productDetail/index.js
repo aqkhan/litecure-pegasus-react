@@ -137,12 +137,12 @@ class ProductDetail extends Component {
                                                 </div>
                                             </div>
                                         </div>
-                                        {product.embedVideo &&<div className="header-video-div"  data-toggle="modal" data-target="#myModal31">
+                                        {product.embedVideo &&<div className="header-video-div"  data-toggle="modal" data-target="#myModal41">
                                             <img src="../../static/images/play-btn.png" width={150} height={100} />
                                         </div>}
                                         <div className="container">
                                             {/*<!-- The Modal -->*/}
-                                            <div className="modal fade" id="myModal31">
+                                            <div className="modal fade" id="myModal41">
                                                 <div className="modal-dialog modal-lg">
                                                     <div className="modal-content modal-content-product">
                                                         {/*<!-- Modal Header -->*/}
@@ -237,7 +237,7 @@ class ProductDetail extends Component {
             reverse = duplicate.reverse();
             allStoriesCards = reverse.map((item, index) => {
                 let date = new Date(item.publishedDate);
-                return <div className="col-md-3 p-0 stories-image-background " key={index} data-toggle="modal" data-target={"#myModal3" + index}
+                return <div className="col-md-3 p-0 stories-image-background " key={index} data-toggle="modal" data-target={"#myModal4" + index}
                             style={item.featuredImage &&{
                                 background: `url(${item.featuredImage && item.featuredImage.url})`,
                                 backgroundRepeat: "no-repeat",
@@ -331,7 +331,7 @@ class ProductDetail extends Component {
                                 stories && reverse.map((item, index) => {
                                     return (<div className="container" key={index}>
                                         {/*<!-- The Modal -->*/}
-                                        <div className="modal fade" id={"myModal3" + index}>
+                                        <div className="modal fade" id={"myModal4" + index}>
                                             <div className="modal-dialog modal-lg">
                                                 <div className="modal-content modal-content-product">
                                                     {/*<!-- Modal Header -->*/}
