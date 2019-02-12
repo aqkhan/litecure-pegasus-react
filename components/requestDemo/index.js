@@ -1,5 +1,6 @@
 import React , {Component} from 'react';
 import axios from "axios";
+import Link from 'next/link'
 import {API_PATH} from "../apiconfig";
 
 class RequestDemo extends Component{
@@ -75,9 +76,7 @@ class RequestDemo extends Component{
                                 <p>
                                     Subscribe to stay up to date with Pegasus
                                 </p>
-                                <a href="#">
-                                    SUBSCRIBE
-                                </a>
+                                <Link href={'/subscribe'}><a>SUBSCRIBE</a></Link>
                             </div>
                         </div>
                     </section>

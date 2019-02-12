@@ -1,6 +1,4 @@
-/**
- * Created by FaZi on 12/27/2018.
- */
+
 import React, {Component} from 'react';
 import Router from 'next/router';
 

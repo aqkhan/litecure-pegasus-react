@@ -171,7 +171,7 @@ class Home extends Component {
             let duplicate = [...stories];
             let reverse = duplicate.reverse();
             renderStories = reverse.map((value, index) =>
-                <Carousel.Item key={index} data-toggle="modal" data-target={"#myModal4" + index}>
+                <Carousel.Item key={index} data-toggle="modal" data-target={"#myModal4" + index} style={{cursor:"pointer"}}>
                     <div className="section-three-overlay1" />
                     <div className="home-slider-div" style={{
                         background: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(6, 6, 6, 0.72)), url(${value.featuredImage && value.featuredImage.url})`,

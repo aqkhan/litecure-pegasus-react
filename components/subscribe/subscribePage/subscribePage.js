@@ -1,6 +1,6 @@
 
 import React, {Component} from 'react';
-class Employe extends Component {
+class Subscribe extends Component {
     render(){
         return <section className="employees">
             <div className="container">
@@ -13,4 +13,4 @@ class Employe extends Component {
         </section>
     }
 }
-export default Employe;
+export default Subscribe;
