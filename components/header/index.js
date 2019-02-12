@@ -697,8 +697,8 @@ class Header extends Component {
                                     </div>
                                     <div className="col-sm-5 col-5">
                                         <div className="flex-end-row ">
-                                             <input type="text" name="search" class="search-engine"/>
-                                            <img className="search-icon-ab" src="/static/images/magnifier.png" width="18px" height="18px"/>
+                                            {/* <input type="text" name="search" class="search-engine"/> */}
+                                            <img src="/static/images/magnifier.png" width="18px" height="18px"/>
                                             <a href="https://portal.litecure.com/store/customer/account/login/" target="_blank"><img src="/static/images/webstore.png" width="18px" height="18px"/></a>
                                         </div>
                                     </div>
