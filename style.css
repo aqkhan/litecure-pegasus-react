@@ -4119,6 +4119,12 @@ a:active, a:hover {
     }
 }
 @media (max-width: 479px) and (min-width: 320px) {
+    .product-det .first-section .header-btn a {
+        font-size: 20px;
+    }
+    .stories-cards-section .third-section .image-container .overlay {
+        width: 318px;
+    }
     .social-block {
         margin-left: 0 !important;
     }
@@ -6697,6 +6703,9 @@ a:active, a:hover {
 
 }
 @media (max-width: 992px) and (min-width: 768px) {
+    .stories-cards-section .third-section .image-container .overlay {
+        width: 188px;
+    }
     .custom-header-text {
         width: 40%;
     }
@@ -7230,6 +7239,9 @@ a:active, a:hover {
     }
 }
 @media (max-width: 574px) and (min-width: 411px) {
+    .stories-cards-section .third-section .image-container .overlay {
+        width: 407px;
+    }
     .childlist {
         margin-top: 0;
     }
@@ -7241,6 +7253,9 @@ a:active, a:hover {
     }
 }
 @media (max-width: 1199px) and (min-width: 1024px) {
+    .stories-cards-section .third-section .image-container .overlay {
+        width: 252px;
+    }
     .casestudy .post-casestudy > div:nth-child(2) a {
         font-size: 14px;
     }
@@ -8284,7 +8299,7 @@ padding: 0px;
     /*==================== page product cat responsive START ======================*/
     /*first section START*/
     .first-section .HEADERS .col-7 img{
-        height: 50px;
+        height: 24px;
     }
     .first-section .fourth-row .learnmore-header{
         width: 84%;
