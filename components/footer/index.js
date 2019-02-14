@@ -52,17 +52,17 @@ class Footer extends Component{
                                 <div className="col-sm-2 responsive-no-off all-width col-2 mt-5 responsiv-foot">
                                     <div className="redcolor"><p className="make-bold"><strong>Websites</strong></p></div>
                                     <div className="footer-menu">
-                                        <div><a href="#">Companion</a></div>
-                                        <div><a href="#">Equine</a></div>
-                                        <div><a href="#">Medical</a></div>
-                                        <div><a href="#">Corporate</a></div>
+                                        <div><a href="https://www.companionanimalhealth.com/" target="_blank">Companion</a></div>
+                                        <div><a href="https://www.companionanimalhealth.com/" target="_blank">Equine</a></div>
+                                        <div><a href="http://www.litecure.com/medical/" target="_blank">Medical</a></div>
+                                        <div><a href="https://www.litecure.com/corporate/" target="_blank">Corporate</a></div>
                                     </div>
                                 </div>
                                 <div className="col-sm-2 col-2 all-width mt-5 responsiv-foot">
-                                    <div className="redcolor"><p className="make-bold"><strong>LiteCure</strong></p></div>
+                                    <div className="redcolor"><p className="make-bold"><strong>Pegasus</strong></p></div>
                                     <div className="footer-menu">
                                         <div><Link href="/about-us"><a>About US</a></Link></div>
-                                        <div><Link href="#"><a>Contact LiteCure</a></Link></div>
+                                        <div><Link href="http://www.litecureinfo.com/l/39022/2017-01-27/66hykx"><a target="_blank">Contact LiteCure</a></Link></div>
                                         <div><Link href="/support"><a>Contact Sales</a></Link></div>
                                         <div><Link href=""><a>Core Values</a></Link></div>
                                         <div><Link href="/products"><a>Products</a></Link></div>
