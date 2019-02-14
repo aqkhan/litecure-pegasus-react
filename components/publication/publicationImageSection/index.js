@@ -13,7 +13,7 @@ class publicImgSection extends Component {
     componentWillMount(){
         let {publicationCategory} = this.props;
         switch (publicationCategory) {
-            case "Puplished Papers": this.setState({ publishedPapers:"active", scientificStudies:"", articles:""})
+            case "Published Papers": this.setState({ publishedPapers:"active", scientificStudies:"", articles:""})
             break;
             case "Case Studies": this.setState({ publishedPapers:"", scientificStudies:"active", articles:""})
                 break;
