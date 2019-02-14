@@ -37,6 +37,7 @@ class publicImgSection extends Component {
                             backgroundRepeat: "no-repeat",
                             backgroundSize: "cover", backgroundPosition: "center",}}>
                             <ul>
+                                
                                 <li><span><a className="active">Publications</a></span></li>
                                 <li><span><Link href="/published-papers"><a className={publishedPapers}>Published Papers</a></Link></span></li>
                                 <li><span><Link  href="/casestudies"><a className={scientificStudies}>Case Studies</a></Link></span></li>
