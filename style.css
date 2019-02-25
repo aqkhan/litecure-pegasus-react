@@ -447,6 +447,13 @@ a:active, a:hover {
 
 }
 
+.another-left a {
+    padding-top:0px !important;
+}
+.another-left a:hover {
+    color: #fff;
+}
+
 .foot-area {
     background-color: rgba(155, 155, 155, 0.06);
 }

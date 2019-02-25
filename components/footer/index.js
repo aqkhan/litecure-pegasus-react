@@ -53,7 +53,7 @@ class Footer extends Component{
                                     <div className="redcolor"><p className="make-bold"><strong>Websites</strong></p></div>
                                     <div className="footer-menu">
                                         <div><a href="https://www.companionanimalhealth.com/" target="_blank">Companion</a></div>
-                                        <div><a href="https://www.companionanimalhealth.com/" target="_blank">Equine</a></div>
+                                        <div><a href="http://www.pegasustherapy.com/">Equine</a></div>
                                         <div><a href="http://www.litecure.com/medical/" target="_blank">Medical</a></div>
                                         <div><a href="https://www.litecure.com/corporate/" target="_blank">Corporate</a></div>
                                     </div>
@@ -109,9 +109,9 @@ class Footer extends Component{
                         <div className="col-12 custom-flex-footer">
                             <div className="give-amazing-margin"><p>Copyright  © 2019 LiteCure, LLC. All rights reserved.</p> </div>
                             <div className="flex another-left">
-                                <p>Legal</p>
-                                <p>Terms of  Use</p>
-                                <p>Privacy Policy</p>
+                                {/*<Link href=""><a>Legal</a></Link>*/}
+                                <Link href="/terms-of-use"><a>Terms of  Use</a></Link>
+                                <Link href="/privacy-policy"><a>Privacy Policy</a></Link>
                             </div>
                         </div>
                     </div>
