@@ -571,7 +571,7 @@ class Header extends Component {
             products, allProducts, scrollClass, ptc, ptcDropDown, empowerDsDeliverySystem, empowerDsDeliverySystemDropDown, about, evidence, publications, publishedPapers, blogs, support, employees, advisoryboard, webinars, caseStudies, articles, photobiomodulation, productDropDown, dropdown, publicationDropdown, stories,
             clinicalVeterinarian, storiesDropDown, athlete, horseRider
         } = this.state;
-        let {navigations, toggle, navigationChilds, image, leadText, gtag} = this.props;
+        let {navigations, toggle, navigationChilds, image, leadText, gtag, translator} = this.props;
         let mainNavigation = [];
         let mobileMainNavigation= [];
         if (navigations) {
@@ -683,6 +683,9 @@ class Header extends Component {
                     <script>
                         {gtag}
                     </script>
+                    <script type='text/javascript'>
+                        {translator}
+                    </script>
 
                 </Head>
 
@@ -696,6 +699,9 @@ class Header extends Component {
                                         <Link href="/"><a><img src="/static/images/logos1.png"/></a></Link>
                                     </div>
                                     <div className="col-sm-5 col-5">
+                                        <div className="bing-translator">
+                                            <div id='MicrosoftTranslatorWidget' className='Dark' style={{color:"white",backgroundColor:"#555555"}}/>
+                                        </div>
                                         <div className="flex-end-row ">
                                             {/* <input type="text" name="search" class="search-engine"/> */}
                                             {/*<img src="/static/images/magnifier.png" width="18px" height="18px"/>*/}

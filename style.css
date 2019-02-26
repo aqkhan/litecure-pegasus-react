@@ -539,6 +539,10 @@ a:active, a:hover {
     color: #17191d;
 }
 
+.bing-translator{
+    padding-left: 300px;
+}
+
 .footer-menu p span {
     font-weight: bold;
 }
