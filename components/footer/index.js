@@ -62,15 +62,15 @@ class Footer extends Component{
                                     <div className="redcolor"><p className="make-bold"><strong>Pegasus</strong></p></div>
                                     <div className="footer-menu">
                                         <div><Link href="/about-us"><a>About US</a></Link></div>
-                                        <div><Link href="http://www.litecureinfo.com/l/39022/2017-01-27/66hykx"><a target="_blank">Contact LiteCure</a></Link></div>
+                                        {/*<div><Link href="http://www.litecureinfo.com/l/39022/2017-01-27/66hykx"><a target="_blank">Contact LiteCure</a></Link></div>*/}
                                         <div><Link href="/support"><a>Contact Sales</a></Link></div>
-                                        <div><Link href=""><a>Core Values</a></Link></div>
+                                        {/*<div><Link href=""><a>Core Values</a></Link></div>*/}
                                         <div><Link href="/products"><a>Products</a></Link></div>
                                         <div><Link href="/employees"><a>Careers</a></Link></div>
                                     </div>
                                 </div>
                                 <div className="col-md-3 all-width mt-5 responsiv-foot">
-                                    <div className="redcolor"><p className="make-bold"><strong>Facebook</strong></p></div>
+                                    <div className="redcolor"><p className="make-bold"><a href="https://www.facebook.com/PegasusLaser/" target="_blank"><strong>Facebook</strong></a></p></div>
 
                                     <div className="footer-menu">
                                         {this.state.check?
@@ -92,7 +92,7 @@ class Footer extends Component{
                                 <div className="col-sm-3 col-3 social-icons mt-5 responsiv-foot">
                                     <div className="redcolor social-block"><p className="make-bold"><strong>Social Channels</strong></p></div>
                                     <div>
-                                    <a href="https://www.facebook.com/PegasusLaser/" target="_blank"><i className="fa fa-facebook redcolor socialicons socialicons1" /></a>
+                                    {/*<a href="https://www.facebook.com/PegasusLaser/" target="_blank"><i className="fa fa-facebook redcolor socialicons socialicons1" /></a>*/}
                                     <a href="https://www.linkedin.com/company/pegasus-therapy/about/" target="_blank"><i className="fa fa-linkedin-square redcolor socialicons socialicons1" /></a>
                                     <a href="https://twitter.com/PegasusLaser" target="_blank"><i className="fa fa-twitter redcolor socialicons socialicons1"/></a>
                                     <a href="mailto:info@pegasustherapy.com" target="_blank"><i className="fa fa-envelope redcolor  socialicons socialicons1" /></a>
