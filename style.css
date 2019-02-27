@@ -545,6 +545,12 @@ a:active, a:hover {
     right: 34px;
     top: 0px;
 }
+.googletranslate .skiptranslate .goog-te-gadget-simple img:first-child {
+ display: none;
+}
+.googletranslate .skiptranslate .goog-te-gadget-simple span:nth-child(2) {
+    display: none;
+}
 
 .footer-menu p span {
     font-weight: bold;
