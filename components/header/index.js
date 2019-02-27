@@ -683,12 +683,11 @@ class Header extends Component {
                     <script>
                         {gtag}
                     </script>
-                    <div className="googletranslate" id="google_translate_element"></div>
                     <script type="text/javascript">
                         {translator}
                     </script>
                     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
+                    <div className="googletranslate" id="google_translate_element"></div>
                 </Head>
 
 
