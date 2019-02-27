@@ -571,7 +571,7 @@ class Header extends Component {
             products, allProducts, scrollClass, ptc, ptcDropDown, empowerDsDeliverySystem, empowerDsDeliverySystemDropDown, about, evidence, publications, publishedPapers, blogs, support, employees, advisoryboard, webinars, caseStudies, articles, photobiomodulation, productDropDown, dropdown, publicationDropdown, stories,
             clinicalVeterinarian, storiesDropDown, athlete, horseRider
         } = this.state;
-        let {navigations, toggle, navigationChilds, image, leadText, gtag} = this.props;
+        let {navigations, toggle, navigationChilds, image, leadText, gtag, translator} = this.props;
         let mainNavigation = [];
         let mobileMainNavigation= [];
         if (navigations) {
@@ -683,9 +683,14 @@ class Header extends Component {
                     <script>
                         {gtag}
                     </script>
+                    <script type="text/javascript">
+                        {translator}
+                    </script>
+                    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
                 </Head>
 
+                <div className="googletranslate" id="google_translate_element"></div>
 
                 {mainNavigation && mainNavigation.length >0 &&<section className="new-header">
                     <section className="first-section">

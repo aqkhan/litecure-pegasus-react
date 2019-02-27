@@ -539,6 +539,13 @@ a:active, a:hover {
     color: #17191d;
 }
 
+.googletranslate{
+    position: absolute;
+    z-index: 1000;
+    right: 34px;
+    top: 0px;
+}
+
 .footer-menu p span {
     font-weight: bold;
 }

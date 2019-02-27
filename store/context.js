@@ -87,7 +87,10 @@ export class PegsusProvider extends Component {
         gtag:`window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
-                gtag('config', 'UA-134138528-1');`
+                gtag('config', 'UA-134138528-1');`,
+        translator:`function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+        }`
     };
 
     render() {
