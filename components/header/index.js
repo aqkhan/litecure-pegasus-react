@@ -683,12 +683,14 @@ class Header extends Component {
                     <script>
                         {gtag}
                     </script>
-                    <script type='text/javascript'>
+                    <script type="text/javascript">
                         {translator}
                     </script>
+                    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
                 </Head>
 
+                <div className="googletranslate" id="google_translate_element"></div>
 
                 {mainNavigation && mainNavigation.length >0 &&<section className="new-header">
                     <section className="first-section">
@@ -699,9 +701,6 @@ class Header extends Component {
                                         <Link href="/"><a><img src="/static/images/logos1.png"/></a></Link>
                                     </div>
                                     <div className="col-sm-5 col-5">
-                                        <div className="bing-translator">
-                                            <div id='MicrosoftTranslatorWidget' className='Dark' style={{color:"white",backgroundColor:"#555555"}}/>
-                                        </div>
                                         <div className="flex-end-row ">
                                             {/* <input type="text" name="search" class="search-engine"/> */}
                                             {/*<img src="/static/images/magnifier.png" width="18px" height="18px"/>*/}
