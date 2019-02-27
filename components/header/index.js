@@ -683,6 +683,7 @@ class Header extends Component {
                     <script>
                         {gtag}
                     </script>
+                    <div className="googletranslate" id="google_translate_element"></div>
                     <script type="text/javascript">
                         {translator}
                     </script>
@@ -690,7 +691,7 @@ class Header extends Component {
 
                 </Head>
 
-                <div className="googletranslate" id="google_translate_element"></div>
+
 
                 {mainNavigation && mainNavigation.length >0 &&<section className="new-header">
                     <section className="first-section">
