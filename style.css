@@ -545,10 +545,10 @@ a:active, a:hover {
     right: 34px;
     top: 0px;
 }
-.googletranslate .skiptranslate .goog-te-gadget-simple img:first-child {
+.googletranslate .skiptranslate .goog-te-gadget-simple img:nth-child(3) {
  display: none;
 }
-.googletranslate .skiptranslate .goog-te-gadget-simple span:nth-child(2) {
+.googletranslate .skiptranslate .goog-te-gadget-simple span:nth-child(4) {
     display: none;
 }
 
