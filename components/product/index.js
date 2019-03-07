@@ -1,7 +1,8 @@
 import  React , { Component } from 'react';
 import Link from 'next/link'
 import axios from 'axios';
-import {API_PATH} from '../apiconfig'
+import {API_PATH} from '../apiconfig';
+import arraySort from 'array-sort';
 import RequestDemo from '../requestDemo';
 class  Product extends Component{
             state = {
@@ -32,8 +33,8 @@ class  Product extends Component{
                 if (products)
                 {
                     let duplicate = [...products];
-                    let reverse = duplicate.reverse();
-                  dynamic =  reverse.map((value,index)=>{
+                    let order = arraySort(duplicate,'order');;
+                  dynamic =  order.map((value,index)=>{
                       // if (index===0){
                           return <section className="first-product"  key={index}>
                           <section className="first-section">
