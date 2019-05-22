@@ -102,7 +102,6 @@ class PublicationCategoty extends Component {
                                     </ul>
                                 </div>
                             </div>
-
                         </div>
                         <div>
                             {cards?cards: <div className="loading-publications"><ContentLoader

@@ -9,7 +9,7 @@ class detailContent extends Component {
         let {err} = this.state;
         let category = [];
         webinar.selectTags.forEach((value)=>{
-            tags.forEach((valuee)=>{
+            tags&&tags.length!==0&&tags.forEach((valuee)=>{
               if(value === valuee._id){
                   category.push(valuee.title)
               }
