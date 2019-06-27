@@ -66,6 +66,7 @@ class Footer extends Component{
                                         <div><Link href="/support"><a>Contact Sales</a></Link></div>
                                         {/*<div><Link href=""><a>Core Values</a></Link></div>*/}
                                         <div><Link href="/products"><a>Products</a></Link></div>
+                                        <div><Link href="/user-manuals"><a>User Manuals</a></Link></div>
                                         <div><Link href="/employees"><a>Careers</a></Link></div>
                                     </div>
                                 </div>
