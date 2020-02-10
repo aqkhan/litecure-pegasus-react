@@ -9,7 +9,11 @@ class index extends Component {
     };
 
     componentWillMount() {
-        this.setState({type: this.props.type})
+        this.setState({type: this.props.type});
+        // const script = document.createElement("script");
+        // script.src = "https://js.hsforms.net/forms/v2.js";
+        // script.async = true;
+        // document.body.appendChild(script);
     }
 
     componentWillReceiveProps(nextProps, nextContext) {
@@ -19,11 +23,12 @@ class index extends Component {
     render() {
         let {type} = this.state;
         return (
-            <section>
+            <>
                 <Header type={type}/>
                 {this.props.children}
                 <Footer/>
-            </section>
+            <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/6858913.js"/>
+            </>
         )
     }
 }
