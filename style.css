@@ -11095,7 +11095,7 @@ input.hs-button {
   outline: none;
 }
 
-@media (max-width: 479px) {
+@media (max-width: 768px) {
   .hubspot-forms form {
     width: 85%;
   }
