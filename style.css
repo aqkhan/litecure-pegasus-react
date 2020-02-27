@@ -11030,9 +11030,6 @@ input[type="number"]::-webkit-outer-spin-button {
   font-weight: 300;
   outline: none;
   width: 25%;
-  /* background: url(/static/images/required.gif) no-repeat top right; */
-  /* display: flex; */
-  /* justify-content: flex-end; */
 }
 .hubspot-forms .hs-form-field ul li {
   list-style: none;
@@ -11061,7 +11058,10 @@ input[type="number"]::-webkit-outer-spin-button {
   color: #efb816;
   font-size: 16px;
 }
-
+.hubspot-forms .hs-form-field select {
+  padding-bottom: 15px;
+  color: #c1c5c97d;
+}
 .hubspot-forms .hs-form-field input,
 textarea,
 select {
@@ -11075,6 +11075,7 @@ select {
   font-size: 16px;
   outline: none;
 }
+
 input.hs-button {
   border: solid 2px #efb817;
   background-color: transparent;
@@ -11093,6 +11094,7 @@ input.hs-button {
   cursor: pointer;
   outline: none;
 }
+
 @media (max-width: 479px) {
   .hubspot-forms form {
     width: 85%;
@@ -11105,6 +11107,11 @@ input.hs-button {
     margin-top: -15px;
   }
   .hubspot-forms .hs-form-field ul li label {
+    font-size: 10px;
+  }
+  .hubspot-forms .hs-form-field input,
+  textarea,
+  select {
     font-size: 10px;
   }
 }
