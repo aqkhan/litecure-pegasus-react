@@ -53,11 +53,8 @@ class detailContent extends Component {
                         <div className="description-dev">
                             <div className="publication-description"
                                  dangerouslySetInnerHTML={{__html: webinar.description}}/>
-
-                            <div className="publication-description"
-                                 dangerouslySetInnerHTML={{__html: webinar.form}}/>
                             {
-                                (portal_id && form_id) &&
+                                (portal_id && form_id) ?
                                 <div className="hubspot-forms">
                                     <HubSpot
                                         portalId={portal_id}
@@ -66,7 +63,8 @@ class detailContent extends Component {
                                         onReady={(form) => console.log('Form ready!')}
                                         loading={<div>Loading...</div>}
                                     />
-                                </div>
+                                </div> : <div className="publication-description"
+                                              dangerouslySetInnerHTML={{__html: webinar.form}}/>
                             }
                         </div>
                     </div>
