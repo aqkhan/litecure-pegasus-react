@@ -18,6 +18,7 @@ class webinar extends Component {
         return (
             <Layout type={"webinars"}>
                 <Webinar slug={slug}/>
+
             </Layout>
         )
     }
