@@ -2,6 +2,7 @@ import React , {Component} from 'react';
 import axios from "axios";
 import Link from 'next/link'
 import {API_PATH} from "../apiconfig";
+import HubSpot from "react-hubspot-form";
 
 class RequestDemo extends Component{
     state = {
@@ -23,9 +24,12 @@ class RequestDemo extends Component{
             });
     }
     render() {
-        let page=null;
+        let page = null;
         if (this.state.page) {
             page = this.state.page.map((value, index)=> {
+                let { portal_id, form_id } = value;
+                console.log("portal_id", portal_id);
+                console.log("form_id", form_id);
                 return <section className="new-request-demo " key={index}>
                     <section className="section-four">
                         <div  className="section-four-background" style={value.featuredImage&&{
@@ -56,7 +60,20 @@ class RequestDemo extends Component{
                                 </div>
                             </div>
                             <div className="row">
-                                <div className="col-12 flex-custom " dangerouslySetInnerHTML={{__html:value.content}}/>
+                                {
+                                    (portal_id && form_id) ?
+                                        <div className="hubspot-forms" style={{width: "100%"}}>
+                                            <HubSpot
+                                                portalId={portal_id}
+                                                formId={form_id}
+                                                onSubmit={() => console.log('Submit!')}
+                                                onReady={(form) => console.log('Form ready!')}
+                                                loading={<div>Loading...</div>}
+                                            />
+                                        </div> :
+                                        <div className="col-12 flex-custom " dangerouslySetInnerHTML={{__html:value.content}}/>
+                                }
+
                             </div>
                         </div>
                     </section>

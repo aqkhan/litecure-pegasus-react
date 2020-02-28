@@ -39,7 +39,7 @@ class SubscribePage extends Component{
                     two = [
                         ...two,<div key={index}>
                             <SubscribeHeader headerImageLabel = {item.headerImageLabel} leadText = {item.leadText} imgUrl = {item.featuredImage&&item.featuredImage.url}/>
-                            <Subscribe content ={item.content}/>
+                            <Subscribe item={item}/>
                         </div>
                     ]
                 }

@@ -10991,10 +10991,10 @@ input[type="number"]::-webkit-outer-spin-button {
 /*footer:END*/
 
 /* Hubspot form */
-.hubspot-forms {
-  height: 700px;
-  overflow-y: scroll;
-}
+/*.hubspot-forms {*/
+  /*height: 700px;*/
+  /*overflow-y: scroll;*/
+/*}*/
 .hubspot-forms > div > div {
   display: flex !important;
   justify-content: center;
