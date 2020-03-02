@@ -10985,7 +10985,7 @@ input[type="number"]::-webkit-outer-spin-button {
   padding-right: 10px;
   position: relative;
   color: #c1c5c9;
-  opacity: 0.4;
+  /* opacity: 0.4; */
   font-size: 16px;
   font-weight: 300;
   outline: none;
@@ -11004,7 +11004,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .hubspot-forms .hs-form-field ul li label {
   text-align: start;
   color: #c1c5c9;
-  opacity: 0.4;
+  /* opacity: 0.4; */
   font-size: 16px;
   outline: none;
   width: 100% !important;
@@ -11036,6 +11036,19 @@ select {
   border: none;
   border-bottom: solid 1px #c1c5c9;
   color: #c1c5c9;
+  line-height: 2.5;
+  font-size: 16px;
+  outline: none;
+}
+.hubspot-forms .hs-form-field 
+select {
+  padding-left: 15px;
+  width: 100% !important;
+  background: transparent;
+  border: none;
+  border-bottom: solid 1px #c1c5c9;
+  color: #c1c5c9;
+  background-color: #54585a;
   line-height: 2.5;
   font-size: 16px;
   outline: none;
