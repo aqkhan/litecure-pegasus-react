@@ -135,7 +135,6 @@ a:hover {
   padding-left: 0px !important;
 }
 
-
 .fb_iframe_widget iframe {
   max-width: 310px;
 }
@@ -5201,7 +5200,7 @@ input[type="radio"] {
   .flex-end-row:nth-child(2) {
     justify-content: flex-end;
   }
-  
+
   .new-home-cards .section-one .third-row .header-text p {
     font-size: 38px;
   }
@@ -6284,7 +6283,6 @@ input[type="radio"] {
     justify-content: flex-end;
   }
 
-
   .new-home-cards .section-one .third-row .header-text p {
     font-size: 38px;
   }
@@ -6949,7 +6947,6 @@ input[type="radio"] {
     -webkit-justify-content: flex-end;
   }
 
-
   .new-home-cards .section-one .third-row .header-text p {
     font-size: 38px;
   }
@@ -7477,11 +7474,10 @@ input[type="radio"] {
   .new-header .second-row .navbar {
     margin-top: -84px;
   }
-  
+
   .flex-end-row:nth-child(2) {
     justify-content: flex-end;
   }
-
 
   .new-home-cards .section-one .third-row .header-text p {
     font-size: 38px;
@@ -8482,7 +8478,7 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 
   /*second section END*/
-  
+
   .Second-section .image-container .overlay {
     width: 260px;
     height: 260px;
@@ -8939,7 +8935,7 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 
   /*second section END*/
-  
+
   .Second-section .image-container .overlay {
     width: 260px;
     height: 260px;
@@ -9377,7 +9373,7 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 
   /*second section END*/
-  
+
   .Second-section .image-container .overlay {
     width: 260px;
     height: 260px;
@@ -10914,7 +10910,7 @@ input[type="number"]::-webkit-outer-spin-button {
   .first-section .yellow-section .image-margin h1 {
     font-size: 28px;
   }
-  
+
   .Second-section .image-container .overlay {
     width: 225px;
     height: 255px;
@@ -11013,7 +11009,7 @@ input[type="number"]::-webkit-outer-spin-button {
   outline: none;
   width: 100% !important;
 }
-.hubspot-forms .field.hs-form-field  {
+.hubspot-forms .field.hs-form-field {
   padding: 15px 0;
 }
 .hubspot-forms fieldset {
@@ -11061,26 +11057,24 @@ select {
   padding: 14px 45px;
   cursor: pointer;
   outline: none;
-    margin: 20px 0;
+  margin: 20px 0;
 }
 .hubspot-forms .legal-consent-container p {
-    padding: 20px 0 0 0 !important;
-        font-family: AvenirNext;
-    font-weight: 400;
-    font-style: normal;
-    font-stretch: normal;
-    letter-spacing: 0.6px;
-    text-align: left;
-    color: #c7c9c7;
-    font-size: 20px;
-    padding: 0 0 20px 0;
-    margin-bottom: 0;
-  }
-  .hubspot-forms .legal-consent-container .field.hs-form-field {
-    margin-bottom: 0;
-    margin-top: 20px;
+  padding: 20px 0 0 0 !important;
+  font-family: AvenirNext;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: 0.6px;
+  text-align: left;
+  color: #c7c9c7;
+  font-size: 20px;
+  margin-bottom: 0;
 }
-
+.hubspot-forms .legal-consent-container .field.hs-form-field {
+  margin-bottom: 0;
+  margin-top: 20px;
+}
 
 @media (max-width: 768px) {
   .hubspot-forms .hs-form-field label {
@@ -11103,10 +11097,9 @@ select {
   select {
     font-size: 10px;
   }
-  .hubspot-forms .legal-consent-container .hs-form-field  {
+  .hubspot-forms .legal-consent-container .hs-form-field {
     margin-bottom: 0;
     margin-top: 0;
     padding: 0;
   }
-  
 }
