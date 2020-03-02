@@ -28,8 +28,6 @@ class RequestDemo extends Component{
         if (this.state.page) {
             page = this.state.page.map((value, index)=> {
                 let { portal_id, form_id } = value;
-                console.log("portal_id", portal_id);
-                console.log("form_id", form_id);
                 return <section className="new-request-demo " key={index}>
                     <section className="section-four">
                         <div  className="section-four-background" style={value.featuredImage&&{
