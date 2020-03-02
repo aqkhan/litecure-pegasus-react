@@ -135,9 +135,6 @@ a:hover {
   padding-left: 0px !important;
 }
 
-.for-responsive-only {
-  /*display:none;*/
-}
 
 .fb_iframe_widget iframe {
   max-width: 310px;
@@ -4441,9 +4438,6 @@ input[type="radio"] {
   .flex-end-row:nth-child(2) {
     justify-content: flex-end;
   }
-  .new-header .second-row {
-    /*display:none;*/
-  }
   .new-home-cards .section-one .third-row .header-text p {
     font-size: 38px;
   }
@@ -5207,9 +5201,7 @@ input[type="radio"] {
   .flex-end-row:nth-child(2) {
     justify-content: flex-end;
   }
-  .new-header .second-row {
-    /*display:none;*/
-  }
+  
   .new-home-cards .section-one .third-row .header-text p {
     font-size: 38px;
   }
@@ -6292,9 +6284,6 @@ input[type="radio"] {
     justify-content: flex-end;
   }
 
-  .new-header .second-row {
-    /*display:none;*/
-  }
 
   .new-home-cards .section-one .third-row .header-text p {
     font-size: 38px;
@@ -6960,9 +6949,6 @@ input[type="radio"] {
     -webkit-justify-content: flex-end;
   }
 
-  .new-header .second-row {
-    /*display:none;*/
-  }
 
   .new-home-cards .section-one .third-row .header-text p {
     font-size: 38px;
@@ -7491,16 +7477,11 @@ input[type="radio"] {
   .new-header .second-row .navbar {
     margin-top: -84px;
   }
-  .flex-end-row {
-    /* padding-right: 0; */
-  }
+  
   .flex-end-row:nth-child(2) {
     justify-content: flex-end;
   }
 
-  .new-header .second-row {
-    /*display:none;*/
-  }
 
   .new-home-cards .section-one .third-row .header-text p {
     font-size: 38px;
@@ -8501,8 +8482,7 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 
   /*second section END*/
-  .Second-section .image-container .image {
-  }
+  
   .Second-section .image-container .overlay {
     width: 260px;
     height: 260px;
@@ -8959,8 +8939,7 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 
   /*second section END*/
-  .Second-section .image-container .image {
-  }
+  
   .Second-section .image-container .overlay {
     width: 260px;
     height: 260px;
@@ -9398,8 +9377,7 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 
   /*second section END*/
-  .Second-section .image-container .image {
-  }
+  
   .Second-section .image-container .overlay {
     width: 260px;
     height: 260px;
@@ -10936,8 +10914,7 @@ input[type="number"]::-webkit-outer-spin-button {
   .first-section .yellow-section .image-margin h1 {
     font-size: 28px;
   }
-  .Second-section .image-container .image {
-  }
+  
   .Second-section .image-container .overlay {
     width: 225px;
     height: 255px;
@@ -10997,7 +10974,6 @@ input[type="number"]::-webkit-outer-spin-button {
   font-size: 17px;
 }
 .hubspot-forms .hs-form-field {
-  margin-top: 17px;
   font-family: "Roboto", sans-serif;
   font-size: 28px;
   font-weight: 300;
@@ -11037,16 +11013,17 @@ input[type="number"]::-webkit-outer-spin-button {
   outline: none;
   width: 100% !important;
 }
+.hubspot-forms .field.hs-form-field  {
+  padding: 15px 0;
+}
 .hubspot-forms fieldset {
   max-width: unset;
-  margin: 15px 0;
 }
 .hubspot-forms fieldset .input {
   padding-right: 25px;
 }
 .hubspot-forms .hs-form-field .hs-form-required {
   margin-left: 5px;
-  position: absolute;
   color: #efb816;
   font-size: 16px;
 }
@@ -11068,7 +11045,7 @@ select {
   outline: none;
 }
 
-input.hs-button {
+.hubspot-forms input.hs-button {
   border: solid 2px #efb817;
   background-color: transparent;
   text-decoration: none;
@@ -11086,10 +11063,10 @@ input.hs-button {
   outline: none;
     margin: 20px 0;
 }
-.hubspot-forms fieldset p {
+.hubspot-forms .legal-consent-container p {
     padding: 20px 0 0 0 !important;
   }
-  .legal-consent-container .field.hs-form-field {
+  .hubspot-forms .legal-consent-container .field.hs-form-field {
     margin-bottom: 0;
     margin-top: 20px;
 }
@@ -11105,7 +11082,7 @@ input.hs-button {
   .hubspot-forms fieldset .input {
     padding-right: 0;
   }
-  .hubspot-forms fieldset p {
+  .hubspot-forms .legal-consent-container p {
     font-size: 10px !important;
   }
   .hubspot-forms .hs-form-field ul li label {
@@ -11116,4 +11093,10 @@ input.hs-button {
   select {
     font-size: 10px;
   }
+  .hubspot-forms .legal-consent-container .hs-form-field  {
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
+  }
+  
 }
