@@ -11023,6 +11023,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .hubspot-forms .hs-form-field ul {
   padding: 0;
+  margin-bottom: 0;
 }
 .hubspot-forms .hs-form-field ul li input {
   width: auto !important;
@@ -11083,7 +11084,16 @@ input.hs-button {
   padding: 14px 45px;
   cursor: pointer;
   outline: none;
+    margin: 20px 0;
 }
+.hubspot-forms fieldset p {
+    padding: 20px 0 0 0 !important;
+  }
+  .legal-consent-container .field.hs-form-field {
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+
 
 @media (max-width: 768px) {
   .hubspot-forms .hs-form-field label {
