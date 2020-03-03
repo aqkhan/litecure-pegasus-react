@@ -76,6 +76,11 @@ class webinars extends Component {
                     requiredPublications.push(val);
             });
         }
+        const filtered = requiredPublications.filter(function(item) {
+          return item.draft !== true;
+        });
+        requiredPublications = [];
+        requiredPublications = [...filtered];
         let uniqueNames = [];
         let one = [];
         let defaults = [];
