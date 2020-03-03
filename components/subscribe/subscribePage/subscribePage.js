@@ -7,8 +7,9 @@ class Subscribe extends Component {
         return <section className="employees">
             <div className="container">
                 <div className="detail-emp">
+                    <div className="description-text" dangerouslySetInnerHTML={{__html: item.content}}/>
                     {
-                        (portal_id && form_id) ?
+                        (portal_id && form_id) &&
                             <div className="hubspot-forms">
                                 <HubSpot
                                     portalId={portal_id}
@@ -17,7 +18,7 @@ class Subscribe extends Component {
                                     onReady={(form) => console.log('Form ready!')}
                                     loading={<div>Loading...</div>}
                                 />
-                            </div> : <div className="description-text" dangerouslySetInnerHTML={{__html: item.content}}/>
+                            </div>
                     }
                 </div>
             </div>
