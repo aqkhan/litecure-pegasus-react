@@ -11075,6 +11075,18 @@ select option{
   font-size: 20px;
   margin-bottom: 0;
 }
+.hubspot-forms .submitted-message p {
+  padding: 20px 0 0 0 !important;
+  font-family: AvenirNext;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: 0.6px;
+  text-align: left;
+  color: #c7c9c7;
+  font-size: 20px;
+  margin-bottom: 0;
+}
 .hubspot-forms .legal-consent-container .field.hs-form-field {
   margin-bottom: 0;
   margin-top: 20px;
