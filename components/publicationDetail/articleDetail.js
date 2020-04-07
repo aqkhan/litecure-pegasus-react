@@ -94,7 +94,7 @@ class ArticleDetail extends Component {
                     </div>
                 </div>))
             }
-            {defaults.length > 0 && defaults}
+            {/*{defaults.length > 0 && defaults}*/}
             {publication&&<DetailContent publication={publication}/>}
             {/*<DetailCard/>*/}
             <RequestDemo/>
