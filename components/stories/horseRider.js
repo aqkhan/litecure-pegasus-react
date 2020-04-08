@@ -58,7 +58,7 @@ class clinicalVeterinarian extends Component {
         if(pages!== null && pages.length>0){
             pages.forEach((item,index)=>{
                 if(item.templateOrder ==='one' && item.type === "stories"){
-                    one =[...one, <StoriesHeader publicationCategory={"Horse Owner"} key={index} headerImg={item && item.featuredImage && item.featuredImage.url} heading={"Stories"}/>]
+                    one =[<StoriesHeader publicationCategory={"Horse Owner"} key={index} headerImg={item && item.featuredImage && item.featuredImage.url} heading={"Stories"}/>]
                 }
                 else if(item.type === "stories") {
                     defaults =[...defaults,
