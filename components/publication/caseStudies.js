@@ -129,7 +129,7 @@ class CaseStudies extends Component {
                         </div>
                     </div>))
                 }
-                {defaults.length>0 && defaults}
+                {/*{defaults.length>0 && defaults}*/}
                 <PublicImgSection publicationCategory={"Case Studies"}/>
                 {requiredPublications && requiredPublications.length>0 &&<PublicationCategory publications={requiredPublications && requiredPublications} categoryList={newCategories} publicationCategory={"Case Studies"} page={"/casestudy-detail/"}/>}
                 <RequestDemo/>

@@ -131,7 +131,7 @@ class PublishedPapers extends Component {
                         </div>
                     </div>))
                 }
-                {defaults.length>0 && defaults}
+                {/*{defaults.length>0 && defaults}*/}
                 <PublicImgSection publicationCategory={"Published Papers"}/>
                 {requiredPublications && requiredPublications.length>0 &&<PublicationCategory publications={requiredPublications && requiredPublications} categoryList={newCategories}
                 publicationCategory={"Published Papers"} page={"/published-paper-detail/"}/>}
