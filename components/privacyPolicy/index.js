@@ -59,7 +59,7 @@ class employeesPage extends Component{
                     </div>
                 </div>
                 {one && one.length>0 && one}
-                {defaults && defaults.length> 0 && defaults}
+                {/*{defaults && defaults.length> 0 && defaults}*/}
                     <RequestDemo/>
             </div>): error ? (<div className="splash">
                 <div className="lds-ellipsis">

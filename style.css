@@ -1547,11 +1547,15 @@ a:hover {
 }
 
 .employees .description-text strong {
-  display: block;
+  /*display: block;*/
   color: #efb817;
 }
+.employees .description-text h2{
+  color: #efb817;
+  font-size: 24px;
+}
 
-.employees .description-text p {
+.employees .description-text p, .employees .description-text th, .employees .description-text td {
   font-family: AvenirNext;
   font-size: 21px;
   font-weight: 400;
